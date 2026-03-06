@@ -189,13 +189,14 @@ export default function Header() {
           {/* CTA Button */}
           <Link
             href="/get-quote"
-            className="hidden lg:inline-flex items-center justify-center text-sm font-semibold rounded-full transition-all hover:bg-[#f0fdfb]"
+            className="hidden lg:inline-flex items-center justify-center rounded-full transition-all hover:bg-[#f0fdfb]"
             style={{
               border: "1.5px solid #45D0BD",
-              color: "#1f1f1f",
-              fontFamily: "'Manrope', sans-serif",
-              padding: "12px 40px",
-              minWidth: "160px",
+              color: "#333333",
+              fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+              fontSize: "16px",
+              fontWeight: 500,
+              padding: "13px 18px",
             }}
           >
             Get Quote
