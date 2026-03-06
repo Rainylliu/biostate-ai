@@ -25,32 +25,48 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const marqueeText = "RNA-seq starting from $60 per sample";
+
   return (
     <>
       {/* Top Info Bar */}
-      <div className="w-full py-4 px-8 flex items-center justify-between">
-        <span className="text-sm text-brand-400">
+      <div
+        className="flex items-center justify-between"
+        style={{
+          margin: "8px 20px",
+          padding: "0 24px",
+          height: "40px",
+          fontSize: "14px",
+          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+          color: "#919191",
+          fontWeight: 500,
+          border: "1px solid #e6e8ea",
+          borderRadius: "15px",
+        }}
+      >
+        <span style={{ padding: "0 20px" }}>
           Email:{" "}
           <a
             href="mailto:contact@biostate.ai"
-            className="font-semibold text-text hover:text-accent transition-colors"
+            className="hover:!text-[#45D0BD] transition-colors"
+            style={{ fontWeight: 500, color: "#1f1f1f" }}
           >
             contact@biostate.ai
           </a>
         </span>
-        <div className="flex items-center gap-4">
-          <span className="text-sm text-brand-300">Follow us:</span>
-          <a href="#" aria-label="Facebook" className="text-brand-400 hover:text-text transition-colors">
-            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        <div className="flex items-center gap-4" style={{ padding: "0 20px" }}>
+          <span>Follow us:</span>
+          <a href="#" aria-label="Facebook" className="hover:!text-[#45D0BD] transition-colors" style={{ color: "#1f1f1f" }}>
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
           </a>
-          <a href="#" aria-label="Instagram" className="text-brand-400 hover:text-text transition-colors">
-            <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+          <a href="#" aria-label="Instagram" className="hover:!text-[#45D0BD] transition-colors" style={{ color: "#1f1f1f" }}>
+            <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
           </a>
-          <a href="#" aria-label="X" className="text-brand-400 hover:text-text transition-colors">
-            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <a href="#" aria-label="X" className="hover:!text-[#45D0BD] transition-colors" style={{ color: "#1f1f1f" }}>
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           </a>
-          <a href="#" aria-label="LinkedIn" className="text-brand-400 hover:text-text transition-colors">
-            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          <a href="#" aria-label="LinkedIn" className="hover:!text-[#45D0BD] transition-colors" style={{ color: "#1f1f1f" }}>
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
           </a>
         </div>
       </div>
@@ -90,7 +106,6 @@ export default function Header() {
 
           {/* Logo with grid icon */}
           <Link href="/" className="flex items-center gap-3">
-            {/* Grid icon */}
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-text">
               <rect x="3" y="3" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
               <rect x="13" y="3" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
@@ -122,7 +137,7 @@ export default function Header() {
             })}
           </nav>
 
-          {/* CTA Button - outlined style */}
+          {/* CTA Button */}
           <Link
             href="/get-quote"
             className="hidden lg:inline-flex items-center px-10 py-3.5 border border-brand-200 text-text text-base font-semibold rounded-full hover:border-text hover:bg-brand-50 transition-all"
@@ -161,6 +176,33 @@ export default function Header() {
           </nav>
         )}
       </header>
+
+      {/* Scrolling Marquee Banner - Below Nav */}
+      <div
+        className="w-full overflow-hidden"
+        style={{
+          backgroundColor: "#45d0bd",
+          padding: "10px 0",
+        }}
+      >
+        <div
+          className="flex whitespace-nowrap"
+          style={{
+            animation: "marquee 20s linear infinite",
+          }}
+        >
+          {Array.from({ length: 8 }).map((_, i) => (
+            <span
+              key={i}
+              className="text-white text-sm font-semibold mx-12"
+              style={{ fontFamily: "'Manrope', sans-serif" }}
+            >
+              {marqueeText}
+            </span>
+          ))}
+        </div>
+      </div>
+
     </>
   );
 }
