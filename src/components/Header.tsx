@@ -111,7 +111,7 @@ export default function Header() {
             {/* Menu grid icon */}
             <button
               aria-label="Menu"
-              className="hidden lg:block"
+              className="hidden lg:block cursor-pointer"
               onMouseEnter={() => setMenuHovered(true)}
               onMouseLeave={() => setMenuHovered(false)}
             >
