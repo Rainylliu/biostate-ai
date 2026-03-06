@@ -232,6 +232,7 @@ img {
 
 .get-quote-btn:hover .get-quote-inner {
   background: linear-gradient(90deg, rgba(69, 208, 189, 0.15), rgba(68, 182, 233, 0.15));
+  color: #ffffff;
 }
 
 /* ── Marquee Animation ── */
