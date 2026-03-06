@@ -30,8 +30,15 @@ export default function Header() {
     <>
       {/* Top Info Bar */}
       <div
-        className="w-full flex items-center justify-between"
-        style={{ padding: "14px 40px" }}
+        className="flex items-center justify-between"
+        style={{
+          margin: "0 20px",
+          padding: "4px 20px 5px",
+          border: "1px solid #e6e8ea",
+          borderRadius: "50px",
+          fontSize: "14px",
+          color: "#919191",
+        }}
       >
         <span className="text-sm" style={{ color: "#6c726e" }}>
           Email:{" "}
