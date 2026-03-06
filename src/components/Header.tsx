@@ -29,7 +29,10 @@ export default function Header() {
   return (
     <>
       {/* Top Info Bar */}
-      <div className="w-full py-3 px-10 flex items-center justify-between">
+      <div
+        className="w-full flex items-center justify-between"
+        style={{ padding: "14px 40px" }}
+      >
         <span className="text-sm" style={{ color: "#6c726e" }}>
           Email:{" "}
           <a
@@ -59,14 +62,21 @@ export default function Header() {
 
       {/* Main Header */}
       <header
-        className={`sticky top-0 z-50 transition-all duration-300 mx-6 mt-2 mb-4 ${
+        className={`sticky top-0 z-50 transition-all duration-300 ${
           scrolled
             ? "bg-white/95 backdrop-blur-md shadow-lg"
             : "bg-white"
         }`}
-        style={{ borderRadius: "50px", border: "1px solid #e6e8ea" }}
+        style={{
+          borderRadius: "50px",
+          border: "1px solid #e6e8ea",
+          margin: "8px 24px 16px 24px",
+        }}
       >
-        <div className="flex items-center justify-between px-8 py-4">
+        <div
+          className="flex items-center justify-between"
+          style={{ padding: "16px 32px" }}
+        >
           {/* Hamburger (mobile) */}
           <button
             className="lg:hidden flex flex-col gap-1.5 p-1"
