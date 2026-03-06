@@ -1,0 +1,122 @@
+/*
+ * ============================================
+ * Biostate AI - Design System Tokens
+ * ============================================
+ * Source: Extracted from biostate.ai WordPress site
+ * Purpose: Single source of truth for all UI styling
+ * ============================================
+ */
+
+:root {
+  /* ── Brand Colors ── */
+  --color-primary: #6766c8;          /* Purple - main brand color */
+  --color-primary-dark: #8258c8;     /* Purple variant */
+  --color-accent: #45d0bd;           /* Teal/Mint - secondary accent */
+  --color-accent-dark: #108080;      /* Dark teal */
+
+  /* ── Semantic Colors ── */
+  --color-success: #59a56d;
+  --color-warning: #e06b44;
+  --color-error: #d63637;
+
+  /* ── Neutral - Dark (text / backgrounds) ── */
+  --color-black: #000000;
+  --color-gray-950: #0a0910;
+  --color-gray-900: #0f172a;
+  --color-gray-850: #111827;
+  --color-gray-800: #1d2327;
+  --color-gray-750: #1f1f1f;
+  --color-gray-700: #2c3338;
+  --color-gray-650: #333333;
+  --color-gray-600: #3c434a;
+  --color-gray-500: #444444;
+
+  /* ── Neutral - Mid (secondary text / borders) ── */
+  --color-gray-400: #6c726e;
+  --color-gray-350: #777777;
+  --color-gray-300: #8c8f94;
+  --color-gray-250: #9b9b9b;
+  --color-gray-200: #adadad;
+  --color-gray-150: #bbbbbb;
+
+  /* ── Neutral - Light (borders / backgrounds) ── */
+  --color-gray-100: #cbcbcb;
+  --color-gray-75: #e9f4fe;
+  --color-gray-50: #efefef;
+  --color-gray-25: #f5f5f5;
+  --color-white: #ffffff;
+
+  /* ── Light Tinted Backgrounds ── */
+  --color-bg-blue-light: #eff6ff;
+  --color-bg-blue-mist: #f0f6fc;
+  --color-bg-lavender: #f0faff;
+  --color-bg-purple-light: #f0f2f4;
+  --color-bg-neutral: #f0f0f1;
+
+  /* ── Typography ── */
+  --font-heading: 'Sora', system-ui, -apple-system, sans-serif;
+  --font-body: 'Manrope', system-ui, -apple-system, sans-serif;
+  --font-chinese: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+
+  /* ── Font Sizes (Desktop) ── */
+  --text-xs: 0.75rem;      /* 12px */
+  --text-sm: 0.875rem;     /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-lg: 1.125rem;     /* 18px */
+  --text-xl: 1.25rem;      /* 20px */
+  --text-2xl: 1.5rem;      /* 24px */
+  --text-3xl: 1.875rem;    /* 30px */
+  --text-4xl: 2.25rem;     /* 36px */
+  --text-5xl: 3rem;        /* 48px */
+  --text-6xl: 3.75rem;     /* 60px */
+
+  /* ── Font Weights ── */
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+
+  /* ── Line Heights ── */
+  --leading-tight: 1.2;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+
+  /* ── Spacing ── */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+  --space-32: 8rem;     /* 128px */
+
+  /* ── Border Radius ── */
+  --radius-sm: 0.25rem;   /* 4px */
+  --radius-md: 0.5rem;    /* 8px */
+  --radius-lg: 0.75rem;   /* 12px */
+  --radius-xl: 1rem;      /* 16px */
+  --radius-2xl: 1.5rem;   /* 24px */
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+
+  /* ── Layout ── */
+  --max-width: 1280px;
+  --header-height: 80px;
+
+  /* ── Transitions ── */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 350ms ease;
+}
