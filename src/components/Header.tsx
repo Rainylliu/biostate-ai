@@ -39,7 +39,7 @@ export default function Header() {
           fontSize: "14px",
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
           color: "#919191",
-          fontWeight: 600,
+          fontWeight: 400,
           border: "1px solid #e6e8ea",
           borderRadius: "15px",
         }}
