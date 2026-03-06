@@ -81,7 +81,7 @@ export default function Header() {
             : "bg-white"
         }`}
       >
-        <div className="flex items-center justify-between" style={{ height: "105px", padding: "0 40px" }}>
+        <div className="flex items-center justify-between" style={{ height: "105px", padding: "0 40px 0 64px" }}>
           {/* Hamburger (mobile) */}
           <button
             className="lg:hidden flex flex-col gap-1.5 p-1"
