@@ -51,8 +51,8 @@ export default function RNAPage() {
             {/* Right - Content */}
             <div className="w-full lg:w-[55%] flex flex-col justify-center" style={{ position: "relative", zIndex: 1 }}>
               <h1
-                className="text-6xl md:text-7xl lg:text-8xl xl:text-[7rem] font-bold tracking-tight"
-                style={{ fontFamily: "'Sora', sans-serif", lineHeight: "1.05" }}
+                className="text-6xl md:text-7xl lg:text-[100px] xl:text-[104px] font-bold text-left"
+                style={{ fontFamily: "'Sora', sans-serif", lineHeight: "1em", letterSpacing: "-0.03em" }}
               >
                 Advancing
                 <br />
