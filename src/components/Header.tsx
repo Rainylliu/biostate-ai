@@ -28,7 +28,7 @@ export default function Header() {
   return (
     <>
       {/* Top Info Bar */}
-      <div className="mx-6 mt-3 py-3 px-8 flex items-center justify-between rounded-full border border-brand-75">
+      <div className="mx-6 mt-3 py-3 px-8 flex items-center justify-between border" style={{ borderRadius: "15px", fontSize: "87.5%", borderColor: "#e0e0e0", color: "#7e7e7e" }}>
         <span className="text-sm text-brand-400">
           Email:{" "}
           <a
