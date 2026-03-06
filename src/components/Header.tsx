@@ -237,7 +237,7 @@ export default function Header() {
       <div
         className="w-full overflow-hidden"
         style={{
-          backgroundColor: "#45d0bd",
+          background: "linear-gradient(90deg, #45d0bd, #44b6e9)",
           padding: "10px 0",
         }}
       >
