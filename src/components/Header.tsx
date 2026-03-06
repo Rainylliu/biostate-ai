@@ -73,14 +73,14 @@ export default function Header() {
 
       {/* Main Header */}
       <header
-        className={`sticky top-0 z-50 transition-all duration-300 mx-6 mt-1 ${
+        className={`sticky top-0 z-50 transition-all duration-300 mx-5 mt-1 ${
           scrolled
             ? "bg-white/95 backdrop-blur-md shadow-lg"
             : "bg-white"
         }`}
         style={{ borderRadius: "50px", border: "1px solid #e6e8ea" }}
       >
-        <div className="flex items-center justify-between px-8 py-4">
+        <div className="flex items-center justify-between px-8 py-3">
           {/* Hamburger (mobile) */}
           <button
             className="lg:hidden flex flex-col gap-1.5 p-1"
@@ -104,32 +104,38 @@ export default function Header() {
             />
           </button>
 
-          {/* Logo with grid icon */}
-          <Link href="/" className="flex items-center gap-3">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-text">
-              <rect x="3" y="3" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
-              <rect x="13" y="3" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
-              <rect x="3" y="13" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
-              <rect x="13" y="13" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
-            </svg>
-            <span className="text-2xl font-bold tracking-tight" style={{ fontFamily: "'Sora', sans-serif", color: "#111" }}>
-              bios<span style={{ letterSpacing: "-0.02em" }}>t</span>ate.AI
-            </span>
-          </Link>
+          {/* Menu icon + Logo */}
+          <div className="flex items-center gap-6">
+            {/* Menu grid icon */}
+            <button aria-label="Menu" className="group hidden lg:block">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-[#1f1f1f] group-hover:text-[#45D0BD] transition-colors">
+                <rect x="3" y="3" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
+                <rect x="13" y="3" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
+                <rect x="3" y="13" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
+                <rect x="13" y="13" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
+              </svg>
+            </button>
+            <Link href="/" className="flex items-center">
+              <span className="text-2xl font-bold tracking-tight" style={{ fontFamily: "'Sora', sans-serif", color: "#111" }}>
+                bios<span style={{ letterSpacing: "-0.02em" }}>t</span>ate.AI
+              </span>
+            </Link>
+          </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-2">
+          <nav className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => {
               const isActive = pathname === item.href;
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`px-6 py-2.5 text-sm font-semibold tracking-wide transition-all rounded-full ${
+                  className={`px-5 py-2 text-sm font-semibold tracking-wider transition-all ${
                     isActive
-                      ? "bg-brand-950 text-white"
-                      : "text-text hover:text-primary"
+                      ? "bg-[#1f1f1f] text-white rounded-full"
+                      : "text-[#1f1f1f] hover:text-[#45D0BD]"
                   }`}
+                  style={{ fontFamily: "'Manrope', sans-serif" }}
                 >
                   {item.label}
                 </Link>
@@ -140,7 +146,12 @@ export default function Header() {
           {/* CTA Button */}
           <Link
             href="/get-quote"
-            className="hidden lg:inline-flex items-center px-10 py-3.5 border border-brand-200 text-text text-base font-semibold rounded-full hover:border-text hover:bg-brand-50 transition-all"
+            className="hidden lg:inline-flex items-center px-10 py-3 text-sm font-semibold rounded-full transition-all"
+            style={{
+              border: "1.5px solid #45D0BD",
+              color: "#1f1f1f",
+              fontFamily: "'Manrope', sans-serif",
+            }}
           >
             Get Quote
           </Link>
