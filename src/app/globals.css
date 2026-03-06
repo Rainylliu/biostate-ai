@@ -231,7 +231,7 @@ img {
 }
 
 .get-quote-btn:hover .get-quote-inner {
-  background: rgba(255, 255, 255, 0.85);
+  background: linear-gradient(90deg, rgba(69, 208, 189, 0.15), rgba(68, 182, 233, 0.15));
 }
 
 /* ── Marquee Animation ── */
