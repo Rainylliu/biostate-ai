@@ -55,7 +55,7 @@ export default function Header() {
               fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
               fontSize: "14px",
               lineHeight: "1.875em",
-              fontWeight: 600,
+              fontWeight: 500,
               letterSpacing: "0em",
               color: "#1f1f1f",
             }}
