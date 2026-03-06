@@ -14,7 +14,7 @@ export default function RNAPage() {
       {/* Section 1 - Hero */}
       <section className="py-16 lg:py-24" style={{ marginTop: "40px" }}>
         <div className="container">
-          <div className="relative flex flex-col lg:flex-row items-center gap-12 lg:gap-[60px]">
+          <div className="relative flex flex-col lg:flex-row items-center gap-12 lg:gap-[5%]">
             {/* Background circle */}
             <div
               className="absolute inset-0 flex items-center justify-center pointer-events-none"
@@ -26,7 +26,7 @@ export default function RNAPage() {
                 width={900}
                 height={900}
                 className="opacity-100"
-                style={{ maxWidth: "55%", height: "auto" }}
+                style={{ maxWidth: "80%", height: "auto" }}
               />
             </div>
             {/* Left - Image */}
