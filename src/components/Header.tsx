@@ -145,7 +145,7 @@ export default function Header() {
           </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center" style={{ gap: "10px" }}>
+          <nav className="hidden lg:flex items-center" style={{ gap: "5px" }}>
             {navItems.map((item) => {
               const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
               return (
