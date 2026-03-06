@@ -39,7 +39,7 @@ export default function Header() {
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
           color: "#919191",
           border: "1px solid #e6e8ea",
-          borderRadius: "25px",
+          borderRadius: "15px",
         }}
       >
         <span>
