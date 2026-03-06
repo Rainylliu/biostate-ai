@@ -68,28 +68,42 @@ export default function RNAPage() {
                 scientists.
               </p>
 
-              <div className="mt-10 lg:mt-14">
-                <Link
-                  href="https://calendly.com/rachan-raj-biostate/biostate-ai-introduction-services" target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-6 px-10 py-5 border border-brand-200 text-text text-lg font-medium rounded-2xl hover:border-text hover:bg-brand-50 transition-all group"
+              <div style={{ position: "relative", display: "inline-block", zIndex: 2, lineHeight: 1, marginTop: "35px" }}>
+                <a
+                  href="https://calendly.com/rachan-raj-biostate/biostate-ai-introduction-services"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 transition-all group"
+                  style={{
+                    fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                    fontSize: "16px",
+                    fontWeight: 500,
+                    color: "#333333",
+                    padding: "12px 28px",
+                    border: "1px solid #adadad",
+                    borderRadius: "60px",
+                    background: "transparent",
+                  }}
                 >
                   Book a call
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                  >
-                    <path
-                      d="M4 12L12 4M12 4H5M12 4V11"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </Link>
+                  <span className="icon-button-arrow" style={{ display: "inline-flex" }}>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    >
+                      <path
+                        d="M4 12L12 4M12 4H5M12 4V11"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </a>
               </div>
             </div>
           </div>
