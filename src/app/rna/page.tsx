@@ -12,7 +12,7 @@ export default function RNAPage() {
   return (
     <div>
       {/* Section 1 - Hero */}
-      <section className="py-16 lg:py-24">
+      <section className="py-16 lg:py-24" style={{ marginTop: "40px" }}>
         <div className="container">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             {/* Left - Image */}
@@ -20,7 +20,7 @@ export default function RNAPage() {
               <div
                 className="relative w-full rounded-2xl overflow-hidden"
                 style={{
-                  aspectRatio: "3 / 4",
+                  aspectRatio: "1 / 1",
                   background: "linear-gradient(160deg, #1a2332 0%, #0d1117 50%, #0a2a2a 100%)",
                 }}
               >
