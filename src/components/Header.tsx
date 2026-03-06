@@ -44,7 +44,7 @@ export default function Header() {
           borderRadius: "15px",
         }}
       >
-        <span>
+        <span style={{ padding: "0 20px" }}>
           Email:{" "}
           <a
             href="mailto:contact@biostate.ai"
