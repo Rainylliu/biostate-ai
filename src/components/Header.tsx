@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
@@ -18,6 +19,7 @@ export default function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [menuHovered, setMenuHovered] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -107,13 +109,18 @@ export default function Header() {
           {/* Menu icon + Logo */}
           <div className="flex items-center gap-6">
             {/* Menu grid icon */}
-            <button aria-label="Menu" className="group hidden lg:block">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-[#1f1f1f] group-hover:text-[#45D0BD] transition-colors">
-                <rect x="3" y="3" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
-                <rect x="13" y="3" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
-                <rect x="3" y="13" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
-                <rect x="13" y="13" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
-              </svg>
+            <button
+              aria-label="Menu"
+              className="hidden lg:block"
+              onMouseEnter={() => setMenuHovered(true)}
+              onMouseLeave={() => setMenuHovered(false)}
+            >
+              <Image
+                src={menuHovered ? "/images/menu-hover.svg" : "/images/menu.svg"}
+                alt="Menu"
+                width={20}
+                height={20}
+              />
             </button>
             <Link href="/" className="flex items-center">
               <span className="text-2xl font-bold tracking-tight" style={{ fontFamily: "'Sora', sans-serif", color: "#111" }}>
