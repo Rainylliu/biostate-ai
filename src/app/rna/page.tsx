@@ -68,22 +68,12 @@ export default function RNAPage() {
                 scientists.
               </p>
 
-              <div style={{ position: "relative", display: "inline-block", zIndex: 2, lineHeight: 1, marginTop: "35px" }}>
+              <div style={{ marginTop: "35px" }}>
                 <a
                   href="https://calendly.com/rachan-raj-biostate/biostate-ai-introduction-services"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 transition-all group"
-                  style={{
-                    fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                    fontSize: "16px",
-                    fontWeight: 500,
-                    color: "#333333",
-                    padding: "12px 28px",
-                    border: "1px solid #adadad",
-                    borderRadius: "60px",
-                    background: "transparent",
-                  }}
+                  className="book-a-call-btn group"
                 >
                   Book a call
                   <span className="icon-button-arrow" style={{ display: "inline-flex" }}>
