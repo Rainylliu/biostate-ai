@@ -191,7 +191,7 @@ export default function Header() {
             href="/get-quote"
             className="get-quote-btn hidden lg:inline-flex rounded-full"
             style={{
-              color: "#333333",
+              color: "#1f1f1f",
               fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
               fontSize: "1rem",
               fontWeight: 600,
