@@ -121,7 +121,7 @@ export default function Header() {
                 alt="Menu"
                 width={20}
                 height={20}
-                className="absolute inset-0 transition-opacity duration-300"
+                className="absolute inset-0 transition-opacity duration-500"
                 style={{ opacity: menuHovered ? 0 : 1 }}
               />
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -130,7 +130,7 @@ export default function Header() {
                 alt="Menu"
                 width={20}
                 height={20}
-                className="absolute inset-0 transition-opacity duration-300"
+                className="absolute inset-0 transition-opacity duration-500"
                 style={{ opacity: menuHovered ? 1 : 0 }}
               />
             </button>
