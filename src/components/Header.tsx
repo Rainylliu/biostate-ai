@@ -152,7 +152,7 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`transition-all ${
+                  className={`nav-tab transition-all ${
                     isActive
                       ? ""
                       : "hover:bg-[#F5F5F5]"
@@ -170,7 +170,10 @@ export default function Header() {
                     color: isActive ? "#ffffff" : "#1f1f1f",
                   }}
                 >
-                  {item.label}
+                  <span className="nav-tab-text">
+                    <span>{item.label}</span>
+                    <span>{item.label}</span>
+                  </span>
                 </Link>
               );
             })}

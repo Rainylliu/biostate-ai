@@ -179,6 +179,39 @@ img {
   transform: translateY(-2px);
 }
 
+/* ── Nav Tab Text Scroll Animation ── */
+.nav-tab-text {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  height: 1.5em;
+}
+
+.nav-tab-text span {
+  display: block;
+  transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.nav-tab-text span:first-child {
+  transform: translateY(0);
+}
+
+.nav-tab-text span:last-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(100%);
+}
+
+.nav-tab:hover .nav-tab-text span:first-child {
+  transform: translateY(-100%);
+}
+
+.nav-tab:hover .nav-tab-text span:last-child {
+  transform: translateY(0);
+}
+
 /* ── Marquee Animation ── */
 @keyframes marquee {
   0% {
