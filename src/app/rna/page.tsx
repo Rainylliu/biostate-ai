@@ -21,7 +21,7 @@ export default function RNAPage() {
               style={{ zIndex: 0 }}
             >
               <Image
-                src="/images/circle-bg1.svg"
+                src="/images/circle-bg2.svg"
                 alt=""
                 width={900}
                 height={900}
