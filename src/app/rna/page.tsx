@@ -14,12 +14,18 @@ export default function RNAPage() {
       {/* Section 1 - Hero */}
       <section className="py-16 lg:py-24">
         <div className="container">
-          <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-20">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             {/* Left - Image */}
             <div className="w-full lg:w-[45%]">
-              <div className="relative w-full rounded-2xl overflow-hidden bg-gray-900" style={{ aspectRatio: "3/4" }}>
+              <div
+                className="relative w-full rounded-2xl overflow-hidden"
+                style={{
+                  aspectRatio: "3 / 4",
+                  background: "linear-gradient(160deg, #1a2332 0%, #0d1117 50%, #0a2a2a 100%)",
+                }}
+              >
                 <Image
-                  src="/images/rna-hero.jpg"
+                  src="/images/rna-hero.svg"
                   alt="RNA molecular structure visualization"
                   fill
                   className="object-cover"
@@ -29,10 +35,10 @@ export default function RNAPage() {
             </div>
 
             {/* Right - Content */}
-            <div className="w-full lg:w-[55%] lg:pt-8">
+            <div className="w-full lg:w-[55%] flex flex-col justify-center">
               <h1
-                className="text-6xl md:text-7xl lg:text-8xl xl:text-[6.5rem] font-bold"
-                style={{ fontFamily: "'Sora', sans-serif", lineHeight: "1.1" }}
+                className="text-6xl md:text-7xl lg:text-8xl xl:text-[7rem] font-bold tracking-tight"
+                style={{ fontFamily: "'Sora', sans-serif", lineHeight: "1.05" }}
               >
                 Advancing
                 <br />
@@ -41,7 +47,7 @@ export default function RNAPage() {
                 Innovation
               </h1>
 
-              <p className="mt-12 text-lg leading-relaxed text-brand-600 max-w-xl">
+              <p className="mt-10 lg:mt-14 text-base lg:text-lg leading-relaxed text-brand-600 max-w-xl">
                 <span className="inline-block w-2 h-2 rounded-full bg-brand-400 mr-3 align-middle" />
                 Biostate AI&apos;s platform connects samples, data, and clinical
                 decisions — making precision health scalable, accessible, and
@@ -49,10 +55,10 @@ export default function RNAPage() {
                 scientists.
               </p>
 
-              <div className="mt-14">
+              <div className="mt-10 lg:mt-14">
                 <Link
                   href="/get-quote"
-                  className="inline-flex items-center gap-4 px-10 py-5 border border-brand-200 text-text text-lg font-medium rounded-2xl hover:border-text hover:bg-brand-50 transition-all group"
+                  className="inline-flex items-center gap-6 px-10 py-5 border border-brand-200 text-text text-lg font-medium rounded-2xl hover:border-text hover:bg-brand-50 transition-all group"
                 >
                   Book a call
                   <svg
