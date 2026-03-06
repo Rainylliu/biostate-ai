@@ -123,11 +123,11 @@ export default function Header() {
               />
             </button>
             <Link href="/" className="flex items-center">
-              <Image
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src="/images/Logo_black.svg"
                 alt="biostate.AI"
-                width={150}
-                height={28}
+                style={{ height: "28px", width: "auto" }}
               />
             </Link>
           </div>
