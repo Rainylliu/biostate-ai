@@ -25,21 +25,35 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const marqueeText = "RNA-seq starting from $60 per sample";
+
   return (
     <>
       {/* Top Info Bar */}
-      <div className="w-full py-4 px-8 flex items-center justify-between">
-        <span className="text-sm text-brand-400">
+      <div
+        className="flex items-center justify-between"
+        style={{
+          margin: "0 20px",
+          padding: "4px 20px 5px",
+          fontSize: "14px",
+          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+          color: "#919191",
+          borderBottom: "1px solid #e6e8ea",
+          borderRadius: "0 0 25px 25px",
+        }}
+      >
+        <span>
           Email:{" "}
           <a
             href="mailto:contact@biostate.ai"
-            className="font-semibold text-text hover:text-accent transition-colors"
+            className="hover:text-text transition-colors"
+            style={{ fontWeight: 700, color: "#333" }}
           >
             contact@biostate.ai
           </a>
         </span>
         <div className="flex items-center gap-4">
-          <span className="text-sm text-brand-300">Follow us:</span>
+          <span>Follow us:</span>
           <a href="#" aria-label="Facebook" className="text-brand-400 hover:text-text transition-colors">
             <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
           </a>
@@ -90,7 +104,6 @@ export default function Header() {
 
           {/* Logo with grid icon */}
           <Link href="/" className="flex items-center gap-3">
-            {/* Grid icon */}
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-text">
               <rect x="3" y="3" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
               <rect x="13" y="3" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
@@ -122,7 +135,7 @@ export default function Header() {
             })}
           </nav>
 
-          {/* CTA Button - outlined style */}
+          {/* CTA Button */}
           <Link
             href="/get-quote"
             className="hidden lg:inline-flex items-center px-10 py-3.5 border border-brand-200 text-text text-base font-semibold rounded-full hover:border-text hover:bg-brand-50 transition-all"
@@ -161,6 +174,43 @@ export default function Header() {
           </nav>
         )}
       </header>
+
+      {/* Scrolling Marquee Banner */}
+      <div
+        className="w-full overflow-hidden mt-2"
+        style={{
+          backgroundColor: "#45d0bd",
+          padding: "10px 0",
+        }}
+      >
+        <div
+          className="flex whitespace-nowrap"
+          style={{
+            animation: "marquee 20s linear infinite",
+          }}
+        >
+          {Array.from({ length: 8 }).map((_, i) => (
+            <span
+              key={i}
+              className="text-white text-sm font-semibold mx-12"
+              style={{ fontFamily: "'Manrope', sans-serif" }}
+            >
+              {marqueeText}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <style jsx>{`
+        @keyframes marquee {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
     </>
   );
 }
