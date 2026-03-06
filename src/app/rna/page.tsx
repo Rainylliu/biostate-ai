@@ -68,7 +68,7 @@ export default function RNAPage() {
                 scientists.
               </p>
 
-              <div style={{ marginTop: "35px" }}>
+              <div style={{ marginTop: "35px", paddingLeft: "6px" }}>
                 <a
                   href="https://calendly.com/rachan-raj-biostate/biostate-ai-introduction-services"
                   target="_blank"
