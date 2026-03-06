@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
@@ -89,17 +90,14 @@ export default function Header() {
           </button>
 
           {/* Logo with grid icon */}
-          <Link href="/" className="flex items-center gap-3">
-            {/* Grid icon */}
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-text">
-              <rect x="3" y="3" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
-              <rect x="13" y="3" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
-              <rect x="3" y="13" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
-              <rect x="13" y="13" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
-            </svg>
-            <span className="text-2xl font-bold tracking-tight" style={{ fontFamily: "'Sora', sans-serif", color: "#111" }}>
-              bios<span style={{ letterSpacing: "-0.02em" }}>t</span>ate.AI
-            </span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/Logo_black.svg"
+              alt="biostate.AI"
+              width={180}
+              height={40}
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}
