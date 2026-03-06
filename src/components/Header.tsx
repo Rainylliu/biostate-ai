@@ -39,6 +39,7 @@ export default function Header() {
           fontSize: "14px",
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
           color: "#919191",
+          fontWeight: 500,
           border: "1px solid #e6e8ea",
           borderRadius: "15px",
         }}
@@ -47,8 +48,8 @@ export default function Header() {
           Email:{" "}
           <a
             href="mailto:contact@biostate.ai"
-            className="hover:text-text transition-colors"
-            style={{ fontWeight: 700, color: "#333" }}
+            className="hover:!text-[#45D0BD] transition-colors"
+            style={{ fontWeight: 400, color: "#333" }}
           >
             contact@biostate.ai
           </a>
