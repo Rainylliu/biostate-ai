@@ -29,32 +29,6 @@ export default function Header() {
 
   return (
     <>
-      {/* Scrolling Marquee Banner - TOP */}
-      <div
-        className="w-full overflow-hidden"
-        style={{
-          backgroundColor: "#45d0bd",
-          padding: "10px 0",
-        }}
-      >
-        <div
-          className="flex whitespace-nowrap"
-          style={{
-            animation: "marquee 20s linear infinite",
-          }}
-        >
-          {Array.from({ length: 8 }).map((_, i) => (
-            <span
-              key={i}
-              className="text-white text-sm font-semibold mx-12"
-              style={{ fontFamily: "'Manrope', sans-serif" }}
-            >
-              {marqueeText}
-            </span>
-          ))}
-        </div>
-      </div>
-
       {/* Top Info Bar */}
       <div
         className="flex items-center justify-between"
@@ -200,6 +174,32 @@ export default function Header() {
           </nav>
         )}
       </header>
+
+      {/* Scrolling Marquee Banner - Below Nav */}
+      <div
+        className="w-full overflow-hidden"
+        style={{
+          backgroundColor: "#45d0bd",
+          padding: "10px 0",
+        }}
+      >
+        <div
+          className="flex whitespace-nowrap"
+          style={{
+            animation: "marquee 20s linear infinite",
+          }}
+        >
+          {Array.from({ length: 8 }).map((_, i) => (
+            <span
+              key={i}
+              className="text-white text-sm font-semibold mx-12"
+              style={{ fontFamily: "'Manrope', sans-serif" }}
+            >
+              {marqueeText}
+            </span>
+          ))}
+        </div>
+      </div>
 
     </>
   );
