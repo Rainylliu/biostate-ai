@@ -155,7 +155,7 @@ export default function Header() {
                   className={`nav-tab transition-all ${
                     isActive
                       ? ""
-                      : "hover:bg-[#F5F5F5]"
+                      : "hover:bg-[#F0F2F4]"
                   }`}
                   style={{
                     fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
