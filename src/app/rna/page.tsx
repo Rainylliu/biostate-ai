@@ -12,14 +12,17 @@ export default function RNAPage() {
   return (
     <div>
       {/* Section 1 - Hero */}
-      <section className="py-16 lg:py-24">
+      <section className="pt-12 pb-16 lg:pt-16 lg:pb-24">
         <div className="container">
-          <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-20">
+          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
             {/* Left - Image */}
-            <div className="w-full lg:w-[45%]">
-              <div className="relative w-full rounded-2xl overflow-hidden bg-gray-900" style={{ aspectRatio: "3/4" }}>
+            <div className="w-full lg:w-[42%]">
+              <div
+                className="relative w-full rounded-2xl overflow-hidden"
+                style={{ aspectRatio: "3/4" }}
+              >
                 <Image
-                  src="/images/rna-hero.jpg"
+                  src="/images/rna-hero.svg"
                   alt="RNA molecular structure visualization"
                   fill
                   className="object-cover"
@@ -29,10 +32,10 @@ export default function RNAPage() {
             </div>
 
             {/* Right - Content */}
-            <div className="w-full lg:w-[55%] lg:pt-8">
+            <div className="w-full lg:w-[58%] lg:pl-4">
               <h1
-                className="text-6xl md:text-7xl lg:text-8xl xl:text-[6.5rem] font-bold"
-                style={{ fontFamily: "'Sora', sans-serif", lineHeight: "1.1" }}
+                className="text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] font-bold tracking-tight"
+                style={{ fontFamily: "'Sora', sans-serif", lineHeight: "1.15" }}
               >
                 Advancing
                 <br />
@@ -41,23 +44,26 @@ export default function RNAPage() {
                 Innovation
               </h1>
 
-              <p className="mt-12 text-lg leading-relaxed text-brand-600 max-w-xl">
-                <span className="inline-block w-2 h-2 rounded-full bg-brand-400 mr-3 align-middle" />
+              <p
+                className="mt-10 text-base leading-relaxed max-w-lg"
+                style={{ color: "#515962", lineHeight: "1.8" }}
+              >
+                <span className="inline-block w-1.5 h-1.5 rounded-full mr-2.5 align-middle" style={{ backgroundColor: "#515962" }} />
                 Biostate AI&apos;s platform connects samples, data, and clinical
                 decisions — making precision health scalable, accessible, and
                 actionable through low-cost sequencing and autonomous AI
                 scientists.
               </p>
 
-              <div className="mt-14">
+              <div className="mt-12">
                 <Link
                   href="/get-quote"
-                  className="inline-flex items-center gap-4 px-10 py-5 border border-brand-200 text-text text-lg font-medium rounded-2xl hover:border-text hover:bg-brand-50 transition-all group"
+                  className="inline-flex items-center gap-3 px-8 py-4 border border-brand-200 text-text text-base font-medium rounded-xl hover:border-text hover:bg-brand-50 transition-all group"
                 >
                   Book a call
                   <svg
-                    width="18"
-                    height="18"
+                    width="16"
+                    height="16"
                     viewBox="0 0 16 16"
                     fill="none"
                     className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
