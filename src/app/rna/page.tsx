@@ -26,7 +26,7 @@ export default function RNAPage() {
                 width={900}
                 height={900}
                 className="opacity-100"
-                style={{ maxWidth: "80%", height: "auto" }}
+                style={{ maxWidth: "120%", height: "auto" }}
               />
             </div>
             {/* Left - Image */}
@@ -61,7 +61,7 @@ export default function RNAPage() {
                 Innovation
               </h1>
 
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "#333333", margin: "35px 10px 35px 0px", paddingRight: "10%" }}>
+              <p className="leading-relaxed" style={{ fontSize: "16px", color: "#333333", margin: "35px 10px 35px 0px", paddingLeft: "6px", paddingRight: "10%" }}>
                 Biostate AI&apos;s platform connects samples, data, and clinical
                 decisions — making precision health scalable, accessible, and
                 actionable through low-cost sequencing and autonomous AI
