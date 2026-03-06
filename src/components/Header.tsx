@@ -54,7 +54,7 @@ export default function Header() {
             contact@biostate.ai
           </a>
         </span>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4" style={{ padding: "0 20px" }}>
           <span>Follow us:</span>
           <a href="#" aria-label="Facebook" className="hover:!text-[#919191] transition-colors" style={{ color: "#1f1f1f" }}>
             <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
