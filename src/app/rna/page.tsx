@@ -51,7 +51,7 @@ export default function RNAPage() {
             {/* Right - Content */}
             <div className="w-full lg:w-[55%] flex flex-col justify-center" style={{ position: "relative", zIndex: 1 }}>
               <h1
-                className="text-6xl md:text-7xl lg:text-[100px] font-bold text-left"
+                className="text-6xl md:text-7xl lg:text-[100px] font-semibold text-left"
                 style={{ fontFamily: "'Manrope', Arial, Helvetica, sans-serif", lineHeight: "1em", letterSpacing: "0em" }}
               >
                 Advancing
