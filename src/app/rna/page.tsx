@@ -30,7 +30,7 @@ export default function RNAPage() {
               />
             </div>
             {/* Left - Image */}
-            <div className="w-full lg:w-[55%] lg:ml-8" style={{ position: "relative", zIndex: 1 }}>
+            <div className="w-full lg:w-[50%] lg:ml-8" style={{ position: "relative", zIndex: 1 }}>
               <div
                 className="relative w-full rounded-2xl overflow-hidden"
                 style={{
