@@ -2,25 +2,38 @@
  * ============================================
  * Biostate AI - Design System Tokens
  * ============================================
- * Source: Extracted from biostate.ai WordPress site
+ * Source: Extracted from biostate.ai WordPress/Elementor
  * Purpose: Single source of truth for all UI styling
  * ============================================
  */
 
 :root {
-  /* ── Brand Colors ── */
-  --color-primary: #6766c8;          /* Purple - main brand color */
-  --color-primary-dark: #8258c8;     /* Purple variant */
-  --color-accent: #45d0bd;           /* Teal/Mint - secondary accent */
-  --color-accent-dark: #108080;      /* Dark teal */
+  /* ── Brand Colors (from Elementor global) ── */
+  --color-primary: #111111;           /* e-global-color-primary - dark text */
+  --color-secondary: #adadad;         /* e-global-color-secondary - gray */
+  --color-text: #333333;              /* e-global-color-text - body text */
+  --color-accent: #45d0bd;            /* e-global-color-accent - teal */
+
+  /* ── Extended Brand Colors (from page scan) ── */
+  --color-purple: #6766c8;            /* Purple accent */
+  --color-purple-dark: #8258c8;       /* Purple variant */
+  --color-teal-dark: #108080;         /* Dark teal */
+
+  /* ── Elementor Admin/UI Colors ── */
+  --color-global: #1dddbf;            /* e-a-color-global - bright teal */
+  --color-primary-pink: #f3bafd;      /* e-a-color-primary */
+  --color-primary-pink-bold: #d004d4; /* e-a-color-primary-bold */
 
   /* ── Semantic Colors ── */
-  --color-success: #59a56d;
-  --color-warning: #e06b44;
+  --color-success: #0a875a;
+  --color-warning: #f59e0b;
   --color-error: #d63637;
+  --color-danger: #dc2626;
+  --color-info: #2563eb;
 
   /* ── Neutral - Dark (text / backgrounds) ── */
   --color-black: #000000;
+  --color-bg-invert: #0c0d0e;
   --color-gray-950: #0a0910;
   --color-gray-900: #0f172a;
   --color-gray-850: #111827;
@@ -32,6 +45,9 @@
   --color-gray-500: #444444;
 
   /* ── Neutral - Mid (secondary text / borders) ── */
+  --color-txt-secondary: #515962;     /* e-a-color-secondary / e-a-color-txt */
+  --color-txt-muted: #818a96;         /* e-a-dark-color-txt-muted */
+  --color-txt-disabled: #babfc5;
   --color-gray-400: #6c726e;
   --color-gray-350: #777777;
   --color-gray-300: #8c8f94;
@@ -40,34 +56,46 @@
   --color-gray-150: #bbbbbb;
 
   /* ── Neutral - Light (borders / backgrounds) ── */
+  --color-border: #e6e8ea;            /* e-a-border-color */
+  --color-border-bold: #d5d8dc;       /* e-a-border-color-bold */
+  --color-border-focus: #babfc5;
   --color-gray-100: #cbcbcb;
   --color-gray-75: #e9f4fe;
   --color-gray-50: #efefef;
   --color-gray-25: #f5f5f5;
   --color-white: #ffffff;
 
-  /* ── Light Tinted Backgrounds ── */
+  /* ── Background Variants ── */
+  --color-bg-default: #ffffff;
+  --color-bg-hover: #f1f2f3;
+  --color-bg-active: #e6e8ea;
+  --color-bg-active-bold: #d5d8dc;
+  --color-bg-loading: #f9fafa;
   --color-bg-blue-light: #eff6ff;
   --color-bg-blue-mist: #f0f6fc;
   --color-bg-lavender: #f0faff;
   --color-bg-purple-light: #f0f2f4;
   --color-bg-neutral: #f0f0f1;
+  --color-bg-success: #f2fdf5;
+  --color-bg-info: #f0f7ff;
+  --color-bg-danger: #fef1f4;
+  --color-bg-warning: #fffbeb;
 
   /* ── Typography ── */
   --font-heading: 'Sora', system-ui, -apple-system, sans-serif;
-  --font-body: 'Manrope', system-ui, -apple-system, sans-serif;
+  --font-body: 'Manrope', Arial, Helvetica, sans-serif;
   --font-chinese: 'PingFang SC', 'Microsoft YaHei', sans-serif;
 
-  /* ── Font Sizes (Desktop) ── */
+  /* ── Font Sizes ── */
   --text-xs: 0.75rem;      /* 12px */
   --text-sm: 0.875rem;     /* 14px */
-  --text-base: 1rem;       /* 16px */
+  --text-base: 1rem;       /* 16px - wp preset normal */
   --text-lg: 1.125rem;     /* 18px */
-  --text-xl: 1.25rem;      /* 20px */
+  --text-xl: 1.25rem;      /* 20px - wp preset medium */
   --text-2xl: 1.5rem;      /* 24px */
   --text-3xl: 1.875rem;    /* 30px */
-  --text-4xl: 2.25rem;     /* 36px */
-  --text-5xl: 3rem;        /* 48px */
+  --text-4xl: 2.25rem;     /* 36px - wp preset large */
+  --text-5xl: 2.625rem;    /* 42px - wp preset huge */
   --text-6xl: 3.75rem;     /* 60px */
 
   /* ── Font Weights ── */
@@ -80,6 +108,7 @@
   /* ── Line Heights ── */
   --leading-tight: 1.2;
   --leading-normal: 1.5;
+  --leading-body: 1.875em;  /* WP body line-height */
   --leading-relaxed: 1.75;
 
   /* ── Spacing ── */
@@ -98,11 +127,13 @@
   --space-32: 8rem;     /* 128px */
 
   /* ── Border Radius ── */
-  --radius-sm: 0.25rem;   /* 4px */
-  --radius-md: 0.5rem;    /* 8px */
-  --radius-lg: 0.75rem;   /* 12px */
-  --radius-xl: 1rem;      /* 16px */
-  --radius-2xl: 1.5rem;   /* 24px */
+  --radius-sm: 3px;        /* WP/Elementor default */
+  --radius-md: 0.5rem;     /* 8px */
+  --radius-lg: 0.75rem;    /* 12px */
+  --radius-xl: 1rem;       /* 16px */
+  --radius-2xl: 1.5rem;    /* 24px */
+  --radius-header: 25px;   /* Header pill shape */
+  --radius-field: 20px;    /* WPForms field radius */
   --radius-full: 9999px;
 
   /* ── Shadows ── */
@@ -110,6 +141,8 @@
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-popover: 0 2px 15px rgba(0, 0, 0, 0.3);
+  --shadow-dropdown: 0 0 3px rgba(0, 0, 0, 0.2);
 
   /* ── Layout ── */
   --max-width: 1280px;
@@ -117,6 +150,6 @@
 
   /* ── Transitions ── */
   --transition-fast: 150ms ease;
-  --transition-base: 250ms ease;
+  --transition-base: 300ms ease;    /* e-a-transition-hover: all .3s */
   --transition-slow: 350ms ease;
 }
