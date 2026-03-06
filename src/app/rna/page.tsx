@@ -30,7 +30,7 @@ export default function RNAPage() {
               />
             </div>
             {/* Left - Image */}
-            <div className="lg:ml-8" style={{ position: "relative", zIndex: 1, width: "520px", maxWidth: "100%" }}>
+            <div className="w-full lg:w-[48%] lg:ml-8" style={{ position: "relative", zIndex: 1 }}>
               <div
                 className="relative w-full rounded-2xl overflow-hidden"
                 style={{
@@ -51,7 +51,7 @@ export default function RNAPage() {
             {/* Right - Content */}
             <div className="w-full lg:w-[55%] flex flex-col justify-center" style={{ position: "relative", zIndex: 1 }}>
               <h1
-                className="text-6xl md:text-7xl lg:text-[100px] font-semibold text-left"
+                className="text-6xl md:text-7xl lg:text-[100px] font-medium text-left"
                 style={{ fontFamily: "'Manrope', Arial, Helvetica, sans-serif", lineHeight: "1em", letterSpacing: "0em" }}
               >
                 Advancing
