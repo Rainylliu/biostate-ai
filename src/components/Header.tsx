@@ -53,9 +53,9 @@ export default function Header() {
             className="hover:!text-[#45D0BD] transition-colors"
             style={{
               fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-              fontSize: "16px",
+              fontSize: "14px",
               lineHeight: "1.875em",
-              fontWeight: 400,
+              fontWeight: 600,
               letterSpacing: "0em",
               color: "#1f1f1f",
             }}
