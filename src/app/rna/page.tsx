@@ -14,9 +14,23 @@ export default function RNAPage() {
       {/* Section 1 - Hero */}
       <section className="py-16 lg:py-24" style={{ marginTop: "40px" }}>
         <div className="container">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          <div className="relative flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            {/* Background circle */}
+            <div
+              className="absolute inset-0 flex items-center justify-center pointer-events-none"
+              style={{ zIndex: 0 }}
+            >
+              <Image
+                src="/images/circle-bg1.svg"
+                alt=""
+                width={900}
+                height={900}
+                className="opacity-100"
+                style={{ maxWidth: "110%", height: "auto" }}
+              />
+            </div>
             {/* Left - Image */}
-            <div className="w-full lg:w-[45%]">
+            <div className="w-full lg:w-[40%] lg:ml-8" style={{ position: "relative", zIndex: 1 }}>
               <div
                 className="relative w-full rounded-2xl overflow-hidden"
                 style={{
@@ -35,7 +49,7 @@ export default function RNAPage() {
             </div>
 
             {/* Right - Content */}
-            <div className="w-full lg:w-[55%] flex flex-col justify-center">
+            <div className="w-full lg:w-[55%] flex flex-col justify-center" style={{ position: "relative", zIndex: 1 }}>
               <h1
                 className="text-6xl md:text-7xl lg:text-8xl xl:text-[7rem] font-bold tracking-tight"
                 style={{ fontFamily: "'Sora', sans-serif", lineHeight: "1.05" }}
