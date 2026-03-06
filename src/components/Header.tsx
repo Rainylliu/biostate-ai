@@ -34,7 +34,8 @@ export default function Header() {
         className="flex items-center justify-between"
         style={{
           margin: "8px 20px",
-          padding: "8px 24px",
+          padding: "0 24px",
+          height: "40px",
           fontSize: "14px",
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
           color: "#919191",
