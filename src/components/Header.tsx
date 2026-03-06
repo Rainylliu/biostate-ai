@@ -152,14 +152,18 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`text-sm tracking-wider transition-all ${
+                  className={`transition-all ${
                     isActive
                       ? ""
                       : "hover:bg-[#F5F5F5]"
                   }`}
                   style={{
-                    fontFamily: "'Manrope', sans-serif",
-                    fontWeight: 1000,
+                    fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                    fontSize: "14px",
+                    fontWeight: 700,
+                    lineHeight: "1.5em",
+                    letterSpacing: "0em",
+                    textTransform: "uppercase" as const,
                     borderRadius: "10px",
                     padding: "10px 20px",
                     backgroundColor: isActive ? "#1f1f1f" : undefined,
