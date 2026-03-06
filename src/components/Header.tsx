@@ -155,7 +155,7 @@ export default function Header() {
                   className={`text-sm font-semibold tracking-wider transition-all px-5 py-2.5 ${
                     isActive
                       ? "bg-[#1f1f1f] text-white"
-                      : "text-[#1f1f1f] hover:bg-[#93c5fd80]"
+                      : "text-[#1f1f1f] hover:bg-[#F5F5F5]"
                   }`}
                   style={{ fontFamily: "'Manrope', sans-serif", borderRadius: "10px" }}
                 >
