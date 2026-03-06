@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -17,13 +16,12 @@ export default function RNAPage() {
           <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-20">
             {/* Left - Image */}
             <div className="w-full lg:w-[45%]">
-              <div className="relative w-full rounded-2xl overflow-hidden bg-gray-900" style={{ aspectRatio: "3/4" }}>
-                <Image
-                  src="/images/rna-hero.jpg"
+              <div className="w-full rounded-2xl overflow-hidden" style={{ aspectRatio: "3/4" }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/media/rna-hero.svg"
                   alt="RNA molecular structure visualization"
-                  fill
-                  className="object-cover"
-                  priority
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
