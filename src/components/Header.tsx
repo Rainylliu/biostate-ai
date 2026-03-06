@@ -28,7 +28,7 @@ export default function Header() {
   return (
     <>
       {/* Top Info Bar */}
-      <div className="w-full py-4 px-8 flex items-center justify-between">
+      <div className="mx-6 mt-3 py-3 px-8 flex items-center justify-between rounded-full border border-brand-75">
         <span className="text-sm text-brand-400">
           Email:{" "}
           <a
