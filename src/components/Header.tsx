@@ -123,9 +123,12 @@ export default function Header() {
               />
             </button>
             <Link href="/" className="flex items-center">
-              <span className="text-2xl font-bold tracking-tight" style={{ fontFamily: "'Sora', sans-serif", color: "#111" }}>
-                bios<span style={{ letterSpacing: "-0.02em" }}>t</span>ate.AI
-              </span>
+              <Image
+                src="/images/Logo_black.svg"
+                alt="biostate.AI"
+                width={150}
+                height={30}
+              />
             </Link>
           </div>
 
