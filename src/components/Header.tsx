@@ -251,7 +251,7 @@ export default function Header() {
             <span
               key={i}
               className="text-white text-sm font-semibold"
-              style={{ fontFamily: "'Manrope', Arial, Helvetica, sans-serif", paddingRight: "50vw" }}
+              style={{ fontFamily: "'Manrope', Arial, Helvetica, sans-serif", paddingRight: "8vw" }}
             >
               {marqueeText}
             </span>
