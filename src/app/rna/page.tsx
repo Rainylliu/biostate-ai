@@ -26,7 +26,7 @@ export default function RNAPage() {
                 width={900}
                 height={900}
                 className="opacity-100"
-                style={{ width: "150%", maxWidth: "none", height: "auto" }}
+                style={{ width: "120%", maxWidth: "none", height: "auto" }}
               />
             </div>
             {/* Left - Image */}
