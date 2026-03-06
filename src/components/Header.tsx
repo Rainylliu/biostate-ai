@@ -82,7 +82,7 @@ export default function Header() {
         }`}
         style={{ borderRadius: "50px", border: "1px solid #e6e8ea" }}
       >
-        <div className="flex items-center justify-between px-8 py-3">
+        <div className="flex items-center justify-between" style={{ padding: "16px 20px 16px 28px" }}>
           {/* Hamburger (mobile) */}
           <button
             className="lg:hidden flex flex-col gap-1.5 p-1"
@@ -107,7 +107,7 @@ export default function Header() {
           </button>
 
           {/* Menu icon + Logo */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-8">
             {/* Menu grid icon */}
             <button
               aria-label="Menu"
@@ -127,22 +127,22 @@ export default function Header() {
                 src="/images/Logo_black.svg"
                 alt="biostate.AI"
                 width={150}
-                height={30}
+                height={28}
               />
             </Link>
           </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-8">
             {navItems.map((item) => {
               const isActive = pathname === item.href;
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`px-5 py-2 text-sm font-semibold tracking-wider transition-all ${
+                  className={`text-sm font-semibold tracking-wider transition-all ${
                     isActive
-                      ? "bg-[#1f1f1f] text-white rounded-full"
+                      ? "bg-[#1f1f1f] text-white rounded-full px-6 py-2"
                       : "text-[#1f1f1f] hover:text-[#45D0BD]"
                   }`}
                   style={{ fontFamily: "'Manrope', sans-serif" }}
@@ -156,11 +156,13 @@ export default function Header() {
           {/* CTA Button */}
           <Link
             href="/get-quote"
-            className="hidden lg:inline-flex items-center px-10 py-3 text-sm font-semibold rounded-full transition-all"
+            className="hidden lg:inline-flex items-center justify-center text-sm font-semibold rounded-full transition-all hover:bg-[#f0fdfb]"
             style={{
               border: "1.5px solid #45D0BD",
               color: "#1f1f1f",
               fontFamily: "'Manrope', sans-serif",
+              padding: "12px 40px",
+              minWidth: "160px",
             }}
           >
             Get Quote
