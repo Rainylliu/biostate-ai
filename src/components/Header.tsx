@@ -75,14 +75,13 @@ export default function Header() {
 
       {/* Main Header */}
       <header
-        className={`sticky top-0 z-50 transition-all duration-300 mx-5 mt-1 ${
+        className={`sticky top-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-white/95 backdrop-blur-md shadow-lg"
+            ? "bg-white/95 backdrop-blur-md shadow-sm"
             : "bg-white"
         }`}
-        style={{ borderRadius: "50px", border: "1px solid #e6e8ea" }}
       >
-        <div className="flex items-center justify-between" style={{ padding: "16px 20px 16px 28px" }}>
+        <div className="flex items-center justify-between" style={{ height: "105px", padding: "0 40px" }}>
           {/* Hamburger (mobile) */}
           <button
             className="lg:hidden flex flex-col gap-1.5 p-1"
