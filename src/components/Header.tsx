@@ -29,28 +29,29 @@ export default function Header() {
   return (
     <>
       {/* Top Info Bar */}
-      <div className="w-full py-4 px-8 flex items-center justify-between">
-        <span className="text-sm text-brand-400">
+      <div className="w-full py-3 px-10 flex items-center justify-between">
+        <span className="text-sm" style={{ color: "#6c726e" }}>
           Email:{" "}
           <a
             href="mailto:contact@biostate.ai"
-            className="font-semibold text-text hover:text-accent transition-colors"
+            className="font-semibold hover:text-accent transition-colors"
+            style={{ color: "#333" }}
           >
             contact@biostate.ai
           </a>
         </span>
-        <div className="flex items-center gap-4">
-          <span className="text-sm text-brand-300">Follow us:</span>
-          <a href="#" aria-label="Facebook" className="text-brand-400 hover:text-text transition-colors">
+        <div className="flex items-center gap-5">
+          <span className="text-sm" style={{ color: "#8c8f94" }}>Follow us:</span>
+          <a href="#" aria-label="Facebook" className="hover:text-text transition-colors" style={{ color: "#6c726e" }}>
             <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
           </a>
-          <a href="#" aria-label="Instagram" className="text-brand-400 hover:text-text transition-colors">
+          <a href="#" aria-label="Instagram" className="hover:text-text transition-colors" style={{ color: "#6c726e" }}>
             <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
           </a>
-          <a href="#" aria-label="X" className="text-brand-400 hover:text-text transition-colors">
+          <a href="#" aria-label="X" className="hover:text-text transition-colors" style={{ color: "#6c726e" }}>
             <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           </a>
-          <a href="#" aria-label="LinkedIn" className="text-brand-400 hover:text-text transition-colors">
+          <a href="#" aria-label="LinkedIn" className="hover:text-text transition-colors" style={{ color: "#6c726e" }}>
             <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
           </a>
         </div>
@@ -58,7 +59,7 @@ export default function Header() {
 
       {/* Main Header */}
       <header
-        className={`sticky top-0 z-50 transition-all duration-300 mx-6 mt-1 ${
+        className={`sticky top-0 z-50 transition-all duration-300 mx-6 mt-2 mb-4 ${
           scrolled
             ? "bg-white/95 backdrop-blur-md shadow-lg"
             : "bg-white"
@@ -89,26 +90,32 @@ export default function Header() {
             />
           </button>
 
-          {/* Logo with grid icon */}
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/images/Logo_black.svg"
-              alt="biostate.AI"
-              width={180}
-              height={40}
-              priority
-            />
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-3">
+            {/* Grid icon */}
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="text-text">
+              <rect x="3" y="3" width="7.5" height="7.5" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
+              <rect x="13.5" y="3" width="7.5" height="7.5" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
+              <rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
+              <rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
+            </svg>
+            <span
+              className="text-2xl font-bold tracking-tight"
+              style={{ fontFamily: "'Sora', sans-serif", color: "#111" }}
+            >
+              bios<span style={{ letterSpacing: "-0.02em" }}>t</span>ate.AI
+            </span>
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-2">
+          <nav className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => {
               const isActive = pathname === item.href;
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`px-6 py-2.5 text-sm font-semibold tracking-wide transition-all rounded-full ${
+                  className={`px-5 py-2 text-sm font-semibold tracking-wide transition-all rounded-full ${
                     isActive
                       ? "bg-brand-950 text-white"
                       : "text-text hover:text-primary"
@@ -120,10 +127,11 @@ export default function Header() {
             })}
           </nav>
 
-          {/* CTA Button - outlined style */}
+          {/* CTA Button */}
           <Link
             href="/get-quote"
-            className="hidden lg:inline-flex items-center px-10 py-3.5 border border-brand-200 text-text text-base font-semibold rounded-full hover:border-text hover:bg-brand-50 transition-all"
+            className="hidden lg:inline-flex items-center px-10 py-3.5 text-base font-semibold rounded-full hover:bg-brand-50 transition-all"
+            style={{ border: "1.5px solid #b0e8e0", color: "#333" }}
           >
             Get Quote
           </Link>
@@ -152,7 +160,8 @@ export default function Header() {
             <Link
               href="/get-quote"
               onClick={() => setMobileOpen(false)}
-              className="mt-4 block text-center px-5 py-2.5 border border-brand-75 text-text text-sm font-semibold rounded-full"
+              className="mt-4 block text-center px-5 py-2.5 text-text text-sm font-semibold rounded-full"
+              style={{ border: "1.5px solid #b0e8e0" }}
             >
               Get Quote
             </Link>
