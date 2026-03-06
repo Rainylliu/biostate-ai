@@ -49,7 +49,7 @@ export default function Header() {
           <a
             href="mailto:contact@biostate.ai"
             className="hover:!text-[#45D0BD] transition-colors"
-            style={{ fontWeight: 400, color: "#333" }}
+            style={{ fontWeight: 500, color: "#1f1f1f" }}
           >
             contact@biostate.ai
           </a>
