@@ -51,8 +51,8 @@ export default function RNAPage() {
             {/* Right - Content */}
             <div className="w-full lg:w-[50%] flex flex-col justify-center" style={{ position: "relative", zIndex: 1, fontFamily: "'Manrope', Arial, Helvetica, sans-serif", fontWeight: 500, fontStyle: "normal", letterSpacing: "0em", wordSpacing: "0px", textTransform: "none" as const }}>
               <h1
-                className="text-6xl md:text-7xl lg:text-[100px] text-left"
-                style={{ fontWeight: 400, lineHeight: "1em", letterSpacing: "normal" }}
+                className="text-6xl md:text-7xl lg:text-[104px] text-left"
+                style={{ fontWeight: 400, lineHeight: "1em", letterSpacing: "-0.03em" }}
               >
                 Advancing
                 <br />
