@@ -191,12 +191,14 @@ export default function Header() {
             href="/get-quote"
             className="hidden lg:inline-flex items-center justify-center rounded-full transition-all hover:bg-[#f0fdfb]"
             style={{
-              border: "1.5px solid #45D0BD",
+              border: "2px solid #45D0BD",
               color: "#333333",
               fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-              fontSize: "16px",
-              fontWeight: 500,
+              fontSize: "1rem",
+              fontWeight: 600,
+              letterSpacing: "normal",
               padding: "13px 18px",
+              minWidth: "148px",
             }}
           >
             Get Quote
