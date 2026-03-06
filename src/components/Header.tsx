@@ -152,12 +152,16 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`text-sm font-semibold tracking-wider transition-all px-5 py-2.5 ${
+                  className={`text-sm font-semibold tracking-wider transition-all ${
                     isActive
                       ? "bg-[#1f1f1f] text-white"
                       : "text-[#1f1f1f] hover:bg-[#F5F5F5]"
                   }`}
-                  style={{ fontFamily: "'Manrope', sans-serif", borderRadius: "10px" }}
+                  style={{
+                    fontFamily: "'Manrope', sans-serif",
+                    borderRadius: "10px",
+                    padding: "10px 20px",
+                  }}
                 >
                   {item.label}
                 </Link>
