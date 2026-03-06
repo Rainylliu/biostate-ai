@@ -178,3 +178,13 @@ img {
   box-shadow: var(--shadow-lg);
   transform: translateY(-2px);
 }
+
+/* ── Marquee Animation ── */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
