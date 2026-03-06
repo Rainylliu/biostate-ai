@@ -62,7 +62,6 @@ export default function RNAPage() {
               </h1>
 
               <p className="mt-10 lg:mt-14 leading-relaxed max-w-xl" style={{ fontSize: "16px", color: "#333333" }}>
-                <span className="inline-block w-2 h-2 rounded-full bg-brand-400 mr-3 align-middle" />
                 Biostate AI&apos;s platform connects samples, data, and clinical
                 decisions — making precision health scalable, accessible, and
                 actionable through low-cost sequencing and autonomous AI
