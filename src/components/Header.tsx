@@ -198,7 +198,7 @@ export default function Header() {
               letterSpacing: "normal",
             }}
           >
-            <span className="get-quote-inner">Get Quote</span>
+            <span className="get-quote-inner">{pathname === "/rna" ? "Get Quote" : "Get in Touch"}</span>
           </Link>
         </div>
 
@@ -227,7 +227,7 @@ export default function Header() {
               onClick={() => setMobileOpen(false)}
               className="mt-4 block text-center px-5 py-2.5 border border-brand-75 text-text text-sm font-semibold rounded-full"
             >
-              Get Quote
+              {pathname === "/rna" ? "Get Quote" : "Get in Touch"}
             </Link>
           </nav>
         )}
