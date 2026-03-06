@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
@@ -18,6 +19,7 @@ export default function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [menuHovered, setMenuHovered] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -49,7 +51,14 @@ export default function Header() {
           <a
             href="mailto:contact@biostate.ai"
             className="hover:!text-[#45D0BD] transition-colors"
-            style={{ fontWeight: 500, color: "#1f1f1f" }}
+            style={{
+              fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+              fontSize: "14px",
+              lineHeight: "1.875em",
+              fontWeight: 500,
+              letterSpacing: "0em",
+              color: "#1f1f1f",
+            }}
           >
             contact@biostate.ai
           </a>
@@ -73,14 +82,13 @@ export default function Header() {
 
       {/* Main Header */}
       <header
-        className={`sticky top-0 z-50 transition-all duration-300 mx-6 mt-1 ${
+        className={`sticky top-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-white/95 backdrop-blur-md shadow-lg"
+            ? "bg-white/95 backdrop-blur-md shadow-sm"
             : "bg-white"
         }`}
-        style={{ borderRadius: "50px", border: "1px solid #e6e8ea" }}
       >
-        <div className="flex items-center justify-between px-8 py-4">
+        <div className="flex items-center justify-between" style={{ height: "105px", padding: "0 40px 0 64px" }}>
           {/* Hamburger (mobile) */}
           <button
             className="lg:hidden flex flex-col gap-1.5 p-1"
@@ -104,34 +112,75 @@ export default function Header() {
             />
           </button>
 
-          {/* Logo with grid icon */}
-          <Link href="/" className="flex items-center gap-3">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-text">
-              <rect x="3" y="3" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
-              <rect x="13" y="3" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
-              <rect x="3" y="13" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
-              <rect x="13" y="13" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
-            </svg>
-            <span className="text-2xl font-bold tracking-tight" style={{ fontFamily: "'Sora', sans-serif", color: "#111" }}>
-              bios<span style={{ letterSpacing: "-0.02em" }}>t</span>ate.AI
-            </span>
-          </Link>
+          {/* Menu icon + Logo */}
+          <div className="flex items-center gap-8">
+            {/* Menu grid icon */}
+            <button
+              aria-label="Menu"
+              className="hidden lg:block cursor-pointer relative"
+              style={{ width: 20, height: 20 }}
+              onMouseEnter={() => setMenuHovered(true)}
+              onMouseLeave={() => setMenuHovered(false)}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/menu.svg"
+                alt="Menu"
+                width={20}
+                height={20}
+                className="absolute inset-0 transition-opacity duration-500"
+                style={{ opacity: menuHovered ? 0 : 1 }}
+              />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/menu-hover.svg"
+                alt="Menu"
+                width={20}
+                height={20}
+                className="absolute inset-0 transition-opacity duration-500"
+                style={{ opacity: menuHovered ? 1 : 0 }}
+              />
+            </button>
+            <Link href="/" className="flex items-center">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/Logo_black.svg"
+                alt="biostate.AI"
+                style={{ height: "28px", width: "auto" }}
+              />
+            </Link>
+          </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-2">
+          <nav className="hidden lg:flex items-center" style={{ gap: "5px" }}>
             {navItems.map((item) => {
-              const isActive = pathname === item.href;
+              const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`px-6 py-2.5 text-sm font-semibold tracking-wide transition-all rounded-full ${
+                  className={`nav-tab transition-all ${
                     isActive
-                      ? "bg-brand-950 text-white"
-                      : "text-text hover:text-primary"
+                      ? ""
+                      : "hover:bg-[#F0F2F4]"
                   }`}
+                  style={{
+                    fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                    fontSize: "14px",
+                    fontWeight: 700,
+                    lineHeight: "1.5em",
+                    letterSpacing: "0em",
+                    textTransform: "uppercase" as const,
+                    borderRadius: "10px",
+                    padding: "10px 20px",
+                    backgroundColor: isActive ? "#1f1f1f" : undefined,
+                    color: isActive ? "#ffffff" : "#1f1f1f",
+                  }}
                 >
-                  {item.label}
+                  <span className="nav-tab-text">
+                    <span>{item.label}</span>
+                    <span>{item.label}</span>
+                  </span>
                 </Link>
               );
             })}
@@ -140,9 +189,16 @@ export default function Header() {
           {/* CTA Button */}
           <Link
             href="/get-quote"
-            className="hidden lg:inline-flex items-center px-10 py-3.5 border border-brand-200 text-text text-base font-semibold rounded-full hover:border-text hover:bg-brand-50 transition-all"
+            className="get-quote-btn hidden lg:inline-flex rounded-full"
+            style={{
+              color: "#1f1f1f",
+              fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+              fontSize: "1rem",
+              fontWeight: 600,
+              letterSpacing: "normal",
+            }}
           >
-            Get Quote
+            <span className="get-quote-inner">Get Quote</span>
           </Link>
         </div>
 

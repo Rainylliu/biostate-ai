@@ -179,6 +179,62 @@ img {
   transform: translateY(-2px);
 }
 
+/* ── Nav Tab Text Scroll Animation ── */
+.nav-tab-text {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  height: 1.5em;
+}
+
+.nav-tab-text span {
+  display: block;
+  transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.nav-tab-text span:first-child {
+  transform: translateY(0);
+}
+
+.nav-tab-text span:last-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(100%);
+}
+
+.nav-tab:hover .nav-tab-text span:first-child {
+  transform: translateY(-100%);
+}
+
+.nav-tab:hover .nav-tab-text span:last-child {
+  transform: translateY(0);
+}
+
+/* ── Get Quote Button Gradient Border ── */
+.get-quote-btn {
+  border: none !important;
+  background: linear-gradient(90deg, #45d0bd, #44b6e9);
+  padding: 2px !important;
+}
+
+.get-quote-btn .get-quote-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 9999px;
+  padding: 13px 50px;
+  min-width: 188px;
+  transition: background 0.4s ease;
+}
+
+.get-quote-btn:hover .get-quote-inner {
+  background: linear-gradient(90deg, rgba(69, 208, 189, 0.15), rgba(68, 182, 233, 0.15));
+  color: #1f1f1f;
+}
+
 /* ── Marquee Animation ── */
 @keyframes marquee {
   0% {
