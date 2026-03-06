@@ -154,13 +154,15 @@ export default function Header() {
                   href={item.href}
                   className={`text-sm font-semibold tracking-wider transition-all ${
                     isActive
-                      ? "bg-[#1f1f1f] text-white"
-                      : "text-[#1f1f1f] hover:bg-[#F5F5F5]"
+                      ? ""
+                      : "hover:bg-[#F5F5F5]"
                   }`}
                   style={{
                     fontFamily: "'Manrope', sans-serif",
                     borderRadius: "10px",
                     padding: "10px 20px",
+                    backgroundColor: isActive ? "#1f1f1f" : undefined,
+                    color: isActive ? "#ffffff" : "#1f1f1f",
                   }}
                 >
                   {item.label}
