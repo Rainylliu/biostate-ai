@@ -76,22 +76,15 @@ export default function RNAPage() {
                   className="book-a-call-btn group"
                 >
                   Book a call
-                  <span className="icon-button-arrow" style={{ display: "inline-flex" }}>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                    >
-                      <path
-                        d="M4 12L12 4M12 4H5M12 4V11"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+                  <span className="book-a-call-arrow">
+                    <span className="book-a-call-arrow-inner">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
                   </span>
                 </a>
               </div>
