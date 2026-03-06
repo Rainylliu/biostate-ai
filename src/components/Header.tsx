@@ -152,9 +152,9 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`text-sm font-semibold tracking-wider transition-all ${
+                  className={`text-sm font-semibold tracking-wider transition-all px-5 py-2 rounded-lg ${
                     isActive
-                      ? "bg-[#1f1f1f] text-white rounded-full px-6 py-2"
+                      ? "bg-[#1f1f1f] text-white"
                       : "text-[#1f1f1f] hover:text-[#45D0BD]"
                   }`}
                   style={{ fontFamily: "'Manrope', sans-serif" }}
