@@ -59,13 +59,13 @@ export default function Header() {
       <div
         className="flex items-center justify-between"
         style={{
-          margin: "0 20px",
-          padding: "4px 20px 5px",
+          margin: "8px 20px",
+          padding: "8px 24px",
           fontSize: "14px",
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
           color: "#919191",
-          borderBottom: "1px solid #e6e8ea",
-          borderRadius: "0 0 25px 25px",
+          border: "1px solid #e6e8ea",
+          borderRadius: "25px",
         }}
       >
         <span>
