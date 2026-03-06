@@ -247,11 +247,11 @@ export default function Header() {
             animation: "marquee 20s linear infinite",
           }}
         >
-          {Array.from({ length: 8 }).map((_, i) => (
+          {Array.from({ length: 3 }).map((_, i) => (
             <span
               key={i}
-              className="text-white text-sm font-semibold mx-12"
-              style={{ fontFamily: "'Manrope', sans-serif" }}
+              className="text-white text-sm font-semibold"
+              style={{ fontFamily: "'Manrope', Arial, Helvetica, sans-serif", paddingRight: "50vw" }}
             >
               {marqueeText}
             </span>
