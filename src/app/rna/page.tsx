@@ -49,7 +49,7 @@ export default function RNAPage() {
             </div>
 
             {/* Right - Content */}
-            <div className="w-full lg:w-[50%] flex flex-col justify-center" style={{ position: "relative", zIndex: 1, color: "#333333", fontFamily: "'Manrope', Arial, Helvetica, sans-serif", fontSize: "16px", fontWeight: 500, fontStyle: "normal", letterSpacing: "0em", wordSpacing: "0px", textTransform: "none" as const }}>
+            <div className="w-full lg:w-[50%] flex flex-col justify-center" style={{ position: "relative", zIndex: 1, color: "#333333", fontFamily: "'Manrope', Arial, Helvetica, sans-serif", fontWeight: 500, fontStyle: "normal", letterSpacing: "0em", wordSpacing: "0px", textTransform: "none" as const }}>
               <h1
                 className="text-6xl md:text-7xl lg:text-[100px] text-left"
                 style={{ fontWeight: 500, lineHeight: "1em", letterSpacing: "0em" }}
@@ -61,7 +61,7 @@ export default function RNAPage() {
                 Innovation
               </h1>
 
-              <p className="mt-10 lg:mt-14 text-base lg:text-lg leading-relaxed text-brand-600 max-w-xl">
+              <p className="mt-10 lg:mt-14 leading-relaxed max-w-xl" style={{ fontSize: "16px", color: "#333333" }}>
                 <span className="inline-block w-2 h-2 rounded-full bg-brand-400 mr-3 align-middle" />
                 Biostate AI&apos;s platform connects samples, data, and clinical
                 decisions — making precision health scalable, accessible, and
