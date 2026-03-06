@@ -212,6 +212,34 @@ img {
   transform: translateY(0);
 }
 
+/* ── Get Quote Button Hover ── */
+.get-quote-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transition: background 0.4s ease;
+  pointer-events: none;
+}
+
+.get-quote-btn:hover::before {
+  background: linear-gradient(
+    90deg,
+    rgba(69, 208, 189, 0.1) 0%,
+    rgba(69, 208, 189, 0.2) 100%
+  );
+}
+
+.get-quote-btn:hover {
+  border-color: #3dbfad;
+  color: #1f1f1f;
+}
+
 /* ── Marquee Animation ── */
 @keyframes marquee {
   0% {
