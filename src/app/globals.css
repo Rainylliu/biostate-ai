@@ -212,32 +212,26 @@ img {
   transform: translateY(0);
 }
 
-/* ── Get Quote Button Hover ── */
-.get-quote-btn::before {
-  content: "";
-  position: absolute;
-  inset: 0;
+/* ── Get Quote Button Gradient Border ── */
+.get-quote-btn {
+  border: none !important;
+  background: linear-gradient(90deg, #45d0bd, #44b6e9);
+  padding: 2px !important;
+}
+
+.get-quote-btn .get-quote-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
   border-radius: 9999px;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  padding: 13px 18px;
+  min-width: 144px;
   transition: background 0.4s ease;
-  pointer-events: none;
 }
 
-.get-quote-btn:hover::before {
-  background: linear-gradient(
-    90deg,
-    rgba(69, 208, 189, 0.1) 0%,
-    rgba(69, 208, 189, 0.2) 100%
-  );
-}
-
-.get-quote-btn:hover {
-  border-color: #3dbfad;
-  color: #1f1f1f;
+.get-quote-btn:hover .get-quote-inner {
+  background: rgba(255, 255, 255, 0.85);
 }
 
 /* ── Marquee Animation ── */

@@ -189,21 +189,16 @@ export default function Header() {
           {/* CTA Button */}
           <Link
             href="/get-quote"
-            className="get-quote-btn hidden lg:inline-flex items-center justify-center rounded-full transition-all"
+            className="get-quote-btn hidden lg:inline-flex rounded-full"
             style={{
-              border: "2px solid #45D0BD",
               color: "#333333",
               fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
               fontSize: "1rem",
               fontWeight: 600,
               letterSpacing: "normal",
-              padding: "13px 18px",
-              minWidth: "148px",
-              position: "relative",
-              overflow: "hidden",
             }}
           >
-            Get Quote
+            <span className="get-quote-inner">Get Quote</span>
           </Link>
         </div>
 
