@@ -111,15 +111,28 @@ export default function Header() {
             {/* Menu grid icon */}
             <button
               aria-label="Menu"
-              className="hidden lg:block cursor-pointer"
+              className="hidden lg:block cursor-pointer relative"
+              style={{ width: 20, height: 20 }}
               onMouseEnter={() => setMenuHovered(true)}
               onMouseLeave={() => setMenuHovered(false)}
             >
-              <Image
-                src={menuHovered ? "/images/menu-hover.svg" : "/images/menu.svg"}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/menu.svg"
                 alt="Menu"
                 width={20}
                 height={20}
+                className="absolute inset-0 transition-opacity duration-300"
+                style={{ opacity: menuHovered ? 0 : 1 }}
+              />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/menu-hover.svg"
+                alt="Menu"
+                width={20}
+                height={20}
+                className="absolute inset-0 transition-opacity duration-300"
+                style={{ opacity: menuHovered ? 1 : 0 }}
               />
             </button>
             <Link href="/" className="flex items-center">
