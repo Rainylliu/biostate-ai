@@ -152,7 +152,7 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`text-sm font-bold tracking-wider transition-all ${
+                  className={`text-sm font-extrabold tracking-wider transition-all ${
                     isActive
                       ? ""
                       : "hover:bg-[#F5F5F5]"
