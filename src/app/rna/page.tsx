@@ -14,7 +14,7 @@ export default function RNAPage() {
       {/* Section 1 - Hero */}
       <section className="py-16 lg:py-24" style={{ marginTop: "40px" }}>
         <div className="container">
-          <div className="relative flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          <div className="relative flex flex-col lg:flex-row items-center gap-12 lg:gap-[60px]">
             {/* Background circle */}
             <div
               className="absolute inset-0 flex items-center justify-center pointer-events-none"
@@ -26,7 +26,7 @@ export default function RNAPage() {
                 width={900}
                 height={900}
                 className="opacity-100"
-                style={{ maxWidth: "110%", height: "auto" }}
+                style={{ maxWidth: "55%", height: "auto" }}
               />
             </div>
             {/* Left - Image */}
@@ -51,8 +51,8 @@ export default function RNAPage() {
             {/* Right - Content */}
             <div className="w-full lg:w-[50%] flex flex-col justify-center" style={{ position: "relative", zIndex: 1, fontFamily: "'Manrope', Arial, Helvetica, sans-serif", fontWeight: 500, fontStyle: "normal", letterSpacing: "0em", wordSpacing: "0px", textTransform: "none" as const }}>
               <h1
-                className="text-6xl md:text-7xl lg:text-[104px] text-left"
-                style={{ fontWeight: 400, lineHeight: "1em", letterSpacing: "-0.03em" }}
+                className="text-6xl md:text-7xl lg:text-[100px] text-left"
+                style={{ fontWeight: 400, lineHeight: "1em", letterSpacing: "0.02em" }}
               >
                 Advancing
                 <br />
