@@ -70,7 +70,7 @@ export default function RNAPage() {
 
               <div className="mt-10 lg:mt-14">
                 <Link
-                  href="/get-quote"
+                  href="https://calendly.com/rachan-raj-biostate/biostate-ai-introduction-services" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-6 px-10 py-5 border border-brand-200 text-text text-lg font-medium rounded-2xl hover:border-text hover:bg-brand-50 transition-all group"
                 >
                   Book a call
