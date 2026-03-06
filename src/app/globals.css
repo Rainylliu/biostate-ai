@@ -225,8 +225,8 @@ img {
   justify-content: center;
   background: #ffffff;
   border-radius: 9999px;
-  padding: 13px 18px;
-  min-width: 144px;
+  padding: 18px 40px;
+  min-width: 188px;
   transition: background 0.4s ease;
 }
 
