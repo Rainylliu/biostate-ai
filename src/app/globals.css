@@ -235,6 +235,71 @@ img {
   color: #1f1f1f;
 }
 
+/* ── Book a Call Button ── */
+.book-a-call-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Manrope', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
+  padding: 14px 32px;
+  border-radius: 15px;
+  background: transparent;
+  z-index: 1;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.book-a-call-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  padding: 1px;
+  background: linear-gradient(135deg, #8258c8, #2c84c8);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+.book-a-call-btn:hover {
+  background: linear-gradient(135deg, #8258c8, #2c84c8);
+  color: #ffffff;
+}
+
+/* Arrow animation */
+.book-a-call-arrow {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.book-a-call-arrow-inner {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.book-a-call-arrow-inner svg:first-child {
+  margin-bottom: 0;
+}
+
+.book-a-call-arrow-inner svg:last-child {
+  position: absolute;
+  top: 16px;
+  left: -16px;
+}
+
+.book-a-call-btn:hover .book-a-call-arrow-inner {
+  transform: translate(16px, -16px);
+}
+
 /* ── Marquee Animation ── */
 @keyframes marquee {
   0% {

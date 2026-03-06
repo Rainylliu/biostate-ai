@@ -198,7 +198,7 @@ export default function Header() {
               letterSpacing: "normal",
             }}
           >
-            <span className="get-quote-inner">Get Quote</span>
+            <span className="get-quote-inner">{pathname === "/rna" ? "Get Quote" : "Get in Touch"}</span>
           </Link>
         </div>
 
@@ -227,7 +227,7 @@ export default function Header() {
               onClick={() => setMobileOpen(false)}
               className="mt-4 block text-center px-5 py-2.5 border border-brand-75 text-text text-sm font-semibold rounded-full"
             >
-              Get Quote
+              {pathname === "/rna" ? "Get Quote" : "Get in Touch"}
             </Link>
           </nav>
         )}
@@ -237,7 +237,7 @@ export default function Header() {
       <div
         className="w-full overflow-hidden"
         style={{
-          backgroundColor: "#45d0bd",
+          background: "linear-gradient(90deg, #45d0bd, #44b6e9)",
           padding: "10px 0",
         }}
       >
@@ -247,11 +247,11 @@ export default function Header() {
             animation: "marquee 20s linear infinite",
           }}
         >
-          {Array.from({ length: 8 }).map((_, i) => (
+          {Array.from({ length: 6 }).map((_, i) => (
             <span
               key={i}
-              className="text-white text-sm font-semibold mx-12"
-              style={{ fontFamily: "'Manrope', sans-serif" }}
+              className="text-white text-sm font-semibold"
+              style={{ fontFamily: "'Manrope', Arial, Helvetica, sans-serif", paddingRight: "8vw" }}
             >
               {marqueeText}
             </span>
