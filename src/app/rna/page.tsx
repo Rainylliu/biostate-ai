@@ -548,9 +548,9 @@ export default function RNAPage() {
                 {/* Heading */}
                 <h3
                   style={{
-                    fontSize: "36px",
+                    fontSize: "48px",
                     fontWeight: 400,
-                    lineHeight: "1.25em",
+                    lineHeight: "1.15em",
                     color: "#ffffff",
                     marginBottom: "24px",
                   }}
