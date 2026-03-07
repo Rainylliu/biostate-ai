@@ -97,6 +97,14 @@ img {
   padding-inline: var(--space-6);
 }
 
+/* ── Footer Link Hover ── */
+.footer-link-hover {
+  transition: color 0.3s;
+}
+.footer-link-hover:hover {
+  color: #45D0BD !important;
+}
+
 /* ── Button Base Styles (matching WP Aiero theme) ── */
 .btn {
   display: inline-flex;
