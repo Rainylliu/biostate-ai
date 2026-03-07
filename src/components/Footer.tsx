@@ -185,72 +185,43 @@ export default function Footer() {
                 Get in Touch
               </h4>
               <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-                <input
-                  type="text"
-                  placeholder="Full Name"
-                  value={formData.fullName}
-                  onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                  style={{
-                    fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                    fontSize: "14px",
-                    padding: "14px 20px",
-                    borderRadius: "20px",
-                    border: "1px solid #adadad",
-                    outline: "none",
-                    backgroundColor: "transparent",
-                    color: "#333",
-                  }}
-                />
-                <input
-                  type="email"
-                  placeholder="Email"
-                  required
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  style={{
-                    fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                    fontSize: "14px",
-                    padding: "14px 20px",
-                    borderRadius: "20px",
-                    border: "1px solid #adadad",
-                    outline: "none",
-                    backgroundColor: "transparent",
-                    color: "#333",
-                  }}
-                />
-                <input
-                  type="text"
-                  placeholder="Subject"
-                  value={formData.subject}
-                  onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                  style={{
-                    fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                    fontSize: "14px",
-                    padding: "14px 20px",
-                    borderRadius: "20px",
-                    border: "1px solid #adadad",
-                    outline: "none",
-                    backgroundColor: "transparent",
-                    color: "#333",
-                  }}
-                />
-                <textarea
-                  placeholder="Message"
-                  rows={5}
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  style={{
-                    fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                    fontSize: "14px",
-                    padding: "14px 20px",
-                    borderRadius: "20px",
-                    border: "1px solid #adadad",
-                    outline: "none",
-                    backgroundColor: "transparent",
-                    color: "#333",
-                    resize: "none",
-                  }}
-                />
+                <div className="floating-field">
+                  <input
+                    type="text"
+                    placeholder=" "
+                    value={formData.fullName}
+                    onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                  />
+                  <label>Full Name</label>
+                </div>
+                <div className="floating-field">
+                  <input
+                    type="email"
+                    placeholder=" "
+                    required
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  />
+                  <label>Email</label>
+                </div>
+                <div className="floating-field">
+                  <input
+                    type="text"
+                    placeholder=" "
+                    value={formData.subject}
+                    onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                  />
+                  <label>Subject</label>
+                </div>
+                <div className="floating-field floating-textarea">
+                  <textarea
+                    placeholder=" "
+                    rows={5}
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  />
+                  <label>Message</label>
+                </div>
                 <button
                   type="submit"
                   style={{
