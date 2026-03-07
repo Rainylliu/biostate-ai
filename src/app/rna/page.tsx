@@ -176,7 +176,7 @@ export default function RNAPage() {
               {/* Price + CTA */}
               <div className="mt-10">
                 <div className="flex items-baseline mb-6">
-                  <span style={{ fontSize: "clamp(56px, 6vw, 80px)", fontWeight: 400, lineHeight: "1em", color: "#1f1f1f" }}>
+                  <span style={{ fontSize: "60px", fontWeight: 400, lineHeight: "1em", letterSpacing: "-0.03em", color: "#111111" }}>
                     $60
                   </span>
                   <span style={{ fontSize: "20px", fontWeight: 400, color: "#1f1f1f" }}>
@@ -249,7 +249,7 @@ export default function RNAPage() {
               {/* Price + CTA + Note */}
               <div className="mt-10">
                 <div className="flex items-baseline mb-6">
-                  <span style={{ fontSize: "clamp(56px, 6vw, 80px)", fontWeight: 400, lineHeight: "1em", color: "#1f1f1f" }}>
+                  <span style={{ fontSize: "60px", fontWeight: 400, lineHeight: "1em", letterSpacing: "-0.03em", color: "#111111" }}>
                     $110
                   </span>
                   <span style={{ fontSize: "20px", fontWeight: 400, color: "#1f1f1f" }}>
