@@ -316,7 +316,7 @@ export default function Footer() {
             src="/images/logo.svg"
             alt="biostate.AI"
             style={{
-              height: "28px",
+              height: "48px",
               width: "auto",
               marginBottom: "40px",
               filter: "brightness(0) invert(1)",
