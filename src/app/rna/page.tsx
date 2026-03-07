@@ -118,7 +118,6 @@ export default function RNAPage() {
             text="What types of RNA sequencing samples do we handle?"
             as="h2"
             delay={300}
-            charDelay={40}
             style={{
               fontSize: "48px",
               fontWeight: 400,

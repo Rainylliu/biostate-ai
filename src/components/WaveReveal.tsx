@@ -52,29 +52,19 @@ export default function WaveReveal({
               return (
                 <span
                   key={i}
-                  className="wave-char-clip"
-                  style={{ display: "inline-block", overflow: "hidden", verticalAlign: "bottom" }}
+                  className={visible ? "wave-char-visible" : "wave-char-hidden"}
+                  style={{ animationDelay: `${delay + i * charDelay}ms` }}
                 >
-                  <span
-                    className={visible ? "wave-char-visible" : "wave-char-hidden"}
-                    style={{ animationDelay: `${delay + i * charDelay}ms` }}
-                  >
-                    {char}
-                  </span>
+                  {char}
                 </span>
               );
             })}
             {wi < words.length - 1 && (
               <span
-                className="wave-char-clip"
-                style={{ display: "inline-block", overflow: "hidden", verticalAlign: "bottom" }}
+                className={visible ? "wave-char-visible" : "wave-char-hidden"}
+                style={{ animationDelay: `${delay + charIndex++ * charDelay}ms` }}
               >
-                <span
-                  className={visible ? "wave-char-visible" : "wave-char-hidden"}
-                  style={{ animationDelay: `${delay + charIndex++ * charDelay}ms` }}
-                >
-                  {"\u00A0"}
-                </span>
+                {"\u00A0"}
               </span>
             )}
           </span>
