@@ -828,6 +828,115 @@ export default function RNAPage() {
           </div>
         </div>
       </section>
+
+      {/* Section 7 - PERD */}
+      <section
+        style={{
+          marginTop: "80px",
+        }}
+      >
+        <div className="container">
+          {/* Header area */}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "flex-start",
+              marginBottom: "50px",
+            }}
+          >
+            {/* Left side */}
+            <div>
+              <p
+                style={{
+                  fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                  fontSize: "16px",
+                  fontWeight: 400,
+                  color: "#333",
+                  marginBottom: "10px",
+                }}
+              >
+                [ technology ]
+              </p>
+              <h2
+                style={{
+                  fontSize: "160px",
+                  fontWeight: 700,
+                  lineHeight: "1em",
+                  letterSpacing: "-0.05em",
+                  background: "linear-gradient(135deg, #2ec4a5, #2c84c8)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                  marginBottom: "10px",
+                }}
+              >
+                PERD
+              </h2>
+              <p
+                style={{
+                  fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                  fontSize: "36px",
+                  fontWeight: 500,
+                  color: "#111",
+                  lineHeight: "1.2",
+                }}
+              >
+                Probes for Excess RNA Depletion
+              </p>
+            </div>
+            {/* Right side */}
+            <div style={{ maxWidth: "420px", paddingTop: "40px" }}>
+              <p
+                style={{
+                  fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                  fontSize: "18px",
+                  fontWeight: 700,
+                  color: "#111",
+                  marginBottom: "16px",
+                }}
+              >
+                rRNA depletion without enzymes
+              </p>
+              <p
+                style={{
+                  fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                  fontSize: "18px",
+                  fontWeight: 400,
+                  color: "#555",
+                  lineHeight: "1.6",
+                }}
+              >
+                PERD removes high-abundance RNA species while preserving rare transcripts, improving signal clarity and reproducibility
+              </p>
+            </div>
+          </div>
+
+          {/* Cards */}
+          <div
+            style={{
+              display: "flex",
+              gap: "20px",
+              alignItems: "stretch",
+            }}
+          >
+            <div style={{ flex: "0 0 auto", width: "calc((627 / (627 + 1241)) * 100%)" }}>
+              <img
+                src="/images/PERDcard1.svg"
+                alt="Streamlined Chemistry, Clearer Expression, High-Quality Output"
+                style={{ width: "100%", height: "100%", display: "block", objectFit: "cover", borderRadius: "25px" }}
+              />
+            </div>
+            <div style={{ flex: 1 }}>
+              <img
+                src="/images/PERDcard2.svg"
+                alt="PERD Method for Removing RNA"
+                style={{ width: "100%", height: "100%", display: "block", objectFit: "cover", borderRadius: "25px" }}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
