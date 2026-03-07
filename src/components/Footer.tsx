@@ -323,6 +323,7 @@ export default function Footer() {
                 <input
                   type="email"
                   placeholder="Email"
+                  className="footer-email-input"
                   style={{
                     fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                     fontSize: "16px",

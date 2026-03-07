@@ -149,6 +149,16 @@ img {
   color: #333;
 }
 
+/* ── Footer Email Autofill Override ── */
+.footer-email-input:-webkit-autofill,
+.footer-email-input:-webkit-autofill:hover,
+.footer-email-input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #1a1a1a inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  background-color: transparent !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 /* ── Footer Link Hover ── */
 .footer-link-hover {
   transition: color 0.3s;
