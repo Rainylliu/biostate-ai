@@ -405,6 +405,7 @@ export default function RNAPage() {
                     fontSize: "48px",
                     fontWeight: 900,
                     lineHeight: "1.3em",
+                    letterSpacing: "-0.03em",
                     color: "#3ECDC6",
                     fontFamily: "'Roboto', Sans-serif",
                   }}
@@ -444,7 +445,7 @@ export default function RNAPage() {
         style={{
           transform: "rotate(-2.07deg)",
           backgroundImage: "linear-gradient(92deg, #45D0BD 0%, #44B6E9 100%)",
-          margin: "-124px -5px 0px -5px",
+          margin: "40px -5px 0px -5px",
           padding: "42px 0px",
           overflow: "hidden",
           position: "relative",
