@@ -599,12 +599,18 @@ export default function RNAPage() {
       {/* Section 5 - High Reproducibility and Superior Data Quality */}
       <section
         style={{
-          backgroundColor: "#F0F2F4",
-          padding: "80px 20px",
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+          marginTop: "20px",
         }}
       >
         <div className="container">
+          <div
+            style={{
+              backgroundColor: "#F0F2F4",
+              borderRadius: "25px",
+              padding: "80px 20px",
+            }}
+          >
           {/* Top Row - 20,000+ and Heading */}
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16" style={{ marginBottom: "60px" }}>
             {/* Left - 20,000+ outline text */}
@@ -784,6 +790,7 @@ export default function RNAPage() {
                 Result: ~15% increase in gene detection per sample.
               </p>
             </div>
+          </div>
           </div>
         </div>
       </section>
