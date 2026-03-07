@@ -509,24 +509,28 @@ export default function RNAPage() {
 
               {/* Right - Text Content */}
               <div className="w-full lg:w-1/2">
-                {/* Workflow Outline Text */}
-                <h2
-                  style={{
-                    fontSize: "100px",
-                    fontWeight: 800,
-                    lineHeight: "1em",
-                    letterSpacing: "-0.03em",
-                    color: "transparent",
-                    background: "linear-gradient(90deg, #3ECDC6, #3B82F6)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    WebkitTextStroke: "1.5px #3ECDC6",
-                    backgroundClip: "text",
-                    marginBottom: "40px",
-                  }}
-                >
-                  Workflow
-                </h2>
+                {/* Workflow Outline Text - gradient stroke, no fill */}
+                <svg viewBox="0 0 500 90" style={{ width: "100%", maxWidth: "500px", marginBottom: "40px" }}>
+                  <defs>
+                    <linearGradient id="gradientStroke" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#3ECDC6" />
+                      <stop offset="100%" stopColor="#3B82F6" />
+                    </linearGradient>
+                  </defs>
+                  <text
+                    x="0"
+                    y="75"
+                    fontFamily="'Manrope', Arial, Helvetica, sans-serif"
+                    fontSize="100"
+                    fontWeight="800"
+                    letterSpacing="-3"
+                    fill="none"
+                    stroke="url(#gradientStroke)"
+                    strokeWidth="1.5"
+                  >
+                    Workflow
+                  </text>
+                </svg>
 
                 {/* About Tag */}
                 <p
