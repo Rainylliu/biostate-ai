@@ -62,7 +62,7 @@ export default function RNAPage() {
                 Innovation
               </h1>
 
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "#333333", margin: "35px 10px 35px 0px", paddingLeft: "6px", paddingRight: "10%" }}>
+              <p className="leading-relaxed" style={{ fontSize: "18px", color: "#333333", margin: "35px 10px 35px 0px", paddingLeft: "6px", paddingRight: "10%" }}>
                 Biostate AI&apos;s platform connects samples, data, and clinical
                 decisions — making precision health scalable, accessible, and
                 actionable through low-cost sequencing and autonomous AI
@@ -166,7 +166,7 @@ export default function RNAPage() {
                 </div>
 
                 {/* Bullet Points */}
-                <ul style={{ paddingTop: "32px", fontSize: "16px", color: "#333333", fontWeight: 500, lineHeight: "1.875em", display: "flex", flexDirection: "column", gap: "12px", listStyle: "none" }}>
+                <ul style={{ paddingTop: "32px", fontSize: "18px", color: "#333333", fontWeight: 500, lineHeight: "1.875em", display: "flex", flexDirection: "column", gap: "12px", listStyle: "none" }}>
                   <li className="flex items-baseline gap-2"><img src="/images/arrow1.svg" alt="" className="w-[5px] h-[5px] shrink-0" /> Cultured animal cells with &gt;30,000 cells</li>
                   <li className="flex items-baseline gap-2"><img src="/images/arrow1.svg" alt="" className="w-[5px] h-[5px] shrink-0" /> Extracted RNA from Mammalian samples</li>
                   <li className="flex items-baseline gap-2"><img src="/images/arrow1.svg" alt="" className="w-[5px] h-[5px] shrink-0" /> {"The Conc. ≥ 16 ng/μL (min 10 μl)"}</li>
@@ -238,7 +238,7 @@ export default function RNAPage() {
                 </div>
 
                 {/* Bullet Points */}
-                <ul style={{ paddingTop: "32px", fontSize: "16px", color: "#333333", fontWeight: 500, lineHeight: "1.875em", display: "flex", flexDirection: "column", gap: "12px", listStyle: "none" }}>
+                <ul style={{ paddingTop: "32px", fontSize: "18px", color: "#333333", fontWeight: 500, lineHeight: "1.875em", display: "flex", flexDirection: "column", gap: "12px", listStyle: "none" }}>
                   <li className="flex items-baseline gap-2"><img src="/images/arrow1.svg" alt="" className="w-[5px] h-[5px] shrink-0" /> Specialty and low-concentration RNA (evRNA, cfRNA)</li>
                   <li className="flex items-baseline gap-2"><img src="/images/arrow1.svg" alt="" className="w-[5px] h-[5px] shrink-0" /> Biospecimens and clinical samples (whole blood, plasma, serum, PBMC, tissues, FFPE)</li>
                   <li className="flex items-baseline gap-2"><img src="/images/arrow1.svg" alt="" className="w-[5px] h-[5px] shrink-0" /> {"Unusual organisms (plants, octopus, axolotl, ...)"}</li>
@@ -377,19 +377,18 @@ export default function RNAPage() {
                   lineHeight: "1.15em",
                   textAlign: "left",
                   color: "#333333",
-                  marginBottom: "30px",
+                  marginBottom: "20px",
                 }}
               />
 
               {/* Description */}
               <p
                 style={{
-                  fontSize: "16px",
+                  fontSize: "18px",
                   color: "#333333",
                   fontWeight: 500,
                   lineHeight: "1.8em",
                   marginBottom: "40px",
-                  maxWidth: "540px",
                 }}
               >
                 Biostate has developed an innovative solution that integrates two
@@ -399,12 +398,12 @@ export default function RNAPage() {
               </p>
 
               {/* Highlights */}
-              <div style={{ marginBottom: "40px" }}>
+              <div style={{ marginBottom: "30px" }}>
                 <p
                   style={{
                     textAlign: "left",
                     fontSize: "48px",
-                    fontWeight: 700,
+                    fontWeight: 900,
                     lineHeight: "1.3em",
                     color: "#3ECDC6",
                     fontFamily: "'Roboto', Sans-serif",
@@ -418,7 +417,9 @@ export default function RNAPage() {
 
               {/* CTA Button */}
               <a
-                href="#"
+                href="https://drive.google.com/file/d/1WtAcCwAINXq3dIKEAyVHqMO_e7o8ch59/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="book-a-call-btn book-a-call-btn-solid-teal group"
               >
                 Download the white paper
