@@ -565,7 +565,7 @@ export default function RNAPage() {
                 {/* Description */}
                 <p
                   style={{
-                    fontSize: "14px",
+                    fontSize: "18px",
                     fontWeight: 400,
                     lineHeight: "1.8em",
                     color: "rgba(255,255,255,0.75)",
@@ -582,7 +582,7 @@ export default function RNAPage() {
                 {/* Bold highlight */}
                 <p
                   style={{
-                    fontSize: "14px",
+                    fontSize: "18px",
                     fontWeight: 700,
                     lineHeight: "1.8em",
                     color: "#ffffff",
