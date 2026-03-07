@@ -167,9 +167,9 @@ export default function RNAPage() {
 
                 {/* Bullet Points */}
                 <ul style={{ paddingTop: "32px", fontSize: "16px", color: "#333", fontWeight: 400, display: "flex", flexDirection: "column", gap: "12px", listStyle: "none" }}>
-                  <li>• Cultured animal cells with &gt;30,000 cells</li>
-                  <li>• Extracted RNA from Mammalian samples</li>
-                  <li>{"• The Conc. ≥ 16 ng/μL (min 10 μl)"}</li>
+                  <li>•&ensp; Cultured animal cells with &gt;30,000 cells</li>
+                  <li>•&ensp; Extracted RNA from Mammalian samples</li>
+                  <li>{"•\u2002 The Conc. ≥ 16 ng/μL (min 10 μl)"}</li>
                 </ul>
               </div>
 
@@ -239,10 +239,10 @@ export default function RNAPage() {
 
                 {/* Bullet Points */}
                 <ul style={{ paddingTop: "32px", fontSize: "16px", color: "#333", fontWeight: 400, display: "flex", flexDirection: "column", gap: "12px", listStyle: "none" }}>
-                  <li>• Specialty and low-concentration RNA (evRNA, cfRNA)</li>
-                  <li>• Biospecimens and clinical samples (whole blood, plasma, serum, PBMC, tissues, FFPE)</li>
-                  <li>{"• Unusual organisms (plants, octopus, axolotl, ...)"}</li>
-                  <li>{"• Degraded RNA (RIN number between 2 and 7)"}</li>
+                  <li>•&ensp; Specialty and low-concentration RNA (evRNA, cfRNA)</li>
+                  <li>•&ensp; Biospecimens and clinical samples (whole blood, plasma, serum, PBMC, tissues, FFPE)</li>
+                  <li>{"•\u2002 Unusual organisms (plants, octopus, axolotl, ...)"}</li>
+                  <li>{"•\u2002 Degraded RNA (RIN number between 2 and 7)"}</li>
                 </ul>
               </div>
 
