@@ -132,10 +132,12 @@ export default function RNAPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Standard Samples Card */}
             <div
-              className="rounded-[25px] p-10 lg:p-12 flex flex-col justify-between"
+              className="rounded-[25px] flex flex-col justify-between"
               style={{
                 background: "linear-gradient(114deg, #C6F8F1 0%, #A3F5FF 100%)",
                 minHeight: "520px",
+                padding: "68px 136px 68px 82px",
+                margin: "10px",
               }}
             >
               {/* Card Header */}
@@ -203,10 +205,12 @@ export default function RNAPage() {
 
             {/* Specialty Samples Card */}
             <div
-              className="rounded-[25px] p-10 lg:p-12 flex flex-col justify-between"
+              className="rounded-[25px] flex flex-col justify-between"
               style={{
                 backgroundColor: "#f0f2f4",
                 minHeight: "520px",
+                padding: "68px 136px 68px 82px",
+                margin: "10px",
               }}
             >
               {/* Card Header */}
