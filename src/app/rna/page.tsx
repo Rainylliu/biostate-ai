@@ -174,7 +174,7 @@ export default function RNAPage() {
               </div>
 
               {/* Price + CTA */}
-              <div className="mt-auto">
+              <div style={{ position: "absolute", bottom: "40px", left: "82px", right: "68px" }}>
                 <div className="flex items-baseline" style={{ marginBottom: "20px" }}>
                   <span style={{ fontSize: "60px", fontWeight: 700, lineHeight: "1em", letterSpacing: "-0.03em", color: "#333333", fontFamily: "'Sora', Arial, Helvetica, sans-serif" }}>
                     $60
@@ -199,9 +199,6 @@ export default function RNAPage() {
                     </span>
                   </span>
                 </Link>
-                <p style={{ marginTop: "20px", fontSize: "17px", fontWeight: 600, visibility: "hidden" }} aria-hidden="true">
-                  &nbsp;
-                </p>
               </div>
             </div>
 
@@ -250,7 +247,7 @@ export default function RNAPage() {
               </div>
 
               {/* Price + CTA + Note */}
-              <div className="mt-auto">
+              <div style={{ position: "absolute", bottom: "40px", left: "82px", right: "68px" }}>
                 <div className="flex items-baseline" style={{ marginBottom: "20px" }}>
                   <span style={{ fontSize: "60px", fontWeight: 700, lineHeight: "1em", letterSpacing: "-0.03em", color: "#333333", fontFamily: "'Sora', Arial, Helvetica, sans-serif" }}>
                     $110
