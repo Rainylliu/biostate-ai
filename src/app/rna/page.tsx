@@ -132,48 +132,44 @@ export default function RNAPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Standard Samples Card */}
             <div
-              className="rounded-[25px] p-10 lg:p-12 flex flex-col justify-between"
+              className="rounded-[25px] flex flex-col justify-between relative"
               style={{
                 background: "linear-gradient(114deg, #C6F8F1 0%, #A3F5FF 100%)",
                 minHeight: "520px",
+                padding: "68px 136px 68px 82px",
+                margin: "10px",
               }}
             >
+              {/* Icon 1 */}
+              <img
+                src="/images/icon1.svg"
+                alt="Standard Samples"
+                width={62}
+                height={70}
+                style={{ position: "absolute", top: "68px", right: "40px" }}
+              />
               {/* Card Header */}
               <div>
-                <div className="flex items-start justify-between mb-8">
+                <div className="mb-8">
                   <h3
                     style={{
-                      fontSize: "clamp(28px, 3vw, 40px)",
+                      textAlign: "left",
+                      fontSize: "40px",
                       fontWeight: 400,
-                      lineHeight: "1.2em",
+                      lineHeight: "1em",
+                      letterSpacing: "-0.03em",
                       color: "#1f1f1f",
                     }}
                   >
                     Standard Samples
                   </h3>
-                  {/* Atom/molecule icon */}
-                  <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#1f1f1f" strokeWidth="1.2">
-                    <ellipse cx="32" cy="32" rx="28" ry="12" transform="rotate(0 32 32)" />
-                    <ellipse cx="32" cy="32" rx="28" ry="12" transform="rotate(60 32 32)" />
-                    <ellipse cx="32" cy="32" rx="28" ry="12" transform="rotate(120 32 32)" />
-                    <circle cx="32" cy="32" r="3" fill="#1f1f1f" stroke="none" />
-                  </svg>
                 </div>
 
                 {/* Bullet Points */}
-                <ul className="space-y-4" style={{ fontSize: "16px", color: "#333", fontWeight: 400 }}>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
-                    Cultured animal cells with &gt;30,000 cells
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
-                    Extracted RNA from Mammalian samples
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
-                    {"The Conc. ≥ 16 ng/μL (min 10 μl)"}
-                  </li>
+                <ul style={{ paddingTop: "32px", fontSize: "16px", color: "#333", fontWeight: 400, display: "flex", flexDirection: "column", gap: "12px", listStyle: "none" }}>
+                  <li>•&ensp; Cultured animal cells with &gt;30,000 cells</li>
+                  <li>•&ensp; Extracted RNA from Mammalian samples</li>
+                  <li>{"•\u2002 The Conc. ≥ 16 ng/μL (min 10 μl)"}</li>
                 </ul>
               </div>
 
@@ -208,52 +204,45 @@ export default function RNAPage() {
 
             {/* Specialty Samples Card */}
             <div
-              className="rounded-[25px] p-10 lg:p-12 flex flex-col justify-between"
+              className="rounded-[25px] flex flex-col justify-between relative"
               style={{
                 backgroundColor: "#f0f2f4",
                 minHeight: "520px",
+                padding: "68px 136px 68px 82px",
+                margin: "10px",
               }}
             >
+              {/* Icon 2 */}
+              <img
+                src="/images/icon2.svg"
+                alt="Specialty Samples"
+                width={68}
+                height={73}
+                style={{ position: "absolute", top: "68px", right: "40px" }}
+              />
               {/* Card Header */}
               <div>
-                <div className="flex items-start justify-between mb-8">
+                <div className="mb-8">
                   <h3
                     style={{
-                      fontSize: "clamp(28px, 3vw, 40px)",
+                      textAlign: "left",
+                      fontSize: "40px",
                       fontWeight: 400,
-                      lineHeight: "1.2em",
+                      lineHeight: "1em",
+                      letterSpacing: "-0.03em",
                       color: "#1f1f1f",
                     }}
                   >
                     Specialty Samples
                   </h3>
-                  {/* Flask/beaker icon */}
-                  <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#1f1f1f" strokeWidth="1.2">
-                    <path d="M24 8h16M26 8v18l-12 26a3 3 0 002.8 4h30.4a3 3 0 002.8-4L38 26V8" />
-                    <path d="M22 44h20" strokeDasharray="2 3" />
-                    <circle cx="34" cy="38" r="2" fill="#1f1f1f" stroke="none" />
-                    <circle cx="40" cy="48" r="1.5" fill="#1f1f1f" stroke="none" />
-                  </svg>
                 </div>
 
                 {/* Bullet Points */}
-                <ul className="space-y-4" style={{ fontSize: "16px", color: "#333", fontWeight: 400 }}>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
-                    Specialty and low-concentration RNA (evRNA, cfRNA)
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
-                    Biospecimens and clinical samples (whole blood, plasma, serum, PBMC, tissues, FFPE)
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
-                    {"Unusual organisms (plants, octopus, axolotl, ...)"}
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
-                    {"Degraded RNA (RIN number between 2 and 7)"}
-                  </li>
+                <ul style={{ paddingTop: "32px", fontSize: "16px", color: "#333", fontWeight: 400, display: "flex", flexDirection: "column", gap: "12px", listStyle: "none" }}>
+                  <li>•&ensp; Specialty and low-concentration RNA (evRNA, cfRNA)</li>
+                  <li>•&ensp; Biospecimens and clinical samples (whole blood, plasma, serum, PBMC, tissues, FFPE)</li>
+                  <li>{"•\u2002 Unusual organisms (plants, octopus, axolotl, ...)"}</li>
+                  <li>{"•\u2002 Degraded RNA (RIN number between 2 and 7)"}</li>
                 </ul>
               </div>
 
