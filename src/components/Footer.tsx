@@ -59,7 +59,7 @@ export default function Footer() {
                 as="h2"
                 style={{
                   fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                  fontSize: "48px",
+                  fontSize: "64px",
                   fontWeight: 500,
                   lineHeight: "1.15em",
                   color: "#ffffff",
