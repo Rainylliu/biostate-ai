@@ -107,7 +107,7 @@ export default function RNAPage() {
               lineHeight: "2.142857em",
               fontWeight: 500,
               letterSpacing: "normal",
-              color: "#919191",
+              color: "#1f1f1f",
               marginBottom: "16px",
               fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
             }}
