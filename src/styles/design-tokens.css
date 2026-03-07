@@ -82,7 +82,7 @@
   --color-bg-warning: #fffbeb;
 
   /* ── Typography ── */
-  --font-heading: 'Sora', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Sora', Arial, Helvetica, sans-serif;
   --font-body: 'Manrope', Arial, Helvetica, sans-serif;
   --font-chinese: 'PingFang SC', 'Microsoft YaHei', sans-serif;
 
