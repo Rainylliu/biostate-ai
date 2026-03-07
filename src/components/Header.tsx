@@ -22,7 +22,7 @@ export default function Header() {
   const [menuHovered, setMenuHovered] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > window.innerHeight);
+    const onScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -82,12 +82,13 @@ export default function Header() {
 
       {/* Main Header */}
       <header
-        className={`sticky top-0 z-50 transition-all duration-500 bg-white ${
-          scrolled
-            ? "shadow-[0px_5px_23px_4px_rgba(0,0,0,0.1)] rounded-bl-[25px] rounded-br-[25px] mx-5"
-            : ""
-        }`}
-        style={scrolled ? { width: "calc(100% - 40px)" } : undefined}
+        className="sticky top-0 z-50 bg-white transition-all duration-500"
+        style={scrolled ? {
+          width: "calc(100% - 40px)",
+          margin: "0 auto",
+          borderRadius: "0 0 25px 25px",
+          boxShadow: "0px 5px 23px 4px rgba(0, 0, 0, 0.1)",
+        } : undefined}
       >
         <div className="flex items-center justify-between" style={{ height: "105px", padding: "0 40px 0 64px" }}>
           {/* Hamburger (mobile) */}
