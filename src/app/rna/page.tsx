@@ -615,7 +615,7 @@ export default function RNAPage() {
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16" style={{ marginBottom: "60px" }}>
             {/* Left - 20,000+ outline text */}
             <div className="flex items-end gap-2">
-              <svg viewBox="0 0 480 100" style={{ width: "480px", height: "100px" }}>
+              <svg viewBox="0 0 260 55" style={{ width: "260px", height: "55px" }}>
                 <defs>
                   <linearGradient id="gradientStroke5" x1="0%" y1="0%" x2="100%" y2="0%">
                     <stop offset="0%" stopColor="#3ECDC6" />
@@ -624,11 +624,11 @@ export default function RNAPage() {
                 </defs>
                 <text
                   x="0"
-                  y="80"
+                  y="44"
                   fontFamily="'Manrope', Arial, Helvetica, sans-serif"
-                  fontSize="95"
+                  fontSize="48"
                   fontWeight="800"
-                  letterSpacing="-3"
+                  letterSpacing="-1.5"
                   fill="none"
                   stroke="url(#gradientStroke5)"
                   strokeWidth="1.5"
