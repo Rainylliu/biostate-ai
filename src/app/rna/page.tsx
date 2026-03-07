@@ -151,13 +151,8 @@ export default function RNAPage() {
                   >
                     Standard Samples
                   </h3>
-                  {/* Atom/molecule icon */}
-                  <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#1f1f1f" strokeWidth="1.2">
-                    <ellipse cx="32" cy="32" rx="28" ry="12" transform="rotate(0 32 32)" />
-                    <ellipse cx="32" cy="32" rx="28" ry="12" transform="rotate(60 32 32)" />
-                    <ellipse cx="32" cy="32" rx="28" ry="12" transform="rotate(120 32 32)" />
-                    <circle cx="32" cy="32" r="3" fill="#1f1f1f" stroke="none" />
-                  </svg>
+                  {/* Icon 1 */}
+                  <img src="/images/icon1.svg" alt="Standard Samples" width={62} height={70} />
                 </div>
 
                 {/* Bullet Points */}
@@ -227,13 +222,8 @@ export default function RNAPage() {
                   >
                     Specialty Samples
                   </h3>
-                  {/* Flask/beaker icon */}
-                  <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#1f1f1f" strokeWidth="1.2">
-                    <path d="M24 8h16M26 8v18l-12 26a3 3 0 002.8 4h30.4a3 3 0 002.8-4L38 26V8" />
-                    <path d="M22 44h20" strokeDasharray="2 3" />
-                    <circle cx="34" cy="38" r="2" fill="#1f1f1f" stroke="none" />
-                    <circle cx="40" cy="48" r="1.5" fill="#1f1f1f" stroke="none" />
-                  </svg>
+                  {/* Icon 2 */}
+                  <img src="/images/icon2.svg" alt="Specialty Samples" width={68} height={73} />
                 </div>
 
                 {/* Bullet Points */}
