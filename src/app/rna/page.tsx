@@ -248,7 +248,7 @@ export default function RNAPage() {
 
               {/* Price + CTA + Note */}
               <div style={{ position: "absolute", bottom: "40px", left: "82px", right: "68px" }}>
-                <div className="flex items-baseline" style={{ marginBottom: "20px" }}>
+                <div className="flex items-baseline" style={{ marginBottom: "24px" }}>
                   <span style={{ fontSize: "60px", fontWeight: 700, lineHeight: "1em", letterSpacing: "-0.03em", color: "#333333", fontFamily: "'Sora', Arial, Helvetica, sans-serif" }}>
                     $110
                   </span>
