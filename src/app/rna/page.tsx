@@ -407,7 +407,7 @@ export default function RNAPage() {
                     fontWeight: 700,
                     lineHeight: "1.3em",
                     letterSpacing: "-0.05em",
-                    background: "linear-gradient(90deg, #3ECDC6, #3B82F6)",
+                    background: "linear-gradient(90deg, #45D0BD, #44B6E9)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
@@ -514,8 +514,8 @@ export default function RNAPage() {
                 <svg viewBox="0 0 500 90" style={{ width: "100%", maxWidth: "500px", marginBottom: "40px" }}>
                   <defs>
                     <linearGradient id="gradientStroke" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#3ECDC6" />
-                      <stop offset="100%" stopColor="#3B82F6" />
+                      <stop offset="0%" stopColor="#45D0BD" />
+                      <stop offset="100%" stopColor="#44B6E9" />
                     </linearGradient>
                   </defs>
                   <text
@@ -616,22 +616,7 @@ export default function RNAPage() {
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16" style={{ marginBottom: "60px" }}>
             {/* Left - 20,000+ outline text */}
             <div className="flex items-end gap-2">
-              <span
-                style={{
-                  fontSize: "120px",
-                  fontWeight: 800,
-                  fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-                  color: "transparent",
-                  background: "linear-gradient(90deg, #45D0BD, #44B6E9)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                  lineHeight: "1em",
-                  marginLeft: "40px",
-                }}
-              >
-                <CountUp end={20000} suffix="+" />
-              </span>
+              <CountUp end={20000} suffix="+" style={{ marginLeft: "40px" }} />
               <span
                 style={{
                   writingMode: "vertical-rl",
