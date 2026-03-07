@@ -272,7 +272,7 @@ export default function RNAPage() {
                     </span>
                   </span>
                 </Link>
-                <p style={{ marginTop: "20px", fontSize: "17px", color: "#333333", fontWeight: 500 }}>
+                <p style={{ marginTop: "20px", fontSize: "17px", color: "#333333", fontWeight: 600 }}>
                   Potential discount with large (1000+) batch
                 </p>
               </div>
