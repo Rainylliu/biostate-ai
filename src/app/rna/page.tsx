@@ -333,14 +333,16 @@ export default function RNAPage() {
               <h2
                 style={{
                   padding: "0px 5px 0px 0px",
-                  fontSize: "240px",
+                  fontSize: "200px",
                   fontWeight: 700,
                   lineHeight: "1em",
                   letterSpacing: "-0.05em",
                   background: "linear-gradient(135deg, #8258c8, #2c84c8)",
                   WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  WebkitTextStroke: "2px #8258C8",
+                  color: "transparent",
+                  WebkitTextFillColor: "white",
+                  WebkitTextStrokeWidth: "2px",
+                  paintOrder: "stroke fill",
                   marginBottom: "30px",
                   fontFamily: "'Manrope', Sans-serif",
                 }}
