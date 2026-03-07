@@ -670,9 +670,9 @@ export default function RNAPage() {
           </div>
 
           {/* Bottom Row - Two Chart Cards */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8" style={{ padding: "10px" }}>
             {/* Left - High Reproducibility */}
-            <div>
+            <div style={{ paddingRight: "11%" }}>
               <div
                 style={{
                   backgroundColor: "#ffffff",
