@@ -48,7 +48,7 @@ export default function Footer() {
       style={{
         backgroundColor: "#1a1a1a",
         borderRadius: "25px",
-        margin: "140px 20px 20px",
+        margin: "100px 20px 20px",
         overflow: "hidden",
       }}
     >
