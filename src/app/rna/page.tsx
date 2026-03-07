@@ -199,6 +199,9 @@ export default function RNAPage() {
                     </span>
                   </span>
                 </Link>
+                <p style={{ marginTop: "20px", fontSize: "17px", fontWeight: 600, visibility: "hidden" }} aria-hidden="true">
+                  &nbsp;
+                </p>
               </div>
             </div>
 
