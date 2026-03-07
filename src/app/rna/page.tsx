@@ -136,7 +136,7 @@ export default function RNAPage() {
               style={{
                 background: "linear-gradient(114deg, #C6F8F1 0%, #A3F5FF 100%)",
                 minHeight: "520px",
-                padding: "68px 136px 68px 82px",
+                padding: "68px 68px 68px 82px",
                 margin: "10px",
               }}
             >
@@ -208,7 +208,7 @@ export default function RNAPage() {
               style={{
                 backgroundColor: "#f0f2f4",
                 minHeight: "520px",
-                padding: "68px 136px 68px 82px",
+                padding: "68px 68px 68px 82px",
                 margin: "10px",
               }}
             >
