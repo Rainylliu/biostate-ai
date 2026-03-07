@@ -450,7 +450,7 @@ export default function RNAPage() {
           transform: "rotate(-2.07deg)",
           backgroundImage: "linear-gradient(92deg, #45D0BD 0%, #44B6E9 100%)",
           margin: "40px -5px 0px -5px",
-          padding: "42px 0px",
+          padding: "50px 0px",
           position: "relative",
           zIndex: 2,
         }}
