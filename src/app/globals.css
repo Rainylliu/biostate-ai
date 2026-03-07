@@ -393,6 +393,21 @@ img {
   color: #ffffff;
 }
 
+/* ── Dark Background Button Variant ── */
+.book-a-call-btn-dark {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+.book-a-call-btn-dark::before {
+  background: linear-gradient(135deg, #8258c8, #2c84c8);
+}
+
+.book-a-call-btn-dark:hover {
+  background: linear-gradient(135deg, #8258c8, #2c84c8);
+  color: #ffffff;
+}
+
 /* ── Marquee Scrolling Banner ── */
 .marquee-banner {
   width: 100%;

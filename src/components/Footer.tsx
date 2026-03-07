@@ -336,27 +336,18 @@ export default function Footer() {
                   }}
                 />
               </div>
-              <button
-                style={{
-                  fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                  fontSize: "16px",
-                  fontWeight: 500,
-                  padding: "12px 28px",
-                  borderRadius: "20px",
-                  border: "1px solid rgba(255,255,255,0.3)",
-                  backgroundColor: "transparent",
-                  color: "#ffffff",
-                  cursor: "pointer",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "8px",
-                  whiteSpace: "nowrap",
-                }}
-              >
+              <button className="book-a-call-btn book-a-call-btn-dark">
                 Subscribe
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M1 13L13 1M13 1H3M13 1V11" />
-                </svg>
+                <span className="book-a-call-arrow">
+                  <span className="book-a-call-arrow-inner">
+                    <svg width="16" height="16" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <path d="M1 13L13 1M13 1H3M13 1V11" />
+                    </svg>
+                    <svg width="16" height="16" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <path d="M1 13L13 1M13 1H3M13 1V11" />
+                    </svg>
+                  </span>
+                </span>
               </button>
             </div>
           </div>
