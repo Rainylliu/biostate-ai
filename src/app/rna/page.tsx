@@ -695,6 +695,7 @@ export default function RNAPage() {
                   fontSize: "32px",
                   fontWeight: 500,
                   color: "#111111",
+                  letterSpacing: "-0.03em",
                   margin: "50px 0px 10px 0px",
                 }}
               >
@@ -748,6 +749,7 @@ export default function RNAPage() {
                   fontSize: "32px",
                   fontWeight: 500,
                   color: "#111111",
+                  letterSpacing: "-0.03em",
                   margin: "50px 0px 10px 0px",
                 }}
               >
