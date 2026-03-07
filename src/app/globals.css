@@ -333,6 +333,36 @@ img {
   color: #ffffff;
 }
 
+/* ── Marquee Scrolling Banner ── */
+.marquee-banner {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-banner-track {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee-scroll 20s linear infinite;
+}
+
+.marquee-banner-text {
+  font-family: 'Manrope', Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* ── Header Slide Down Animation ── */
 @keyframes headerSlideDown {
   from {

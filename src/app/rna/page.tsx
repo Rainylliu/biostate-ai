@@ -438,6 +438,29 @@ export default function RNAPage() {
           </div>
         </div>
       </section>
+
+      {/* Section 4 - Scrolling Banner */}
+      <section
+        style={{
+          transform: "rotate(-2.07deg)",
+          backgroundImage: "linear-gradient(92deg, #45D0BD 0%, #44B6E9 100%)",
+          margin: "-124px -5px 0px -5px",
+          padding: "42px 0px",
+          overflow: "hidden",
+          position: "relative",
+          zIndex: 2,
+        }}
+      >
+        <div className="marquee-banner">
+          <div className="marquee-banner-track">
+            {[...Array(6)].map((_, i) => (
+              <span key={i} className="marquee-banner-text">
+                /Next-generation RNA-seq, unlocking deeper insights from every sample.&nbsp;&nbsp;
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
