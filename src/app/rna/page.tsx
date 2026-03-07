@@ -860,11 +860,11 @@ export default function RNAPage() {
               </p>
               <h2
                 style={{
-                  fontSize: "160px",
-                  fontWeight: 700,
+                  fontSize: "120px",
+                  fontWeight: 500,
                   lineHeight: "1em",
                   letterSpacing: "-0.05em",
-                  background: "linear-gradient(135deg, #2ec4a5, #2c84c8)",
+                  background: "linear-gradient(135deg, rgb(69, 208, 189), rgb(68, 182, 233))",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
