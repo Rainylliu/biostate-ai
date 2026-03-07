@@ -132,7 +132,7 @@ export default function RNAPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Standard Samples Card */}
             <div
-              className="rounded-[25px] flex flex-col justify-between"
+              className="rounded-[25px] flex flex-col justify-between relative"
               style={{
                 background: "linear-gradient(114deg, #C6F8F1 0%, #A3F5FF 100%)",
                 minHeight: "520px",
@@ -140,9 +140,17 @@ export default function RNAPage() {
                 margin: "10px",
               }}
             >
+              {/* Icon 1 */}
+              <img
+                src="/images/icon1.svg"
+                alt="Standard Samples"
+                width={62}
+                height={70}
+                style={{ position: "absolute", top: "68px", right: "40px" }}
+              />
               {/* Card Header */}
               <div>
-                <div className="flex items-start justify-between mb-8">
+                <div className="mb-8">
                   <h3
                     style={{
                       fontSize: "clamp(28px, 3vw, 40px)",
@@ -153,8 +161,6 @@ export default function RNAPage() {
                   >
                     Standard Samples
                   </h3>
-                  {/* Icon 1 */}
-                  <img src="/images/icon1.svg" alt="Standard Samples" width={62} height={70} />
                 </div>
 
                 {/* Bullet Points */}
@@ -205,7 +211,7 @@ export default function RNAPage() {
 
             {/* Specialty Samples Card */}
             <div
-              className="rounded-[25px] flex flex-col justify-between"
+              className="rounded-[25px] flex flex-col justify-between relative"
               style={{
                 backgroundColor: "#f0f2f4",
                 minHeight: "520px",
@@ -213,9 +219,17 @@ export default function RNAPage() {
                 margin: "10px",
               }}
             >
+              {/* Icon 2 */}
+              <img
+                src="/images/icon2.svg"
+                alt="Specialty Samples"
+                width={68}
+                height={73}
+                style={{ position: "absolute", top: "68px", right: "40px" }}
+              />
               {/* Card Header */}
               <div>
-                <div className="flex items-start justify-between mb-8">
+                <div className="mb-8">
                   <h3
                     style={{
                       fontSize: "clamp(28px, 3vw, 40px)",
@@ -226,8 +240,6 @@ export default function RNAPage() {
                   >
                     Specialty Samples
                   </h3>
-                  {/* Icon 2 */}
-                  <img src="/images/icon2.svg" alt="Specialty Samples" width={68} height={73} />
                 </div>
 
                 {/* Bullet Points */}
