@@ -167,16 +167,16 @@ export default function RNAPage() {
 
                 {/* Bullet Points */}
                 <ul style={{ paddingTop: "32px", fontSize: "16px", color: "#333", fontWeight: 400, display: "flex", flexDirection: "column", gap: "20px" }}>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
+                  <li className="flex items-center gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
                     Cultured animal cells with &gt;30,000 cells
                   </li>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
+                  <li className="flex items-center gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
                     Extracted RNA from Mammalian samples
                   </li>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
+                  <li className="flex items-center gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
                     {"The Conc. ≥ 16 ng/μL (min 10 μl)"}
                   </li>
                 </ul>
@@ -248,20 +248,20 @@ export default function RNAPage() {
 
                 {/* Bullet Points */}
                 <ul style={{ paddingTop: "32px", fontSize: "16px", color: "#333", fontWeight: 400, display: "flex", flexDirection: "column", gap: "20px" }}>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
+                  <li className="flex items-center gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
                     Specialty and low-concentration RNA (evRNA, cfRNA)
                   </li>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
+                  <li className="flex items-center gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
                     Biospecimens and clinical samples (whole blood, plasma, serum, PBMC, tissues, FFPE)
                   </li>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
+                  <li className="flex items-center gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
                     {"Unusual organisms (plants, octopus, axolotl, ...)"}
                   </li>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
+                  <li className="flex items-center gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
                     {"Degraded RNA (RIN number between 2 and 7)"}
                   </li>
                 </ul>
