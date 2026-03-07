@@ -469,7 +469,7 @@ export default function RNAPage() {
       {/* Section 4 - BIRT Workflow */}
       <section
         style={{
-          backgroundColor: "#1a1a2e",
+          backgroundColor: "#1F1F1F",
           padding: "80px 0",
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
         }}
