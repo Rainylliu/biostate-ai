@@ -695,7 +695,8 @@ export default function RNAPage() {
                   fontSize: "22px",
                   fontWeight: 700,
                   color: "#111111",
-                  marginBottom: "12px",
+                  margin: "50px 0px 10px 0px",
+                  paddingRight: "30%",
                 }}
               >
                 High Reproducibility Across Barcodes
