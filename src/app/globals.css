@@ -318,36 +318,26 @@ img {
   animation: headerSlideDown 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-/* ── Wave Reveal Animation ── */
-@keyframes waveReveal {
-  0% {
-    opacity: 0;
-    transform: translateY(40px) rotate(3deg);
-  }
-  40% {
-    opacity: 1;
-    transform: translateY(-8px) rotate(-1deg);
-  }
-  65% {
-    transform: translateY(4px) rotate(0.5deg);
-  }
-  82% {
-    transform: translateY(-2px) rotate(0deg);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) rotate(0deg);
-  }
+/* ── Wave Character Reveal Animation ── */
+@keyframes headingFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-.wave-reveal-hidden {
+@keyframes headingAnimation {
+  from { transform: translateY(50px); }
+  to { transform: translateY(0); }
+}
+
+.wave-char-hidden {
+  display: inline-block;
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(50px);
 }
 
-.wave-reveal-visible {
-  animation: waveReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  animation-delay: inherit;
+.wave-char-visible {
+  display: inline-block;
+  animation: headingFadeIn 0.35s forwards, headingAnimation 0.7s cubic-bezier(0.26, -0.14, 0, 1.01) forwards;
 }
 
 /* ── Marquee Animation ── */

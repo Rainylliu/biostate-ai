@@ -98,34 +98,32 @@ export default function RNAPage() {
       <section className="py-16 lg:py-24" style={{ fontFamily: "'Manrope', Arial, Helvetica, sans-serif" }}>
         <div className="container">
           {/* Section Tag */}
-          <WaveReveal>
-            <p
-              style={{
-                fontSize: "16px",
-                fontWeight: 500,
-                color: "#919191",
-                marginBottom: "16px",
-                letterSpacing: "0.02em",
-              }}
-            >
-              {"[ pricing ]"}
-            </p>
-          </WaveReveal>
+          <WaveReveal
+            text="[ pricing ]"
+            as="p"
+            style={{
+              fontSize: "16px",
+              fontWeight: 500,
+              color: "#919191",
+              marginBottom: "16px",
+              letterSpacing: "0.02em",
+            }}
+          />
 
           {/* Section Heading */}
-          <WaveReveal delay={150}>
-            <h2
-              style={{
-                fontSize: "clamp(32px, 4vw, 56px)",
-                fontWeight: 400,
-                lineHeight: "1.15em",
-                color: "#1f1f1f",
-                marginBottom: "48px",
-              }}
-            >
-              What types of RNA sequencing samples do we handle?
-            </h2>
-          </WaveReveal>
+          <WaveReveal
+            text="What types of RNA sequencing samples do we handle?"
+            as="h2"
+            delay={300}
+            style={{
+              fontSize: "48px",
+              fontWeight: 400,
+              lineHeight: "1.15em",
+              textAlign: "left",
+              color: "#1f1f1f",
+              marginBottom: "48px",
+            }}
+          />
 
           {/* Cards Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
