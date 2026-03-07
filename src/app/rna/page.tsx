@@ -58,7 +58,7 @@ export default function RNAPage() {
               >
                 Advancing
                 <br />
-                <span style={{ color: "#6766c8" }}>RNAseq</span>
+                <span style={{ background: "linear-gradient(135deg, rgb(130, 88, 200), rgb(44, 132, 200))", backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", color: "transparent" }}>RNAseq</span>
                 <br />
                 Innovation
               </h1>
@@ -865,8 +865,10 @@ export default function RNAPage() {
                   lineHeight: "1em",
                   letterSpacing: "-0.05em",
                   background: "linear-gradient(135deg, rgb(69, 208, 189), rgb(68, 182, 233))",
+                  backgroundClip: "text",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
+                  color: "transparent",
                   fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                   marginBottom: "10px",
                 }}
