@@ -13,7 +13,7 @@ export default function RNAPage() {
   return (
     <div>
       {/* Section 1 - Hero */}
-      <section className="py-16 lg:py-24" style={{ marginTop: "40px" }}>
+      <section className="py-16 lg:py-24" style={{ marginTop: "80px" }}>
         <div className="container">
           <div className="relative flex flex-col lg:flex-row items-center gap-12 lg:gap-[8%]">
             {/* Background circle */}
