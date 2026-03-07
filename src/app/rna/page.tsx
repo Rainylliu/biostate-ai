@@ -399,7 +399,7 @@ export default function RNAPage() {
 
               {/* Highlights */}
               <div style={{ marginBottom: "30px" }}>
-                <p
+                <h1
                   style={{
                     textAlign: "left",
                     fontSize: "48px",
@@ -411,12 +411,13 @@ export default function RNAPage() {
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
                     fontFamily: "'Roboto', Sans-serif",
+                    margin: 0,
                   }}
                 >
                   10× more affordable
                   <br />
                   10× less input
-                </p>
+                </h1>
               </div>
 
               {/* CTA Button */}
