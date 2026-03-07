@@ -18,12 +18,18 @@ export default function Footer() {
   };
 
   return (
-    <footer>
+    <footer
+      style={{
+        backgroundColor: "#1a1a1a",
+        borderRadius: "25px 25px 0 0",
+        marginTop: "80px",
+        overflow: "hidden",
+      }}
+    >
       {/* Part 1: Get in Touch */}
       <section
         style={{
-          backgroundColor: "#111111",
-          padding: "80px 0 60px",
+          padding: "135px 0 60px",
         }}
       >
         <div className="container">
@@ -288,7 +294,6 @@ export default function Footer() {
       {/* Part 2: Bottom Footer */}
       <section
         style={{
-          backgroundColor: "#1a1a1a",
           padding: "60px 0 40px",
           position: "relative",
           overflow: "hidden",
