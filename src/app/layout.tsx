@@ -20,7 +20,7 @@ export default function RootLayout({
       <body>
         <Header />
         <main>{children}</main>
-        {/* <Footer /> */}
+        <Footer />
         <ChatWidget />
       </body>
     </html>

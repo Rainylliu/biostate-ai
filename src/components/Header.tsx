@@ -146,7 +146,7 @@ export default function Header() {
             <Link href="/" className="flex items-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/Logo_black.svg"
+                src="/images/logo.svg"
                 alt="biostate.AI"
                 style={{ height: "28px", width: "auto" }}
               />
