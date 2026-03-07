@@ -595,6 +595,198 @@ export default function RNAPage() {
           </div>
         </div>
       </section>
+
+      {/* Section 5 - High Reproducibility and Superior Data Quality */}
+      <section
+        style={{
+          backgroundColor: "#F0F2F4",
+          padding: "80px 20px",
+          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+        }}
+      >
+        <div className="container">
+          {/* Top Row - 20,000+ and Heading */}
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16" style={{ marginBottom: "60px" }}>
+            {/* Left - 20,000+ outline text */}
+            <div className="flex items-end gap-2">
+              <svg viewBox="0 0 480 100" style={{ width: "480px", height: "100px" }}>
+                <defs>
+                  <linearGradient id="gradientStroke5" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#3ECDC6" />
+                    <stop offset="100%" stopColor="#3B82F6" />
+                  </linearGradient>
+                </defs>
+                <text
+                  x="0"
+                  y="80"
+                  fontFamily="'Manrope', Arial, Helvetica, sans-serif"
+                  fontSize="95"
+                  fontWeight="800"
+                  letterSpacing="-3"
+                  fill="none"
+                  stroke="url(#gradientStroke5)"
+                  strokeWidth="1.5"
+                >
+                  20,000+
+                </text>
+              </svg>
+              <span
+                style={{
+                  writingMode: "vertical-rl",
+                  fontSize: "13px",
+                  fontWeight: 600,
+                  color: "#333333",
+                  letterSpacing: "0.05em",
+                  marginBottom: "8px",
+                }}
+              >
+                samples tested
+              </span>
+            </div>
+
+            {/* Right - Heading and Description */}
+            <div>
+              <p
+                style={{
+                  fontSize: "14px",
+                  fontWeight: 500,
+                  color: "#333333",
+                  marginBottom: "16px",
+                }}
+              >
+                [ about ]
+              </p>
+              <h2
+                style={{
+                  fontSize: "48px",
+                  fontWeight: 400,
+                  lineHeight: "1.15em",
+                  color: "#333333",
+                  marginBottom: "20px",
+                }}
+              >
+                High Reproducibility and
+                <br />
+                Superior Data Quality
+              </h2>
+              <p
+                style={{
+                  fontSize: "18px",
+                  fontWeight: 500,
+                  lineHeight: "1.8em",
+                  color: "#333333",
+                }}
+              >
+                Validated across hundreds of samples with consistent, high-fidelity performance.
+              </p>
+            </div>
+          </div>
+
+          {/* Bottom Row - Two Chart Cards */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Left - High Reproducibility */}
+            <div>
+              <div
+                style={{
+                  backgroundColor: "#ffffff",
+                  borderRadius: "20px",
+                  padding: "30px",
+                  marginBottom: "24px",
+                }}
+              >
+                <img
+                  src="/images/chart1.svg"
+                  alt="High Reproducibility Scatter Plot"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </div>
+              <h3
+                style={{
+                  fontSize: "22px",
+                  fontWeight: 700,
+                  color: "#333333",
+                  marginBottom: "12px",
+                }}
+              >
+                High Reproducibility Across Barcodes
+              </h3>
+              <p
+                style={{
+                  fontSize: "16px",
+                  fontWeight: 400,
+                  lineHeight: "1.6em",
+                  color: "#333333",
+                  marginBottom: "8px",
+                }}
+              >
+                Each point represents gene expression from replicate
+                samples — tightly aligned along the diagonal line, confirming
+                reproducible results across runs.
+              </p>
+              <p
+                style={{
+                  fontSize: "16px",
+                  fontWeight: 700,
+                  color: "#333333",
+                }}
+              >
+                Result: Correlation &gt; 0.98 between replicates.
+              </p>
+            </div>
+
+            {/* Right - Superior Quality */}
+            <div>
+              <div
+                style={{
+                  backgroundColor: "#ffffff",
+                  borderRadius: "20px",
+                  padding: "30px",
+                  marginBottom: "24px",
+                  marginTop: "80px",
+                }}
+              >
+                <img
+                  src="/images/chart2.svg"
+                  alt="Superior Transcriptome Coverage Bar Chart"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </div>
+              <h3
+                style={{
+                  fontSize: "22px",
+                  fontWeight: 700,
+                  color: "#333333",
+                  marginBottom: "12px",
+                }}
+              >
+                Superior Transcriptome Coverage
+              </h3>
+              <p
+                style={{
+                  fontSize: "16px",
+                  fontWeight: 400,
+                  lineHeight: "1.6em",
+                  color: "#333333",
+                  marginBottom: "8px",
+                }}
+              >
+                Compared with conventional RNA sequencing, BIRT + PERD
+                detects a higher number of expressed genes from the same
+                RNA input.
+              </p>
+              <p
+                style={{
+                  fontSize: "16px",
+                  fontWeight: 700,
+                  color: "#333333",
+                }}
+              >
+                Result: ~15% increase in gene detection per sample.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
