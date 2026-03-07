@@ -95,7 +95,7 @@ export default function RNAPage() {
       </section>
 
       {/* Section 2 - Pricing / Sample Types */}
-      <section style={{ marginTop: "120px", fontFamily: "'Manrope', Arial, Helvetica, sans-serif" }}>
+      <section style={{ marginTop: "80px", fontFamily: "'Manrope', Arial, Helvetica, sans-serif" }}>
         <div className="container">
           {/* Section Tag */}
           <WaveReveal
@@ -118,6 +118,7 @@ export default function RNAPage() {
             text="What types of RNA sequencing samples do we handle?"
             as="h2"
             delay={300}
+            charDelay={40}
             style={{
               fontSize: "48px",
               fontWeight: 400,
