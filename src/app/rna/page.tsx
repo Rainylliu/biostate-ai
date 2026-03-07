@@ -62,7 +62,7 @@ export default function RNAPage() {
                 Innovation
               </h1>
 
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "#333333", margin: "35px 10px 35px 0px", paddingLeft: "6px", paddingRight: "10%" }}>
+              <p className="leading-relaxed" style={{ fontSize: "18px", color: "#333333", margin: "35px 10px 35px 0px", paddingLeft: "6px", paddingRight: "10%" }}>
                 Biostate AI&apos;s platform connects samples, data, and clinical
                 decisions — making precision health scalable, accessible, and
                 actionable through low-cost sequencing and autonomous AI
@@ -174,7 +174,7 @@ export default function RNAPage() {
               </div>
 
               {/* Price + CTA */}
-              <div style={{ position: "absolute", bottom: "60px", left: "82px", right: "68px" }}>
+              <div style={{ position: "absolute", top: "360px", left: "82px", right: "68px" }}>
                 <div className="flex items-baseline" style={{ marginBottom: "20px" }}>
                   <span style={{ fontSize: "60px", fontWeight: 700, lineHeight: "1em", letterSpacing: "-0.03em", color: "#333333", fontFamily: "'Sora', Arial, Helvetica, sans-serif" }}>
                     $60
@@ -247,7 +247,7 @@ export default function RNAPage() {
               </div>
 
               {/* Price + CTA + Note */}
-              <div style={{ position: "absolute", bottom: "40px", left: "82px", right: "68px" }}>
+              <div style={{ position: "absolute", top: "360px", left: "82px", right: "68px" }}>
                 <div className="flex items-baseline" style={{ marginBottom: "20px" }}>
                   <span style={{ fontSize: "60px", fontWeight: 700, lineHeight: "1em", letterSpacing: "-0.03em", color: "#333333", fontFamily: "'Sora', Arial, Helvetica, sans-serif" }}>
                     $110
@@ -276,6 +276,292 @@ export default function RNAPage() {
                   Potential discount with large (1000+) batch
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 3 - BIRT Technology */}
+      <section
+        style={{
+          marginTop: "80px",
+          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+          position: "relative",
+          overflow: "hidden",
+          minHeight: "700px",
+        }}
+      >
+        {/* Background Image */}
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            zIndex: 0,
+          }}
+        >
+          <Image
+            src="/images/bg2.png"
+            alt=""
+            fill
+            className="object-cover object-right"
+            style={{ objectPosition: "right center" }}
+          />
+          {/* Fade overlay from image to white */}
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              right: 0,
+              width: "40%",
+              height: "100%",
+              background: "linear-gradient(to right, transparent, white)",
+            }}
+          />
+        </div>
+
+        <div className="container" style={{ position: "relative", zIndex: 1 }}>
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            {/* Left spacer for background image */}
+            <div className="w-full lg:w-[45%]" />
+
+            {/* Right - Content */}
+            <div className="w-full lg:w-[55%] py-16 lg:py-24">
+              {/* BIRT Large Title */}
+              <h2
+                style={{
+                  padding: "0px 5px 0px 0px",
+                  fontSize: "200px",
+                  fontWeight: 700,
+                  lineHeight: "1em",
+                  letterSpacing: "-0.05em",
+                  background: "linear-gradient(135deg, #8258c8, #2c84c8)",
+                  WebkitBackgroundClip: "text",
+                  color: "transparent",
+                  WebkitTextFillColor: "white",
+                  WebkitTextStrokeWidth: "4px",
+                  paintOrder: "stroke fill",
+                  marginBottom: "30px",
+                  fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                }}
+              >
+                BIRT
+              </h2>
+
+              {/* Technology Tag */}
+              <WaveReveal
+                text="[ technology ]"
+                as="p"
+                style={{
+                  display: "block",
+                  fontSize: "0.875rem",
+                  lineHeight: "2.142857em",
+                  fontWeight: 500,
+                  letterSpacing: "normal",
+                  color: "#333333",
+                  marginBottom: "16px",
+                  fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                }}
+              />
+
+              {/* Section Heading */}
+              <WaveReveal
+                text="Affordable and Scalable RNA Sequencing Platform"
+                as="h3"
+                delay={300}
+                style={{
+                  fontSize: "48px",
+                  fontWeight: 400,
+                  lineHeight: "1.15em",
+                  textAlign: "left",
+                  color: "#333333",
+                  marginBottom: "25px",
+                }}
+              />
+
+              {/* Description */}
+              <p
+                style={{
+                  fontSize: "18px",
+                  color: "#333333",
+                  fontWeight: 500,
+                  lineHeight: "1.8em",
+                  marginBottom: "20px",
+                }}
+              >
+                Biostate has developed an innovative solution that integrates two
+                proprietary technologies: BIRT (Barcode-Integrated Reverse
+                Transcription) for sample multiplexing and PERD (Probes for Excess
+                RNA Depletion) for non-enzymatic depletion of ribosomal RNA.
+              </p>
+
+              {/* Highlights */}
+              <div style={{ marginBottom: "30px" }}>
+                <h1
+                  style={{
+                    textAlign: "left",
+                    fontSize: "48px",
+                    fontWeight: 700,
+                    lineHeight: "1.3em",
+                    letterSpacing: "-0.05em",
+                    background: "linear-gradient(90deg, #3ECDC6, #3B82F6)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                    fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                    margin: 0,
+                  }}
+                >
+                  10× more affordable
+                  <br />
+                  10× less input
+                </h1>
+              </div>
+
+              {/* CTA Button */}
+              <a
+                href="https://drive.google.com/file/d/1WtAcCwAINXq3dIKEAyVHqMO_e7o8ch59/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="book-a-call-btn book-a-call-btn-solid-teal group"
+              >
+                Download the white paper
+                <span className="book-a-call-arrow">
+                  <span className="book-a-call-arrow-inner">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 4 - Scrolling Banner */}
+      <section
+        style={{
+          transform: "rotate(-2.07deg)",
+          backgroundImage: "linear-gradient(92deg, #45D0BD 0%, #44B6E9 100%)",
+          margin: "40px -5px 0px -5px",
+          padding: "42px 0px",
+          position: "relative",
+          zIndex: 2,
+        }}
+      >
+        <div className="marquee-banner">
+          <div className="marquee-banner-track">
+            {[...Array(6)].map((_, i) => (
+              <span key={i} className="marquee-banner-text">
+                /Join us in powering the next era of precision medicine through innovative RNA sequencing.&nbsp;&nbsp;
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 4 - BIRT Workflow */}
+      <section
+        style={{
+          backgroundColor: "#1F1F1F",
+          padding: "80px 0",
+          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+        }}
+      >
+        <div className="container">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+            {/* Left - Workflow Diagram */}
+            <div className="w-full lg:w-1/2 flex justify-center">
+              <img
+                src="/images/workflow.png"
+                alt="BIRT Workflow Diagram"
+                style={{ width: "100%", maxWidth: "520px", height: "auto", borderRadius: "25px" }}
+              />
+            </div>
+
+            {/* Right - Text Content */}
+            <div className="w-full lg:w-1/2">
+              {/* BIRT Workflow Outline Text */}
+              <h2
+                style={{
+                  fontSize: "100px",
+                  fontWeight: 800,
+                  lineHeight: "1em",
+                  letterSpacing: "-0.03em",
+                  color: "transparent",
+                  WebkitTextStroke: "1.5px rgba(255,255,255,0.7)",
+                  marginBottom: "40px",
+                }}
+              >
+                BIRT
+                <br />
+                Workflow
+              </h2>
+
+              {/* About Tag */}
+              <p
+                style={{
+                  fontSize: "14px",
+                  fontWeight: 500,
+                  color: "#ffffff",
+                  marginBottom: "16px",
+                  opacity: 0.7,
+                }}
+              >
+                [ about ]
+              </p>
+
+              {/* Heading */}
+              <h3
+                style={{
+                  fontSize: "36px",
+                  fontWeight: 400,
+                  lineHeight: "1.25em",
+                  color: "#ffffff",
+                  marginBottom: "24px",
+                }}
+              >
+                Efficient, Scalable, and
+                <br />
+                Reproducible RNA
+                <br />
+                Sequencing
+              </h3>
+
+              {/* Description */}
+              <p
+                style={{
+                  fontSize: "14px",
+                  fontWeight: 400,
+                  lineHeight: "1.8em",
+                  color: "rgba(255,255,255,0.75)",
+                  marginBottom: "24px",
+                }}
+              >
+                BIRT simplifies RNA sequencing through a unified barcoding and amplification process — replacing
+                complex, multi-step library preparation with a faster, more reliable workflow.
+                <br />
+                It reduces reagent use, shortens turnaround time, and ensures consistent high-quality data across
+                large sample sets.
+              </p>
+
+              {/* Bold highlight */}
+              <p
+                style={{
+                  fontSize: "14px",
+                  fontWeight: 700,
+                  lineHeight: "1.8em",
+                  color: "#ffffff",
+                }}
+              >
+                10× lower cost and 90% less RNA input — without compromising accuracy or reproducibility.
+              </p>
             </div>
           </div>
         </div>

@@ -318,6 +318,51 @@ img {
   color: #ffffff;
 }
 
+/* ── Solid Teal Button Variant (no border, solid fill) ── */
+.book-a-call-btn-solid-teal {
+  background: #49C9B2;
+  color: #ffffff;
+}
+
+.book-a-call-btn-solid-teal::before {
+  display: none;
+}
+
+.book-a-call-btn-solid-teal:hover {
+  background: #55E5CB;
+  color: #ffffff;
+}
+
+/* ── Marquee Scrolling Banner ── */
+.marquee-banner {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-banner-track {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee-scroll 20s linear infinite;
+}
+
+.marquee-banner-text {
+  font-family: 'Manrope', Arial, Helvetica, sans-serif;
+  font-size: 60px;
+  font-weight: 500;
+  color: #ffffff;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* ── Header Slide Down Animation ── */
 @keyframes headerSlideDown {
   from {
