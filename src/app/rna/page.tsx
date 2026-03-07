@@ -174,7 +174,7 @@ export default function RNAPage() {
               </div>
 
               {/* Price + CTA */}
-              <div style={{ position: "absolute", top: "400px", left: "82px", right: "68px" }}>
+              <div style={{ position: "absolute", top: "360px", left: "82px", right: "68px" }}>
                 <div className="flex items-baseline" style={{ marginBottom: "20px" }}>
                   <span style={{ fontSize: "60px", fontWeight: 700, lineHeight: "1em", letterSpacing: "-0.03em", color: "#333333", fontFamily: "'Sora', Arial, Helvetica, sans-serif" }}>
                     $60
@@ -247,7 +247,7 @@ export default function RNAPage() {
               </div>
 
               {/* Price + CTA + Note */}
-              <div style={{ position: "absolute", top: "400px", left: "82px", right: "68px" }}>
+              <div style={{ position: "absolute", top: "360px", left: "82px", right: "68px" }}>
                 <div className="flex items-baseline" style={{ marginBottom: "20px" }}>
                   <span style={{ fontSize: "60px", fontWeight: 700, lineHeight: "1em", letterSpacing: "-0.03em", color: "#333333", fontFamily: "'Sora', Arial, Helvetica, sans-serif" }}>
                     $110
