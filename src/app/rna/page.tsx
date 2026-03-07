@@ -478,21 +478,11 @@ export default function RNAPage() {
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
             {/* Left - Workflow Diagram */}
             <div className="w-full lg:w-1/2 flex justify-center">
-              <div
-                style={{
-                  background: "linear-gradient(160deg, #162a3a 0%, #1a2035 100%)",
-                  borderRadius: "25px",
-                  padding: "50px 40px",
-                  width: "100%",
-                  maxWidth: "520px",
-                }}
-              >
-                <img
-                  src="/images/birt-workflow.svg"
-                  alt="BIRT Workflow Diagram"
-                  style={{ width: "100%", height: "auto" }}
-                />
-              </div>
+              <img
+                src="/images/workflow.png"
+                alt="BIRT Workflow Diagram"
+                style={{ width: "100%", maxWidth: "520px", height: "auto", borderRadius: "25px" }}
+              />
             </div>
 
             {/* Right - Text Content */}
