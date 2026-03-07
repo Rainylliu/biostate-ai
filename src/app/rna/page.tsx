@@ -377,7 +377,7 @@ export default function RNAPage() {
                   lineHeight: "1.15em",
                   textAlign: "left",
                   color: "#333333",
-                  marginBottom: "20px",
+                  marginBottom: "10px",
                 }}
               />
 
