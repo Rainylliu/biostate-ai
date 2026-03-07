@@ -129,18 +129,15 @@ export default function RNAPage() {
           />
 
           {/* Cards Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6" style={{ gridTemplateRows: "auto auto" }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Standard Samples Card */}
             <div
-              className="rounded-[25px] relative"
+              className="rounded-[25px] flex flex-col relative"
               style={{
                 background: "linear-gradient(114deg, #C6F8F1 0%, #A3F5FF 100%)",
                 minHeight: "520px",
-                padding: "68px 68px 68px 82px",
+                padding: "68px 68px 40px 82px",
                 margin: "10px",
-                display: "grid",
-                gridTemplateRows: "subgrid",
-                gridRow: "span 2",
               }}
             >
               {/* Icon 1 */}
@@ -177,7 +174,7 @@ export default function RNAPage() {
               </div>
 
               {/* Price + CTA */}
-              <div style={{ alignSelf: "end" }}>
+              <div className="mt-auto">
                 <div className="flex items-baseline" style={{ marginBottom: "20px" }}>
                   <span style={{ fontSize: "60px", fontWeight: 700, lineHeight: "1em", letterSpacing: "-0.03em", color: "#111111", fontFamily: "'Sora', Arial, Helvetica, sans-serif" }}>
                     $60
@@ -207,15 +204,12 @@ export default function RNAPage() {
 
             {/* Specialty Samples Card */}
             <div
-              className="rounded-[25px] relative"
+              className="rounded-[25px] flex flex-col relative"
               style={{
                 backgroundColor: "#f0f2f4",
                 minHeight: "520px",
-                padding: "68px 68px 68px 82px",
+                padding: "68px 68px 40px 82px",
                 margin: "10px",
-                display: "grid",
-                gridTemplateRows: "subgrid",
-                gridRow: "span 2",
               }}
             >
               {/* Icon 2 */}
@@ -253,7 +247,7 @@ export default function RNAPage() {
               </div>
 
               {/* Price + CTA + Note */}
-              <div style={{ alignSelf: "end" }}>
+              <div className="mt-auto">
                 <div className="flex items-baseline" style={{ marginBottom: "20px" }}>
                   <span style={{ fontSize: "60px", fontWeight: 700, lineHeight: "1em", letterSpacing: "-0.03em", color: "#111111", fontFamily: "'Sora', Arial, Helvetica, sans-serif" }}>
                     $110
