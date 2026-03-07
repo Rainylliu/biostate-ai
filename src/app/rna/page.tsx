@@ -466,30 +466,30 @@ export default function RNAPage() {
         </div>
       </section>
 
-      {/* Section 4 - Tilted Top + BIRT Workflow */}
-      <div style={{ position: "relative", marginTop: "-40px" }}>
-        {/* Tilted top matching banner angle */}
-        <div
-          style={{
-            backgroundColor: "#1F1F1F",
-            transform: "rotate(-2.07deg)",
-            height: "120px",
-            margin: "0 -20px",
-            position: "relative",
-            zIndex: 1,
-          }}
-        />
-      </div>
+      {/* Section 4 - BIRT Workflow Card (tilted top + rectangle body) */}
       <section
         style={{
-          backgroundColor: "#1F1F1F",
-          padding: "40px 0 80px 0",
-          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-          marginTop: "-60px",
           position: "relative",
-          zIndex: 1,
+          backgroundColor: "#1F1F1F",
+          padding: "120px 0 80px 0",
+          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+          marginTop: "20px",
         }}
       >
+        {/* Tilted top piece - same angle as banner */}
+        <div
+          style={{
+            position: "absolute",
+            top: "-50px",
+            left: "-20px",
+            right: "-20px",
+            height: "150px",
+            backgroundColor: "#1F1F1F",
+            transform: "rotate(-2.07deg)",
+            transformOrigin: "center center",
+            zIndex: 0,
+          }}
+        />
         <div className="container">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
             {/* Left - Workflow Diagram */}
