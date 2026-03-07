@@ -388,7 +388,7 @@ export default function RNAPage() {
                   color: "#333333",
                   fontWeight: 500,
                   lineHeight: "1.8em",
-                  marginBottom: "40px",
+                  marginBottom: "55px",
                 }}
               >
                 Biostate has developed an innovative solution that integrates two
@@ -398,7 +398,7 @@ export default function RNAPage() {
               </p>
 
               {/* Highlights */}
-              <div style={{ marginBottom: "30px" }}>
+              <div style={{ marginBottom: "15px" }}>
                 <p
                   style={{
                     textAlign: "left",
