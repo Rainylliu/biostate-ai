@@ -336,7 +336,7 @@ img {
 /* ── Marquee Scrolling Banner ── */
 .marquee-banner {
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .marquee-banner-track {
