@@ -470,7 +470,7 @@ export default function RNAPage() {
       <section
         style={{
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-          marginTop: "20px",
+          marginTop: "80px",
         }}
       >
         <div className="container">
@@ -503,7 +503,7 @@ export default function RNAPage() {
                 <img
                   src="/images/workflow.png"
                   alt="BIRT Workflow Diagram"
-                  style={{ width: "100%", height: "auto", borderRadius: "15px" }}
+                  style={{ width: "80%", height: "auto", borderRadius: "15px" }}
                 />
               </div>
 
