@@ -782,6 +782,52 @@ export default function RNAPage() {
           </div>
         </div>
       </section>
+
+      {/* Section 6 */}
+      <section
+        style={{
+          maxWidth: "1800px",
+          margin: "20px auto 0 auto",
+          padding: "0 60px",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            gap: "20px",
+            alignItems: "stretch",
+          }}
+        >
+          {/* Left card */}
+          <div style={{ flex: "0 0 auto", width: "calc((903 / (903 + 956)) * 100%)" }}>
+            <img
+              src="/images/section6card1.svg"
+              alt="Our capabilities"
+              style={{ width: "100%", height: "100%", display: "block", objectFit: "cover", borderRadius: "25px" }}
+            />
+          </div>
+          {/* Right column */}
+          <div
+            style={{
+              flex: 1,
+              display: "flex",
+              flexDirection: "column",
+              gap: "20px",
+            }}
+          >
+            <img
+              src="/images/section6card2.svg"
+              alt="Validated across key sample types"
+              style={{ width: "100%", display: "block", borderRadius: "25px" }}
+            />
+            <img
+              src="/images/section6card3.svg"
+              alt="Unique sample types"
+              style={{ width: "100%", display: "block", borderRadius: "25px" }}
+            />
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
