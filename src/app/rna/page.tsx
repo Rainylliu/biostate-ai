@@ -166,7 +166,7 @@ export default function RNAPage() {
                 </div>
 
                 {/* Bullet Points */}
-                <ul className="space-y-4" style={{ fontSize: "16px", color: "#333", fontWeight: 400 }}>
+                <ul style={{ paddingTop: "32px", fontSize: "16px", color: "#333", fontWeight: 400, display: "flex", flexDirection: "column", gap: "20px" }}>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
                     Cultured animal cells with &gt;30,000 cells
@@ -247,7 +247,7 @@ export default function RNAPage() {
                 </div>
 
                 {/* Bullet Points */}
-                <ul className="space-y-4" style={{ fontSize: "16px", color: "#333", fontWeight: 400 }}>
+                <ul style={{ paddingTop: "32px", fontSize: "16px", color: "#333", fontWeight: 400, display: "flex", flexDirection: "column", gap: "20px" }}>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
                     Specialty and low-concentration RNA (evRNA, cfRNA)
