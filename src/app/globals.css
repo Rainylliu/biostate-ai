@@ -83,6 +83,11 @@ a {
   color: inherit;
   text-decoration: none;
   transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+button, [role="button"], input[type="submit"] {
+  cursor: pointer;
 }
 
 img {
@@ -95,6 +100,76 @@ img {
   max-width: var(--max-width);
   margin-inline: auto;
   padding-inline: var(--space-6);
+}
+
+/* ── Footer Floating Label ── */
+.floating-field {
+  position: relative;
+}
+.floating-field input,
+.floating-field textarea {
+  font-family: 'Manrope', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  padding: 18px 20px 10px;
+  border-radius: 20px;
+  border: 1px solid #adadad;
+  outline: none;
+  background-color: transparent;
+  color: #111;
+  width: 100%;
+  box-sizing: border-box;
+}
+.floating-field textarea {
+  resize: none;
+}
+.floating-field label {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Manrope', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #adadad;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  background: #ffffff;
+  padding: 0 4px;
+}
+.floating-field.floating-textarea label {
+  top: 18px;
+  transform: none;
+}
+.floating-field input:focus ~ label,
+.floating-field input:not(:placeholder-shown) ~ label {
+  top: 0;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #333;
+}
+.floating-field.floating-textarea textarea:focus ~ label,
+.floating-field.floating-textarea textarea:not(:placeholder-shown) ~ label {
+  top: 0;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #333;
+}
+
+/* ── Footer Email Autofill Override ── */
+.footer-email-input:-webkit-autofill,
+.footer-email-input:-webkit-autofill:hover,
+.footer-email-input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #1a1a1a inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  background-color: transparent !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* ── Footer Link Hover ── */
+.footer-link-hover {
+  transition: color 0.3s;
+}
+.footer-link-hover:hover {
+  color: #45D0BD !important;
 }
 
 /* ── Button Base Styles (matching WP Aiero theme) ── */
@@ -330,6 +405,21 @@ img {
 
 .book-a-call-btn-solid-teal:hover {
   background: #55E5CB;
+  color: #ffffff;
+}
+
+/* ── Dark Background Button Variant ── */
+.book-a-call-btn-dark {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+.book-a-call-btn-dark::before {
+  background: linear-gradient(135deg, #8258c8, #2c84c8);
+}
+
+.book-a-call-btn-dark:hover {
+  background: linear-gradient(135deg, #8258c8, #2c84c8);
   color: #ffffff;
 }
 

@@ -58,7 +58,7 @@ export default function RNAPage() {
               >
                 Advancing
                 <br />
-                <span style={{ color: "#6766c8" }}>RNAseq</span>
+                <span style={{ background: "linear-gradient(135deg, rgb(130, 88, 200), rgb(44, 132, 200))", backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", color: "transparent" }}>RNAseq</span>
                 <br />
                 Innovation
               </h1>
@@ -547,7 +547,9 @@ export default function RNAPage() {
                 </p>
 
                 {/* Heading */}
-                <h3
+                <WaveReveal
+                  text="Efficient, Scalable, and Reproducible RNA Sequencing"
+                  as="h3"
                   style={{
                     fontSize: "48px",
                     fontWeight: 400,
@@ -555,13 +557,7 @@ export default function RNAPage() {
                     color: "#ffffff",
                     marginBottom: "24px",
                   }}
-                >
-                  Efficient, Scalable, and
-                  <br />
-                  Reproducible RNA
-                  <br />
-                  Sequencing
-                </h3>
+                />
 
                 {/* Description */}
                 <p
@@ -643,7 +639,9 @@ export default function RNAPage() {
               >
                 [ about ]
               </p>
-              <h2
+              <WaveReveal
+                text="High Reproducibility and Superior Data Quality"
+                as="h2"
                 style={{
                   fontSize: "48px",
                   fontWeight: 400,
@@ -651,11 +649,7 @@ export default function RNAPage() {
                   color: "#333333",
                   marginBottom: "20px",
                 }}
-              >
-                High Reproducibility and
-                <br />
-                Superior Data Quality
-              </h2>
+              />
               <p
                 style={{
                   fontSize: "18px",
@@ -779,6 +773,164 @@ export default function RNAPage() {
               </p>
             </div>
           </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 6 */}
+      <section
+        style={{
+          marginTop: "20px",
+        }}
+      >
+        <div className="container">
+          <div
+            style={{
+              display: "flex",
+              gap: "20px",
+              alignItems: "stretch",
+            }}
+          >
+            {/* Left card */}
+            <div style={{ flex: "0 0 auto", width: "calc((903 / (903 + 956)) * 100%)" }}>
+              <img
+                src="/images/section6card1.svg"
+                alt="Our capabilities"
+                style={{ width: "100%", height: "100%", display: "block", objectFit: "cover", borderRadius: "25px" }}
+              />
+            </div>
+            {/* Right column */}
+            <div
+              style={{
+                flex: 1,
+                display: "flex",
+                flexDirection: "column",
+                gap: "20px",
+              }}
+            >
+              <img
+                src="/images/section6card2.svg"
+                alt="Validated across key sample types"
+                style={{ width: "100%", display: "block", borderRadius: "25px" }}
+              />
+              <img
+                src="/images/section6card3.svg"
+                alt="Unique sample types"
+                style={{ width: "100%", display: "block", borderRadius: "25px" }}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 7 - PERD */}
+      <section
+        style={{
+          marginTop: "80px",
+        }}
+      >
+        <div className="container">
+          {/* Header area */}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "flex-start",
+              marginBottom: "50px",
+            }}
+          >
+            {/* Left side */}
+            <div>
+              <p
+                style={{
+                  fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                  fontSize: "16px",
+                  fontWeight: 400,
+                  color: "#333",
+                  marginBottom: "10px",
+                }}
+              >
+                [ technology ]
+              </p>
+              <h2
+                style={{
+                  fontSize: "120px",
+                  fontWeight: 500,
+                  lineHeight: "1em",
+                  letterSpacing: "-0.05em",
+                  background: "linear-gradient(135deg, rgb(69, 208, 189), rgb(68, 182, 233))",
+                  backgroundClip: "text",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  color: "transparent",
+                  fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                  marginBottom: "10px",
+                }}
+              >
+                PERD
+              </h2>
+              <WaveReveal
+                text="Probes for Excess RNA Depletion"
+                as="p"
+                style={{
+                  fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                  fontSize: "36px",
+                  fontWeight: 500,
+                  color: "#111",
+                  lineHeight: "1.2",
+                  paddingLeft: "5px",
+                }}
+              />
+            </div>
+            {/* Right side */}
+            <div style={{ maxWidth: "420px", paddingTop: "80px" }}>
+              <p
+                style={{
+                  fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                  fontSize: "18px",
+                  fontWeight: 700,
+                  color: "#111",
+                  marginBottom: "16px",
+                }}
+              >
+                rRNA depletion without enzymes
+              </p>
+              <p
+                style={{
+                  fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                  fontSize: "18px",
+                  fontWeight: 400,
+                  color: "#555",
+                  lineHeight: "1.6",
+                }}
+              >
+                PERD removes high-abundance RNA species while preserving rare transcripts, improving signal clarity and reproducibility
+              </p>
+            </div>
+          </div>
+
+          {/* Cards */}
+          <div
+            style={{
+              display: "flex",
+              gap: "20px",
+              alignItems: "stretch",
+            }}
+          >
+            <div style={{ flex: "0 0 auto", width: "calc((627 / (627 + 1241)) * 100%)" }}>
+              <img
+                src="/images/PERDcard1.svg"
+                alt="Streamlined Chemistry, Clearer Expression, High-Quality Output"
+                style={{ width: "100%", height: "100%", display: "block", objectFit: "cover", borderRadius: "25px" }}
+              />
+            </div>
+            <div style={{ flex: 1 }}>
+              <img
+                src="/images/PERDcard2.svg"
+                alt="PERD Method for Removing RNA"
+                style={{ width: "100%", height: "100%", display: "block", objectFit: "cover", borderRadius: "25px" }}
+              />
+            </div>
           </div>
         </div>
       </section>
