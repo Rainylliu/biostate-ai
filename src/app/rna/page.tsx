@@ -102,11 +102,14 @@ export default function RNAPage() {
             text="[ pricing ]"
             as="p"
             style={{
-              fontSize: "16px",
+              display: "block",
+              fontSize: "0.875rem",
+              lineHeight: "2.142857em",
               fontWeight: 500,
+              letterSpacing: "normal",
               color: "#919191",
               marginBottom: "16px",
-              letterSpacing: "0.02em",
+              fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
             }}
           />
 
