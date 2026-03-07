@@ -547,7 +547,9 @@ export default function RNAPage() {
                 </p>
 
                 {/* Heading */}
-                <h3
+                <WaveReveal
+                  text="Efficient, Scalable, and Reproducible RNA Sequencing"
+                  as="h3"
                   style={{
                     fontSize: "48px",
                     fontWeight: 400,
@@ -555,13 +557,7 @@ export default function RNAPage() {
                     color: "#ffffff",
                     marginBottom: "24px",
                   }}
-                >
-                  Efficient, Scalable, and
-                  <br />
-                  Reproducible RNA
-                  <br />
-                  Sequencing
-                </h3>
+                />
 
                 {/* Description */}
                 <p
@@ -643,7 +639,9 @@ export default function RNAPage() {
               >
                 [ about ]
               </p>
-              <h2
+              <WaveReveal
+                text="High Reproducibility and Superior Data Quality"
+                as="h2"
                 style={{
                   fontSize: "48px",
                   fontWeight: 400,
@@ -651,11 +649,7 @@ export default function RNAPage() {
                   color: "#333333",
                   marginBottom: "20px",
                 }}
-              >
-                High Reproducibility and
-                <br />
-                Superior Data Quality
-              </h2>
+              />
               <p
                 style={{
                   fontSize: "18px",
@@ -875,17 +869,18 @@ export default function RNAPage() {
               >
                 PERD
               </h2>
-              <p
+              <WaveReveal
+                text="Probes for Excess RNA Depletion"
+                as="p"
                 style={{
                   fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                   fontSize: "36px",
                   fontWeight: 500,
                   color: "#111",
                   lineHeight: "1.2",
+                  paddingLeft: "5px",
                 }}
-              >
-                Probes for Excess RNA Depletion
-              </p>
+              />
             </div>
             {/* Right side */}
             <div style={{ maxWidth: "420px", paddingTop: "40px" }}>
