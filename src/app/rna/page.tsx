@@ -153,9 +153,11 @@ export default function RNAPage() {
                 <div className="mb-8">
                   <h3
                     style={{
-                      fontSize: "clamp(28px, 3vw, 40px)",
+                      textAlign: "left",
+                      fontSize: "40px",
                       fontWeight: 400,
-                      lineHeight: "1.2em",
+                      lineHeight: "1em",
+                      letterSpacing: "-0.03em",
                       color: "#1f1f1f",
                     }}
                   >
@@ -232,9 +234,11 @@ export default function RNAPage() {
                 <div className="mb-8">
                   <h3
                     style={{
-                      fontSize: "clamp(28px, 3vw, 40px)",
+                      textAlign: "left",
+                      fontSize: "40px",
                       fontWeight: 400,
-                      lineHeight: "1.2em",
+                      lineHeight: "1em",
+                      letterSpacing: "-0.03em",
                       color: "#1f1f1f",
                     }}
                   >
