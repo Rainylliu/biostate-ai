@@ -341,10 +341,10 @@ export default function RNAPage() {
                   WebkitBackgroundClip: "text",
                   color: "transparent",
                   WebkitTextFillColor: "white",
-                  WebkitTextStrokeWidth: "2px",
+                  WebkitTextStrokeWidth: "4px",
                   paintOrder: "stroke fill",
                   marginBottom: "30px",
-                  fontFamily: "'Manrope', Sans-serif",
+                  fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                 }}
               >
                 BIRT
