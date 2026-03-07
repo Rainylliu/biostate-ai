@@ -403,14 +403,14 @@ export default function RNAPage() {
                   style={{
                     textAlign: "left",
                     fontSize: "48px",
-                    fontWeight: 900,
+                    fontWeight: 700,
                     lineHeight: "1.3em",
                     letterSpacing: "-0.05em",
                     background: "linear-gradient(90deg, #3ECDC6, #3B82F6)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
-                    fontFamily: "'Roboto', Sans-serif",
+                    fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                     margin: 0,
                   }}
                 >
