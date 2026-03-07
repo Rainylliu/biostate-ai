@@ -497,95 +497,27 @@ export default function RNAPage() {
                 borderRadius: "25px 25px 0 0",
               }}
             />
-            <div className="flex flex-col lg:flex-row gap-12 lg:gap-8 items-center" style={{ position: "relative", zIndex: 1 }}>
-              {/* Left - Workflow Diagram */}
-              <div className="w-full lg:w-1/2 flex justify-center">
+            <div style={{ position: "relative", zIndex: 1, display: "flex", justifyContent: "center" }}>
+              <div
+                style={{
+                  width: "80%",
+                  padding: "2px",
+                  borderRadius: "15px",
+                  background: "linear-gradient(90deg, #3ECDC6, #3B82F6)",
+                }}
+              >
                 <img
                   src="/images/workflow.png"
                   alt="BIRT Workflow Diagram"
-                  style={{ width: "80%", height: "auto", borderRadius: "15px" }}
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    borderRadius: "13px",
+                    display: "block",
+                  }}
                 />
               </div>
-
-              {/* Right - Text Content */}
-              <div className="w-full lg:w-1/2">
-              {/* BIRT Workflow Outline Text */}
-              <h2
-                style={{
-                  fontSize: "100px",
-                  fontWeight: 800,
-                  lineHeight: "1em",
-                  letterSpacing: "-0.03em",
-                  color: "transparent",
-                  WebkitTextStroke: "1.5px rgba(255,255,255,0.7)",
-                  marginBottom: "40px",
-                }}
-              >
-                BIRT
-                <br />
-                Workflow
-              </h2>
-
-              {/* About Tag */}
-              <p
-                style={{
-                  fontSize: "14px",
-                  fontWeight: 500,
-                  color: "#ffffff",
-                  marginBottom: "16px",
-                  opacity: 0.7,
-                }}
-              >
-                [ about ]
-              </p>
-
-              {/* Heading */}
-              <h3
-                style={{
-                  fontSize: "36px",
-                  fontWeight: 400,
-                  lineHeight: "1.25em",
-                  color: "#ffffff",
-                  marginBottom: "24px",
-                }}
-              >
-                Efficient, Scalable, and
-                <br />
-                Reproducible RNA
-                <br />
-                Sequencing
-              </h3>
-
-              {/* Description */}
-              <p
-                style={{
-                  fontSize: "14px",
-                  fontWeight: 400,
-                  lineHeight: "1.8em",
-                  color: "rgba(255,255,255,0.75)",
-                  marginBottom: "24px",
-                }}
-              >
-                BIRT simplifies RNA sequencing through a unified barcoding and amplification process — replacing
-                complex, multi-step library preparation with a faster, more reliable workflow.
-                <br />
-                It reduces reagent use, shortens turnaround time, and ensures consistent high-quality data across
-                large sample sets.
-              </p>
-
-              {/* Bold highlight */}
-              <p
-                style={{
-                  fontSize: "14px",
-                  fontWeight: 700,
-                  lineHeight: "1.8em",
-                  color: "#ffffff",
-                }}
-              >
-                10× lower cost and 90% less RNA input — without compromising accuracy or reproducibility.
-              </p>
             </div>
-          </div>
           </div>
         </div>
       </section>
