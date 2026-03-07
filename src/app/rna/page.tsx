@@ -107,7 +107,7 @@ export default function RNAPage() {
               lineHeight: "2.142857em",
               fontWeight: 500,
               letterSpacing: "normal",
-              color: "#1f1f1f",
+              color: "#333333",
               marginBottom: "16px",
               fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
             }}
@@ -123,7 +123,7 @@ export default function RNAPage() {
               fontWeight: 400,
               lineHeight: "1.15em",
               textAlign: "left",
-              color: "#1f1f1f",
+              color: "#333333",
               marginBottom: "20px",
             }}
           />
@@ -158,7 +158,7 @@ export default function RNAPage() {
                       fontWeight: 400,
                       lineHeight: "1em",
                       letterSpacing: "-0.03em",
-                      color: "#1f1f1f",
+                      color: "#333333",
                     }}
                   >
                     Standard Samples
@@ -166,7 +166,7 @@ export default function RNAPage() {
                 </div>
 
                 {/* Bullet Points */}
-                <ul style={{ paddingTop: "32px", fontSize: "16px", color: "#333", fontWeight: 500, lineHeight: "1.875em", display: "flex", flexDirection: "column", gap: "12px", listStyle: "none" }}>
+                <ul style={{ paddingTop: "32px", fontSize: "16px", color: "#333333", fontWeight: 500, lineHeight: "1.875em", display: "flex", flexDirection: "column", gap: "12px", listStyle: "none" }}>
                   <li className="flex items-baseline gap-2"><img src="/images/arrow1.svg" alt="" className="w-[5px] h-[5px] shrink-0" /> Cultured animal cells with &gt;30,000 cells</li>
                   <li className="flex items-baseline gap-2"><img src="/images/arrow1.svg" alt="" className="w-[5px] h-[5px] shrink-0" /> Extracted RNA from Mammalian samples</li>
                   <li className="flex items-baseline gap-2"><img src="/images/arrow1.svg" alt="" className="w-[5px] h-[5px] shrink-0" /> {"The Conc. ≥ 16 ng/μL (min 10 μl)"}</li>
@@ -176,10 +176,10 @@ export default function RNAPage() {
               {/* Price + CTA */}
               <div className="mt-auto">
                 <div className="flex items-baseline" style={{ marginBottom: "20px" }}>
-                  <span style={{ fontSize: "60px", fontWeight: 700, lineHeight: "1em", letterSpacing: "-0.03em", color: "#111111", fontFamily: "'Sora', Arial, Helvetica, sans-serif" }}>
+                  <span style={{ fontSize: "60px", fontWeight: 700, lineHeight: "1em", letterSpacing: "-0.03em", color: "#333333", fontFamily: "'Sora', Arial, Helvetica, sans-serif" }}>
                     $60
                   </span>
-                  <span style={{ fontSize: "20px", fontWeight: 400, color: "#1f1f1f", fontFamily: "'Sora', Arial, Helvetica, sans-serif" }}>
+                  <span style={{ fontSize: "20px", fontWeight: 400, color: "#333333", fontFamily: "'Sora', Arial, Helvetica, sans-serif" }}>
                     /sample
                   </span>
                 </div>
@@ -230,7 +230,7 @@ export default function RNAPage() {
                       fontWeight: 400,
                       lineHeight: "1em",
                       letterSpacing: "-0.03em",
-                      color: "#1f1f1f",
+                      color: "#333333",
                     }}
                   >
                     Specialty Samples
@@ -238,7 +238,7 @@ export default function RNAPage() {
                 </div>
 
                 {/* Bullet Points */}
-                <ul style={{ paddingTop: "32px", fontSize: "16px", color: "#333", fontWeight: 500, lineHeight: "1.875em", display: "flex", flexDirection: "column", gap: "12px", listStyle: "none" }}>
+                <ul style={{ paddingTop: "32px", fontSize: "16px", color: "#333333", fontWeight: 500, lineHeight: "1.875em", display: "flex", flexDirection: "column", gap: "12px", listStyle: "none" }}>
                   <li className="flex items-baseline gap-2"><img src="/images/arrow1.svg" alt="" className="w-[5px] h-[5px] shrink-0" /> Specialty and low-concentration RNA (evRNA, cfRNA)</li>
                   <li className="flex items-baseline gap-2"><img src="/images/arrow1.svg" alt="" className="w-[5px] h-[5px] shrink-0" /> Biospecimens and clinical samples (whole blood, plasma, serum, PBMC, tissues, FFPE)</li>
                   <li className="flex items-baseline gap-2"><img src="/images/arrow1.svg" alt="" className="w-[5px] h-[5px] shrink-0" /> {"Unusual organisms (plants, octopus, axolotl, ...)"}</li>
@@ -249,10 +249,10 @@ export default function RNAPage() {
               {/* Price + CTA + Note */}
               <div className="mt-auto">
                 <div className="flex items-baseline" style={{ marginBottom: "20px" }}>
-                  <span style={{ fontSize: "60px", fontWeight: 700, lineHeight: "1em", letterSpacing: "-0.03em", color: "#111111", fontFamily: "'Sora', Arial, Helvetica, sans-serif" }}>
+                  <span style={{ fontSize: "60px", fontWeight: 700, lineHeight: "1em", letterSpacing: "-0.03em", color: "#333333", fontFamily: "'Sora', Arial, Helvetica, sans-serif" }}>
                     $110
                   </span>
-                  <span style={{ fontSize: "20px", fontWeight: 400, color: "#1f1f1f", fontFamily: "'Sora', Arial, Helvetica, sans-serif" }}>
+                  <span style={{ fontSize: "20px", fontWeight: 400, color: "#333333", fontFamily: "'Sora', Arial, Helvetica, sans-serif" }}>
                     /sample
                   </span>
                 </div>
@@ -272,7 +272,7 @@ export default function RNAPage() {
                     </span>
                   </span>
                 </Link>
-                <p style={{ marginTop: "20px", fontSize: "15px", color: "#666", fontWeight: 400 }}>
+                <p style={{ marginTop: "20px", fontSize: "15px", color: "#333333", fontWeight: 400 }}>
                   Potential discount with large (1000+) batch
                 </p>
               </div>
