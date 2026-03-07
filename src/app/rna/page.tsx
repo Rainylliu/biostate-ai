@@ -466,12 +466,28 @@ export default function RNAPage() {
         </div>
       </section>
 
-      {/* Section 4 - BIRT Workflow */}
+      {/* Section 4 - Tilted Top + BIRT Workflow */}
+      <div style={{ position: "relative", marginTop: "-40px" }}>
+        {/* Tilted top matching banner angle */}
+        <div
+          style={{
+            backgroundColor: "#1F1F1F",
+            transform: "rotate(-2.07deg)",
+            height: "120px",
+            margin: "0 -20px",
+            position: "relative",
+            zIndex: 1,
+          }}
+        />
+      </div>
       <section
         style={{
           backgroundColor: "#1F1F1F",
-          padding: "80px 0",
+          padding: "40px 0 80px 0",
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+          marginTop: "-60px",
+          position: "relative",
+          zIndex: 1,
         }}
       >
         <div className="container">
