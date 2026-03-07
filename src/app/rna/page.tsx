@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import WaveReveal from "@/components/WaveReveal";
 
 export const metadata: Metadata = {
   title: "RNA Sequencing - biostate.AI",
@@ -97,31 +98,34 @@ export default function RNAPage() {
       <section className="py-16 lg:py-24" style={{ fontFamily: "'Manrope', Arial, Helvetica, sans-serif" }}>
         <div className="container">
           {/* Section Tag */}
-          <p
-            style={{
-              fontSize: "16px",
-              fontWeight: 500,
-              color: "#919191",
-              marginBottom: "16px",
-              letterSpacing: "0.02em",
-            }}
-          >
-            {"[ pricing ]"}
-          </p>
+          <WaveReveal>
+            <p
+              style={{
+                fontSize: "16px",
+                fontWeight: 500,
+                color: "#919191",
+                marginBottom: "16px",
+                letterSpacing: "0.02em",
+              }}
+            >
+              {"[ pricing ]"}
+            </p>
+          </WaveReveal>
 
           {/* Section Heading */}
-          <h2
-            style={{
-              fontSize: "clamp(32px, 4vw, 56px)",
-              fontWeight: 400,
-              lineHeight: "1.15em",
-              color: "#1f1f1f",
-              marginBottom: "48px",
-              maxWidth: "800px",
-            }}
-          >
-            What types of RNA sequencing samples do we handle?
-          </h2>
+          <WaveReveal delay={150}>
+            <h2
+              style={{
+                fontSize: "clamp(32px, 4vw, 56px)",
+                fontWeight: 400,
+                lineHeight: "1.15em",
+                color: "#1f1f1f",
+                marginBottom: "48px",
+              }}
+            >
+              What types of RNA sequencing samples do we handle?
+            </h2>
+          </WaveReveal>
 
           {/* Cards Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
