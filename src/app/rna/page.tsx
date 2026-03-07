@@ -883,7 +883,7 @@ export default function RNAPage() {
               />
             </div>
             {/* Right side */}
-            <div style={{ maxWidth: "420px", paddingTop: "40px" }}>
+            <div style={{ maxWidth: "420px", paddingTop: "80px" }}>
               <p
                 style={{
                   fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
