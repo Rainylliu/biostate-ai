@@ -23,6 +23,7 @@ export default function Footer() {
         backgroundColor: "#1a1a1a",
         borderRadius: "25px 25px 0 0",
         marginTop: "80px",
+        padding: "0 20px",
         overflow: "hidden",
       }}
     >
