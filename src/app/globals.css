@@ -318,6 +318,21 @@ img {
   color: #ffffff;
 }
 
+/* ── Solid Teal Button Variant (no border, solid fill) ── */
+.book-a-call-btn-solid-teal {
+  background: #49C9B2;
+  color: #ffffff;
+}
+
+.book-a-call-btn-solid-teal::before {
+  display: none;
+}
+
+.book-a-call-btn-solid-teal:hover {
+  background: #49C9B2;
+  color: #ffffff;
+}
+
 /* ── Header Slide Down Animation ── */
 @keyframes headerSlideDown {
   from {

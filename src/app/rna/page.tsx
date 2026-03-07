@@ -419,7 +419,7 @@ export default function RNAPage() {
               {/* CTA Button */}
               <a
                 href="#"
-                className="book-a-call-btn book-a-call-btn-teal group"
+                className="book-a-call-btn book-a-call-btn-solid-teal group"
               >
                 Download the white paper
                 <span className="book-a-call-arrow">
