@@ -451,7 +451,6 @@ export default function RNAPage() {
           backgroundImage: "linear-gradient(92deg, #45D0BD 0%, #44B6E9 100%)",
           margin: "40px -5px 0px -5px",
           padding: "42px 0px",
-          overflow: "hidden",
           position: "relative",
           zIndex: 2,
         }}
@@ -460,9 +459,120 @@ export default function RNAPage() {
           <div className="marquee-banner-track">
             {[...Array(6)].map((_, i) => (
               <span key={i} className="marquee-banner-text">
-                /Next-generation RNA-seq, unlocking deeper insights from every sample.&nbsp;&nbsp;
+                /Join us in powering the next era of precision medicine through innovative RNA sequencing.&nbsp;&nbsp;
               </span>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 4 - BIRT Workflow */}
+      <section
+        style={{
+          backgroundColor: "#1a1a2e",
+          padding: "80px 0",
+          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+        }}
+      >
+        <div className="container">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+            {/* Left - Workflow Diagram */}
+            <div className="w-full lg:w-1/2 flex justify-center">
+              <div
+                style={{
+                  background: "linear-gradient(160deg, #162a3a 0%, #1a2035 100%)",
+                  borderRadius: "25px",
+                  padding: "50px 40px",
+                  width: "100%",
+                  maxWidth: "520px",
+                }}
+              >
+                <img
+                  src="/images/birt-workflow.svg"
+                  alt="BIRT Workflow Diagram"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </div>
+            </div>
+
+            {/* Right - Text Content */}
+            <div className="w-full lg:w-1/2">
+              {/* BIRT Workflow Outline Text */}
+              <h2
+                style={{
+                  fontSize: "100px",
+                  fontWeight: 800,
+                  lineHeight: "1em",
+                  letterSpacing: "-0.03em",
+                  color: "transparent",
+                  WebkitTextStroke: "1.5px rgba(255,255,255,0.7)",
+                  marginBottom: "40px",
+                }}
+              >
+                BIRT
+                <br />
+                Workflow
+              </h2>
+
+              {/* About Tag */}
+              <p
+                style={{
+                  fontSize: "14px",
+                  fontWeight: 500,
+                  color: "#ffffff",
+                  marginBottom: "16px",
+                  opacity: 0.7,
+                }}
+              >
+                [ about ]
+              </p>
+
+              {/* Heading */}
+              <h3
+                style={{
+                  fontSize: "36px",
+                  fontWeight: 400,
+                  lineHeight: "1.25em",
+                  color: "#ffffff",
+                  marginBottom: "24px",
+                }}
+              >
+                Efficient, Scalable, and
+                <br />
+                Reproducible RNA
+                <br />
+                Sequencing
+              </h3>
+
+              {/* Description */}
+              <p
+                style={{
+                  fontSize: "14px",
+                  fontWeight: 400,
+                  lineHeight: "1.8em",
+                  color: "rgba(255,255,255,0.75)",
+                  marginBottom: "24px",
+                }}
+              >
+                BIRT simplifies RNA sequencing through a unified barcoding and amplification process — replacing
+                complex, multi-step library preparation with a faster, more reliable workflow.
+                <br />
+                It reduces reagent use, shortens turnaround time, and ensures consistent high-quality data across
+                large sample sets.
+              </p>
+
+              {/* Bold highlight */}
+              <p
+                style={{
+                  fontSize: "14px",
+                  fontWeight: 700,
+                  lineHeight: "1.8em",
+                  color: "#ffffff",
+                }}
+              >
+                10× lower cost and 90% less RNA input — without compromising accuracy or reproducibility.
+              </p>
+            </div>
           </div>
         </div>
       </section>

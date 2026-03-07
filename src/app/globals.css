@@ -348,7 +348,7 @@ img {
 .marquee-banner-text {
   font-family: 'Manrope', Arial, Helvetica, sans-serif;
   font-size: 60px;
-  font-weight: 600;
+  font-weight: 500;
   color: #ffffff;
   white-space: nowrap;
   flex-shrink: 0;
