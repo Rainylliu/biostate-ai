@@ -725,7 +725,7 @@ export default function RNAPage() {
             </div>
 
             {/* Right - Superior Quality */}
-            <div>
+            <div style={{ paddingLeft: "11%", marginTop: "11%" }}>
               <div
                 className="chart-card"
                 style={{
@@ -733,7 +733,6 @@ export default function RNAPage() {
                   borderRadius: "20px",
                   padding: "30px",
                   marginBottom: "24px",
-                  marginTop: "80px",
                   overflow: "hidden",
                 }}
               >
