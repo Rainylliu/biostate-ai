@@ -82,10 +82,10 @@ export default function Header() {
 
       {/* Main Header */}
       <header
-        className={`z-50 transition-all duration-300 ${
+        className={`sticky top-0 z-50 transition-all duration-300 bg-white ${
           scrolled
-            ? "fixed top-0 left-0 right-0 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.08)] border-b border-[#e6e8ea]"
-            : "relative bg-white"
+            ? "shadow-[0_2px_8px_rgba(0,0,0,0.08)] border-b border-[#e6e8ea]"
+            : ""
         }`}
       >
         <div className="flex items-center justify-between" style={{ height: "105px", padding: "0 40px 0 64px" }}>
