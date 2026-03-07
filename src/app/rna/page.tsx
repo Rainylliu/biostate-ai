@@ -280,6 +280,158 @@ export default function RNAPage() {
           </div>
         </div>
       </section>
+
+      {/* Section 3 - BIRT Technology */}
+      <section
+        style={{
+          marginTop: "80px",
+          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+          position: "relative",
+          overflow: "hidden",
+          minHeight: "700px",
+        }}
+      >
+        {/* Background Image */}
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "55%",
+            height: "100%",
+            zIndex: 0,
+          }}
+        >
+          <Image
+            src="/images/bg2.png"
+            alt=""
+            fill
+            className="object-cover object-right"
+            style={{ objectPosition: "right center" }}
+          />
+          {/* Fade overlay from image to white */}
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              right: 0,
+              width: "40%",
+              height: "100%",
+              background: "linear-gradient(to right, transparent, white)",
+            }}
+          />
+        </div>
+
+        <div className="container" style={{ position: "relative", zIndex: 1 }}>
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            {/* Left spacer for background image */}
+            <div className="w-full lg:w-[45%]" />
+
+            {/* Right - Content */}
+            <div className="w-full lg:w-[55%] py-16 lg:py-24">
+              {/* BIRT Large Title */}
+              <h2
+                style={{
+                  fontSize: "140px",
+                  fontWeight: 400,
+                  lineHeight: "1em",
+                  color: "transparent",
+                  WebkitTextStroke: "2px #7B6FB5",
+                  letterSpacing: "0.05em",
+                  marginBottom: "30px",
+                  fontFamily: "'Sora', Arial, Helvetica, sans-serif",
+                }}
+              >
+                BIRT
+              </h2>
+
+              {/* Technology Tag */}
+              <WaveReveal
+                text="[ technology ]"
+                as="p"
+                style={{
+                  display: "block",
+                  fontSize: "0.875rem",
+                  lineHeight: "2.142857em",
+                  fontWeight: 500,
+                  letterSpacing: "normal",
+                  color: "#333333",
+                  marginBottom: "16px",
+                  fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                }}
+              />
+
+              {/* Section Heading */}
+              <WaveReveal
+                text="Affordable and Scalable RNA Sequencing Platform"
+                as="h3"
+                delay={300}
+                style={{
+                  fontSize: "48px",
+                  fontWeight: 400,
+                  lineHeight: "1.15em",
+                  textAlign: "left",
+                  color: "#333333",
+                  marginBottom: "30px",
+                }}
+              />
+
+              {/* Description */}
+              <p
+                style={{
+                  fontSize: "16px",
+                  color: "#333333",
+                  fontWeight: 500,
+                  lineHeight: "1.8em",
+                  marginBottom: "40px",
+                  maxWidth: "540px",
+                }}
+              >
+                Biostate has developed an innovative solution that integrates two
+                proprietary technologies: BIRT (Barcode-Integrated Reverse
+                Transcription) for sample multiplexing and PERD (Probes for Excess
+                RNA Depletion) for non-enzymatic depletion of ribosomal RNA.
+              </p>
+
+              {/* Highlights */}
+              <div style={{ marginBottom: "40px" }}>
+                <p
+                  style={{
+                    fontSize: "48px",
+                    fontWeight: 700,
+                    lineHeight: "1.3em",
+                    color: "#3ECDC6",
+                    fontFamily: "'Sora', Arial, Helvetica, sans-serif",
+                    fontStyle: "italic",
+                  }}
+                >
+                  10× more affordable
+                  <br />
+                  10× less input
+                </p>
+              </div>
+
+              {/* CTA Button */}
+              <a
+                href="#"
+                className="book-a-call-btn book-a-call-btn-teal group"
+              >
+                Download the white paper
+                <span className="book-a-call-arrow">
+                  <span className="book-a-call-arrow-inner">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
