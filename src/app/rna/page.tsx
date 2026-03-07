@@ -500,30 +500,16 @@ export default function RNAPage() {
             <div className="flex flex-col lg:flex-row gap-12 lg:gap-8 items-center" style={{ position: "relative", zIndex: 1 }}>
               {/* Left - Workflow Diagram */}
               <div className="w-full lg:w-1/2 flex justify-center">
-                <div
-                  style={{
-                    width: "80%",
-                    padding: "2px",
-                    borderRadius: "15px",
-                    background: "linear-gradient(90deg, #3ECDC6, #3B82F6)",
-                  }}
-                >
-                  <img
-                    src="/images/workflow.png"
-                    alt="BIRT Workflow Diagram"
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      borderRadius: "13px",
-                      display: "block",
-                    }}
-                  />
-                </div>
+                <img
+                  src="/images/workflow.png"
+                  alt="BIRT Workflow Diagram"
+                  style={{ width: "80%", height: "auto" }}
+                />
               </div>
 
               {/* Right - Text Content */}
               <div className="w-full lg:w-1/2">
-                {/* BIRT Workflow Outline Text */}
+                {/* Workflow Outline Text */}
                 <h2
                   style={{
                     fontSize: "100px",
@@ -531,12 +517,14 @@ export default function RNAPage() {
                     lineHeight: "1em",
                     letterSpacing: "-0.03em",
                     color: "transparent",
-                    WebkitTextStroke: "1.5px rgba(255,255,255,0.7)",
+                    background: "linear-gradient(90deg, #3ECDC6, #3B82F6)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    WebkitTextStroke: "1.5px #3ECDC6",
+                    backgroundClip: "text",
                     marginBottom: "40px",
                   }}
                 >
-                  BIRT
-                  <br />
                   Workflow
                 </h2>
 
