@@ -620,6 +620,7 @@ export default function RNAPage() {
                 style={{
                   fontSize: "48px",
                   fontWeight: 800,
+                  fontFamily: "'Sora', Arial, Helvetica, sans-serif",
                   letterSpacing: "-0.03em",
                   color: "transparent",
                   WebkitTextStroke: "1.5px #3ECDC6",
