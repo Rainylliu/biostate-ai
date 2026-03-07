@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "biostate.AI - Redefining Precision Health",
   description:
     "Biostate AI connects samples, data, and decisions to redefine precision health.",
+  other: {
+    "facebook-domain-verification": "o47hr1x7qevdle3nftrncpzzloe84t",
+  },
 };
 
 export default function RootLayout({
