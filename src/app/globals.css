@@ -342,7 +342,7 @@ img {
 .marquee-banner-track {
   display: flex;
   white-space: nowrap;
-  animation: marquee-scroll 20s linear infinite;
+  animation: marquee-scroll 5s linear infinite;
 }
 
 .marquee-banner-text {
