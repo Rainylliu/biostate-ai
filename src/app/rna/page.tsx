@@ -167,9 +167,9 @@ export default function RNAPage() {
 
                 {/* Bullet Points */}
                 <ul style={{ paddingTop: "32px", fontSize: "16px", color: "#333", fontWeight: 400, display: "flex", flexDirection: "column", gap: "12px", listStyle: "none" }}>
-                  <li>•&ensp; Cultured animal cells with &gt;30,000 cells</li>
-                  <li>•&ensp; Extracted RNA from Mammalian samples</li>
-                  <li>{"•\u2002 The Conc. ≥ 16 ng/μL (min 10 μl)"}</li>
+                  <li className="flex items-start gap-2"><img src="/images/arrow1.svg" alt="" className="mt-[7px] w-[5px] h-[5px] shrink-0" /> Cultured animal cells with &gt;30,000 cells</li>
+                  <li className="flex items-start gap-2"><img src="/images/arrow1.svg" alt="" className="mt-[7px] w-[5px] h-[5px] shrink-0" /> Extracted RNA from Mammalian samples</li>
+                  <li className="flex items-start gap-2"><img src="/images/arrow1.svg" alt="" className="mt-[7px] w-[5px] h-[5px] shrink-0" /> {"The Conc. ≥ 16 ng/μL (min 10 μl)"}</li>
                 </ul>
               </div>
 
@@ -239,10 +239,10 @@ export default function RNAPage() {
 
                 {/* Bullet Points */}
                 <ul style={{ paddingTop: "32px", fontSize: "16px", color: "#333", fontWeight: 400, display: "flex", flexDirection: "column", gap: "12px", listStyle: "none" }}>
-                  <li>•&ensp; Specialty and low-concentration RNA (evRNA, cfRNA)</li>
-                  <li>•&ensp; Biospecimens and clinical samples (whole blood, plasma, serum, PBMC, tissues, FFPE)</li>
-                  <li>{"•\u2002 Unusual organisms (plants, octopus, axolotl, ...)"}</li>
-                  <li>{"•\u2002 Degraded RNA (RIN number between 2 and 7)"}</li>
+                  <li className="flex items-start gap-2"><img src="/images/arrow1.svg" alt="" className="mt-[7px] w-[5px] h-[5px] shrink-0" /> Specialty and low-concentration RNA (evRNA, cfRNA)</li>
+                  <li className="flex items-start gap-2"><img src="/images/arrow1.svg" alt="" className="mt-[7px] w-[5px] h-[5px] shrink-0" /> Biospecimens and clinical samples (whole blood, plasma, serum, PBMC, tissues, FFPE)</li>
+                  <li className="flex items-start gap-2"><img src="/images/arrow1.svg" alt="" className="mt-[7px] w-[5px] h-[5px] shrink-0" /> {"Unusual organisms (plants, octopus, axolotl, ...)"}</li>
+                  <li className="flex items-start gap-2"><img src="/images/arrow1.svg" alt="" className="mt-[7px] w-[5px] h-[5px] shrink-0" /> {"Degraded RNA (RIN number between 2 and 7)"}</li>
                 </ul>
               </div>
 
