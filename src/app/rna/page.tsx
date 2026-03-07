@@ -702,7 +702,7 @@ export default function RNAPage() {
               </h3>
               <p
                 style={{
-                  fontSize: "16px",
+                  fontSize: "18px",
                   fontWeight: 400,
                   lineHeight: "1.6em",
                   color: "#333333",
@@ -715,7 +715,7 @@ export default function RNAPage() {
               </p>
               <p
                 style={{
-                  fontSize: "16px",
+                  fontSize: "18px",
                   fontWeight: 700,
                   color: "#333333",
                 }}
@@ -755,7 +755,7 @@ export default function RNAPage() {
               </h3>
               <p
                 style={{
-                  fontSize: "16px",
+                  fontSize: "18px",
                   fontWeight: 400,
                   lineHeight: "1.6em",
                   color: "#333333",
@@ -768,7 +768,7 @@ export default function RNAPage() {
               </p>
               <p
                 style={{
-                  fontSize: "16px",
+                  fontSize: "18px",
                   fontWeight: 700,
                   color: "#333333",
                 }}
