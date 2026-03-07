@@ -691,7 +691,10 @@ export default function RNAPage() {
                 style={{
                   fontSize: "22px",
                   fontWeight: 700,
-                  color: "#333333",
+                  background: "linear-gradient(90deg, #45D0BD, #44B6E9)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
                   marginBottom: "12px",
                 }}
               >
@@ -742,7 +745,10 @@ export default function RNAPage() {
                 style={{
                   fontSize: "22px",
                   fontWeight: 700,
-                  color: "#333333",
+                  background: "linear-gradient(90deg, #45D0BD, #44B6E9)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
                   marginBottom: "12px",
                 }}
               >
