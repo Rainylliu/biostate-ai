@@ -469,40 +469,46 @@ export default function RNAPage() {
       {/* Section 4 - BIRT Workflow Card (tilted top + rectangle body) */}
       <section
         style={{
-          position: "relative",
-          backgroundColor: "#1F1F1F",
-          padding: "120px 0 80px 0",
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
           marginTop: "20px",
+          overflow: "visible",
         }}
       >
-        {/* Tilted top piece - same angle as banner */}
-        <div
-          style={{
-            position: "absolute",
-            top: "-50px",
-            left: "-20px",
-            right: "-20px",
-            height: "150px",
-            backgroundColor: "#1F1F1F",
-            transform: "rotate(-2.07deg)",
-            transformOrigin: "center center",
-            zIndex: 0,
-          }}
-        />
         <div className="container">
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
-            {/* Left - Workflow Diagram */}
-            <div className="w-full lg:w-1/2 flex justify-center">
-              <img
-                src="/images/workflow.png"
-                alt="BIRT Workflow Diagram"
-                style={{ width: "100%", maxWidth: "520px", height: "auto", borderRadius: "25px" }}
-              />
-            </div>
+          <div
+            style={{
+              position: "relative",
+              backgroundColor: "#1F1F1F",
+              borderRadius: "25px",
+              padding: "20px",
+            }}
+          >
+            {/* Tilted top piece - same angle as banner */}
+            <div
+              style={{
+                position: "absolute",
+                top: "-60px",
+                left: "-20px",
+                right: "-20px",
+                height: "140px",
+                backgroundColor: "#1F1F1F",
+                transform: "rotate(-2.07deg)",
+                transformOrigin: "center center",
+                zIndex: 0,
+              }}
+            />
+            <div className="flex flex-col lg:flex-row gap-12 lg:gap-8 items-center" style={{ position: "relative", zIndex: 1 }}>
+              {/* Left - Workflow Diagram */}
+              <div className="w-full lg:w-1/2 flex justify-center">
+                <img
+                  src="/images/workflow.png"
+                  alt="BIRT Workflow Diagram"
+                  style={{ width: "100%", height: "auto", borderRadius: "15px" }}
+                />
+              </div>
 
-            {/* Right - Text Content */}
-            <div className="w-full lg:w-1/2">
+              {/* Right - Text Content */}
+              <div className="w-full lg:w-1/2">
               {/* BIRT Workflow Outline Text */}
               <h2
                 style={{
@@ -579,6 +585,7 @@ export default function RNAPage() {
                 10× lower cost and 90% less RNA input — without compromising accuracy or reproducibility.
               </p>
             </div>
+          </div>
           </div>
         </div>
       </section>
