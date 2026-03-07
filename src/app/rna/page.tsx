@@ -134,7 +134,7 @@ export default function RNAPage() {
             <div
               className="rounded-[25px] p-10 lg:p-12 flex flex-col justify-between"
               style={{
-                background: "linear-gradient(135deg, #b2f5ea 0%, #e0faf5 40%, #f0faf8 100%)",
+                background: "linear-gradient(114deg, #C6F8F1 0%, #A3F5FF 100%)",
                 minHeight: "520px",
               }}
             >
