@@ -692,11 +692,10 @@ export default function RNAPage() {
               </div>
               <h3
                 style={{
-                  fontSize: "22px",
-                  fontWeight: 700,
+                  fontSize: "32px",
+                  fontWeight: 500,
                   color: "#111111",
                   margin: "50px 0px 10px 0px",
-                  paddingRight: "30%",
                 }}
               >
                 High Reproducibility Across Barcodes
@@ -746,10 +745,10 @@ export default function RNAPage() {
               </div>
               <h3
                 style={{
-                  fontSize: "22px",
-                  fontWeight: 700,
+                  fontSize: "32px",
+                  fontWeight: 500,
                   color: "#111111",
-                  marginBottom: "12px",
+                  margin: "50px 0px 10px 0px",
                 }}
               >
                 Superior Transcriptome Coverage
