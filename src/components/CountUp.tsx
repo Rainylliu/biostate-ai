@@ -58,7 +58,7 @@ export default function CountUp({
   }, [started, end, duration]);
 
   const text = count.toLocaleString() + suffix;
-  const viewBoxWidth = fontSize * text.length * 0.65;
+  const viewBoxWidth = fontSize * text.length * 0.52;
   const viewBoxHeight = fontSize * 1.2;
 
   return (

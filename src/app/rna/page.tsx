@@ -620,7 +620,7 @@ export default function RNAPage() {
               <span
                 style={{
                   writingMode: "vertical-rl",
-                  fontSize: "13px",
+                  fontSize: "16px",
                   fontWeight: 600,
                   color: "#333333",
                   letterSpacing: "0.05em",
