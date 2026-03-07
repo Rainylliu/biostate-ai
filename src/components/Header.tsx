@@ -82,11 +82,12 @@ export default function Header() {
 
       {/* Main Header */}
       <header
-        className={`sticky top-0 z-50 transition-all duration-300 bg-white ${
+        className={`sticky top-0 z-50 transition-all duration-500 bg-white ${
           scrolled
-            ? "shadow-[0_2px_8px_rgba(0,0,0,0.08)] border-b border-[#e6e8ea]"
+            ? "shadow-[0px_5px_23px_4px_rgba(0,0,0,0.1)] rounded-bl-[25px] rounded-br-[25px] mx-5"
             : ""
         }`}
+        style={scrolled ? { width: "calc(100% - 40px)" } : undefined}
       >
         <div className="flex items-center justify-between" style={{ height: "105px", padding: "0 40px 0 64px" }}>
           {/* Hamburger (mobile) */}
