@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import WaveReveal from "@/components/WaveReveal";
+import CountUp from "@/components/CountUp";
 
 export const metadata: Metadata = {
   title: "RNA Sequencing - biostate.AI",
@@ -406,7 +407,7 @@ export default function RNAPage() {
                     fontWeight: 700,
                     lineHeight: "1.3em",
                     letterSpacing: "-0.05em",
-                    background: "linear-gradient(90deg, #3ECDC6, #3B82F6)",
+                    background: "linear-gradient(90deg, #45D0BD, #44B6E9)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
@@ -450,7 +451,7 @@ export default function RNAPage() {
           transform: "rotate(-2.07deg)",
           backgroundImage: "linear-gradient(92deg, #45D0BD 0%, #44B6E9 100%)",
           margin: "40px -5px 0px -5px",
-          padding: "42px 0px",
+          padding: "50px 0px",
           position: "relative",
           zIndex: 2,
         }}
@@ -466,103 +467,318 @@ export default function RNAPage() {
         </div>
       </section>
 
-      {/* Section 4 - BIRT Workflow */}
+      {/* Section 4 - BIRT Workflow Card (tilted top + rectangle body) */}
       <section
         style={{
-          backgroundColor: "#1F1F1F",
-          padding: "80px 0",
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+          marginTop: "80px",
         }}
       >
         <div className="container">
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
-            {/* Left - Workflow Diagram */}
-            <div className="w-full lg:w-1/2 flex justify-center">
-              <img
-                src="/images/workflow.png"
-                alt="BIRT Workflow Diagram"
-                style={{ width: "100%", maxWidth: "520px", height: "auto", borderRadius: "25px" }}
-              />
-            </div>
+          <div
+            style={{
+              position: "relative",
+              backgroundColor: "#1F1F1F",
+              borderRadius: "25px",
+              padding: "20px",
+            }}
+          >
+            {/* Tilted top piece - same angle as banner */}
+            <div
+              style={{
+                position: "absolute",
+                top: "-60px",
+                left: "0",
+                width: "100.1%",
+                height: "140px",
+                backgroundColor: "#1F1F1F",
+                transform: "rotate(-2.0deg)",
+                transformOrigin: "bottom center",
+                zIndex: 0,
+                borderRadius: "25px 25px 0 0",
+              }}
+            />
+            <div className="flex flex-col lg:flex-row gap-12 lg:gap-8 items-center" style={{ position: "relative", zIndex: 1 }}>
+              {/* Left - Workflow Diagram */}
+              <div className="w-full lg:w-1/2 flex justify-center">
+                <img
+                  src="/images/workflow.png"
+                  alt="BIRT Workflow Diagram"
+                  style={{ width: "80%", height: "auto" }}
+                />
+              </div>
 
-            {/* Right - Text Content */}
-            <div className="w-full lg:w-1/2">
-              {/* BIRT Workflow Outline Text */}
-              <h2
+              {/* Right - Text Content */}
+              <div className="w-full lg:w-1/2">
+                {/* Workflow Outline Text - gradient stroke, no fill */}
+                <svg viewBox="0 0 500 90" style={{ width: "100%", maxWidth: "500px", marginBottom: "40px" }}>
+                  <defs>
+                    <linearGradient id="gradientStroke" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#45D0BD" />
+                      <stop offset="100%" stopColor="#44B6E9" />
+                    </linearGradient>
+                  </defs>
+                  <text
+                    x="0"
+                    y="75"
+                    fontFamily="'Manrope', Arial, Helvetica, sans-serif"
+                    fontSize="100"
+                    fontWeight="800"
+                    letterSpacing="-3"
+                    fill="none"
+                    stroke="url(#gradientStroke)"
+                    strokeWidth="1.5"
+                  >
+                    Workflow
+                  </text>
+                </svg>
+
+                {/* About Tag */}
+                <p
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: 500,
+                    color: "#ffffff",
+                    marginBottom: "16px",
+                    opacity: 0.7,
+                  }}
+                >
+                  [ about ]
+                </p>
+
+                {/* Heading */}
+                <h3
+                  style={{
+                    fontSize: "48px",
+                    fontWeight: 400,
+                    lineHeight: "1.15em",
+                    color: "#ffffff",
+                    marginBottom: "24px",
+                  }}
+                >
+                  Efficient, Scalable, and
+                  <br />
+                  Reproducible RNA
+                  <br />
+                  Sequencing
+                </h3>
+
+                {/* Description */}
+                <p
+                  style={{
+                    fontSize: "18px",
+                    fontWeight: 400,
+                    lineHeight: "1.8em",
+                    color: "rgba(255,255,255,0.75)",
+                    marginBottom: "24px",
+                  }}
+                >
+                  BIRT simplifies RNA sequencing through a unified barcoding and amplification process — replacing
+                  complex, multi-step library preparation with a faster, more reliable workflow.
+                  <br />
+                  It reduces reagent use, shortens turnaround time, and ensures consistent high-quality data across
+                  large sample sets.
+                </p>
+
+                {/* Bold highlight */}
+                <p
+                  style={{
+                    fontSize: "18px",
+                    fontWeight: 700,
+                    lineHeight: "1.8em",
+                    color: "#ffffff",
+                  }}
+                >
+                  10× lower cost and 90% less RNA input — without compromising accuracy or reproducibility.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 5 - High Reproducibility and Superior Data Quality */}
+      <section
+        style={{
+          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+          marginTop: "20px",
+        }}
+      >
+        <div className="container">
+          <div
+            style={{
+              backgroundColor: "#F0F2F4",
+              borderRadius: "25px",
+              padding: "80px 20px",
+            }}
+          >
+          {/* Top Row - 20,000+ and Heading */}
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16" style={{ marginBottom: "60px" }}>
+            {/* Left - 20,000+ outline text */}
+            <div className="flex items-end gap-2">
+              <CountUp end={20000} suffix="+" style={{ marginLeft: "40px" }} />
+              <span
                 style={{
-                  fontSize: "100px",
-                  fontWeight: 800,
-                  lineHeight: "1em",
-                  letterSpacing: "-0.03em",
-                  color: "transparent",
-                  WebkitTextStroke: "1.5px rgba(255,255,255,0.7)",
-                  marginBottom: "40px",
+                  writingMode: "vertical-rl",
+                  fontSize: "16px",
+                  fontWeight: 600,
+                  color: "#333333",
+                  letterSpacing: "0.05em",
+                  marginBottom: "8px",
                 }}
               >
-                BIRT
-                <br />
-                Workflow
-              </h2>
+                samples tested
+              </span>
+            </div>
 
-              {/* About Tag */}
+            {/* Right - Heading and Description */}
+            <div>
               <p
                 style={{
                   fontSize: "14px",
                   fontWeight: 500,
-                  color: "#ffffff",
+                  color: "#333333",
                   marginBottom: "16px",
-                  opacity: 0.7,
                 }}
               >
                 [ about ]
               </p>
-
-              {/* Heading */}
-              <h3
+              <h2
                 style={{
-                  fontSize: "36px",
+                  fontSize: "48px",
                   fontWeight: 400,
-                  lineHeight: "1.25em",
-                  color: "#ffffff",
-                  marginBottom: "24px",
+                  lineHeight: "1.15em",
+                  color: "#333333",
+                  marginBottom: "20px",
                 }}
               >
-                Efficient, Scalable, and
+                High Reproducibility and
                 <br />
-                Reproducible RNA
-                <br />
-                Sequencing
-              </h3>
-
-              {/* Description */}
+                Superior Data Quality
+              </h2>
               <p
                 style={{
-                  fontSize: "14px",
-                  fontWeight: 400,
+                  fontSize: "18px",
+                  fontWeight: 500,
                   lineHeight: "1.8em",
-                  color: "rgba(255,255,255,0.75)",
-                  marginBottom: "24px",
+                  color: "#333333",
                 }}
               >
-                BIRT simplifies RNA sequencing through a unified barcoding and amplification process — replacing
-                complex, multi-step library preparation with a faster, more reliable workflow.
-                <br />
-                It reduces reagent use, shortens turnaround time, and ensures consistent high-quality data across
-                large sample sets.
-              </p>
-
-              {/* Bold highlight */}
-              <p
-                style={{
-                  fontSize: "14px",
-                  fontWeight: 700,
-                  lineHeight: "1.8em",
-                  color: "#ffffff",
-                }}
-              >
-                10× lower cost and 90% less RNA input — without compromising accuracy or reproducibility.
+                Validated across hundreds of samples with consistent, high-fidelity performance.
               </p>
             </div>
+          </div>
+
+          {/* Bottom Row - Two Chart Cards */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8" style={{ padding: "40px" }}>
+            {/* Left - High Reproducibility */}
+            <div style={{ paddingRight: "11%" }}>
+              <div
+                className="chart-card"
+                style={{
+                  backgroundColor: "#ffffff",
+                  borderRadius: "20px",
+                  padding: "30px",
+                  marginBottom: "24px",
+                  overflow: "hidden",
+                }}
+              >
+                <img
+                  src="/images/chart1.svg"
+                  alt="High Reproducibility Scatter Plot"
+                  className="chart-card-img"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </div>
+              <h3
+                style={{
+                  fontSize: "32px",
+                  fontWeight: 500,
+                  color: "#111111",
+                  letterSpacing: "-0.03em",
+                  margin: "50px 0px 10px 0px",
+                }}
+              >
+                High Reproducibility Across Barcodes
+              </h3>
+              <p
+                style={{
+                  fontSize: "18px",
+                  fontWeight: 400,
+                  lineHeight: "1.6em",
+                  color: "#333333",
+                  marginBottom: "8px",
+                }}
+              >
+                Each point represents gene expression from replicate
+                samples — tightly aligned along the diagonal line, confirming
+                reproducible results across runs.
+              </p>
+              <p
+                style={{
+                  fontSize: "18px",
+                  fontWeight: 700,
+                  color: "#333333",
+                }}
+              >
+                Result: Correlation &gt; 0.98 between replicates.
+              </p>
+            </div>
+
+            {/* Right - Superior Quality */}
+            <div style={{ paddingLeft: "11%", marginTop: "11%" }}>
+              <div
+                className="chart-card"
+                style={{
+                  backgroundColor: "#ffffff",
+                  borderRadius: "20px",
+                  padding: "30px",
+                  marginBottom: "24px",
+                  overflow: "hidden",
+                }}
+              >
+                <img
+                  src="/images/chart2.svg"
+                  alt="Superior Transcriptome Coverage Bar Chart"
+                  className="chart-card-img"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </div>
+              <h3
+                style={{
+                  fontSize: "32px",
+                  fontWeight: 500,
+                  color: "#111111",
+                  letterSpacing: "-0.03em",
+                  margin: "50px 0px 10px 0px",
+                }}
+              >
+                Superior Transcriptome Coverage
+              </h3>
+              <p
+                style={{
+                  fontSize: "18px",
+                  fontWeight: 400,
+                  lineHeight: "1.6em",
+                  color: "#333333",
+                  marginBottom: "8px",
+                }}
+              >
+                Compared with conventional RNA sequencing, BIRT + PERD
+                detects a higher number of expressed genes from the same
+                RNA input.
+              </p>
+              <p
+                style={{
+                  fontSize: "18px",
+                  fontWeight: 700,
+                  color: "#333333",
+                }}
+              >
+                Result: ~15% increase in gene detection per sample.
+              </p>
+            </div>
+          </div>
           </div>
         </div>
       </section>

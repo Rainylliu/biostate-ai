@@ -47,7 +47,7 @@
   --color-bg-lavender: #f0faff;
 
   /* Fonts */
-  --font-heading: 'Sora', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Sora', Arial, Helvetica, sans-serif;
   --font-body: 'Manrope', Arial, Helvetica, sans-serif;
 }
 
@@ -342,7 +342,7 @@ img {
 .marquee-banner-track {
   display: flex;
   white-space: nowrap;
-  animation: marquee-scroll 20s linear infinite;
+  animation: marquee-scroll 5s linear infinite;
 }
 
 .marquee-banner-text {
@@ -352,6 +352,16 @@ img {
   color: #ffffff;
   white-space: nowrap;
   flex-shrink: 0;
+  line-height: 1.2;
+}
+
+/* Chart card hover zoom */
+.chart-card-img {
+  transition: transform 0.4s ease;
+}
+
+.chart-card:hover .chart-card-img {
+  transform: scale(1.08);
 }
 
 @keyframes marquee-scroll {
