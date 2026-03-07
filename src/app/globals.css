@@ -304,6 +304,20 @@ img {
   transform: translate(16px, -16px);
 }
 
+/* ── Card1 Teal Variant ── */
+.book-a-call-btn-teal {
+  background: #ffffff;
+}
+
+.book-a-call-btn-teal::before {
+  background: linear-gradient(90deg, #45d0bd, #44b6e9);
+}
+
+.book-a-call-btn-teal:hover {
+  background: #333333;
+  color: #ffffff;
+}
+
 /* ── Header Slide Down Animation ── */
 @keyframes headerSlideDown {
   from {

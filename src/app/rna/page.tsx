@@ -185,7 +185,7 @@ export default function RNAPage() {
                 </div>
                 <Link
                   href="/get-quote"
-                  className="book-a-call-btn group"
+                  className="book-a-call-btn book-a-call-btn-teal group"
                 >
                   Get started
                   <span className="book-a-call-arrow">
