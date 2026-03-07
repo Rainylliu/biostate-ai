@@ -618,13 +618,16 @@ export default function RNAPage() {
             <div className="flex items-end gap-2">
               <span
                 style={{
-                  fontSize: "48px",
+                  fontSize: "120px",
                   fontWeight: 800,
                   fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-                  letterSpacing: "-0.03em",
                   color: "transparent",
-                  WebkitTextStroke: "1.5px #3ECDC6",
+                  background: "linear-gradient(90deg, #45D0BD, #44B6E9)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
                   lineHeight: "1em",
+                  marginLeft: "40px",
                 }}
               >
                 <CountUp end={20000} suffix="+" />
