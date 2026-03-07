@@ -674,16 +674,19 @@ export default function RNAPage() {
             {/* Left - High Reproducibility */}
             <div style={{ paddingRight: "11%" }}>
               <div
+                className="chart-card"
                 style={{
                   backgroundColor: "#ffffff",
                   borderRadius: "20px",
                   padding: "30px",
                   marginBottom: "24px",
+                  overflow: "hidden",
                 }}
               >
                 <img
                   src="/images/chart1.svg"
                   alt="High Reproducibility Scatter Plot"
+                  className="chart-card-img"
                   style={{ width: "100%", height: "auto" }}
                 />
               </div>
@@ -691,10 +694,7 @@ export default function RNAPage() {
                 style={{
                   fontSize: "22px",
                   fontWeight: 700,
-                  background: "linear-gradient(90deg, #45D0BD, #44B6E9)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
+                  color: "#111111",
                   marginBottom: "12px",
                 }}
               >
@@ -727,17 +727,20 @@ export default function RNAPage() {
             {/* Right - Superior Quality */}
             <div>
               <div
+                className="chart-card"
                 style={{
                   backgroundColor: "#ffffff",
                   borderRadius: "20px",
                   padding: "30px",
                   marginBottom: "24px",
                   marginTop: "80px",
+                  overflow: "hidden",
                 }}
               >
                 <img
                   src="/images/chart2.svg"
                   alt="Superior Transcriptome Coverage Bar Chart"
+                  className="chart-card-img"
                   style={{ width: "100%", height: "auto" }}
                 />
               </div>
@@ -745,10 +748,7 @@ export default function RNAPage() {
                 style={{
                   fontSize: "22px",
                   fontWeight: 700,
-                  background: "linear-gradient(90deg, #45D0BD, #44B6E9)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
+                  color: "#111111",
                   marginBottom: "12px",
                 }}
               >

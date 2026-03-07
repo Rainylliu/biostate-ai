@@ -355,6 +355,15 @@ img {
   line-height: 1.2;
 }
 
+/* Chart card hover zoom */
+.chart-card-img {
+  transition: transform 0.4s ease;
+}
+
+.chart-card:hover .chart-card-img {
+  transform: scale(1.08);
+}
+
 @keyframes marquee-scroll {
   0% {
     transform: translateX(0);
