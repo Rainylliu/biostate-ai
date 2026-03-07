@@ -487,8 +487,8 @@ export default function RNAPage() {
               style={{
                 position: "absolute",
                 top: "-60px",
-                left: "-10px",
-                right: "-10px",
+                left: "0",
+                width: "100%",
                 height: "140px",
                 backgroundColor: "#1F1F1F",
                 transform: "rotate(-2.07deg)",
