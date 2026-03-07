@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import WaveReveal from "@/components/WaveReveal";
+import CountUp from "@/components/CountUp";
 
 export const metadata: Metadata = {
   title: "RNA Sequencing - biostate.AI",
@@ -615,27 +616,18 @@ export default function RNAPage() {
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16" style={{ marginBottom: "60px" }}>
             {/* Left - 20,000+ outline text */}
             <div className="flex items-end gap-2">
-              <svg viewBox="0 0 260 55" style={{ width: "260px", height: "55px" }}>
-                <defs>
-                  <linearGradient id="gradientStroke5" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#3ECDC6" />
-                    <stop offset="100%" stopColor="#3B82F6" />
-                  </linearGradient>
-                </defs>
-                <text
-                  x="0"
-                  y="44"
-                  fontFamily="'Manrope', Arial, Helvetica, sans-serif"
-                  fontSize="48"
-                  fontWeight="800"
-                  letterSpacing="-1.5"
-                  fill="none"
-                  stroke="url(#gradientStroke5)"
-                  strokeWidth="1.5"
-                >
-                  20,000+
-                </text>
-              </svg>
+              <span
+                style={{
+                  fontSize: "48px",
+                  fontWeight: 800,
+                  letterSpacing: "-0.03em",
+                  color: "transparent",
+                  WebkitTextStroke: "1.5px #3ECDC6",
+                  lineHeight: "1em",
+                }}
+              >
+                <CountUp end={20000} suffix="+" />
+              </span>
               <span
                 style={{
                   writingMode: "vertical-rl",
