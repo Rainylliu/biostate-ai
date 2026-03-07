@@ -135,7 +135,7 @@ export default function RNAPage() {
               className="rounded-[25px] flex flex-col relative"
               style={{
                 background: "linear-gradient(114deg, #C6F8F1 0%, #A3F5FF 100%)",
-                minHeight: "520px",
+                minHeight: "480px",
                 padding: "68px 68px 40px 82px",
                 margin: "10px",
               }}
@@ -207,7 +207,7 @@ export default function RNAPage() {
               className="rounded-[25px] flex flex-col relative"
               style={{
                 backgroundColor: "#f0f2f4",
-                minHeight: "520px",
+                minHeight: "480px",
                 padding: "68px 68px 40px 82px",
                 margin: "10px",
               }}
@@ -272,7 +272,7 @@ export default function RNAPage() {
                     </span>
                   </span>
                 </Link>
-                <p style={{ marginTop: "20px", fontSize: "15px", color: "#333333", fontWeight: 400 }}>
+                <p style={{ marginTop: "20px", fontSize: "17px", color: "#333333", fontWeight: 500 }}>
                   Potential discount with large (1000+) batch
                 </p>
               </div>
