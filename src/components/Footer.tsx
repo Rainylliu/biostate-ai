@@ -22,7 +22,7 @@ export default function Footer() {
       style={{
         backgroundColor: "#1a1a1a",
         borderRadius: "25px",
-        margin: "20px",
+        margin: "80px 20px 20px",
         overflow: "hidden",
       }}
     >
@@ -224,26 +224,20 @@ export default function Footer() {
                 </div>
                 <button
                   type="submit"
-                  style={{
-                    fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                    fontSize: "16px",
-                    fontWeight: 500,
-                    padding: "12px 28px",
-                    borderRadius: "20px",
-                    border: "1px solid #adadad",
-                    backgroundColor: "transparent",
-                    color: "#333",
-                    cursor: "pointer",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "8px",
-                    alignSelf: "flex-start",
-                  }}
+                  className="book-a-call-btn"
+                  style={{ alignSelf: "flex-start" }}
                 >
                   Send message
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M1 13L13 1M13 1H3M13 1V11" />
-                  </svg>
+                  <span className="book-a-call-arrow">
+                    <span className="book-a-call-arrow-inner">
+                      <svg width="16" height="16" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5">
+                        <path d="M1 13L13 1M13 1H3M13 1V11" />
+                      </svg>
+                      <svg width="16" height="16" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5">
+                        <path d="M1 13L13 1M13 1H3M13 1V11" />
+                      </svg>
+                    </span>
+                  </span>
                 </button>
               </form>
             </div>
