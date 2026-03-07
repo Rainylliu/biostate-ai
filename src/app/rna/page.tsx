@@ -297,7 +297,7 @@ export default function RNAPage() {
             position: "absolute",
             top: 0,
             left: 0,
-            width: "55%",
+            width: "100%",
             height: "100%",
             zIndex: 0,
           }}
@@ -332,14 +332,17 @@ export default function RNAPage() {
               {/* BIRT Large Title */}
               <h2
                 style={{
-                  fontSize: "140px",
-                  fontWeight: 400,
+                  padding: "0px 5px 0px 0px",
+                  fontSize: "240px",
+                  fontWeight: 700,
                   lineHeight: "1em",
-                  color: "transparent",
-                  WebkitTextStroke: "2px #7B6FB5",
-                  letterSpacing: "0.05em",
+                  letterSpacing: "-0.05em",
+                  background: "linear-gradient(135deg, #8258c8, #2c84c8)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  WebkitTextStroke: "2px #8258C8",
                   marginBottom: "30px",
-                  fontFamily: "'Sora', Arial, Helvetica, sans-serif",
+                  fontFamily: "'Manrope', Sans-serif",
                 }}
               >
                 BIRT
