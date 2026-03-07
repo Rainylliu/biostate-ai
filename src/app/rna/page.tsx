@@ -13,7 +13,7 @@ export default function RNAPage() {
   return (
     <div>
       {/* Section 1 - Hero */}
-      <section className="py-16 lg:py-24" style={{ marginTop: "40px" }}>
+      <section className="py-16 lg:py-24" style={{ marginTop: "80px" }}>
         <div className="container">
           <div className="relative flex flex-col lg:flex-row items-center gap-12 lg:gap-[8%]">
             {/* Background circle */}
@@ -74,7 +74,7 @@ export default function RNAPage() {
                   href="https://calendly.com/rachan-raj-biostate/biostate-ai-introduction-services"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="book-a-call-btn group"
+                  className="book-a-call-btn book-a-call-btn-teal group"
                 >
                   Book a call
                   <span className="book-a-call-arrow">
@@ -95,7 +95,7 @@ export default function RNAPage() {
       </section>
 
       {/* Section 2 - Pricing / Sample Types */}
-      <section style={{ marginTop: "120px", fontFamily: "'Manrope', Arial, Helvetica, sans-serif" }}>
+      <section style={{ marginTop: "80px", fontFamily: "'Manrope', Arial, Helvetica, sans-serif" }}>
         <div className="container">
           {/* Section Tag */}
           <WaveReveal
@@ -107,7 +107,7 @@ export default function RNAPage() {
               lineHeight: "2.142857em",
               fontWeight: 500,
               letterSpacing: "normal",
-              color: "#1f1f1f",
+              color: "#333333",
               marginBottom: "16px",
               fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
             }}
@@ -123,8 +123,8 @@ export default function RNAPage() {
               fontWeight: 400,
               lineHeight: "1.15em",
               textAlign: "left",
-              color: "#1f1f1f",
-              marginBottom: "48px",
+              color: "#333333",
+              marginBottom: "20px",
             }}
           />
 
@@ -132,11 +132,11 @@ export default function RNAPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Standard Samples Card */}
             <div
-              className="rounded-[25px] flex flex-col justify-between relative"
+              className="rounded-[25px] flex flex-col relative"
               style={{
                 background: "linear-gradient(114deg, #C6F8F1 0%, #A3F5FF 100%)",
-                minHeight: "520px",
-                padding: "68px 136px 68px 82px",
+                minHeight: "580px",
+                padding: "68px 68px 240px 82px",
                 margin: "10px",
               }}
             >
@@ -158,7 +158,7 @@ export default function RNAPage() {
                       fontWeight: 400,
                       lineHeight: "1em",
                       letterSpacing: "-0.03em",
-                      color: "#1f1f1f",
+                      color: "#333333",
                     }}
                   >
                     Standard Samples
@@ -166,26 +166,26 @@ export default function RNAPage() {
                 </div>
 
                 {/* Bullet Points */}
-                <ul style={{ paddingTop: "32px", fontSize: "16px", color: "#333", fontWeight: 400, display: "flex", flexDirection: "column", gap: "12px", listStyle: "none" }}>
-                  <li>•&ensp; Cultured animal cells with &gt;30,000 cells</li>
-                  <li>•&ensp; Extracted RNA from Mammalian samples</li>
-                  <li>{"•\u2002 The Conc. ≥ 16 ng/μL (min 10 μl)"}</li>
+                <ul style={{ paddingTop: "32px", fontSize: "16px", color: "#333333", fontWeight: 500, lineHeight: "1.875em", display: "flex", flexDirection: "column", gap: "12px", listStyle: "none" }}>
+                  <li className="flex items-baseline gap-2"><img src="/images/arrow1.svg" alt="" className="w-[5px] h-[5px] shrink-0" /> Cultured animal cells with &gt;30,000 cells</li>
+                  <li className="flex items-baseline gap-2"><img src="/images/arrow1.svg" alt="" className="w-[5px] h-[5px] shrink-0" /> Extracted RNA from Mammalian samples</li>
+                  <li className="flex items-baseline gap-2"><img src="/images/arrow1.svg" alt="" className="w-[5px] h-[5px] shrink-0" /> {"The Conc. ≥ 16 ng/μL (min 10 μl)"}</li>
                 </ul>
               </div>
 
               {/* Price + CTA */}
-              <div className="mt-10">
-                <div className="flex items-baseline mb-6">
-                  <span style={{ fontSize: "clamp(56px, 6vw, 80px)", fontWeight: 400, lineHeight: "1em", color: "#1f1f1f" }}>
+              <div style={{ position: "absolute", bottom: "60px", left: "82px", right: "68px" }}>
+                <div className="flex items-baseline" style={{ marginBottom: "20px" }}>
+                  <span style={{ fontSize: "60px", fontWeight: 700, lineHeight: "1em", letterSpacing: "-0.03em", color: "#333333", fontFamily: "'Sora', Arial, Helvetica, sans-serif" }}>
                     $60
                   </span>
-                  <span style={{ fontSize: "20px", fontWeight: 400, color: "#1f1f1f" }}>
+                  <span style={{ fontSize: "20px", fontWeight: 400, color: "#333333", fontFamily: "'Sora', Arial, Helvetica, sans-serif" }}>
                     /sample
                   </span>
                 </div>
                 <Link
                   href="/get-quote"
-                  className="book-a-call-btn group"
+                  className="book-a-call-btn book-a-call-btn-teal group"
                 >
                   Get started
                   <span className="book-a-call-arrow">
@@ -204,11 +204,11 @@ export default function RNAPage() {
 
             {/* Specialty Samples Card */}
             <div
-              className="rounded-[25px] flex flex-col justify-between relative"
+              className="rounded-[25px] flex flex-col relative"
               style={{
                 backgroundColor: "#f0f2f4",
-                minHeight: "520px",
-                padding: "68px 136px 68px 82px",
+                minHeight: "580px",
+                padding: "68px 68px 240px 82px",
                 margin: "10px",
               }}
             >
@@ -230,7 +230,7 @@ export default function RNAPage() {
                       fontWeight: 400,
                       lineHeight: "1em",
                       letterSpacing: "-0.03em",
-                      color: "#1f1f1f",
+                      color: "#333333",
                     }}
                   >
                     Specialty Samples
@@ -238,27 +238,27 @@ export default function RNAPage() {
                 </div>
 
                 {/* Bullet Points */}
-                <ul style={{ paddingTop: "32px", fontSize: "16px", color: "#333", fontWeight: 400, display: "flex", flexDirection: "column", gap: "12px", listStyle: "none" }}>
-                  <li>•&ensp; Specialty and low-concentration RNA (evRNA, cfRNA)</li>
-                  <li>•&ensp; Biospecimens and clinical samples (whole blood, plasma, serum, PBMC, tissues, FFPE)</li>
-                  <li>{"•\u2002 Unusual organisms (plants, octopus, axolotl, ...)"}</li>
-                  <li>{"•\u2002 Degraded RNA (RIN number between 2 and 7)"}</li>
+                <ul style={{ paddingTop: "32px", fontSize: "16px", color: "#333333", fontWeight: 500, lineHeight: "1.875em", display: "flex", flexDirection: "column", gap: "12px", listStyle: "none" }}>
+                  <li className="flex items-baseline gap-2"><img src="/images/arrow1.svg" alt="" className="w-[5px] h-[5px] shrink-0" /> Specialty and low-concentration RNA (evRNA, cfRNA)</li>
+                  <li className="flex items-baseline gap-2"><img src="/images/arrow1.svg" alt="" className="w-[5px] h-[5px] shrink-0" /> Biospecimens and clinical samples (whole blood, plasma, serum, PBMC, tissues, FFPE)</li>
+                  <li className="flex items-baseline gap-2"><img src="/images/arrow1.svg" alt="" className="w-[5px] h-[5px] shrink-0" /> {"Unusual organisms (plants, octopus, axolotl, ...)"}</li>
+                  <li className="flex items-baseline gap-2"><img src="/images/arrow1.svg" alt="" className="w-[5px] h-[5px] shrink-0" /> {"Degraded RNA (RIN number between 2 and 7)"}</li>
                 </ul>
               </div>
 
               {/* Price + CTA + Note */}
-              <div className="mt-10">
-                <div className="flex items-baseline mb-6">
-                  <span style={{ fontSize: "clamp(56px, 6vw, 80px)", fontWeight: 400, lineHeight: "1em", color: "#1f1f1f" }}>
+              <div style={{ position: "absolute", bottom: "40px", left: "82px", right: "68px" }}>
+                <div className="flex items-baseline" style={{ marginBottom: "20px" }}>
+                  <span style={{ fontSize: "60px", fontWeight: 700, lineHeight: "1em", letterSpacing: "-0.03em", color: "#333333", fontFamily: "'Sora', Arial, Helvetica, sans-serif" }}>
                     $110
                   </span>
-                  <span style={{ fontSize: "20px", fontWeight: 400, color: "#1f1f1f" }}>
+                  <span style={{ fontSize: "20px", fontWeight: 400, color: "#333333", fontFamily: "'Sora', Arial, Helvetica, sans-serif" }}>
                     /sample
                   </span>
                 </div>
                 <Link
                   href="/get-quote"
-                  className="book-a-call-btn group"
+                  className="book-a-call-btn book-a-call-btn-teal group"
                 >
                   Get started
                   <span className="book-a-call-arrow">
@@ -272,7 +272,7 @@ export default function RNAPage() {
                     </span>
                   </span>
                 </Link>
-                <p style={{ marginTop: "20px", fontSize: "15px", color: "#666", fontWeight: 400 }}>
+                <p style={{ marginTop: "20px", fontSize: "17px", color: "#333333", fontWeight: 500 }}>
                   Potential discount with large (1000+) batch
                 </p>
               </div>
