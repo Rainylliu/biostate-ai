@@ -405,8 +405,11 @@ export default function RNAPage() {
                     fontSize: "48px",
                     fontWeight: 900,
                     lineHeight: "1.3em",
-                    letterSpacing: "-0.03em",
-                    color: "#3ECDC6",
+                    letterSpacing: "-0.05em",
+                    background: "linear-gradient(90deg, #3ECDC6, #3B82F6)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
                     fontFamily: "'Roboto', Sans-serif",
                   }}
                 >
