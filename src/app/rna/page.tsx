@@ -95,7 +95,7 @@ export default function RNAPage() {
       </section>
 
       {/* Section 2 - Pricing / Sample Types */}
-      <section className="py-16 lg:py-24" style={{ fontFamily: "'Manrope', Arial, Helvetica, sans-serif" }}>
+      <section style={{ marginTop: "120px", fontFamily: "'Manrope', Arial, Helvetica, sans-serif" }}>
         <div className="container">
           {/* Section Tag */}
           <WaveReveal
