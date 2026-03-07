@@ -22,7 +22,7 @@ export default function Footer() {
       style={{
         backgroundColor: "#1a1a1a",
         borderRadius: "25px",
-        margin: "80px 20px 20px",
+        margin: "200px 20px 20px",
         overflow: "hidden",
       }}
     >
