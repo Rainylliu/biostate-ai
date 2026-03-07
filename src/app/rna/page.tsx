@@ -402,12 +402,12 @@ export default function RNAPage() {
               <div style={{ marginBottom: "40px" }}>
                 <p
                   style={{
+                    textAlign: "left",
                     fontSize: "48px",
                     fontWeight: 700,
                     lineHeight: "1.3em",
                     color: "#3ECDC6",
-                    fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-                    fontStyle: "italic",
+                    fontFamily: "'Roboto', Sans-serif",
                   }}
                 >
                   10× more affordable
