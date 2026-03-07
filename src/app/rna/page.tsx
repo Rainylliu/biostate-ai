@@ -124,7 +124,7 @@ export default function RNAPage() {
               lineHeight: "1.15em",
               textAlign: "left",
               color: "#1f1f1f",
-              marginBottom: "48px",
+              marginBottom: "32px",
             }}
           />
 
