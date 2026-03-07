@@ -138,14 +138,14 @@ img {
 .floating-field input:not(:placeholder-shown) ~ label {
   top: 0;
   transform: translateY(-50%);
-  font-size: 12px;
+  font-size: 14px;
   color: #333;
 }
 .floating-field.floating-textarea textarea:focus ~ label,
 .floating-field.floating-textarea textarea:not(:placeholder-shown) ~ label {
   top: 0;
   transform: translateY(-50%);
-  font-size: 12px;
+  font-size: 14px;
   color: #333;
 }
 
