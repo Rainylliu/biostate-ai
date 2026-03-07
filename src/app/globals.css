@@ -304,6 +304,20 @@ img {
   transform: translate(16px, -16px);
 }
 
+/* ── Header Slide Down Animation ── */
+@keyframes headerSlideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.header-slide-down {
+  animation: headerSlideDown 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
 /* ── Marquee Animation ── */
 @keyframes marquee {
   0% {

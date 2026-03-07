@@ -82,7 +82,7 @@ export default function Header() {
 
       {/* Main Header */}
       <header
-        className="sticky top-0 z-50 bg-white transition-all duration-500"
+        className={`sticky top-0 z-50 bg-white ${scrolled ? "header-slide-down" : ""}`}
         style={scrolled ? {
           width: "calc(100% - 40px)",
           margin: "0 auto",
