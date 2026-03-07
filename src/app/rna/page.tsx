@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import WaveReveal from "@/components/WaveReveal";
 
 export const metadata: Metadata = {
   title: "RNA Sequencing - biostate.AI",
@@ -87,6 +88,204 @@ export default function RNAPage() {
                     </span>
                   </span>
                 </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 2 - Pricing / Sample Types */}
+      <section style={{ marginTop: "120px", fontFamily: "'Manrope', Arial, Helvetica, sans-serif" }}>
+        <div className="container">
+          {/* Section Tag */}
+          <WaveReveal
+            text="[ pricing ]"
+            as="p"
+            style={{
+              display: "block",
+              fontSize: "0.875rem",
+              lineHeight: "2.142857em",
+              fontWeight: 500,
+              letterSpacing: "normal",
+              color: "#1f1f1f",
+              marginBottom: "16px",
+              fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+            }}
+          />
+
+          {/* Section Heading */}
+          <WaveReveal
+            text="What types of RNA sequencing samples do we handle?"
+            as="h2"
+            delay={300}
+            style={{
+              fontSize: "48px",
+              fontWeight: 400,
+              lineHeight: "1.15em",
+              textAlign: "left",
+              color: "#1f1f1f",
+              marginBottom: "48px",
+            }}
+          />
+
+          {/* Cards Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Standard Samples Card */}
+            <div
+              className="rounded-[25px] p-10 lg:p-12 flex flex-col justify-between"
+              style={{
+                background: "linear-gradient(114deg, #C6F8F1 0%, #A3F5FF 100%)",
+                minHeight: "520px",
+              }}
+            >
+              {/* Card Header */}
+              <div>
+                <div className="flex items-start justify-between mb-8">
+                  <h3
+                    style={{
+                      fontSize: "clamp(28px, 3vw, 40px)",
+                      fontWeight: 400,
+                      lineHeight: "1.2em",
+                      color: "#1f1f1f",
+                    }}
+                  >
+                    Standard Samples
+                  </h3>
+                  {/* Atom/molecule icon */}
+                  <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#1f1f1f" strokeWidth="1.2">
+                    <ellipse cx="32" cy="32" rx="28" ry="12" transform="rotate(0 32 32)" />
+                    <ellipse cx="32" cy="32" rx="28" ry="12" transform="rotate(60 32 32)" />
+                    <ellipse cx="32" cy="32" rx="28" ry="12" transform="rotate(120 32 32)" />
+                    <circle cx="32" cy="32" r="3" fill="#1f1f1f" stroke="none" />
+                  </svg>
+                </div>
+
+                {/* Bullet Points */}
+                <ul className="space-y-4" style={{ fontSize: "16px", color: "#333", fontWeight: 400 }}>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
+                    Cultured animal cells with &gt;30,000 cells
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
+                    Extracted RNA from Mammalian samples
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
+                    {"The Conc. ≥ 16 ng/μL (min 10 μl)"}
+                  </li>
+                </ul>
+              </div>
+
+              {/* Price + CTA */}
+              <div className="mt-10">
+                <div className="flex items-baseline mb-6">
+                  <span style={{ fontSize: "clamp(56px, 6vw, 80px)", fontWeight: 400, lineHeight: "1em", color: "#1f1f1f" }}>
+                    $60
+                  </span>
+                  <span style={{ fontSize: "20px", fontWeight: 400, color: "#1f1f1f" }}>
+                    /sample
+                  </span>
+                </div>
+                <Link
+                  href="/get-quote"
+                  className="book-a-call-btn group"
+                >
+                  Get started
+                  <span className="book-a-call-arrow">
+                    <span className="book-a-call-arrow-inner">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                  </span>
+                </Link>
+              </div>
+            </div>
+
+            {/* Specialty Samples Card */}
+            <div
+              className="rounded-[25px] p-10 lg:p-12 flex flex-col justify-between"
+              style={{
+                backgroundColor: "#f0f2f4",
+                minHeight: "520px",
+              }}
+            >
+              {/* Card Header */}
+              <div>
+                <div className="flex items-start justify-between mb-8">
+                  <h3
+                    style={{
+                      fontSize: "clamp(28px, 3vw, 40px)",
+                      fontWeight: 400,
+                      lineHeight: "1.2em",
+                      color: "#1f1f1f",
+                    }}
+                  >
+                    Specialty Samples
+                  </h3>
+                  {/* Flask/beaker icon */}
+                  <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#1f1f1f" strokeWidth="1.2">
+                    <path d="M24 8h16M26 8v18l-12 26a3 3 0 002.8 4h30.4a3 3 0 002.8-4L38 26V8" />
+                    <path d="M22 44h20" strokeDasharray="2 3" />
+                    <circle cx="34" cy="38" r="2" fill="#1f1f1f" stroke="none" />
+                    <circle cx="40" cy="48" r="1.5" fill="#1f1f1f" stroke="none" />
+                  </svg>
+                </div>
+
+                {/* Bullet Points */}
+                <ul className="space-y-4" style={{ fontSize: "16px", color: "#333", fontWeight: 400 }}>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
+                    Specialty and low-concentration RNA (evRNA, cfRNA)
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
+                    Biospecimens and clinical samples (whole blood, plasma, serum, PBMC, tissues, FFPE)
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
+                    {"Unusual organisms (plants, octopus, axolotl, ...)"}
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#1f1f1f] shrink-0" />
+                    {"Degraded RNA (RIN number between 2 and 7)"}
+                  </li>
+                </ul>
+              </div>
+
+              {/* Price + CTA + Note */}
+              <div className="mt-10">
+                <div className="flex items-baseline mb-6">
+                  <span style={{ fontSize: "clamp(56px, 6vw, 80px)", fontWeight: 400, lineHeight: "1em", color: "#1f1f1f" }}>
+                    $110
+                  </span>
+                  <span style={{ fontSize: "20px", fontWeight: 400, color: "#1f1f1f" }}>
+                    /sample
+                  </span>
+                </div>
+                <Link
+                  href="/get-quote"
+                  className="book-a-call-btn group"
+                >
+                  Get started
+                  <span className="book-a-call-arrow">
+                    <span className="book-a-call-arrow-inner">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                  </span>
+                </Link>
+                <p style={{ marginTop: "20px", fontSize: "15px", color: "#666", fontWeight: 400 }}>
+                  Potential discount with large (1000+) batch
+                </p>
               </div>
             </div>
           </div>

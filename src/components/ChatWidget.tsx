@@ -404,7 +404,7 @@ What can I help you with today?`;
           <button class="chat-toggle" id="chatToggle" type="button" aria-label="Open chat">💬</button>
           <div class="chat-window" id="chatWindow" role="dialog" aria-label="Biostate AI Support">
             <div class="chat-header">
-              <div class="chat-header-icon">🤖</div>
+              <div class="chat-header-icon"><img src="/images/bot.svg" alt="Biostate AI" style="width:28px;height:28px;" /></div>
               <div class="chat-header-text">
                 <h3>Biostate AI Support</h3>
                 <p>RNA-seq Service Help</p>
