@@ -33,7 +33,6 @@ export default function Footer() {
       (window as any).fbq("track", "Lead");
     }
 
-    window.history.pushState({}, "", window.location.pathname.replace(/\/$/, "") + "/thank-you");
     setShowPopup(true);
     setSubscribeEmail("");
   };
