@@ -21,7 +21,7 @@ export default function Footer() {
     <footer
       style={{
         backgroundColor: "#1a1a1a",
-        borderRadius: "25px 25px 0 0",
+        borderRadius: "25px",
         margin: "20px",
         overflow: "hidden",
       }}
@@ -336,8 +336,8 @@ export default function Footer() {
             <h2
               style={{
                 fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                fontSize: "72px",
-                fontWeight: 700,
+                fontSize: "64px",
+                fontWeight: 500,
                 lineHeight: "1.1",
                 letterSpacing: "-0.03em",
                 background: "linear-gradient(135deg, rgb(69, 208, 189), rgb(68, 182, 233))",
