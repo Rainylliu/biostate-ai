@@ -471,7 +471,6 @@ export default function RNAPage() {
         style={{
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
           marginTop: "20px",
-          overflow: "visible",
         }}
       >
         <div className="container">
@@ -488,13 +487,14 @@ export default function RNAPage() {
               style={{
                 position: "absolute",
                 top: "-60px",
-                left: "-20px",
-                right: "-20px",
+                left: "0",
+                right: "0",
                 height: "140px",
                 backgroundColor: "#1F1F1F",
                 transform: "rotate(-2.07deg)",
-                transformOrigin: "center center",
+                transformOrigin: "bottom center",
                 zIndex: 0,
+                borderRadius: "25px 25px 0 0",
               }}
             />
             <div className="flex flex-col lg:flex-row gap-12 lg:gap-8 items-center" style={{ position: "relative", zIndex: 1 }}>
