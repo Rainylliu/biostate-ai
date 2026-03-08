@@ -276,60 +276,35 @@ export default function Header() {
       )}
 
       {/* Side Panel Overlay */}
-      {sidePanelOpen && (
-        <div
-          className="fixed inset-0 z-[100]"
-          style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
-          onClick={() => setSidePanelOpen(false)}
-        />
-      )}
+      <div
+        className="fixed inset-0 z-[100]"
+        style={{
+          backgroundColor: "rgba(0,0,0,0.5)",
+          opacity: sidePanelOpen ? 1 : 0,
+          pointerEvents: sidePanelOpen ? "auto" : "none",
+          transition: "opacity 0.4s ease",
+        }}
+        onClick={() => setSidePanelOpen(false)}
+      />
 
       {/* Side Panel */}
       <div
-        className="fixed top-0 left-0 z-[101] h-full side-panel"
+        className="fixed top-0 left-0 z-[101] h-full flex"
         style={{
-          width: "min(85vw, 720px)",
           transform: sidePanelOpen ? "translateX(0)" : "translateX(-100%)",
           transition: "transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
         }}
       >
+        {/* Main dark panel */}
         <div
           className="relative h-full flex flex-col"
           style={{
-            background: "linear-gradient(180deg, #0d1117 0%, #0a2a2a 100%)",
-            borderRadius: "0 24px 24px 0",
+            width: "min(80vw, 600px)",
+            background: "#1F1F1F",
+            borderRadius: "25px",
             overflow: "hidden",
           }}
         >
-          {/* Close Button - top right, vertical text */}
-          <button
-            onClick={() => setSidePanelOpen(false)}
-            className="absolute flex flex-col items-center gap-2 cursor-pointer"
-            style={{
-              top: 28,
-              right: 28,
-              color: "#ffffff",
-              zIndex: 10,
-            }}
-            aria-label="Close"
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-              <line x1="18" y1="6" x2="6" y2="18" />
-              <line x1="6" y1="6" x2="18" y2="18" />
-            </svg>
-            <span
-              style={{
-                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                fontSize: "14px",
-                fontWeight: 600,
-                writingMode: "vertical-rl",
-                letterSpacing: "0.05em",
-              }}
-            >
-              Close
-            </span>
-          </button>
-
           {/* Content */}
           <div className="flex-1 flex flex-col justify-center" style={{ padding: "0 48px" }}>
             <p
@@ -409,22 +384,22 @@ export default function Header() {
 
           {/* Bottom section: decoration + social icons */}
           <div style={{ position: "relative", paddingBottom: "40px" }}>
-            {/* Bottom decorative gradient */}
+            {/* Bottom decorative teal glow */}
             <div
               style={{
                 position: "absolute",
                 bottom: 0,
-                left: 0,
-                right: 0,
-                height: "200px",
-                background: "radial-gradient(ellipse at bottom center, rgba(69,208,189,0.3) 0%, transparent 70%)",
+                left: "-50%",
+                right: "-50%",
+                height: "400px",
+                background: "radial-gradient(ellipse at 50% 100%, rgba(34,140,172,0.5) 0%, transparent 60%)",
                 pointerEvents: "none",
               }}
             />
 
             {/* Social icons row */}
             <div
-              className="flex items-center justify-center gap-10"
+              className="flex items-center gap-12"
               style={{
                 position: "relative",
                 zIndex: 2,
@@ -432,20 +407,53 @@ export default function Header() {
               }}
             >
               <a href="#" aria-label="Facebook" style={{ color: "#ffffff" }} className="hover:text-[#45D0BD] transition-colors">
-                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
               </a>
               <a href="#" aria-label="Instagram" style={{ color: "#ffffff" }} className="hover:text-[#45D0BD] transition-colors">
-                <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
               </a>
               <a href="#" aria-label="X" style={{ color: "#ffffff" }} className="hover:text-[#45D0BD] transition-colors">
-                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
               </a>
               <a href="#" aria-label="LinkedIn" style={{ color: "#ffffff" }} className="hover:text-[#45D0BD] transition-colors">
-                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
               </a>
             </div>
           </div>
         </div>
+
+        {/* Right close tab strip - gradient overlay on background */}
+        <button
+          onClick={() => setSidePanelOpen(false)}
+          className="relative h-full flex flex-col items-center cursor-pointer"
+          style={{
+            width: "68px",
+            paddingTop: "28px",
+            background: "linear-gradient(180deg, rgba(69,208,189,0.3) 0%, rgba(68,182,233,0.3) 100%)",
+            backdropFilter: "blur(8px)",
+            WebkitBackdropFilter: "blur(8px)",
+            borderRadius: "0 25px 25px 0",
+            border: "none",
+            color: "#ffffff",
+          }}
+          aria-label="Close"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="side-panel-close-x" style={{ flexShrink: 0, marginBottom: "8px" }}>
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+          <span
+            style={{
+              fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+              fontSize: "13px",
+              fontWeight: 600,
+              writingMode: "vertical-rl",
+              letterSpacing: "0.08em",
+            }}
+          >
+            Close
+          </span>
+        </button>
       </div>
     </>
   );
