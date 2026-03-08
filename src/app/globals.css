@@ -313,12 +313,12 @@ img {
 /* ── Get Quote Button - RNA page variant ── */
 @keyframes gradient-rotate {
   0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
+  100% { background-position: 66.67% 50%; }
 }
 
 .get-quote-btn.get-quote-btn-rna {
-  background: linear-gradient(90deg, #2efcd2, #1fa8f0, #2efcd2);
-  background-size: 200% 100%;
+  background: linear-gradient(90deg, #2efcd2, #1fa8f0, #2efcd2, #1fa8f0, #2efcd2);
+  background-size: 400% 100%;
   animation: gradient-rotate 5s linear infinite;
   padding: 6px !important;
   transition: padding 0.3s ease, margin 0.3s ease;
