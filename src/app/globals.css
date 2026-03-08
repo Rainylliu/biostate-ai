@@ -317,7 +317,7 @@ img {
 }
 
 .get-quote-btn.get-quote-btn-dark:hover .get-quote-inner {
-  background: linear-gradient(90deg, rgba(69, 208, 189, 0.15), rgba(68, 182, 233, 0.15));
+  background: linear-gradient(90deg, #45d0bd, #44b6e9);
   color: #ffffff;
 }
 
