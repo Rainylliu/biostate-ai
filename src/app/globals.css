@@ -466,6 +466,17 @@ img {
   color: #ffffff;
 }
 
+/* ── Terms Link ── */
+.terms-link {
+  color: #45d0bd;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.terms-link:hover {
+  color: #111111;
+}
+
 /* ── Marquee Scrolling Banner ── */
 .marquee-banner {
   width: 100%;

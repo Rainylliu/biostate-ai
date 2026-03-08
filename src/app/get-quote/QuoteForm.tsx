@@ -533,7 +533,7 @@ export default function QuoteForm() {
             href="/sales-tc"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: "#45d0bd", textDecoration: "none", fontWeight: 500 }}
+            className="terms-link"
           >
             Terms &amp; Conditions
           </a>

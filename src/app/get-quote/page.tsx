@@ -315,17 +315,11 @@ export default function GetQuotePage() {
             </p>
           </li>
         </ul>
-      </section>
 
-      {/* Form Section - centered */}
-      <section
-        style={{
-          padding: "60px 24px 0",
-          maxWidth: "900px",
-          margin: "0 auto",
-        }}
-      >
-        <QuoteForm />
+        {/* Form */}
+        <div style={{ marginTop: "60px" }}>
+          <QuoteForm />
+        </div>
       </section>
     </div>
   );
