@@ -83,7 +83,7 @@ interface SampleRow {
 
 export default function QuoteForm() {
   const [sampleRows, setSampleRows] = useState<SampleRow[]>([
-    { count: "", type: "Purified RNA" },
+    { count: "", type: "" },
   ]);
   const [concentration, setConcentration] = useState("");
 
@@ -92,7 +92,7 @@ export default function QuoteForm() {
   ).length;
 
   const addSampleRow = () => {
-    setSampleRows([...sampleRows, { count: "", type: "Purified RNA" }]);
+    setSampleRows([...sampleRows, { count: "", type: "" }]);
   };
 
   const updateSampleRow = (
@@ -189,8 +189,11 @@ export default function QuoteForm() {
         </label>
         <select
           style={{ ...selectStyle, maxWidth: "calc(60%)" }}
-          defaultValue="Human"
+          defaultValue=""
         >
+          <option value="" disabled>
+            -- Select organism --
+          </option>
           {ORGANISMS.map((o) => (
             <option key={o} value={o}>
               {o}
@@ -250,12 +253,15 @@ export default function QuoteForm() {
                 </label>
               )}
               <select
-                style={selectStyle}
+                style={{ ...selectStyle, color: row.type === "" ? "#999999" : "#333333" }}
                 value={row.type}
                 onChange={(e) => updateSampleRow(i, "type", e.target.value)}
               >
+                <option value="" disabled>
+                  -- Select sample type --
+                </option>
                 {SAMPLE_TYPES.map((t) => (
-                  <option key={t} value={t}>
+                  <option key={t} value={t} style={{ color: "#333333" }}>
                     {t}
                   </option>
                 ))}
