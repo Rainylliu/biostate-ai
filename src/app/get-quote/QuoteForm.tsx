@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { jsPDF } from "jspdf";
 
 const US_STATES = [
   "Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut",
@@ -77,9 +76,6 @@ const sectionDividerStyle: React.CSSProperties = {
   margin: "40px 0",
 };
 
-// TODO: Replace with your deployed Google Apps Script Web App URL
-const APPS_SCRIPT_URL = "";
-
 interface SampleRow {
   count: string;
   type: string;
@@ -88,131 +84,6 @@ interface SampleRow {
 interface OtherRow {
   count: string;
   specify: string;
-}
-
-function generatePDF(data: {
-  firstName: string;
-  lastName: string;
-  email: string;
-  ccEmails: string;
-  address1: string;
-  address2: string;
-  city: string;
-  state: string;
-  zip: string;
-  organism: string;
-  sampleRows: SampleRow[];
-  otherRows: OtherRow[];
-  qc: string;
-  notes: string;
-  concentration: string;
-  concentrationSpec: string;
-}): string {
-  const doc = new jsPDF();
-  const pageWidth = doc.internal.pageSize.getWidth();
-  let y = 20;
-  const leftMargin = 20;
-  const labelX = leftMargin;
-  const valueX = 80;
-  const maxWidth = pageWidth - valueX - 20;
-
-  // Title
-  doc.setFontSize(20);
-  doc.setFont("helvetica", "bold");
-  doc.text("RNAseq Service Quote Request", pageWidth / 2, y, { align: "center" });
-  y += 15;
-
-  doc.setDrawColor(200, 200, 200);
-  doc.line(leftMargin, y, pageWidth - 20, y);
-  y += 10;
-
-  const addField = (label: string, value: string) => {
-    if (y > 270) {
-      doc.addPage();
-      y = 20;
-    }
-    doc.setFontSize(10);
-    doc.setFont("helvetica", "bold");
-    doc.text(label, labelX, y);
-    doc.setFont("helvetica", "normal");
-    const lines = doc.splitTextToSize(value || "—", maxWidth);
-    doc.text(lines, valueX, y);
-    y += Math.max(lines.length * 5, 7);
-  };
-
-  const addSection = (title: string) => {
-    if (y > 260) {
-      doc.addPage();
-      y = 20;
-    }
-    y += 5;
-    doc.setDrawColor(200, 200, 200);
-    doc.line(leftMargin, y, pageWidth - 20, y);
-    y += 8;
-    doc.setFontSize(13);
-    doc.setFont("helvetica", "bold");
-    doc.text(title, leftMargin, y);
-    y += 8;
-  };
-
-  // Contact Info
-  addField("Name:", `${data.firstName} ${data.lastName}`);
-  addField("Email:", data.email);
-  if (data.ccEmails) addField("CC Emails:", data.ccEmails);
-
-  // Address
-  const addressParts = [data.address1, data.address2, [data.city, data.state, data.zip].filter(Boolean).join(", ")].filter(Boolean);
-  if (addressParts.length > 0) {
-    addField("Address:", addressParts.join("\n"));
-  }
-
-  addField("Organism:", data.organism);
-
-  // Sample Types
-  addSection("Sample Types");
-  data.sampleRows.forEach((row, i) => {
-    if (row.count || row.type) {
-      addField(`Sample ${i + 1}:`, `${row.count || "—"} x ${row.type || "—"}`);
-    }
-  });
-
-  // Other samples
-  if (data.otherRows.some((r) => r.count || r.specify)) {
-    addSection("Other Sample Types");
-    data.otherRows.forEach((row, i) => {
-      if (row.count || row.specify) {
-        addField(`Other ${i + 1}:`, `${row.count || "—"} x ${row.specify || "—"}`);
-      }
-    });
-  }
-
-  // QC
-  addSection("QC & Specifications");
-  const qcLabels: Record<string, string> = {
-    standard: "Standard QC - Qubit Concentration Measure for all sample, No Bio/Nanodrop",
-    complete: "Complete QC - Qubit Concentration and BioA/Nano Drop for all samples before proceeding with Library preparation",
-  };
-  addField("QC Option:", qcLabels[data.qc] || "—");
-
-  if (data.notes) addField("Notes:", data.notes);
-
-  const concLabels: Record<string, string> = {
-    above: "All samples are above Conc. \u2265 16 ng/\u00B5L (min 10 \u00B5L)",
-    below: "All samples are below Conc. \u2265 16 ng/\u00B5L (min 10 \u00B5L)",
-    some: "Some samples are below Conc. \u2265 16 ng/\u00B5L (min 10 \u00B5L)",
-  };
-  addField("Concentration:", concLabels[data.concentration] || "—");
-  if (data.concentration === "some" && data.concentrationSpec) {
-    addField("Specified #:", data.concentrationSpec);
-  }
-
-  // Footer
-  y += 10;
-  doc.setFontSize(8);
-  doc.setTextColor(150);
-  doc.text(`Generated on ${new Date().toLocaleDateString()}`, pageWidth / 2, y, { align: "center" });
-
-  return doc.output("datauristring");
 }
 
 export default function QuoteForm() {
@@ -279,53 +150,10 @@ export default function QuoteForm() {
     setSubmitting(true);
 
     try {
-      const formData = {
-        firstName,
-        lastName,
-        email,
-        ccEmails,
-        address1,
-        address2,
-        city,
-        state: usState,
-        zip,
-        organism,
-        sampleRows,
-        otherRows,
-        qc,
-        notes,
-        concentration,
-        concentrationSpec,
-      };
-
-      const pdfDataUri = generatePDF(formData);
-      // Extract base64 data from data URI
-      const pdfBase64 = pdfDataUri.split(",")[1];
-
-      if (APPS_SCRIPT_URL) {
-        // Send to Google Apps Script
-        const response = await fetch(APPS_SCRIPT_URL, {
-          method: "POST",
-          mode: "no-cors",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            ...formData,
-            pdfBase64,
-            subject: `RNAseq Quote Request - ${firstName} ${lastName}`,
-          }),
-        });
-
-        // no-cors mode returns opaque response, so we assume success
-        void response;
-        setSubmitted(true);
-      } else {
-        // Fallback: download PDF locally
-        const link = document.createElement("a");
-        link.href = pdfDataUri;
-        link.download = `RNAseq_Quote_Request_${firstName}_${lastName}.pdf`;
-        link.click();
-        setSubmitted(true);
-      }
+      // TODO: Integrate email sending (e.g., via Google Apps Script)
+      // For now, just show success
+      await new Promise((resolve) => setTimeout(resolve, 500));
+      setSubmitted(true);
     } catch {
       alert("There was an error submitting your request. Please try again.");
     } finally {
