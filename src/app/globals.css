@@ -313,22 +313,20 @@ img {
 /* ── Get Quote Button - RNA page variant ── */
 @keyframes gradient-rotate {
   0% { background-position: 0% 50%; }
-  25% { background-position: 50% 50%; }
-  50% { background-position: 100% 50%; }
-  75% { background-position: 50% 50%; }
-  100% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
 
 .get-quote-btn.get-quote-btn-rna {
   background: linear-gradient(270deg, #2efcd2, #1fa8f0, #45ffcf, #2cb8ff, #2efcd2);
   background-size: 400% 400%;
-  animation: gradient-rotate 5s ease infinite;
+  animation: gradient-rotate 5s linear infinite;
   padding: 6px !important;
-  transition: padding 0.3s ease;
+  transition: padding 0.3s ease, margin 0.3s ease;
 }
 
 .get-quote-btn.get-quote-btn-rna:hover {
   padding: 10px !important;
+  margin: -4px;
 }
 
 .get-quote-btn.get-quote-btn-rna .get-quote-inner {
