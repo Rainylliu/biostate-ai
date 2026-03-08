@@ -191,7 +191,7 @@ export default function Header() {
           {/* CTA Button */}
           <Link
             href="/get-quote"
-            className="get-quote-btn hidden lg:inline-flex rounded-full"
+            className={`get-quote-btn hidden lg:inline-flex rounded-full${pathname === "/rna" ? " get-quote-btn-rna" : ""}`}
             style={{
               color: "#1f1f1f",
               fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
@@ -235,31 +235,33 @@ export default function Header() {
         )}
       </header>
 
-      {/* Scrolling Marquee Banner - Below Nav */}
-      <div
-        className="w-full overflow-hidden"
-        style={{
-          background: "linear-gradient(90deg, #45d0bd, #44b6e9)",
-          padding: "10px 0",
-        }}
-      >
+      {/* Scrolling Marquee Banner - Only on RNA page */}
+      {pathname === "/rna" && (
         <div
-          className="flex whitespace-nowrap"
+          className="w-full overflow-hidden"
           style={{
-            animation: "marquee 20s linear infinite",
+            background: "linear-gradient(90deg, #45d0bd, #44b6e9)",
+            padding: "10px 0",
           }}
         >
-          {Array.from({ length: 6 }).map((_, i) => (
-            <span
-              key={i}
-              className="text-white text-sm font-semibold"
-              style={{ fontFamily: "'Manrope', Arial, Helvetica, sans-serif", paddingRight: "8vw" }}
-            >
-              {marqueeText}
-            </span>
-          ))}
+          <div
+            className="flex whitespace-nowrap"
+            style={{
+              animation: "marquee 20s linear infinite",
+            }}
+          >
+            {Array.from({ length: 6 }).map((_, i) => (
+              <span
+                key={i}
+                className="text-white text-sm font-semibold"
+                style={{ fontFamily: "'Manrope', Arial, Helvetica, sans-serif", paddingRight: "8vw" }}
+              >
+                {marqueeText}
+              </span>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
     </>
   );

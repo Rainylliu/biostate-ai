@@ -310,6 +310,38 @@ img {
   color: #1f1f1f;
 }
 
+/* ── Get Quote Button - RNA page variant ── */
+@keyframes gradient-rotate {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 66.67% 50%; }
+}
+
+.get-quote-btn.get-quote-btn-rna {
+  background: linear-gradient(90deg, #2efcd2, #1fa8f0, #2efcd2, #1fa8f0, #2efcd2);
+  background-size: 400% 100%;
+  animation: gradient-rotate 5s linear infinite;
+  padding: 6px !important;
+  transition: padding 0.3s ease, margin 0.3s ease;
+}
+
+.get-quote-btn.get-quote-btn-rna:hover {
+  padding: 10px !important;
+  margin: -4px;
+}
+
+.get-quote-btn.get-quote-btn-rna .get-quote-inner {
+  background: #333333;
+  color: #ffffff;
+  padding: 13px 50px;
+  transition: padding 0.3s ease;
+}
+
+.get-quote-btn.get-quote-btn-rna:hover .get-quote-inner {
+  background: #333333;
+  color: #ffffff;
+  padding: 9px 46px;
+}
+
 /* ── Book a Call Button ── */
 .book-a-call-btn {
   position: relative;
@@ -431,8 +463,9 @@ img {
 
 .marquee-banner-track {
   display: flex;
+  width: max-content;
   white-space: nowrap;
-  animation: marquee-scroll 5s linear infinite;
+  animation: marquee-scroll 15s linear infinite;
 }
 
 .marquee-banner-text {
