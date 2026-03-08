@@ -517,7 +517,7 @@ export default function QuoteForm() {
           style={{
             fontFamily: font,
             fontSize: "13px",
-            color: "#999999",
+            color: "#5B6475",
             marginTop: "12px",
           }}
         >
