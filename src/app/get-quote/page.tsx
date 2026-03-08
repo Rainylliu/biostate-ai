@@ -178,6 +178,130 @@ export default function GetQuotePage() {
           </div>
         </div>
       </section>
+
+      {/* Section - Form Introduction */}
+      <section
+        style={{
+          padding: "80px 24px 0",
+          maxWidth: "900px",
+          margin: "0 auto",
+        }}
+      >
+        <h2
+          style={{
+            fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+            fontSize: "clamp(40px, 5vw, 64px)",
+            fontWeight: 700,
+            color: "#111111",
+            textAlign: "center",
+            lineHeight: 1.15,
+            margin: "0 0 48px",
+          }}
+        >
+          RNAseq service Quote Request
+        </h2>
+
+        <ul
+          style={{
+            listStyle: "none",
+            padding: 0,
+            margin: 0,
+            display: "flex",
+            flexDirection: "column",
+            gap: "24px",
+          }}
+        >
+          <li style={{ display: "flex", gap: "16px", alignItems: "flex-start" }}>
+            <span
+              style={{
+                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                fontSize: "20px",
+                color: "#999999",
+                flexShrink: 0,
+                lineHeight: 1.7,
+              }}
+            >
+              &#8623;
+            </span>
+            <p
+              style={{
+                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                fontSize: "16px",
+                color: "#555555",
+                lineHeight: 1.7,
+                margin: 0,
+              }}
+            >
+              To generate a quote for your institution/ company, please fill out the
+              form below. A copy of the quote will be sent to the email you specify
+              below, you can include any additional emails you would like to CC in
+              this email.
+            </p>
+          </li>
+          <li style={{ display: "flex", gap: "16px", alignItems: "flex-start" }}>
+            <span
+              style={{
+                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                fontSize: "20px",
+                color: "#999999",
+                flexShrink: 0,
+                lineHeight: 1.7,
+              }}
+            >
+              &#8623;
+            </span>
+            <p
+              style={{
+                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                fontSize: "16px",
+                color: "#555555",
+                lineHeight: 1.7,
+                margin: 0,
+              }}
+            >
+              After you obtain a PO number from your institution, please send the
+              PO document to contact@biostate.ai as soon as possible.
+            </p>
+          </li>
+          <li style={{ display: "flex", gap: "16px", alignItems: "flex-start" }}>
+            <span
+              style={{
+                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                fontSize: "20px",
+                color: "#999999",
+                flexShrink: 0,
+                lineHeight: 1.7,
+              }}
+            >
+              &#8623;
+            </span>
+            <p
+              style={{
+                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                fontSize: "16px",
+                color: "#555555",
+                lineHeight: 1.7,
+                margin: 0,
+              }}
+            >
+              Purchase orders should be issued to Biostate AI, Incorporated If
+              we&apos;re not yet a vendor at your institution, please have your buyer or
+              lab manager reach out to us. Our onboarding team is very efficient
+              and we can get set up very quickly. Here is our{" "}
+              <a
+                href="#"
+                style={{
+                  color: "#45d0bd",
+                  textDecoration: "none",
+                }}
+              >
+                W-9 form
+              </a>
+              .
+            </p>
+          </li>
+        </ul>
+      </section>
     </div>
   );
 }
