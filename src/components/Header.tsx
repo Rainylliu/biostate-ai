@@ -427,7 +427,7 @@ export default function Header() {
           <span
             style={{
               fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-              fontSize: "13px",
+              fontSize: "17px",
               fontWeight: 600,
               writingMode: "vertical-rl",
               letterSpacing: "0.08em",
