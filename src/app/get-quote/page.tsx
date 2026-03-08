@@ -191,11 +191,12 @@ export default function GetQuotePage() {
           style={{
             fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
             fontSize: "clamp(40px, 5vw, 64px)",
-            fontWeight: 700,
+            fontWeight: 400,
             color: "#111111",
             textAlign: "center",
             lineHeight: 1.15,
             margin: "0 0 48px",
+            whiteSpace: "nowrap",
           }}
         >
           RNAseq service Quote Request
@@ -212,17 +213,21 @@ export default function GetQuotePage() {
           }}
         >
           <li style={{ display: "flex", gap: "16px", alignItems: "flex-start" }}>
-            <span
-              style={{
-                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                fontSize: "20px",
-                color: "#999999",
-                flexShrink: 0,
-                lineHeight: 1.7,
-              }}
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              style={{ flexShrink: 0, marginTop: "6px" }}
             >
-              &#8623;
-            </span>
+              <path
+                d="M4 4L12 12M12 12H5M12 12V5"
+                stroke="#999999"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
             <p
               style={{
                 fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
@@ -239,17 +244,21 @@ export default function GetQuotePage() {
             </p>
           </li>
           <li style={{ display: "flex", gap: "16px", alignItems: "flex-start" }}>
-            <span
-              style={{
-                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                fontSize: "20px",
-                color: "#999999",
-                flexShrink: 0,
-                lineHeight: 1.7,
-              }}
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              style={{ flexShrink: 0, marginTop: "6px" }}
             >
-              &#8623;
-            </span>
+              <path
+                d="M4 4L12 12M12 12H5M12 12V5"
+                stroke="#999999"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
             <p
               style={{
                 fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
@@ -264,17 +273,21 @@ export default function GetQuotePage() {
             </p>
           </li>
           <li style={{ display: "flex", gap: "16px", alignItems: "flex-start" }}>
-            <span
-              style={{
-                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                fontSize: "20px",
-                color: "#999999",
-                flexShrink: 0,
-                lineHeight: 1.7,
-              }}
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              style={{ flexShrink: 0, marginTop: "6px" }}
             >
-              &#8623;
-            </span>
+              <path
+                d="M4 4L12 12M12 12H5M12 12V5"
+                stroke="#999999"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
             <p
               style={{
                 fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
