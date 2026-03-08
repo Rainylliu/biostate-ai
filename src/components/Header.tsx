@@ -428,7 +428,7 @@ export default function Header() {
             style={{
               fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
               fontSize: "17px",
-              fontWeight: 600,
+              fontWeight: 400,
               writingMode: "vertical-rl",
               letterSpacing: "0.08em",
             }}
