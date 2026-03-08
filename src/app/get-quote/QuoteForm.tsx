@@ -85,6 +85,8 @@ export default function QuoteForm() {
   const [sampleRows, setSampleRows] = useState<SampleRow[]>([
     { count: "", type: "" },
   ]);
+  const [organism, setOrganism] = useState("");
+  const [state, setState] = useState("");
   const [concentration, setConcentration] = useState("");
 
   const otherCount = sampleRows.filter(
@@ -162,12 +164,16 @@ export default function QuoteForm() {
               <span style={subLabelStyle}>City</span>
             </div>
             <div style={{ flex: 1 }}>
-              <select style={selectStyle} defaultValue="">
+              <select
+                style={{ ...selectStyle, color: state === "" ? "#bbbbbb" : "#333333" }}
+                value={state}
+                onChange={(e) => setState(e.target.value)}
+              >
                 <option value="" disabled>
                   -- Select state --
                 </option>
                 {US_STATES.map((s) => (
-                  <option key={s} value={s}>
+                  <option key={s} value={s} style={{ color: "#333333" }}>
                     {s}
                   </option>
                 ))}
@@ -188,14 +194,15 @@ export default function QuoteForm() {
           Organism &ndash; Drop down Options
         </label>
         <select
-          style={{ ...selectStyle, maxWidth: "calc(60%)" }}
-          defaultValue=""
+          style={{ ...selectStyle, maxWidth: "calc(60%)", color: organism === "" ? "#bbbbbb" : "#333333" }}
+          value={organism}
+          onChange={(e) => setOrganism(e.target.value)}
         >
           <option value="" disabled>
             -- Select organism --
           </option>
           {ORGANISMS.map((o) => (
-            <option key={o} value={o}>
+            <option key={o} value={o} style={{ color: "#333333" }}>
               {o}
             </option>
           ))}
@@ -253,7 +260,7 @@ export default function QuoteForm() {
                 </label>
               )}
               <select
-                style={{ ...selectStyle, color: row.type === "" ? "#999999" : "#333333" }}
+                style={{ ...selectStyle, color: row.type === "" ? "#bbbbbb" : "#333333" }}
                 value={row.type}
                 onChange={(e) => updateSampleRow(i, "type", e.target.value)}
               >
