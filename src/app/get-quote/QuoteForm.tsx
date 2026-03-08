@@ -85,10 +85,11 @@ export default function QuoteForm() {
   const [sampleRows, setSampleRows] = useState<SampleRow[]>([
     { count: "", type: "Purified RNA" },
   ]);
+  const [concentration, setConcentration] = useState("");
 
-  const hasOtherSelected = sampleRows.some(
+  const otherCount = sampleRows.filter(
     (r) => r.type === "Other (Please specify below)"
-  );
+  ).length;
 
   const addSampleRow = () => {
     setSampleRows([...sampleRows, { count: "", type: "Purified RNA" }]);
@@ -285,8 +286,8 @@ export default function QuoteForm() {
         </button>
       </div>
 
-      {/* Conditional: If Other selected */}
-      {hasOtherSelected && (
+      {/* Conditional: If Other selected — one row per Other */}
+      {otherCount > 0 && (
         <>
           <hr style={sectionDividerStyle} />
           <div style={{ marginBottom: "16px" }}>
@@ -301,32 +302,38 @@ export default function QuoteForm() {
             >
               If you selected &ldquo;Other,&rdquo; please specify below
             </h3>
-            <div style={{ display: "flex", gap: "16px" }}>
-              <div style={{ flex: 1 }}>
-                <label
-                  style={{
-                    ...labelStyle,
-                    fontSize: "14px",
-                    fontWeight: 600,
-                  }}
-                >
-                  # of samples
-                </label>
-                <input type="number" min="0" style={inputStyle} />
+            {Array.from({ length: otherCount }).map((_, i) => (
+              <div key={i} style={{ display: "flex", gap: "16px", marginBottom: "16px" }}>
+                <div style={{ flex: 1 }}>
+                  {i === 0 && (
+                    <label
+                      style={{
+                        ...labelStyle,
+                        fontSize: "14px",
+                        fontWeight: 600,
+                      }}
+                    >
+                      # of samples
+                    </label>
+                  )}
+                  <input type="number" min="0" style={inputStyle} />
+                </div>
+                <div style={{ flex: 1 }}>
+                  {i === 0 && (
+                    <label
+                      style={{
+                        ...labelStyle,
+                        fontSize: "14px",
+                        fontWeight: 600,
+                      }}
+                    >
+                      Other (Please specify)
+                    </label>
+                  )}
+                  <input type="text" style={inputStyle} />
+                </div>
               </div>
-              <div style={{ flex: 1 }}>
-                <label
-                  style={{
-                    ...labelStyle,
-                    fontSize: "14px",
-                    fontWeight: 600,
-                  }}
-                >
-                  Other (Please specify)
-                </label>
-                <input type="text" style={inputStyle} />
-              </div>
-            </div>
+            ))}
           </div>
         </>
       )}
@@ -405,6 +412,8 @@ export default function QuoteForm() {
               type="radio"
               name="concentration"
               value="above"
+              checked={concentration === "above"}
+              onChange={(e) => setConcentration(e.target.value)}
               style={{ accentColor: "#8258c8" }}
             />
             {"All samples are above Conc. \u2265 16 ng/\u00B5L (min 10 \u00B5L)"}
@@ -424,6 +433,8 @@ export default function QuoteForm() {
               type="radio"
               name="concentration"
               value="below"
+              checked={concentration === "below"}
+              onChange={(e) => setConcentration(e.target.value)}
               style={{ accentColor: "#8258c8" }}
             />
             {"All samples are below Conc. \u2265 16 ng/\u00B5L (min 10 \u00B5L)"}
@@ -443,11 +454,21 @@ export default function QuoteForm() {
               type="radio"
               name="concentration"
               value="some"
+              checked={concentration === "some"}
+              onChange={(e) => setConcentration(e.target.value)}
               style={{ accentColor: "#8258c8" }}
             />
             {"Some samples are below Conc. \u2265 16 ng/\u00B5L (min 10 \u00B5L)"}
           </label>
         </div>
+
+        {/* Conditional: show when "Some samples are below" is selected */}
+        {concentration === "some" && (
+          <div style={{ marginTop: "24px" }}>
+            <label style={labelStyle}>Please specify the sample numbers</label>
+            <input type="text" style={inputStyle} />
+          </div>
+        )}
       </div>
 
       {/* Submit button */}
