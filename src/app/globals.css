@@ -310,6 +310,17 @@ img {
   color: #1f1f1f;
 }
 
+/* Dark variant for side panel */
+.get-quote-btn.get-quote-btn-dark .get-quote-inner {
+  background: transparent;
+  color: #ffffff;
+}
+
+.get-quote-btn.get-quote-btn-dark:hover .get-quote-inner {
+  background: linear-gradient(90deg, rgba(69, 208, 189, 0.15), rgba(68, 182, 233, 0.15));
+  color: #ffffff;
+}
+
 /* ── Get Quote Button - RNA page variant ── */
 @keyframes gradient-rotate {
   0% { background-position: 0% 50%; }
