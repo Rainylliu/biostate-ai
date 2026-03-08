@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import QuoteForm from "./QuoteForm";
 
 export const metadata: Metadata = {
   title: "Get Quote - biostate.AI",
@@ -314,6 +315,17 @@ export default function GetQuotePage() {
             </p>
           </li>
         </ul>
+      </section>
+
+      {/* Form Section - centered */}
+      <section
+        style={{
+          padding: "60px 24px 0",
+          maxWidth: "900px",
+          margin: "0 auto",
+        }}
+      >
+        <QuoteForm />
       </section>
     </div>
   );
