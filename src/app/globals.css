@@ -324,6 +324,11 @@ img {
   background-size: 400% 400%;
   animation: gradient-rotate 5s ease infinite;
   padding: 6px !important;
+  transition: padding 0.3s ease;
+}
+
+.get-quote-btn.get-quote-btn-rna:hover {
+  padding: 10px !important;
 }
 
 .get-quote-btn.get-quote-btn-rna .get-quote-inner {
@@ -336,7 +341,7 @@ img {
 .get-quote-btn.get-quote-btn-rna:hover .get-quote-inner {
   background: #333333;
   color: #ffffff;
-  padding: 11px 48px;
+  padding: 9px 46px;
 }
 
 /* ── Book a Call Button ── */
