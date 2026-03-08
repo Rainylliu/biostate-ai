@@ -322,23 +322,21 @@ img {
 .get-quote-btn.get-quote-btn-rna {
   background: linear-gradient(270deg, #2efcd2, #1fa8f0, #45ffcf, #2cb8ff, #2efcd2);
   background-size: 400% 400%;
-  animation: gradient-rotate 2.5s ease infinite;
+  animation: gradient-rotate 5s ease infinite;
   padding: 6px !important;
-  transition: padding 0.3s ease;
-}
-
-.get-quote-btn.get-quote-btn-rna:hover {
-  padding: 8px !important;
 }
 
 .get-quote-btn.get-quote-btn-rna .get-quote-inner {
   background: #333333;
   color: #ffffff;
+  padding: 13px 50px;
+  transition: padding 0.3s ease;
 }
 
 .get-quote-btn.get-quote-btn-rna:hover .get-quote-inner {
   background: #333333;
   color: #ffffff;
+  padding: 11px 48px;
 }
 
 /* ── Book a Call Button ── */
