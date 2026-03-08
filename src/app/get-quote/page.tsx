@@ -180,29 +180,31 @@ export default function GetQuotePage() {
         </div>
       </section>
 
+      {/* Title - full width centered */}
+      <h2
+        style={{
+          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+          fontSize: "clamp(40px, 5vw, 64px)",
+          fontWeight: 400,
+          color: "#111111",
+          textAlign: "center",
+          lineHeight: 1.15,
+          margin: "0",
+          padding: "80px 24px 48px",
+          whiteSpace: "nowrap",
+        }}
+      >
+        RNAseq service Quote Request
+      </h2>
+
       {/* Section - Form Introduction */}
       <section
         style={{
-          padding: "80px 24px 0",
+          padding: "0 24px",
           maxWidth: "900px",
           margin: "0 auto",
         }}
       >
-        <h2
-          style={{
-            fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-            fontSize: "clamp(40px, 5vw, 64px)",
-            fontWeight: 400,
-            color: "#111111",
-            textAlign: "center",
-            lineHeight: 1.15,
-            margin: "0 0 48px",
-            whiteSpace: "nowrap",
-          }}
-        >
-          RNAseq service Quote Request
-        </h2>
-
         <ul
           style={{
             listStyle: "none",
