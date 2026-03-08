@@ -191,7 +191,7 @@ export default function Header() {
           {/* CTA Button */}
           <Link
             href="/get-quote"
-            className="get-quote-btn hidden lg:inline-flex rounded-full"
+            className={`get-quote-btn hidden lg:inline-flex rounded-full${pathname === "/rna" ? " get-quote-btn-rna" : ""}`}
             style={{
               color: "#1f1f1f",
               fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
