@@ -317,8 +317,8 @@ img {
 }
 
 .get-quote-btn.get-quote-btn-rna {
-  background: linear-gradient(270deg, #2efcd2, #1fa8f0, #45ffcf, #2cb8ff, #2efcd2);
-  background-size: 400% 400%;
+  background: linear-gradient(90deg, #2efcd2, #1fa8f0, #2efcd2);
+  background-size: 200% 100%;
   animation: gradient-rotate 5s linear infinite;
   padding: 6px !important;
   transition: padding 0.3s ease, margin 0.3s ease;
