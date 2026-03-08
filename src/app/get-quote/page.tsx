@@ -62,6 +62,7 @@ export default function GetQuotePage() {
             width: "120px",
             height: "38%",
             background: "#ffffff",
+            borderTopLeftRadius: "25px",
             borderBottomRightRadius: "25px",
             zIndex: 2,
           }}
@@ -77,6 +78,7 @@ export default function GetQuotePage() {
             height: "55%",
             background: "#ffffff",
             borderTopLeftRadius: "25px",
+            borderBottomRightRadius: "25px",
             zIndex: 2,
           }}
         />
