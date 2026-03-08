@@ -67,6 +67,30 @@ export default function GetQuotePage() {
             zIndex: 2,
           }}
         />
+        {/* Top-left notch: concave corner at right edge (top-right of notch) */}
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: "120px",
+            width: "25px",
+            height: "25px",
+            background: "radial-gradient(circle at 100% 100%, transparent 25px, #ffffff 25px)",
+            zIndex: 2,
+          }}
+        />
+        {/* Top-left notch: concave corner at bottom edge (bottom-left of notch) */}
+        <div
+          style={{
+            position: "absolute",
+            top: "38%",
+            left: 0,
+            width: "25px",
+            height: "25px",
+            background: "radial-gradient(circle at 100% 100%, transparent 25px, #ffffff 25px)",
+            zIndex: 2,
+          }}
+        />
 
         {/* Bottom-right notch overlay */}
         <div
@@ -79,6 +103,30 @@ export default function GetQuotePage() {
             background: "#ffffff",
             borderTopLeftRadius: "25px",
             borderBottomRightRadius: "25px",
+            zIndex: 2,
+          }}
+        />
+        {/* Bottom-right notch: concave corner at left edge (bottom-left of notch) */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: 0,
+            right: "8%",
+            width: "25px",
+            height: "25px",
+            background: "radial-gradient(circle at 0% 0%, transparent 25px, #ffffff 25px)",
+            zIndex: 2,
+          }}
+        />
+        {/* Bottom-right notch: concave corner at top edge (top-right of notch) */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: "55%",
+            right: 0,
+            width: "25px",
+            height: "25px",
+            background: "radial-gradient(circle at 0% 0%, transparent 25px, #ffffff 25px)",
             zIndex: 2,
           }}
         />
