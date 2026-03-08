@@ -20,12 +20,23 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [menuHovered, setMenuHovered] = useState(false);
+  const [sidePanelOpen, setSidePanelOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Lock body scroll when side panel is open
+  useEffect(() => {
+    if (sidePanelOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [sidePanelOpen]);
 
   const marqueeText = "RNA-seq starting from $60 per sample";
 
@@ -94,7 +105,7 @@ export default function Header() {
           {/* Hamburger (mobile) */}
           <button
             className="lg:hidden flex flex-col gap-1.5 p-1"
-            onClick={() => setMobileOpen(!mobileOpen)}
+            onClick={() => setSidePanelOpen(true)}
             aria-label="Toggle menu"
           >
             <span
@@ -121,6 +132,7 @@ export default function Header() {
               aria-label="Menu"
               className="hidden lg:block cursor-pointer relative"
               style={{ width: 20, height: 20 }}
+              onClick={() => setSidePanelOpen(true)}
               onMouseEnter={() => setMenuHovered(true)}
               onMouseLeave={() => setMenuHovered(false)}
             >
@@ -263,6 +275,178 @@ export default function Header() {
         </div>
       )}
 
+      {/* Side Panel Overlay */}
+      {sidePanelOpen && (
+        <div
+          className="fixed inset-0 z-[100]"
+          style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
+          onClick={() => setSidePanelOpen(false)}
+        />
+      )}
+
+      {/* Side Panel */}
+      <div
+        className="fixed top-0 left-0 z-[101] h-full side-panel"
+        style={{
+          width: "min(85vw, 720px)",
+          transform: sidePanelOpen ? "translateX(0)" : "translateX(-100%)",
+          transition: "transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+        }}
+      >
+        <div
+          className="relative h-full flex flex-col"
+          style={{
+            background: "linear-gradient(180deg, #0d1117 0%, #0a2a2a 100%)",
+            borderRadius: "0 24px 24px 0",
+            overflow: "hidden",
+          }}
+        >
+          {/* Close Button - top right, vertical text */}
+          <button
+            onClick={() => setSidePanelOpen(false)}
+            className="absolute flex flex-col items-center gap-2 cursor-pointer"
+            style={{
+              top: 28,
+              right: 28,
+              color: "#ffffff",
+              zIndex: 10,
+            }}
+            aria-label="Close"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+            <span
+              style={{
+                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                fontSize: "14px",
+                fontWeight: 600,
+                writingMode: "vertical-rl",
+                letterSpacing: "0.05em",
+              }}
+            >
+              Close
+            </span>
+          </button>
+
+          {/* Content */}
+          <div className="flex-1 flex flex-col justify-center" style={{ padding: "0 48px" }}>
+            <p
+              style={{
+                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                fontSize: "14px",
+                fontWeight: 700,
+                color: "#ffffff",
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                marginBottom: "24px",
+              }}
+            >
+              CONTACTS
+            </p>
+            <p
+              style={{
+                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                fontSize: "28px",
+                fontWeight: 400,
+                color: "#ffffff",
+                lineHeight: 1.4,
+                marginBottom: "0",
+              }}
+            >
+              7505 Fannin St. Suite 610
+            </p>
+            <p
+              style={{
+                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                fontSize: "28px",
+                fontWeight: 400,
+                color: "#ffffff",
+                lineHeight: 1.4,
+                marginBottom: "28px",
+              }}
+            >
+              Houston, TX
+            </p>
+            <a
+              href="mailto:contact@biostate.ai"
+              style={{
+                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                fontSize: "24px",
+                fontWeight: 400,
+                color: "#ffffff",
+                textDecoration: "underline",
+                textUnderlineOffset: "4px",
+              }}
+            >
+              contact@biostate.ai
+            </a>
+
+            {/* Get in Touch button */}
+            <div style={{ marginTop: "48px" }}>
+              <Link
+                href="/get-quote"
+                onClick={() => setSidePanelOpen(false)}
+                style={{
+                  display: "inline-block",
+                  fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                  fontSize: "20px",
+                  fontWeight: 600,
+                  color: "#ffffff",
+                  border: "1.5px solid #45D0BD",
+                  borderRadius: "999px",
+                  padding: "16px 48px",
+                  textDecoration: "none",
+                  transition: "background 0.3s",
+                }}
+                className="hover:bg-[#45D0BD]/10"
+              >
+                Get in Touch
+              </Link>
+            </div>
+          </div>
+
+          {/* Bottom section: decoration + social icons */}
+          <div style={{ position: "relative", paddingBottom: "40px" }}>
+            {/* Bottom decorative gradient */}
+            <div
+              style={{
+                position: "absolute",
+                bottom: 0,
+                left: 0,
+                right: 0,
+                height: "200px",
+                background: "radial-gradient(ellipse at bottom center, rgba(69,208,189,0.3) 0%, transparent 70%)",
+                pointerEvents: "none",
+              }}
+            />
+
+            {/* Social icons row */}
+            <div
+              className="flex items-center justify-center gap-10"
+              style={{
+                position: "relative",
+                zIndex: 2,
+                padding: "24px 48px",
+              }}
+            >
+              <a href="#" aria-label="Facebook" style={{ color: "#ffffff" }} className="hover:text-[#45D0BD] transition-colors">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              </a>
+              <a href="#" aria-label="Instagram" style={{ color: "#ffffff" }} className="hover:text-[#45D0BD] transition-colors">
+                <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="#" aria-label="X" style={{ color: "#ffffff" }} className="hover:text-[#45D0BD] transition-colors">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="#" aria-label="LinkedIn" style={{ color: "#ffffff" }} className="hover:text-[#45D0BD] transition-colors">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
