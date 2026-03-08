@@ -458,7 +458,7 @@ export default function RNAPage() {
       >
         <div className="marquee-banner">
           <div className="marquee-banner-track">
-            {[...Array(6)].map((_, i) => (
+            {[...Array(12)].map((_, i) => (
               <span key={i} className="marquee-banner-text">
                 /Join us in powering the next era of precision medicine through innovative RNA sequencing.&nbsp;&nbsp;
               </span>
