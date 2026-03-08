@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Get Quote - biostate.AI",
@@ -155,34 +154,6 @@ export default function GetQuotePage() {
           >
             / Get Quote /
           </h1>
-
-          {/* Breadcrumb */}
-          <div
-            style={{
-              position: "absolute",
-              bottom: "24px",
-              left: "64px",
-              fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-              fontSize: "14px",
-              color: "#ffffff",
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
-            }}
-          >
-            <Link
-              href="/"
-              style={{
-                color: "#ffffff",
-                textDecoration: "underline",
-                textUnderlineOffset: "3px",
-              }}
-            >
-              Home
-            </Link>
-            <span>/</span>
-            <span>Get Quote</span>
-          </div>
 
           {/* "Quote" outline text on the right */}
           <div
