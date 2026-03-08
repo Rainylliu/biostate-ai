@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { jsPDF } from "jspdf";
 
 const US_STATES = [
   "Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut",
@@ -76,22 +77,178 @@ const sectionDividerStyle: React.CSSProperties = {
   margin: "40px 0",
 };
 
+// TODO: Replace with your deployed Google Apps Script Web App URL
+const APPS_SCRIPT_URL = "";
+
 interface SampleRow {
   count: string;
   type: string;
 }
 
+interface OtherRow {
+  count: string;
+  specify: string;
+}
+
+function generatePDF(data: {
+  firstName: string;
+  lastName: string;
+  email: string;
+  ccEmails: string;
+  address1: string;
+  address2: string;
+  city: string;
+  state: string;
+  zip: string;
+  organism: string;
+  sampleRows: SampleRow[];
+  otherRows: OtherRow[];
+  qc: string;
+  notes: string;
+  concentration: string;
+  concentrationSpec: string;
+}): string {
+  const doc = new jsPDF();
+  const pageWidth = doc.internal.pageSize.getWidth();
+  let y = 20;
+  const leftMargin = 20;
+  const labelX = leftMargin;
+  const valueX = 80;
+  const maxWidth = pageWidth - valueX - 20;
+
+  // Title
+  doc.setFontSize(20);
+  doc.setFont("helvetica", "bold");
+  doc.text("RNAseq Service Quote Request", pageWidth / 2, y, { align: "center" });
+  y += 15;
+
+  doc.setDrawColor(200, 200, 200);
+  doc.line(leftMargin, y, pageWidth - 20, y);
+  y += 10;
+
+  const addField = (label: string, value: string) => {
+    if (y > 270) {
+      doc.addPage();
+      y = 20;
+    }
+    doc.setFontSize(10);
+    doc.setFont("helvetica", "bold");
+    doc.text(label, labelX, y);
+    doc.setFont("helvetica", "normal");
+    const lines = doc.splitTextToSize(value || "—", maxWidth);
+    doc.text(lines, valueX, y);
+    y += Math.max(lines.length * 5, 7);
+  };
+
+  const addSection = (title: string) => {
+    if (y > 260) {
+      doc.addPage();
+      y = 20;
+    }
+    y += 5;
+    doc.setDrawColor(200, 200, 200);
+    doc.line(leftMargin, y, pageWidth - 20, y);
+    y += 8;
+    doc.setFontSize(13);
+    doc.setFont("helvetica", "bold");
+    doc.text(title, leftMargin, y);
+    y += 8;
+  };
+
+  // Contact Info
+  addField("Name:", `${data.firstName} ${data.lastName}`);
+  addField("Email:", data.email);
+  if (data.ccEmails) addField("CC Emails:", data.ccEmails);
+
+  // Address
+  const addressParts = [data.address1, data.address2, [data.city, data.state, data.zip].filter(Boolean).join(", ")].filter(Boolean);
+  if (addressParts.length > 0) {
+    addField("Address:", addressParts.join("\n"));
+  }
+
+  addField("Organism:", data.organism);
+
+  // Sample Types
+  addSection("Sample Types");
+  data.sampleRows.forEach((row, i) => {
+    if (row.count || row.type) {
+      addField(`Sample ${i + 1}:`, `${row.count || "—"} x ${row.type || "—"}`);
+    }
+  });
+
+  // Other samples
+  if (data.otherRows.some((r) => r.count || r.specify)) {
+    addSection("Other Sample Types");
+    data.otherRows.forEach((row, i) => {
+      if (row.count || row.specify) {
+        addField(`Other ${i + 1}:`, `${row.count || "—"} x ${row.specify || "—"}`);
+      }
+    });
+  }
+
+  // QC
+  addSection("QC & Specifications");
+  const qcLabels: Record<string, string> = {
+    standard: "Standard QC - Qubit Concentration Measure for all sample, No Bio/Nanodrop",
+    complete: "Complete QC - Qubit Concentration and BioA/Nano Drop for all samples before proceeding with Library preparation",
+  };
+  addField("QC Option:", qcLabels[data.qc] || "—");
+
+  if (data.notes) addField("Notes:", data.notes);
+
+  const concLabels: Record<string, string> = {
+    above: "All samples are above Conc. \u2265 16 ng/\u00B5L (min 10 \u00B5L)",
+    below: "All samples are below Conc. \u2265 16 ng/\u00B5L (min 10 \u00B5L)",
+    some: "Some samples are below Conc. \u2265 16 ng/\u00B5L (min 10 \u00B5L)",
+  };
+  addField("Concentration:", concLabels[data.concentration] || "—");
+  if (data.concentration === "some" && data.concentrationSpec) {
+    addField("Specified #:", data.concentrationSpec);
+  }
+
+  // Footer
+  y += 10;
+  doc.setFontSize(8);
+  doc.setTextColor(150);
+  doc.text(`Generated on ${new Date().toLocaleDateString()}`, pageWidth / 2, y, { align: "center" });
+
+  return doc.output("datauristring");
+}
+
 export default function QuoteForm() {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [ccEmails, setCcEmails] = useState("");
+  const [address1, setAddress1] = useState("");
+  const [address2, setAddress2] = useState("");
+  const [city, setCity] = useState("");
+  const [usState, setUsState] = useState("");
+  const [zip, setZip] = useState("");
+  const [organism, setOrganism] = useState("");
   const [sampleRows, setSampleRows] = useState<SampleRow[]>([
     { count: "", type: "" },
   ]);
-  const [organism, setOrganism] = useState("");
-  const [state, setState] = useState("");
+  const [otherRows, setOtherRows] = useState<OtherRow[]>([]);
+  const [qc, setQc] = useState("");
+  const [notes, setNotes] = useState("");
   const [concentration, setConcentration] = useState("");
+  const [concentrationSpec, setConcentrationSpec] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const otherCount = sampleRows.filter(
     (r) => r.type === "Other (Please specify below)"
   ).length;
+
+  // Sync otherRows length with otherCount
+  if (otherRows.length !== otherCount) {
+    if (otherCount > otherRows.length) {
+      setOtherRows([...otherRows, ...Array.from({ length: otherCount - otherRows.length }, () => ({ count: "", specify: "" }))]);
+    } else {
+      setOtherRows(otherRows.slice(0, otherCount));
+    }
+  }
 
   const addSampleRow = () => {
     setSampleRows([...sampleRows, { count: "", type: "" }]);
@@ -107,8 +264,112 @@ export default function QuoteForm() {
     setSampleRows(updated);
   };
 
+  const updateOtherRow = (
+    index: number,
+    field: keyof OtherRow,
+    value: string
+  ) => {
+    const updated = [...otherRows];
+    updated[index] = { ...updated[index], [field]: value };
+    setOtherRows(updated);
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitting(true);
+
+    try {
+      const formData = {
+        firstName,
+        lastName,
+        email,
+        ccEmails,
+        address1,
+        address2,
+        city,
+        state: usState,
+        zip,
+        organism,
+        sampleRows,
+        otherRows,
+        qc,
+        notes,
+        concentration,
+        concentrationSpec,
+      };
+
+      const pdfDataUri = generatePDF(formData);
+      // Extract base64 data from data URI
+      const pdfBase64 = pdfDataUri.split(",")[1];
+
+      if (APPS_SCRIPT_URL) {
+        // Send to Google Apps Script
+        const response = await fetch(APPS_SCRIPT_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            ...formData,
+            pdfBase64,
+            subject: `RNAseq Quote Request - ${firstName} ${lastName}`,
+          }),
+        });
+
+        // no-cors mode returns opaque response, so we assume success
+        void response;
+        setSubmitted(true);
+      } else {
+        // Fallback: download PDF locally
+        const link = document.createElement("a");
+        link.href = pdfDataUri;
+        link.download = `RNAseq_Quote_Request_${firstName}_${lastName}.pdf`;
+        link.click();
+        setSubmitted(true);
+      }
+    } catch {
+      alert("There was an error submitting your request. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  if (submitted) {
+    return (
+      <div
+        style={{
+          textAlign: "center",
+          padding: "60px 24px 80px",
+        }}
+      >
+        <h3
+          style={{
+            fontFamily: font,
+            fontSize: "28px",
+            fontWeight: 700,
+            color: "#111111",
+            marginBottom: "16px",
+          }}
+        >
+          Thank you!
+        </h3>
+        <p
+          style={{
+            fontFamily: font,
+            fontSize: "16px",
+            color: "#555555",
+            lineHeight: 1.7,
+          }}
+        >
+          Your quote request has been submitted successfully.
+          <br />A copy will be sent to {email}.
+        </p>
+      </div>
+    );
+  }
+
   return (
     <form
+      onSubmit={handleSubmit}
       style={{
         maxWidth: "100%",
         margin: "0 auto",
@@ -122,11 +383,23 @@ export default function QuoteForm() {
         </label>
         <div style={{ display: "flex", gap: "16px" }}>
           <div style={{ flex: 1 }}>
-            <input type="text" style={inputStyle} required />
+            <input
+              type="text"
+              style={inputStyle}
+              required
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+            />
             <span style={subLabelStyle}>First</span>
           </div>
           <div style={{ flex: 1 }}>
-            <input type="text" style={inputStyle} required />
+            <input
+              type="text"
+              style={inputStyle}
+              required
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+            />
             <span style={subLabelStyle}>Last</span>
           </div>
         </div>
@@ -137,13 +410,24 @@ export default function QuoteForm() {
         <label style={labelStyle}>
           Email <span style={{ color: "#e53935" }}>*</span>
         </label>
-        <input type="email" style={inputStyle} required />
+        <input
+          type="email"
+          style={inputStyle}
+          required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
       </div>
 
       {/* Additional Emails */}
       <div style={{ marginBottom: "32px" }}>
         <label style={labelStyle}>Additional Emails to CC in quote email</label>
-        <input type="text" style={inputStyle} />
+        <input
+          type="text"
+          style={inputStyle}
+          value={ccEmails}
+          onChange={(e) => setCcEmails(e.target.value)}
+        />
       </div>
 
       {/* Address */}
@@ -151,23 +435,38 @@ export default function QuoteForm() {
         <label style={labelStyle}>Address</label>
         <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
           <div>
-            <input type="text" style={inputStyle} />
+            <input
+              type="text"
+              style={inputStyle}
+              value={address1}
+              onChange={(e) => setAddress1(e.target.value)}
+            />
             <span style={subLabelStyle}>Address Line 1</span>
           </div>
           <div>
-            <input type="text" style={inputStyle} />
+            <input
+              type="text"
+              style={inputStyle}
+              value={address2}
+              onChange={(e) => setAddress2(e.target.value)}
+            />
             <span style={subLabelStyle}>Address Line 2</span>
           </div>
           <div style={{ display: "flex", gap: "16px" }}>
             <div style={{ flex: 1 }}>
-              <input type="text" style={inputStyle} />
+              <input
+                type="text"
+                style={inputStyle}
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
+              />
               <span style={subLabelStyle}>City</span>
             </div>
             <div style={{ flex: 1 }}>
               <select
-                style={{ ...selectStyle, color: state === "" ? "#bbbbbb" : "#333333" }}
-                value={state}
-                onChange={(e) => setState(e.target.value)}
+                style={{ ...selectStyle, color: usState === "" ? "#bbbbbb" : "#333333" }}
+                value={usState}
+                onChange={(e) => setUsState(e.target.value)}
               >
                 <option value="" disabled>
                   -- Select state --
@@ -182,7 +481,12 @@ export default function QuoteForm() {
             </div>
           </div>
           <div style={{ maxWidth: "calc(50% - 8px)" }}>
-            <input type="text" style={inputStyle} />
+            <input
+              type="text"
+              style={inputStyle}
+              value={zip}
+              onChange={(e) => setZip(e.target.value)}
+            />
             <span style={subLabelStyle}>Zip Code</span>
           </div>
         </div>
@@ -315,7 +619,7 @@ export default function QuoteForm() {
             >
               If you selected &ldquo;Other,&rdquo; please specify below
             </h3>
-            {Array.from({ length: otherCount }).map((_, i) => (
+            {otherRows.map((row, i) => (
               <div key={i} style={{ display: "flex", gap: "16px", marginBottom: "16px" }}>
                 <div style={{ flex: 1 }}>
                   {i === 0 && (
@@ -329,7 +633,13 @@ export default function QuoteForm() {
                       # of samples
                     </label>
                   )}
-                  <input type="number" min="0" style={inputStyle} />
+                  <input
+                    type="number"
+                    min="0"
+                    style={inputStyle}
+                    value={row.count}
+                    onChange={(e) => updateOtherRow(i, "count", e.target.value)}
+                  />
                 </div>
                 <div style={{ flex: 1 }}>
                   {i === 0 && (
@@ -343,7 +653,12 @@ export default function QuoteForm() {
                       Other (Please specify)
                     </label>
                   )}
-                  <input type="text" style={inputStyle} />
+                  <input
+                    type="text"
+                    style={inputStyle}
+                    value={row.specify}
+                    onChange={(e) => updateOtherRow(i, "specify", e.target.value)}
+                  />
                 </div>
               </div>
             ))}
@@ -370,7 +685,14 @@ export default function QuoteForm() {
               cursor: "pointer",
             }}
           >
-            <input type="radio" name="qc" value="standard" style={{ accentColor: "#8258c8" }} />
+            <input
+              type="radio"
+              name="qc"
+              value="standard"
+              checked={qc === "standard"}
+              onChange={(e) => setQc(e.target.value)}
+              style={{ accentColor: "#8258c8" }}
+            />
             Standard QC - Qubit Concentration Measure for all sample, No Bio/ Nanodrop
           </label>
           <label
@@ -384,7 +706,14 @@ export default function QuoteForm() {
               cursor: "pointer",
             }}
           >
-            <input type="radio" name="qc" value="complete" style={{ accentColor: "#8258c8" }} />
+            <input
+              type="radio"
+              name="qc"
+              value="complete"
+              checked={qc === "complete"}
+              onChange={(e) => setQc(e.target.value)}
+              style={{ accentColor: "#8258c8" }}
+            />
             Complete QC - Qubit Concentration and BioA/ Nano Drop for all samples before proceeding
             with Library preparation.
           </label>
@@ -401,6 +730,8 @@ export default function QuoteForm() {
             borderRadius: "20px",
             resize: "vertical",
           }}
+          value={notes}
+          onChange={(e) => setNotes(e.target.value)}
         />
       </div>
 
@@ -479,7 +810,12 @@ export default function QuoteForm() {
         {concentration === "some" && (
           <div style={{ marginTop: "24px" }}>
             <label style={labelStyle}>Please specify the sample numbers</label>
-            <input type="text" style={inputStyle} />
+            <input
+              type="text"
+              style={inputStyle}
+              value={concentrationSpec}
+              onChange={(e) => setConcentrationSpec(e.target.value)}
+            />
           </div>
         )}
       </div>
@@ -489,14 +825,16 @@ export default function QuoteForm() {
         <button
           type="submit"
           className="book-a-call-btn"
+          disabled={submitting}
           style={{
             background: "linear-gradient(135deg, #8258c8, #2c84c8)",
             color: "#ffffff",
-            cursor: "pointer",
+            cursor: submitting ? "wait" : "pointer",
             border: "none",
+            opacity: submitting ? 0.7 : 1,
           }}
         >
-          Request Quote
+          {submitting ? "Submitting..." : "Request Quote"}
           <span className="book-a-call-arrow">
             <span className="book-a-call-arrow-inner">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
