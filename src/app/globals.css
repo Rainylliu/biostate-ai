@@ -312,7 +312,7 @@ img {
 
 /* Dark variant for side panel */
 .get-quote-btn.get-quote-btn-dark .get-quote-inner {
-  background: transparent;
+  background: #1F1F1F;
   color: #ffffff;
 }
 
