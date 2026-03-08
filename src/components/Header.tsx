@@ -235,31 +235,33 @@ export default function Header() {
         )}
       </header>
 
-      {/* Scrolling Marquee Banner - Below Nav */}
-      <div
-        className="w-full overflow-hidden"
-        style={{
-          background: "linear-gradient(90deg, #45d0bd, #44b6e9)",
-          padding: "10px 0",
-        }}
-      >
+      {/* Scrolling Marquee Banner - Only on RNA page */}
+      {pathname === "/rna" && (
         <div
-          className="flex whitespace-nowrap"
+          className="w-full overflow-hidden"
           style={{
-            animation: "marquee 20s linear infinite",
+            background: "linear-gradient(90deg, #45d0bd, #44b6e9)",
+            padding: "10px 0",
           }}
         >
-          {Array.from({ length: 6 }).map((_, i) => (
-            <span
-              key={i}
-              className="text-white text-sm font-semibold"
-              style={{ fontFamily: "'Manrope', Arial, Helvetica, sans-serif", paddingRight: "8vw" }}
-            >
-              {marqueeText}
-            </span>
-          ))}
+          <div
+            className="flex whitespace-nowrap"
+            style={{
+              animation: "marquee 20s linear infinite",
+            }}
+          >
+            {Array.from({ length: 6 }).map((_, i) => (
+              <span
+                key={i}
+                className="text-white text-sm font-semibold"
+                style={{ fontFamily: "'Manrope', Arial, Helvetica, sans-serif", paddingRight: "8vw" }}
+              >
+                {marqueeText}
+              </span>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
     </>
   );
