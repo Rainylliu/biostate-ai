@@ -530,8 +530,10 @@ export default function QuoteForm() {
         >
           By submitting, you agree to Biostate&apos;s{" "}
           <a
-            href="#"
-            style={{ color: "#45d0bd", textDecoration: "none" }}
+            href="/sales-tc"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#45d0bd", textDecoration: "none", fontWeight: 500 }}
           >
             Terms &amp; Conditions
           </a>
