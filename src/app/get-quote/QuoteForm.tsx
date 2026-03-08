@@ -110,9 +110,9 @@ export default function QuoteForm() {
   return (
     <form
       style={{
-        maxWidth: "720px",
+        maxWidth: "100%",
         margin: "0 auto",
-        padding: "0 24px 80px",
+        padding: "0 0 80px",
       }}
     >
       {/* Name */}
