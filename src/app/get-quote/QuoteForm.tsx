@@ -150,9 +150,32 @@ export default function QuoteForm() {
     setSubmitting(true);
 
     try {
-      // TODO: Integrate email sending (e.g., via Google Apps Script)
-      // For now, just show success
-      await new Promise((resolve) => setTimeout(resolve, 500));
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbzMaWMQPiumdGXyY2Ym-ub_uwCE2d8ieeSYYldf9xEY9uT2yYBohWurafq8-2DAsETi/exec",
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            firstName,
+            lastName,
+            email,
+            ccEmails,
+            address1,
+            address2,
+            city,
+            state: usState,
+            zip,
+            organism,
+            sampleRows,
+            otherRows,
+            qc,
+            notes,
+            concentration,
+            concentrationSpec,
+          }),
+        }
+      );
       setSubmitted(true);
     } catch {
       alert("There was an error submitting your request. Please try again.");
