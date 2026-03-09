@@ -66,7 +66,7 @@ export default function CountUp({
 
   const numText = decimals > 0 ? count.toFixed(decimals) : count.toLocaleString();
   const text = prefix + numText + suffix;
-  const viewBoxWidth = fontSize * text.length * 0.52;
+  const viewBoxWidth = fontSize * text.length * 0.68;
   const viewBoxHeight = fontSize * 1.2;
 
   return (
