@@ -1,26 +1,31 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function LoadingScreen() {
   const [visible, setVisible] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    // Start fade out after video plays (3s)
-    const fadeTimer = setTimeout(() => {
+    const startFadeOut = () => {
       setFadeOut(true);
-    }, 3000);
-
-    // Remove from DOM after fade completes
-    const removeTimer = setTimeout(() => {
-      setVisible(false);
-    }, 3500);
-
-    return () => {
-      clearTimeout(fadeTimer);
-      clearTimeout(removeTimer);
+      setTimeout(() => setVisible(false), 500);
     };
+
+    // Fade out when the page finishes loading
+    if (document.readyState === "complete") {
+      // Already loaded, give a minimum display time
+      setTimeout(startFadeOut, 500);
+    } else {
+      window.addEventListener("load", () => {
+        setTimeout(startFadeOut, 300);
+      });
+    }
+
+    // Safety fallback: fade out after 5s max
+    const fallback = setTimeout(startFadeOut, 5000);
+    return () => clearTimeout(fallback);
   }, []);
 
   if (!visible) return null;
@@ -41,6 +46,7 @@ export default function LoadingScreen() {
       }}
     >
       <video
+        ref={videoRef}
         autoPlay
         muted
         playsInline
