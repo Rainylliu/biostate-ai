@@ -89,7 +89,7 @@ export default function LandingHeader() {
             {/* Nav items */}
             <nav className="hidden md:flex items-center gap-1" style={{ marginRight: "40px" }}>
               <Link
-                href="/pricing"
+                href="#pricing"
                 className="transition-colors hover:bg-[#F0F2F4]"
                 style={{
                   fontFamily: "'Manrope', Arial, Helvetica, sans-serif",

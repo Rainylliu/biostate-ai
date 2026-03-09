@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import TechnologyTabs from "@/components/TechnologyTabs";
+import Section5Stats from "@/components/Section5Stats";
 
 export const metadata: Metadata = {
   title: "Total RNA Sequencing from $60/sample - biostate.AI",
@@ -407,8 +409,9 @@ export default function RNASequencingPage() {
 
       {/* Section 3 - Our Pricing */}
       <section
+        id="pricing"
         style={{
-          padding: "100px 0",
+          padding: "40px 0",
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
         }}
       >
@@ -423,7 +426,7 @@ export default function RNASequencingPage() {
           }}
         >
           {/* Left Column - 38% */}
-          <div style={{ flex: "0 0 38%", maxWidth: "38%" }}>
+          <div style={{ flex: "0 0 38%", maxWidth: "38%", paddingLeft: "40px" }}>
             {/* OUR SOLUTION bubble */}
             <span
               style={{
@@ -488,7 +491,8 @@ export default function RNASequencingPage() {
 
             {/* Download Price Card Button */}
             <a
-              href="#"
+              href="/pdf/20260223 RNA_Seq- Price Card_2026.pdf"
+              download
               className="book-a-call-btn book-a-call-btn-solid-teal group"
             >
               Download Price Card
@@ -643,6 +647,457 @@ export default function RNASequencingPage() {
                 </span>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 4 - BIRT + PERD v3 Technology */}
+      <section
+        style={{
+          padding: "0 0 80px",
+          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "1400px",
+            margin: "0 auto",
+            padding: "0 60px",
+          }}
+        >
+          {/* Dark card container */}
+          <div
+            style={{
+              backgroundColor: "#1a1a1a",
+              borderRadius: "24px",
+              padding: "64px 56px 72px",
+            }}
+          >
+            {/* Header row */}
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "flex-end",
+                marginBottom: "56px",
+              }}
+            >
+              {/* Left - Title */}
+              <div>
+                <p
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: 400,
+                    color: "rgba(255,255,255,0.5)",
+                    margin: "0 0 12px 0",
+                  }}
+                >
+                  [technology]
+                </p>
+                <h2
+                  style={{
+                    fontSize: "clamp(36px, 4vw, 52px)",
+                    fontWeight: 500,
+                    lineHeight: 1.15,
+                    color: "#fff",
+                    margin: 0,
+                  }}
+                >
+                  BIRT + PERD v3
+                  <br />
+                  Sequencing Technology
+                </h2>
+              </div>
+
+              {/* Right - Description + Button */}
+              <div style={{ textAlign: "left", maxWidth: "360px" }}>
+                <p
+                  style={{
+                    fontSize: "15px",
+                    fontWeight: 400,
+                    color: "#fff",
+                    lineHeight: 1.6,
+                    margin: "0 0 24px 0",
+                  }}
+                >
+                  More usable reads. Lower cost. Broader
+                  <br />
+                  transcriptome coverage.
+                </p>
+                <a
+                  href="https://drive.google.com/file/d/1WtAcCwAINXq3dIKEAyVHqMO_e7o8ch59/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="book-a-call-btn book-a-call-btn-dark group"
+                >
+                  Download Technical Overview
+                  <span className="book-a-call-arrow">
+                    <span className="book-a-call-arrow-inner">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                  </span>
+                </a>
+              </div>
+            </div>
+
+            {/* Tabs Component */}
+            <TechnologyTabs />
+          </div>
+        </div>
+      </section>
+
+      {/* Section 5 - High Quality */}
+      <section
+        style={{
+          padding: "20px 0 80px",
+          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "1400px",
+            margin: "0 auto",
+            padding: "0 60px",
+          }}
+        >
+          {/* Header row */}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "flex-end",
+              marginBottom: "56px",
+            }}
+          >
+            {/* Left - Tag + Title */}
+            <div>
+              <p
+                style={{
+                  fontSize: "14px",
+                  fontWeight: 400,
+                  color: "#999",
+                  margin: "0 0 12px 0",
+                }}
+              >
+                / data /
+              </p>
+              <h2
+                style={{
+                  fontSize: "clamp(36px, 4vw, 52px)",
+                  fontWeight: 500,
+                  lineHeight: 1.15,
+                  color: "#1f1f1f",
+                  margin: 0,
+                }}
+              >
+                High Quality.
+                <br />
+                Not Just Low Cost.
+              </h2>
+            </div>
+
+            {/* Right - Subtext + Button */}
+            <div style={{ display: "flex", alignItems: "center", gap: "32px", flexShrink: 0 }}>
+              <p
+                style={{
+                  fontSize: "15px",
+                  fontWeight: 400,
+                  color: "#666",
+                  lineHeight: 1.6,
+                  margin: 0,
+                  whiteSpace: "nowrap",
+                }}
+              >
+                Built for real-world samples — not just ideal RNA.
+              </p>
+              <a
+                href="/pdf/20260223 RNA_Seq- Price Card_2026.pdf"
+                download
+                className="book-a-call-btn group"
+                style={{ whiteSpace: "nowrap", flexShrink: 0 }}
+              >
+                Download Price Card
+                <span className="book-a-call-arrow">
+                  <span className="book-a-call-arrow-inner">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          {/* Stats Row */}
+          <Section5Stats />
+
+          {/* Bottom Card - Validated sample types */}
+          <div
+            style={{
+              backgroundColor: "rgba(166, 239, 252, 0.2)",
+              borderRadius: "20px",
+              padding: "36px 48px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              position: "relative",
+              overflow: "hidden",
+            }}
+          >
+            <div>
+              <p
+                style={{
+                  fontSize: "16px",
+                  fontWeight: 500,
+                  color: "#111111",
+                  margin: "0 0 20px 0",
+                }}
+              >
+                Validated across challenging sample types:
+              </p>
+              <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+                {["FFPE", "Whole blood", "PBMC", "Plasma / evRNA", "Degraded RNA"].map(
+                  (type, i) => (
+                    <span
+                      key={i}
+                      style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "8px",
+                        padding: "8px 20px",
+                        borderRadius: "12px",
+                        border: "1px solid transparent",
+                        background: "linear-gradient(#fff, #fff) padding-box, linear-gradient(90deg, #45D0BD, #44B6E9) border-box",
+                        fontSize: "14px",
+                        fontWeight: 500,
+                        color: "#333",
+                      }}
+                    >
+                      <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                        <path d="M3 8.5L6.5 12L13 5" stroke="#45D0BD" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      {type}
+                    </span>
+                  )
+                )}
+              </div>
+            </div>
+
+            {/* Microscope icon */}
+            <img
+              src="/images/card_de.svg"
+              alt=""
+              style={{
+                position: "absolute",
+                right: "-20px",
+                bottom: "-50px",
+                width: "240px",
+                height: "auto",
+                opacity: 0.4,
+                pointerEvents: "none",
+              }}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Section 6 - From FASTQ to Biological Insight */}
+      <section
+        style={{
+          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+        }}
+      >
+        {/* Slanted scrolling banner */}
+        <div
+          style={{
+            transform: "rotate(-2.07deg)",
+            backgroundImage: "linear-gradient(92deg, #45D0BD 0%, #44B6E9 100%)",
+            margin: "0 -5px",
+            padding: "50px 0",
+            position: "relative",
+            zIndex: 2,
+          }}
+        >
+          <div className="marquee-banner">
+            <div className="marquee-banner-track">
+              {[...Array(12)].map((_, i) => (
+                <span key={i} className="marquee-banner-text">
+                  /From sequencing to biological insight — faster than ever.&nbsp;&nbsp;
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Main content */}
+        <div
+          style={{
+            position: "relative",
+            overflow: "hidden",
+            padding: "80px 0 100px",
+          }}
+        >
+          {/* omics.svg as full background */}
+          <img
+            src="/images/omics.svg"
+            alt=""
+            style={{
+              position: "absolute",
+              left: "0",
+              bottom: "0",
+              width: "50%",
+              maxWidth: "700px",
+              height: "auto",
+              opacity: 0.15,
+              pointerEvents: "none",
+            }}
+          />
+
+          <div
+            style={{
+              maxWidth: "1400px",
+              margin: "0 auto",
+              padding: "0 60px",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              gap: "60px",
+              position: "relative",
+              zIndex: 1,
+            }}
+          >
+            {/* Left side */}
+            <div style={{ flex: 1 }}>
+              <p
+                style={{
+                  fontSize: "14px",
+                  fontWeight: 400,
+                  color: "#999",
+                  margin: "0 0 12px 0",
+                }}
+              >
+                [ analysis ]
+              </p>
+              <h2
+                style={{
+                  fontSize: "clamp(36px, 4vw, 52px)",
+                  fontWeight: 500,
+                  lineHeight: 1.15,
+                  color: "#1f1f1f",
+                  margin: 0,
+                }}
+              >
+                From FASTQ to
+                <br />
+                Biological Insight
+              </h2>
+            </div>
+
+          {/* Right side - vertical timeline */}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+              position: "relative",
+              paddingLeft: "36px",
+            }}
+          >
+            {/* Vertical line */}
+            <div
+              style={{
+                position: "absolute",
+                left: "59px",
+                top: "0",
+                bottom: "0",
+                width: "2px",
+                background: "linear-gradient(180deg, #C4B5FD 0%, #A78BFA 50%, #C4B5FD 100%)",
+              }}
+            />
+
+            {[
+              { icon: "/images/seq1.svg", label: "Raw FASTQ" },
+              { icon: "/images/seq2.svg", label: "Gene count matrices" },
+              { icon: "/images/seq3.svg", label: "Omicsweb Co-Pilot for Bioinformatics" },
+            ].map((item, i) => (
+              <div
+                key={i}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "24px",
+                  position: "relative",
+                  zIndex: 1,
+                  marginBottom: i < 2 ? "60px" : "0",
+                }}
+              >
+                {/* Dot on line */}
+                {i === 0 && (
+                  <div
+                    style={{
+                      position: "absolute",
+                      left: "19px",
+                      top: "-24px",
+                      width: "10px",
+                      height: "10px",
+                      borderRadius: "50%",
+                      background: "#A78BFA",
+                    }}
+                  />
+                )}
+                {/* Icon box */}
+                <div
+                  style={{
+                    width: "48px",
+                    height: "48px",
+                    borderRadius: "12px",
+                    background: "linear-gradient(135deg, #C4B5FD, #A78BFA)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
+                  }}
+                >
+                  <img
+                    src={item.icon}
+                    alt=""
+                    style={{ width: "24px", height: "24px" }}
+                  />
+                </div>
+                {/* Label */}
+                <span
+                  style={{
+                    fontSize: "16px",
+                    fontWeight: 500,
+                    color: "#1f1f1f",
+                  }}
+                >
+                  {item.label}
+                </span>
+              </div>
+            ))}
+
+            {/* Bottom dot */}
+            <div
+              style={{
+                position: "absolute",
+                left: "55px",
+                bottom: "-24px",
+                width: "10px",
+                height: "10px",
+                borderRadius: "50%",
+                background: "#C4B5FD",
+              }}
+            />
+          </div>
           </div>
         </div>
       </section>
