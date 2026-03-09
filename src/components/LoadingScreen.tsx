@@ -45,7 +45,7 @@ export default function LoadingScreen() {
       <img
         src="/images/timer.svg"
         alt="Loading"
-        style={{ width: "30%", height: "auto" }}
+        style={{ width: "20%", height: "auto" }}
       />
     </div>
   );
