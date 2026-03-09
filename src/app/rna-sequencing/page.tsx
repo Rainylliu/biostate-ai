@@ -1178,8 +1178,10 @@ export default function RNASequencingPage() {
                   desc: "AI-powered conversational bioinformatics analysis with no coding needed.",
                 },
               ].map((item, i) => (
-                <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: "16px" }}>
-                  <img src={item.icon} alt="" style={{ width: item.iconSize || "48px", height: item.iconSize || "48px", flexShrink: 0 }} />
+                <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: "20px" }}>
+                  <div style={{ width: "80px", flexShrink: 0, display: "flex", alignItems: "flex-start" }}>
+                    <img src={item.icon} alt="" style={{ width: i === 1 ? "80px" : "64px", height: i === 1 ? "80px" : "64px" }} />
+                  </div>
                   <div>
                     <p
                       style={{
