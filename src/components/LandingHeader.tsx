@@ -192,34 +192,27 @@ export default function LandingHeader() {
             </nav>
             <button
               onClick={() => setCalendlyOpen(true)}
-              className="hidden sm:inline-flex items-center justify-center rounded-full transition-colors hover:bg-[#f0f2f4] cursor-pointer"
+              className="contact-expert-btn hidden sm:inline-flex rounded-full cursor-pointer"
               style={{
-                height: "44px",
-                padding: "0 24px",
-                border: "1px solid #1f1f1f",
-                background: "transparent",
                 fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                 fontSize: "14px",
                 fontWeight: 600,
                 color: "#1f1f1f",
               }}
             >
-              Contact expert
+              <span className="contact-expert-inner">Contact expert</span>
             </button>
             <Link
               href="/get-quote"
-              className="inline-flex items-center justify-center rounded-full transition-opacity hover:opacity-90"
+              className="get-quote-btn get-quote-btn-rna hidden sm:inline-flex rounded-full"
               style={{
-                height: "44px",
-                padding: "0 24px",
-                background: "linear-gradient(135deg, #45d0bd, #44b6e9)",
                 fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                 fontSize: "14px",
                 fontWeight: 600,
-                color: "#ffffff",
+                color: "#1f1f1f",
               }}
             >
-              Request a quote
+              <span className="get-quote-inner">Request a quote</span>
             </Link>
           </div>
         </div>

@@ -353,6 +353,28 @@ img {
   padding: 9px 46px;
 }
 
+/* ── Contact Expert Button (Landing Header) ── */
+.contact-expert-btn {
+  border: none !important;
+  background: linear-gradient(90deg, #45d0bd, #44b6e9);
+  padding: 2px !important;
+}
+
+.contact-expert-btn .contact-expert-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 9999px;
+  padding: 10px 24px;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.contact-expert-btn:hover .contact-expert-inner {
+  background: linear-gradient(90deg, #45d0bd, #44b6e9);
+  color: #ffffff;
+}
+
 /* ── Book a Call Button ── */
 .book-a-call-btn {
   position: relative;
