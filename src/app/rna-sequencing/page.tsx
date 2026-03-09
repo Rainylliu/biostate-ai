@@ -676,7 +676,7 @@ export default function RNASequencingPage() {
               style={{
                 display: "flex",
                 justifyContent: "space-between",
-                alignItems: "flex-start",
+                alignItems: "flex-end",
                 marginBottom: "56px",
               }}
             >
@@ -708,12 +708,12 @@ export default function RNASequencingPage() {
               </div>
 
               {/* Right - Description + Button */}
-              <div style={{ textAlign: "right", maxWidth: "360px" }}>
+              <div style={{ textAlign: "left", maxWidth: "360px" }}>
                 <p
                   style={{
                     fontSize: "15px",
                     fontWeight: 400,
-                    color: "rgba(255,255,255,0.6)",
+                    color: "#fff",
                     lineHeight: 1.6,
                     margin: "0 0 24px 0",
                   }}
@@ -726,25 +726,19 @@ export default function RNASequencingPage() {
                   href="https://drive.google.com/file/d/1WtAcCwAINXq3dIKEAyVHqMO_e7o8ch59/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "12px",
-                    padding: "14px 28px",
-                    borderRadius: "999px",
-                    border: "1px solid rgba(255,255,255,0.3)",
-                    backgroundColor: "transparent",
-                    color: "#fff",
-                    fontSize: "15px",
-                    fontWeight: 500,
-                    textDecoration: "none",
-                    cursor: "pointer",
-                  }}
+                  className="book-a-call-btn book-a-call-btn-dark group"
                 >
                   Download Technical Overview
-                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                    <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
+                  <span className="book-a-call-arrow">
+                    <span className="book-a-call-arrow-inner">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                  </span>
                 </a>
               </div>
             </div>
