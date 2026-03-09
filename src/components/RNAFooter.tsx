@@ -347,8 +347,8 @@ export default function RNAFooter() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "1fr 1fr auto",
-              gap: "0 60px",
+              gridTemplateColumns: "1fr auto auto",
+              gap: "0 80px",
               marginBottom: "50px",
             }}
           >
