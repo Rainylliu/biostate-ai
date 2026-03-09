@@ -84,31 +84,13 @@ export default function LandingHeader() {
             </Link>
           </div>
 
-          {/* Center: Nav items */}
-          <nav className="hidden md:flex items-center gap-1">
-            <Link
-              href="/pricing"
-              className="transition-colors hover:bg-[#F0F2F4]"
-              style={{
-                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                fontSize: "14px",
-                fontWeight: 700,
-                letterSpacing: "0em",
-                textTransform: "uppercase" as const,
-                borderRadius: "10px",
-                padding: "10px 20px",
-                color: "#1f1f1f",
-              }}
-            >
-              PRICING
-            </Link>
-            <div
-              className="relative"
-              onMouseEnter={() => setResourcesOpen(true)}
-              onMouseLeave={() => setResourcesOpen(false)}
-            >
-              <button
-                className="transition-colors hover:bg-[#F0F2F4] flex items-center gap-1 cursor-pointer"
+          {/* Right: Nav + CTA buttons */}
+          <div className="flex items-center gap-3">
+            {/* Nav items */}
+            <nav className="hidden md:flex items-center gap-1" style={{ marginRight: "48px" }}>
+              <Link
+                href="/pricing"
+                className="transition-colors hover:bg-[#F0F2F4]"
                 style={{
                   fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                   fontSize: "14px",
@@ -118,79 +100,96 @@ export default function LandingHeader() {
                   borderRadius: "10px",
                   padding: "10px 20px",
                   color: "#1f1f1f",
-                  background: "transparent",
-                  border: "none",
                 }}
               >
-                RESOURCES
-                <svg
-                  width="10"
-                  height="6"
-                  viewBox="0 0 10 6"
-                  fill="none"
+                PRICING
+              </Link>
+              <div
+                className="relative"
+                onMouseEnter={() => setResourcesOpen(true)}
+                onMouseLeave={() => setResourcesOpen(false)}
+              >
+                <button
+                  className="transition-colors hover:bg-[#F0F2F4] flex items-center gap-1 cursor-pointer"
                   style={{
-                    marginLeft: "4px",
-                    transition: "transform 0.2s",
-                    transform: resourcesOpen ? "rotate(180deg)" : "rotate(0deg)",
+                    fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                    fontSize: "14px",
+                    fontWeight: 700,
+                    letterSpacing: "0em",
+                    textTransform: "uppercase" as const,
+                    borderRadius: "10px",
+                    padding: "10px 20px",
+                    color: "#1f1f1f",
+                    background: "transparent",
+                    border: "none",
                   }}
                 >
-                  <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-              {/* Dropdown */}
-              <div
-                style={{
-                  position: "absolute",
-                  top: "100%",
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                  paddingTop: "8px",
-                  opacity: resourcesOpen ? 1 : 0,
-                  pointerEvents: resourcesOpen ? "auto" : "none",
-                  transition: "opacity 0.25s ease",
-                }}
-              >
+                  RESOURCES
+                  <svg
+                    width="10"
+                    height="6"
+                    viewBox="0 0 10 6"
+                    fill="none"
+                    style={{
+                      marginLeft: "4px",
+                      transition: "transform 0.2s",
+                      transform: resourcesOpen ? "rotate(180deg)" : "rotate(0deg)",
+                    }}
+                  >
+                    <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
+                {/* Dropdown */}
                 <div
                   style={{
-                    backgroundColor: "#1f1f1f",
-                    borderRadius: "16px",
-                    padding: "16px 0",
-                    minWidth: "200px",
+                    position: "absolute",
+                    top: "100%",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    paddingTop: "8px",
+                    opacity: resourcesOpen ? 1 : 0,
+                    pointerEvents: resourcesOpen ? "auto" : "none",
+                    transition: "opacity 0.25s ease",
                   }}
                 >
-                  <Link
-                    href="/white-paper"
-                    className="block transition-colors hover:!text-[#45D0BD]"
+                  <div
                     style={{
-                      fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                      fontSize: "16px",
-                      fontWeight: 400,
-                      color: "#ffffff",
-                      padding: "12px 28px",
+                      backgroundColor: "#1f1f1f",
+                      borderRadius: "16px",
+                      padding: "16px 0",
+                      minWidth: "200px",
                     }}
                   >
-                    White paper
-                  </Link>
-                  <a
-                    href="https://www.biostate.ai/blog-grid/"
-                    className="block transition-colors hover:!text-[#45D0BD]"
-                    style={{
-                      fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                      fontSize: "16px",
-                      fontWeight: 400,
-                      color: "#ffffff",
-                      padding: "12px 28px",
-                    }}
-                  >
-                    Blogs
-                  </a>
+                    <Link
+                      href="/white-paper"
+                      className="block transition-colors hover:!text-[#45D0BD]"
+                      style={{
+                        fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                        fontSize: "16px",
+                        fontWeight: 400,
+                        color: "#ffffff",
+                        padding: "12px 28px",
+                      }}
+                    >
+                      White paper
+                    </Link>
+                    <a
+                      href="https://www.biostate.ai/blog-grid/"
+                      className="block transition-colors hover:!text-[#45D0BD]"
+                      style={{
+                        fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                        fontSize: "16px",
+                        fontWeight: 400,
+                        color: "#ffffff",
+                        padding: "12px 28px",
+                      }}
+                    >
+                      Blogs
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </nav>
-
-          {/* Right: CTA buttons */}
-          <div className="flex items-center gap-3">
+            </nav>
             <button
               onClick={() => setCalendlyOpen(true)}
               className="hidden sm:inline-flex items-center justify-center rounded-full transition-colors hover:bg-[#f0f2f4] cursor-pointer"
