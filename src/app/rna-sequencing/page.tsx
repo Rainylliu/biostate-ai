@@ -424,7 +424,7 @@ export default function RNASequencingPage() {
           }}
         >
           {/* Left Column - 38% */}
-          <div style={{ flex: "0 0 38%", maxWidth: "38%" }}>
+          <div style={{ flex: "0 0 38%", maxWidth: "38%", paddingLeft: "40px" }}>
             {/* OUR SOLUTION bubble */}
             <span
               style={{
