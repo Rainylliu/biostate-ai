@@ -409,7 +409,7 @@ export default function RNASequencingPage() {
       {/* Section 3 - Our Pricing */}
       <section
         style={{
-          padding: "100px 0",
+          padding: "40px 0",
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
         }}
       >
@@ -652,7 +652,7 @@ export default function RNASequencingPage() {
       {/* Section 4 - BIRT + PERD v3 Technology */}
       <section
         style={{
-          padding: "30px 0 100px",
+          padding: "0 0 80px",
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
         }}
       >
