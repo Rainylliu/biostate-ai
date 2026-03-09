@@ -1138,15 +1138,11 @@ export default function RNASequencingPage() {
             maxWidth: "1400px",
             margin: "0 auto",
             padding: "80px 60px 100px",
-            display: "flex",
-            alignItems: "center",
-            gap: "60px",
             position: "relative",
             zIndex: 1,
           }}
         >
-          {/* Content */}
-          <div style={{ flex: 1 }}>
+          <div style={{ marginLeft: "auto", maxWidth: "580px" }}>
             <h2
               style={{
                 fontSize: "clamp(32px, 3.5vw, 48px)",
@@ -1183,20 +1179,7 @@ export default function RNASequencingPage() {
                 },
               ].map((item, i) => (
                 <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: "16px" }}>
-                  <div
-                    style={{
-                      width: "48px",
-                      height: "48px",
-                      borderRadius: "50%",
-                      background: "linear-gradient(135deg, #E8E0FF, #F3EEFF)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      flexShrink: 0,
-                    }}
-                  >
-                    <img src={item.icon} alt="" style={{ width: "24px", height: "24px" }} />
-                  </div>
+                  <img src={item.icon} alt="" style={{ width: "48px", height: "48px", flexShrink: 0 }} />
                   <div>
                     <p
                       style={{
