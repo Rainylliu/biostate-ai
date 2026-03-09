@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const US_STATES = [
   "Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut",
@@ -97,6 +97,7 @@ export default function QuoteForm() {
   const [usState, setUsState] = useState("");
   const [zip, setZip] = useState("");
   const [organism, setOrganism] = useState("");
+  const [organismSpec, setOrganismSpec] = useState("");
   const [sampleRows, setSampleRows] = useState<SampleRow[]>([
     { count: "", type: "" },
   ]);
@@ -107,6 +108,15 @@ export default function QuoteForm() {
   const [concentrationSpec, setConcentrationSpec] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    if (submitted) {
+      const top = document.getElementById("quote-top");
+      if (top) {
+        top.scrollIntoView({ behavior: "instant", block: "start" });
+      }
+    }
+  }, [submitted]);
 
   const otherCount = sampleRows.filter(
     (r) => r.type === "Other (Please specify below)"
@@ -167,6 +177,7 @@ export default function QuoteForm() {
             state: usState,
             zip,
             organism,
+            organismSpec,
             sampleRows,
             otherRows,
             qc,
@@ -190,6 +201,7 @@ export default function QuoteForm() {
         style={{
           textAlign: "center",
           padding: "60px 24px 80px",
+          minHeight: "60vh",
         }}
       >
         <h3
@@ -362,6 +374,27 @@ export default function QuoteForm() {
             </option>
           ))}
         </select>
+
+        {/* Conditional: show when "Other (Please specify)" is selected */}
+        {organism === "Other (Please specify)" && (
+          <div style={{ marginTop: "16px", maxWidth: "calc(60%)" }}>
+            <label
+              style={{
+                ...labelStyle,
+                fontSize: "14px",
+                fontWeight: 600,
+              }}
+            >
+              Please specify the organism
+            </label>
+            <input
+              type="text"
+              style={inputStyle}
+              value={organismSpec}
+              onChange={(e) => setOrganismSpec(e.target.value)}
+            />
+          </div>
+        )}
       </div>
 
       <hr style={sectionDividerStyle} />
