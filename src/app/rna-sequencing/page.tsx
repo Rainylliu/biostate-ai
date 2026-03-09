@@ -1079,7 +1079,7 @@ export default function RNASequencingPage() {
                 style={{
                   width: "3px",
                   height: "40px",
-                  background: "rgba(120,160,230,0.6)",
+                  background: "rgba(80,120,200,0.7)",
                 }}
               />
 
@@ -1089,7 +1089,7 @@ export default function RNASequencingPage() {
                   width: "24px",
                   height: "24px",
                   borderRadius: "50%",
-                  background: "rgba(68,182,233,0.6)",
+                  background: "rgba(50,130,210,0.7)",
                 }}
               />
             </div>
