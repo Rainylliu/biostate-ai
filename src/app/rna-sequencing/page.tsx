@@ -1164,7 +1164,6 @@ export default function RNASequencingPage() {
                 },
                 {
                   icon: "/images/icon2.svg",
-                  iconSize: "64px",
                   title: "PCA, heatmaps, volcano plots",
                   desc: "Visualize complex data patterns through interactive PCA, heatmaps, and volcano plots.",
                 },
