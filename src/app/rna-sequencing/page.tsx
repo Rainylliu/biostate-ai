@@ -1018,18 +1018,31 @@ export default function RNASequencingPage() {
               flexDirection: "column",
               alignItems: "flex-start",
               position: "relative",
-              paddingLeft: "36px",
+              paddingLeft: "0",
             }}
           >
             {/* Vertical line */}
             <div
               style={{
                 position: "absolute",
-                left: "59px",
+                left: "28px",
                 top: "0",
                 bottom: "0",
                 width: "2px",
-                background: "linear-gradient(180deg, #C4B5FD 0%, #A78BFA 50%, #C4B5FD 100%)",
+                background: "linear-gradient(180deg, rgba(167,139,250,0.6) 0%, rgba(130,88,200,0.6) 50%, rgba(68,182,233,0.6) 100%)",
+              }}
+            />
+
+            {/* Top dot */}
+            <div
+              style={{
+                position: "absolute",
+                left: "22px",
+                top: "-8px",
+                width: "14px",
+                height: "14px",
+                borderRadius: "50%",
+                background: "rgba(130,88,200,0.6)",
               }}
             />
 
@@ -1043,33 +1056,19 @@ export default function RNASequencingPage() {
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  gap: "24px",
+                  gap: "28px",
                   position: "relative",
                   zIndex: 1,
-                  marginBottom: i < 2 ? "60px" : "0",
+                  marginBottom: i < 2 ? "48px" : "0",
                 }}
               >
-                {/* Dot on line */}
-                {i === 0 && (
-                  <div
-                    style={{
-                      position: "absolute",
-                      left: "19px",
-                      top: "-24px",
-                      width: "10px",
-                      height: "10px",
-                      borderRadius: "50%",
-                      background: "#A78BFA",
-                    }}
-                  />
-                )}
                 {/* Icon box */}
                 <div
                   style={{
-                    width: "48px",
-                    height: "48px",
-                    borderRadius: "12px",
-                    background: "linear-gradient(135deg, #C4B5FD, #A78BFA)",
+                    width: "56px",
+                    height: "56px",
+                    borderRadius: "14px",
+                    background: "linear-gradient(135deg, rgba(196,181,253,0.6), rgba(167,139,250,0.6))",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -1079,14 +1078,14 @@ export default function RNASequencingPage() {
                   <img
                     src={item.icon}
                     alt=""
-                    style={{ width: "24px", height: "24px" }}
+                    style={{ width: "26px", height: "26px" }}
                   />
                 </div>
                 {/* Label */}
                 <span
                   style={{
                     fontSize: "16px",
-                    fontWeight: 500,
+                    fontWeight: 400,
                     color: "#1f1f1f",
                   }}
                 >
@@ -1099,12 +1098,12 @@ export default function RNASequencingPage() {
             <div
               style={{
                 position: "absolute",
-                left: "55px",
-                bottom: "-24px",
-                width: "10px",
-                height: "10px",
+                left: "20px",
+                bottom: "-20px",
+                width: "18px",
+                height: "18px",
                 borderRadius: "50%",
-                background: "#C4B5FD",
+                background: "rgba(68,182,233,0.6)",
               }}
             />
           </div>
