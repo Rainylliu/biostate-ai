@@ -28,7 +28,7 @@ export default function WhitePaperPage() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/terms.svg"
+            src="/images/headerbg.png"
             alt=""
             style={{
               position: "absolute",
@@ -43,7 +43,7 @@ export default function WhitePaperPage() {
               position: "absolute",
               inset: 0,
               background:
-                "linear-gradient(135deg, rgba(130, 88, 200, 0.6), rgba(44, 132, 200, 0.6))",
+                "linear-gradient(135deg, rgba(140, 100, 220, 0.6), rgba(100, 170, 230, 0.6))",
             }}
           />
         </div>
