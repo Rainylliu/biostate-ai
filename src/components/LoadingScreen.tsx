@@ -1,11 +1,10 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 export default function LoadingScreen() {
   const [visible, setVisible] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const startFadeOut = () => {
@@ -13,9 +12,7 @@ export default function LoadingScreen() {
       setTimeout(() => setVisible(false), 500);
     };
 
-    // Fade out when the page finishes loading
     if (document.readyState === "complete") {
-      // Already loaded, give a minimum display time
       setTimeout(startFadeOut, 500);
     } else {
       window.addEventListener("load", () => {
@@ -23,7 +20,6 @@ export default function LoadingScreen() {
       });
     }
 
-    // Safety fallback: fade out after 5s max
     const fallback = setTimeout(startFadeOut, 5000);
     return () => clearTimeout(fallback);
   }, []);
@@ -45,15 +41,12 @@ export default function LoadingScreen() {
         pointerEvents: fadeOut ? "none" : "auto",
       }}
     >
-      <video
-        ref={videoRef}
-        autoPlay
-        muted
-        playsInline
-        style={{ width: "200px", height: "auto" }}
-      >
-        <source src="/images/timer3s.mp4" type="video/mp4" />
-      </video>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/images/timer.svg"
+        alt="Loading"
+        style={{ width: "30%", height: "auto" }}
+      />
     </div>
   );
 }
