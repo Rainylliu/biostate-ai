@@ -801,7 +801,7 @@ export default function RNASequencingPage() {
             </div>
 
             {/* Right - Subtext + Button */}
-            <div style={{ textAlign: "left", maxWidth: "400px", display: "flex", alignItems: "center", gap: "32px" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "32px", flexShrink: 0 }}>
               <p
                 style={{
                   fontSize: "15px",
@@ -818,7 +818,7 @@ export default function RNASequencingPage() {
                 href="/pdf/20260223 RNA_Seq- Price Card_2026.pdf"
                 download
                 className="book-a-call-btn group"
-                style={{ whiteSpace: "nowrap" }}
+                style={{ whiteSpace: "nowrap", flexShrink: 0 }}
               >
                 Download Price Card
                 <span className="book-a-call-arrow">
