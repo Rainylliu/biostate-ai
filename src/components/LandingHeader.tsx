@@ -87,7 +87,7 @@ export default function LandingHeader() {
           {/* Right: Nav + CTA buttons */}
           <div className="flex items-center gap-3">
             {/* Nav items */}
-            <nav className="hidden md:flex items-center gap-1" style={{ marginRight: "48px" }}>
+            <nav className="hidden md:flex items-center gap-1" style={{ marginRight: "40px" }}>
               <Link
                 href="/pricing"
                 className="transition-colors hover:bg-[#F0F2F4]"
