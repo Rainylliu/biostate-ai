@@ -132,7 +132,7 @@ export default function TechnologyTabs() {
                     height: "40px",
                     borderRadius: "50%",
                     background: "#3580C7",
-                    filter: "blur(100px)",
+                    filter: "blur(40px)",
                     pointerEvents: "none",
                   }}
                 />
@@ -162,16 +162,21 @@ export default function TechnologyTabs() {
             backgroundColor: "#fff",
             borderRadius: "14px",
             overflow: "hidden",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: "20px",
+            position: "relative",
           }}
         >
           <img
             src={tab.chart}
             alt={tab.title}
-            style={{ width: "100%", height: "auto", maxHeight: "100%", objectFit: "contain" }}
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              width: "calc(100% - 40px)",
+              height: "auto",
+              objectFit: "contain",
+            }}
           />
         </div>
 
