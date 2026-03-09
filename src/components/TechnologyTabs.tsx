@@ -7,7 +7,7 @@ const tabs = [
     id: 0,
     label: "Reproducibility",
     icon: "/images/chart1inactive.svg",
-    iconActive: "/images/chart1.svg",
+    iconActive: "/images/chart1active.svg",
     chart: "/images/chart1.png",
     title: "Reproducibility",
     description:
@@ -27,7 +27,7 @@ const tabs = [
   {
     id: 1,
     label: "Efficient rRNA Depletion",
-    icon: "/images/chart3.svg",
+    icon: "/images/chart3inactive.svg",
     iconActive: "/images/chart2active.svg",
     chart: "/images/chart2.png",
     title: "Efficient rRNA Depletion",
@@ -48,7 +48,7 @@ const tabs = [
   {
     id: 2,
     label: "Scalable Multiplexing Without Bias",
-    icon: "/images/chart2.svg",
+    icon: "/images/chart2inactive.svg",
     iconActive: "/images/chart3active.svg",
     chart: "/images/chart3.png",
     title: "Scalable Multiplexing Without Bias",
