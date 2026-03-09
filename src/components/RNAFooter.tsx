@@ -205,7 +205,7 @@ export default function RNAFooter() {
               </span>
             </a>
             <a
-              href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0Gq3OABJbBRGGfHXFMlbfbMhJFfUVm-2XNDRnr-9VFfheh0sCjYUtRfWSjzfHMNUKQFHOoL_78"
+              href="https://calendly.com/rachan-raj-biostate/biostate-ai-introduction-services"
               target="_blank"
               rel="noopener noreferrer"
               className="book-a-call-btn book-a-call-btn-dark group"
