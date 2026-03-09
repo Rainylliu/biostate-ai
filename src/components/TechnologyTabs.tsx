@@ -114,7 +114,7 @@ export default function TechnologyTabs() {
                 height={40}
                 style={{
                   filter: isActive
-                    ? "brightness(0) saturate(100%) invert(30%) sepia(90%) saturate(700%) hue-rotate(195deg) brightness(95%) contrast(95%)"
+                    ? "brightness(0) saturate(100%) invert(42%) sepia(52%) saturate(1200%) hue-rotate(189deg) brightness(88%) contrast(89%)"
                     : "brightness(0) invert(0.55)",
                   transition: "filter 0.3s ease",
                   flexShrink: 0,
