@@ -21,11 +21,11 @@ export default function Section5Stats() {
     >
       {stats.map((stat, i) => (
         <div key={i}>
-          <div style={{ width: "300px", height: "100px", marginBottom: "16px" }}>
+          <div style={{ height: "100px", marginBottom: "16px", overflow: "visible" }}>
             {stat.static ? (
               <svg
-                viewBox="0 0 300 100"
-                style={{ width: "300px", height: "100px", display: "block" }}
+                viewBox="0 0 240 90"
+                style={{ width: "240px", height: "90px", display: "block" }}
               >
                 <defs>
                   <linearGradient id="staticGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -35,7 +35,7 @@ export default function Section5Stats() {
                 </defs>
                 <text
                   x="0"
-                  y="76"
+                  y="72"
                   fontFamily="'Sora', Arial, Helvetica, sans-serif"
                   fontSize="72"
                   fontWeight="600"
@@ -72,7 +72,7 @@ export default function Section5Stats() {
             <p
               style={{
                 fontSize: "14px",
-                fontWeight: 400,
+                fontWeight: 600,
                 color: "#888",
                 margin: 0,
               }}
