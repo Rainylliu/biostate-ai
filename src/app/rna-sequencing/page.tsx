@@ -545,7 +545,7 @@ export default function RNASequencingPage() {
                   paddingLeft: "20px",
                   margin: 0,
                   fontSize: "13px",
-                  fontWeight: 600,
+                  fontWeight: 400,
                   color: "#1f1f1f",
                   lineHeight: 2.4,
                   whiteSpace: "nowrap",
@@ -613,9 +613,10 @@ export default function RNASequencingPage() {
                   paddingLeft: "20px",
                   margin: 0,
                   fontSize: "13px",
-                  fontWeight: 600,
+                  fontWeight: 400,
                   color: "#1f1f1f",
-                  lineHeight: 2.0,
+                  lineHeight: 1.8,
+                  minWidth: "240px",
                 }}
               >
                 <li>Specialty and low-concentration RNA (evRNA, etc..)</li>
