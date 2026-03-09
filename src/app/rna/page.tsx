@@ -678,7 +678,7 @@ export default function RNAPage() {
                 }}
               >
                 <img
-                  src="/images/chart1.svg"
+                  src="/images/chart1.png"
                   alt="High Reproducibility Scatter Plot"
                   className="chart-card-img"
                   style={{ width: "100%", height: "auto" }}
@@ -732,7 +732,7 @@ export default function RNAPage() {
                 }}
               >
                 <img
-                  src="/images/chart2.svg"
+                  src="/images/chart2.png"
                   alt="Superior Transcriptome Coverage Bar Chart"
                   className="chart-card-img"
                   style={{ width: "100%", height: "auto" }}
