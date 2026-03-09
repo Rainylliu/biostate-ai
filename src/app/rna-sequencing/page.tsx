@@ -404,6 +404,250 @@ export default function RNASequencingPage() {
           </div>
         </div>
       </section>
+
+      {/* Section 3 - Our Pricing */}
+      <section
+        style={{
+          padding: "80px 0",
+          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "1200px",
+            margin: "0 auto",
+            padding: "0 24px",
+            display: "flex",
+            gap: "48px",
+            alignItems: "flex-start",
+          }}
+        >
+          {/* Left Column */}
+          <div style={{ flex: "1 1 0", minWidth: 0 }}>
+            {/* OUR SOLUTION bubble */}
+            <span
+              style={{
+                display: "inline-block",
+                fontSize: "14px",
+                fontWeight: 600,
+                letterSpacing: "0.05em",
+                color: "#44B6E9",
+                backgroundColor: "rgba(68, 182, 233, 0.2)",
+                borderRadius: "999px",
+                padding: "4px 18px",
+                marginBottom: "20px",
+              }}
+            >
+              OUR SOLUTION
+            </span>
+
+            <h2
+              style={{
+                fontFamily: "'Sora', Arial, Helvetica, sans-serif",
+                fontSize: "clamp(32px, 4vw, 48px)",
+                fontWeight: 500,
+                lineHeight: 1.15,
+                color: "#1f1f1f",
+                margin: "0 0 20px 0",
+              }}
+            >
+              Our Pricing
+            </h2>
+
+            <p
+              style={{
+                fontSize: "16px",
+                fontWeight: 400,
+                color: "#555",
+                lineHeight: 1.6,
+                margin: "0 0 32px 0",
+              }}
+            >
+              Powered by BIRT+PERD — 24-sample pooling cuts library
+              <br />
+              prep cost by 70%
+            </p>
+
+            {/* Checkmarks */}
+            <div style={{ display: "flex", flexDirection: "column", gap: "20px", marginBottom: "40px" }}>
+              {[
+                "10M reads included",
+                "Single-end 300–450bp default",
+                "Paired-end available on request",
+              ].map((text, i) => (
+                <div key={i} style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M5 10.5L8.5 14L15 7" stroke="#45D0BD" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  <span style={{ fontSize: "16px", fontWeight: 700, color: "#1f1f1f" }}>
+                    {text}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            {/* Download Price Card Button */}
+            <a
+              href="#"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "10px",
+                backgroundColor: "#45D0BD",
+                color: "#fff",
+                fontSize: "16px",
+                fontWeight: 600,
+                padding: "14px 28px",
+                borderRadius: "999px",
+                textDecoration: "none",
+                border: "none",
+                cursor: "pointer",
+              }}
+            >
+              Download Price Card
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </a>
+          </div>
+
+          {/* Right Column - Cards */}
+          <div style={{ flex: "1 1 0", minWidth: 0, display: "flex", flexDirection: "column", gap: "24px" }}>
+            {/* Standard Samples Card - $60 */}
+            <div
+              style={{
+                background: "linear-gradient(135deg, #E3FFFB 0%, #C6EDFF 100%)",
+                borderRadius: "20px",
+                padding: "36px 40px",
+                display: "flex",
+                alignItems: "center",
+                gap: "24px",
+              }}
+            >
+              <h3
+                style={{
+                  fontSize: "32px",
+                  fontWeight: 500,
+                  lineHeight: 1.2,
+                  color: "#1f1f1f",
+                  margin: 0,
+                  whiteSpace: "nowrap",
+                }}
+              >
+                Standard
+                <br />
+                Samples
+              </h3>
+              <ul
+                style={{
+                  flex: 1,
+                  listStyle: "disc",
+                  paddingLeft: "20px",
+                  margin: 0,
+                  fontSize: "14px",
+                  fontWeight: 500,
+                  color: "#333",
+                  lineHeight: 1.8,
+                }}
+              >
+                <li>Cultured Animal Cells (&gt;30k cells)</li>
+                <li>Extracted RNA (Mammalian)</li>
+                <li>{"For Conc. ≥ 16 ng/μL (min 10 μL)"}</li>
+              </ul>
+              <div style={{ textAlign: "right", whiteSpace: "nowrap" }}>
+                <span
+                  style={{
+                    fontFamily: "'Sora', Arial, Helvetica, sans-serif",
+                    fontSize: "48px",
+                    fontWeight: 700,
+                    color: "#1f1f1f",
+                    lineHeight: 1,
+                  }}
+                >
+                  $60
+                </span>
+                <span
+                  style={{
+                    fontFamily: "'Sora', Arial, Helvetica, sans-serif",
+                    fontSize: "18px",
+                    fontWeight: 400,
+                    color: "#1f1f1f",
+                  }}
+                >
+                  /sample
+                </span>
+              </div>
+            </div>
+
+            {/* Specialized Samples Card - $110 */}
+            <div
+              style={{
+                border: "1px solid #ddd",
+                borderRadius: "20px",
+                padding: "36px 40px",
+                display: "flex",
+                alignItems: "center",
+                gap: "24px",
+                backgroundColor: "#fff",
+              }}
+            >
+              <h3
+                style={{
+                  fontSize: "32px",
+                  fontWeight: 500,
+                  lineHeight: 1.2,
+                  color: "#1f1f1f",
+                  margin: 0,
+                  whiteSpace: "nowrap",
+                }}
+              >
+                Specialized
+                <br />
+                Samples
+              </h3>
+              <ul
+                style={{
+                  flex: 1,
+                  listStyle: "disc",
+                  paddingLeft: "20px",
+                  margin: 0,
+                  fontSize: "14px",
+                  fontWeight: 500,
+                  color: "#333",
+                  lineHeight: 1.8,
+                }}
+              >
+                <li>Specialty and low-concentration RNA (evRNA, etc..)</li>
+                <li>Biospecimens and clinical samples (whole blood, plasma, serum, PBMC, tissues, FFPE, etc..)</li>
+                <li>Unusual organisms (plants, octopus, axolotl, ...)</li>
+              </ul>
+              <div style={{ textAlign: "right", whiteSpace: "nowrap" }}>
+                <span
+                  style={{
+                    fontFamily: "'Sora', Arial, Helvetica, sans-serif",
+                    fontSize: "48px",
+                    fontWeight: 700,
+                    color: "#1f1f1f",
+                    lineHeight: 1,
+                  }}
+                >
+                  $110
+                </span>
+                <span
+                  style={{
+                    fontFamily: "'Sora', Arial, Helvetica, sans-serif",
+                    fontSize: "18px",
+                    fontWeight: 400,
+                    color: "#1f1f1f",
+                  }}
+                >
+                  /sample
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
