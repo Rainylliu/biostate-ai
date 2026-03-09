@@ -220,22 +220,41 @@ export default function SalesTCPage() {
               background: "#F9FBFF",
             }}
           >
-            <a
-              href="/get-quote"
-              style={{
-                display: "inline-block",
-                background: "#45D0BD",
-                color: "white",
-                padding: "14px 30px",
-                borderRadius: "999px",
-                fontWeight: 700,
-                fontSize: "16px",
-                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                textDecoration: "none",
-              }}
-            >
-              Request a Quote →
-            </a>
+            <div style={{ display: "inline-flex", gap: "16px", alignItems: "center", flexWrap: "wrap", justifyContent: "center" }}>
+              <a
+                href="/get-quote"
+                className="book-a-call-btn"
+              >
+                Request a Quote
+                <span className="book-a-call-arrow">
+                  <span className="book-a-call-arrow-inner">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                </span>
+              </a>
+              <a
+                href="/pdf/T&C-03062026.pdf"
+                download
+                className="book-a-call-btn"
+              >
+                Download
+                <span className="book-a-call-arrow">
+                  <span className="book-a-call-arrow-inner">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M8 3V11M8 11L4 7M8 11L12 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M8 3V11M8 11L4 7M8 11L12 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                </span>
+              </a>
+            </div>
             <div
               style={{
                 marginTop: "14px",
