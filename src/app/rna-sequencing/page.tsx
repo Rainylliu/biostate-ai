@@ -874,11 +874,10 @@ export default function RNASequencingPage() {
                         gap: "8px",
                         padding: "8px 20px",
                         borderRadius: "12px",
-                        background: "#fff",
-                        backgroundClip: "padding-box",
                         border: "2px solid transparent",
                         backgroundImage: "linear-gradient(#fff, #fff), linear-gradient(90deg, #45D0BD, #44B6E9)",
-                        backgroundOrigin: "padding-box, border-box",
+                        backgroundOrigin: "border-box",
+                        backgroundClip: "padding-box, border-box",
                         fontSize: "14px",
                         fontWeight: 500,
                         color: "#333",
@@ -904,7 +903,7 @@ export default function RNASequencingPage() {
                 bottom: "-20px",
                 width: "240px",
                 height: "auto",
-                opacity: 0.15,
+                opacity: 0.4,
                 pointerEvents: "none",
               }}
             />
