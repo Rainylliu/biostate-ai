@@ -25,12 +25,10 @@ export default function RNASequencingPage() {
           alt=""
           style={{
             position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            width: "80%",
-            height: "80%",
-            objectFit: "contain",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
             zIndex: 0,
             pointerEvents: "none",
           }}
