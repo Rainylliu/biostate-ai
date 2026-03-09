@@ -489,25 +489,19 @@ export default function RNASequencingPage() {
             {/* Download Price Card Button */}
             <a
               href="#"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "12px",
-                backgroundColor: "#5BC4B4",
-                color: "#fff",
-                fontSize: "16px",
-                fontWeight: 600,
-                padding: "16px 32px",
-                borderRadius: "999px",
-                textDecoration: "none",
-                border: "none",
-                cursor: "pointer",
-              }}
+              className="book-a-call-btn book-a-call-btn-solid-teal group"
             >
               Download Price Card
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+              <span className="book-a-call-arrow">
+                <span className="book-a-call-arrow-inner">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+              </span>
             </a>
           </div>
 
