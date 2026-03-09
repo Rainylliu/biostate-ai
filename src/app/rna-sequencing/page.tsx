@@ -652,8 +652,7 @@ export default function RNASequencingPage() {
       {/* Section 4 - BIRT + PERD v3 Technology */}
       <section
         style={{
-          backgroundColor: "#1a1a1a",
-          padding: "80px 0 100px",
+          padding: "100px 0",
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
         }}
       >
@@ -664,86 +663,95 @@ export default function RNASequencingPage() {
             padding: "0 60px",
           }}
         >
-          {/* Header row */}
+          {/* Dark card container */}
           <div
             style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "flex-start",
-              marginBottom: "56px",
+              backgroundColor: "#1a1a1a",
+              borderRadius: "24px",
+              padding: "64px 56px 72px",
             }}
           >
-            {/* Left - Title */}
-            <div>
-              <p
-                style={{
-                  fontSize: "14px",
-                  fontWeight: 400,
-                  color: "rgba(255,255,255,0.5)",
-                  margin: "0 0 12px 0",
-                }}
-              >
-                [technology]
-              </p>
-              <h2
-                style={{
-                  fontSize: "clamp(36px, 4vw, 52px)",
-                  fontWeight: 500,
-                  lineHeight: 1.15,
-                  color: "#fff",
-                  margin: 0,
-                }}
-              >
-                BIRT + PERD v3
-                <br />
-                Sequencing Technology
-              </h2>
+            {/* Header row */}
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "flex-start",
+                marginBottom: "56px",
+              }}
+            >
+              {/* Left - Title */}
+              <div>
+                <p
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: 400,
+                    color: "rgba(255,255,255,0.5)",
+                    margin: "0 0 12px 0",
+                  }}
+                >
+                  [technology]
+                </p>
+                <h2
+                  style={{
+                    fontSize: "clamp(36px, 4vw, 52px)",
+                    fontWeight: 500,
+                    lineHeight: 1.15,
+                    color: "#fff",
+                    margin: 0,
+                  }}
+                >
+                  BIRT + PERD v3
+                  <br />
+                  Sequencing Technology
+                </h2>
+              </div>
+
+              {/* Right - Description + Button */}
+              <div style={{ textAlign: "right", maxWidth: "360px" }}>
+                <p
+                  style={{
+                    fontSize: "15px",
+                    fontWeight: 400,
+                    color: "rgba(255,255,255,0.6)",
+                    lineHeight: 1.6,
+                    margin: "0 0 24px 0",
+                  }}
+                >
+                  More usable reads. Lower cost. Broader
+                  <br />
+                  transcriptome coverage.
+                </p>
+                <a
+                  href="https://drive.google.com/file/d/1WtAcCwAINXq3dIKEAyVHqMO_e7o8ch59/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "12px",
+                    padding: "14px 28px",
+                    borderRadius: "999px",
+                    border: "1px solid rgba(255,255,255,0.3)",
+                    backgroundColor: "transparent",
+                    color: "#fff",
+                    fontSize: "15px",
+                    fontWeight: 500,
+                    textDecoration: "none",
+                    cursor: "pointer",
+                  }}
+                >
+                  Download Technical Overview
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                    <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </a>
+              </div>
             </div>
 
-            {/* Right - Description + Button */}
-            <div style={{ textAlign: "right", maxWidth: "360px" }}>
-              <p
-                style={{
-                  fontSize: "15px",
-                  fontWeight: 400,
-                  color: "rgba(255,255,255,0.6)",
-                  lineHeight: 1.6,
-                  margin: "0 0 24px 0",
-                }}
-              >
-                More usable reads. Lower cost. Broader
-                <br />
-                transcriptome coverage.
-              </p>
-              <a
-                href="https://drive.google.com/file/d/1WtAcCwAINXq3dIKEAyVHqMO_e7o8ch59/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "12px",
-                  padding: "14px 28px",
-                  borderRadius: "999px",
-                  border: "1px solid rgba(255,255,255,0.3)",
-                  backgroundColor: "transparent",
-                  color: "#fff",
-                  fontSize: "15px",
-                  fontWeight: 500,
-                  textDecoration: "none",
-                  cursor: "pointer",
-                }}
-              >
-                Download Technical Overview
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                  <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </a>
-            </div>
+            {/* Tabs Component */}
+            <TechnologyTabs />
           </div>
-
-          {/* Tabs Component */}
-          <TechnologyTabs />
         </div>
       </section>
     </div>
