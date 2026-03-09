@@ -50,6 +50,7 @@ export default function RNAFooter() {
     >
       {/* Part 1: Getting Started CTA */}
       <section
+        id="getting-started"
         style={{
           padding: "100px 0 80px",
           textAlign: "center",

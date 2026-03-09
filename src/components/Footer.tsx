@@ -16,8 +16,8 @@ export default function Footer() {
   const [subscribeEmail, setSubscribeEmail] = useState("");
   const [showPopup, setShowPopup] = useState(false);
 
-  // RNA sequencing page uses its own custom footer
-  if (pathname === "/rna-sequencing") return null;
+  // These pages use their own custom footer
+  if (pathname === "/rna-sequencing" || pathname === "/white-paper") return null;
 
   const handleSubscribe = () => {
     if (!subscribeEmail.trim() || !subscribeEmail.includes("@")) return;
