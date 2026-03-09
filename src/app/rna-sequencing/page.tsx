@@ -256,7 +256,7 @@ export default function RNASequencingPage() {
       <section
         style={{
           padding: "80px 24px",
-          background: "linear-gradient(180deg, #f5f7fb 0%, #ffffff 100%)",
+          background: "#ffffff",
           position: "relative",
           overflow: "hidden",
         }}
