@@ -123,13 +123,15 @@ export default function QuoteForm() {
   ).length;
 
   // Sync otherRows length with otherCount
-  if (otherRows.length !== otherCount) {
-    if (otherCount > otherRows.length) {
-      setOtherRows([...otherRows, ...Array.from({ length: otherCount - otherRows.length }, () => ({ count: "", specify: "" }))]);
-    } else {
-      setOtherRows(otherRows.slice(0, otherCount));
-    }
-  }
+  useEffect(() => {
+    setOtherRows((prev) => {
+      if (prev.length === otherCount) return prev;
+      if (otherCount > prev.length) {
+        return [...prev, ...Array.from({ length: otherCount - prev.length }, () => ({ count: "", specify: "" }))];
+      }
+      return prev.slice(0, otherCount);
+    });
+  }, [otherCount]);
 
   const addSampleRow = () => {
     setSampleRows([...sampleRows, { count: "", type: "" }]);
