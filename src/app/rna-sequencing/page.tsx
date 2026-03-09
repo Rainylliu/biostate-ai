@@ -337,7 +337,8 @@ export default function RNASequencingPage() {
                   flexDirection: "column",
                   alignItems: "center",
                   gap: "16px",
-                  width: "220px",
+                  width: "auto",
+                  whiteSpace: "nowrap",
                 }}
               >
                 <div style={{ height: "72px", display: "flex", alignItems: "center", justifyContent: "center" }}>
