@@ -1122,7 +1122,7 @@ export default function RNASequencingPage() {
           {/* Left - Cloud image */}
           <div style={{ flex: "0 0 45%", position: "relative" }}>
             <img
-              src="/images/cloud.png"
+              src="/images/omics.svg"
               alt="OmicsWeb AI Co-Pilot"
               style={{
                 width: "100%",
