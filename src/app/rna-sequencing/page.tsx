@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import TechnologyTabs from "@/components/TechnologyTabs";
+import Section5Stats from "@/components/Section5Stats";
 
 export const metadata: Metadata = {
   title: "Total RNA Sequencing from $60/sample - biostate.AI",
@@ -836,59 +837,7 @@ export default function RNASequencingPage() {
           </div>
 
           {/* Stats Row */}
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr 1fr 1fr",
-              gap: "40px",
-              marginBottom: "40px",
-            }}
-          >
-            {[
-              { value: "92.4%", label: "Q30 Base Rate", sub: ">80% industry standard" },
-              { value: "93.2%", label: "Mapping Rate", sub: "Typical range: 70–85%" },
-              { value: ">0.95", label: "Replicate Correlation", sub: "" },
-              { value: "99.8%", label: "rRNA Depletion", sub: "" },
-            ].map((stat, i) => (
-              <div key={i}>
-                <p
-                  style={{
-                    fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-                    fontSize: "clamp(48px, 5vw, 72px)",
-                    fontWeight: 600,
-                    lineHeight: 1,
-                    color: "transparent",
-                    WebkitTextStroke: "2px #A6EFFC",
-                    margin: "0 0 16px 0",
-                  }}
-                >
-                  {stat.value}
-                </p>
-                <p
-                  style={{
-                    fontSize: "16px",
-                    fontWeight: 600,
-                    color: "#1f1f1f",
-                    margin: "0 0 4px 0",
-                  }}
-                >
-                  {stat.label}
-                </p>
-                {stat.sub && (
-                  <p
-                    style={{
-                      fontSize: "14px",
-                      fontWeight: 400,
-                      color: "#888",
-                      margin: 0,
-                    }}
-                  >
-                    {stat.sub}
-                  </p>
-                )}
-              </div>
-            ))}
-          </div>
+          <Section5Stats />
 
           {/* Bottom Card - Validated sample types */}
           <div
@@ -908,7 +857,7 @@ export default function RNASequencingPage() {
                 style={{
                   fontSize: "16px",
                   fontWeight: 500,
-                  color: "#333",
+                  color: "#111111",
                   margin: "0 0 20px 0",
                 }}
               >
@@ -925,8 +874,11 @@ export default function RNASequencingPage() {
                         gap: "8px",
                         padding: "8px 20px",
                         borderRadius: "999px",
-                        border: "1px solid #ccc",
-                        backgroundColor: "#fff",
+                        background: "#fff",
+                        backgroundClip: "padding-box",
+                        border: "2px solid transparent",
+                        backgroundImage: "linear-gradient(#fff, #fff), linear-gradient(90deg, #45D0BD, #44B6E9)",
+                        backgroundOrigin: "padding-box, border-box",
                         fontSize: "14px",
                         fontWeight: 500,
                         color: "#333",
