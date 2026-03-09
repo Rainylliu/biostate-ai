@@ -268,7 +268,7 @@ export default function Header() {
               animation: "marquee 25s linear infinite",
             }}
           >
-            {Array.from({ length: 6 }).map((_, i) => (
+            {Array.from({ length: 8 }).map((_, i) => (
               <span
                 key={i}
                 className="text-white text-sm font-semibold"
