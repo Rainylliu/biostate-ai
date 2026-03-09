@@ -940,49 +940,66 @@ export default function RNASequencingPage() {
         {/* Main content */}
         <div
           style={{
-            maxWidth: "1400px",
-            margin: "0 auto",
-            padding: "80px 60px 100px",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            gap: "60px",
+            position: "relative",
+            overflow: "hidden",
+            padding: "80px 0 100px",
           }}
         >
-          {/* Left side */}
-          <div style={{ flex: 1 }}>
-            <p
-              style={{
-                fontSize: "14px",
-                fontWeight: 400,
-                color: "#999",
-                margin: "0 0 12px 0",
-              }}
-            >
-              [ analysis ]
-            </p>
-            <h2
-              style={{
-                fontSize: "clamp(36px, 4vw, 52px)",
-                fontWeight: 500,
-                lineHeight: 1.15,
-                color: "#1f1f1f",
-                margin: "0 0 60px 0",
-              }}
-            >
-              From FASTQ to
-              <br />
-              Biological Insight
-            </h2>
-            <img
-              src="/images/omics.svg"
-              alt="Biostate AI"
-              style={{
-                width: "clamp(240px, 30vw, 400px)",
-                height: "auto",
-              }}
-            />
-          </div>
+          {/* omics.svg as full background */}
+          <img
+            src="/images/omics.svg"
+            alt=""
+            style={{
+              position: "absolute",
+              left: "0",
+              bottom: "0",
+              width: "50%",
+              maxWidth: "700px",
+              height: "auto",
+              opacity: 0.15,
+              pointerEvents: "none",
+            }}
+          />
+
+          <div
+            style={{
+              maxWidth: "1400px",
+              margin: "0 auto",
+              padding: "0 60px",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              gap: "60px",
+              position: "relative",
+              zIndex: 1,
+            }}
+          >
+            {/* Left side */}
+            <div style={{ flex: 1 }}>
+              <p
+                style={{
+                  fontSize: "14px",
+                  fontWeight: 400,
+                  color: "#999",
+                  margin: "0 0 12px 0",
+                }}
+              >
+                [ analysis ]
+              </p>
+              <h2
+                style={{
+                  fontSize: "clamp(36px, 4vw, 52px)",
+                  fontWeight: 500,
+                  lineHeight: 1.15,
+                  color: "#1f1f1f",
+                  margin: 0,
+                }}
+              >
+                From FASTQ to
+                <br />
+                Biological Insight
+              </h2>
+            </div>
 
           {/* Right side - vertical timeline */}
           <div
@@ -1080,6 +1097,7 @@ export default function RNASequencingPage() {
                 background: "#C4B5FD",
               }}
             />
+          </div>
           </div>
         </div>
       </section>
