@@ -32,41 +32,10 @@ export default function RNAFooter() {
   };
 
   const processSteps = [
-    {
-      label: "Sample receipt",
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M9 3h6v7l3-2v8l-3-2v7H9v-7l-3 2V8l3 2V3z" />
-        </svg>
-      ),
-    },
-    {
-      label: "Sequencing",
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="4" y="4" width="16" height="16" rx="2" />
-          <path d="M9 9h6v6H9z" />
-        </svg>
-      ),
-    },
-    {
-      label: "Analysis",
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="11" cy="11" r="8" />
-          <path d="M21 21l-4.35-4.35" />
-          <path d="M8 11h6M11 8v6" />
-        </svg>
-      ),
-    },
-    {
-      label: "Delivery",
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 3v12M12 15l-4-4M12 15l4-4M5 21h14" />
-        </svg>
-      ),
-    },
+    { label: "Sample receipt", icon: "/images/start1.svg" },
+    { label: "Sequencing", icon: "/images/start2.svg" },
+    { label: "Analysis", icon: "/images/start3.svg" },
+    { label: "Delivery", icon: "/images/start4.svg" },
   ];
 
   return (
@@ -94,7 +63,7 @@ export default function RNAFooter() {
               fontSize: "13px",
               fontWeight: 600,
               color: "#ffffff",
-              backgroundColor: "#45d0bd",
+              background: "linear-gradient(135deg, #8258c8, #2c84c8)",
               borderRadius: "20px",
               padding: "6px 20px",
               marginBottom: "30px",
@@ -176,7 +145,8 @@ export default function RNAFooter() {
                       flexShrink: 0,
                     }}
                   >
-                    {step.icon}
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={step.icon} alt="" style={{ width: "24px", height: "24px" }} />
                   </div>
                   <span
                     style={{
@@ -195,7 +165,7 @@ export default function RNAFooter() {
                       width: "100px",
                       height: "2px",
                       margin: "0 16px",
-                      background: "linear-gradient(90deg, #45d0bd, #44b6e9)",
+                      background: "linear-gradient(90deg, #8258c8, #2c84c8)",
                       borderRadius: "1px",
                     }}
                   />
@@ -215,7 +185,12 @@ export default function RNAFooter() {
           >
             <a
               href="/get-quote"
-              className="book-a-call-btn book-a-call-btn-solid-teal group"
+              className="book-a-call-btn group"
+              style={{
+                background: "linear-gradient(135deg, #8258c8, #2c84c8)",
+                color: "#ffffff",
+                border: "none",
+              }}
             >
               Get My Quote Now
               <span className="book-a-call-arrow">
