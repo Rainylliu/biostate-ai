@@ -38,6 +38,14 @@ export default function SalesTCPage() {
               objectFit: "cover",
             }}
           />
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              background:
+                "linear-gradient(135deg, rgba(140, 100, 220, 0.6), rgba(100, 170, 230, 0.6))",
+            }}
+          />
         </div>
 
         {/* Top-left notch */}
