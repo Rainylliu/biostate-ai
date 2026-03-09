@@ -257,13 +257,32 @@ export default function RNASequencingPage() {
         style={{
           padding: "80px 24px",
           background: "linear-gradient(180deg, #f5f7fb 0%, #ffffff 100%)",
+          position: "relative",
+          overflow: "hidden",
         }}
       >
+        {/* bg4 left background */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/bg4.png"
+          alt=""
+          style={{
+            position: "absolute",
+            left: 0,
+            top: 0,
+            height: "100%",
+            width: "auto",
+            pointerEvents: "none",
+            zIndex: 0,
+          }}
+        />
         <div
           style={{
             maxWidth: "1080px",
             margin: "0 auto",
             textAlign: "center",
+            position: "relative",
+            zIndex: 1,
           }}
         >
           {/* Title */}
@@ -279,9 +298,7 @@ export default function RNASequencingPage() {
           >
             Still Paying{" "}
             <span style={{ color: "#EF6464" }}>$200+</span>{" "}
-            per Sample for
-            <br />
-            RNA-seq?
+            per Sample for RNA-seq?
           </h2>
 
           {/* Subtitle */}
@@ -360,7 +377,7 @@ export default function RNASequencingPage() {
               padding: "20px 32px",
               maxWidth: "680px",
               margin: "0 auto",
-              textAlign: "left",
+              textAlign: "center",
             }}
           >
             <p
@@ -369,13 +386,16 @@ export default function RNASequencingPage() {
                 fontSize: "14px",
                 margin: 0,
                 lineHeight: 1.6,
+                display: "inline-flex",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: "4px",
               }}
             >
               <span style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
                 <img src="/images/wrong.svg" alt="" width={16} height={16} />
                 <strong style={{ color: "#EF6464" }}>Result:</strong>
               </span>
-              <br />
               <span style={{ color: "#888" }}>
                 Fewer replicates.{" "}&nbsp;|&nbsp;{" "}Smaller studies.{" "}&nbsp;|&nbsp;{" "}Limited power.
               </span>
