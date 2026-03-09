@@ -6,7 +6,8 @@ const tabs = [
   {
     id: 0,
     label: "Reproducibility",
-    icon: "/images/chart1.svg",
+    icon: "/images/chart1inactive.svg",
+    iconActive: "/images/chart1.svg",
     chart: "/images/chart1.png",
     title: "Reproducibility",
     description:
@@ -27,6 +28,7 @@ const tabs = [
     id: 1,
     label: "Efficient rRNA Depletion",
     icon: "/images/chart3.svg",
+    iconActive: "/images/chart3active.svg",
     chart: "/images/chart2.png",
     title: "Efficient rRNA Depletion",
     description:
@@ -47,6 +49,7 @@ const tabs = [
     id: 2,
     label: "Scalable Multiplexing Without Bias",
     icon: "/images/chart2.svg",
+    iconActive: "/images/chart2active.svg",
     chart: "/images/chart3.png",
     title: "Scalable Multiplexing Without Bias",
     description:
@@ -108,16 +111,13 @@ export default function TechnologyTabs() {
             >
               {/* Icon */}
               <img
-                src={t.icon}
+                src={isActive ? t.iconActive : t.icon}
                 alt=""
                 width={40}
                 height={40}
                 style={{
-                  filter: isActive
-                    ? "brightness(0) saturate(100%) invert(42%) sepia(52%) saturate(1200%) hue-rotate(189deg) brightness(88%) contrast(89%)"
-                    : "brightness(0) invert(0.55)",
-                  transition: "filter 0.3s ease",
                   flexShrink: 0,
+                  transition: "opacity 0.3s ease",
                 }}
               />
               {t.label}
