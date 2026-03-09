@@ -754,7 +754,7 @@ export default function RNASequencingPage() {
       {/* Section 5 - High Quality */}
       <section
         style={{
-          padding: "80px 0",
+          padding: "20px 0 80px",
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
         }}
       >
