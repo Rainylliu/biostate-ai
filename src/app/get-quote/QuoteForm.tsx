@@ -110,7 +110,11 @@ export default function QuoteForm() {
 
   useEffect(() => {
     if (submitted) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      // Small delay to ensure DOM has fully updated after state change
+      setTimeout(() => {
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0; // Safari fallback
+      }, 100);
     }
   }, [submitted]);
 
