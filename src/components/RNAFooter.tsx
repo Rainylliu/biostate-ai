@@ -6,6 +6,7 @@ import Link from "next/link";
 export default function RNAFooter() {
   const [subscribeEmail, setSubscribeEmail] = useState("");
   const [showPopup, setShowPopup] = useState(false);
+  const [calendlyOpen, setCalendlyOpen] = useState(false);
 
   const handleSubscribe = () => {
     if (!subscribeEmail.trim() || !subscribeEmail.includes("@")) return;
@@ -204,10 +205,8 @@ export default function RNAFooter() {
                 </span>
               </span>
             </a>
-            <a
-              href="https://calendly.com/rachan-raj-biostate/biostate-ai-introduction-services"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => setCalendlyOpen(true)}
               className="book-a-call-btn book-a-call-btn-dark group"
             >
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
@@ -215,7 +214,7 @@ export default function RNAFooter() {
                 <path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3" />
               </svg>
               Schedule a 15-Min Consultation
-            </a>
+            </button>
           </div>
         </div>
       </section>
@@ -509,6 +508,65 @@ export default function RNAFooter() {
           </div>
         </div>
       </section>
+
+      {/* Calendly Popup */}
+      {calendlyOpen && (
+        <div
+          style={{
+            position: "fixed",
+            inset: 0,
+            zIndex: 9999,
+            backgroundColor: "rgba(31, 31, 31, 0.6)",
+          }}
+        >
+          <div
+            style={{ position: "absolute", inset: 0 }}
+            onClick={() => setCalendlyOpen(false)}
+          />
+          <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              width: "100%",
+              maxWidth: "1000px",
+              height: "90vh",
+              maxHeight: "680px",
+              borderRadius: "8px",
+              overflow: "hidden",
+              backgroundColor: "#ffffff",
+            }}
+          >
+            <iframe
+              src="https://calendly.com/rachan-raj-biostate/biostate-ai-introduction-services?embed_type=PopupText"
+              width="100%"
+              height="100%"
+              frameBorder="0"
+              title="Select a Date & Time - Calendly"
+            />
+          </div>
+          <button
+            onClick={() => setCalendlyOpen(false)}
+            style={{
+              position: "absolute",
+              top: "calc(50% - min(45vh, 340px) - 40px)",
+              right: "calc(50% - min(500px, 50%))",
+              width: "32px",
+              height: "32px",
+              background: "transparent",
+              border: "none",
+              color: "#ffffff",
+              fontSize: "28px",
+              lineHeight: 1,
+              cursor: "pointer",
+            }}
+            aria-label="Close"
+          >
+            ×
+          </button>
+        </div>
+      )}
 
       {/* Subscribe Success Popup */}
       {showPopup && (
