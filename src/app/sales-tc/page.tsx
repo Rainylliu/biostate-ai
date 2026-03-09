@@ -43,7 +43,7 @@ export default function SalesTCPage() {
               position: "absolute",
               inset: 0,
               background:
-                "linear-gradient(135deg, rgba(140, 100, 220, 0.85), rgba(100, 170, 230, 0.85))",
+                "linear-gradient(135deg, rgba(90, 50, 180, 0.6), rgba(50, 120, 200, 0.6))",
             }}
           />
         </div>
