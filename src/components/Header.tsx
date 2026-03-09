@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
+import LandingHeader from "./LandingHeader";
 
 const navItems = [
   { label: "HOME", href: "/" },
@@ -17,6 +18,11 @@ const navItems = [
 
 export default function Header() {
   const pathname = usePathname();
+
+  // Use simplified landing header for /rna-sequencing
+  if (pathname === "/rna-sequencing") {
+    return <LandingHeader />;
+  }
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [menuHovered, setMenuHovered] = useState(false);
