@@ -13,15 +13,20 @@ export default function Section5Stats() {
   return (
     <div
       style={{
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr 1fr 1fr",
-        gap: "40px",
+        display: "flex",
+        justifyContent: "center",
         marginBottom: "40px",
-        textAlign: "center",
       }}
     >
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(4, auto)",
+          gap: "40px",
+        }}
+      >
       {stats.map((stat, i) => (
-        <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <div key={i}>
           <div style={{ height: "100px", marginBottom: "16px", overflow: "visible" }}>
             {stat.static ? (
               <svg
@@ -83,6 +88,7 @@ export default function Section5Stats() {
           )}
         </div>
       ))}
+      </div>
     </div>
   );
 }
