@@ -343,14 +343,36 @@ img {
 .get-quote-btn.get-quote-btn-rna .get-quote-inner {
   background: #333333;
   color: #ffffff;
-  padding: 13px 50px;
+  padding: 10px 28px;
   transition: padding 0.3s ease;
 }
 
 .get-quote-btn.get-quote-btn-rna:hover .get-quote-inner {
   background: #333333;
   color: #ffffff;
-  padding: 9px 46px;
+  padding: 6px 24px;
+}
+
+/* ── Contact Expert Button (Landing Header) ── */
+.contact-expert-btn {
+  border: none !important;
+  background: linear-gradient(90deg, #45d0bd, #44b6e9);
+  padding: 2px !important;
+}
+
+.contact-expert-btn .contact-expert-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 9999px;
+  padding: 10px 28px;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.contact-expert-btn:hover .contact-expert-inner {
+  background: linear-gradient(90deg, #45d0bd, #44b6e9);
+  color: #ffffff;
 }
 
 /* ── Book a Call Button ── */
@@ -487,7 +509,7 @@ img {
   display: flex;
   width: max-content;
   white-space: nowrap;
-  animation: marquee-scroll 15s linear infinite;
+  animation: marquee-scroll 55s linear infinite;
 }
 
 .marquee-banner-text {

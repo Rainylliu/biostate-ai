@@ -1,32 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
-import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
-import LandingHeader from "./LandingHeader";
 
-const navItems = [
-  { label: "HOME", href: "/" },
-  { label: "TEAM", href: "/about-us" },
-  { label: "PUBLICATIONS", href: "/publication" },
-  { label: "RNA", href: "/rna" },
-  { label: "DNA", href: "/dna" },
-  { label: "AI", href: "/ai" },
-  { label: "NEWS", href: "/news" },
-];
-
-export default function Header() {
-  const pathname = usePathname();
-
-  // Use simplified landing header for /rna-sequencing
-  if (pathname === "/rna-sequencing") {
-    return <LandingHeader />;
-  }
+export default function LandingHeader() {
   const [scrolled, setScrolled] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [calendlyOpen, setCalendlyOpen] = useState(false);
   const [menuHovered, setMenuHovered] = useState(false);
   const [sidePanelOpen, setSidePanelOpen] = useState(false);
+  const [resourcesOpen, setResourcesOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -34,110 +16,41 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Lock body scroll when side panel is open
+  // Lock body scroll when Calendly popup or side panel is open
   useEffect(() => {
-    if (sidePanelOpen) {
+    if (calendlyOpen || sidePanelOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
     }
     return () => { document.body.style.overflow = ""; };
-  }, [sidePanelOpen]);
-
-  const marqueeText = "RNA-seq starting from $60 per sample";
+  }, [calendlyOpen, sidePanelOpen]);
 
   return (
     <>
-      {/* Top Info Bar */}
-      <div
-        className="flex items-center justify-between"
-        style={{
-          margin: "8px 20px",
-          padding: "0 24px",
-          height: "40px",
-          fontSize: "14px",
-          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-          color: "#919191",
-          fontWeight: 500,
-          border: "1px solid #e6e8ea",
-          borderRadius: "15px",
-        }}
-      >
-        <span style={{ padding: "0 20px" }}>
-          Email:{" "}
-          <a
-            href="mailto:contact@biostate.ai"
-            className="hover:!text-[#45D0BD] transition-colors"
-            style={{
-              fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-              fontSize: "14px",
-              lineHeight: "1.875em",
-              fontWeight: 500,
-              letterSpacing: "0em",
-              color: "#1f1f1f",
-            }}
-          >
-            contact@biostate.ai
-          </a>
-        </span>
-        <div className="flex items-center gap-4" style={{ padding: "0 20px" }}>
-          <span>Follow us:</span>
-          <a href="https://www.facebook.com/people/Biostate-AI/61562900021094/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:!text-[#45D0BD] transition-colors" style={{ color: "#1f1f1f" }}>
-            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-          </a>
-          <a href="https://www.instagram.com/biostate.ai/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:!text-[#45D0BD] transition-colors" style={{ color: "#1f1f1f" }}>
-            <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
-          </a>
-          <a href="https://x.com/biostateai" target="_blank" rel="noopener noreferrer" aria-label="X" className="hover:!text-[#45D0BD] transition-colors" style={{ color: "#1f1f1f" }}>
-            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/company/biostate-ai" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:!text-[#45D0BD] transition-colors" style={{ color: "#1f1f1f" }}>
-            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-          </a>
-        </div>
-      </div>
-
-      {/* Main Header */}
       <header
         className={`sticky top-0 z-50 bg-white ${scrolled ? "header-slide-down" : ""}`}
-        style={scrolled ? {
-          width: "calc(100% - 40px)",
-          margin: "0 auto",
-          borderRadius: "0 0 25px 25px",
-          boxShadow: "0px 5px 23px 4px rgba(0, 0, 0, 0.1)",
-        } : undefined}
+        style={{
+          padding: "12px 20px",
+        }}
       >
-        <div className="flex items-center justify-between" style={{ height: "105px", padding: "0 40px 0 64px" }}>
-          {/* Hamburger (mobile) */}
-          <button
-            className="lg:hidden flex flex-col gap-1.5 p-1"
-            onClick={() => setSidePanelOpen(true)}
-            aria-label="Toggle menu"
-          >
-            <span
-              className={`block w-6 h-0.5 bg-current transition-transform ${
-                mobileOpen ? "rotate-45 translate-y-2" : ""
-              }`}
-            />
-            <span
-              className={`block w-6 h-0.5 bg-current transition-opacity ${
-                mobileOpen ? "opacity-0" : ""
-              }`}
-            />
-            <span
-              className={`block w-6 h-0.5 bg-current transition-transform ${
-                mobileOpen ? "-rotate-45 -translate-y-2" : ""
-              }`}
-            />
-          </button>
-
-          {/* Menu icon + Logo */}
-          <div className="flex items-center gap-8">
-            {/* Menu grid icon */}
+        <div
+          className="flex items-center justify-between"
+          style={{
+            height: "80px",
+            padding: "0 24px",
+            border: "1px solid #e6e8ea",
+            borderRadius: "16px",
+            backgroundColor: "#ffffff",
+          }}
+        >
+          {/* Left: Menu icon + Logo */}
+          <div className="flex items-center gap-6">
+            {/* Menu grid icon with hover effect and side panel trigger */}
             <button
               aria-label="Menu"
-              className="hidden lg:block cursor-pointer relative"
-              style={{ width: 20, height: 20 }}
+              className="cursor-pointer relative"
+              style={{ width: 20, height: 20, background: "transparent", border: "none", padding: 0 }}
               onClick={() => setSidePanelOpen(true)}
               onMouseEnter={() => setMenuHovered(true)}
               onMouseLeave={() => setMenuHovered(false)}
@@ -166,118 +79,215 @@ export default function Header() {
               <img
                 src="/images/logo.svg"
                 alt="biostate.AI"
-                style={{ height: "28px", width: "auto" }}
+                style={{ height: "24px", width: "auto" }}
               />
             </Link>
           </div>
 
-          {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center" style={{ gap: "5px" }}>
-            {navItems.map((item) => {
-              const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={`nav-tab transition-all ${
-                    isActive
-                      ? ""
-                      : "hover:bg-[#F0F2F4]"
-                  }`}
+          {/* Right: Nav + CTA buttons */}
+          <div className="flex items-center gap-3">
+            {/* Nav items */}
+            <nav className="hidden md:flex items-center gap-1" style={{ marginRight: "40px" }}>
+              <Link
+                href="/pricing"
+                className="transition-colors hover:bg-[#F0F2F4]"
+                style={{
+                  fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                  fontSize: "14px",
+                  fontWeight: 700,
+                  letterSpacing: "0em",
+                  textTransform: "uppercase" as const,
+                  borderRadius: "10px",
+                  padding: "10px 20px",
+                  color: "#1f1f1f",
+                }}
+              >
+                PRICING
+              </Link>
+              <Link
+                href="/get-started"
+                className="transition-colors hover:bg-[#F0F2F4]"
+                style={{
+                  fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                  fontSize: "14px",
+                  fontWeight: 700,
+                  letterSpacing: "0em",
+                  textTransform: "uppercase" as const,
+                  borderRadius: "10px",
+                  padding: "10px 20px",
+                  color: "#1f1f1f",
+                }}
+              >
+                GET STARTED
+              </Link>
+              <div
+                className="relative"
+                onMouseEnter={() => setResourcesOpen(true)}
+                onMouseLeave={() => setResourcesOpen(false)}
+              >
+                <button
+                  className="transition-colors hover:bg-[#F0F2F4] flex items-center gap-1 cursor-pointer"
                   style={{
                     fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                     fontSize: "14px",
                     fontWeight: 700,
-                    lineHeight: "1.5em",
                     letterSpacing: "0em",
                     textTransform: "uppercase" as const,
                     borderRadius: "10px",
                     padding: "10px 20px",
-                    backgroundColor: isActive ? "#1f1f1f" : undefined,
-                    color: isActive ? "#ffffff" : "#1f1f1f",
+                    color: "#1f1f1f",
+                    background: "transparent",
+                    border: "none",
                   }}
                 >
-                  <span className="nav-tab-text">
-                    <span>{item.label}</span>
-                    <span>{item.label}</span>
-                  </span>
-                </Link>
-              );
-            })}
-          </nav>
-
-          {/* CTA Button */}
-          <Link
-            href="/get-quote"
-            className={`get-quote-btn hidden lg:inline-flex rounded-full${pathname === "/rna" ? " get-quote-btn-rna" : ""}`}
-            style={{
-              color: "#1f1f1f",
-              fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-              fontSize: "1rem",
-              fontWeight: 600,
-              letterSpacing: "normal",
-            }}
-          >
-            <span className="get-quote-inner">{pathname === "/rna" ? "Get Quote" : "Get in Touch"}</span>
-          </Link>
-        </div>
-
-        {/* Mobile Nav */}
-        {mobileOpen && (
-          <nav className="lg:hidden bg-white rounded-b-[25px] px-6 pb-6">
-            {navItems.map((item) => {
-              const isActive = pathname === item.href;
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setMobileOpen(false)}
-                  className={`block py-3 text-sm font-semibold tracking-wide border-b border-brand-75 ${
-                    isActive
-                      ? "text-primary"
-                      : "text-text hover:text-primary"
-                  }`}
+                  RESOURCES
+                  <svg
+                    width="10"
+                    height="6"
+                    viewBox="0 0 10 6"
+                    fill="none"
+                    style={{
+                      marginLeft: "4px",
+                      transition: "transform 0.2s",
+                      transform: resourcesOpen ? "rotate(180deg)" : "rotate(0deg)",
+                    }}
+                  >
+                    <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
+                {/* Dropdown */}
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "100%",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    paddingTop: "8px",
+                    opacity: resourcesOpen ? 1 : 0,
+                    pointerEvents: resourcesOpen ? "auto" : "none",
+                    transition: "opacity 0.25s ease",
+                  }}
                 >
-                  {item.label}
-                </Link>
-              );
-            })}
+                  <div
+                    style={{
+                      backgroundColor: "#1f1f1f",
+                      borderRadius: "16px",
+                      padding: "16px 0",
+                      minWidth: "200px",
+                    }}
+                  >
+                    <Link
+                      href="/white-paper"
+                      className="block transition-colors hover:!text-[#45D0BD]"
+                      style={{
+                        fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                        fontSize: "16px",
+                        fontWeight: 400,
+                        color: "#ffffff",
+                        padding: "12px 28px",
+                      }}
+                    >
+                      White paper
+                    </Link>
+                    <a
+                      href="https://www.biostate.ai/blog-grid/"
+                      className="block transition-colors hover:!text-[#45D0BD]"
+                      style={{
+                        fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                        fontSize: "16px",
+                        fontWeight: 400,
+                        color: "#ffffff",
+                        padding: "12px 28px",
+                      }}
+                    >
+                      Blogs
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </nav>
+            <button
+              onClick={() => setCalendlyOpen(true)}
+              className="contact-expert-btn hidden sm:inline-flex rounded-full cursor-pointer"
+              style={{
+                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                fontSize: "16px",
+                fontWeight: 600,
+                color: "#1f1f1f",
+              }}
+            >
+              <span className="contact-expert-inner">Contact expert</span>
+            </button>
             <Link
               href="/get-quote"
-              onClick={() => setMobileOpen(false)}
-              className="mt-4 block text-center px-5 py-2.5 border border-brand-75 text-text text-sm font-semibold rounded-full"
+              className="get-quote-btn get-quote-btn-rna hidden sm:inline-flex rounded-full"
+              style={{
+                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                fontSize: "16px",
+                fontWeight: 600,
+                color: "#1f1f1f",
+              }}
             >
-              {pathname === "/rna" ? "Get Quote" : "Get in Touch"}
+              <span className="get-quote-inner">Request a quote</span>
             </Link>
-          </nav>
-        )}
+          </div>
+        </div>
       </header>
 
-      {/* Scrolling Marquee Banner - Only on RNA page */}
-      {pathname === "/rna" && (
+      {/* Calendly Popup Overlay */}
+      {calendlyOpen && (
         <div
-          className="w-full overflow-hidden"
-          style={{
-            background: "linear-gradient(90deg, #45d0bd, #44b6e9)",
-            padding: "10px 0",
-          }}
+          className="fixed inset-0 z-[9999]"
+          style={{ backgroundColor: "rgba(31, 31, 31, 0.6)" }}
         >
+          {/* Close overlay on background click */}
           <div
-            className="flex whitespace-nowrap"
+            className="absolute inset-0"
+            onClick={() => setCalendlyOpen(false)}
+          />
+          {/* Popup container */}
+          <div
+            className="absolute"
             style={{
-              animation: "marquee 8s linear infinite",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              width: "100%",
+              maxWidth: "1000px",
+              height: "90vh",
+              maxHeight: "680px",
+              borderRadius: "8px",
+              overflow: "hidden",
+              backgroundColor: "#ffffff",
             }}
           >
-            {Array.from({ length: 8 }).map((_, i) => (
-              <span
-                key={i}
-                className="text-white text-sm font-semibold"
-                style={{ fontFamily: "'Manrope', Arial, Helvetica, sans-serif", paddingRight: "8vw" }}
-              >
-                {marqueeText}
-              </span>
-            ))}
+            <iframe
+              src="https://calendly.com/rachan-raj-biostate/biostate-ai-introduction-services?embed_type=PopupText"
+              width="100%"
+              height="100%"
+              frameBorder="0"
+              title="Select a Date & Time - Calendly"
+            />
           </div>
+          {/* Close button */}
+          <button
+            onClick={() => setCalendlyOpen(false)}
+            className="absolute cursor-pointer"
+            style={{
+              top: "calc(50% - min(45vh, 340px) - 40px)",
+              right: "calc(50% - min(500px, 50%))",
+              width: "32px",
+              height: "32px",
+              background: "transparent",
+              border: "none",
+              color: "#ffffff",
+              fontSize: "28px",
+              lineHeight: 1,
+            }}
+            aria-label="Close"
+          >
+            ×
+          </button>
         </div>
       )}
 
@@ -293,11 +303,10 @@ export default function Header() {
         onClick={() => setSidePanelOpen(false)}
       />
 
-      {/* Side Panel - uses uploaded Side panel.svg as background */}
+      {/* Side Panel - uses Side panel.svg as background */}
       <div
         className="fixed top-0 left-0 z-[101] h-full"
         style={{
-          /* SVG aspect ratio: 460/945 ≈ 0.4868, so width = height * 0.4868 */
           width: "calc(100vh * 460 / 945)",
           maxWidth: "90vw",
           transform: sidePanelOpen ? "translateX(0)" : "translateX(-100%)",
@@ -412,7 +421,7 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Close button overlay on the right strip (85.2% to 100% = 392-460 of SVG) */}
+        {/* Close button overlay on the right strip */}
         <button
           onClick={() => setSidePanelOpen(false)}
           className="absolute top-0 h-full flex flex-col items-center cursor-pointer"

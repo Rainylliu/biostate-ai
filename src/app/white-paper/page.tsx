@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sales Terms & Conditions - biostate.AI",
-  description: "Biostate AI Sales Terms and Conditions.",
+  title: "BIRT+PERD White Paper - biostate.AI",
+  description: "Biostate AI BIRT+PERD technology white paper.",
 };
 
-export default function SalesTCPage() {
+export default function WhitePaperPage() {
   return (
     <div>
       {/* Page Header Banner */}
@@ -28,7 +28,7 @@ export default function SalesTCPage() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/terms.svg"
+            src="/images/headerbg.png"
             alt=""
             style={{
               position: "absolute",
@@ -43,7 +43,7 @@ export default function SalesTCPage() {
               position: "absolute",
               inset: 0,
               background:
-                "linear-gradient(135deg, rgba(90, 50, 180, 0.6), rgba(50, 120, 200, 0.6))",
+                "linear-gradient(135deg, rgba(140, 100, 220, 0.6), rgba(100, 170, 230, 0.6))",
             }}
           />
         </div>
@@ -147,7 +147,7 @@ export default function SalesTCPage() {
               letterSpacing: "-0.01em",
             }}
           >
-            / Terms &amp; Conditions /
+            / BIRT+PERD White Paper /
           </h1>
         </div>
       </section>
@@ -198,7 +198,7 @@ export default function SalesTCPage() {
               }}
             >
               <iframe
-                src="/pdf/T&C-03062026.pdf"
+                src="/pdf/20250402-BIRT+PERD One Page.pdf"
                 style={{
                   position: "absolute",
                   top: 0,
@@ -207,7 +207,7 @@ export default function SalesTCPage() {
                   height: "100%",
                   border: "none",
                 }}
-                title="Biostate AI Terms and Conditions PDF"
+                title="BIRT+PERD White Paper PDF"
               />
             </div>
           </div>
@@ -238,7 +238,7 @@ export default function SalesTCPage() {
                 </span>
               </a>
               <a
-                href="/pdf/T&C-03062026.pdf"
+                href="/pdf/20250402-BIRT+PERD One Page.pdf"
                 download
                 className="book-a-call-btn book-a-call-btn-solid-teal"
               >
