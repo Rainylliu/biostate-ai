@@ -488,7 +488,8 @@ export default function RNASequencingPage() {
 
             {/* Download Price Card Button */}
             <a
-              href="#"
+              href="/pdf/20260223 RNA_Seq- Price Card_2026.pdf"
+              download
               className="book-a-call-btn book-a-call-btn-solid-teal group"
             >
               Download Price Card
