@@ -912,7 +912,7 @@ export default function RNASequencingPage() {
       {/* Section 6+7 wrapper with omics.svg page-wide background */}
       <div style={{ position: "relative" }}>
         <img
-          src="/images/omics.svg"
+          src="/images/omics.png"
           alt=""
           style={{
             position: "absolute",
@@ -1125,7 +1125,7 @@ export default function RNASequencingPage() {
           {/* Left - Cloud image */}
           <div style={{ flex: "0 0 45%", position: "relative" }}>
             <img
-              src="/images/omics.svg"
+              src="/images/omics.png"
               alt="OmicsWeb AI Co-Pilot"
               style={{
                 width: "100%",
