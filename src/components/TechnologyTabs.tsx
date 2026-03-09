@@ -75,8 +75,9 @@ export default function TechnologyTabs() {
       {/* Tab buttons row */}
       <div
         style={{
-          display: "flex",
-          gap: "12px",
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr 1fr",
+          gap: "0px",
           marginBottom: "12px",
         }}
       >
@@ -87,7 +88,6 @@ export default function TechnologyTabs() {
               key={t.id}
               onClick={() => setActive(t.id)}
               style={{
-                flex: 1,
                 display: "flex",
                 alignItems: "center",
                 gap: "16px",
