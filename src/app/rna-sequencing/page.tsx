@@ -44,12 +44,11 @@ export default function RNASequencingPage() {
                 at{" "}
                 <span
                   style={{
-                    background: "linear-gradient(135deg, #8258c8, #2c84c8)",
+                    backgroundImage: "linear-gradient(135deg, #8258c8, #2c84c8)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
                     color: "transparent",
-                    display: "inline",
                   }}
                 >
                   $60 per Sample
