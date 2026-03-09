@@ -920,7 +920,7 @@ export default function RNASequencingPage() {
             bottom: "0",
             width: "55%",
             height: "auto",
-            opacity: 0.12,
+            opacity: 1,
             pointerEvents: "none",
             zIndex: 0,
           }}
@@ -1122,19 +1122,7 @@ export default function RNASequencingPage() {
             gap: "60px",
           }}
         >
-          {/* Left - Cloud image */}
-          <div style={{ flex: "0 0 45%", position: "relative" }}>
-            <img
-              src="/images/omics.png"
-              alt="OmicsWeb AI Co-Pilot"
-              style={{
-                width: "100%",
-                height: "auto",
-              }}
-            />
-          </div>
-
-          {/* Right - Content */}
+          {/* Content */}
           <div style={{ flex: 1 }}>
             <h2
               style={{
