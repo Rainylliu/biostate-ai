@@ -121,7 +121,7 @@ export default function RNASequencingPage() {
           style={{
             maxWidth: "1280px",
             margin: "0 auto",
-            padding: "0 40px",
+            padding: "48px 40px 0",
             position: "relative",
             zIndex: 1,
           }}
