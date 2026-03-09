@@ -103,7 +103,6 @@ export default function TechnologyTabs() {
                 cursor: "pointer",
                 position: "relative",
                 transition: "all 0.3s ease",
-                overflow: "hidden",
               }}
             >
               {/* Icon */}
@@ -121,17 +120,20 @@ export default function TechnologyTabs() {
                 }}
               />
               {t.label}
-              {/* Bottom glow bar */}
+              {/* Bottom elliptical glow */}
               {isActive && (
                 <div
                   style={{
                     position: "absolute",
-                    bottom: "0",
-                    left: "0",
-                    width: "100%",
-                    height: "3px",
+                    bottom: "-20px",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    width: "60%",
+                    height: "40px",
+                    borderRadius: "50%",
                     background: "#3580C7",
-                    boxShadow: "0 0 16px 4px rgba(53, 128, 199, 0.6), 0 0 40px 8px rgba(53, 128, 199, 0.25)",
+                    filter: "blur(100px)",
+                    pointerEvents: "none",
                   }}
                 />
               )}
