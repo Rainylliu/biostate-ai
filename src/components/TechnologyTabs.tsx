@@ -146,11 +146,11 @@ export default function TechnologyTabs() {
           backgroundColor: "#282828",
           border: "1px solid #3f3f3f",
           borderRadius: "15px",
-          padding: "48px",
+          padding: "32px",
           display: "flex",
           gap: "48px",
           alignItems: "stretch",
-          minHeight: "500px",
+          minHeight: "560px",
         }}
       >
         {/* Left - Chart image */}
