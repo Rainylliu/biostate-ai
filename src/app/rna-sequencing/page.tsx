@@ -78,30 +78,19 @@ export default function RNASequencingPage() {
               </p>
               <a
                 href="/get-quote"
-                className="inline-flex items-center gap-3 rounded-full transition-opacity hover:opacity-90"
-                style={{
-                  background: "linear-gradient(135deg, #45d0bd, #44b6e9)",
-                  padding: "14px 28px",
-                  fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                  fontSize: "15px",
-                  fontWeight: 600,
-                  color: "#ffffff",
-                }}
+                className="book-a-call-btn book-a-call-btn-teal group"
               >
                 Get My Quote
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <line x1="4" y1="12" x2="12" y2="4" />
-                  <polyline points="5 4 12 4 12 11" />
-                </svg>
+                <span className="book-a-call-arrow">
+                  <span className="book-a-call-arrow-inner">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                </span>
               </a>
             </div>
           </div>
