@@ -518,7 +518,7 @@ export default function RNASequencingPage() {
               style={{
                 background: "linear-gradient(135deg, #E3FFFB 0%, #C6EDFF 100%)",
                 borderRadius: "20px",
-                padding: "36px 40px",
+                padding: "48px 48px",
                 display: "flex",
                 alignItems: "center",
                 gap: "24px",
@@ -584,7 +584,7 @@ export default function RNASequencingPage() {
               style={{
                 border: "1px solid #ddd",
                 borderRadius: "20px",
-                padding: "36px 40px",
+                padding: "48px 48px",
                 display: "flex",
                 alignItems: "center",
                 gap: "24px",
