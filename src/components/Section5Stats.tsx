@@ -21,42 +21,43 @@ export default function Section5Stats() {
     >
       {stats.map((stat, i) => (
         <div key={i}>
-          {stat.static ? (
-            <svg
-              viewBox="0 0 200 86"
-              style={{ width: "200px", height: "86px", display: "block", marginBottom: "16px" }}
-            >
-              <defs>
-                <linearGradient id="staticGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#45D0BD" />
-                  <stop offset="100%" stopColor="#44B6E9" />
-                </linearGradient>
-              </defs>
-              <text
-                x="0"
-                y="60"
-                fontFamily="'Sora', Arial, Helvetica, sans-serif"
-                fontSize="72"
-                fontWeight="600"
-                fill="none"
-                stroke="url(#staticGradient)"
-                strokeWidth="2"
+          <div style={{ width: "300px", height: "100px", marginBottom: "16px" }}>
+            {stat.static ? (
+              <svg
+                viewBox="0 0 300 100"
+                style={{ width: "300px", height: "100px", display: "block" }}
               >
-                {stat.static}
-              </text>
-            </svg>
-          ) : (
-            <CountUp
-              end={stat.end}
-              decimals={stat.decimals}
-              suffix={stat.suffix}
-              fontSize={72}
-              fontWeight={600}
-              strokeWidth={2}
-              gradientId={`statsGrad${i}`}
-              style={{ marginBottom: "16px" }}
-            />
-          )}
+                <defs>
+                  <linearGradient id="staticGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#45D0BD" />
+                    <stop offset="100%" stopColor="#44B6E9" />
+                  </linearGradient>
+                </defs>
+                <text
+                  x="0"
+                  y="76"
+                  fontFamily="'Sora', Arial, Helvetica, sans-serif"
+                  fontSize="72"
+                  fontWeight="600"
+                  fill="none"
+                  stroke="url(#staticGradient)"
+                  strokeWidth="2"
+                >
+                  {stat.static}
+                </text>
+              </svg>
+            ) : (
+              <CountUp
+                end={stat.end}
+                decimals={stat.decimals}
+                suffix={stat.suffix}
+                fontSize={72}
+                fontWeight={600}
+                strokeWidth={2}
+                gradientId={`statsGrad${i}`}
+              />
+            )}
+          </div>
           <p
             style={{
               fontSize: "16px",

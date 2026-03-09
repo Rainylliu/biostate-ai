@@ -899,10 +899,13 @@ export default function RNASequencingPage() {
               src="/images/card_de.svg"
               alt=""
               style={{
-                width: "120px",
+                position: "absolute",
+                right: "-20px",
+                bottom: "-20px",
+                width: "240px",
                 height: "auto",
-                opacity: 0.6,
-                flexShrink: 0,
+                opacity: 0.15,
+                pointerEvents: "none",
               }}
             />
           </div>
