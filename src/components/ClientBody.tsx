@@ -8,16 +8,14 @@ export default function ClientBody({
 }: {
   children: React.ReactNode;
 }) {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const [loaded, setLoaded] = useState(false);
 
   return (
     <>
-      {mounted && <LoadingScreen />}
-      {children}
+      <LoadingScreen onDone={() => setLoaded(true)} />
+      <div style={{ visibility: loaded ? "visible" : "hidden" }}>
+        {children}
+      </div>
     </>
   );
 }

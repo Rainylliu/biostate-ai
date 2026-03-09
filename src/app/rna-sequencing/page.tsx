@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import TechnologyTabs from "@/components/TechnologyTabs";
 import Section5Stats from "@/components/Section5Stats";
+import RNAFooter from "@/components/RNAFooter";
 
 export const metadata: Metadata = {
   title: "Total RNA Sequencing from $60/sample - biostate.AI",
@@ -909,10 +910,29 @@ export default function RNASequencingPage() {
         </div>
       </section>
 
+      {/* Section 6+7 wrapper with omics.svg page-wide background */}
+      <div style={{ position: "relative" }}>
+        <img
+          src="/images/omics.png"
+          alt=""
+          style={{
+            position: "absolute",
+            left: "0%",
+            bottom: "0",
+            width: "55%",
+            height: "auto",
+            opacity: 1,
+            pointerEvents: "none",
+            zIndex: 0,
+          }}
+        />
+
       {/* Section 6 - From FASTQ to Biological Insight */}
       <section
         style={{
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+          position: "relative",
+          zIndex: 1,
         }}
       >
         {/* Slanted scrolling banner */}
@@ -940,27 +960,9 @@ export default function RNASequencingPage() {
         {/* Main content */}
         <div
           style={{
-            position: "relative",
-            overflow: "hidden",
             padding: "80px 0 100px",
           }}
         >
-          {/* omics.svg as full background */}
-          <img
-            src="/images/omics.svg"
-            alt=""
-            style={{
-              position: "absolute",
-              left: "0",
-              bottom: "0",
-              width: "50%",
-              maxWidth: "700px",
-              height: "auto",
-              opacity: 0.15,
-              pointerEvents: "none",
-            }}
-          />
-
           <div
             style={{
               maxWidth: "1400px",
@@ -999,108 +1001,238 @@ export default function RNASequencingPage() {
                 <br />
                 Biological Insight
               </h2>
+              <img
+                src="/images/Bio.svg"
+                alt="Biostate AI"
+                style={{
+                  marginTop: "80px",
+                  width: "clamp(240px, 28vw, 380px)",
+                  height: "auto",
+                }}
+              />
             </div>
 
           {/* Right side - vertical timeline */}
           <div
             style={{
               display: "flex",
-              flexDirection: "column",
               alignItems: "flex-start",
-              position: "relative",
-              paddingLeft: "36px",
+              gap: "28px",
             }}
           >
-            {/* Vertical line */}
+            {/* Timeline column - fixed 60px wide, everything centered */}
             <div
               style={{
-                position: "absolute",
-                left: "59px",
-                top: "0",
-                bottom: "0",
-                width: "2px",
-                background: "linear-gradient(180deg, #C4B5FD 0%, #A78BFA 50%, #C4B5FD 100%)",
+                width: "60px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                flexShrink: 0,
               }}
-            />
-
-            {[
-              { icon: "/images/seq1.svg", label: "Raw FASTQ" },
-              { icon: "/images/seq2.svg", label: "Gene count matrices" },
-              { icon: "/images/seq3.svg", label: "Omicsweb Co-Pilot for Bioinformatics" },
-            ].map((item, i) => (
+            >
+              {/* Top dot */}
               <div
-                key={i}
                 style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "24px",
-                  position: "relative",
-                  zIndex: 1,
-                  marginBottom: i < 2 ? "60px" : "0",
+                  width: "20px",
+                  height: "20px",
+                  borderRadius: "50%",
+                  background: "rgba(130,88,200,0.6)",
                 }}
-              >
-                {/* Dot on line */}
-                {i === 0 && (
+              />
+
+              {[
+                "/images/seq1.svg",
+                "/images/seq2.svg",
+                "/images/seq3.svg",
+              ].map((icon, i) => (
+                <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                  {/* Line segment */}
                   <div
                     style={{
-                      position: "absolute",
-                      left: "19px",
-                      top: "-24px",
-                      width: "10px",
-                      height: "10px",
-                      borderRadius: "50%",
-                      background: "#A78BFA",
+                      width: "3px",
+                      height: "40px",
+                      background: "rgba(150,130,230,0.6)",
                     }}
                   />
-                )}
-                {/* Icon box */}
-                <div
-                  style={{
-                    width: "48px",
-                    height: "48px",
-                    borderRadius: "12px",
-                    background: "linear-gradient(135deg, #C4B5FD, #A78BFA)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    flexShrink: 0,
-                  }}
-                >
-                  <img
-                    src={item.icon}
-                    alt=""
-                    style={{ width: "24px", height: "24px" }}
-                  />
+                  {/* Icon box */}
+                  <div
+                    style={{
+                      width: "60px",
+                      height: "60px",
+                      borderRadius: "18px",
+                      background: "linear-gradient(135deg, rgba(196,181,253,0.6), rgba(130,150,230,0.6))",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <img
+                      src={icon}
+                      alt=""
+                      style={{ width: i === 2 ? "40px" : "32px", height: i === 2 ? "40px" : "32px" }}
+                    />
+                  </div>
                 </div>
-                {/* Label */}
-                <span
-                  style={{
-                    fontSize: "16px",
-                    fontWeight: 500,
-                    color: "#1f1f1f",
-                  }}
-                >
-                  {item.label}
-                </span>
-              </div>
-            ))}
+              ))}
 
-            {/* Bottom dot */}
+              {/* Line after last box */}
+              <div
+                style={{
+                  width: "3px",
+                  height: "40px",
+                  background: "rgba(80,120,200,0.7)",
+                }}
+              />
+
+              {/* Bottom dot */}
+              <div
+                style={{
+                  width: "24px",
+                  height: "24px",
+                  borderRadius: "50%",
+                  background: "rgba(50,130,210,0.7)",
+                }}
+              />
+            </div>
+
+            {/* Labels column */}
             <div
               style={{
-                position: "absolute",
-                left: "55px",
-                bottom: "-24px",
-                width: "10px",
-                height: "10px",
-                borderRadius: "50%",
-                background: "#C4B5FD",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
               }}
-            />
+            >
+              {[
+                "Raw FASTQ",
+                "Gene count matrices",
+                "Omicsweb Co-Pilot for Bioinformatics",
+              ].map((label, i) => (
+                <div
+                  key={i}
+                  style={{
+                    height: "100px",
+                    display: "flex",
+                    alignItems: "center",
+                    marginTop: i === 0 ? "20px" : "0",
+                  }}
+                >
+                  <span
+                    style={{
+                      fontSize: "17px",
+                      fontWeight: 400,
+                      color: "#1f1f1f",
+                    }}
+                  >
+                    {label}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
           </div>
         </div>
+
+        {/* OmicsWeb AI Co-Pilot */}
+        <div
+          style={{
+            maxWidth: "1400px",
+            margin: "0 auto",
+            padding: "80px 60px 100px",
+            position: "relative",
+            zIndex: 1,
+          }}
+        >
+          <div style={{ marginLeft: "auto", maxWidth: "580px" }}>
+            <h2
+              style={{
+                fontSize: "clamp(32px, 3.5vw, 48px)",
+                fontWeight: 500,
+                lineHeight: 1.15,
+                color: "#1f1f1f",
+                margin: "0 0 48px 0",
+              }}
+            >
+              OmicsWeb AI Co-Pilot
+            </h2>
+
+            <div style={{ display: "flex", flexDirection: "column", gap: "32px" }}>
+              {[
+                {
+                  icon: "/images/icon1.svg",
+                  title: "DEG analysis",
+                  desc: "Automatically identify significant biological markers with auto-generated reports.",
+                },
+                {
+                  icon: "/images/icon2.svg",
+                  title: "PCA, heatmaps, volcano plots",
+                  desc: "Visualize complex data patterns through interactive PCA, heatmaps, and volcano plots.",
+                },
+                {
+                  icon: "/images/icon3.svg",
+                  title: "GO / pathway enrichment",
+                  desc: "Reveal functional mechanisms and biological insights with GO/pathway enrichment.",
+                },
+                {
+                  icon: "/images/icon4.svg",
+                  title: "No coding required",
+                  desc: "AI-powered conversational bioinformatics analysis with no coding needed.",
+                },
+              ].map((item, i) => (
+                <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: "20px" }}>
+                  <div style={{ width: "80px", flexShrink: 0, display: "flex", justifyContent: "center", alignItems: "flex-start" }}>
+                    <img src={item.icon} alt="" style={{ width: i === 1 ? "80px" : "64px", height: i === 1 ? "80px" : "64px" }} />
+                  </div>
+                  <div>
+                    <p
+                      style={{
+                        fontSize: "15px",
+                        fontWeight: 600,
+                        color: "#1f1f1f",
+                        margin: "0 0 4px 0",
+                      }}
+                    >
+                      {item.title}
+                    </p>
+                    <p
+                      style={{
+                        fontSize: "14px",
+                        fontWeight: 400,
+                        color: "#666",
+                        lineHeight: 1.5,
+                        margin: 0,
+                      }}
+                    >
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <a
+              href="/ai"
+              className="book-a-call-btn group"
+              style={{ marginTop: "40px", display: "inline-flex" }}
+            >
+              Explore more
+              <span className="book-a-call-arrow">
+                <span className="book-a-call-arrow-inner">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+              </span>
+            </a>
+          </div>
+        </div>
       </section>
+      </div>
+
+      <RNAFooter />
     </div>
   );
 }
