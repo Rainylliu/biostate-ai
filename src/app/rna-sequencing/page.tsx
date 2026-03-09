@@ -1002,6 +1002,15 @@ export default function RNASequencingPage() {
                 <br />
                 Biological Insight
               </h2>
+              <img
+                src="/images/Bio.svg"
+                alt="Biostate AI"
+                style={{
+                  marginTop: "48px",
+                  width: "clamp(240px, 28vw, 380px)",
+                  height: "auto",
+                }}
+              />
             </div>
 
           {/* Right side - vertical timeline */}
