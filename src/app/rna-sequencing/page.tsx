@@ -52,7 +52,7 @@ export default function RNASequencingPage() {
                 style={{
                   fontFamily: "'Sora', Arial, Helvetica, sans-serif",
                   fontSize: "clamp(36px, 5vw, 64px)",
-                  fontWeight: 600,
+                  fontWeight: 500,
                   lineHeight: 1.1,
                   color: "#1f1f1f",
                   marginBottom: "0",
@@ -290,7 +290,7 @@ export default function RNASequencingPage() {
             style={{
               fontFamily: "'Sora', Arial, Helvetica, sans-serif",
               fontSize: "clamp(32px, 4vw, 48px)",
-              fontWeight: 700,
+              fontWeight: 500,
               color: "#1f1f1f",
               lineHeight: 1.2,
               margin: "0 0 16px 0",
