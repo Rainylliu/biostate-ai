@@ -509,7 +509,7 @@ img {
   display: flex;
   width: max-content;
   white-space: nowrap;
-  animation: marquee-scroll 45s linear infinite;
+  animation: marquee-scroll 25s linear infinite;
 }
 
 .marquee-banner-text {
