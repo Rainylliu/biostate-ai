@@ -1015,46 +1015,45 @@ export default function RNASequencingPage() {
           <div
             style={{
               display: "flex",
-              flexDirection: "column",
               alignItems: "flex-start",
-              position: "relative",
+              gap: "28px",
             }}
           >
-            {/* Top dot */}
+            {/* Timeline column - fixed 60px wide, everything centered */}
             <div
               style={{
-                width: "20px",
-                height: "20px",
-                borderRadius: "50%",
-                background: "rgba(130,88,200,0.6)",
-                marginLeft: "20px",
-                marginBottom: "16px",
+                width: "60px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                flexShrink: 0,
               }}
-            />
+            >
+              {/* Top dot */}
+              <div
+                style={{
+                  width: "20px",
+                  height: "20px",
+                  borderRadius: "50%",
+                  background: "rgba(130,88,200,0.6)",
+                }}
+              />
 
-            {[
-              { icon: "/images/seq1.svg", label: "Raw FASTQ" },
-              { icon: "/images/seq2.svg", label: "Gene count matrices" },
-              { icon: "/images/seq3.svg", label: "Omicsweb Co-Pilot for Bioinformatics", iconSize: "40px" },
-            ].map((item, i) => (
-              <div key={i}>
-                {/* Segment line above box (between previous element and this box) */}
-                <div
-                  style={{
-                    width: "3px",
-                    height: "40px",
-                    background: "rgba(150,130,230,0.6)",
-                    marginLeft: "29px",
-                  }}
-                />
-                {/* Icon box + label row */}
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "28px",
-                  }}
-                >
+              {[
+                "/images/seq1.svg",
+                "/images/seq2.svg",
+                "/images/seq3.svg",
+              ].map((icon, i) => (
+                <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                  {/* Line segment */}
+                  <div
+                    style={{
+                      width: "3px",
+                      height: "40px",
+                      background: "rgba(150,130,230,0.6)",
+                    }}
+                  />
+                  {/* Icon box */}
                   <div
                     style={{
                       width: "60px",
@@ -1064,15 +1063,59 @@ export default function RNASequencingPage() {
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
-                      flexShrink: 0,
                     }}
                   >
                     <img
-                      src={item.icon}
+                      src={icon}
                       alt=""
-                      style={{ width: item.iconSize || "32px", height: item.iconSize || "32px" }}
+                      style={{ width: i === 2 ? "40px" : "32px", height: i === 2 ? "40px" : "32px" }}
                     />
                   </div>
+                </div>
+              ))}
+
+              {/* Line after last box */}
+              <div
+                style={{
+                  width: "3px",
+                  height: "40px",
+                  background: "rgba(120,160,230,0.6)",
+                }}
+              />
+
+              {/* Bottom dot */}
+              <div
+                style={{
+                  width: "24px",
+                  height: "24px",
+                  borderRadius: "50%",
+                  background: "rgba(68,182,233,0.6)",
+                }}
+              />
+            </div>
+
+            {/* Labels column */}
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+              }}
+            >
+              {[
+                "Raw FASTQ",
+                "Gene count matrices",
+                "Omicsweb Co-Pilot for Bioinformatics",
+              ].map((label, i) => (
+                <div
+                  key={i}
+                  style={{
+                    height: "100px",
+                    display: "flex",
+                    alignItems: "center",
+                    marginTop: i === 0 ? "20px" : "0",
+                  }}
+                >
                   <span
                     style={{
                       fontSize: "17px",
@@ -1080,32 +1123,11 @@ export default function RNASequencingPage() {
                       color: "#1f1f1f",
                     }}
                   >
-                    {item.label}
+                    {label}
                   </span>
                 </div>
-              </div>
-            ))}
-
-            {/* Line after last box */}
-            <div
-              style={{
-                width: "3px",
-                height: "40px",
-                background: "rgba(120,160,230,0.6)",
-                marginLeft: "43px",
-              }}
-            />
-
-            {/* Bottom dot */}
-            <div
-              style={{
-                width: "24px",
-                height: "24px",
-                borderRadius: "50%",
-                background: "rgba(68,182,233,0.6)",
-                marginLeft: "18px",
-              }}
-            />
+              ))}
+            </div>
           </div>
           </div>
         </div>
