@@ -50,7 +50,7 @@ export default function RNASequencingPage() {
             <div style={{ flex: "1 1 0" }}>
               <h1
                 style={{
-                  fontFamily: "'Sora', sans-serif",
+                  fontFamily: "'Sora', Arial, Helvetica, sans-serif",
                   fontSize: "clamp(36px, 5vw, 64px)",
                   fontWeight: 600,
                   lineHeight: 1.1,
@@ -288,7 +288,7 @@ export default function RNASequencingPage() {
           {/* Title */}
           <h2
             style={{
-              fontFamily: "'Sora', sans-serif",
+              fontFamily: "'Sora', Arial, Helvetica, sans-serif",
               fontSize: "clamp(32px, 4vw, 48px)",
               fontWeight: 700,
               color: "#1f1f1f",
@@ -394,10 +394,10 @@ export default function RNASequencingPage() {
               }}
             >
               <span style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
-                <img src="/images/wrong.svg" alt="" width={16} height={16} />
-                <strong style={{ color: "#EF6464" }}>Result:</strong>
+                <img src="/images/warning.svg" alt="" width={16} height={16} />
+                <strong style={{ color: "#7F1D1D" }}>Result:</strong>
               </span>
-              <span style={{ color: "#888" }}>
+              <span style={{ color: "#7F1D1D" }}>
                 Fewer replicates.{" "}&nbsp;|&nbsp;{" "}Smaller studies.{" "}&nbsp;|&nbsp;{" "}Limited power.
               </span>
             </p>
