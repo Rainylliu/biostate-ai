@@ -98,8 +98,8 @@ export default function TechnologyTabs() {
                 backgroundColor: "#282828",
                 color: isActive ? "#fff" : "rgba(255,255,255,0.45)",
                 fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                fontSize: "24px",
-                fontWeight: isActive ? 600 : 400,
+                fontSize: "20px",
+                fontWeight: 400,
                 cursor: "pointer",
                 position: "relative",
                 transition: "all 0.3s ease",
@@ -110,8 +110,8 @@ export default function TechnologyTabs() {
               <img
                 src={t.icon}
                 alt=""
-                width={28}
-                height={28}
+                width={40}
+                height={40}
                 style={{
                   filter: isActive
                     ? "brightness(0) saturate(100%) invert(30%) sepia(90%) saturate(700%) hue-rotate(195deg) brightness(95%) contrast(95%)"
