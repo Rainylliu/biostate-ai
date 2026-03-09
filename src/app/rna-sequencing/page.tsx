@@ -278,7 +278,7 @@ export default function RNASequencingPage() {
         />
         <div
           style={{
-            maxWidth: "1080px",
+            maxWidth: "1200px",
             margin: "0 auto",
             textAlign: "center",
             position: "relative",
@@ -320,7 +320,7 @@ export default function RNASequencingPage() {
               display: "flex",
               justifyContent: "center",
               gap: "40px",
-              flexWrap: "wrap",
+              flexWrap: "nowrap",
               marginBottom: "48px",
             }}
           >
