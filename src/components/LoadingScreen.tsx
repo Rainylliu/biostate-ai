@@ -2,14 +2,17 @@
 
 import { useState, useEffect } from "react";
 
-export default function LoadingScreen() {
+export default function LoadingScreen({ onDone }: { onDone?: () => void }) {
   const [visible, setVisible] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
     const startFadeOut = () => {
       setFadeOut(true);
-      setTimeout(() => setVisible(false), 500);
+      setTimeout(() => {
+        setVisible(false);
+        onDone?.();
+      }, 500);
     };
 
     if (document.readyState === "complete") {
@@ -22,7 +25,7 @@ export default function LoadingScreen() {
 
     const fallback = setTimeout(startFadeOut, 5000);
     return () => clearTimeout(fallback);
-  }, []);
+  }, [onDone]);
 
   if (!visible) return null;
 
