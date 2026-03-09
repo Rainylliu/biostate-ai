@@ -873,7 +873,7 @@ export default function RNASequencingPage() {
                         alignItems: "center",
                         gap: "8px",
                         padding: "8px 20px",
-                        borderRadius: "999px",
+                        borderRadius: "12px",
                         background: "#fff",
                         backgroundClip: "padding-box",
                         border: "2px solid transparent",

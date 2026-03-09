@@ -17,10 +17,11 @@ export default function Section5Stats() {
         gridTemplateColumns: "1fr 1fr 1fr 1fr",
         gap: "40px",
         marginBottom: "40px",
+        textAlign: "center",
       }}
     >
       {stats.map((stat, i) => (
-        <div key={i}>
+        <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
           <div style={{ height: "100px", marginBottom: "16px", overflow: "visible" }}>
             {stat.static ? (
               <svg
