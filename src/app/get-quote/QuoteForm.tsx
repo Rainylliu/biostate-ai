@@ -97,6 +97,7 @@ export default function QuoteForm() {
   const [usState, setUsState] = useState("");
   const [zip, setZip] = useState("");
   const [organism, setOrganism] = useState("");
+  const [organismSpec, setOrganismSpec] = useState("");
   const [sampleRows, setSampleRows] = useState<SampleRow[]>([
     { count: "", type: "" },
   ]);
@@ -176,6 +177,7 @@ export default function QuoteForm() {
             state: usState,
             zip,
             organism,
+            organismSpec,
             sampleRows,
             otherRows,
             qc,
@@ -372,6 +374,27 @@ export default function QuoteForm() {
             </option>
           ))}
         </select>
+
+        {/* Conditional: show when "Other (Please specify)" is selected */}
+        {organism === "Other (Please specify)" && (
+          <div style={{ marginTop: "16px", maxWidth: "calc(60%)" }}>
+            <label
+              style={{
+                ...labelStyle,
+                fontSize: "14px",
+                fontWeight: 600,
+              }}
+            >
+              Please specify the organism
+            </label>
+            <input
+              type="text"
+              style={inputStyle}
+              value={organismSpec}
+              onChange={(e) => setOrganismSpec(e.target.value)}
+            />
+          </div>
+        )}
       </div>
 
       <hr style={sectionDividerStyle} />
