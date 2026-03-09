@@ -945,22 +945,6 @@ export default function RNASequencingPage() {
             padding: "80px 0 100px",
           }}
         >
-          {/* omics.svg as full background */}
-          <img
-            src="/images/omics.svg"
-            alt=""
-            style={{
-              position: "absolute",
-              left: "0",
-              bottom: "0",
-              width: "50%",
-              maxWidth: "700px",
-              height: "auto",
-              opacity: 0.15,
-              pointerEvents: "none",
-            }}
-          />
-
           <div
             style={{
               maxWidth: "1400px",
