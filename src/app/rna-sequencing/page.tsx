@@ -1101,6 +1101,135 @@ export default function RNASequencingPage() {
           </div>
         </div>
       </section>
+
+      {/* Section 7 - OmicsWeb AI Co-Pilot */}
+      <section
+        style={{
+          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+          padding: "80px 0 100px",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "1400px",
+            margin: "0 auto",
+            padding: "0 60px",
+            display: "flex",
+            alignItems: "center",
+            gap: "60px",
+          }}
+        >
+          {/* Left - Cloud image */}
+          <div style={{ flex: "0 0 45%", position: "relative" }}>
+            <img
+              src="/images/cloud.png"
+              alt="OmicsWeb AI Co-Pilot"
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
+            />
+          </div>
+
+          {/* Right - Content */}
+          <div style={{ flex: 1 }}>
+            <h2
+              style={{
+                fontSize: "clamp(32px, 3.5vw, 48px)",
+                fontWeight: 500,
+                lineHeight: 1.15,
+                color: "#1f1f1f",
+                margin: "0 0 48px 0",
+              }}
+            >
+              OmicsWeb AI Co-Pilot
+            </h2>
+
+            <div style={{ display: "flex", flexDirection: "column", gap: "32px" }}>
+              {[
+                {
+                  icon: "/images/icon-deg.svg",
+                  title: "DEG analysis",
+                  desc: "Automatically identify significant biological markers with auto-generated reports.",
+                },
+                {
+                  icon: "/images/icon-pca.svg",
+                  title: "PCA, heatmaps, volcano plots",
+                  desc: "Visualize complex data patterns through interactive PCA, heatmaps, and volcano plots.",
+                },
+                {
+                  icon: "/images/icon-go.svg",
+                  title: "GO / pathway enrichment",
+                  desc: "Reveal functional mechanisms and biological insights with GO/pathway enrichment.",
+                },
+                {
+                  icon: "/images/icon-nocode.svg",
+                  title: "No coding required",
+                  desc: "AI-powered conversational bioinformatics analysis with no coding needed.",
+                },
+              ].map((item, i) => (
+                <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: "16px" }}>
+                  <div
+                    style={{
+                      width: "48px",
+                      height: "48px",
+                      borderRadius: "50%",
+                      background: "linear-gradient(135deg, #E8E0FF, #F3EEFF)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexShrink: 0,
+                    }}
+                  >
+                    <img src={item.icon} alt="" style={{ width: "24px", height: "24px" }} />
+                  </div>
+                  <div>
+                    <p
+                      style={{
+                        fontSize: "15px",
+                        fontWeight: 600,
+                        color: "#1f1f1f",
+                        margin: "0 0 4px 0",
+                      }}
+                    >
+                      {item.title}
+                    </p>
+                    <p
+                      style={{
+                        fontSize: "14px",
+                        fontWeight: 400,
+                        color: "#666",
+                        lineHeight: 1.5,
+                        margin: 0,
+                      }}
+                    >
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <a
+              href="/ai"
+              className="book-a-call-btn group"
+              style={{ marginTop: "40px", display: "inline-flex" }}
+            >
+              Explore more
+              <span className="book-a-call-arrow">
+                <span className="book-a-call-arrow-inner">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
