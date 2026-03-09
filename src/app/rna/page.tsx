@@ -143,7 +143,7 @@ export default function RNAPage() {
             >
               {/* Icon 1 */}
               <img
-                src="/images/icon1.svg"
+                src="/images/pricecard1.svg"
                 alt="Standard Samples"
                 width={62}
                 height={70}
@@ -215,7 +215,7 @@ export default function RNAPage() {
             >
               {/* Icon 2 */}
               <img
-                src="/images/icon2.svg"
+                src="/images/pricecard2.svg"
                 alt="Specialty Samples"
                 width={68}
                 height={73}
