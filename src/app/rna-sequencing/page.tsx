@@ -915,24 +915,26 @@ export default function RNASequencingPage() {
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
         }}
       >
-        {/* Top gradient banner */}
+        {/* Slanted scrolling banner */}
         <div
           style={{
-            background: "linear-gradient(135deg, #45D0BD 0%, #44B6E9 50%, #A78BFA 100%)",
-            padding: "36px 60px",
+            transform: "rotate(-2.07deg)",
+            backgroundImage: "linear-gradient(92deg, #45D0BD 0%, #44B6E9 100%)",
+            margin: "0 -5px",
+            padding: "50px 0",
+            position: "relative",
+            zIndex: 2,
           }}
         >
-          <p
-            style={{
-              fontSize: "clamp(28px, 3.5vw, 44px)",
-              fontWeight: 500,
-              fontStyle: "italic",
-              color: "#fff",
-              margin: 0,
-            }}
-          >
-            / From sequencing to biological insight — faster than ever.
-          </p>
+          <div className="marquee-banner">
+            <div className="marquee-banner-track">
+              {[...Array(12)].map((_, i) => (
+                <span key={i} className="marquee-banner-text">
+                  /From sequencing to biological insight — faster than ever.&nbsp;&nbsp;
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Main content */}
