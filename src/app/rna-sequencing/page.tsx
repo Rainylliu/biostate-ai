@@ -14,13 +14,32 @@ export default function RNASequencingPage() {
         style={{
           paddingTop: "40px",
           paddingBottom: "60px",
+          position: "relative",
+          overflow: "hidden",
         }}
       >
+        {/* Background Image */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/bg3.png"
+          alt=""
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            zIndex: 0,
+            pointerEvents: "none",
+          }}
+        />
         <div
           style={{
             maxWidth: "1280px",
             margin: "0 auto",
             padding: "0 40px",
+            position: "relative",
+            zIndex: 1,
           }}
         >
           <div
