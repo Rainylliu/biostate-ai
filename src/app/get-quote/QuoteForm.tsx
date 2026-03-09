@@ -196,6 +196,7 @@ export default function QuoteForm() {
         style={{
           textAlign: "center",
           padding: "60px 24px 80px",
+          minHeight: "60vh",
         }}
       >
         <h3
