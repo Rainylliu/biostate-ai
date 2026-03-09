@@ -706,13 +706,16 @@ export default function QuoteForm() {
       </div>
 
       {/* Submit button */}
-      <div style={{ display: "flex", gap: "16px", alignItems: "center", flexWrap: "wrap" }}>
+      <div>
         <button
           type="submit"
           className="book-a-call-btn"
           disabled={submitting}
           style={{
+            background: "linear-gradient(135deg, #8258c8, #2c84c8)",
+            color: "#ffffff",
             cursor: submitting ? "wait" : "pointer",
+            border: "none",
             opacity: submitting ? 0.7 : 1,
           }}
         >
@@ -740,35 +743,6 @@ export default function QuoteForm() {
             </span>
           </span>
         </button>
-        <a
-          href="/Biostate_AI_Service_Overview.pdf"
-          download
-          className="book-a-call-btn"
-        >
-          Download
-          <span className="book-a-call-arrow">
-            <span className="book-a-call-arrow-inner">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path
-                  d="M8 3V11M8 11L4 7M8 11L12 7"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path
-                  d="M8 3V11M8 11L4 7M8 11L12 7"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </span>
-          </span>
-        </a>
         <p
           style={{
             fontFamily: font,
