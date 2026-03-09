@@ -749,6 +749,213 @@ export default function RNASequencingPage() {
           </div>
         </div>
       </section>
+
+      {/* Section 5 - High Quality */}
+      <section
+        style={{
+          padding: "80px 0",
+          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "1400px",
+            margin: "0 auto",
+            padding: "0 60px",
+          }}
+        >
+          {/* Header row */}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "flex-end",
+              marginBottom: "56px",
+            }}
+          >
+            {/* Left - Tag + Title */}
+            <div>
+              <p
+                style={{
+                  fontSize: "14px",
+                  fontWeight: 400,
+                  color: "#999",
+                  margin: "0 0 12px 0",
+                }}
+              >
+                / data /
+              </p>
+              <h2
+                style={{
+                  fontSize: "clamp(36px, 4vw, 52px)",
+                  fontWeight: 500,
+                  lineHeight: 1.15,
+                  color: "#1f1f1f",
+                  margin: 0,
+                }}
+              >
+                High Quality.
+                <br />
+                Not Just Low Cost.
+              </h2>
+            </div>
+
+            {/* Right - Subtext + Button */}
+            <div style={{ textAlign: "left", maxWidth: "400px", display: "flex", alignItems: "center", gap: "32px" }}>
+              <p
+                style={{
+                  fontSize: "15px",
+                  fontWeight: 400,
+                  color: "#666",
+                  lineHeight: 1.6,
+                  margin: 0,
+                  whiteSpace: "nowrap",
+                }}
+              >
+                Built for real-world samples — not just ideal RNA.
+              </p>
+              <a
+                href="/pdf/20260223 RNA_Seq- Price Card_2026.pdf"
+                download
+                className="book-a-call-btn group"
+                style={{ whiteSpace: "nowrap" }}
+              >
+                Download Price Card
+                <span className="book-a-call-arrow">
+                  <span className="book-a-call-arrow-inner">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          {/* Stats Row */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr 1fr",
+              gap: "40px",
+              marginBottom: "40px",
+            }}
+          >
+            {[
+              { value: "92.4%", label: "Q30 Base Rate", sub: ">80% industry standard" },
+              { value: "93.2%", label: "Mapping Rate", sub: "Typical range: 70–85%" },
+              { value: ">0.95", label: "Replicate Correlation", sub: "" },
+              { value: "99.8%", label: "rRNA Depletion", sub: "" },
+            ].map((stat, i) => (
+              <div key={i}>
+                <p
+                  style={{
+                    fontFamily: "'Sora', Arial, Helvetica, sans-serif",
+                    fontSize: "clamp(48px, 5vw, 72px)",
+                    fontWeight: 600,
+                    lineHeight: 1,
+                    color: "transparent",
+                    WebkitTextStroke: "2px #A6EFFC",
+                    margin: "0 0 16px 0",
+                  }}
+                >
+                  {stat.value}
+                </p>
+                <p
+                  style={{
+                    fontSize: "16px",
+                    fontWeight: 600,
+                    color: "#1f1f1f",
+                    margin: "0 0 4px 0",
+                  }}
+                >
+                  {stat.label}
+                </p>
+                {stat.sub && (
+                  <p
+                    style={{
+                      fontSize: "14px",
+                      fontWeight: 400,
+                      color: "#888",
+                      margin: 0,
+                    }}
+                  >
+                    {stat.sub}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Bottom Card - Validated sample types */}
+          <div
+            style={{
+              backgroundColor: "rgba(166, 239, 252, 0.2)",
+              borderRadius: "20px",
+              padding: "36px 48px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              position: "relative",
+              overflow: "hidden",
+            }}
+          >
+            <div>
+              <p
+                style={{
+                  fontSize: "16px",
+                  fontWeight: 500,
+                  color: "#333",
+                  margin: "0 0 20px 0",
+                }}
+              >
+                Validated across challenging sample types:
+              </p>
+              <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+                {["FFPE", "Whole blood", "PBMC", "Plasma / evRNA", "Degraded RNA"].map(
+                  (type, i) => (
+                    <span
+                      key={i}
+                      style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "8px",
+                        padding: "8px 20px",
+                        borderRadius: "999px",
+                        border: "1px solid #ccc",
+                        backgroundColor: "#fff",
+                        fontSize: "14px",
+                        fontWeight: 500,
+                        color: "#333",
+                      }}
+                    >
+                      <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                        <path d="M3 8.5L6.5 12L13 5" stroke="#45D0BD" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      {type}
+                    </span>
+                  )
+                )}
+              </div>
+            </div>
+
+            {/* Microscope icon */}
+            <img
+              src="/images/card_de.svg"
+              alt=""
+              style={{
+                width: "120px",
+                height: "auto",
+                opacity: 0.6,
+                flexShrink: 0,
+              }}
+            />
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
