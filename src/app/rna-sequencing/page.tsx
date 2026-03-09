@@ -1164,6 +1164,7 @@ export default function RNASequencingPage() {
                 },
                 {
                   icon: "/images/icon2.svg",
+                  iconSize: "64px",
                   title: "PCA, heatmaps, volcano plots",
                   desc: "Visualize complex data patterns through interactive PCA, heatmaps, and volcano plots.",
                 },
@@ -1179,7 +1180,7 @@ export default function RNASequencingPage() {
                 },
               ].map((item, i) => (
                 <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: "16px" }}>
-                  <img src={item.icon} alt="" style={{ width: "48px", height: "48px", flexShrink: 0 }} />
+                  <img src={item.icon} alt="" style={{ width: item.iconSize || "48px", height: item.iconSize || "48px", flexShrink: 0 }} />
                   <div>
                     <p
                       style={{
