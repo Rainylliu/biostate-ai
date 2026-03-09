@@ -753,7 +753,7 @@ export default function QuoteForm() {
         >
           By submitting, you agree to Biostate&apos;s{" "}
           <a
-            href="/sales-tc"
+            href="/tc"
             target="_blank"
             rel="noopener noreferrer"
             className="terms-link"

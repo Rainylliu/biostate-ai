@@ -247,7 +247,7 @@ export default function SalesTCPage() {
             >
               By submitting, you agree to Biostate&apos;s{" "}
               <a
-                href="/sales-tc"
+                href="/tc"
                 style={{ color: "#44B6E9", textDecoration: "none" }}
               >
                 Terms &amp; Conditions
