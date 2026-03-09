@@ -652,7 +652,7 @@ export default function RNASequencingPage() {
       {/* Section 4 - BIRT + PERD v3 Technology */}
       <section
         style={{
-          padding: "100px 0",
+          padding: "30px 0 100px",
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
         }}
       >
