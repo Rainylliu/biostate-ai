@@ -1,9 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
 export default function LandingHeader() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [calendlyOpen, setCalendlyOpen] = useState(false);
   const [menuHovered, setMenuHovered] = useState(false);
@@ -89,7 +91,7 @@ export default function LandingHeader() {
             {/* Nav items */}
             <nav className="hidden md:flex items-center gap-1" style={{ marginRight: "40px" }}>
               <Link
-                href="#pricing"
+                href={pathname === "/rna-sequencing" ? "#pricing" : "/rna-sequencing#pricing"}
                 className="transition-colors hover:bg-[#F0F2F4]"
                 style={{
                   fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
