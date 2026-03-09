@@ -103,6 +103,7 @@ export default function TechnologyTabs() {
                 cursor: "pointer",
                 position: "relative",
                 transition: "all 0.3s ease",
+                overflow: "hidden",
               }}
             >
               {/* Icon */}
@@ -125,14 +126,14 @@ export default function TechnologyTabs() {
                 <div
                   style={{
                     position: "absolute",
-                    bottom: "-20px",
+                    bottom: "-10px",
                     left: "50%",
                     transform: "translateX(-50%)",
                     width: "60%",
-                    height: "40px",
+                    height: "30px",
                     borderRadius: "50%",
                     background: "#3580C7",
-                    filter: "blur(40px)",
+                    filter: "blur(20px)",
                     pointerEvents: "none",
                   }}
                 />
