@@ -959,8 +959,6 @@ export default function RNASequencingPage() {
         {/* Main content */}
         <div
           style={{
-            position: "relative",
-            overflow: "hidden",
             padding: "80px 0 100px",
           }}
         >
@@ -1122,6 +1120,8 @@ export default function RNASequencingPage() {
             display: "flex",
             alignItems: "center",
             gap: "60px",
+            position: "relative",
+            zIndex: 1,
           }}
         >
           {/* Content */}
