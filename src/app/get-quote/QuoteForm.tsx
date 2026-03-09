@@ -110,11 +110,10 @@ export default function QuoteForm() {
 
   useEffect(() => {
     if (submitted) {
-      // Small delay to ensure DOM has fully updated after state change
-      setTimeout(() => {
-        document.documentElement.scrollTop = 0;
-        document.body.scrollTop = 0; // Safari fallback
-      }, 100);
+      const top = document.getElementById("quote-top");
+      if (top) {
+        top.scrollIntoView({ behavior: "instant", block: "start" });
+      }
     }
   }, [submitted]);
 
