@@ -1,10 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import WaveReveal from "@/components/WaveReveal";
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  // RNA sequencing page uses its own custom footer
+  if (pathname === "/rna-sequencing") return null;
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
