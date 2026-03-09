@@ -104,8 +104,8 @@ export default function LandingHeader() {
               >
                 PRICING
               </Link>
-              <Link
-                href="/get-started"
+              <a
+                href="#getting-started"
                 className="transition-colors hover:bg-[#F0F2F4]"
                 style={{
                   fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
@@ -119,7 +119,7 @@ export default function LandingHeader() {
                 }}
               >
                 GET STARTED
-              </Link>
+              </a>
               <div
                 className="relative"
                 onMouseEnter={() => setResourcesOpen(true)}

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import RNAFooter from "@/components/RNAFooter";
 
 export const metadata: Metadata = {
   title: "BIRT+PERD White Paper - biostate.AI",
@@ -276,6 +277,8 @@ export default function WhitePaperPage() {
           </div>
         </div>
       </section>
+
+      <RNAFooter />
     </div>
   );
 }
