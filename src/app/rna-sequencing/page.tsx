@@ -419,7 +419,7 @@ export default function RNASequencingPage() {
             margin: "0 auto",
             padding: "0 60px",
             display: "flex",
-            gap: "24px",
+            gap: "60px",
             alignItems: "flex-start",
           }}
         >
