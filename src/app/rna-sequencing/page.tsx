@@ -408,6 +408,7 @@ export default function RNASequencingPage() {
 
       {/* Section 3 - Our Pricing */}
       <section
+        id="pricing"
         style={{
           padding: "40px 0",
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
