@@ -278,7 +278,7 @@ export default function RNASequencingPage() {
             }}
           >
             Still Paying{" "}
-            <span style={{ color: "#E85B5B" }}>$200+</span>{" "}
+            <span style={{ color: "#EF6464" }}>$200+</span>{" "}
             per Sample for
             <br />
             RNA-seq?
@@ -308,59 +308,10 @@ export default function RNASequencingPage() {
             }}
           >
             {[
-              {
-                icon: (
-                  <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
-                    <circle cx="28" cy="44" rx="12" ry="3" stroke="#333" strokeWidth="1.5" />
-                    <ellipse cx="28" cy="38" rx="12" ry="3" stroke="#333" strokeWidth="1.5" />
-                    <ellipse cx="28" cy="32" rx="12" ry="3" stroke="#333" strokeWidth="1.5" />
-                    <ellipse cx="28" cy="26" rx="12" ry="3" stroke="#333" strokeWidth="1.5" />
-                    <line x1="16" y1="26" x2="16" y2="44" stroke="#333" strokeWidth="1.5" />
-                    <line x1="40" y1="26" x2="40" y2="44" stroke="#333" strokeWidth="1.5" />
-                    <circle cx="28" cy="14" r="6" stroke="#333" strokeWidth="1.5" />
-                    <text x="28" y="18" textAnchor="middle" fontSize="10" fill="#333" fontWeight="600">$</text>
-                  </svg>
-                ),
-                text: "$200+ per sample typical cost",
-              },
-              {
-                icon: (
-                  <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
-                    <rect x="22" y="8" width="12" height="40" rx="6" stroke="#333" strokeWidth="1.5" />
-                    <line x1="22" y1="16" x2="34" y2="16" stroke="#333" strokeWidth="1.5" />
-                    <rect x="24" y="18" width="8" height="12" rx="1" fill="#e0e0e0" />
-                    <circle cx="28" cy="6" r="2" fill="#333" />
-                  </svg>
-                ),
-                text: "~75% of cost from library prep",
-              },
-              {
-                icon: (
-                  <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
-                    <rect x="10" y="40" width="6" height="8" fill="#e0e0e0" stroke="#333" strokeWidth="1" />
-                    <rect x="18" y="32" width="6" height="16" fill="#e0e0e0" stroke="#333" strokeWidth="1" />
-                    <rect x="26" y="24" width="6" height="24" fill="#e0e0e0" stroke="#333" strokeWidth="1" />
-                    <rect x="34" y="16" width="6" height="32" fill="#e0e0e0" stroke="#333" strokeWidth="1" />
-                    <path d="M12 36L20 28L28 20L38 14" stroke="#333" strokeWidth="1.5" fill="none" />
-                    <path d="M34 14H40V20" stroke="#333" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                ),
-                text: "Up to 80% reads wasted on rRNA",
-              },
-              {
-                icon: (
-                  <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
-                    <path d="M28 8V48" stroke="#333" strokeWidth="1.5" />
-                    <path d="M28 8C22 14 22 20 28 26C34 20 34 14 28 8Z" stroke="#333" strokeWidth="1.5" fill="none" />
-                    <path d="M28 26C22 32 22 38 28 44C34 38 34 32 28 26Z" stroke="#333" strokeWidth="1.5" fill="none" />
-                    <line x1="22" y1="12" x2="28" y2="18" stroke="#333" strokeWidth="1" />
-                    <line x1="34" y1="12" x2="28" y2="18" stroke="#333" strokeWidth="1" />
-                    <line x1="22" y1="32" x2="28" y2="38" stroke="#333" strokeWidth="1" />
-                    <line x1="34" y1="32" x2="28" y2="38" stroke="#333" strokeWidth="1" />
-                  </svg>
-                ),
-                text: "Poly(A) bias misses lncRNA & regulatory RNAs",
-              },
+              { icon: "/images/1.svg", text: "$200+ per sample typical cost" },
+              { icon: "/images/2.svg", text: "~75% of cost from library prep" },
+              { icon: "/images/3.svg", text: "Up to 80% reads wasted on rRNA" },
+              { icon: "/images/4.svg", text: "Poly(A) bias misses lncRNA & regulatory RNAs" },
             ].map((item, i) => (
               <div
                 key={i}
@@ -373,7 +324,7 @@ export default function RNASequencingPage() {
                 }}
               >
                 <div style={{ height: "72px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  {item.icon}
+                  <img src={item.icon} alt="" width={56} height={56} />
                 </div>
                 <p
                   style={{
@@ -387,23 +338,13 @@ export default function RNASequencingPage() {
                     gap: "8px",
                   }}
                 >
-                  <span
-                    style={{
-                      display: "inline-flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      width: "18px",
-                      height: "18px",
-                      borderRadius: "4px",
-                      background: "#FDEAEA",
-                      color: "#E85B5B",
-                      fontSize: "12px",
-                      fontWeight: 700,
-                      flexShrink: 0,
-                    }}
-                  >
-                    !
-                  </span>
+                  <img
+                    src="/images/wrong.svg"
+                    alt=""
+                    width={20}
+                    height={20}
+                    style={{ flexShrink: 0 }}
+                  />
                   {item.text}
                 </p>
               </div>
@@ -413,8 +354,8 @@ export default function RNASequencingPage() {
           {/* Result Banner */}
           <div
             style={{
-              background: "#FDF2F2",
-              borderLeft: "4px solid #E85B5B",
+              background: "#FEF2F2",
+              borderLeft: "4px solid #EF6464",
               borderRadius: "0 12px 12px 0",
               padding: "20px 32px",
               maxWidth: "680px",
@@ -431,11 +372,8 @@ export default function RNASequencingPage() {
               }}
             >
               <span style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M8 1L1 14H15L8 1Z" fill="#E85B5B" />
-                  <text x="8" y="13" textAnchor="middle" fontSize="9" fill="#fff" fontWeight="700">!</text>
-                </svg>
-                <strong style={{ color: "#E85B5B" }}>Result:</strong>
+                <img src="/images/wrong.svg" alt="" width={16} height={16} />
+                <strong style={{ color: "#EF6464" }}>Result:</strong>
               </span>
               <br />
               <span style={{ color: "#888" }}>
