@@ -72,12 +72,12 @@ export default function TechnologyTabs() {
 
   return (
     <div>
-      {/* Tab buttons */}
+      {/* Tab buttons row */}
       <div
         style={{
           display: "flex",
-          gap: "16px",
-          marginBottom: "0",
+          gap: "12px",
+          marginBottom: "12px",
         }}
       >
         {tabs.map((t) => {
@@ -90,23 +90,22 @@ export default function TechnologyTabs() {
                 flex: 1,
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center",
-                gap: "14px",
-                padding: "20px 24px",
-                borderRadius: "16px 16px 0 0",
-                border: "1px solid rgba(255,255,255,0.15)",
-                borderBottom: isActive ? "none" : "1px solid rgba(255,255,255,0.15)",
-                backgroundColor: isActive ? "#2a2a2a" : "transparent",
-                color: isActive ? "#fff" : "rgba(255,255,255,0.5)",
+                gap: "16px",
+                padding: "22px 28px",
+                borderRadius: "14px",
+                border: "1px solid rgba(255,255,255,0.12)",
+                backgroundColor: "transparent",
+                color: isActive ? "#fff" : "rgba(255,255,255,0.45)",
                 fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                 fontSize: "15px",
                 fontWeight: isActive ? 600 : 400,
                 cursor: "pointer",
                 position: "relative",
                 transition: "all 0.3s ease",
+                overflow: "hidden",
               }}
             >
-              {/* Icon with color filter */}
+              {/* Icon */}
               <img
                 src={t.icon}
                 alt=""
@@ -114,25 +113,24 @@ export default function TechnologyTabs() {
                 height={28}
                 style={{
                   filter: isActive
-                    ? "brightness(0) saturate(100%) invert(35%) sepia(85%) saturate(600%) hue-rotate(190deg) brightness(95%) contrast(90%)"
-                    : "brightness(0) invert(0.6)",
+                    ? "brightness(0) saturate(100%) invert(30%) sepia(90%) saturate(700%) hue-rotate(195deg) brightness(95%) contrast(95%)"
+                    : "brightness(0) invert(0.55)",
                   transition: "filter 0.3s ease",
+                  flexShrink: 0,
                 }}
               />
               {t.label}
-              {/* Glow effect under active tab */}
+              {/* Bottom glow bar */}
               {isActive && (
                 <div
                   style={{
                     position: "absolute",
-                    bottom: "-2px",
-                    left: "50%",
-                    transform: "translateX(-50%)",
-                    width: "60%",
-                    height: "4px",
+                    bottom: "0",
+                    left: "0",
+                    width: "100%",
+                    height: "3px",
                     background: "#3580C7",
-                    borderRadius: "4px",
-                    boxShadow: "0 0 12px 4px rgba(53, 128, 199, 0.5)",
+                    boxShadow: "0 0 16px 4px rgba(53, 128, 199, 0.6), 0 0 40px 8px rgba(53, 128, 199, 0.25)",
                   }}
                 />
               )}
@@ -141,47 +139,47 @@ export default function TechnologyTabs() {
         })}
       </div>
 
-      {/* Content area */}
+      {/* Content card */}
       <div
         style={{
-          backgroundColor: "#2a2a2a",
-          borderRadius: "0 0 20px 20px",
-          padding: "56px",
+          backgroundColor: "#262626",
+          borderRadius: "16px",
+          padding: "48px",
           display: "flex",
-          gap: "56px",
-          alignItems: "center",
-          minHeight: "480px",
+          gap: "48px",
+          alignItems: "stretch",
+          minHeight: "500px",
         }}
       >
         {/* Left - Chart image */}
         <div
           style={{
-            flex: "0 0 42%",
+            flex: "0 0 40%",
             backgroundColor: "#fff",
-            borderRadius: "16px",
+            borderRadius: "14px",
             overflow: "hidden",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            padding: "24px",
+            padding: "20px",
           }}
         >
           <img
             src={tab.chart}
             alt={tab.title}
-            style={{ width: "100%", height: "auto" }}
+            style={{ width: "100%", height: "auto", maxHeight: "100%", objectFit: "contain" }}
           />
         </div>
 
         {/* Right - Text content */}
-        <div style={{ flex: 1 }}>
+        <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
           <h3
             style={{
-              fontSize: "36px",
+              fontSize: "40px",
               fontWeight: 500,
               color: "#fff",
-              margin: "0 0 24px 0",
-              lineHeight: 1.2,
+              margin: "0 0 32px 0",
+              lineHeight: 1.15,
             }}
           >
             {tab.title}
@@ -191,8 +189,8 @@ export default function TechnologyTabs() {
             style={{
               fontSize: "15px",
               fontWeight: 400,
-              color: "rgba(255,255,255,0.7)",
-              lineHeight: 1.7,
+              color: "rgba(255,255,255,0.65)",
+              lineHeight: 1.75,
               margin: "0 0 20px 0",
             }}
           >
@@ -203,10 +201,10 @@ export default function TechnologyTabs() {
             style={{
               listStyle: "disc",
               paddingLeft: "20px",
-              margin: "0 0 28px 0",
+              margin: "0 0 32px 0",
               display: "flex",
               flexDirection: "column",
-              gap: "12px",
+              gap: "10px",
             }}
           >
             {tab.bullets.map((b, i) => (
@@ -214,11 +212,11 @@ export default function TechnologyTabs() {
                 key={i}
                 style={{
                   fontSize: "15px",
-                  color: "rgba(255,255,255,0.7)",
-                  lineHeight: 1.7,
+                  color: "rgba(255,255,255,0.65)",
+                  lineHeight: 1.75,
                 }}
               >
-                <strong style={{ color: "#fff" }}>{b.bold}:</strong> {b.text}
+                <strong style={{ color: "#fff", fontWeight: 700 }}>{b.bold}:</strong> {b.text}
               </li>
             ))}
           </ul>
