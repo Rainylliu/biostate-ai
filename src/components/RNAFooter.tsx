@@ -343,16 +343,16 @@ export default function RNAFooter() {
             }}
           />
 
-          {/* Info row 1: Logo + Location + Phone */}
+          {/* Info grid: 3 columns — logo | location+follow | phone+email */}
           <div
             style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "flex-start",
-              marginBottom: "40px",
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr auto",
+              gap: "0 60px",
+              marginBottom: "50px",
             }}
           >
-            {/* Logo */}
+            {/* Row 1, Col 1: Logo */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/logo.svg"
@@ -361,10 +361,12 @@ export default function RNAFooter() {
                 height: "36px",
                 width: "auto",
                 filter: "brightness(0) invert(1)",
+                gridRow: "1 / 3",
+                alignSelf: "start",
               }}
             />
 
-            {/* Location */}
+            {/* Row 1, Col 2: Location */}
             <div>
               <h6
                 style={{
@@ -392,7 +394,7 @@ export default function RNAFooter() {
               </p>
             </div>
 
-            {/* Phone */}
+            {/* Row 1, Col 3: Phone */}
             <div>
               <h6
                 style={{
@@ -416,22 +418,11 @@ export default function RNAFooter() {
                 +1 (713) 489 9827
               </p>
             </div>
-          </div>
 
-          {/* Info row 2: empty + Follow us + Email */}
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "flex-start",
-              marginBottom: "50px",
-            }}
-          >
-            {/* Spacer for logo column */}
-            <div style={{ width: "200px" }} />
+            {/* Row 2, Col 2: Follow us — left-aligned with Location */}
 
             {/* Follow us */}
-            <div>
+            <div style={{ marginTop: "30px" }}>
               <h6
                 style={{
                   fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
@@ -459,8 +450,8 @@ export default function RNAFooter() {
               </div>
             </div>
 
-            {/* Email */}
-            <div>
+            {/* Row 2, Col 3: Email */}
+            <div style={{ marginTop: "30px" }}>
               <h6
                 style={{
                   fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
