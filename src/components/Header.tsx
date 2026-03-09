@@ -39,8 +39,8 @@ export default function Header() {
     return () => { document.body.style.overflow = ""; };
   }, [sidePanelOpen]);
 
-  // Use simplified landing header for /rna-sequencing
-  if (pathname === "/rna-sequencing") {
+  // Use simplified landing header for /rna-sequencing and /white-paper
+  if (pathname === "/rna-sequencing" || pathname === "/white-paper") {
     return <LandingHeader />;
   }
 
