@@ -163,7 +163,7 @@ export default function QuoteForm() {
 
     try {
       await fetch(
-        "https://script.google.com/macros/s/AKfycbyW5RSgK9af7Va9FZvZA_1Lru7TONG2PzszxxLiLtgvFzw3V-_cgiCymYbQeNRVknWo/exec",
+        "https://script.google.com/macros/s/AKfycbzMaWMQPiumdGXyY2Ym-ub_uwCE2d8ieeSYYldf9xEY9uT2yYBohWurafq8-2DAsETi/exec",
         {
           method: "POST",
           mode: "no-cors",
