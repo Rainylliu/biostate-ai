@@ -908,6 +908,179 @@ export default function RNASequencingPage() {
           </div>
         </div>
       </section>
+
+      {/* Section 6 - From FASTQ to Biological Insight */}
+      <section
+        style={{
+          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+        }}
+      >
+        {/* Top gradient banner */}
+        <div
+          style={{
+            background: "linear-gradient(135deg, #45D0BD 0%, #44B6E9 50%, #A78BFA 100%)",
+            padding: "36px 60px",
+          }}
+        >
+          <p
+            style={{
+              fontSize: "clamp(28px, 3.5vw, 44px)",
+              fontWeight: 500,
+              fontStyle: "italic",
+              color: "#fff",
+              margin: 0,
+            }}
+          >
+            / From sequencing to biological insight — faster than ever.
+          </p>
+        </div>
+
+        {/* Main content */}
+        <div
+          style={{
+            maxWidth: "1400px",
+            margin: "0 auto",
+            padding: "80px 60px 100px",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            gap: "60px",
+          }}
+        >
+          {/* Left side */}
+          <div style={{ flex: 1 }}>
+            <p
+              style={{
+                fontSize: "14px",
+                fontWeight: 400,
+                color: "#999",
+                margin: "0 0 12px 0",
+              }}
+            >
+              [ analysis ]
+            </p>
+            <h2
+              style={{
+                fontSize: "clamp(36px, 4vw, 52px)",
+                fontWeight: 500,
+                lineHeight: 1.15,
+                color: "#1f1f1f",
+                margin: "0 0 60px 0",
+              }}
+            >
+              From FASTQ to
+              <br />
+              Biological Insight
+            </h2>
+            <img
+              src="/images/omics.svg"
+              alt="Biostate AI"
+              style={{
+                width: "clamp(240px, 30vw, 400px)",
+                height: "auto",
+              }}
+            />
+          </div>
+
+          {/* Right side - vertical timeline */}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+              position: "relative",
+              paddingLeft: "36px",
+            }}
+          >
+            {/* Vertical line */}
+            <div
+              style={{
+                position: "absolute",
+                left: "59px",
+                top: "0",
+                bottom: "0",
+                width: "2px",
+                background: "linear-gradient(180deg, #C4B5FD 0%, #A78BFA 50%, #C4B5FD 100%)",
+              }}
+            />
+
+            {[
+              { icon: "/images/seq1.svg", label: "Raw FASTQ" },
+              { icon: "/images/seq2.svg", label: "Gene count matrices" },
+              { icon: "/images/seq3.svg", label: "Omicsweb Co-Pilot for Bioinformatics" },
+            ].map((item, i) => (
+              <div
+                key={i}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "24px",
+                  position: "relative",
+                  zIndex: 1,
+                  marginBottom: i < 2 ? "60px" : "0",
+                }}
+              >
+                {/* Dot on line */}
+                {i === 0 && (
+                  <div
+                    style={{
+                      position: "absolute",
+                      left: "19px",
+                      top: "-24px",
+                      width: "10px",
+                      height: "10px",
+                      borderRadius: "50%",
+                      background: "#A78BFA",
+                    }}
+                  />
+                )}
+                {/* Icon box */}
+                <div
+                  style={{
+                    width: "48px",
+                    height: "48px",
+                    borderRadius: "12px",
+                    background: "linear-gradient(135deg, #C4B5FD, #A78BFA)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
+                  }}
+                >
+                  <img
+                    src={item.icon}
+                    alt=""
+                    style={{ width: "24px", height: "24px" }}
+                  />
+                </div>
+                {/* Label */}
+                <span
+                  style={{
+                    fontSize: "16px",
+                    fontWeight: 500,
+                    color: "#1f1f1f",
+                  }}
+                >
+                  {item.label}
+                </span>
+              </div>
+            ))}
+
+            {/* Bottom dot */}
+            <div
+              style={{
+                position: "absolute",
+                left: "55px",
+                bottom: "-24px",
+                width: "10px",
+                height: "10px",
+                borderRadius: "50%",
+                background: "#C4B5FD",
+              }}
+            />
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
