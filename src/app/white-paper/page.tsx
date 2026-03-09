@@ -223,7 +223,7 @@ export default function WhitePaperPage() {
             <div style={{ display: "inline-flex", gap: "16px", alignItems: "center", flexWrap: "wrap", justifyContent: "center" }}>
               <a
                 href="/get-quote"
-                className="book-a-call-btn"
+                className="book-a-call-btn book-a-call-btn-solid-teal"
               >
                 Request a Quote
                 <span className="book-a-call-arrow">
@@ -240,16 +240,16 @@ export default function WhitePaperPage() {
               <a
                 href="/pdf/20250402-BIRT+PERD One Page.pdf"
                 download
-                className="book-a-call-btn"
+                className="book-a-call-btn book-a-call-btn-solid-teal"
               >
                 Download
                 <span className="book-a-call-arrow">
                   <span className="book-a-call-arrow-inner">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                      <path d="M8 3V11M8 11L4 7M8 11L12 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                      <path d="M8 3V11M8 11L4 7M8 11L12 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </span>
                 </span>
