@@ -89,7 +89,7 @@ interface OtherRow {
 export default function QuoteForm() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("rainy.liu@biostate.ai");
   const [ccEmails, setCcEmails] = useState("");
   const [address1, setAddress1] = useState("");
   const [address2, setAddress2] = useState("");
