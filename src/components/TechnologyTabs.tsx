@@ -77,7 +77,7 @@ export default function TechnologyTabs() {
         style={{
           display: "grid",
           gridTemplateColumns: "1fr 1fr 1fr",
-          gap: "0px",
+          gap: "12px",
           marginBottom: "12px",
         }}
       >
@@ -92,9 +92,10 @@ export default function TechnologyTabs() {
                 alignItems: "center",
                 gap: "16px",
                 padding: "22px 28px",
-                borderRadius: "14px",
-                border: "1px solid rgba(255,255,255,0.12)",
-                backgroundColor: "transparent",
+                minHeight: "80px",
+                borderRadius: "15px",
+                border: "1px solid #3f3f3f",
+                backgroundColor: "#282828",
                 color: isActive ? "#fff" : "rgba(255,255,255,0.45)",
                 fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                 fontSize: "15px",
@@ -142,8 +143,9 @@ export default function TechnologyTabs() {
       {/* Content card */}
       <div
         style={{
-          backgroundColor: "#262626",
-          borderRadius: "16px",
+          backgroundColor: "#282828",
+          border: "1px solid #3f3f3f",
+          borderRadius: "15px",
           padding: "48px",
           display: "flex",
           gap: "48px",
