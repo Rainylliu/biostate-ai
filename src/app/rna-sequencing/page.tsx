@@ -1148,22 +1148,22 @@ export default function RNASequencingPage() {
             <div style={{ display: "flex", flexDirection: "column", gap: "32px" }}>
               {[
                 {
-                  icon: "/images/icon-deg.svg",
+                  icon: "/images/icon1.svg",
                   title: "DEG analysis",
                   desc: "Automatically identify significant biological markers with auto-generated reports.",
                 },
                 {
-                  icon: "/images/icon-pca.svg",
+                  icon: "/images/icon2.svg",
                   title: "PCA, heatmaps, volcano plots",
                   desc: "Visualize complex data patterns through interactive PCA, heatmaps, and volcano plots.",
                 },
                 {
-                  icon: "/images/icon-go.svg",
+                  icon: "/images/icon3.svg",
                   title: "GO / pathway enrichment",
                   desc: "Reveal functional mechanisms and biological insights with GO/pathway enrichment.",
                 },
                 {
-                  icon: "/images/icon-nocode.svg",
+                  icon: "/images/icon4.svg",
                   title: "No coding required",
                   desc: "AI-powered conversational bioinformatics analysis with no coding needed.",
                 },
