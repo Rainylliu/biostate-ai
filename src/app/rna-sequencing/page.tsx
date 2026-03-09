@@ -97,6 +97,138 @@ export default function RNASequencingPage() {
           </div>
         </div>
       </section>
+      {/* Key Highlights + Video Section */}
+      <section
+        style={{
+          padding: "0 24px 60px",
+          maxWidth: "1280px",
+          margin: "0 auto",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            gap: "24px",
+            alignItems: "stretch",
+          }}
+        >
+          {/* Left: Key Highlights Card */}
+          <div
+            style={{
+              flex: "0 0 380px",
+              borderRadius: "20px",
+              border: "1px solid #E6EAF2",
+              background: "#ffffff",
+              padding: "40px 36px",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+            }}
+          >
+            <div>
+              <h3
+                style={{
+                  fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                  fontSize: "20px",
+                  fontWeight: 700,
+                  color: "#1f1f1f",
+                  margin: "0 0 28px 0",
+                }}
+              >
+                Key Highlights (quick scan):
+              </h3>
+              <ul
+                style={{
+                  listStyle: "none",
+                  padding: 0,
+                  margin: 0,
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "16px",
+                }}
+              >
+                {[
+                  "From $60/sample",
+                  "10 ng input supported",
+                  "Up to 99% rRNA depletion",
+                  "Globin depletion for blood",
+                  "OmicsWeb Copilot for Bioinformatics",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "12px",
+                      fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                      fontSize: "15px",
+                      fontWeight: 600,
+                      color: "#1f1f1f",
+                    }}
+                  >
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style={{ flexShrink: 0 }}>
+                      <path d="M3 8.5L6.5 12L13 4" stroke="#45D0BD" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div style={{ marginTop: "32px" }}>
+              <a
+                href="/pdf/20250402-BIRT+PERD One Page.pdf"
+                download
+                className="book-a-call-btn"
+              >
+                Download White Paper
+                <span className="book-a-call-arrow">
+                  <span className="book-a-call-arrow-inner">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          {/* Right: YouTube Video */}
+          <div
+            style={{
+              flex: 1,
+              borderRadius: "20px",
+              overflow: "hidden",
+              border: "1px solid #E6EAF2",
+            }}
+          >
+            <div
+              style={{
+                position: "relative",
+                width: "100%",
+                paddingTop: "56.25%",
+              }}
+            >
+              <iframe
+                src="https://www.youtube.com/embed/qzjxfsyo_N4?si=nRrwiJh-cLDBunAH"
+                title="2024 Biostate RNAseq Technology"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  border: "none",
+                }}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
