@@ -22,7 +22,7 @@ export default function Section5Stats() {
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(4, auto)",
-          gap: "40px",
+          gap: "80px",
         }}
       >
       {stats.map((stat, i) => (

@@ -874,7 +874,7 @@ export default function RNASequencingPage() {
                         gap: "8px",
                         padding: "8px 20px",
                         borderRadius: "12px",
-                        border: "2px solid transparent",
+                        border: "1px solid transparent",
                         background: "linear-gradient(#fff, #fff) padding-box, linear-gradient(90deg, #45D0BD, #44B6E9) border-box",
                         fontSize: "14px",
                         fontWeight: 500,
