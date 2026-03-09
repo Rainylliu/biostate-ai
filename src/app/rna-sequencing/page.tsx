@@ -44,7 +44,7 @@ export default function RNASequencingPage() {
                 at{" "}
                 <span
                   style={{
-                    background: "linear-gradient(135deg, #7b8bf5, #6766c8)",
+                    background: "linear-gradient(135deg, #8258c8, #2c84c8)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
