@@ -916,7 +916,7 @@ export default function RNASequencingPage() {
           alt=""
           style={{
             position: "absolute",
-            left: "-5%",
+            left: "0%",
             bottom: "0",
             width: "55%",
             height: "auto",
