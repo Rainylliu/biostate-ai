@@ -519,7 +519,7 @@ export default function RNASequencingPage() {
                 background: "linear-gradient(135deg, #E3FFFB 0%, #C6EDFF 100%)",
                 borderRadius: "20px",
                 padding: "56px 56px",
-                minHeight: "220px",
+                minHeight: "280px",
                 display: "flex",
                 alignItems: "center",
               }}
@@ -587,7 +587,7 @@ export default function RNASequencingPage() {
                 border: "1px solid #e0e0e0",
                 borderRadius: "20px",
                 padding: "56px 56px",
-                minHeight: "220px",
+                minHeight: "280px",
                 display: "flex",
                 alignItems: "center",
                 backgroundColor: "#fff",
