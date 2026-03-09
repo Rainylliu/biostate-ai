@@ -211,7 +211,7 @@ export default function LandingHeader() {
               className="contact-expert-btn hidden sm:inline-flex rounded-full cursor-pointer"
               style={{
                 fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                fontSize: "14px",
+                fontSize: "16px",
                 fontWeight: 600,
                 color: "#1f1f1f",
               }}
@@ -223,7 +223,7 @@ export default function LandingHeader() {
               className="get-quote-btn get-quote-btn-rna hidden sm:inline-flex rounded-full"
               style={{
                 fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                fontSize: "14px",
+                fontSize: "16px",
                 fontWeight: 600,
                 color: "#1f1f1f",
               }}
