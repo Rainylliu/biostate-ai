@@ -37,7 +37,7 @@ export default function LandingHeader() {
         <div
           className="flex items-center justify-between"
           style={{
-            height: "60px",
+            height: "80px",
             padding: "0 24px",
             border: "1px solid #e6e8ea",
             borderRadius: "16px",
