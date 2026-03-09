@@ -18,11 +18,6 @@ const navItems = [
 
 export default function Header() {
   const pathname = usePathname();
-
-  // Use simplified landing header for /rna-sequencing
-  if (pathname === "/rna-sequencing") {
-    return <LandingHeader />;
-  }
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [menuHovered, setMenuHovered] = useState(false);
@@ -43,6 +38,11 @@ export default function Header() {
     }
     return () => { document.body.style.overflow = ""; };
   }, [sidePanelOpen]);
+
+  // Use simplified landing header for /rna-sequencing
+  if (pathname === "/rna-sequencing") {
+    return <LandingHeader />;
+  }
 
   const marqueeText = "RNA-seq starting from $60 per sample";
 
