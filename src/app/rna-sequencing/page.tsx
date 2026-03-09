@@ -1004,7 +1004,7 @@ export default function RNASequencingPage() {
                 src="/images/Bio.svg"
                 alt="Biostate AI"
                 style={{
-                  marginTop: "48px",
+                  marginTop: "80px",
                   width: "clamp(240px, 28vw, 380px)",
                   height: "auto",
                 }}
@@ -1018,34 +1018,17 @@ export default function RNASequencingPage() {
               flexDirection: "column",
               alignItems: "flex-start",
               position: "relative",
-              paddingTop: "40px",
-              paddingBottom: "40px",
             }}
           >
-            {/* Vertical line - behind icon boxes */}
-            <div
-              style={{
-                position: "absolute",
-                left: "43px",
-                top: "0",
-                bottom: "0",
-                width: "3px",
-                background: "linear-gradient(180deg, rgba(167,139,250,0.6) 0%, rgba(130,88,200,0.5) 50%, rgba(68,182,233,0.6) 100%)",
-                zIndex: 0,
-              }}
-            />
-
             {/* Top dot */}
             <div
               style={{
-                position: "absolute",
-                left: "35px",
-                top: "0",
                 width: "20px",
                 height: "20px",
                 borderRadius: "50%",
                 background: "rgba(130,88,200,0.6)",
-                zIndex: 1,
+                marginLeft: "26px",
+                marginBottom: "16px",
               }}
             />
 
@@ -1054,60 +1037,73 @@ export default function RNASequencingPage() {
               { icon: "/images/seq2.svg", label: "Gene count matrices" },
               { icon: "/images/seq3.svg", label: "Omicsweb Co-Pilot for Bioinformatics" },
             ].map((item, i) => (
-              <div
-                key={i}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "28px",
-                  position: "relative",
-                  zIndex: 2,
-                  marginBottom: i < 2 ? "56px" : "0",
-                }}
-              >
-                {/* Icon box */}
+              <div key={i}>
+                {/* Segment line above box (between previous element and this box) */}
                 <div
                   style={{
-                    width: "88px",
-                    height: "88px",
-                    borderRadius: "18px",
-                    background: "linear-gradient(135deg, rgba(196,181,253,0.6), rgba(130,150,230,0.6))",
+                    width: "3px",
+                    height: "40px",
+                    background: "rgba(150,130,230,0.6)",
+                    marginLeft: "35px",
+                  }}
+                />
+                {/* Icon box + label row */}
+                <div
+                  style={{
                     display: "flex",
                     alignItems: "center",
-                    justifyContent: "center",
-                    flexShrink: 0,
+                    gap: "28px",
                   }}
                 >
-                  <img
-                    src={item.icon}
-                    alt=""
-                    style={{ width: "36px", height: "36px" }}
-                  />
+                  <div
+                    style={{
+                      width: "72px",
+                      height: "72px",
+                      borderRadius: "18px",
+                      background: "linear-gradient(135deg, rgba(196,181,253,0.6), rgba(130,150,230,0.6))",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexShrink: 0,
+                    }}
+                  >
+                    <img
+                      src={item.icon}
+                      alt=""
+                      style={{ width: "36px", height: "36px" }}
+                    />
+                  </div>
+                  <span
+                    style={{
+                      fontSize: "17px",
+                      fontWeight: 400,
+                      color: "#1f1f1f",
+                    }}
+                  >
+                    {item.label}
+                  </span>
                 </div>
-                {/* Label */}
-                <span
-                  style={{
-                    fontSize: "17px",
-                    fontWeight: 400,
-                    color: "#1f1f1f",
-                  }}
-                >
-                  {item.label}
-                </span>
               </div>
             ))}
+
+            {/* Line after last box */}
+            <div
+              style={{
+                width: "3px",
+                height: "40px",
+                background: "rgba(120,160,230,0.6)",
+                marginLeft: "43px",
+              }}
+            />
 
             {/* Bottom dot */}
             <div
               style={{
-                position: "absolute",
-                left: "33px",
-                bottom: "0",
                 width: "24px",
                 height: "24px",
                 borderRadius: "50%",
                 background: "rgba(68,182,233,0.6)",
-                zIndex: 1,
+                marginLeft: "24px",
               }}
             />
           </div>
