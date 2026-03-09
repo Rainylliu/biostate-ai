@@ -375,26 +375,24 @@ export default function QuoteForm() {
           ))}
         </select>
 
-        {/* Conditional: show when "Other (Please specify)" is selected */}
-        {organism === "Other (Please specify)" && (
-          <div style={{ marginTop: "16px", maxWidth: "calc(60%)" }}>
-            <label
-              style={{
-                ...labelStyle,
-                fontSize: "14px",
-                fontWeight: 600,
-              }}
-            >
-              Please specify the organism
-            </label>
-            <input
-              type="text"
-              style={inputStyle}
-              value={organismSpec}
-              onChange={(e) => setOrganismSpec(e.target.value)}
-            />
-          </div>
-        )}
+        {/* Show when "Other" is selected */}
+        <div style={{ marginTop: "16px", maxWidth: "calc(60%)", display: organism.startsWith("Other") ? "block" : "none" }}>
+          <label
+            style={{
+              ...labelStyle,
+              fontSize: "14px",
+              fontWeight: 600,
+            }}
+          >
+            Please specify the organism
+          </label>
+          <input
+            type="text"
+            style={inputStyle}
+            value={organismSpec}
+            onChange={(e) => setOrganismSpec(e.target.value)}
+          />
+        </div>
       </div>
 
       <hr style={sectionDividerStyle} />
