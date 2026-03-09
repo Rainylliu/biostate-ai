@@ -521,8 +521,15 @@ export default function RNASequencingPage() {
                 minHeight: "280px",
                 display: "flex",
                 alignItems: "center",
+                position: "relative",
+                overflow: "hidden",
               }}
             >
+              <img
+                src="/images/pricecard1.svg"
+                alt=""
+                style={{ position: "absolute", top: "24px", right: "32px", width: "62px", height: "70px" }}
+              />
               <h3
                 style={{
                   fontSize: "42px",
@@ -590,8 +597,15 @@ export default function RNASequencingPage() {
                 display: "flex",
                 alignItems: "center",
                 backgroundColor: "#fff",
+                position: "relative",
+                overflow: "hidden",
               }}
             >
+              <img
+                src="/images/pricecard2.svg"
+                alt=""
+                style={{ position: "absolute", top: "24px", right: "32px", width: "68px", height: "73px" }}
+              />
               <h3
                 style={{
                   fontSize: "42px",
