@@ -512,26 +512,26 @@ export default function RNASequencingPage() {
           </div>
 
           {/* Right Column - Cards 62% */}
-          <div style={{ flex: "0 0 58%", maxWidth: "58%", display: "flex", flexDirection: "column", gap: "20px" }}>
+          <div style={{ flex: "0 0 62%", maxWidth: "62%", display: "flex", flexDirection: "column", gap: "20px" }}>
             {/* Standard Samples Card - $60 */}
             <div
               style={{
                 background: "linear-gradient(135deg, #E3FFFB 0%, #C6EDFF 100%)",
                 borderRadius: "20px",
-                padding: "44px 48px",
+                padding: "56px 56px",
                 display: "flex",
                 alignItems: "center",
               }}
             >
               <h3
                 style={{
-                  fontSize: "40px",
+                  fontSize: "42px",
                   fontWeight: 400,
-                  lineHeight: 1.15,
+                  lineHeight: 1.2,
                   color: "#1f1f1f",
                   margin: 0,
                   whiteSpace: "nowrap",
-                  flex: "0 0 200px",
+                  flex: "0 0 220px",
                 }}
               >
                 Standard
@@ -547,18 +547,19 @@ export default function RNASequencingPage() {
                   fontSize: "13px",
                   fontWeight: 600,
                   color: "#1f1f1f",
-                  lineHeight: 2.2,
+                  lineHeight: 2.4,
+                  whiteSpace: "nowrap",
                 }}
               >
-                <li>Cultured Animal Cells (&gt;30k cells)</li>
+                <li>{"Cultured Animal Cells (>30k cells)"}</li>
                 <li>Extracted RNA (Mammalian)</li>
                 <li>{"For Conc. ≥ 16 ng/μL (min 10 μL)"}</li>
               </ul>
-              <div style={{ whiteSpace: "nowrap", marginLeft: "20px", display: "flex", alignItems: "baseline" }}>
+              <div style={{ whiteSpace: "nowrap", marginLeft: "24px", display: "flex", alignItems: "baseline" }}>
                 <span
                   style={{
                     fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-                    fontSize: "64px",
+                    fontSize: "72px",
                     fontWeight: 700,
                     color: "#1f1f1f",
                     lineHeight: 1,
@@ -569,7 +570,7 @@ export default function RNASequencingPage() {
                 <span
                   style={{
                     fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-                    fontSize: "20px",
+                    fontSize: "22px",
                     fontWeight: 400,
                     color: "#1f1f1f",
                   }}
@@ -584,7 +585,7 @@ export default function RNASequencingPage() {
               style={{
                 border: "1px solid #e0e0e0",
                 borderRadius: "20px",
-                padding: "44px 48px",
+                padding: "56px 56px",
                 display: "flex",
                 alignItems: "center",
                 backgroundColor: "#fff",
@@ -592,13 +593,13 @@ export default function RNASequencingPage() {
             >
               <h3
                 style={{
-                  fontSize: "40px",
+                  fontSize: "42px",
                   fontWeight: 400,
-                  lineHeight: 1.15,
+                  lineHeight: 1.2,
                   color: "#1f1f1f",
                   margin: 0,
                   whiteSpace: "nowrap",
-                  flex: "0 0 200px",
+                  flex: "0 0 220px",
                 }}
               >
                 Specialized
@@ -614,18 +615,18 @@ export default function RNASequencingPage() {
                   fontSize: "13px",
                   fontWeight: 600,
                   color: "#1f1f1f",
-                  lineHeight: 2.2,
+                  lineHeight: 2.0,
                 }}
               >
-                <li>Specialty and low-concentration RNA<br />(evRNA, etc..)</li>
-                <li>Biospecimens and clinical samples<br />(whole blood, plasma, serum, PBMC,<br />tissues, FFPE, etc..)</li>
-                <li>Unusual organisms (plants, octopus,<br />axolotl, ...)</li>
+                <li>Specialty and low-concentration RNA (evRNA, etc..)</li>
+                <li>Biospecimens and clinical samples (whole blood, plasma, serum, PBMC, tissues, FFPE, etc..)</li>
+                <li>Unusual organisms (plants, octopus, axolotl, ...)</li>
               </ul>
-              <div style={{ whiteSpace: "nowrap", marginLeft: "20px", display: "flex", alignItems: "baseline" }}>
+              <div style={{ whiteSpace: "nowrap", marginLeft: "24px", display: "flex", alignItems: "baseline" }}>
                 <span
                   style={{
                     fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-                    fontSize: "64px",
+                    fontSize: "72px",
                     fontWeight: 700,
                     color: "#1f1f1f",
                     lineHeight: 1,
@@ -636,7 +637,7 @@ export default function RNASequencingPage() {
                 <span
                   style={{
                     fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-                    fontSize: "20px",
+                    fontSize: "22px",
                     fontWeight: 400,
                     color: "#1f1f1f",
                   }}
