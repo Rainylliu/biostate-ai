@@ -934,6 +934,9 @@ export default function RNAPage() {
           </div>
         </div>
       </section>
+
+      {/* Bottom spacer */}
+      <div style={{ height: "60px" }} />
     </div>
   );
 }

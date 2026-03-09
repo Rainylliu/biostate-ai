@@ -123,13 +123,15 @@ export default function QuoteForm() {
   ).length;
 
   // Sync otherRows length with otherCount
-  if (otherRows.length !== otherCount) {
-    if (otherCount > otherRows.length) {
-      setOtherRows([...otherRows, ...Array.from({ length: otherCount - otherRows.length }, () => ({ count: "", specify: "" }))]);
-    } else {
-      setOtherRows(otherRows.slice(0, otherCount));
-    }
-  }
+  useEffect(() => {
+    setOtherRows((prev) => {
+      if (prev.length === otherCount) return prev;
+      if (otherCount > prev.length) {
+        return [...prev, ...Array.from({ length: otherCount - prev.length }, () => ({ count: "", specify: "" }))];
+      }
+      return prev.slice(0, otherCount);
+    });
+  }, [otherCount]);
 
   const addSampleRow = () => {
     setSampleRows([...sampleRows, { count: "", type: "" }]);
@@ -167,6 +169,7 @@ export default function QuoteForm() {
           mode: "no-cors",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
+            recipientEmail: "contact@biostate.ai",
             firstName,
             lastName,
             email,
@@ -375,26 +378,24 @@ export default function QuoteForm() {
           ))}
         </select>
 
-        {/* Conditional: show when "Other (Please specify)" is selected */}
-        {organism === "Other (Please specify)" && (
-          <div style={{ marginTop: "16px", maxWidth: "calc(60%)" }}>
-            <label
-              style={{
-                ...labelStyle,
-                fontSize: "14px",
-                fontWeight: 600,
-              }}
-            >
-              Please specify the organism
-            </label>
-            <input
-              type="text"
-              style={inputStyle}
-              value={organismSpec}
-              onChange={(e) => setOrganismSpec(e.target.value)}
-            />
-          </div>
-        )}
+        {/* Show when "Other" is selected */}
+        <div style={{ marginTop: "16px", maxWidth: "calc(60%)", display: organism.startsWith("Other") ? "block" : "none" }}>
+          <label
+            style={{
+              ...labelStyle,
+              fontSize: "14px",
+              fontWeight: 600,
+            }}
+          >
+            Please specify the organism
+          </label>
+          <input
+            type="text"
+            style={inputStyle}
+            value={organismSpec}
+            onChange={(e) => setOrganismSpec(e.target.value)}
+          />
+        </div>
       </div>
 
       <hr style={sectionDividerStyle} />

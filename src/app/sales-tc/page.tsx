@@ -28,7 +28,7 @@ export default function SalesTCPage() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/headerbg.png"
+            src="/images/terms.svg"
             alt=""
             style={{
               position: "absolute",
@@ -43,7 +43,7 @@ export default function SalesTCPage() {
               position: "absolute",
               inset: 0,
               background:
-                "linear-gradient(135deg, rgba(140, 100, 220, 0.6), rgba(100, 170, 230, 0.6))",
+                "linear-gradient(135deg, rgba(90, 50, 180, 0.6), rgba(50, 120, 200, 0.6))",
             }}
           />
         </div>
@@ -69,7 +69,8 @@ export default function SalesTCPage() {
             left: "120px",
             width: "25px",
             height: "25px",
-            background: "radial-gradient(circle at 100% 100%, transparent 25px, #ffffff 25px)",
+            background:
+              "radial-gradient(circle at 100% 100%, transparent 25px, #ffffff 25px)",
             zIndex: 2,
           }}
         />
@@ -80,7 +81,8 @@ export default function SalesTCPage() {
             left: 0,
             width: "25px",
             height: "25px",
-            background: "radial-gradient(circle at 100% 100%, transparent 25px, #ffffff 25px)",
+            background:
+              "radial-gradient(circle at 100% 100%, transparent 25px, #ffffff 25px)",
             zIndex: 2,
           }}
         />
@@ -106,7 +108,8 @@ export default function SalesTCPage() {
             right: "8%",
             width: "25px",
             height: "25px",
-            background: "radial-gradient(circle at 0% 0%, transparent 25px, #ffffff 25px)",
+            background:
+              "radial-gradient(circle at 0% 0%, transparent 25px, #ffffff 25px)",
             zIndex: 2,
           }}
         />
@@ -117,12 +120,13 @@ export default function SalesTCPage() {
             right: 0,
             width: "25px",
             height: "25px",
-            background: "radial-gradient(circle at 0% 0%, transparent 25px, #ffffff 25px)",
+            background:
+              "radial-gradient(circle at 0% 0%, transparent 25px, #ffffff 25px)",
             zIndex: 2,
           }}
         />
 
-        {/* Content */}
+        {/* Title */}
         <div
           style={{
             position: "relative",
@@ -148,39 +152,110 @@ export default function SalesTCPage() {
         </div>
       </section>
 
-      {/* Content */}
+      {/* PDF Embed Section */}
       <section
         style={{
-          padding: "80px 24px",
-          maxWidth: "900px",
+          padding: "60px 24px 20px",
+          maxWidth: "1080px",
           margin: "0 auto",
         }}
       >
-        <h2
+        <div
           style={{
-            fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-            fontSize: "32px",
-            fontWeight: 700,
-            color: "#111111",
-            marginBottom: "32px",
+            borderRadius: "20px",
+            overflow: "hidden",
+            border: "1px solid #E6EAF2",
+            boxShadow: "0 10px 28px rgba(0,0,0,0.06)",
           }}
         >
-          Sales Terms &amp; Conditions
-        </h2>
-        <p
-          style={{
-            fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-            fontSize: "16px",
-            color: "#555555",
-            lineHeight: 1.7,
-          }}
-        >
-          This page is under construction. Please contact us at{" "}
-          <a href="mailto:contact@biostate.ai" style={{ color: "#45d0bd", textDecoration: "none" }}>
-            contact@biostate.ai
-          </a>{" "}
-          for details regarding our sales terms and conditions.
-        </p>
+          {/* PDF Header */}
+          <div
+            style={{
+              padding: "22px 26px",
+              background: "linear-gradient(90deg, #45D0BD, #44B6E9)",
+              color: "white",
+            }}
+          >
+            <div
+              style={{
+                fontSize: "22px",
+                fontWeight: 700,
+                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                letterSpacing: "-0.5px",
+              }}
+            >
+              View the PDF Document
+            </div>
+          </div>
+
+          {/* PDF Preview Embed */}
+          <div style={{ width: "100%", background: "white" }}>
+            <div
+              style={{
+                position: "relative",
+                width: "100%",
+                paddingTop: "120%",
+              }}
+            >
+              <iframe
+                src="https://www.biostate.ai/wp-content/uploads/2026/01/Biostate-AI-TermsConditions.pdf"
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  border: "none",
+                }}
+                title="Biostate AI Terms and Conditions PDF"
+              />
+            </div>
+          </div>
+
+          {/* CTA Footer */}
+          <div
+            style={{
+              padding: "26px",
+              textAlign: "center",
+              background: "#F9FBFF",
+            }}
+          >
+            <a
+              href="/get-quote"
+              style={{
+                display: "inline-block",
+                background: "#45D0BD",
+                color: "white",
+                padding: "14px 30px",
+                borderRadius: "999px",
+                fontWeight: 700,
+                fontSize: "16px",
+                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                textDecoration: "none",
+              }}
+            >
+              Request a Quote →
+            </a>
+            <div
+              style={{
+                marginTop: "14px",
+                fontSize: "12px",
+                color: "#6B7280",
+                lineHeight: "18px",
+                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+              }}
+            >
+              By submitting, you agree to Biostate&apos;s{" "}
+              <a
+                href="/sales-tc"
+                style={{ color: "#44B6E9", textDecoration: "none" }}
+              >
+                Terms &amp; Conditions
+              </a>
+              .
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );

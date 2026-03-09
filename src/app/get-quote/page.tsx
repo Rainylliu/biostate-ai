@@ -272,7 +272,11 @@ export default function GetQuotePage() {
               }}
             >
               After you obtain a PO number from your institution, please send the
-              PO document to contact@biostate.ai as soon as possible.
+              PO document to{" "}
+              <a href="mailto:contact@biostate.ai" style={{ color: "#45d0bd", textDecoration: "none" }}>
+                contact@biostate.ai
+              </a>{" "}
+              as soon as possible.
             </p>
           </li>
           <li style={{ display: "flex", gap: "16px", alignItems: "flex-start" }}>
