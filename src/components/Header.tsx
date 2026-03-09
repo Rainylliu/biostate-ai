@@ -265,7 +265,7 @@ export default function Header() {
           <div
             className="flex whitespace-nowrap"
             style={{
-              animation: "marquee 25s linear infinite",
+              animation: "marquee 8s linear infinite",
             }}
           >
             {Array.from({ length: 8 }).map((_, i) => (
