@@ -169,7 +169,7 @@ export default function QuoteForm() {
           mode: "no-cors",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            recipientEmail: "contact@biostate.ai",
+            recipientEmail: "rainy.liu@biostate.ai",
             firstName,
             lastName,
             email,
