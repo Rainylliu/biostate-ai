@@ -100,15 +100,18 @@ export default function RNAPage() {
         <div className="container">
           {/* Section Tag */}
           <WaveReveal
-            text="[ pricing ]"
+            text="OUR SOLUTION"
             as="p"
             style={{
-              display: "block",
+              display: "inline-block",
               fontSize: "0.875rem",
               lineHeight: "2.142857em",
               fontWeight: 500,
               letterSpacing: "normal",
-              color: "#333333",
+              color: "#44B6E9",
+              backgroundColor: "rgba(68, 182, 233, 0.2)",
+              borderRadius: "999px",
+              padding: "2px 16px",
               marginBottom: "16px",
               fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
             }}
@@ -135,7 +138,7 @@ export default function RNAPage() {
             <div
               className="rounded-[25px] flex flex-col relative"
               style={{
-                background: "linear-gradient(114deg, #C6F8F1 0%, #A3F5FF 100%)",
+                background: "linear-gradient(114deg, #E3FFFB 0%, #C6EDFF 100%)",
                 minHeight: "580px",
                 padding: "68px 68px 240px 82px",
                 margin: "10px",
