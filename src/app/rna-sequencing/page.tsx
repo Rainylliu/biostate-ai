@@ -1103,20 +1103,13 @@ export default function RNASequencingPage() {
           </div>
           </div>
         </div>
-      </section>
 
-      {/* Section 7 - OmicsWeb AI Co-Pilot */}
-      <section
-        style={{
-          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-          padding: "80px 0 100px",
-        }}
-      >
+        {/* OmicsWeb AI Co-Pilot */}
         <div
           style={{
             maxWidth: "1400px",
             margin: "0 auto",
-            padding: "0 60px",
+            padding: "80px 60px 100px",
             display: "flex",
             alignItems: "center",
             gap: "60px",
@@ -1222,6 +1215,7 @@ export default function RNASequencingPage() {
         </div>
       </section>
       </div>
+
     </div>
   );
 }
