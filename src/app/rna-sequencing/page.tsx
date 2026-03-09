@@ -78,7 +78,7 @@ export default function RNASequencingPage() {
               </p>
               <a
                 href="/get-quote"
-                className="book-a-call-btn book-a-call-btn-teal group"
+                className="book-a-call-btn book-a-call-btn-solid-teal group"
               >
                 Get My Quote
                 <span className="book-a-call-arrow">
