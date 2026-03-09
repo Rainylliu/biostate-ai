@@ -155,7 +155,7 @@ export default function SalesTCPage() {
       {/* PDF Embed Section */}
       <section
         style={{
-          padding: "60px 24px 80px",
+          padding: "60px 24px 20px",
           maxWidth: "1080px",
           margin: "0 auto",
         }}
