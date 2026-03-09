@@ -48,6 +48,8 @@ export default function RNASequencingPage() {
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
+                    color: "transparent",
+                    display: "inline",
                   }}
                 >
                   $60 per Sample
