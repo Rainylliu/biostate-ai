@@ -226,10 +226,7 @@ export default function QuoteForm() {
           }}
         >
           Your quote request has been submitted successfully.
-          <br />A copy will be sent to{" "}
-          <a href="mailto:contact@biostate.ai" style={{ color: "#45d0bd", textDecoration: "none" }}>
-            contact@biostate.ai
-          </a>.
+          <br />A copy will be sent to {email}.
         </p>
       </div>
     );
