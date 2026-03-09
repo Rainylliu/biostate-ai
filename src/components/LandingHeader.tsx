@@ -31,13 +31,14 @@ export default function LandingHeader() {
       >
         {/* Left: Menu icon + Logo */}
         <div className="flex items-center gap-6">
-          {/* 4-dots grid icon */}
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <rect x="1" y="1" width="7" height="7" rx="2" fill="#1f1f1f" />
-            <rect x="12" y="1" width="7" height="7" rx="2" fill="#1f1f1f" />
-            <rect x="1" y="12" width="7" height="7" rx="2" fill="#1f1f1f" />
-            <rect x="12" y="12" width="7" height="7" rx="2" fill="#1f1f1f" />
-          </svg>
+          {/* Menu grid icon - same as main header */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/menu.svg"
+            alt="Menu"
+            width={20}
+            height={20}
+          />
           <Link href="/" className="flex items-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
