@@ -909,10 +909,29 @@ export default function RNASequencingPage() {
         </div>
       </section>
 
+      {/* Section 6+7 wrapper with omics.svg page-wide background */}
+      <div style={{ position: "relative" }}>
+        <img
+          src="/images/omics.svg"
+          alt=""
+          style={{
+            position: "absolute",
+            left: "-5%",
+            bottom: "0",
+            width: "55%",
+            height: "auto",
+            opacity: 0.12,
+            pointerEvents: "none",
+            zIndex: 0,
+          }}
+        />
+
       {/* Section 6 - From FASTQ to Biological Insight */}
       <section
         style={{
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+          position: "relative",
+          zIndex: 1,
         }}
       >
         {/* Slanted scrolling banner */}
@@ -1214,6 +1233,7 @@ export default function RNASequencingPage() {
           </div>
         </div>
       </section>
+      </div>
     </div>
   );
 }
