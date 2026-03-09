@@ -1027,7 +1027,7 @@ export default function RNASequencingPage() {
                 height: "20px",
                 borderRadius: "50%",
                 background: "rgba(130,88,200,0.6)",
-                marginLeft: "26px",
+                marginLeft: "20px",
                 marginBottom: "16px",
               }}
             />
@@ -1035,7 +1035,7 @@ export default function RNASequencingPage() {
             {[
               { icon: "/images/seq1.svg", label: "Raw FASTQ" },
               { icon: "/images/seq2.svg", label: "Gene count matrices" },
-              { icon: "/images/seq3.svg", label: "Omicsweb Co-Pilot for Bioinformatics" },
+              { icon: "/images/seq3.svg", label: "Omicsweb Co-Pilot for Bioinformatics", iconSize: "40px" },
             ].map((item, i) => (
               <div key={i}>
                 {/* Segment line above box (between previous element and this box) */}
@@ -1044,7 +1044,7 @@ export default function RNASequencingPage() {
                     width: "3px",
                     height: "40px",
                     background: "rgba(150,130,230,0.6)",
-                    marginLeft: "35px",
+                    marginLeft: "29px",
                   }}
                 />
                 {/* Icon box + label row */}
@@ -1057,8 +1057,8 @@ export default function RNASequencingPage() {
                 >
                   <div
                     style={{
-                      width: "72px",
-                      height: "72px",
+                      width: "60px",
+                      height: "60px",
                       borderRadius: "18px",
                       background: "linear-gradient(135deg, rgba(196,181,253,0.6), rgba(130,150,230,0.6))",
                       display: "flex",
@@ -1070,7 +1070,7 @@ export default function RNASequencingPage() {
                     <img
                       src={item.icon}
                       alt=""
-                      style={{ width: "36px", height: "36px" }}
+                      style={{ width: item.iconSize || "32px", height: item.iconSize || "32px" }}
                     />
                   </div>
                   <span
@@ -1103,7 +1103,7 @@ export default function RNASequencingPage() {
                 height: "24px",
                 borderRadius: "50%",
                 background: "rgba(68,182,233,0.6)",
-                marginLeft: "24px",
+                marginLeft: "18px",
               }}
             />
           </div>
