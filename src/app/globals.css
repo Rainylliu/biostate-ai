@@ -683,22 +683,23 @@ button:hover .side-panel-close-x {
 .hero-subscribe-form {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   margin-top: 16px;
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
 }
 
 .hero-email-input {
   flex: 1;
   font-family: 'Manrope', Arial, Helvetica, sans-serif;
   font-size: 16px;
-  padding: 14px 20px;
-  border-radius: 14px;
+  padding: 18px 28px;
+  border-radius: 50px;
   border: none;
   outline: none;
   background: #ffffff;
   color: #000;
+  height: 58px;
 }
 
 .hero-email-input::placeholder {
@@ -712,10 +713,11 @@ button:hover .side-panel-close-x {
   font-family: 'Manrope', Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 600;
-  padding: 14px 28px;
-  border-radius: 14px;
+  padding: 18px 32px;
+  border-radius: 50px;
   border: none;
   cursor: pointer;
+  height: 58px;
   background: #45D0BD;
   color: #000;
   white-space: nowrap;
