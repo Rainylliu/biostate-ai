@@ -267,7 +267,7 @@ export default function WhitePaperPage() {
             >
               By submitting, you agree to Biostate&apos;s{" "}
               <a
-                href="/tc"
+                href="/sales-tc"
                 style={{ color: "#44B6E9", textDecoration: "none" }}
               >
                 Terms &amp; Conditions
