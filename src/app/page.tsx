@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Section2Edge from "@/components/Section2Edge";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -120,6 +121,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Section 2: Biostate's Edge */}
+      <Section2Edge />
 
       {/* Subscribe Success Popup */}
       {showPopup && (

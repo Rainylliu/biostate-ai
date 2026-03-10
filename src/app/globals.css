@@ -666,6 +666,60 @@ button:hover .side-panel-close-x {
   text-decoration: underline;
 }
 
+/* ── Section 2: Biostate's Edge Flow ── */
+.bs-flow {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+.bs-flow__bg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.bs-flow__btn {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to bottom right, #45D0BD, #44B6E9);
+  color: #fff !important;
+  padding: 10px 18px;
+  font-family: 'Manrope', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+.bs-flow__btn:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+  filter: brightness(1.1);
+}
+.bs-flow__btn--sample {
+  left: 25.3%;
+  top: 24%;
+}
+.bs-flow__btn--wetlab {
+  left: 50%;
+  top: 68%;
+}
+.bs-flow__btn--bioai {
+  left: 75.6%;
+  top: 24%;
+}
+
+@media (max-width: 768px) {
+  .bs-flow__btn {
+    padding: 4px 8px;
+    font-size: 8px;
+    line-height: 1.1;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  }
+}
+
 /* ── Home Hero Section ── */
 .hero-wrapper {
   position: relative;
