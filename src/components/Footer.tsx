@@ -1,12 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
 import WaveReveal from "@/components/WaveReveal";
 
 export default function Footer() {
-  const pathname = usePathname();
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -15,9 +13,6 @@ export default function Footer() {
   });
   const [subscribeEmail, setSubscribeEmail] = useState("");
   const [showPopup, setShowPopup] = useState(false);
-
-  // These pages use their own custom footer
-  if (pathname === "/rna-sequencing" || pathname === "/white-paper") return null;
 
   const handleSubscribe = () => {
     if (!subscribeEmail.trim() || !subscribeEmail.includes("@")) return;
@@ -388,16 +383,37 @@ export default function Footer() {
           </div>
 
           {/* Copyright */}
-          <p
+          <div
             style={{
-              fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-              fontSize: "14px",
-              fontWeight: 400,
-              color: "rgba(255,255,255,0.4)",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
             }}
           >
-            &copy; Biostate {new Date().getFullYear()}. All rights reserved.
-          </p>
+            <p
+              style={{
+                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                fontSize: "14px",
+                fontWeight: 400,
+                color: "rgba(255,255,255,0.4)",
+              }}
+            >
+              &copy; Biostate {new Date().getFullYear()}. All rights reserved.
+            </p>
+            <Link
+              href="/privacy"
+              className="footer-link-hover"
+              style={{
+                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                fontSize: "14px",
+                fontWeight: 400,
+                color: "rgba(255,255,255,0.4)",
+                textDecoration: "none",
+              }}
+            >
+              Privacy &amp; Policy
+            </Link>
+          </div>
         </div>
       </section>
       {/* Subscribe Success Popup */}

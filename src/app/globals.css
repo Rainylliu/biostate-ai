@@ -593,3 +593,14 @@ button:hover .side-panel-close-x {
     transform: translateX(-50%);
   }
 }
+
+/* ── Legal Page (Privacy Policy, etc.) ── */
+.legal-page h2 {
+  margin-top: 0;
+}
+.legal-page ul {
+  list-style-type: disc;
+}
+.legal-page a:hover {
+  text-decoration: underline;
+}
