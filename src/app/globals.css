@@ -361,15 +361,10 @@ img {
 
 /* Transparent variant for home page hero - gradient border, no fill */
 .get-quote-btn.get-quote-btn-transparent {
-  background: transparent;
-  border: 2px solid transparent !important;
-  border-image: linear-gradient(90deg, #45d0bd, #44b6e9) 1;
-  border-radius: 0; /* border-image doesn't support border-radius natively */
+  background: transparent !important;
+  border: none !important;
   padding: 0 !important;
   position: relative;
-  /* Use mask trick for rounded gradient border */
-  border-image: none;
-  border: none !important;
 }
 
 .get-quote-btn.get-quote-btn-transparent::before {
@@ -384,20 +379,23 @@ img {
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
 .get-quote-btn.get-quote-btn-transparent .get-quote-inner {
   background: transparent;
   color: #ffffff;
+  position: relative;
+  z-index: 1;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .get-quote-btn.get-quote-btn-transparent:hover::before {
-  mask: none;
-  -webkit-mask: none;
+  opacity: 0;
 }
 
 .get-quote-btn.get-quote-btn-transparent:hover .get-quote-inner {
-  background: transparent;
+  background: linear-gradient(90deg, #45d0bd, #44b6e9);
   color: #333333 !important;
 }
 
