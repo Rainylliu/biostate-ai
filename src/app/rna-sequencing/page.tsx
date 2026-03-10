@@ -200,7 +200,7 @@ export default function RNASequencingPage() {
               </div>
               <div style={{ marginTop: "32px" }}>
                 <a
-                  href="/pdf/20250402-BIRT+PERD One Page.pdf"
+                  href="/pdf/BIRT-PERD-WhitePaper.pdf"
                   download
                   className="book-a-call-btn"
                 >
@@ -492,7 +492,7 @@ export default function RNASequencingPage() {
 
             {/* Download Price Card Button */}
             <a
-              href="/pdf/20260223 RNA_Seq- Price Card_2026.pdf"
+              href="/pdf/RNA-Seq-PriceCard-2026.pdf"
               download
               className="book-a-call-btn book-a-call-btn-solid-teal group"
             >
@@ -817,7 +817,7 @@ export default function RNASequencingPage() {
                 Built for real-world samples — not just ideal RNA.
               </p>
               <a
-                href="/pdf/20260223 RNA_Seq- Price Card_2026.pdf"
+                href="/pdf/RNA-Seq-PriceCard-2026.pdf"
                 download
                 className="book-a-call-btn group"
                 style={{ whiteSpace: "nowrap", flexShrink: 0 }}

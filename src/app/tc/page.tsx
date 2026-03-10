@@ -198,7 +198,7 @@ export default function SalesTCPage() {
               }}
             >
               <iframe
-                src="/pdf/T&C-03062026.pdf"
+                src="/pdf/TC-03062026.pdf"
                 style={{
                   position: "absolute",
                   top: 0,
@@ -238,7 +238,7 @@ export default function SalesTCPage() {
                 </span>
               </a>
               <a
-                href="/pdf/T&C-03062026.pdf"
+                href="/pdf/TC-03062026.pdf"
                 download
                 className="book-a-call-btn book-a-call-btn-solid-teal"
               >
