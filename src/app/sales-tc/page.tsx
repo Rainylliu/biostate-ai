@@ -156,7 +156,7 @@ export default function SalesTCPage() {
       <section
         style={{
           padding: "60px 24px 20px",
-          maxWidth: "800px",
+          maxWidth: "960px",
           margin: "0 auto",
         }}
       >
