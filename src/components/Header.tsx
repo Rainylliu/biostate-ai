@@ -208,7 +208,7 @@ export default function Header() {
                   className={`nav-tab transition-all ${
                     isActive
                       ? ""
-                      : isTransparent ? "hover:bg-white/15" : "hover:bg-[#F0F2F4]"
+                      : isTransparent ? "home-nav-hover" : "hover:bg-[#F0F2F4]"
                   }`}
                   style={{
                     fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
@@ -219,9 +219,7 @@ export default function Header() {
                     textTransform: "uppercase" as const,
                     borderRadius: "10px",
                     padding: "10px 20px",
-                    backgroundColor: isActive
-                      ? (isTransparent ? "rgba(255,255,255,0.2)" : "#1f1f1f")
-                      : undefined,
+                    backgroundColor: isActive ? "#1f1f1f" : undefined,
                     color: isActive
                       ? "#ffffff"
                       : (isTransparent ? "#ffffff" : "#1f1f1f"),

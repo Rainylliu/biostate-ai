@@ -353,10 +353,17 @@ img {
   padding: 6px 24px;
 }
 
+/* Home page nav hover - black background */
+.home-nav-hover:hover {
+  background-color: #1f1f1f !important;
+  color: #ffffff !important;
+}
+
 /* Transparent variant for home page hero */
 .get-quote-btn.get-quote-btn-transparent {
-  background: rgba(255, 255, 255, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  background: linear-gradient(90deg, #45d0bd, #44b6e9);
+  border: none !important;
+  padding: 2px !important;
 }
 
 .get-quote-btn.get-quote-btn-transparent .get-quote-inner {
@@ -365,8 +372,8 @@ img {
 }
 
 .get-quote-btn.get-quote-btn-transparent:hover .get-quote-inner {
-  background: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
+  background: linear-gradient(90deg, #45d0bd, #44b6e9);
+  color: #1f1f1f;
 }
 
 /* ── Contact Expert Button (Landing Header) ── */
@@ -628,6 +635,7 @@ button:hover .side-panel-close-x {
   height: 100vh;
   overflow: hidden;
   background: #000;
+  border-radius: 20px;
 }
 
 .hero-title {
