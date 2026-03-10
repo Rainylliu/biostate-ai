@@ -166,10 +166,11 @@ export default function SalesTCPage() {
             width: "100%",
             height: 0,
             paddingBottom: "130%",
+            background: "#ffffff",
           }}
         >
           <iframe
-            src="/pdf/TC-03062026.pdf#toolbar=0&navpanes=0&scrollbar=0"
+            src="/pdf/TC-03062026.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH"
             style={{
               position: "absolute",
               top: 0,
@@ -177,6 +178,7 @@ export default function SalesTCPage() {
               width: "100%",
               height: "100%",
               border: "none",
+              background: "#ffffff",
             }}
             title="Biostate AI Terms and Conditions PDF"
           />
