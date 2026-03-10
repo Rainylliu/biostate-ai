@@ -19,14 +19,14 @@ export default function Home() {
       mode: "no-cors",
     });
 
-    window.history.replaceState({}, "", "/?subscribed=thank-you");
+    window.history.pushState({}, "", "/thank-you");
     setShowPopup(true);
     setEmail("");
   };
 
   const closePopup = () => {
     setShowPopup(false);
-    window.history.replaceState({}, "", "/");
+    window.history.pushState({}, "", "/");
   };
 
   return (
