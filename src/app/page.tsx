@@ -100,11 +100,11 @@ export default function Home() {
             >
               Subscribe
               <svg
-                width="16"
-                height="16"
+                width="18"
+                height="18"
                 viewBox="0 0 16 16"
                 fill="none"
-                style={{ marginLeft: "8px" }}
+                style={{ marginLeft: "10px", flexShrink: 0 }}
               >
                 <path
                   d="M4 12L12 4M12 4H5M12 4V11"

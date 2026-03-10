@@ -699,7 +699,7 @@ button:hover .side-panel-close-x {
   outline: none;
   background: #ffffff;
   color: #000;
-  height: 58px;
+  height: 60px;
 }
 
 .hero-email-input::placeholder {
@@ -711,13 +711,13 @@ button:hover .side-panel-close-x {
   align-items: center;
   justify-content: center;
   font-family: 'Manrope', Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
-  padding: 18px 32px;
+  padding: 18px 36px;
   border-radius: 50px;
   border: none;
   cursor: pointer;
-  height: 58px;
+  height: 60px;
   background: #45D0BD;
   color: #000;
   white-space: nowrap;
