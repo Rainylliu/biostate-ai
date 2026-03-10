@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const navItems = [
   { label: "HOME", href: "/" },
@@ -17,6 +17,11 @@ const navItems = [
 
 export default function Header() {
   const pathname = usePathname();
+  // Lock isHome once true — pushState to /thank-you shouldn't break header
+  const isHomeRef = useRef(pathname === "/");
+  if (pathname === "/") isHomeRef.current = true;
+  else if (pathname !== "/thank-you") isHomeRef.current = false;
+  const isHome = isHomeRef.current;
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [menuHovered, setMenuHovered] = useState(false);
@@ -27,6 +32,9 @@ export default function Header() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // On home page: transparent header overlaying hero, white text
+  const isTransparent = isHome && !scrolled;
 
   // Lock body scroll when side panel is open
   useEffect(() => {
@@ -40,9 +48,24 @@ export default function Header() {
 
   const marqueeText = "RNA-seq starting from $60 per sample";
 
+  const textColor = isTransparent ? "#ffffff" : "#1f1f1f";
+  const mutedColor = isTransparent ? "rgba(255,255,255,0.7)" : "#919191";
+
   return (
     <>
-      {/* Top Info Bar */}
+      {/* Header wrapper - absolute on home, normal flow elsewhere */}
+      <div
+        style={isHome ? {
+          position: scrolled ? "fixed" : "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 50,
+          transition: "background-color 0.3s ease",
+        } : undefined}
+      >
+      {/* Top Info Bar - hidden on home page */}
+      {!isHome && (
       <div
         className="flex items-center justify-between"
         style={{
@@ -51,10 +74,11 @@ export default function Header() {
           height: "40px",
           fontSize: "14px",
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-          color: "#919191",
+          color: mutedColor,
           fontWeight: 500,
-          border: "1px solid #e6e8ea",
+          border: `1px solid ${isTransparent ? "rgba(255,255,255,0.25)" : "#e6e8ea"}`,
           borderRadius: "15px",
+          transition: "border-color 0.3s ease, color 0.3s ease",
         }}
       >
         <span style={{ padding: "0 20px" }}>
@@ -68,7 +92,8 @@ export default function Header() {
               lineHeight: "1.875em",
               fontWeight: 500,
               letterSpacing: "0em",
-              color: "#1f1f1f",
+              color: textColor,
+              transition: "color 0.3s ease",
             }}
           >
             contact@biostate.ai
@@ -76,24 +101,25 @@ export default function Header() {
         </span>
         <div className="flex items-center gap-4" style={{ padding: "0 20px" }}>
           <span>Follow us:</span>
-          <a href="https://www.facebook.com/people/Biostate-AI/61562900021094/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:!text-[#45D0BD] transition-colors" style={{ color: "#1f1f1f" }}>
+          <a href="https://www.facebook.com/people/Biostate-AI/61562900021094/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:!text-[#45D0BD] transition-colors" style={{ color: textColor, transition: "color 0.3s ease" }}>
             <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
           </a>
-          <a href="https://www.instagram.com/biostate.ai/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:!text-[#45D0BD] transition-colors" style={{ color: "#1f1f1f" }}>
+          <a href="https://www.instagram.com/biostate.ai/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:!text-[#45D0BD] transition-colors" style={{ color: textColor, transition: "color 0.3s ease" }}>
             <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
           </a>
-          <a href="https://x.com/biostateai" target="_blank" rel="noopener noreferrer" aria-label="X" className="hover:!text-[#45D0BD] transition-colors" style={{ color: "#1f1f1f" }}>
+          <a href="https://x.com/biostateai" target="_blank" rel="noopener noreferrer" aria-label="X" className="hover:!text-[#45D0BD] transition-colors" style={{ color: textColor, transition: "color 0.3s ease" }}>
             <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           </a>
-          <a href="https://www.linkedin.com/company/biostate-ai" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:!text-[#45D0BD] transition-colors" style={{ color: "#1f1f1f" }}>
+          <a href="https://www.linkedin.com/company/biostate-ai" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:!text-[#45D0BD] transition-colors" style={{ color: textColor, transition: "color 0.3s ease" }}>
             <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
           </a>
         </div>
       </div>
+      )}
 
       {/* Main Header */}
       <header
-        className={`sticky top-0 z-50 bg-white ${scrolled ? "header-slide-down" : ""}`}
+        className={`${isHome ? "" : "sticky top-0 z-50"} ${!isTransparent ? "bg-white" : ""} ${scrolled ? "header-slide-down" : ""}`}
         style={scrolled ? {
           width: "calc(100% - 40px)",
           margin: "0 auto",
@@ -107,6 +133,7 @@ export default function Header() {
             className="lg:hidden flex flex-col gap-1.5 p-1"
             onClick={() => setSidePanelOpen(true)}
             aria-label="Toggle menu"
+            style={{ color: isTransparent ? "#ffffff" : undefined }}
           >
             <span
               className={`block w-6 h-0.5 bg-current transition-transform ${
@@ -143,7 +170,11 @@ export default function Header() {
                 width={20}
                 height={20}
                 className="absolute inset-0 transition-opacity duration-500"
-                style={{ opacity: menuHovered ? 0 : 1 }}
+                style={{
+                  opacity: menuHovered ? 0 : 1,
+                  filter: isTransparent ? "brightness(0) invert(1)" : undefined,
+                  transition: "opacity 0.5s, filter 0.3s ease",
+                }}
               />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -160,7 +191,12 @@ export default function Header() {
               <img
                 src="/images/logo.svg"
                 alt="biostate.AI"
-                style={{ height: "28px", width: "auto" }}
+                style={{
+                  height: "28px",
+                  width: "auto",
+                  filter: isTransparent ? "brightness(0) invert(1)" : undefined,
+                  transition: "filter 0.3s ease",
+                }}
               />
             </Link>
           </div>
@@ -176,7 +212,7 @@ export default function Header() {
                   className={`nav-tab transition-all ${
                     isActive
                       ? ""
-                      : "hover:bg-[#F0F2F4]"
+                      : isTransparent ? "home-nav-hover" : "hover:bg-[#F0F2F4]"
                   }`}
                   style={{
                     fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
@@ -188,7 +224,10 @@ export default function Header() {
                     borderRadius: "10px",
                     padding: "10px 20px",
                     backgroundColor: isActive ? "#1f1f1f" : undefined,
-                    color: isActive ? "#ffffff" : "#1f1f1f",
+                    color: isActive
+                      ? "#ffffff"
+                      : (isTransparent ? "#ffffff" : "#1f1f1f"),
+                    transition: "color 0.3s ease, background-color 0.3s ease",
                   }}
                 >
                   <span className="nav-tab-text">
@@ -203,13 +242,14 @@ export default function Header() {
           {/* CTA Button */}
           <Link
             href="/get-quote"
-            className={`get-quote-btn hidden lg:inline-flex rounded-full${pathname === "/rna" ? " get-quote-btn-rna" : ""}`}
+            className={`get-quote-btn hidden lg:inline-flex rounded-full${pathname === "/rna" ? " get-quote-btn-rna" : ""}${isTransparent ? " get-quote-btn-transparent" : ""}`}
             style={{
-              color: "#1f1f1f",
+              color: isTransparent ? "#ffffff" : "#1f1f1f",
               fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
               fontSize: "1rem",
               fontWeight: 600,
               letterSpacing: "normal",
+              transition: "color 0.3s ease",
             }}
           >
             <span className="get-quote-inner">{pathname === "/rna" ? "Get Quote" : "Get in Touch"}</span>
@@ -274,6 +314,7 @@ export default function Header() {
           </div>
         </div>
       )}
+      </div>{/* end header wrapper */}
 
       {/* Side Panel Overlay */}
       <div

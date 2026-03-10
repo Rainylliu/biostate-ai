@@ -382,7 +382,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Copyright */}
+          {/* Copyright & Legal Links */}
           <div
             style={{
               display: "flex",
@@ -400,19 +400,34 @@ export default function Footer() {
             >
               &copy; Biostate {new Date().getFullYear()}. All rights reserved.
             </p>
-            <Link
-              href="/privacy"
-              className="footer-link-hover"
-              style={{
-                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                fontSize: "14px",
-                fontWeight: 400,
-                color: "rgba(255,255,255,0.4)",
-                textDecoration: "none",
-              }}
-            >
-              Privacy &amp; Policy
-            </Link>
+            <div style={{ display: "flex", gap: "32px" }}>
+              <Link
+                href="/privacy"
+                className="footer-link-hover"
+                style={{
+                  fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                  fontSize: "14px",
+                  fontWeight: 400,
+                  color: "rgba(255,255,255,0.4)",
+                  textDecoration: "underline",
+                }}
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="/sales-tc"
+                className="footer-link-hover"
+                style={{
+                  fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                  fontSize: "14px",
+                  fontWeight: 400,
+                  color: "rgba(255,255,255,0.4)",
+                  textDecoration: "underline",
+                }}
+              >
+                Terms &amp; Conditions
+              </Link>
+            </div>
           </div>
         </div>
       </section>
