@@ -56,7 +56,7 @@ export default function Header() {
       {/* Header wrapper - absolute on home, normal flow elsewhere */}
       <div
         style={isHome ? {
-          position: "absolute",
+          position: scrolled ? "fixed" : "absolute",
           top: 0,
           left: 0,
           right: 0,
@@ -119,8 +119,8 @@ export default function Header() {
 
       {/* Main Header */}
       <header
-        className={`${isHome ? "" : "sticky top-0 z-50"} ${!isTransparent ? "bg-white" : ""} ${scrolled && !isHome ? "header-slide-down" : ""}`}
-        style={scrolled && !isHome ? {
+        className={`${isHome ? "" : "sticky top-0 z-50"} ${!isTransparent ? "bg-white" : ""} ${scrolled ? "header-slide-down" : ""}`}
+        style={scrolled ? {
           width: "calc(100% - 40px)",
           margin: "0 auto",
           borderRadius: "0 0 25px 25px",
