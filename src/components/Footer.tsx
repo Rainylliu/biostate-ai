@@ -386,11 +386,20 @@ export default function Footer() {
           <div
             style={{
               display: "flex",
-              flexDirection: "column",
+              justifyContent: "space-between",
               alignItems: "center",
-              gap: "16px",
             }}
           >
+            <p
+              style={{
+                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                fontSize: "14px",
+                fontWeight: 400,
+                color: "rgba(255,255,255,0.4)",
+              }}
+            >
+              &copy; Biostate {new Date().getFullYear()}. All rights reserved.
+            </p>
             <div style={{ display: "flex", gap: "32px" }}>
               <Link
                 href="/privacy"
@@ -419,16 +428,6 @@ export default function Footer() {
                 Terms &amp; Conditions
               </Link>
             </div>
-            <p
-              style={{
-                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                fontSize: "14px",
-                fontWeight: 400,
-                color: "rgba(255,255,255,0.4)",
-              }}
-            >
-              &copy; Biostate {new Date().getFullYear()}. All rights reserved.
-            </p>
           </div>
         </div>
       </section>
