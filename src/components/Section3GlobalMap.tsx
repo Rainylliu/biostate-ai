@@ -7,20 +7,25 @@ interface Location {
   id: string;
   name: string;
   city: string;
-  /** Percentage position on the map */
+  /** Percentage position on the SVG (derived from SVG circle centers / viewBox 1337×678) */
   x: number;
   y: number;
   /** Tooltip opens above or below the dot */
   tooltipSide: "top" | "bottom";
 }
 
+// Positions derived from the SVG's actual circle elements:
+// Palo Alto:  center (195, 299) → (14.58%, 44.10%)
+// Riyadh:     center (791, 348) → (59.16%, 51.33%)
+// Bengaluru:  center (908, 385) → (67.91%, 56.78%)
+// Shanghai:   center (1072, 318) → (80.18%, 46.90%)
+// Wuhan:      center (1026, 325) → (76.74%, 47.94%)
 const locations: Location[] = [
-  { id: "houston", name: "Biostate Headquarters", city: "Houston", x: 20.3, y: 45, tooltipSide: "top" },
-  { id: "paloalto", name: "K-Dense", city: "Palo Alto", x: 14, y: 40, tooltipSide: "top" },
-  { id: "shanghai", name: "Biosheng", city: "Shanghai", x: 79.5, y: 42, tooltipSide: "top" },
-  { id: "wuhan", name: "Baisheng", city: "Wuhan", x: 76.5, y: 44.5, tooltipSide: "bottom" },
-  { id: "bengaluru", name: "Bayosthiti AI", city: "Bengaluru", x: 69, y: 54, tooltipSide: "bottom" },
-  { id: "riyadh", name: "Biostate.AI MENA", city: "Riyadh", x: 58, y: 44, tooltipSide: "top" },
+  { id: "paloalto", name: "Biostate Headquarters", city: "Houston", x: 14.58, y: 44.10, tooltipSide: "top" },
+  { id: "riyadh", name: "Biostate.AI MENA", city: "Riyadh", x: 59.16, y: 51.33, tooltipSide: "top" },
+  { id: "bengaluru", name: "Bayosthiti AI", city: "Bengaluru", x: 67.91, y: 56.78, tooltipSide: "bottom" },
+  { id: "shanghai", name: "Biosheng", city: "Shanghai", x: 80.18, y: 46.90, tooltipSide: "top" },
+  { id: "wuhan", name: "Baisheng", city: "Wuhan", x: 76.74, y: 47.94, tooltipSide: "bottom" },
 ];
 
 const countries = [
@@ -89,7 +94,7 @@ export default function Section3GlobalMap() {
             draggable={false}
           />
 
-          {/* Interactive dots */}
+          {/* Invisible hover zones over SVG's built-in dots */}
           {locations.map((loc) => (
             <div
               key={loc.id}
@@ -103,45 +108,15 @@ export default function Section3GlobalMap() {
               onMouseEnter={() => setHovered(loc.id)}
               onMouseLeave={() => setHovered(null)}
             >
-              {/* Hover area - larger than visible dot */}
+              {/* Transparent hover area over SVG dot */}
               <div
                 style={{
-                  width: 40,
-                  height: 40,
-                  position: "relative",
+                  width: 48,
+                  height: 48,
                   cursor: "pointer",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
+                  position: "relative",
                 }}
-              >
-                {/* Pulse ring */}
-                <div
-                  className="map-dot-pulse"
-                  style={{
-                    position: "absolute",
-                    width: 24,
-                    height: 24,
-                    borderRadius: "50%",
-                    background: "rgba(69, 80, 163, 0.15)",
-                    opacity: hovered === loc.id ? 1 : 0,
-                    transform: hovered === loc.id ? "scale(1.8)" : "scale(1)",
-                    transition: "opacity 0.3s, transform 0.3s",
-                  }}
-                />
-                {/* Dot */}
-                <div
-                  style={{
-                    width: 10,
-                    height: 10,
-                    borderRadius: "50%",
-                    background: "linear-gradient(135deg, #4550A3, #6B5CE7)",
-                    boxShadow: "0 0 8px rgba(69, 80, 163, 0.4)",
-                    transition: "transform 0.2s",
-                    transform: hovered === loc.id ? "scale(1.3)" : "scale(1)",
-                  }}
-                />
-              </div>
+              />
 
               {/* Tooltip card */}
               <div
@@ -149,8 +124,8 @@ export default function Section3GlobalMap() {
                   position: "absolute",
                   left: "50%",
                   ...(loc.tooltipSide === "top"
-                    ? { bottom: "100%", marginBottom: 8 }
-                    : { top: "100%", marginTop: 8 }),
+                    ? { bottom: "100%", marginBottom: 4 }
+                    : { top: "100%", marginTop: 4 }),
                   transform: "translateX(-50%)",
                   opacity: hovered === loc.id ? 1 : 0,
                   pointerEvents: hovered === loc.id ? "auto" : "none",
@@ -272,7 +247,7 @@ export default function Section3GlobalMap() {
                     margin: "6px 0",
                     lineHeight: 1.5,
                     transition: "color 0.25s ease",
-                    cursor: "default",
+                    cursor: "pointer",
                   }}
                 >
                   {entry}
