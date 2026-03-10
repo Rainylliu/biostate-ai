@@ -19,11 +19,6 @@ export default function Home() {
       mode: "no-cors",
     });
 
-    window.history.pushState(
-      {},
-      "",
-      window.location.pathname.replace(/\/$/, "") + "/thank-you"
-    );
     setShowPopup(true);
     setEmail("");
   };
@@ -138,7 +133,6 @@ export default function Home() {
             zIndex: 9999,
           }}
           onClick={() => {
-            window.history.back();
             setShowPopup(false);
           }}
         >
