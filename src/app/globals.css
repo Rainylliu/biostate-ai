@@ -398,7 +398,7 @@ img {
 
 .get-quote-btn.get-quote-btn-transparent:hover .get-quote-inner {
   background: transparent;
-  color: #333333;
+  color: #333333 !important;
 }
 
 /* ── Contact Expert Button (Landing Header) ── */
