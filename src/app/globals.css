@@ -728,16 +728,16 @@ button:hover .side-panel-close-x {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
   }
   .bs-flow__btn--sample {
-    left: 63%;
-    top: 22%;
+    left: 80%;
+    top: 23%;
   }
   .bs-flow__btn--wetlab {
-    left: 22%;
+    left: 16%;
     top: 47%;
   }
   .bs-flow__btn--bioai {
-    left: 63%;
-    top: 73%;
+    left: 80%;
+    top: 74%;
   }
 }
 
