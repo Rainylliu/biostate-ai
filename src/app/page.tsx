@@ -29,7 +29,7 @@ export default function Home() {
   };
 
   return (
-    <main>
+    <>
       {/* Hero Section - 100vh with video background */}
       <section className="hero-wrapper">
         <video
@@ -195,6 +195,6 @@ export default function Home() {
           </div>
         </div>
       )}
-    </main>
+    </>
   );
 }

@@ -60,7 +60,8 @@ export default function Header() {
           transition: "background-color 0.3s ease",
         } : undefined}
       >
-      {/* Top Info Bar */}
+      {/* Top Info Bar - hidden on home page */}
+      {!isHome && (
       <div
         className="flex items-center justify-between"
         style={{
@@ -110,6 +111,7 @@ export default function Header() {
           </a>
         </div>
       </div>
+      )}
 
       {/* Main Header */}
       <header
