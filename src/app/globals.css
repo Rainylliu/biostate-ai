@@ -679,6 +679,9 @@ button:hover .side-panel-close-x {
   height: auto;
   display: block;
 }
+.bs-flow__bg--mobile {
+  display: none;
+}
 .bs-flow__btn {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -712,12 +715,29 @@ button:hover .side-panel-close-x {
 }
 
 @media (max-width: 768px) {
+  .bs-flow__bg--desktop {
+    display: none;
+  }
+  .bs-flow__bg--mobile {
+    display: block;
+  }
   .bs-flow__btn {
-    padding: 4px 8px;
-    font-size: 8px;
-    line-height: 1.1;
-    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  }
+  .bs-flow__btn--sample {
+    left: 63%;
+    top: 22%;
+  }
+  .bs-flow__btn--wetlab {
+    left: 22%;
+    top: 47%;
+  }
+  .bs-flow__btn--bioai {
+    left: 63%;
+    top: 73%;
   }
 }
 

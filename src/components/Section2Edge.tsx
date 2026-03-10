@@ -39,8 +39,14 @@ export default function Section2Edge() {
       {/* Flow diagram */}
       <div className="bs-flow">
         <img
-          className="bs-flow__bg"
+          className="bs-flow__bg bs-flow__bg--desktop"
           src="/images/edge.svg"
+          alt="Biostate workflow graphic"
+          loading="lazy"
+        />
+        <img
+          className="bs-flow__bg bs-flow__bg--mobile"
+          src="/images/edge_mobile.svg"
           alt="Biostate workflow graphic"
           loading="lazy"
         />
