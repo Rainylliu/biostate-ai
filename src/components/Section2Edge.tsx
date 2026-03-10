@@ -1,4 +1,5 @@
 import Link from "next/link";
+import WaveReveal from "./WaveReveal";
 
 export default function Section2Edge() {
   return (
@@ -21,7 +22,9 @@ export default function Section2Edge() {
         >
           [ process ]
         </p>
-        <h2
+        <WaveReveal
+          text="Biostate's Edge"
+          as="h2"
           style={{
             fontFamily: "'Sora', Arial, Helvetica, sans-serif",
             fontSize: 48,
@@ -30,9 +33,7 @@ export default function Section2Edge() {
             margin: "0 0 48px 0",
             lineHeight: 1.15,
           }}
-        >
-          Biostate&rsquo;s Edge
-        </h2>
+        />
       </div>
 
       {/* Flow diagram */}

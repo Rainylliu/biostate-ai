@@ -523,6 +523,7 @@ img {
 .book-a-call-btn-hero-subscribe {
   background: #45D0BD;
   color: #000;
+  font-weight: 500;
 }
 
 .book-a-call-btn-hero-subscribe::before {
@@ -698,16 +699,16 @@ button:hover .side-panel-close-x {
   filter: brightness(1.1);
 }
 .bs-flow__btn--sample {
-  left: 25.3%;
-  top: 24%;
+  left: 25%;
+  top: 16%;
 }
 .bs-flow__btn--wetlab {
   left: 50%;
-  top: 68%;
+  top: 79%;
 }
 .bs-flow__btn--bioai {
-  left: 75.6%;
-  top: 24%;
+  left: 72%;
+  top: 16%;
 }
 
 @media (max-width: 768px) {
