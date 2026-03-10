@@ -142,10 +142,49 @@ export default function PrivacyPage() {
       >
         <li>Providing insights and updates on total RNA sequencing and related services.</li>
         <li>Engaging with researchers, medical professionals, and industry experts.</li>
-        <li>Responding to inquiries and providing customer support.</li>
-        <li>Improving our website, services, and user experience.</li>
-        <li>Complying with legal obligations.</li>
+        <li>Improving our content, user experience, and outreach strategies.</li>
+        <li>Responding to inquiries, requests, and collaboration opportunities.</li>
+        <li>Complying with legal and regulatory requirements.</li>
       </ul>
+
+      <h3
+        style={{
+          fontFamily: "'Sora', Arial, Helvetica, sans-serif",
+          fontSize: "18px",
+          fontWeight: 600,
+          color: "#111",
+          marginBottom: "12px",
+        }}
+      >
+        Lead Collection and Consent
+      </h3>
+      <p
+        style={{
+          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+          fontSize: "16px",
+          fontWeight: 400,
+          color: "#444",
+          lineHeight: 1.8,
+          marginBottom: "16px",
+        }}
+      >
+        When you provide your information through forms, we will clearly specify how your data will be used. You will have the option to provide explicit consent for each use case via disclosure checkboxes on our forms. These checkboxes ensure that we collect and use your data only for the purposes you have agreed to.
+      </p>
+      <p
+        style={{
+          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+          fontSize: "16px",
+          fontWeight: 400,
+          color: "#444",
+          lineHeight: 1.8,
+          marginBottom: "48px",
+        }}
+      >
+        If you wish to modify your consent preferences after submission, you can contact us at{" "}
+        <a href="mailto:contact@biostate.ai" style={{ color: "#45d0bd", textDecoration: "none" }}>
+          contact@biostate.ai
+        </a>
+      </p>
 
       {/* 4. Information Sharing */}
       <h2
@@ -169,7 +208,7 @@ export default function PrivacyPage() {
           marginBottom: "20px",
         }}
       >
-        We do not sell personal information. We may share data with:
+        We do not sell or rent personal information. However, we may share it with:
       </p>
       <ul
         style={{
@@ -182,9 +221,8 @@ export default function PrivacyPage() {
           paddingLeft: "24px",
         }}
       >
-        <li>Service providers who assist in our operations.</li>
-        <li>Legal authorities when required by law.</li>
-        <li>Business partners with your consent.</li>
+        <li><strong>Service Providers:</strong> Third-party vendors supporting our operations, analytics, and communications.</li>
+        <li><strong>Legal Authorities:</strong> When required by law or to protect our rights and interests.</li>
       </ul>
 
       {/* 5. Data Security */}
@@ -209,7 +247,7 @@ export default function PrivacyPage() {
           marginBottom: "48px",
         }}
       >
-        We implement appropriate technical and organizational measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction.
+        We implement strict security measures to protect your data. However, no system is entirely secure, and we advise users to exercise caution when sharing personal information online.
       </p>
 
       {/* 6. Your Rights */}
@@ -361,6 +399,8 @@ export default function PrivacyPage() {
         <a href="mailto:partnerships@biostate.ai" style={{ color: "#45d0bd", textDecoration: "none" }}>
           partnerships@biostate.ai
         </a>
+        <br />
+        +1 713-489-9827
       </address>
     </main>
   );
