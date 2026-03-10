@@ -12,20 +12,24 @@ interface Location {
   y: number;
   /** Tooltip opens above or below the dot */
   tooltipSide: "top" | "bottom";
+  /** Whether this dot exists in the SVG already (false = needs a custom rendered dot) */
+  hasSvgDot: boolean;
 }
 
-// Positions derived from the SVG's actual circle elements:
-// Palo Alto:  center (195, 299) → (14.58%, 44.10%)
-// Riyadh:     center (791, 348) → (59.16%, 51.33%)
-// Bengaluru:  center (908, 385) → (67.91%, 56.78%)
-// Shanghai:   center (1072, 318) → (80.18%, 46.90%)
-// Wuhan:      center (1026, 325) → (76.74%, 47.94%)
+// SVG circle centers (viewBox 1337×678):
+// Palo Alto:  (195, 299) → (14.58%, 44.10%)
+// Riyadh:     (791, 348) → (59.16%, 51.33%)
+// Bengaluru:  (908, 385) → (67.91%, 56.78%)
+// Shanghai:   (1072, 318) → (80.18%, 46.90%)
+// Wuhan:      (1026, 325) → (76.74%, 47.94%)
+// Houston:    no SVG dot — approx (270, 300) → (20.19%, 44.25%)
 const locations: Location[] = [
-  { id: "paloalto", name: "Biostate Headquarters", city: "Houston", x: 14.58, y: 44.10, tooltipSide: "top" },
-  { id: "riyadh", name: "Biostate.AI MENA", city: "Riyadh", x: 59.16, y: 51.33, tooltipSide: "top" },
-  { id: "bengaluru", name: "Bayosthiti AI", city: "Bengaluru", x: 67.91, y: 56.78, tooltipSide: "bottom" },
-  { id: "shanghai", name: "Biosheng", city: "Shanghai", x: 80.18, y: 46.90, tooltipSide: "top" },
-  { id: "wuhan", name: "Baisheng", city: "Wuhan", x: 76.74, y: 47.94, tooltipSide: "bottom" },
+  { id: "houston", name: "Biostate Headquarters", city: "Houston", x: 20.19, y: 44.25, tooltipSide: "top", hasSvgDot: false },
+  { id: "paloalto", name: "K-Dense", city: "Palo Alto", x: 14.58, y: 44.10, tooltipSide: "top", hasSvgDot: true },
+  { id: "riyadh", name: "Biostate.AI MENA", city: "Riyadh", x: 59.16, y: 51.33, tooltipSide: "top", hasSvgDot: true },
+  { id: "bengaluru", name: "Bayosthiti AI", city: "Bengaluru", x: 67.91, y: 56.78, tooltipSide: "bottom", hasSvgDot: true },
+  { id: "shanghai", name: "Biosheng", city: "Shanghai", x: 80.18, y: 46.90, tooltipSide: "top", hasSvgDot: true },
+  { id: "wuhan", name: "Baisheng", city: "Wuhan", x: 76.74, y: 47.94, tooltipSide: "bottom", hasSvgDot: true },
 ];
 
 const countries = [
@@ -108,15 +112,53 @@ export default function Section3GlobalMap() {
               onMouseEnter={() => setHovered(loc.id)}
               onMouseLeave={() => setHovered(null)}
             >
-              {/* Transparent hover area over SVG dot */}
+              {/* Hover area over dot */}
               <div
                 style={{
                   width: 48,
                   height: 48,
                   cursor: "pointer",
                   position: "relative",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
-              />
+              >
+                {/* Render a visible dot only for locations not in the SVG */}
+                {!loc.hasSvgDot && (
+                  <>
+                    <div
+                      style={{
+                        position: "absolute",
+                        width: 28,
+                        height: 28,
+                        borderRadius: "50%",
+                        background: "radial-gradient(circle, rgba(48,209,255,0.5) 0%, rgba(48,209,255,0) 70%)",
+                      }}
+                    />
+                    <div
+                      style={{
+                        position: "absolute",
+                        width: 18,
+                        height: 18,
+                        borderRadius: "50%",
+                        background: "radial-gradient(circle, rgba(48,209,255,0.8) 0%, rgba(48,209,255,0.2) 70%)",
+                      }}
+                    />
+                    <div
+                      style={{
+                        width: 10,
+                        height: 10,
+                        borderRadius: "50%",
+                        background: "linear-gradient(135deg, #4550A3, #6B5CE7)",
+                        boxShadow: "0 0 8px rgba(79,70,229,0.6)",
+                        position: "relative",
+                        zIndex: 1,
+                      }}
+                    />
+                  </>
+                )}
+              </div>
 
               {/* Tooltip card */}
               <div
