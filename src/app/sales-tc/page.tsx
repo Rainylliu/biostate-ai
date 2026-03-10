@@ -156,7 +156,7 @@ export default function SalesTCPage() {
       <section
         style={{
           padding: "60px 24px 20px",
-          maxWidth: "1080px",
+          maxWidth: "800px",
           margin: "0 auto",
         }}
       >
@@ -165,7 +165,7 @@ export default function SalesTCPage() {
             position: "relative",
             width: "100%",
             height: 0,
-            paddingBottom: "75%",
+            paddingBottom: "130%",
           }}
         >
           <iframe
