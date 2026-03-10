@@ -828,3 +828,20 @@ button:hover .side-panel-close-x {
     max-width: 420px;
   }
 }
+
+/* Section 3: Global Map */
+.global-map-entry:hover {
+  color: #45D0BD !important;
+}
+
+@media (max-width: 768px) {
+  .global-map-countries {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .global-map-countries {
+    grid-template-columns: 1fr !important;
+  }
+}

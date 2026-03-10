@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Section2Edge from "@/components/Section2Edge";
+import Section3GlobalMap from "@/components/Section3GlobalMap";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -124,6 +125,9 @@ export default function Home() {
 
       {/* Section 2: Biostate's Edge */}
       <Section2Edge />
+
+      {/* Section 3: Global Collaboration Network */}
+      <Section3GlobalMap />
 
       {/* Subscribe Success Popup */}
       {showPopup && (
