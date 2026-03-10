@@ -19,14 +19,14 @@ export default function Home() {
       mode: "no-cors",
     });
 
-    window.history.pushState({}, "", "/thank-you");
+    window.history.replaceState({}, "", "/?subscribed=thank-you");
     setShowPopup(true);
     setEmail("");
   };
 
   const closePopup = () => {
     setShowPopup(false);
-    window.history.pushState({}, "", "/");
+    window.history.replaceState({}, "", "/");
   };
 
   return (
@@ -102,7 +102,7 @@ export default function Home() {
             <button
               type="button"
               onClick={handleSubscribe}
-              className="book-a-call-btn book-a-call-btn-solid-teal"
+              className="book-a-call-btn book-a-call-btn-hero-subscribe"
               style={{ whiteSpace: "nowrap", height: "56px" }}
             >
               Subscribe
