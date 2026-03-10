@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const navItems = [
   { label: "HOME", href: "/" },
@@ -17,7 +17,11 @@ const navItems = [
 
 export default function Header() {
   const pathname = usePathname();
-  const isHome = pathname === "/";
+  // Lock isHome once true — pushState to /thank-you shouldn't break header
+  const isHomeRef = useRef(pathname === "/");
+  if (pathname === "/") isHomeRef.current = true;
+  else if (pathname !== "/thank-you") isHomeRef.current = false;
+  const isHome = isHomeRef.current;
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [menuHovered, setMenuHovered] = useState(false);
