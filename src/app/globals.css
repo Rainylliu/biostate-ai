@@ -694,38 +694,16 @@ button:hover .side-panel-close-x {
   font-family: 'Manrope', Arial, Helvetica, sans-serif;
   font-size: 16px;
   padding: 18px 28px;
-  border-radius: 50px;
+  border-radius: 15px;
   border: none;
   outline: none;
   background: #ffffff;
   color: #000;
-  height: 60px;
+  height: 56px;
 }
 
 .hero-email-input::placeholder {
   color: #999;
-}
-
-.hero-subscribe-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Manrope', Arial, Helvetica, sans-serif;
-  font-size: 17px;
-  font-weight: 600;
-  padding: 18px 36px;
-  border-radius: 50px;
-  border: none;
-  cursor: pointer;
-  height: 60px;
-  background: #45D0BD;
-  color: #000;
-  white-space: nowrap;
-  transition: background 0.2s ease;
-}
-
-.hero-subscribe-btn:hover {
-  background: #9BF0E5;
 }
 
 /* Hero responsive */
@@ -758,11 +736,5 @@ button:hover .side-panel-close-x {
   .hero-email-input {
     width: 100%;
     max-width: 420px;
-  }
-  .hero-subscribe-btn {
-    width: fit-content;
-    max-width: 200px;
-    padding-left: 28px;
-    padding-right: 28px;
   }
 }

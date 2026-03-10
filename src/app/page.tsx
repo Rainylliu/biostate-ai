@@ -19,8 +19,14 @@ export default function Home() {
       mode: "no-cors",
     });
 
+    window.history.pushState({}, "", "/thank-you");
     setShowPopup(true);
     setEmail("");
+  };
+
+  const closePopup = () => {
+    setShowPopup(false);
+    window.history.pushState({}, "", "/");
   };
 
   return (
@@ -96,24 +102,20 @@ export default function Home() {
             <button
               type="button"
               onClick={handleSubscribe}
-              className="hero-subscribe-btn"
+              className="book-a-call-btn book-a-call-btn-solid-teal"
+              style={{ whiteSpace: "nowrap", height: "56px" }}
             >
               Subscribe
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 16 16"
-                fill="none"
-                style={{ marginLeft: "10px", flexShrink: 0 }}
-              >
-                <path
-                  d="M4 12L12 4M12 4H5M12 4V11"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              <span className="book-a-call-arrow">
+                <span className="book-a-call-arrow-inner">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </span>
+              </span>
             </button>
           </div>
         </div>
@@ -132,9 +134,7 @@ export default function Home() {
             justifyContent: "center",
             zIndex: 9999,
           }}
-          onClick={() => {
-            setShowPopup(false);
-          }}
+          onClick={closePopup}
         >
           <div
             style={{
@@ -169,10 +169,7 @@ export default function Home() {
               Thank you for joining our mailing list.
             </p>
             <button
-              onClick={() => {
-                window.history.back();
-                setShowPopup(false);
-              }}
+              onClick={closePopup}
               style={{
                 padding: "10px 32px",
                 borderRadius: "12px",
