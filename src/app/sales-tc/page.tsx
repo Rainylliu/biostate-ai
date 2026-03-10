@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import RNAFooter from "@/components/RNAFooter";
 
 export const metadata: Metadata = {
-  title: "BIRT+PERD White Paper - biostate.AI",
-  description: "Biostate AI BIRT+PERD technology white paper.",
+  title: "Sales Terms & Conditions - biostate.AI",
+  description: "Biostate AI Sales Terms and Conditions.",
 };
 
-export default function WhitePaperPage() {
+export default function SalesTCPage() {
   return (
     <div>
       {/* Page Header Banner */}
@@ -29,7 +28,7 @@ export default function WhitePaperPage() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/headerbg.png"
+            src="/images/terms.svg"
             alt=""
             style={{
               position: "absolute",
@@ -44,7 +43,7 @@ export default function WhitePaperPage() {
               position: "absolute",
               inset: 0,
               background:
-                "linear-gradient(135deg, rgba(140, 100, 220, 0.6), rgba(100, 170, 230, 0.6))",
+                "linear-gradient(135deg, rgba(90, 50, 180, 0.6), rgba(50, 120, 200, 0.6))",
             }}
           />
         </div>
@@ -148,7 +147,7 @@ export default function WhitePaperPage() {
               letterSpacing: "-0.01em",
             }}
           >
-            / BIRT+PERD White Paper /
+            / Terms &amp; Conditions /
           </h1>
         </div>
       </section>
@@ -199,7 +198,7 @@ export default function WhitePaperPage() {
               }}
             >
               <iframe
-                src="/pdf/BIRT-PERD-WhitePaper.pdf"
+                src="/pdf/TC-03062026.pdf"
                 style={{
                   position: "absolute",
                   top: 0,
@@ -208,7 +207,7 @@ export default function WhitePaperPage() {
                   height: "100%",
                   border: "none",
                 }}
-                title="BIRT+PERD White Paper PDF"
+                title="Biostate AI Terms and Conditions PDF"
               />
             </div>
           </div>
@@ -239,7 +238,7 @@ export default function WhitePaperPage() {
                 </span>
               </a>
               <a
-                href="/pdf/BIRT-PERD-WhitePaper.pdf"
+                href="/pdf/TC-03062026.pdf"
                 download
                 className="book-a-call-btn book-a-call-btn-solid-teal"
               >
@@ -267,7 +266,7 @@ export default function WhitePaperPage() {
             >
               By submitting, you agree to Biostate&apos;s{" "}
               <a
-                href="/tc"
+                href="/sales-tc"
                 style={{ color: "#44B6E9", textDecoration: "none" }}
               >
                 Terms &amp; Conditions
@@ -277,8 +276,6 @@ export default function WhitePaperPage() {
           </div>
         </div>
       </section>
-
-      <RNAFooter />
     </div>
   );
 }

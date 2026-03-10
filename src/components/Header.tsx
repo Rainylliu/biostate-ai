@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
-import LandingHeader from "./LandingHeader";
 
 const navItems = [
   { label: "HOME", href: "/" },
@@ -38,11 +37,6 @@ export default function Header() {
     }
     return () => { document.body.style.overflow = ""; };
   }, [sidePanelOpen]);
-
-  // Use simplified landing header for /rna-sequencing and /white-paper
-  if (pathname === "/rna-sequencing" || pathname === "/white-paper") {
-    return <LandingHeader />;
-  }
 
   const marqueeText = "RNA-seq starting from $60 per sample";
 
