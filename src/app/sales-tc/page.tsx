@@ -162,118 +162,43 @@ export default function SalesTCPage() {
       >
         <div
           style={{
-            borderRadius: "20px",
-            overflow: "hidden",
-            border: "1px solid #E6EAF2",
-            boxShadow: "0 10px 28px rgba(0,0,0,0.06)",
+            position: "relative",
+            width: "100%",
+            height: 0,
+            paddingBottom: "75%",
           }}
         >
-          {/* PDF Header */}
-          <div
+          <iframe
+            src="/pdf/TC-03062026.pdf#toolbar=0&navpanes=0&scrollbar=0"
             style={{
-              padding: "22px 26px",
-              background: "linear-gradient(90deg, #45D0BD, #44B6E9)",
-              color: "white",
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              border: "none",
             }}
+            title="Biostate AI Terms and Conditions PDF"
+          />
+        </div>
+        <div style={{ marginTop: "24px", textAlign: "center" }}>
+          <a
+            href="/pdf/TC-03062026.pdf"
+            target="_blank"
+            className="book-a-call-btn book-a-call-btn-solid-teal"
           >
-            <div
-              style={{
-                fontSize: "22px",
-                fontWeight: 700,
-                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                letterSpacing: "-0.5px",
-              }}
-            >
-              View the PDF Document
-            </div>
-          </div>
-
-          {/* PDF Preview Embed */}
-          <div style={{ width: "100%", background: "white" }}>
-            <div
-              style={{
-                position: "relative",
-                width: "100%",
-                paddingTop: "120%",
-              }}
-            >
-              <iframe
-                src="/pdf/TC-03062026.pdf"
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                  border: "none",
-                }}
-                title="Biostate AI Terms and Conditions PDF"
-              />
-            </div>
-          </div>
-
-          {/* CTA Footer */}
-          <div
-            style={{
-              padding: "26px",
-              textAlign: "center",
-              background: "#F9FBFF",
-            }}
-          >
-            <div style={{ display: "inline-flex", gap: "16px", alignItems: "center", flexWrap: "wrap", justifyContent: "center" }}>
-              <a
-                href="/get-quote"
-                className="book-a-call-btn book-a-call-btn-solid-teal"
-              >
-                Request a Quote
-                <span className="book-a-call-arrow">
-                  <span className="book-a-call-arrow-inner">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                      <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                      <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </span>
-                </span>
-              </a>
-              <a
-                href="/pdf/TC-03062026.pdf"
-                download
-                className="book-a-call-btn book-a-call-btn-solid-teal"
-              >
-                Download
-                <span className="book-a-call-arrow">
-                  <span className="book-a-call-arrow-inner">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                      <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                      <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </span>
-                </span>
-              </a>
-            </div>
-            <div
-              style={{
-                marginTop: "14px",
-                fontSize: "12px",
-                color: "#6B7280",
-                lineHeight: "18px",
-                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-              }}
-            >
-              By submitting, you agree to Biostate&apos;s{" "}
-              <a
-                href="/sales-tc"
-                style={{ color: "#44B6E9", textDecoration: "none" }}
-              >
-                Terms &amp; Conditions
-              </a>
-              .
-            </div>
-          </div>
+            Download PDF
+            <span className="book-a-call-arrow">
+              <span className="book-a-call-arrow-inner">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </span>
+            </span>
+          </a>
         </div>
       </section>
     </div>
