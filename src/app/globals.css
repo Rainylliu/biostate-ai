@@ -722,6 +722,140 @@ button:hover .side-panel-close-x {
   .pipeline-mobile { display: block; }
 }
 
+/* ── Section 6: Project Gallery ── */
+.s6-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+.s6-stat {
+  flex-shrink: 0;
+  text-align: left;
+}
+.s6-stat-number {
+  display: block;
+  font-family: 'Sora', Arial, Helvetica, sans-serif;
+  font-size: 96px;
+  font-weight: 400;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 2px #8258C8;
+}
+.s6-stat-label {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin-top: 8px;
+}
+
+/* Card */
+.s6-card {
+  background: #1F1F1F;
+  border-radius: 25px;
+  padding: 48px 40px 60px;
+  position: relative;
+  overflow: hidden;
+}
+.s6-gallery {
+  overflow: hidden;
+}
+.s6-track {
+  display: flex;
+  width: 400%; /* 4 pages */
+  transition: transform 450ms ease;
+  will-change: transform;
+}
+.s6-page {
+  width: 25%; /* 100% / 4 pages */
+}
+/* Desktop: single image fills the page */
+.s6-page-desktop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+/* Mobile: single image fills the page */
+.s6-page-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.s6-imgbox {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.s6-imgbox img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Indicator dots */
+.s6-indicator {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 24px;
+}
+.s6-dot {
+  width: 48px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+}
+.s6-dot::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: #717171;
+  border-radius: 5px;
+  transition: height 220ms ease, background 220ms ease;
+}
+.s6-dot-active::before {
+  height: 6px;
+  background: #ffffff;
+}
+
+/* Desktop/Mobile toggle */
+.s6-desktop { display: block; }
+.s6-mobile { display: none; }
+
+@media (max-width: 768px) {
+  .s6-desktop { display: none; }
+  .s6-mobile { display: block; }
+
+  .s6-header {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .s6-stat-number {
+    font-size: 64px;
+  }
+  .s6-card {
+    border-radius: 18px;
+    padding: 32px 24px 40px;
+  }
+  .s6-header h2 {
+    font-size: 28px !important;
+  }
+}
+
 /* ── Header Slide Down Animation ── */
 @keyframes headerSlideDown {
   from {

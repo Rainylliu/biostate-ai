@@ -5,6 +5,7 @@ import Section2Edge from "@/components/Section2Edge";
 import Section3GlobalMap from "@/components/Section3GlobalMap";
 import Section4Ecosystem from "@/components/Section4Ecosystem";
 import Section5Pipeline from "@/components/Section5Pipeline";
+import Section6Projects from "@/components/Section6Projects";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -136,6 +137,9 @@ export default function Home() {
 
       {/* Section 5: Pipeline */}
       <Section5Pipeline />
+
+      {/* Section 6: Project Gallery */}
+      <Section6Projects />
 
       {/* Subscribe Success Popup */}
       {showPopup && (
