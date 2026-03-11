@@ -321,6 +321,147 @@ export default function AboutUsPage() {
           </a>
         </div>
       </section>
+
+      {/* ── Section 3: Team Leaders ── */}
+      <section
+        style={{
+          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+          padding: "0 20px 80px",
+        }}
+      >
+        <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+          <div
+            style={{
+              backgroundColor: "#F0F2F4",
+              borderRadius: 25,
+              padding: "80px 40px",
+            }}
+          >
+            {/* Header */}
+            <p style={{ fontSize: 14, fontWeight: 500, color: "#333", marginBottom: 12 }}>
+              [ leader ]
+            </p>
+            <h2
+              style={{
+                fontFamily: "'Sora', Arial, Helvetica, sans-serif",
+                fontSize: 48,
+                fontWeight: 400,
+                color: "#111",
+                margin: "0 0 60px 0",
+                lineHeight: 1.15,
+              }}
+            >
+              Team Leaders
+            </h2>
+
+            {/* 3×2 Grid */}
+            <div
+              className="team-leaders-grid"
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(3, 1fr)",
+                gap: "60px 40px",
+              }}
+            >
+              {/* Jeremy Sobotta */}
+              <div>
+                <img
+                  src="/images/Jeremy Sobotta.svg"
+                  alt="Jeremy Sobotta"
+                  style={{ width: "100%", aspectRatio: "1 / 1", objectFit: "cover", borderRadius: 20, display: "block", marginBottom: 20 }}
+                />
+                <h3 style={{ fontSize: 24, fontWeight: 700, color: "#111", lineHeight: 1.3, marginBottom: 16 }}>
+                  Jeremy Sobotta | CFO, Biostate AI
+                </h3>
+                <ul style={{ fontSize: 14, color: "#333", fontWeight: 400, lineHeight: 1.7, listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: 8 }}>
+                  <li style={{ display: "flex", gap: 8 }}><span style={{ flexShrink: 0 }}>↘</span><span>CFO, Padagis LLC (2023–2025); CFO, Perimeter Medical Imaging AI (2019–2023); Senior Financial Leader, Stryker (2008–2019);</span></li>
+                  <li style={{ display: "flex", gap: 8 }}><span style={{ flexShrink: 0 }}>↘</span><span>Deployed $4B+ in M&amp;A capital with extensive experience in transaction, integration, and scaling of biotech and medtech enterprises</span></li>
+                </ul>
+              </div>
+
+              {/* Kutapa Muthanna */}
+              <div>
+                <img
+                  src="/images/Kutapa Muthanna.svg"
+                  alt="Kutapa Muthanna"
+                  style={{ width: "100%", aspectRatio: "1 / 1", objectFit: "cover", borderRadius: 20, display: "block", marginBottom: 20 }}
+                />
+                <h3 style={{ fontSize: 24, fontWeight: 700, color: "#111", lineHeight: 1.3, marginBottom: 16 }}>
+                  Kutapa Muthanna | CEO, Bayosthiti AI (India Subsidiary)
+                </h3>
+                <ul style={{ fontSize: 14, color: "#333", fontWeight: 400, lineHeight: 1.7, listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: 8 }}>
+                  <li style={{ display: "flex", gap: 8 }}><span style={{ flexShrink: 0 }}>↘</span><span>Director, KPMG (2014–2024);</span></li>
+                  <li style={{ display: "flex", gap: 8 }}><span style={{ flexShrink: 0 }}>↘</span><span>Lead Software Engineer, Fidelity (2005–2014)</span></li>
+                </ul>
+              </div>
+
+              {/* Mohammad Alkweihewi */}
+              <div>
+                <img
+                  src="/images/Mohammad Alkweihewi.svg"
+                  alt="Mohammad Alkweihewi"
+                  style={{ width: "100%", aspectRatio: "1 / 1", objectFit: "cover", borderRadius: 20, display: "block", marginBottom: 20 }}
+                />
+                <h3 style={{ fontSize: 24, fontWeight: 700, color: "#111", lineHeight: 1.3, marginBottom: 16 }}>
+                  Mohammad Alkweihewi | CEO, Biostate AI MENA (KSA Subsidiary)
+                </h3>
+                <ul style={{ fontSize: 14, color: "#333", fontWeight: 400, lineHeight: 1.7, listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: 8 }}>
+                  <li style={{ display: "flex", gap: 8 }}><span style={{ flexShrink: 0 }}>↘</span><span>Managing Director, Eurofins Clinical KSA, (2024-2025);</span></li>
+                  <li style={{ display: "flex", gap: 8 }}><span style={{ flexShrink: 0 }}>↘</span><span>Director of Private Sector Partnerships, Ministry of Health KSA, (2023-2024);</span></li>
+                  <li style={{ display: "flex", gap: 8 }}><span style={{ flexShrink: 0 }}>↘</span><span>Director of Research, Princess Noura University, (2021-2023)</span></li>
+                </ul>
+              </div>
+
+              {/* Zoe Zheng */}
+              <div>
+                <img
+                  src="/images/Zoe Zheng.svg"
+                  alt="Zoe Zheng"
+                  style={{ width: "100%", aspectRatio: "1 / 1", objectFit: "cover", borderRadius: 20, display: "block", marginBottom: 20 }}
+                />
+                <h3 style={{ fontSize: 24, fontWeight: 700, color: "#111", lineHeight: 1.3, marginBottom: 16 }}>
+                  Zoe Zheng | CEO, Biosheng (China Subsidiary)
+                </h3>
+                <ul style={{ fontSize: 14, color: "#333", fontWeight: 400, lineHeight: 1.7, listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: 8 }}>
+                  <li style={{ display: "flex", gap: 8 }}><span style={{ flexShrink: 0 }}>↘</span><span>Partner, Alpha Ventures (2023–2024);</span></li>
+                  <li style={{ display: "flex", gap: 8 }}><span style={{ flexShrink: 0 }}>↘</span><span>Principal, Matrix Partners China (2018–2022)</span></li>
+                </ul>
+              </div>
+
+              {/* Alden Yao */}
+              <div>
+                <img
+                  src="/images/Alden Yao.svg"
+                  alt="Alden Yao"
+                  style={{ width: "100%", aspectRatio: "1 / 1", objectFit: "cover", borderRadius: 20, display: "block", marginBottom: 20 }}
+                />
+                <h3 style={{ fontSize: 24, fontWeight: 700, color: "#111", lineHeight: 1.3, marginBottom: 16 }}>
+                  Alden Yao | CEO, Baisheng (Wuhan JV)
+                </h3>
+                <ul style={{ fontSize: 14, color: "#333", fontWeight: 400, lineHeight: 1.7, listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: 8 }}>
+                  <li style={{ display: "flex", gap: 8 }}><span style={{ flexShrink: 0 }}>↘</span><span>Kindstar Global Gene Technology Co., Ltd., Deputy General Manager of the subsidiary. (2012–Present)</span></li>
+                </ul>
+              </div>
+
+              {/* Timothy Kassis */}
+              <div>
+                <img
+                  src="/images/Timothy Kassis.svg"
+                  alt="Timothy Kassis, Ph.D."
+                  style={{ width: "100%", aspectRatio: "1 / 1", objectFit: "cover", borderRadius: 20, display: "block", marginBottom: 20 }}
+                />
+                <h3 style={{ fontSize: 24, fontWeight: 700, color: "#111", lineHeight: 1.3, marginBottom: 16 }}>
+                  Timothy Kassis, Ph.D. | Co-Founder &amp; Head of AI, K-Dense
+                </h3>
+                <ul style={{ fontSize: 14, color: "#333", fontWeight: 400, lineHeight: 1.7, listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: 8 }}>
+                  <li style={{ display: "flex", gap: 8 }}><span style={{ flexShrink: 0 }}>↘</span><span>Head of AI and Data Metaworks (2021–2025);</span></li>
+                  <li style={{ display: "flex", gap: 8 }}><span style={{ flexShrink: 0 }}>↘</span><span>Instructor, MIT (2011–2021)</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

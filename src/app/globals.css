@@ -1405,6 +1405,11 @@ button:hover .side-panel-close-x {
   .get-quote-subtitle {
     font-size: 30px !important;
   }
+  /* Team leaders grid: 1 column on mobile */
+  .team-leaders-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
 }
 
 /* RNA section 6 grid + PERD cards - desktop defaults */
