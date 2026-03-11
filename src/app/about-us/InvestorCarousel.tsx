@@ -26,7 +26,7 @@ function NavArrow({ direction, onClick }: { direction: "left" | "right"; onClick
         alignItems: "center",
         justifyContent: "center",
         transition: "color 0.3s ease",
-        color: hovered ? "#45d0bd" : "#111",
+        color: hovered ? "#45d0bd" : "#111111",
       }}
     >
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
