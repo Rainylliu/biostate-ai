@@ -64,6 +64,7 @@ export default function Section6Projects() {
         fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
       }}
     >
+     <div style={{ maxWidth: 1280, margin: "0 auto" }}>
       {/* ── Header Row ── */}
       <div className="s6-header">
         <div>
@@ -175,6 +176,7 @@ export default function Section6Projects() {
           ))}
         </div>
       </div>
+     </div>
     </section>
   );
 }

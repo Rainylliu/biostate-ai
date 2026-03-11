@@ -9,6 +9,7 @@ export default function Section2Edge() {
         background: "#ffffff",
       }}
     >
+     <div style={{ maxWidth: 1280, margin: "0 auto" }}>
       {/* Section header */}
       <div>
         <p
@@ -60,6 +61,7 @@ export default function Section2Edge() {
           Biomedical AI
         </Link>
       </div>
+     </div>
     </section>
   );
 }

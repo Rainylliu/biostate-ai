@@ -104,12 +104,12 @@ export default function Section4Ecosystem() {
 
   return (
     <section className="s4-section" style={{ fontFamily: "'Manrope', Arial, Helvetica, sans-serif" }}>
-      {/* Scrolling Banner */}
+      {/* Scrolling Banner — full-width, breaks out of parent padding */}
       <div
         style={{
           transform: "rotate(-2.07deg)",
           backgroundImage: "linear-gradient(92deg, #45D0BD 0%, #44B6E9 100%)",
-          margin: "40px -5px 0px -5px",
+          margin: "40px -40px 0px -40px",
           padding: "50px 0px",
           position: "relative",
           zIndex: 2,
@@ -128,6 +128,7 @@ export default function Section4Ecosystem() {
       </div>
 
       {/* Trapezoid Slider */}
+      <div style={{ maxWidth: 1280, margin: "0 auto" }}>
       <div
         ref={containerRef}
         onMouseEnter={stopAutoPlay}
@@ -397,6 +398,7 @@ export default function Section4Ecosystem() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

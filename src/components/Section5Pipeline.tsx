@@ -58,6 +58,7 @@ export default function Section5Pipeline() {
         fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
       }}
     >
+     <div style={{ maxWidth: 1280, margin: "0 auto" }}>
       {/* Desktop version */}
       <div
         className="pipeline-desktop"
@@ -143,6 +144,7 @@ export default function Section5Pipeline() {
           </a>
         ))}
       </div>
+     </div>
     </section>
   );
 }
