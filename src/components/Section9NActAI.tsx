@@ -10,8 +10,10 @@ export default function Section9NActAI() {
   return (
     <section
       style={{
-        padding: "100px 20px 80px",
+        padding: "40px 20px 80px",
         background: "#ffffff",
+        position: "relative",
+        overflow: "hidden",
       }}
     >
       <div className="s9-container">
@@ -205,6 +207,8 @@ export default function Section9NActAI() {
           display: flex;
           gap: 48px;
           align-items: stretch;
+          position: relative;
+          z-index: 1;
         }
         .s9-left {
           flex: 1;
@@ -251,6 +255,23 @@ export default function Section9NActAI() {
           }
         }
       `}</style>
+
+      {/* Circle background decoration at bottom */}
+      <img
+        src="/images/circle-bg2.svg"
+        alt=""
+        style={{
+          position: "absolute",
+          bottom: -300,
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: 900,
+          height: 900,
+          pointerEvents: "none",
+          opacity: 0.5,
+          zIndex: 0,
+        }}
+      />
     </section>
   );
 }
