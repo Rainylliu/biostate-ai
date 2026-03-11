@@ -5,21 +5,22 @@ export default function Section7Wetlab() {
   return (
     <section
       style={{
-        padding: "100px 20px 80px",
+        padding: "40px 20px 40px",
         background: "#ffffff",
       }}
     >
       {/* ── Part 1: Intro Header ── */}
-      <div style={{ maxWidth: 1100, margin: "0 auto 80px" }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto 80px" }}>
+      <div style={{ maxWidth: 800 }}>
         <p className="s7-tag">[ about ]</p>
         <WaveReveal
           text="Next-Gen Wetlab Technology for 85% Lower Cost"
           as="h2"
           style={{
             fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-            fontSize: 56,
+            fontSize: 48,
             fontWeight: 400,
-            color: "#111",
+            color: "#333333",
             margin: "0 0 32px 0",
             lineHeight: 1.15,
           }}
@@ -44,6 +45,7 @@ export default function Section7Wetlab() {
           disease prediction and drug response models.
         </p>
       </div>
+      </div>
 
       {/* ── Part 2: RNAseq (image left, content right) ── */}
       <div className="s7-row" style={{ maxWidth: 1200, margin: "0 auto 100px" }}>
@@ -67,7 +69,7 @@ export default function Section7Wetlab() {
               fontFamily: "'Sora', Arial, Helvetica, sans-serif",
               fontSize: 48,
               fontWeight: 400,
-              color: "#111",
+              color: "#333333",
               lineHeight: 1.15,
               margin: "0 0 28px 0",
             }}
@@ -95,7 +97,7 @@ export default function Section7Wetlab() {
             {/* 01 The problem */}
             <div style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
               <img
-                src="/images/wetlabicon1.svg"
+                src="/images/Wetlabicon1.svg"
                 alt=""
                 style={{ width: 48, height: 48, flexShrink: 0, marginTop: 2 }}
               />
@@ -130,7 +132,7 @@ export default function Section7Wetlab() {
             {/* 02 Our breakthrough solution */}
             <div style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
               <img
-                src="/images/wetlabicon2.svg"
+                src="/images/Wetlabicon2.svg"
                 alt=""
                 style={{ width: 48, height: 48, flexShrink: 0, marginTop: 2 }}
               />
@@ -166,7 +168,7 @@ export default function Section7Wetlab() {
             {/* 03 Proven impact */}
             <div style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
               <img
-                src="/images/wetlabicon3.svg"
+                src="/images/Wetlabicon3.svg"
                 alt=""
                 style={{ width: 48, height: 48, flexShrink: 0, marginTop: 2 }}
               />
@@ -203,7 +205,7 @@ export default function Section7Wetlab() {
       </div>
 
       {/* ── Part 3: DNAseq (content left, image right) ── */}
-      <div className="s7-row s7-row-reverse" style={{ maxWidth: 1200, margin: "0 auto" }}>
+      <div className="s7-row" style={{ maxWidth: 1200, margin: "0 auto" }}>
         <div className="s7-col-text">
           <p className="s7-tag">[ how it works ]</p>
           <h3
@@ -211,7 +213,7 @@ export default function Section7Wetlab() {
               fontFamily: "'Sora', Arial, Helvetica, sans-serif",
               fontSize: 48,
               fontWeight: 400,
-              color: "#111",
+              color: "#333333",
               lineHeight: 1.15,
               margin: "0 0 28px 0",
             }}

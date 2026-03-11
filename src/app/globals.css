@@ -188,8 +188,21 @@ img {
     gap: 30px !important;
   }
   .footer-contact-label {
-    min-width: 120px !important;
+    min-width: unset !important;
     font-size: 14px !important;
+  }
+  .footer-contact-row {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  .footer-contact-value {
+    font-size: 14px !important;
+  }
+  /* Email and Social network side by side on mobile */
+  .footer-contact-row-inline {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
   }
   .footer-bio-row {
     flex-direction: column !important;
@@ -198,10 +211,12 @@ img {
   }
   .footer-subscribe-row {
     width: 100%;
-    justify-content: flex-end !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: flex-end !important;
   }
   .footer-subscribe-row .footer-email-input {
-    width: 100% !important;
+    width: auto !important;
     flex: 1;
   }
   .footer-bio-text {
@@ -221,6 +236,19 @@ img {
   .footer-legal p,
   .footer-legal a {
     font-size: 11px !important;
+  }
+  .footer-email-social-row {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 0 !important;
+  }
+  .footer-email-social-row .footer-contact-row {
+    flex: 1;
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  .footer-email-social-row .footer-contact-value {
+    text-align: left !important;
   }
 }
 
@@ -666,6 +694,7 @@ button:hover .side-panel-close-x {
 /* ── Section 4: Ecosystem ── */
 .s4-section {
   padding: 0 20px;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -767,17 +796,18 @@ button:hover .side-panel-close-x {
   text-align: center;
   background: #ffffff;
   color: #8258C8;
-  font-size: clamp(8px, 2.5vw, 14px);
+  font-size: clamp(7px, 2.2vw, 11px);
   font-weight: 600;
   text-decoration: none;
-  border-radius: 24px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   border: 1.5px solid #8258C8;
   cursor: pointer;
   transition: all 0.25s ease;
   line-height: 1.15;
-  width: clamp(56px, 18vw, 100px);
-  height: clamp(30px, 9vw, 50px);
+  width: clamp(55px, 16vw, 110px);
+  height: auto;
+  padding: clamp(4px, 1.2vw, 10px) clamp(4px, 1vw, 10px);
   white-space: nowrap;
 }
 .pipeline-btn-mobile:hover {
@@ -1165,7 +1195,7 @@ button:hover .side-panel-close-x {
 .s7-row {
   display: flex;
   gap: 60px;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .s7-row-reverse {
