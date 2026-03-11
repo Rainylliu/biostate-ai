@@ -2,6 +2,11 @@
 
 import { useState } from "react";
 import Section2Edge from "@/components/Section2Edge";
+import Section3GlobalMap from "@/components/Section3GlobalMap";
+import Section4Ecosystem from "@/components/Section4Ecosystem";
+import Section5Pipeline from "@/components/Section5Pipeline";
+import Section6Projects from "@/components/Section6Projects";
+import Section7Wetlab from "@/components/Section7Wetlab";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -124,6 +129,21 @@ export default function Home() {
 
       {/* Section 2: Biostate's Edge */}
       <Section2Edge />
+
+      {/* Section 3: Global Collaboration Network */}
+      <Section3GlobalMap />
+
+      {/* Section 4: Ecosystem Slider */}
+      <Section4Ecosystem />
+
+      {/* Section 5: Pipeline */}
+      <Section5Pipeline />
+
+      {/* Section 7: Wetlab Technology */}
+      <Section7Wetlab />
+
+      {/* Section 6: Project Gallery */}
+      <Section6Projects />
 
       {/* Subscribe Success Popup */}
       {showPopup && (

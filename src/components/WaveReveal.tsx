@@ -9,6 +9,8 @@ interface WaveRevealProps {
   className?: string;
   delay?: number;
   charDelay?: number;
+  highlightWords?: string[];
+  highlightStyle?: CSSProperties;
 }
 
 export default function WaveReveal({
@@ -18,6 +20,8 @@ export default function WaveReveal({
   className,
   delay = 0,
   charDelay = 20,
+  highlightWords = [],
+  highlightStyle = {},
 }: WaveRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -45,8 +49,10 @@ export default function WaveReveal({
   return (
     <div ref={ref}>
       <Tag style={style} className={className}>
-        {words.map((word, wi) => (
-          <span key={wi} style={{ whiteSpace: "nowrap" }}>
+        {words.map((word, wi) => {
+          const isHighlighted = highlightWords.includes(word);
+          return (
+          <span key={wi} style={{ whiteSpace: "nowrap", ...(isHighlighted ? highlightStyle : {}) }}>
             {word.split("").map((char) => {
               const i = charIndex++;
               return (
@@ -76,7 +82,8 @@ export default function WaveReveal({
               </span>
             )}
           </span>
-        ))}
+          );
+        })}
       </Tag>
     </div>
   );
