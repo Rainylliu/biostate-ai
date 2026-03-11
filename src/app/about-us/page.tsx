@@ -209,35 +209,6 @@ export default function AboutUsPage() {
           background: "#ffffff",
         }}
       >
-        {/* Title */}
-        <div style={{ textAlign: "center", marginBottom: 40 }}>
-          <h2
-            style={{
-              fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-              fontSize: 48,
-              fontWeight: 400,
-              color: "#222",
-              margin: "0 0 12px 0",
-            }}
-          >
-            Global Constellation
-          </h2>
-          <p
-            style={{
-              fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-              fontSize: 15,
-              fontWeight: 400,
-              color: "#666",
-              lineHeight: 1.6,
-              margin: 0,
-            }}
-          >
-            A world-class organization built to accelerate
-            <br />
-            breakthroughs from sample to insight.
-          </p>
-        </div>
-
         {/* Map container */}
         <div
           className="gc-wrapper"
