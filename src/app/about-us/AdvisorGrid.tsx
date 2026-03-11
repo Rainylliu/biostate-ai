@@ -148,33 +148,33 @@ export default function AdvisorGrid() {
             marginTop: 40,
           }}
         >
-          {/* Previous */}
-          <button
-            onClick={() => setPage((p) => Math.max(1, p - 1))}
-            disabled={page === 1}
-            className="advisor-page-btn advisor-page-nav"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 6,
-              padding: "10px 20px",
-              borderRadius: 10,
-              border: "1px solid #8258c8",
-              background: "#ffffff",
-              color: page === 1 ? "#ccc" : "#333",
-              fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-              fontSize: 14,
-              fontWeight: 500,
-              cursor: page === 1 ? "default" : "pointer",
-              opacity: page === 1 ? 0.4 : 1,
-              transition: "opacity 0.2s",
-            }}
-          >
-            Previous
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style={{ transform: "rotate(180deg)" }}>
-              <path d="M1 13L13 1M13 1H3M13 1V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </button>
+          {/* Previous — hidden on first page */}
+          {page > 1 && (
+            <button
+              onClick={() => setPage((p) => p - 1)}
+              className="advisor-page-btn advisor-page-nav"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 6,
+                padding: "10px 20px",
+                borderRadius: 10,
+                border: "1px solid #8258c8",
+                background: "#ffffff",
+                color: "#333",
+                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                fontSize: 14,
+                fontWeight: 500,
+                cursor: "pointer",
+                transition: "all 0.2s",
+              }}
+            >
+              Previous
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style={{ transform: "rotate(180deg)" }}>
+                <path d="M1 13L13 1M13 1H3M13 1V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+          )}
 
           {/* Page numbers */}
           {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
@@ -203,33 +203,33 @@ export default function AdvisorGrid() {
             </button>
           ))}
 
-          {/* Next */}
-          <button
-            onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
-            disabled={page === totalPages}
-            className="advisor-page-btn advisor-page-nav"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 6,
-              padding: "10px 20px",
-              borderRadius: 10,
-              border: "1px solid #8258c8",
-              background: "#ffffff",
-              color: page === totalPages ? "#ccc" : "#333",
-              fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-              fontSize: 14,
-              fontWeight: 500,
-              cursor: page === totalPages ? "default" : "pointer",
-              opacity: page === totalPages ? 0.4 : 1,
-              transition: "opacity 0.2s",
-            }}
-          >
-            Next
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <path d="M1 13L13 1M13 1H3M13 1V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </button>
+          {/* Next — hidden on last page */}
+          {page < totalPages && (
+            <button
+              onClick={() => setPage((p) => p + 1)}
+              className="advisor-page-btn advisor-page-nav"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 6,
+                padding: "10px 20px",
+                borderRadius: 10,
+                border: "1px solid #8258c8",
+                background: "#ffffff",
+                color: "#333",
+                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                fontSize: 14,
+                fontWeight: 500,
+                cursor: "pointer",
+                transition: "all 0.2s",
+              }}
+            >
+              Next
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M1 13L13 1M13 1H3M13 1V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+          )}
         </div>
       )}
     </div>
