@@ -484,6 +484,27 @@ export default function AboutUsPage() {
           />
         </div>
       </section>
+      {/* ── Section 5: Individual Investors ── */}
+      <section
+        style={{
+          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+          padding: "40px 0 35px",
+        }}
+      >
+        <div>
+          <InvestorCarousel
+            heading="Individual investors"
+            investors={[
+              { name: "Prasad Chintamaneni", position: "Senior Advisor", image: "/images/Prasad Chintamaneni.svg", link: "#" },
+              { name: "Dario Amodei", position: "Founder & CEO", image: "/images/Dario Amodei.svg", link: "#" },
+              { name: "Mike Schnall-Levin", position: "CTO", image: "/images/Mike Schnall-Levin.svg", link: "#" },
+              { name: "Emily Leproust", position: "Founder & CEO", image: "/images/Emily Leproust.svg", link: "#" },
+              { name: "Joris Poort", position: "Founder & CEO", image: "/images/Joris Poort.svg", link: "#" },
+              { name: "Arpan Sheth", position: "Senior Partner", image: "/images/Arpan Sheth.svg", link: "#" },
+            ]}
+          />
+        </div>
+      </section>
     </div>
   );
 }

@@ -27,7 +27,7 @@ function NavArrow({ direction, onClick }: { direction: "left" | "right"; onClick
         alignItems: "center",
         justifyContent: "center",
         transition: "color 0.3s ease",
-        color: "#fff",
+        color: "#333",
       }}
     >
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -60,7 +60,7 @@ function CardArrow() {
   );
 }
 
-export default function InvestorCarousel({ investors }: { investors: Investor[] }) {
+export default function InvestorCarousel({ investors, heading = "Institutional investors" }: { investors: Investor[]; heading?: string }) {
   const trackRef = useRef<HTMLDivElement>(null);
   const [offset, setOffset] = useState(0);
   const cardW = 360;
@@ -109,24 +109,34 @@ export default function InvestorCarousel({ investors }: { investors: Investor[] 
           <div>
             <p style={{ fontSize: 14, color: "#333", fontWeight: 500, marginBottom: 8 }}>[ investors ]</p>
             <h2 style={{ fontFamily: "'Sora', Arial, Helvetica, sans-serif", fontSize: 60, fontWeight: 400, color: "#111", letterSpacing: "-0.05em", lineHeight: 1.15, margin: 0 }}>
-              Institutional investors
+              {heading}
             </h2>
           </div>
-          {/* Pill-shaped nav with gradient fill */}
+          {/* Rounded-rect nav with gradient border */}
           <div
             style={{
-              display: "flex",
+              display: "inline-flex",
               alignItems: "center",
-              width: 96,
-              height: 48,
-              borderRadius: 9999,
+              borderRadius: 16,
+              padding: 1.5,
               background: "linear-gradient(118deg, rgb(130, 88, 200) 0%, rgb(44, 132, 200) 100%)",
-              overflow: "hidden",
-              justifyContent: "space-around",
             }}
           >
-            <NavArrow direction="left" onClick={prev} />
-            <NavArrow direction="right" onClick={next} />
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                width: 94,
+                height: 44,
+                borderRadius: 14.5,
+                background: "#fff",
+                overflow: "hidden",
+                justifyContent: "space-around",
+              }}
+            >
+              <NavArrow direction="left" onClick={prev} />
+              <NavArrow direction="right" onClick={next} />
+            </div>
           </div>
         </div>
       </div>
@@ -168,7 +178,7 @@ export default function InvestorCarousel({ investors }: { investors: Investor[] 
                   style={{ width: 320, height: 320, objectFit: "cover", display: "block" }}
                 />
               </a>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
                 <a
                   href={inv.link}
                   target="_blank"
@@ -176,7 +186,7 @@ export default function InvestorCarousel({ investors }: { investors: Investor[] 
                   style={{ textDecoration: "none" }}
                 >
                   <h5 className="investor-card-name">{inv.name}</h5>
-                  <p style={{ fontSize: 13, color: "#666", margin: "4px 0 0", lineHeight: 1.3 }}>{inv.position}</p>
+                  <p style={{ fontSize: 14, color: "#666", margin: "4px 0 0", lineHeight: 1.3 }}>{inv.position}</p>
                 </a>
                 <a href={inv.link} target="_blank" rel="noopener noreferrer" style={{ flexShrink: 0 }}>
                   <CardArrow />
