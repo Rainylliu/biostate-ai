@@ -1412,6 +1412,11 @@ button:hover .side-panel-close-x {
   }
 }
 
+/* Team leaders grid children – prevent inherited margin-top */
+.team-leaders-grid > div {
+  margin-top: 0;
+}
+
 /* RNA section 6 grid + PERD cards - desktop defaults */
 .rna-s6-grid {
   display: flex;
