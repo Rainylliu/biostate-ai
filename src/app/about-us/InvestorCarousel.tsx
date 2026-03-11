@@ -45,13 +45,15 @@ function NavArrow({ direction, onClick }: { direction: "left" | "right"; onClick
 function CardArrow() {
   return (
     <span className="investor-card-arrow-btn">
-      <span className="investor-card-arrow-inner">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-          <path d="M5 13L13 5M13 5H6M13 5V12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-          <path d="M5 13L13 5M13 5H6M13 5V12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
+      <span className="investor-card-arrow-icon">
+        <span className="investor-card-arrow-inner">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <path d="M6 16L16 6M16 6H7M16 6V15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <path d="M6 16L16 6M16 6H7M16 6V15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </span>
       </span>
     </span>
   );
@@ -172,7 +174,7 @@ export default function InvestorCarousel({ investors }: { investors: Investor[] 
                 />
               </div>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                <h5 style={{ fontSize: 20, fontWeight: 400, color: "#111", margin: 0 }}>{inv.name}</h5>
+                <h5 className="investor-card-name">{inv.name}</h5>
                 <CardArrow />
               </div>
             </a>
