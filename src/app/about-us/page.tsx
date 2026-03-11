@@ -361,6 +361,7 @@ export default function AboutUsPage() {
                 display: "grid",
                 gridTemplateColumns: "repeat(3, 1fr)",
                 gap: "60px 40px",
+                alignItems: "start",
               }}
             >
               {/* Jeremy Sobotta */}
