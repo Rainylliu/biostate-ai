@@ -1246,13 +1246,51 @@ button:hover .side-panel-close-x {
   }
 }
 
-/* ── Global Constellation (Team page) ── */
+/* ── Team Page ── */
+
+/* Global Constellation */
 .gc-node img {
   transition: transform 0.18s ease, filter 0.18s ease;
 }
 .gc-node:hover img {
   transform: translateY(-3px);
   filter: brightness(1.08);
+}
+
+/* Team page responsive */
+@media (max-width: 900px) {
+  .team-hero-title {
+    font-size: 56px !important;
+    margin: -20px 0 20px 0 !important;
+  }
+  .team-profile {
+    flex-direction: column !important;
+    gap: 32px !important;
+    margin-top: 48px !important;
+  }
+  .team-profile-photo {
+    width: 100% !important;
+    max-width: 400px;
+  }
+  .team-profile-name {
+    font-size: 40px !important;
+  }
+  .gc-node img {
+    width: 180px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .team-hero-title {
+    font-size: 38px !important;
+    margin: 0 0 16px 0 !important;
+  }
+  .team-profile-name {
+    font-size: 32px !important;
+  }
+  .gc-node img {
+    width: 120px !important;
+  }
 }
 
 /* Section 3: Global Map */

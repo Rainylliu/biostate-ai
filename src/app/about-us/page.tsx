@@ -38,6 +38,7 @@ export default function AboutUsPage() {
 
         {/* Content */}
         <h1
+          className="team-hero-title"
           style={{
             position: "relative",
             fontFamily: "'Sora', Arial, Helvetica, sans-serif",
@@ -69,6 +70,7 @@ export default function AboutUsPage() {
 
         {/* ── David Zhang Profile ── */}
         <div
+          className="team-profile"
           style={{
             position: "relative",
             display: "flex",
@@ -81,7 +83,7 @@ export default function AboutUsPage() {
           }}
         >
           {/* Photo */}
-          <div style={{ flexShrink: 0, width: 400 }}>
+          <div className="team-profile-photo" style={{ flexShrink: 0, width: 400 }}>
             <img
               src="/images/david.svg"
               alt="David Zhang, Ph.D."
@@ -98,6 +100,7 @@ export default function AboutUsPage() {
           {/* Info */}
           <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
             <h2
+              className="team-profile-name"
               style={{
                 fontFamily: "'Sora', Arial, Helvetica, sans-serif",
                 fontSize: 64,
