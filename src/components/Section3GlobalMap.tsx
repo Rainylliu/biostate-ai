@@ -71,8 +71,8 @@ export default function Section3GlobalMap() {
   const [hovered, setHovered] = useState<string | null>(null);
 
   return (
-    <section style={{ padding: "80px 24px 80px", background: "#ffffff" }}>
-      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+    <section style={{ padding: "80px 20px 80px", background: "#ffffff" }}>
+      <div>
         {/* Section header */}
         <p
           style={{
@@ -100,7 +100,7 @@ export default function Section3GlobalMap() {
       </div>
 
       {/* Map container */}
-      <div style={{ maxWidth: 1200, margin: "0 auto", position: "relative" }}>
+      <div style={{ position: "relative" }}>
         <div style={{ position: "relative", width: "100%" }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img

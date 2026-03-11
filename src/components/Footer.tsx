@@ -350,7 +350,7 @@ export default function Footer() {
             </h2>
 
             {/* Right - Email subscribe */}
-            <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+            <div className="footer-subscribe-row" style={{ display: "flex", alignItems: "center", gap: "20px" }}>
               <div style={{ position: "relative" }}>
                 <input
                   type="email"
