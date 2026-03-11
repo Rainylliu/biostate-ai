@@ -17,11 +17,8 @@ export default function Section9NActAI() {
       <div className="s9-container">
         {/* Left - Content */}
         <div className="s9-left">
-          <img
-            src="/images/n-act1.svg"
-            alt="N-Act AI"
-            className="s9-logo"
-          />
+          {/* N-Act AI - stroke/outline text, no fill */}
+          <h2 className="s9-outline-title">N-Act AI</h2>
 
           <p className="s7-tag">[ about ]</p>
 
@@ -90,7 +87,7 @@ export default function Section9NActAI() {
           {/* N-Act AI Analysis card */}
           <div className="s9-card">
             <img
-              src="/images/mission.svg"
+              src="/images/n-act1.svg"
               alt="N-Act AI Analysis"
               style={{
                 width: "100%",
@@ -132,15 +129,13 @@ export default function Section9NActAI() {
                 transition: "all 0.3s ease",
               }}
             />
-            {/* Overlay button */}
+            {/* CTA pill button - always visible */}
             <div
               style={{
                 position: "absolute",
                 top: "50%",
                 left: "50%",
                 transform: "translate(-50%, -50%)",
-                opacity: archHover ? 1 : 0,
-                transition: "opacity 0.3s ease",
                 pointerEvents: "none",
               }}
             >
@@ -149,18 +144,19 @@ export default function Section9NActAI() {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: 8,
-                  background: "linear-gradient(135deg, #FF6B6B, #FF8E53)",
+                  background: "linear-gradient(135deg, #FF9A6C, #FF6B6B)",
                   color: "#fff",
                   fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                  fontSize: 14,
+                  fontSize: 16,
                   fontWeight: 600,
-                  padding: "10px 20px",
-                  borderRadius: 24,
-                  boxShadow: "0 4px 12px rgba(255, 107, 107, 0.4)",
+                  padding: "14px 28px",
+                  borderRadius: 40,
+                  boxShadow: "0 6px 20px rgba(255, 107, 107, 0.45)",
+                  whiteSpace: "nowrap",
                 }}
               >
                 Explore AI Visualization
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path
                     d="M4 12L12 4M12 4H5M12 4V11"
                     stroke="currentColor"
@@ -187,11 +183,15 @@ export default function Section9NActAI() {
           flex: 1;
           min-width: 0;
         }
-        .s9-logo {
-          width: 320px;
-          max-width: 100%;
-          height: auto;
-          margin-bottom: 16px;
+        .s9-outline-title {
+          font-family: 'Sora', Arial, Helvetica, sans-serif;
+          font-size: 72px;
+          font-weight: 400;
+          color: transparent;
+          -webkit-text-stroke: 2px #B0B0C8;
+          margin: 0 0 16px 0;
+          line-height: 1.1;
+          letter-spacing: -1px;
         }
         .s9-right {
           flex: 0 0 520px;
@@ -217,8 +217,8 @@ export default function Section9NActAI() {
             flex: none;
             width: 100%;
           }
-          .s9-logo {
-            width: 240px;
+          .s9-outline-title {
+            font-size: 48px;
           }
         }
       `}</style>
