@@ -1,125 +1,152 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import WaveReveal from "./WaveReveal";
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
+declare global {
+  interface Window {
+    echarts?: any;
+  }
+}
+
+function loadEcharts(): Promise<any> {
+  return new Promise((resolve, reject) => {
+    if (window.echarts) {
+      resolve(window.echarts);
+      return;
+    }
+    const script = document.createElement("script");
+    script.src = "https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js";
+    script.onload = () => resolve(window.echarts);
+    script.onerror = reject;
+    document.head.appendChild(script);
+  });
+}
+
 function BixBenchChart() {
   const chartRef = useRef<HTMLDivElement>(null);
+  const chartInstance = useRef<any>(null);
 
-  useEffect(() => {
+  const initChart = useCallback(async () => {
     if (!chartRef.current) return;
     const el = chartRef.current;
+    const echarts = await loadEcharts();
+    if (!echarts || !el) return;
 
-    let chart: ReturnType<typeof import("echarts")["init"]> | null = null;
-    let observer: IntersectionObserver | null = null;
-    let handleResize: (() => void) | null = null;
+    const chart = echarts.init(el, undefined, { renderer: "canvas" });
+    chartInstance.current = chart;
 
-    import("echarts").then((echarts) => {
-      if (!el) return;
+    const finalData = [34.4, 22.9];
+    const labels = ["K-Dense Analyst", "GPT-5"];
 
-      chart = echarts.init(el, undefined, { renderer: "canvas" });
-
-      const finalData = [34.4, 22.9];
-      const labels = ["K-Dense Analyst", "GPT-5"];
-
-      chart.setOption({
-        backgroundColor: "transparent",
-        grid: { left: 50, right: 30, top: 10, bottom: 20 },
-        xAxis: {
-          type: "category",
-          data: labels,
-          axisTick: { show: false },
-          axisLine: { lineStyle: { color: "#B9C6D6" } },
-          axisLabel: { fontSize: 12, color: "#3A5168" },
-        },
-        yAxis: {
-          type: "value",
-          name: "Accuracy (%)",
-          nameGap: 18,
-          max: 40,
-          splitNumber: 4,
-          axisLine: { show: false },
-          axisTick: { show: false },
-          splitLine: { lineStyle: { color: "#E1EAF3" } },
-          axisLabel: { formatter: "{value}", color: "#3A5168" },
-        },
-        tooltip: {
-          trigger: "item",
-          formatter: (params: { name: string; value: number }) =>
-            `${params.name}<br/><b>${params.value}%</b>`,
-        },
-        series: [
-          {
-            type: "bar",
-            data: [0, 0],
-            barWidth: 60,
-            itemStyle: {
-              borderRadius: [12, 12, 12, 12],
-              shadowBlur: 10,
-              shadowColor: "rgba(59,161,255,0.25)",
-              color: (p: { dataIndex: number }) => {
-                return p.dataIndex === 0
-                  ? new echarts.graphic.LinearGradient(0, 1, 0, 0, [
-                      { offset: 0, color: "#9CD2FF" },
-                      { offset: 1, color: "#3BA1FF" },
-                    ])
-                  : new echarts.graphic.LinearGradient(0, 1, 0, 0, [
-                      { offset: 0, color: "#E5E8EF" },
-                      { offset: 1, color: "#C9CED9" },
-                    ]);
-              },
+    chart.setOption({
+      backgroundColor: "transparent",
+      grid: { left: 50, right: 30, top: 10, bottom: 20 },
+      xAxis: {
+        type: "category",
+        data: labels,
+        axisTick: { show: false },
+        axisLine: { lineStyle: { color: "#B9C6D6" } },
+        axisLabel: { fontSize: 12, color: "#3A5168" },
+      },
+      yAxis: {
+        type: "value",
+        name: "Accuracy (%)",
+        nameGap: 18,
+        max: 40,
+        splitNumber: 4,
+        axisLine: { show: false },
+        axisTick: { show: false },
+        splitLine: { lineStyle: { color: "#E1EAF3" } },
+        axisLabel: { formatter: "{value}", color: "#3A5168" },
+      },
+      tooltip: {
+        trigger: "item",
+        formatter: (params: any) =>
+          `${params.name}<br/><b>${params.value}%</b>`,
+      },
+      series: [
+        {
+          type: "bar",
+          data: [0, 0],
+          barWidth: 60,
+          itemStyle: {
+            borderRadius: [12, 12, 12, 12],
+            shadowBlur: 10,
+            shadowColor: "rgba(59,161,255,0.25)",
+            color: (p: any) => {
+              return p.dataIndex === 0
+                ? new echarts.graphic.LinearGradient(0, 1, 0, 0, [
+                    { offset: 0, color: "#9CD2FF" },
+                    { offset: 1, color: "#3BA1FF" },
+                  ])
+                : new echarts.graphic.LinearGradient(0, 1, 0, 0, [
+                    { offset: 0, color: "#E5E8EF" },
+                    { offset: 1, color: "#C9CED9" },
+                  ]);
             },
-            label: {
-              show: true,
-              position: "top",
-              formatter: ({ value }: { value: number }) =>
-                value ? `${value}%` : "",
-              backgroundColor: "#fff",
-              borderRadius: 8,
-              padding: [4, 8],
-              color: "#2A3A4A",
-              fontWeight: "600" as const,
-            },
-            animationEasing: "cubicOut",
-            animationDuration: 2048,
           },
-        ],
-      });
-
-      // Play growth animation when visible
-      let played = false;
-      observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((e) => {
-            if (e.isIntersecting && !played) {
-              played = true;
-              chart!.setOption({
-                series: [
-                  {
-                    data: finalData,
-                    animationDelay: (idx: number) => idx * 200,
-                  },
-                ],
-              });
-              observer!.disconnect();
-            }
-          });
+          label: {
+            show: true,
+            position: "top",
+            formatter: ({ value }: any) => (value ? `${value}%` : ""),
+            backgroundColor: "#fff",
+            borderRadius: 8,
+            padding: [4, 8],
+            color: "#2A3A4A",
+            fontWeight: "600",
+          },
+          animationEasing: "cubicOut",
+          animationDuration: 2048,
         },
-        { threshold: 0.3 }
-      );
-      observer.observe(el);
-
-      handleResize = () => chart!.resize();
-      window.addEventListener("resize", handleResize);
+      ],
     });
 
+    // Play growth animation when visible
+    let played = false;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting && !played) {
+            played = true;
+            chart.setOption({
+              series: [
+                {
+                  data: finalData,
+                  animationDelay: (idx: number) => idx * 200,
+                },
+              ],
+            });
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+    observer.observe(el);
+
+    const handleResize = () => chart.resize();
+    window.addEventListener("resize", handleResize);
+
     return () => {
-      observer?.disconnect();
-      if (handleResize) window.removeEventListener("resize", handleResize);
-      chart?.dispose();
+      observer.disconnect();
+      window.removeEventListener("resize", handleResize);
+      chart.dispose();
     };
   }, []);
+
+  useEffect(() => {
+    let cleanup: (() => void) | undefined;
+    initChart().then((fn) => {
+      cleanup = fn;
+    });
+    return () => {
+      cleanup?.();
+      chartInstance.current?.dispose();
+    };
+  }, [initChart]);
 
   return (
     <div
@@ -132,7 +159,8 @@ function BixBenchChart() {
     >
       <p
         style={{
-          fontFamily: "ui-sans-serif, system-ui, 'Segoe UI', Roboto, Helvetica, Arial",
+          fontFamily:
+            "ui-sans-serif, system-ui, 'Segoe UI', Roboto, Helvetica, Arial",
           fontWeight: 700,
           fontSize: 22,
           lineHeight: 1.2,
