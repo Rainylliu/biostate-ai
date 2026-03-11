@@ -1165,7 +1165,7 @@ button:hover .side-panel-close-x {
 
 @media (max-width: 600px) {
   .hero-title {
-    font-size: 34px;
+    font-size: 36px;
     line-height: 1.2;
   }
   .hero-subtitle {
@@ -1315,9 +1315,15 @@ button:hover .side-panel-close-x {
   .gc-node img {
     width: 120px !important;
   }
-  /* All section headings consistent on mobile */
-  .s7-col-text h3 {
+  /* All section headings consistent on mobile at 36px */
+  .s7-col-text h3,
+  .section-heading,
+  .rna-heading {
     font-size: 36px !important;
+  }
+  .rna-price-card {
+    padding: 40px 28px !important;
+    min-height: auto !important;
   }
 }
 
