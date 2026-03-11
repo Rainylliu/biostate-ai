@@ -796,18 +796,18 @@ button:hover .side-panel-close-x {
   text-align: center;
   background: #ffffff;
   color: #8258C8;
-  font-size: clamp(8px, 2.5vw, 12px);
+  font-size: clamp(7px, 2.2vw, 11px);
   font-weight: 600;
   text-decoration: none;
-  border-radius: 24px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   border: 1.5px solid #8258C8;
   cursor: pointer;
   transition: all 0.25s ease;
   line-height: 1.15;
-  width: clamp(70px, 22vw, 130px);
+  width: clamp(55px, 16vw, 110px);
   height: auto;
-  padding: clamp(6px, 1.5vw, 12px) clamp(8px, 2vw, 14px);
+  padding: clamp(4px, 1.2vw, 10px) clamp(4px, 1vw, 10px);
   white-space: nowrap;
 }
 .pipeline-btn-mobile:hover {
