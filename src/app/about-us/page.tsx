@@ -474,7 +474,7 @@ export default function AboutUsPage() {
         <div>
           <InvestorCarousel
             investors={[
-              { name: "Shekhar Kirani", image: "/images/Shekhar Kirani.svg", link: "https://www.accel.com/people/shekhar-kirani#bay-area" },
+              { name: "Shekhar Kirani", image: "/images/Shekhar Kirani.svg", link: "https://www.accel.com/team/shekhar-kirani#bay-area" },
               { name: "Haomiao Huang", image: "/images/Haomiao Huang.svg", link: "https://www.mattervp.com/team" },
               { name: "Yiran Liu", image: "/images/Yiran Liu.svg", link: "https://www.visionpluscapital.com/en/list.php?pid=1" },
               { name: "Rouz Jazayeri", image: "/images/Rouz Jazayeri.svg", link: "https://catapult.vc/about/" },
