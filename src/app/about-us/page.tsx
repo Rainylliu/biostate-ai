@@ -464,11 +464,11 @@ export default function AboutUsPage() {
           </div>
         </div>
       </section>
-      {/* ── Section 4: Institutional Investors ── */}
+      {/* ── Section 4: Investors (Institutional + Individual) ── */}
       <section
         style={{
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-          padding: "80px 0 35px",
+          padding: "40px 0 35px",
         }}
       >
         <div>
@@ -483,15 +483,7 @@ export default function AboutUsPage() {
             ]}
           />
         </div>
-      </section>
-      {/* ── Section 5: Individual Investors ── */}
-      <section
-        style={{
-          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-          padding: "40px 0 35px",
-        }}
-      >
-        <div>
+        <div style={{ marginTop: 60 }}>
           <InvestorCarousel
             heading="Individual investors"
             investors={[
