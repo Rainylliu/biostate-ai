@@ -62,7 +62,12 @@ export default function Header() {
           right: 0,
           zIndex: 50,
           transition: "background-color 0.3s ease",
-        } : undefined}
+        } : {
+          position: "sticky",
+          top: 0,
+          zIndex: 50,
+          backgroundColor: "#ffffff",
+        }}
       >
       {/* Top Info Bar - hidden on home page */}
       {!isHome && (
