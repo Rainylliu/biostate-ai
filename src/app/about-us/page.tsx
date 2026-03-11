@@ -505,6 +505,35 @@ export default function AboutUsPage() {
           />
         </div>
       </section>
+      {/* ── Scrolling Banner ── */}
+      <section
+        style={{
+          overflow: "hidden",
+          padding: "60px 0",
+          whiteSpace: "nowrap",
+        }}
+      >
+        <div className="marquee-track">
+          {[0, 1].map((i) => (
+            <span
+              key={i}
+              style={{
+                display: "inline-block",
+                fontFamily: "'Sora', Arial, Helvetica, sans-serif",
+                fontSize: 48,
+                fontWeight: 400,
+                color: "#111",
+                letterSpacing: "-0.02em",
+                paddingRight: 32,
+              }}
+            >
+              / Backed by global experts in science, medicine, and AI.&nbsp;&nbsp;
+              / Backed by global experts in science, medicine, and AI.&nbsp;&nbsp;
+              / Backed by global experts in science, medicine, and AI.&nbsp;&nbsp;
+            </span>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

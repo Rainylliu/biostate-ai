@@ -627,6 +627,17 @@ img {
   color: #45d0bd;
 }
 
+/* ── Marquee Banner ── */
+.marquee-track {
+  display: inline-flex;
+  animation: marquee-scroll 30s linear infinite;
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 /* ── Card1 Teal Variant ── */
 .book-a-call-btn-teal {
   background: #ffffff;
