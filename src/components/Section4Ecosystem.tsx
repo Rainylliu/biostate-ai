@@ -103,7 +103,7 @@ export default function Section4Ecosystem() {
   const touchStartX = useRef<number | null>(null);
 
   return (
-    <section style={{ fontFamily: "'Manrope', Arial, Helvetica, sans-serif" }}>
+    <section className="s4-section" style={{ fontFamily: "'Manrope', Arial, Helvetica, sans-serif" }}>
       {/* Scrolling Banner */}
       <div
         style={{
@@ -136,7 +136,6 @@ export default function Section4Ecosystem() {
         style={{
           position: "relative",
           width: "100%",
-          maxWidth: 1280,
           height: "calc(100vh - 200px)",
           maxHeight: 700,
           margin: "40px auto 0",

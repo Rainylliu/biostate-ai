@@ -611,6 +611,26 @@ button:hover .side-panel-close-x {
 }
 
 /* ── Trapezoid Slider ── */
+/* ── Section 4: Ecosystem ── */
+.s4-section {
+  padding: 0 20px;
+}
+.trapezoid-slider {
+  max-width: 1280px;
+}
+
+@media (max-width: 768px) {
+  .s4-section {
+    padding: 0;
+  }
+  .trapezoid-slider {
+    max-width: none;
+    border-radius: 0 !important;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 .trapezoid-nav-btn {
   width: 60px;
   height: 80px;
@@ -657,6 +677,13 @@ button:hover .side-panel-close-x {
     height: 30px;
     font-size: 14px;
   }
+}
+
+/* ── Section 5: Pipeline ── */
+.s5-section {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding: 80px 20px 0;
 }
 
 /* ── Pipeline Buttons ── */
@@ -723,12 +750,18 @@ button:hover .side-panel-close-x {
 }
 
 /* ── Section 6: Project Gallery ── */
+.s6-section {
+  padding: 80px 20px 80px;
+}
 .s6-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 40px;
   margin-bottom: 48px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .s6-stat {
   flex-shrink: 0;
@@ -751,13 +784,14 @@ button:hover .side-panel-close-x {
   margin-top: 8px;
 }
 
-/* Card */
+/* Card — full width */
 .s6-card {
   background: #1F1F1F;
   border-radius: 25px;
   padding: 48px 40px 60px;
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 .s6-gallery {
   overflow: hidden;
@@ -771,22 +805,20 @@ button:hover .side-panel-close-x {
 .s6-page {
   width: 25%; /* 100% / 4 pages */
 }
-/* Desktop: single image fills the page */
+/* Desktop: 4 columns */
 .s6-page-desktop {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
 }
-/* Mobile: single image fills the page */
+/* Mobile: 2×2 grid */
 .s6-page-mobile {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
 }
 .s6-imgbox {
-  width: 100%;
   border-radius: 12px;
   overflow: hidden;
   display: flex;
@@ -837,19 +869,23 @@ button:hover .side-panel-close-x {
 .s6-mobile { display: none; }
 
 @media (max-width: 768px) {
+  .s6-section {
+    padding: 60px 20px 60px;
+  }
   .s6-desktop { display: none; }
   .s6-mobile { display: block; }
 
   .s6-header {
     flex-direction: column;
     gap: 24px;
+    margin-bottom: 32px;
   }
   .s6-stat-number {
     font-size: 64px;
   }
   .s6-card {
     border-radius: 18px;
-    padding: 32px 24px 40px;
+    padding: 24px 16px 32px;
   }
   .s6-header h2 {
     font-size: 28px !important;

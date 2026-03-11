@@ -53,10 +53,9 @@ const mobileButtons = [
 export default function Section5Pipeline() {
   return (
     <section
-      className="container"
+      className="s5-section"
       style={{
         fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-        padding: "80px var(--space-6) 0",
       }}
     >
       {/* Desktop version */}
