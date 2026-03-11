@@ -17,8 +17,32 @@ export default function Section9NActAI() {
       <div className="s9-container">
         {/* Left - Content */}
         <div className="s9-left">
-          {/* N-Act AI - stroke/outline text, no fill */}
-          <h2 className="s9-outline-title">N-Act AI</h2>
+          {/* N-Act AI - stroke/outline text with gradient, no fill */}
+          <svg
+            viewBox="0 0 480 80"
+            className="s9-outline-title"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <linearGradient id="s9-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#8258C8" />
+                <stop offset="100%" stopColor="#2C84C8" />
+              </linearGradient>
+            </defs>
+            <text
+              x="0"
+              y="62"
+              fontFamily="'Sora', Arial, Helvetica, sans-serif"
+              fontSize="72"
+              fontWeight="400"
+              fill="none"
+              stroke="url(#s9-grad)"
+              strokeWidth="1.5"
+              letterSpacing="-1"
+            >
+              N-Act AI
+            </text>
+          </svg>
 
           <p className="s7-tag">[ about ]</p>
 
@@ -184,20 +208,11 @@ export default function Section9NActAI() {
           min-width: 0;
         }
         .s9-outline-title {
-          font-family: 'Sora', Arial, Helvetica, sans-serif;
-          font-size: 72px;
-          font-weight: 400;
-          color: transparent;
-          background: linear-gradient(135deg, #8258C8, #2C84C8);
-          -webkit-background-clip: text;
-          background-clip: text;
-          -webkit-text-stroke: 2px transparent;
-          -webkit-text-fill-color: transparent;
-          paint-order: stroke fill;
-          -webkit-text-stroke-color: #8258C8;
+          width: 400px;
+          max-width: 100%;
+          height: auto;
           margin: 0 0 16px 0;
-          line-height: 1.1;
-          letter-spacing: -1px;
+          display: block;
         }
         .s9-right {
           flex: 0 0 520px;
@@ -213,7 +228,7 @@ export default function Section9NActAI() {
         .s9-card-arch {
           background: transparent;
           border-radius: 20px;
-          overflow: hidden;
+          overflow: visible;
         }
         @media (max-width: 900px) {
           .s9-container {
@@ -224,7 +239,7 @@ export default function Section9NActAI() {
             width: 100%;
           }
           .s9-outline-title {
-            font-size: 48px;
+            width: 260px;
           }
         }
       `}</style>
