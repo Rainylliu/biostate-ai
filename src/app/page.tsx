@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Section2Edge from "@/components/Section2Edge";
 import Section3GlobalMap from "@/components/Section3GlobalMap";
+import Section4Ecosystem from "@/components/Section4Ecosystem";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -128,6 +129,9 @@ export default function Home() {
 
       {/* Section 3: Global Collaboration Network */}
       <Section3GlobalMap />
+
+      {/* Section 4: Ecosystem Slider */}
+      <Section4Ecosystem />
 
       {/* Subscribe Success Popup */}
       {showPopup && (
