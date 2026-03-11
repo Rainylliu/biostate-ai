@@ -200,17 +200,9 @@ export default function Section8KDense() {
         background: "#ffffff",
       }}
     >
-      <div
-        style={{
-          maxWidth: 1200,
-          margin: "0 auto",
-          display: "flex",
-          gap: 60,
-          alignItems: "flex-start",
-        }}
-      >
+      <div className="s8-container">
         {/* Left - Content */}
-        <div style={{ flex: 1, minWidth: 0 }}>
+        <div className="s8-left">
           <p className="s7-tag">[ about ]</p>
           <WaveReveal
             text="K-Dense: Autonomous AI Scientist"
@@ -329,10 +321,38 @@ export default function Section8KDense() {
         </div>
 
         {/* Right - BixBench Chart */}
-        <div style={{ flex: "0 0 420px", minWidth: 0 }}>
+        <div className="s8-right">
           <BixBenchChart />
         </div>
       </div>
+
+      <style jsx>{`
+        .s8-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          display: flex;
+          gap: 60px;
+          align-items: flex-start;
+        }
+        .s8-left {
+          flex: 1;
+          min-width: 0;
+        }
+        .s8-right {
+          flex: 0 0 420px;
+          min-width: 0;
+        }
+        @media (max-width: 900px) {
+          .s8-container {
+            flex-direction: column;
+            gap: 32px;
+          }
+          .s8-right {
+            flex: none;
+            width: 100%;
+          }
+        }
+      `}</style>
     </section>
   );
 }
