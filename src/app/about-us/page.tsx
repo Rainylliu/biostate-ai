@@ -298,7 +298,7 @@ export default function AboutUsPage() {
 
           {/* Row 3: JV Baisheng, Bayosthiti */}
           <a
-            href="https://www.kindstar.com.cn/en/about"
+            href="https://www.kindstar.com.cn/en"
             target="_blank"
             rel="noopener noreferrer"
             className="gc-node"
