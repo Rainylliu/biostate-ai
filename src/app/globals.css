@@ -605,7 +605,7 @@ img {
   left: -22px;
 }
 
-a:hover .investor-card-arrow-inner {
+.investor-card-arrow-btn:hover .investor-card-arrow-inner {
   transform: translate(22px, -22px);
 }
 
@@ -618,7 +618,7 @@ a:hover .investor-card-arrow-inner {
   transition: color 0.25s ease;
 }
 
-a:hover .investor-card-name {
+.investor-card-name:hover {
   color: #45d0bd;
 }
 

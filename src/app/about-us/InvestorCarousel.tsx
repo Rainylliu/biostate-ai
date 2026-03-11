@@ -152,35 +152,45 @@ export default function InvestorCarousel({ investors }: { investors: Investor[] 
           }}
         >
           {investors.map((inv) => (
-            <a
+            <div
               key={inv.name}
-              href={inv.link}
-              target="_blank"
-              rel="noopener noreferrer"
               style={{
                 flex: `0 0 ${cardWidth}px`,
                 height: cardH,
                 background: "#F0F2F4",
                 borderRadius: 20,
                 padding: 20,
-                textDecoration: "none",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
               }}
             >
-              <div style={{ width: 320, height: 320, margin: "0 auto 16px", overflow: "hidden", borderRadius: 16 }}>
+              <a
+                href={inv.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: "block", width: 320, height: 320, margin: "0 auto 16px", overflow: "hidden", borderRadius: 16, flexShrink: 0 }}
+              >
                 <img
                   src={inv.image}
                   alt={inv.name}
                   style={{ width: 320, height: 320, objectFit: "cover", display: "block" }}
                 />
-              </div>
+              </a>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                <h5 className="investor-card-name">{inv.name}</h5>
-                <CardArrow />
+                <a
+                  href={inv.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: "none" }}
+                >
+                  <h5 className="investor-card-name">{inv.name}</h5>
+                </a>
+                <a href={inv.link} target="_blank" rel="noopener noreferrer">
+                  <CardArrow />
+                </a>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>
