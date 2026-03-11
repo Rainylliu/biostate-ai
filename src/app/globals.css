@@ -1153,6 +1153,69 @@ button:hover .side-panel-close-x {
   }
 }
 
+/* ── Section 7: Wetlab Technology ── */
+.s7-tag {
+  font-family: 'Manrope', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.s7-row {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.s7-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.s7-col-img {
+  flex: 1;
+  min-width: 0;
+}
+
+.s7-col-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.s7-outline-num {
+  font-family: 'Sora', Arial, Helvetica, sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.5px #6766c8;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+@media (max-width: 900px) {
+  .s7-row,
+  .s7-row.s7-row-reverse {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .s7-col-img {
+    width: 100%;
+  }
+  .s7-col-text h3 {
+    font-size: 36px !important;
+  }
+  .s7-outline-num {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  .s7-col-text h3 {
+    font-size: 28px !important;
+  }
+}
+
 /* Section 3: Global Map */
 .global-map-entry:hover {
   color: #45D0BD !important;
