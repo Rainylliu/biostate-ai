@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import InvestorCarousel from "./InvestorCarousel";
 
 export const metadata: Metadata = {
   title: "Team - biostate.AI",
@@ -461,6 +462,26 @@ export default function AboutUsPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      {/* ── Section 4: Institutional Investors ── */}
+      <section
+        style={{
+          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+          padding: "150px 20px 35px",
+        }}
+      >
+        <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+          <InvestorCarousel
+            investors={[
+              { name: "Shekhar Kirani", image: "/images/Shekhar Kirani.svg", link: "https://www.accel.com/people/shekhar-kirani#bay-area" },
+              { name: "Haomiao Huang", image: "/images/Haomiao Huang.svg", link: "https://www.mattervp.com/team" },
+              { name: "Yiran Liu", image: "/images/Yiran Liu.svg", link: "https://www.visionpluscapital.com/en/list.php?pid=1" },
+              { name: "Rouz Jazayeri", image: "/images/Rouz Jazayeri.svg", link: "https://catapult.vc/about/" },
+              { name: "Chinmaya Sharma", image: "/images/Chinmaya Sharma.svg", link: "https://www.infoedgeventures.in/team" },
+              { name: "Fred Farina", image: "/images/Fred Farina.svg", link: "https://innovation.caltech.edu/ottcp-directory/fred-farina" },
+            ]}
+          />
         </div>
       </section>
     </div>
