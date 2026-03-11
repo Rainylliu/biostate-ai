@@ -28,25 +28,25 @@ const mobileButtons = [
     label: ["RNA", "(BIRT + PERD)"],
     href: "/rna",
     left: "19.5%",
-    top: "30%",
+    top: "18%",
   },
   {
     label: ["AI Scientist", "(K-Dense)"],
     href: "https://k-dense.ai/",
     left: "38%",
-    top: "30%",
+    top: "18%",
   },
   {
     label: ["DNA", "(BIRT + MARE)"],
     href: "/dna",
     left: "56%",
-    top: "30%",
+    top: "18%",
   },
   {
     label: ["AML", "(N-Act)"],
     href: "/ai",
     left: "74%",
-    top: "30%",
+    top: "18%",
   },
 ];
 
@@ -107,7 +107,7 @@ export default function Section5Pipeline() {
         style={{
           position: "relative",
           width: "100%",
-          aspectRatio: "1932 / 1030",
+          aspectRatio: "960 / 1200",
         }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}

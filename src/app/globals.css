@@ -615,19 +615,14 @@ button:hover .side-panel-close-x {
 .s4-section {
   padding: 0 20px;
 }
-.trapezoid-slider {
-  max-width: 1280px;
-}
 
 @media (max-width: 768px) {
   .s4-section {
-    padding: 0;
+    padding: 0 20px;
   }
   .trapezoid-slider {
-    max-width: none;
-    border-radius: 0 !important;
-    margin-left: 0;
-    margin-right: 0;
+    border-radius: 20px !important;
+    overflow: hidden;
   }
 }
 
@@ -681,8 +676,6 @@ button:hover .side-panel-close-x {
 
 /* ── Section 5: Pipeline ── */
 .s5-section {
-  max-width: var(--max-width);
-  margin-inline: auto;
   padding: 80px 20px 0;
 }
 
