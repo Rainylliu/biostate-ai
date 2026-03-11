@@ -19,7 +19,7 @@ export default function RNAPage() {
           <div className="relative flex flex-col lg:flex-row items-center gap-12 lg:gap-[8%]">
             {/* Background circle */}
             <div
-              className="absolute inset-0 hidden lg:flex items-center justify-center pointer-events-none"
+              className="absolute inset-0 flex items-center justify-center pointer-events-none"
               style={{ zIndex: 0 }}
             >
               <Image
@@ -285,6 +285,7 @@ export default function RNAPage() {
 
       {/* Section 3 - BIRT Technology */}
       <section
+        className="rna-birt-section"
         style={{
           marginTop: "80px",
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
@@ -333,6 +334,7 @@ export default function RNAPage() {
             <div className="w-full lg:w-[55%] py-16 lg:py-24">
               {/* BIRT Large Title */}
               <h2
+                className="rna-birt-title"
                 style={{
                   padding: "0px 5px 0px 0px",
                   fontSize: "200px",

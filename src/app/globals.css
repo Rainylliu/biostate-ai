@@ -1347,6 +1347,13 @@ button:hover .side-panel-close-x {
     border-radius: 0 !important;
     box-shadow: none !important;
   }
+  /* BIRT title 140px on mobile, section closer to previous */
+  .rna-birt-title {
+    font-size: 140px !important;
+  }
+  .rna-birt-section {
+    margin-top: 40px !important;
+  }
 }
 
 /* Section 3: Global Map */
