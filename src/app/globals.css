@@ -675,6 +675,7 @@ button:hover .side-panel-close-x {
 /* ── Section 4: Ecosystem ── */
 .s4-section {
   padding: 0 20px;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -776,7 +777,7 @@ button:hover .side-panel-close-x {
   text-align: center;
   background: #ffffff;
   color: #8258C8;
-  font-size: clamp(8px, 2.5vw, 14px);
+  font-size: clamp(8px, 2.5vw, 12px);
   font-weight: 600;
   text-decoration: none;
   border-radius: 24px;

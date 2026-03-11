@@ -49,7 +49,7 @@ export default function Section7Wetlab() {
       <div className="s7-row" style={{ maxWidth: 1200, margin: "0 auto 100px" }}>
         <div className="s7-col-img">
           <img
-            src="/images/Wetlab1.svg"
+            src="/images/Weblab1.svg"
             alt="BIRT + PERD RNAseq technology"
             style={{
               width: "100%",
@@ -95,7 +95,7 @@ export default function Section7Wetlab() {
             {/* 01 The problem */}
             <div style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
               <img
-                src="/images/wetlabicon1.svg"
+                src="/images/Wetlabicon1.svg"
                 alt=""
                 style={{ width: 48, height: 48, flexShrink: 0, marginTop: 2 }}
               />
@@ -130,7 +130,7 @@ export default function Section7Wetlab() {
             {/* 02 Our breakthrough solution */}
             <div style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
               <img
-                src="/images/wetlabicon2.svg"
+                src="/images/Wetlabicon2.svg"
                 alt=""
                 style={{ width: 48, height: 48, flexShrink: 0, marginTop: 2 }}
               />
@@ -166,7 +166,7 @@ export default function Section7Wetlab() {
             {/* 03 Proven impact */}
             <div style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
               <img
-                src="/images/wetlabicon3.svg"
+                src="/images/Wetlabicon3.svg"
                 alt=""
                 style={{ width: 48, height: 48, flexShrink: 0, marginTop: 2 }}
               />
