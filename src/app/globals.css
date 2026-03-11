@@ -1325,6 +1325,9 @@ button:hover .side-panel-close-x {
     padding: 40px 28px !important;
     min-height: auto !important;
   }
+  .rna-price-card h3 {
+    font-size: 32px !important;
+  }
 }
 
 /* Section 3: Global Map */
