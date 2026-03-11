@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: "Our publications and research at biostate.AI.",
 };
 
-export default function PublicationsPage() {
+export default function PublicationPage() {
   return (
     <div>
       {/* ── Hero Section ── */}
