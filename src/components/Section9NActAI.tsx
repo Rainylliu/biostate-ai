@@ -206,6 +206,9 @@ export default function Section9NActAI() {
         .s9-left {
           flex: 1;
           min-width: 0;
+          background: #f0f2f4;
+          border-radius: 24px;
+          padding: 48px 40px;
         }
         .s9-outline-title {
           width: 400px;
