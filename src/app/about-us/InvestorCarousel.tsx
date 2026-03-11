@@ -27,7 +27,7 @@ function NavArrow({ direction, onClick }: { direction: "left" | "right"; onClick
         alignItems: "center",
         justifyContent: "center",
         transition: "color 0.3s ease",
-        color: "#333",
+        color: hovered ? "#45d0bd" : "#333",
       }}
     >
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -186,7 +186,7 @@ export default function InvestorCarousel({ investors, heading = "Institutional i
                   style={{ textDecoration: "none" }}
                 >
                   <h5 className="investor-card-name">{inv.name}</h5>
-                  <p style={{ fontSize: 14, color: "#666", margin: "4px 0 0", lineHeight: 1.3 }}>{inv.position}</p>
+                  <p style={{ fontSize: 14, color: "#666", margin: "10px 0 0", lineHeight: 1.3 }}>{inv.position}</p>
                 </a>
                 <a href={inv.link} target="_blank" rel="noopener noreferrer" style={{ flexShrink: 0 }}>
                   <CardArrow />
