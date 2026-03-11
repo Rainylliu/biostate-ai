@@ -31,9 +31,8 @@ export default function AboutUsPage() {
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            width: "100%",
-            minWidth: 1200,
-            pointerEvents: "none",
+            width: "60%",
+            minWidth: 800,
             userSelect: "none",
           }}
         />
