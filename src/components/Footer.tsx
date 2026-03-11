@@ -33,7 +33,6 @@ export default function Footer() {
       (window as any).fbq("track", "Lead");
     }
 
-    window.history.pushState({}, "", window.location.pathname.replace(/\/$/, "") + "/thank-you");
     setShowPopup(true);
     setSubscribeEmail("");
   };
@@ -444,7 +443,7 @@ export default function Footer() {
             justifyContent: "center",
             zIndex: 9999,
           }}
-          onClick={() => { window.history.back(); setShowPopup(false); }}
+          onClick={() => setShowPopup(false)}
         >
           <div
             style={{
@@ -479,7 +478,7 @@ export default function Footer() {
               Thank you for joining our mailing list.
             </p>
             <button
-              onClick={() => { window.history.back(); setShowPopup(false); }}
+              onClick={() => setShowPopup(false)}
               style={{
                 padding: "10px 32px",
                 borderRadius: "12px",

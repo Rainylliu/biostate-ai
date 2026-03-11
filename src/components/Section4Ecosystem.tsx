@@ -137,14 +137,16 @@ export default function Section4Ecosystem() {
           position: "relative",
           width: "100%",
           maxWidth: 1400,
-          margin: "40px auto",
+          height: "calc(100vh - 200px)",
+          maxHeight: 700,
+          margin: "40px auto 0",
           overflow: "hidden",
           borderRadius: 20,
         }}
       >
         {/* Trapezoid background with image */}
         <svg
-          viewBox="0 0 1400 960"
+          viewBox="0 0 1400 700"
           preserveAspectRatio="none"
           style={{
             position: "absolute",
@@ -162,12 +164,12 @@ export default function Section4Ecosystem() {
               id="trapezoidPattern"
               patternUnits="userSpaceOnUse"
               width="1400"
-              height="960"
+              height="700"
             >
               <image
                 href={bgSrc}
                 width="1400"
-                height="960"
+                height="700"
                 preserveAspectRatio="xMidYMid slice"
                 style={{
                   transition: "opacity 0.4s ease-in-out",
@@ -177,7 +179,7 @@ export default function Section4Ecosystem() {
             </pattern>
           </defs>
           <path
-            d="M0 960 L0 85 A20 20 0 0 1 20 69 L1400 0 L1400 960 Z"
+            d="M0 700 L0 62 A20 20 0 0 1 20 50 L1400 0 L1400 700 Z"
             fill="url(#trapezoidPattern)"
           />
         </svg>
@@ -187,7 +189,7 @@ export default function Section4Ecosystem() {
           style={{
             position: "relative",
             width: "100%",
-            aspectRatio: "1400 / 960",
+            height: "100%",
             display: "flex",
             flexDirection: "column",
             alignItems: "flex-start",
@@ -240,7 +242,7 @@ export default function Section4Ecosystem() {
             <div
               style={{
                 width: "100%",
-                height: 450,
+                height: "min(420px, calc(100vh - 320px))",
                 borderRadius: 24,
                 overflow: "hidden",
               }}
