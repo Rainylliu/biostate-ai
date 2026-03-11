@@ -468,7 +468,7 @@ export default function AboutUsPage() {
       <section
         style={{
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-          padding: "40px 0 35px",
+          padding: "20px 0 35px",
         }}
       >
         <div>
