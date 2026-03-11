@@ -43,11 +43,11 @@ export default function AboutUsPage() {
           style={{
             position: "relative",
             fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-            fontSize: 64,
-            fontWeight: 400,
+            fontSize: 100,
+            fontWeight: 500,
             color: "#222",
             lineHeight: 1.15,
-            margin: "0 0 24px 0",
+            margin: "-60px 0 24px 0",
           }}
         >
           The <span style={{ color: "#6766c8" }}>Team</span> Behind
