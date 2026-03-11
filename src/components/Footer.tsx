@@ -108,7 +108,7 @@ export default function Footer() {
 
               {/* Contact info */}
               <div className="footer-contact-info" style={{ display: "flex", flexDirection: "column", gap: "50px" }}>
-                <div style={{ display: "flex", alignItems: "flex-start" }}>
+                <div className="footer-contact-row" style={{ display: "flex", alignItems: "flex-start" }}>
                   <h6
                     className="footer-contact-label"
                     style={{
@@ -122,6 +122,7 @@ export default function Footer() {
                     Our Location
                   </h6>
                   <p
+                    className="footer-contact-value"
                     style={{
                       fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                       fontSize: "16px",
@@ -136,8 +137,9 @@ export default function Footer() {
                   </p>
                 </div>
 
-                <div style={{ display: "flex", alignItems: "center" }}>
+                <div className="footer-contact-row" style={{ display: "flex", alignItems: "center" }}>
                   <h6
+                    className="footer-contact-label"
                     style={{
                       fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                       fontSize: "18px",
@@ -150,7 +152,7 @@ export default function Footer() {
                   </h6>
                   <a
                     href="mailto:contact@biostate.ai"
-                    className="footer-link-hover"
+                    className="footer-link-hover footer-contact-value"
                     style={{
                       fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                       fontSize: "16px",
@@ -163,8 +165,9 @@ export default function Footer() {
                   </a>
                 </div>
 
-                <div style={{ display: "flex", alignItems: "center" }}>
+                <div className="footer-contact-row" style={{ display: "flex", alignItems: "center" }}>
                   <h6
+                    className="footer-contact-label"
                     style={{
                       fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                       fontSize: "18px",
