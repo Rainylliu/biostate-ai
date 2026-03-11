@@ -179,7 +179,7 @@ export default function Section9NActAI() {
                   fontSize: 16,
                   fontWeight: 600,
                   padding: "14px 28px",
-                  borderRadius: 40,
+                  borderRadius: 12,
                   boxShadow: "0 6px 20px rgba(255, 107, 107, 0.45)",
                   whiteSpace: "nowrap",
                 }}
@@ -262,13 +262,12 @@ export default function Section9NActAI() {
         alt=""
         style={{
           position: "absolute",
-          bottom: -300,
+          bottom: -50,
           left: "50%",
           transform: "translateX(-50%)",
-          width: 900,
-          height: 900,
+          width: "100%",
           pointerEvents: "none",
-          opacity: 0.5,
+          opacity: 0.8,
           zIndex: 0,
         }}
       />
