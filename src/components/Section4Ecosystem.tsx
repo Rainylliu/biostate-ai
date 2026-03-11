@@ -203,7 +203,7 @@ export default function Section4Ecosystem() {
           <div
             style={{
               position: "relative",
-              width: 420,
+              width: 340,
               maxWidth: "100%",
               paddingBottom: 72,
             }}
