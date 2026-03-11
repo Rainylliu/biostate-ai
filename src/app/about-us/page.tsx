@@ -262,7 +262,7 @@ export default function AboutUsPage() {
             target="_blank"
             rel="noopener noreferrer"
             className="gc-node"
-            style={{ position: "absolute", zIndex: 3, top: "18.5%", left: "50%", transform: "translateX(-50%)" }}
+            style={{ position: "absolute", zIndex: 3, top: "25%", left: "50%", transform: "translateX(-50%)" }}
           >
             <img src="/images/Biostate AI (TopCo).svg" alt="Biostate AI (TopCo)" style={{ width: 250, height: "auto" }} />
           </a>
@@ -273,7 +273,7 @@ export default function AboutUsPage() {
             target="_blank"
             rel="noopener noreferrer"
             className="gc-node"
-            style={{ position: "absolute", zIndex: 3, top: "35.2%", left: "6.9%" }}
+            style={{ position: "absolute", zIndex: 3, top: "50%", left: "9%" }}
           >
             <img src="/images/K-Dense.svg" alt="K-Dense" style={{ width: 250, height: "auto" }} />
           </a>
@@ -282,7 +282,7 @@ export default function AboutUsPage() {
             target="_blank"
             rel="noopener noreferrer"
             className="gc-node"
-            style={{ position: "absolute", zIndex: 3, top: "35.2%", left: "50%", transform: "translateX(-50%)" }}
+            style={{ position: "absolute", zIndex: 3, top: "50%", left: "50%", transform: "translateX(-50%)" }}
           >
             <img src="/images/Biostate AI MENA.svg" alt="Biostate AI MENA" style={{ width: 250, height: "auto" }} />
           </a>
@@ -291,7 +291,7 @@ export default function AboutUsPage() {
             target="_blank"
             rel="noopener noreferrer"
             className="gc-node"
-            style={{ position: "absolute", zIndex: 3, top: "35.2%", right: "6.9%" }}
+            style={{ position: "absolute", zIndex: 3, top: "50%", right: "8%" }}
           >
             <img src="/images/Biosheng AI.svg" alt="Biosheng AI" style={{ width: 250, height: "auto" }} />
           </a>
@@ -302,7 +302,7 @@ export default function AboutUsPage() {
             target="_blank"
             rel="noopener noreferrer"
             className="gc-node"
-            style={{ position: "absolute", zIndex: 3, top: "50.9%", left: "17%" }}
+            style={{ position: "absolute", zIndex: 3, top: "75%", left: "24%" }}
           >
             <img src="/images/JV Baisheng.svg" alt="JV Baisheng" style={{ width: 250, height: "auto" }} />
           </a>
@@ -311,7 +311,7 @@ export default function AboutUsPage() {
             target="_blank"
             rel="noopener noreferrer"
             className="gc-node"
-            style={{ position: "absolute", zIndex: 3, top: "50.9%", right: "17%" }}
+            style={{ position: "absolute", zIndex: 3, top: "75%", right: "25%" }}
           >
             <img src="/images/Bayosthiti.svg" alt="Bayosthiti" style={{ width: 250, height: "auto" }} />
           </a>
