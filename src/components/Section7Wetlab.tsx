@@ -5,7 +5,7 @@ export default function Section7Wetlab() {
   return (
     <section
       style={{
-        padding: "100px 20px 80px",
+        padding: "40px 20px 40px",
         background: "#ffffff",
       }}
     >

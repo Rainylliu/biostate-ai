@@ -2,7 +2,7 @@ export default function Section10Video() {
   return (
     <section
       style={{
-        padding: "40px 20px 80px",
+        padding: "0px 20px 80px",
         background: "#ffffff",
         display: "flex",
         justifyContent: "center",
