@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PublicationsList from "@/components/PublicationsList";
 
 export const metadata: Metadata = {
   title: "Publications - biostate.AI",
@@ -8,21 +9,16 @@ export const metadata: Metadata = {
 export default function PublicationPage() {
   return (
     <div>
-      {/* ── Hero Section ── */}
-      <section
+      {/* ── Wrapper with shared background image spanning hero + featured ── */}
+      <div
         style={{
           position: "relative",
           overflow: "hidden",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          textAlign: "center",
-          padding: "120px 20px 80px",
           background: "#ffffff",
         }}
       >
-        {/* Background SVG */}
+        {/* Background SVG spanning both sections */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/images/publication_bg.svg"
           alt=""
@@ -38,47 +34,73 @@ export default function PublicationPage() {
           }}
         />
 
-        {/* Content */}
-        <h1
+        {/* ── Section 1: Hero ── */}
+        <section
           style={{
             position: "relative",
-            fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-            fontSize: 100,
-            fontWeight: 500,
-            color: "#111",
-            lineHeight: 1.15,
-            margin: "0 0 24px 0",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
+            padding: "120px 20px 80px",
           }}
         >
-          Our{" "}
-          <span
+          <h1
+            className="pub-hero-title"
             style={{
-              background: "linear-gradient(135deg, #8258c8, #2c84c8)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
+              fontFamily: "'Sora', Arial, Helvetica, sans-serif",
+              fontWeight: 500,
+              color: "#111",
+              lineHeight: 1.15,
+              margin: "0 0 24px 0",
             }}
           >
-            Publications
-          </span>
-        </h1>
+            Our{" "}
+            <span
+              style={{
+                background: "linear-gradient(135deg, #8258c8, #2c84c8)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              Publications
+            </span>
+          </h1>
 
-        <p
-          style={{
-            position: "relative",
-            fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-            fontSize: 18,
-            fontWeight: 400,
-            color: "#555",
-            lineHeight: 1.6,
-            maxWidth: 600,
-            margin: 0,
-          }}
+          <p
+            className="pub-hero-subtitle"
+            style={{
+              fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+              fontWeight: 400,
+              color: "#555",
+              lineHeight: 1.6,
+              maxWidth: 600,
+              margin: 0,
+            }}
+          >
+            Advancing scientific understanding through evidence-based research
+            <br />
+            and collaborative innovation.
+          </p>
+        </section>
+
+        {/* ── Section 2: Featured Publications header (inside bg wrapper) ── */}
+        <section
+          className="pub-featured-header"
+          style={{ position: "relative" }}
         >
-          Advancing scientific understanding through evidence-based research
-          <br />
-          and collaborative innovation.
-        </p>
+          <h2 className="pub-featured-title">Featured Publications</h2>
+          <p className="pub-featured-subtitle">
+            A curated selection of our most impactful and widely recognized research.
+          </p>
+        </section>
+      </div>
+
+      {/* ── Section 2 continued: Publications list ── */}
+      <section className="pub-featured-content">
+        <PublicationsList />
       </section>
     </div>
   );

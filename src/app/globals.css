@@ -1578,3 +1578,224 @@ button:hover .side-panel-close-x {
   border-color: transparent !important;
 }
 
+/* ── Publications Page ── */
+.pub-hero-title {
+  font-size: 100px;
+}
+.pub-hero-subtitle {
+  font-size: 18px;
+}
+.pub-featured-header {
+  padding: 0 40px 40px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.pub-featured-title {
+  font-family: 'Sora', Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: #111;
+  margin: 0 0 12px 0;
+}
+.pub-featured-subtitle {
+  font-family: 'Manrope', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #555;
+  margin: 0;
+  line-height: 1.6;
+}
+.pub-featured-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px 80px;
+}
+
+/* Sort bar */
+.pub-filter-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 28px;
+}
+.pub-filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+.pub-filter-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #888;
+}
+.pub-sort-select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 7px 36px 7px 14px;
+  border-radius: 20px;
+  border: 1.5px solid #d0d0d0;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E") no-repeat right 13px center;
+  color: #444;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+  line-height: 1.4;
+  min-width: 180px;
+  outline: none;
+  transition: border-color 0.18s;
+}
+.pub-sort-select:hover { border-color: #555; }
+.pub-sort-select:focus { border-color: #111; }
+
+/* Publication items */
+.pub-list {
+  display: flex;
+  flex-direction: column;
+}
+.pub-item {
+  padding: 40px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+.pub-item:first-child {
+  border-top: 1px solid #e5e5e5;
+}
+.pub-item-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.pub-category-tag {
+  display: inline-block;
+  padding: 5px 14px;
+  border: 1px solid #d0d0d0;
+  border-radius: 20px;
+  font-size: 13px;
+  color: #444;
+  font-family: 'Manrope', Arial, Helvetica, sans-serif;
+}
+.pub-item-title {
+  font-family: 'Sora', Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0 0 12px 0;
+}
+.pub-item-title a {
+  color: #111;
+  text-decoration: none;
+}
+.pub-item-title a:hover {
+  color: #333;
+}
+.pub-item-meta {
+  font-family: 'Manrope', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #555;
+  margin: 0 0 16px 0;
+}
+.pub-read-more a {
+  font-family: 'Manrope', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #111;
+  text-decoration: none;
+  border-bottom: 1.5px solid #111;
+  padding-bottom: 2px;
+  transition: color 0.18s;
+}
+.pub-read-more a:hover {
+  color: #555;
+  border-color: #555;
+}
+
+/* Pagination */
+.pub-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 48px;
+}
+.pub-page-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 44px;
+  padding: 0 12px;
+  border: 1.5px solid #d0d0d0;
+  border-radius: 22px;
+  background: #fff;
+  color: #444;
+  font-size: 14px;
+  font-family: 'Manrope', Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  transition: all 0.18s;
+}
+.pub-page-btn:hover {
+  background: linear-gradient(135deg, #8258c8, #2c84c8);
+  color: #fff;
+  border-color: transparent;
+}
+.pub-page-current {
+  background: linear-gradient(135deg, #8258c8, #2c84c8);
+  color: #fff;
+  border-color: transparent;
+}
+.pub-page-prev,
+.pub-page-next {
+  padding: 0 20px;
+  font-weight: 500;
+}
+
+/* Publications responsive */
+@media (max-width: 768px) {
+  .pub-hero-title {
+    font-size: 48px !important;
+  }
+  .pub-hero-subtitle {
+    font-size: 15px !important;
+  }
+  .pub-featured-header {
+    padding: 0 20px 30px;
+  }
+  .pub-featured-title {
+    font-size: 28px;
+  }
+  .pub-featured-subtitle {
+    font-size: 14px;
+  }
+  .pub-featured-content {
+    padding: 0 20px 60px;
+  }
+  .pub-item-title {
+    font-size: 16px;
+  }
+  .pub-item-meta {
+    font-size: 13px;
+  }
+  .pub-category-tag {
+    font-size: 11px;
+  }
+  .pub-read-more a {
+    font-size: 13px;
+  }
+  .pub-sort-select {
+    font-size: 12px;
+    min-width: 140px;
+  }
+  .pub-page-btn {
+    min-width: 40px;
+    height: 40px;
+    font-size: 13px;
+  }
+  .pub-page-prev,
+  .pub-page-next {
+    padding: 0 16px;
+    font-size: 13px;
+  }
+}
+
