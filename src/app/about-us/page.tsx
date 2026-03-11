@@ -28,7 +28,6 @@ export default function AboutUsPage() {
           alt=""
           style={{
             position: "absolute",
-            top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
             width: "60%",
@@ -101,8 +100,8 @@ export default function AboutUsPage() {
             <h2
               style={{
                 fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-                fontSize: 48,
-                fontWeight: 400,
+                fontSize: 64,
+                fontWeight: 500,
                 color: "#222",
                 margin: "0 0 8px 0",
                 lineHeight: 1.15,
