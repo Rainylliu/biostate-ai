@@ -468,10 +468,10 @@ export default function AboutUsPage() {
       <section
         style={{
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-          padding: "150px 20px 35px",
+          padding: "150px 0 35px",
         }}
       >
-        <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+        <div>
           <InvestorCarousel
             investors={[
               { name: "Shekhar Kirani", image: "/images/Shekhar Kirani.svg", link: "https://www.accel.com/people/shekhar-kirani#bay-area" },

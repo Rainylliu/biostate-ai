@@ -8,29 +8,86 @@ interface Investor {
   link: string;
 }
 
+function NavArrow({ direction, onClick }: { direction: "left" | "right"; onClick: () => void }) {
+  const [hovered, setHovered] = useState(false);
+  const isLeft = direction === "left";
+  return (
+    <button
+      onClick={onClick}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      aria-label={isLeft ? "Previous" : "Next"}
+      style={{
+        background: "none",
+        border: "none",
+        cursor: "pointer",
+        padding: "8px 12px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        transition: "color 0.3s ease",
+        color: hovered ? "#45d0bd" : "#111",
+      }}
+    >
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path
+          d={isLeft ? "M13 4L7 10L13 16" : "M7 4L13 10L7 16"}
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </button>
+  );
+}
+
+function CardArrow() {
+  const [hovered, setHovered] = useState(false);
+  return (
+    <span
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        width: 40,
+        height: 40,
+        borderRadius: 10,
+        background: hovered ? "#45d0bd" : "#222",
+        color: "#fff",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        flexShrink: 0,
+        transition: "background 0.3s ease",
+      }}
+    >
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <path d="M5 13L13 5M13 5H6M13 5V12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </span>
+  );
+}
+
 export default function InvestorCarousel({ investors }: { investors: Investor[] }) {
   const trackRef = useRef<HTMLDivElement>(null);
   const [offset, setOffset] = useState(0);
   const [cardWidth, setCardWidth] = useState(390);
-  const [visibleCount, setVisibleCount] = useState(3);
+  const [visibleCount, setVisibleCount] = useState(4);
+  const gap = 24;
   const maxOffset = investors.length - visibleCount;
 
   useEffect(() => {
     function measure() {
-      if (!trackRef.current) return;
-      const container = trackRef.current.parentElement;
-      if (!container) return;
-      const w = container.clientWidth;
-      const gap = 24;
-      if (w < 640) {
+      const vw = window.innerWidth;
+      if (vw < 640) {
         setVisibleCount(1);
-        setCardWidth(w);
-      } else if (w < 1024) {
+        setCardWidth(vw - 40);
+      } else if (vw < 1024) {
         setVisibleCount(2);
-        setCardWidth((w - gap) / 2);
+        setCardWidth((vw - 40 - gap) / 2);
       } else {
-        setVisibleCount(3);
-        setCardWidth((w - gap * 2) / 3);
+        setVisibleCount(4);
+        setCardWidth((vw - 40 - gap * 3) / 4);
       }
     }
     measure();
@@ -51,47 +108,50 @@ export default function InvestorCarousel({ investors }: { investors: Investor[] 
 
   return (
     <div>
-      {/* Header */}
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 40 }}>
-        <div>
-          <p style={{ fontSize: 14, color: "#999", fontWeight: 500, marginBottom: 8 }}>[ investors ]</p>
-          <h2 style={{ fontSize: 48, fontWeight: 700, color: "#111", lineHeight: 1.15, margin: 0 }}>
-            Institutional investors
-          </h2>
-        </div>
-        <div style={{ display: "flex", gap: 8 }}>
-          <button
-            onClick={prev}
-            aria-label="Previous"
+      {/* Header - constrained to content width */}
+      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 20px" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 40 }}>
+          <div>
+            <p style={{ fontSize: 14, color: "#333", fontWeight: 500, marginBottom: 8 }}>[ investors ]</p>
+            <h2 style={{ fontFamily: "'Sora', Arial, Helvetica, sans-serif", fontSize: 60, fontWeight: 400, color: "#111", letterSpacing: "-0.05em", lineHeight: 1.15, margin: 0 }}>
+              Institutional investors
+            </h2>
+          </div>
+          {/* Pill-shaped nav with gradient border */}
+          <div
             style={{
-              width: 48, height: 48, borderRadius: 12, border: "1.5px solid #ddd", background: "#fff",
-              cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20,
+              display: "inline-flex",
+              alignItems: "center",
+              borderRadius: 15,
+              padding: 1,
+              background: "linear-gradient(118deg, #45d0bd 0%, #6366f1 50%, #8b5cf6 100%)",
             }}
           >
-            ←
-          </button>
-          <button
-            onClick={next}
-            aria-label="Next"
-            style={{
-              width: 48, height: 48, borderRadius: 12, border: "1.5px solid #ddd", background: "#fff",
-              cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20,
-            }}
-          >
-            →
-          </button>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                borderRadius: 14,
+                background: "#fff",
+                overflow: "hidden",
+              }}
+            >
+              <NavArrow direction="left" onClick={prev} />
+              <NavArrow direction="right" onClick={next} />
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Carousel */}
-      <div style={{ overflow: "hidden" }}>
+      {/* Carousel - full viewport width */}
+      <div style={{ overflow: "hidden", padding: "0 20px" }}>
         <div
           ref={trackRef}
           style={{
             display: "flex",
-            gap: 24,
+            gap: gap,
             transition: "transform 0.4s ease",
-            transform: `translateX(-${offset * (cardWidth + 24)}px)`,
+            transform: `translateX(-${offset * (cardWidth + gap)}px)`,
           }}
         >
           {investors.map((inv) => (
@@ -110,21 +170,16 @@ export default function InvestorCarousel({ investors }: { investors: Investor[] 
                 flexDirection: "column",
               }}
             >
-              <img
-                src={inv.image}
-                alt={inv.name}
-                style={{ width: "100%", borderRadius: 16, display: "block", marginBottom: 16 }}
-              />
+              <div style={{ width: 320, height: 320, margin: "0 auto 16px", overflow: "hidden", borderRadius: 16 }}>
+                <img
+                  src={inv.image}
+                  alt={inv.name}
+                  style={{ width: 320, height: 320, objectFit: "cover", display: "block" }}
+                />
+              </div>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                <h5 style={{ fontSize: 18, fontWeight: 600, color: "#111", margin: 0 }}>{inv.name}</h5>
-                <span
-                  style={{
-                    width: 40, height: 40, borderRadius: 10, background: "#222", color: "#fff",
-                    display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, flexShrink: 0,
-                  }}
-                >
-                  ↗
-                </span>
+                <h5 style={{ fontSize: 20, fontWeight: 400, color: "#111", margin: 0 }}>{inv.name}</h5>
+                <CardArrow />
               </div>
             </a>
           ))}
