@@ -1572,10 +1572,7 @@ button:hover .side-panel-close-x {
 .advisor-page-btn {
   outline: none;
 }
-.advisor-page-btn:hover:not(:disabled) {
-  opacity: 0.85;
-}
-.advisor-page-nav:hover:not(:disabled) {
+.advisor-page-btn:hover {
   background: linear-gradient(135deg, #8258c8, #2c84c8) !important;
   color: #ffffff !important;
   border-color: transparent !important;
