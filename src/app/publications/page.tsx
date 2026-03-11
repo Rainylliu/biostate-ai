@@ -17,7 +17,7 @@ export default function PublicationPage() {
           background: "#ffffff",
         }}
       >
-        {/* Background SVG spanning both sections */}
+        {/* Background SVG – full width, natural height, top-aligned */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/images/publication_bg.svg"
@@ -27,8 +27,7 @@ export default function PublicationPage() {
             top: 0,
             left: 0,
             width: "100%",
-            height: "100%",
-            objectFit: "cover",
+            height: "auto",
             userSelect: "none",
             pointerEvents: "none",
           }}
@@ -96,12 +95,12 @@ export default function PublicationPage() {
             A curated selection of our most impactful and widely recognized research.
           </p>
         </section>
-      </div>
 
-      {/* ── Section 2 continued: Publications list ── */}
-      <section className="pub-featured-content">
-        <PublicationsList />
-      </section>
+        {/* ── Publications list (still inside bg wrapper) ── */}
+        <section className="pub-featured-content" style={{ position: "relative" }}>
+          <PublicationsList />
+        </section>
+      </div>
     </div>
   );
 }
