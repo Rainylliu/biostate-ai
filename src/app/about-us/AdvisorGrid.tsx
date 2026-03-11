@@ -154,22 +154,20 @@ export default function AdvisorGrid() {
               onClick={() => setPage((p) => p - 1)}
               className="advisor-page-btn advisor-page-nav advisor-nav-prev"
               style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 8,
-                padding: "10px 20px",
+                width: 40,
+                height: 40,
                 borderRadius: 10,
                 border: "1px solid #8258c8",
                 background: "#ffffff",
                 color: "#333",
-                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                fontSize: 14,
-                fontWeight: 500,
                 cursor: "pointer",
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
                 transition: "background 0.3s ease, color 0.3s ease",
+                padding: 0,
               }}
             >
-              Previous
               <span className="advisor-nav-arrow">
                 <span className="advisor-nav-arrow-inner">
                   <svg width="22" height="22" viewBox="0 0 22 22" fill="none" style={{ transform: "scaleX(-1)" }}>
@@ -216,22 +214,20 @@ export default function AdvisorGrid() {
               onClick={() => setPage((p) => p + 1)}
               className="advisor-page-btn advisor-page-nav"
               style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 8,
-                padding: "10px 20px",
+                width: 40,
+                height: 40,
                 borderRadius: 10,
                 border: "1px solid #8258c8",
                 background: "#ffffff",
                 color: "#333",
-                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                fontSize: 14,
-                fontWeight: 500,
                 cursor: "pointer",
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
                 transition: "background 0.3s ease, color 0.3s ease",
+                padding: 0,
               }}
             >
-              Next
               <span className="advisor-nav-arrow">
                 <span className="advisor-nav-arrow-inner">
                   <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
