@@ -188,7 +188,13 @@ export default function Section9NActAI() {
           font-size: 72px;
           font-weight: 400;
           color: transparent;
-          -webkit-text-stroke: 2px #B0B0C8;
+          background: linear-gradient(135deg, #8258C8, #2C84C8);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-stroke: 2px transparent;
+          -webkit-text-fill-color: transparent;
+          paint-order: stroke fill;
+          -webkit-text-stroke-color: #8258C8;
           margin: 0 0 16px 0;
           line-height: 1.1;
           letter-spacing: -1px;
@@ -205,9 +211,9 @@ export default function Section9NActAI() {
           overflow: hidden;
         }
         .s9-card-arch {
-          background: #F3EEFF;
+          background: transparent;
           border-radius: 20px;
-          overflow: visible;
+          overflow: hidden;
         }
         @media (max-width: 900px) {
           .s9-container {
