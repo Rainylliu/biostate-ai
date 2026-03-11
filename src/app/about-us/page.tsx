@@ -479,7 +479,7 @@ export default function AboutUsPage() {
               { name: "Yiran Liu", position: "Managing Partner", image: "/images/Yiran Liu.svg", link: "https://www.visionpluscapital.com/en/list.php?pid=1" },
               { name: "Rouz Jazayeri", position: "Co-Founder & Managing Director", image: "/images/Rouz Jazayeri.svg", link: "https://catapult.vc/about/" },
               { name: "Chinmaya Sharma", position: "Partner", image: "/images/Chinmaya Sharma.svg", link: "https://www.infoedgeventures.in/team" },
-              { name: "Fred Farina", position: "Chief Innovation & Corporate Partnerships Officer", image: "/images/Fred Farina.svg", link: "https://innovation.caltech.edu/ottcp-directory/fred-farina" },
+              { name: "Fred Farina", position: "California Institute of Technology", image: "/images/Fred Farina.svg", link: "https://innovation.caltech.edu/ottcp-directory/fred-farina" },
             ]}
           />
         </div>
@@ -509,7 +509,7 @@ export default function AboutUsPage() {
       <section
         style={{
           overflow: "hidden",
-          padding: "60px 0",
+          padding: "100px 0",
           whiteSpace: "nowrap",
         }}
       >
@@ -520,9 +520,9 @@ export default function AboutUsPage() {
               style={{
                 display: "inline-block",
                 fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-                fontSize: 48,
+                fontSize: 100,
                 fontWeight: 400,
-                color: "#111",
+                color: "#333333",
                 letterSpacing: "-0.02em",
                 paddingRight: 32,
               }}
