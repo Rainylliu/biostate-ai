@@ -46,7 +46,7 @@ const countries = [
     name: "China",
     entries: [
       { label: "Biosheng (Shanghai)", href: "https://www.bioshengai.com/" },
-      { label: "Baisheng (Wuhan)", href: "https://www.kindstar.com.cn/en/about" },
+      { label: "Baisheng (Wuhan)", href: "https://www.kindstar.com.cn/en" },
     ],
   },
   {

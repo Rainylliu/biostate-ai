@@ -36,7 +36,7 @@ const slides = [
     description:
       "Baisheng is a joint venture between Biostate AI and Kindstar Global (a publicly listed company), combining world-class omics innovation with large-scale clinical deployment.",
     location: "China (Wuhan)",
-    href: "https://www.kindstar.com.cn/en/about",
+    href: "https://www.kindstar.com.cn/en",
     bg: "/images/Baisheng.png",
   },
   {
