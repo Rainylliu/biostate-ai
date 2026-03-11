@@ -8,7 +8,7 @@ import { useState, useEffect, useRef } from "react";
 const navItems = [
   { label: "HOME", href: "/" },
   { label: "TEAM", href: "/about-us" },
-  { label: "PUBLICATIONS", href: "/publications" },
+  { label: "PUBLICATIONS", href: "/publication" },
   { label: "RNA", href: "/rna" },
   { label: "DNA", href: "/dna" },
   { label: "AI", href: "/ai" },
