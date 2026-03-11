@@ -1246,6 +1246,15 @@ button:hover .side-panel-close-x {
   }
 }
 
+/* ── Global Constellation (Team page) ── */
+.gc-node img {
+  transition: transform 0.18s ease, filter 0.18s ease;
+}
+.gc-node:hover img {
+  transform: translateY(-3px);
+  filter: brightness(1.08);
+}
+
 /* Section 3: Global Map */
 .global-map-entry:hover {
   color: #45D0BD !important;

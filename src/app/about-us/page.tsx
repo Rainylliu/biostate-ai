@@ -202,6 +202,151 @@ export default function AboutUsPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Section 2: Global Constellation ── */}
+      <section
+        style={{
+          padding: "80px 20px",
+          background: "#ffffff",
+        }}
+      >
+        {/* Title */}
+        <div style={{ textAlign: "center", marginBottom: 40 }}>
+          <h2
+            style={{
+              fontFamily: "'Sora', Arial, Helvetica, sans-serif",
+              fontSize: 48,
+              fontWeight: 400,
+              color: "#222",
+              margin: "0 0 12px 0",
+            }}
+          >
+            Global Constellation
+          </h2>
+          <p
+            style={{
+              fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+              fontSize: 15,
+              fontWeight: 400,
+              color: "#666",
+              lineHeight: 1.6,
+              margin: 0,
+            }}
+          >
+            A world-class organization built to accelerate
+            <br />
+            breakthroughs from sample to insight.
+          </p>
+        </div>
+
+        {/* Map container */}
+        <div
+          className="gc-wrapper"
+          style={{
+            position: "relative",
+            width: "100%",
+            maxWidth: 1400,
+            margin: "0 auto",
+            aspectRatio: "1883 / 1080",
+          }}
+        >
+          {/* Background map */}
+          <img
+            src="/images/Global Constellation.png"
+            alt=""
+            style={{
+              position: "absolute",
+              inset: 0,
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
+              zIndex: 1,
+              borderRadius: 20,
+            }}
+          />
+
+          {/* Dashed connection lines */}
+          <svg
+            style={{
+              position: "absolute",
+              inset: 0,
+              zIndex: 2,
+              pointerEvents: "none",
+            }}
+            viewBox="0 0 1883 1080"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <line x1="942" y1="560" x2="942" y2="460" stroke="#49C9B2" strokeWidth="4" strokeDasharray="8 10" />
+            <line x1="360" y1="500" x2="1520" y2="500" stroke="#49C9B2" strokeWidth="4" strokeDasharray="8 10" />
+            <line x1="360" y1="500" x2="360" y2="620" stroke="#49C9B2" strokeWidth="4" strokeDasharray="8 10" />
+            <line x1="942" y1="500" x2="942" y2="620" stroke="#49C9B2" strokeWidth="4" strokeDasharray="8 10" />
+            <line x1="1520" y1="500" x2="1520" y2="620" stroke="#49C9B2" strokeWidth="4" strokeDasharray="8 10" />
+            <line x1="650" y1="500" x2="650" y2="920" stroke="#49C9B2" strokeWidth="4" strokeDasharray="8 10" />
+            <line x1="1200" y1="500" x2="1200" y2="920" stroke="#49C9B2" strokeWidth="4" strokeDasharray="8 10" />
+          </svg>
+
+          {/* TopCo */}
+          <a
+            href="https://www.biostate.ai/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="gc-node"
+            style={{ position: "absolute", zIndex: 3, top: "18.5%", left: "50%", transform: "translateX(-50%)" }}
+          >
+            <img src="/images/Biostate AI (TopCo).svg" alt="Biostate AI (TopCo)" style={{ width: 250, height: "auto" }} />
+          </a>
+
+          {/* Row 2: K-Dense, Biostate AI MENA, Biosheng AI */}
+          <a
+            href="https://k-dense.ai/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="gc-node"
+            style={{ position: "absolute", zIndex: 3, top: "35.2%", left: "6.9%" }}
+          >
+            <img src="/images/K-Dense.svg" alt="K-Dense" style={{ width: 250, height: "auto" }} />
+          </a>
+          <a
+            href="https://dynamicmultiome.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="gc-node"
+            style={{ position: "absolute", zIndex: 3, top: "35.2%", left: "50%", transform: "translateX(-50%)" }}
+          >
+            <img src="/images/Biostate AI MENA.svg" alt="Biostate AI MENA" style={{ width: 250, height: "auto" }} />
+          </a>
+          <a
+            href="https://www.bioshengai.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="gc-node"
+            style={{ position: "absolute", zIndex: 3, top: "35.2%", right: "6.9%" }}
+          >
+            <img src="/images/Biosheng AI.svg" alt="Biosheng AI" style={{ width: 250, height: "auto" }} />
+          </a>
+
+          {/* Row 3: JV Baisheng, Bayosthiti */}
+          <a
+            href="https://www.kindstar.com.cn/en/about"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="gc-node"
+            style={{ position: "absolute", zIndex: 3, top: "50.9%", left: "17%" }}
+          >
+            <img src="/images/JV Baisheng.svg" alt="JV Baisheng" style={{ width: 250, height: "auto" }} />
+          </a>
+          <a
+            href="https://bayosthiti.ai/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="gc-node"
+            style={{ position: "absolute", zIndex: 3, top: "50.9%", right: "17%" }}
+          >
+            <img src="/images/Bayosthiti.svg" alt="Bayosthiti" style={{ width: 250, height: "auto" }} />
+          </a>
+        </div>
+      </section>
     </div>
   );
 }
