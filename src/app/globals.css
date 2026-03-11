@@ -172,6 +172,47 @@ img {
   color: #45D0BD !important;
 }
 
+/* ── Footer Mobile ── */
+@media (max-width: 768px) {
+  .footer-top-row {
+    flex-direction: column !important;
+    gap: 40px !important;
+  }
+  .footer-heading {
+    font-size: 32px !important;
+  }
+  .footer-contact-info {
+    gap: 30px !important;
+  }
+  .footer-contact-label {
+    min-width: 120px !important;
+    font-size: 14px !important;
+  }
+  .footer-bio-row {
+    flex-direction: column !important;
+    gap: 30px !important;
+    align-items: flex-start !important;
+  }
+  .footer-bio-text {
+    font-size: 36px !important;
+  }
+  .footer-form-card {
+    flex: 1 1 auto !important;
+    width: 100%;
+    padding: 24px !important;
+  }
+  .footer-legal {
+    flex-direction: row !important;
+    gap: 12px;
+    font-size: 11px !important;
+    white-space: nowrap;
+  }
+  .footer-legal p,
+  .footer-legal a {
+    font-size: 11px !important;
+  }
+}
+
 /* ── Button Base Styles (matching WP Aiero theme) ── */
 .btn {
   display: inline-flex;
