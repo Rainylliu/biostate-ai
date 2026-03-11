@@ -56,7 +56,7 @@ export default function Header() {
       {/* Top Info Bar - hidden on home page, outside wrapper so sticky header works */}
       {!isHome && (
       <div
-        className="flex items-center justify-between"
+        className="info-top-bar flex items-center justify-between"
         style={{
           margin: "8px 20px",
           padding: "0 24px",
@@ -70,7 +70,7 @@ export default function Header() {
           transition: "border-color 0.3s ease, color 0.3s ease",
         }}
       >
-        <span style={{ padding: "0 20px" }}>
+        <span className="info-top-email" style={{ padding: "0 20px" }}>
           Email:{" "}
           <a
             href="mailto:contact@biostate.ai"
@@ -88,8 +88,8 @@ export default function Header() {
             contact@biostate.ai
           </a>
         </span>
-        <div className="flex items-center gap-4" style={{ padding: "0 20px" }}>
-          <span>Follow us:</span>
+        <div className="info-top-social flex items-center gap-4" style={{ padding: "0 20px" }}>
+          <span className="info-top-follow-label">Follow us:</span>
           <a href="https://www.facebook.com/people/Biostate-AI/61562900021094/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:!text-[#45D0BD] transition-colors" style={{ color: textColor, transition: "color 0.3s ease" }}>
             <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
           </a>

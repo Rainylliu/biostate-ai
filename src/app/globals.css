@@ -1246,6 +1246,26 @@ button:hover .side-panel-close-x {
   }
 }
 
+/* ── Info Top Bar Responsive ── */
+@media (max-width: 768px) {
+  .info-top-bar {
+    padding: 0 12px !important;
+    gap: 8px;
+    font-size: 12px !important;
+  }
+  .info-top-email {
+    padding: 0 4px !important;
+    white-space: nowrap;
+  }
+  .info-top-social {
+    padding: 0 4px !important;
+    gap: 8px !important;
+  }
+  .info-top-follow-label {
+    display: none;
+  }
+}
+
 /* ── Team Page ── */
 
 /* Global Constellation */
