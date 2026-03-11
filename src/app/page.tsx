@@ -8,6 +8,7 @@ import Section5Pipeline from "@/components/Section5Pipeline";
 import Section6Projects from "@/components/Section6Projects";
 import Section7Wetlab from "@/components/Section7Wetlab";
 import Section8KDense from "@/components/Section8KDense";
+import Section9NActAI from "@/components/Section9NActAI";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -148,6 +149,9 @@ export default function Home() {
 
       {/* Section 8: K-Dense AI Scientist */}
       <Section8KDense />
+
+      {/* Section 9: N-Act AI */}
+      <Section9NActAI />
 
       {/* Subscribe Success Popup */}
       {showPopup && (
