@@ -49,7 +49,7 @@ export default function Section7Wetlab() {
       <div className="s7-row" style={{ maxWidth: 1200, margin: "0 auto 100px" }}>
         <div className="s7-col-img">
           <img
-            src="/images/Weblab1.svg"
+            src="/images/Wetlab1.svg"
             alt="BIRT + PERD RNAseq technology"
             style={{
               width: "100%",
