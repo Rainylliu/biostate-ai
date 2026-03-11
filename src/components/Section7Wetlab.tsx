@@ -10,7 +10,8 @@ export default function Section7Wetlab() {
       }}
     >
       {/* ── Part 1: Intro Header ── */}
-      <div style={{ maxWidth: 1100, margin: "0 auto 80px" }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto 80px" }}>
+      <div style={{ maxWidth: 800 }}>
         <p className="s7-tag">[ about ]</p>
         <WaveReveal
           text="Next-Gen Wetlab Technology for 85% Lower Cost"
@@ -43,6 +44,7 @@ export default function Section7Wetlab() {
           cost efficiency — forming the foundation for Biostate&apos;s AI-driven
           disease prediction and drug response models.
         </p>
+      </div>
       </div>
 
       {/* ── Part 2: RNAseq (image left, content right) ── */}
