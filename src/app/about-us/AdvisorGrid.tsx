@@ -13,7 +13,7 @@ const advisors: Advisor[] = [
   { name: "George Church", institution: "Harvard Med School", specialty: "NGS Tech", image: "/images/George Church.svg" },
   { name: "Robert Sanchez", institution: "HCA Florida Heart Inst", specialty: "Heart Disease", image: "/images/Robert Sanchez.svg" },
   { name: "Abhijit Patel", institution: "Yale Med School", specialty: "Lung Cancer", image: "/images/Abhijit Patel.svg" },
-  { name: "Ghayas Issa", institution: "MD Anderson", specialty: "Leukemia", image: "/images/Ghayas Issa.svg" },
+  { name: "Ghayas Issa", institution: "MD Anderson", specialty: "Leukemia", image: "/images/Ghayas lssa.svg" },
   { name: "Juan Cata", institution: "MD Anderson", specialty: "Chronic Pain", image: "/images/Juan Cata.svg" },
   { name: "Peter Dedon", institution: "MIT", specialty: "RNA Epigenetics", image: "/images/Peter Dedon.svg" },
   { name: "Sarah Elsea", institution: "Baylor College of Med.", specialty: "Inherited Diseases", image: "/images/Sarah Elsea.svg" },
