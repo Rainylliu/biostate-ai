@@ -615,9 +615,10 @@ export default function RNAPage() {
           {/* Top Row - 20,000+ and Heading */}
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16" style={{ marginBottom: "60px" }}>
             {/* Left - 20,000+ outline text */}
-            <div className="flex items-end gap-2">
+            <div className="rna-countup-group flex items-end gap-1">
               <CountUp end={20000} suffix="+" style={{ marginLeft: "40px" }} />
               <span
+                className="rna-countup-label"
                 style={{
                   writingMode: "vertical-rl",
                   fontSize: "16px",
