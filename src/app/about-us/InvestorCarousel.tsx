@@ -116,7 +116,7 @@ export default function InvestorCarousel({ investors }: { investors: Investor[] 
             style={{
               display: "inline-flex",
               alignItems: "center",
-              borderRadius: 25,
+              borderRadius: 9999,
               padding: 1,
               background: "linear-gradient(118deg, #6366f1 0%, #8b5cf6 100%)",
             }}
@@ -127,7 +127,7 @@ export default function InvestorCarousel({ investors }: { investors: Investor[] 
                 alignItems: "center",
                 width: 94,
                 height: 48,
-                borderRadius: 24,
+                borderRadius: 9999,
                 background: "#fff",
                 overflow: "hidden",
                 justifyContent: "space-around",
