@@ -203,7 +203,7 @@ export default function Section7Wetlab() {
       </div>
 
       {/* ── Part 3: DNAseq (content left, image right) ── */}
-      <div className="s7-row s7-row-reverse" style={{ maxWidth: 1200, margin: "0 auto" }}>
+      <div className="s7-row" style={{ maxWidth: 1200, margin: "0 auto" }}>
         <div className="s7-col-text">
           <p className="s7-tag">[ how it works ]</p>
           <h3
