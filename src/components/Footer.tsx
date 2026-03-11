@@ -55,7 +55,7 @@ export default function Footer() {
       <section
         className="footer-get-in-touch"
         style={{
-          padding: "135px 0 60px",
+          padding: "80px 0 60px",
         }}
       >
         <div className="container">

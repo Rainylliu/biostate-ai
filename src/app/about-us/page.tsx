@@ -20,7 +20,7 @@ export default function AboutUsPage() {
           alignItems: "center",
           justifyContent: "center",
           textAlign: "center",
-          padding: "120px 20px 100px",
+          padding: "120px 20px 60px",
           background: "#ffffff",
         }}
       >
@@ -210,7 +210,7 @@ export default function AboutUsPage() {
       {/* ── Section 2: Global Constellation ── */}
       <section
         style={{
-          padding: "40px 20px",
+          padding: "20px 20px",
           background: "#ffffff",
         }}
       >
