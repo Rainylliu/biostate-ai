@@ -1581,16 +1581,3 @@ button:hover .side-panel-close-x {
   border-color: transparent !important;
 }
 
-@media (max-width: 768px) {
-  .advisor-pagination {
-    gap: 6px !important;
-  }
-  .advisor-page-nav {
-    padding: 8px 14px !important;
-    font-size: 13px !important;
-  }
-  .advisor-page-btn {
-    width: 36px !important;
-    height: 36px !important;
-  }
-}
