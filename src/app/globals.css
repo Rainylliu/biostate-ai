@@ -952,15 +952,23 @@ button:hover .side-panel-close-x {
     gap: 24px;
     margin-bottom: 32px;
   }
+  .s6-stat {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+  }
   .s6-stat-number {
     font-size: 64px;
   }
+  .s6-stat-label {
+    margin-top: 0;
+  }
   .s6-card {
     border-radius: 18px;
-    padding: 24px 16px 32px;
+    padding: 32px 20px 40px;
   }
   .s6-header h2 {
-    font-size: 28px !important;
+    font-size: 36px !important;
   }
 }
 
