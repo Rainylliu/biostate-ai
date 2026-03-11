@@ -72,6 +72,7 @@ export default function Section3GlobalMap() {
 
   return (
     <section style={{ padding: "80px 20px 80px", background: "#ffffff" }}>
+     <div style={{ maxWidth: 1280, margin: "0 auto" }}>
       <div>
         {/* Section header */}
         <p
@@ -276,6 +277,7 @@ export default function Section3GlobalMap() {
           ))}
         </div>
       </div>
+     </div>
     </section>
   );
 }

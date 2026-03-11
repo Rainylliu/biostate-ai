@@ -139,11 +139,11 @@ export default function Home() {
       {/* Section 5: Pipeline */}
       <Section5Pipeline />
 
-      {/* Section 7: Wetlab Technology */}
-      <Section7Wetlab />
-
       {/* Section 6: Project Gallery */}
       <Section6Projects />
+
+      {/* Section 7: Wetlab Technology */}
+      <Section7Wetlab />
 
       {/* Subscribe Success Popup */}
       {showPopup && (
