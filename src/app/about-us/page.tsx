@@ -244,7 +244,7 @@ export default function AboutUsPage() {
           style={{
             position: "relative",
             width: "100%",
-            maxWidth: 1400,
+            maxWidth: 1200,
             margin: "0 auto",
             aspectRatio: "1883 / 1080",
           }}
