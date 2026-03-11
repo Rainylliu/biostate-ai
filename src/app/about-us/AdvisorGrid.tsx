@@ -198,7 +198,7 @@ export default function AdvisorGrid() {
                 color: p === page ? "#ffffff" : "#333",
                 fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                 fontSize: 14,
-                fontWeight: 600,
+                fontWeight: 500,
                 cursor: "pointer",
                 display: "inline-flex",
                 alignItems: "center",
