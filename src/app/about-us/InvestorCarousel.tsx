@@ -186,7 +186,7 @@ export default function InvestorCarousel({ investors, heading = "Institutional i
                   style={{ textDecoration: "none" }}
                 >
                   <h5 className="investor-card-name">{inv.name}</h5>
-                  <p style={{ fontSize: 14, color: "#666", margin: "10px 0 0", lineHeight: 1.3 }}>{inv.position}</p>
+                  <p style={{ fontSize: 14, color: "#666", margin: "10px 0 0", lineHeight: 1.3, letterSpacing: "-0.02em", whiteSpace: "nowrap" }}>{inv.position}</p>
                 </a>
                 <a href={inv.link} target="_blank" rel="noopener noreferrer" style={{ flexShrink: 0 }}>
                   <CardArrow />
