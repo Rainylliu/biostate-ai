@@ -1280,8 +1280,8 @@ button:hover .side-panel-close-x {
 /* Team page responsive */
 @media (max-width: 900px) {
   .team-hero-title {
-    font-size: 56px !important;
-    margin: -20px 0 20px 0 !important;
+    font-size: 48px !important;
+    margin: 0 0 20px 0 !important;
   }
   .team-profile {
     flex-direction: column !important;
@@ -1300,16 +1300,24 @@ button:hover .side-panel-close-x {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  /* Consistent mobile hero title size across all pages */
   .team-hero-title {
-    font-size: 38px !important;
+    font-size: 36px !important;
     margin: 0 0 16px 0 !important;
+  }
+  .team-hero-section {
+    padding: 120px 20px 60px !important;
   }
   .team-profile-name {
     font-size: 32px !important;
   }
   .gc-node img {
     width: 120px !important;
+  }
+  /* All section headings consistent on mobile */
+  .s7-col-text h3 {
+    font-size: 36px !important;
   }
 }
 

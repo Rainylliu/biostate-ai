@@ -10,6 +10,7 @@ export default function AboutUsPage() {
     <div>
       {/* ── Section 1: Hero ── */}
       <section
+        className="team-hero-section"
         style={{
           position: "relative",
           overflow: "hidden",
