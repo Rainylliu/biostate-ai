@@ -217,37 +217,25 @@ export default function Section3GlobalMap() {
         >
           {countries.map((country) => (
             <div key={country.code} style={{ position: "relative" }}>
-              {/* Large background code with gradient stroke + horizon line */}
-              <div style={{ position: "relative", marginBottom: -8 }}>
-                <span
-                  style={{
-                    fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-                    fontSize: "clamp(56px, 6vw, 80px)",
-                    fontWeight: 700,
-                    WebkitTextFillColor: "#ffffff",
-                    WebkitTextStrokeWidth: "1.5px",
-                    WebkitTextStrokeColor: "transparent",
-                    background: "linear-gradient(135deg, rgb(6,147,227) 0%, rgb(155,81,224) 100%)",
-                    WebkitBackgroundClip: "text",
-                    lineHeight: 1,
-                    display: "block",
-                    userSelect: "none",
-                  }}
-                >
-                  {country.code}
-                </span>
-                {/* Horizon line */}
-                <div
-                  style={{
-                    position: "absolute",
-                    left: 0,
-                    right: 0,
-                    top: "52%",
-                    height: 1,
-                    background: "linear-gradient(135deg, rgb(6,147,227) 0%, rgb(155,81,224) 100%)",
-                  }}
-                />
-              </div>
+              {/* Large background code with gradient stroke */}
+              <span
+                style={{
+                  fontFamily: "'Sora', Arial, Helvetica, sans-serif",
+                  fontSize: "clamp(56px, 6vw, 80px)",
+                  fontWeight: 700,
+                  WebkitTextFillColor: "#ffffff",
+                  WebkitTextStrokeWidth: "1.5px",
+                  WebkitTextStrokeColor: "transparent",
+                  background: "linear-gradient(135deg, rgb(6,147,227) 0%, rgb(155,81,224) 100%)",
+                  WebkitBackgroundClip: "text",
+                  lineHeight: 1,
+                  display: "block",
+                  marginBottom: -8,
+                  userSelect: "none",
+                }}
+              >
+                {country.code}
+              </span>
               {/* Country name */}
               <h3
                 style={{
