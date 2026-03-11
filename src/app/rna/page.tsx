@@ -19,7 +19,7 @@ export default function RNAPage() {
           <div className="relative flex flex-col lg:flex-row items-center gap-12 lg:gap-[8%]">
             {/* Background circle */}
             <div
-              className="absolute inset-0 flex items-center justify-center pointer-events-none"
+              className="absolute inset-0 hidden lg:flex items-center justify-center pointer-events-none"
               style={{ zIndex: 0 }}
             >
               <Image
