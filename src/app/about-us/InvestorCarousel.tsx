@@ -63,12 +63,16 @@ function CardArrow() {
 export default function InvestorCarousel({ investors, heading = "Institutional investors" }: { investors: Investor[]; heading?: string }) {
   const trackRef = useRef<HTMLDivElement>(null);
   const [offset, setOffset] = useState(0);
+  const [animate, setAnimate] = useState(true);
   const cardW = 360;
   const cardH = 490;
   const [cardWidth, setCardWidth] = useState(cardW);
   const [visibleCount, setVisibleCount] = useState(4);
   const gap = 24;
-  const maxOffset = investors.length - visibleCount;
+  const len = investors.length;
+
+  // Duplicate items for seamless loop: [...investors, ...investors]
+  const items = [...investors, ...investors];
 
   useEffect(() => {
     function measure() {
@@ -80,7 +84,6 @@ export default function InvestorCarousel({ investors, heading = "Institutional i
         setVisibleCount(2);
         setCardWidth((vw - 40 - gap) / 2);
       } else {
-        // Fixed 390px cards on desktop
         setVisibleCount(Math.floor((vw - 40 + gap) / (cardW + gap)));
         setCardWidth(cardW);
       }
@@ -90,16 +93,41 @@ export default function InvestorCarousel({ investors, heading = "Institutional i
     return () => window.removeEventListener("resize", measure);
   }, []);
 
-  const prev = useCallback(() => setOffset((o) => Math.max(0, o - 1)), []);
-  const next = useCallback(() => setOffset((o) => Math.min(maxOffset, o + 1)), [maxOffset]);
+  // When offset reaches the duplicated set, snap back to the original set instantly
+  useEffect(() => {
+    if (offset >= len) {
+      const timer = setTimeout(() => {
+        setAnimate(false);
+        setOffset(offset - len);
+        // Re-enable animation on next frame
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => setAnimate(true));
+        });
+      }, 400); // Wait for current transition to finish
+      return () => clearTimeout(timer);
+    }
+    if (offset < 0) {
+      const timer = setTimeout(() => {
+        setAnimate(false);
+        setOffset(offset + len);
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => setAnimate(true));
+        });
+      }, 400);
+      return () => clearTimeout(timer);
+    }
+  }, [offset, len]);
 
-  // Auto-play
+  const prev = useCallback(() => setOffset((o) => o - 1), []);
+  const next = useCallback(() => setOffset((o) => o + 1), []);
+
+  // Auto-play: always move right
   useEffect(() => {
     const id = setInterval(() => {
-      setOffset((o) => (o >= maxOffset ? 0 : o + 1));
+      setOffset((o) => o + 1);
     }, 4000);
     return () => clearInterval(id);
-  }, [maxOffset]);
+  }, []);
 
   return (
     <div>
@@ -148,13 +176,13 @@ export default function InvestorCarousel({ investors, heading = "Institutional i
           style={{
             display: "flex",
             gap: gap,
-            transition: "transform 0.4s ease",
+            transition: animate ? "transform 0.4s ease" : "none",
             transform: `translateX(-${offset * (cardWidth + gap)}px)`,
           }}
         >
-          {investors.map((inv) => (
+          {items.map((inv, i) => (
             <div
-              key={inv.name}
+              key={`${inv.name}-${i}`}
               style={{
                 flex: `0 0 ${cardWidth}px`,
                 height: cardH,
