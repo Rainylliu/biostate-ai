@@ -686,12 +686,40 @@ button:hover .side-panel-close-x {
   transform: translateY(0);
 }
 
+/* Pipeline mobile buttons */
+.pipeline-btn-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #ffffff;
+  color: #8258C8;
+  font-size: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 24px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  border: 1.5px solid #8258C8;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  line-height: 1.05;
+  width: 56px;
+  height: 30px;
+  white-space: nowrap;
+}
+.pipeline-btn-mobile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* Desktop/Mobile toggle */
+.pipeline-desktop { display: block; }
+.pipeline-mobile { display: none; }
+
 @media (max-width: 768px) {
-  .pipeline-btn {
-    font-size: 5px;
-    padding: 8px 14px;
-    border-width: 1.5px;
-  }
+  .pipeline-desktop { display: none; }
+  .pipeline-mobile { display: block; }
 }
 
 /* ── Header Slide Down Animation ── */
