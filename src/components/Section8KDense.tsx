@@ -2,16 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import Link from "next/link";
-import * as echarts from "echarts/core";
-import { BarChart } from "echarts/charts";
-import {
-  GridComponent,
-  TooltipComponent,
-} from "echarts/components";
-import { CanvasRenderer } from "echarts/renderers";
+import * as echarts from "echarts";
 import WaveReveal from "./WaveReveal";
-
-echarts.use([BarChart, GridComponent, TooltipComponent, CanvasRenderer]);
 
 function BixBenchChart() {
   const chartRef = useRef<HTMLDivElement>(null);
