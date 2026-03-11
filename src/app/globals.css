@@ -1532,3 +1532,30 @@ button:hover .side-panel-close-x {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* ── Advisor Grid & Pagination ── */
+.advisor-page-btn {
+  outline: none;
+}
+.advisor-page-btn:hover:not(:disabled) {
+  opacity: 0.85;
+}
+.advisor-page-nav:hover:not(:disabled) {
+  background: linear-gradient(135deg, #8258c8, #2c84c8) !important;
+  color: #ffffff !important;
+  border-color: transparent !important;
+}
+
+@media (max-width: 768px) {
+  .advisor-pagination {
+    gap: 6px !important;
+  }
+  .advisor-page-nav {
+    padding: 8px 14px !important;
+    font-size: 13px !important;
+  }
+  .advisor-page-btn {
+    width: 36px !important;
+    height: 36px !important;
+  }
+}

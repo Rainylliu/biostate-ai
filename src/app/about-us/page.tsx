@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import InvestorCarousel from "./InvestorCarousel";
+import AdvisorGrid from "./AdvisorGrid";
 
 export const metadata: Metadata = {
   title: "Team - biostate.AI",
@@ -497,6 +498,34 @@ export default function AboutUsPage() {
           />
         </div>
       </section>
+      {/* ── Section 5: Advisors ── */}
+      <section
+        style={{
+          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+          padding: "40px 20px 10px",
+        }}
+      >
+        <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+          {/* Header */}
+          <p style={{ fontSize: 14, fontWeight: 500, color: "#333", marginBottom: 12 }}>
+            [ advisor ]
+          </p>
+          <h2
+            style={{
+              fontFamily: "'Sora', Arial, Helvetica, sans-serif",
+              fontSize: 48,
+              fontWeight: 400,
+              color: "#111",
+              margin: "0 0 48px 0",
+              lineHeight: 1.15,
+            }}
+          >
+            Advisors
+          </h2>
+          <AdvisorGrid />
+        </div>
+      </section>
+
       {/* ── Scrolling Banner ── */}
       <section
         style={{
