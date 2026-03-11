@@ -13,7 +13,8 @@ const navItems = [
   { label: "DNA", href: "/dna" },
   { label: "AI", href: "/ai" },
   { label: "NEWS", href: "/news" },
-];
+  { label: "GET QUOTE", href: "/get-quote", mobileOnly: true },
+] as const;
 
 export default function Header() {
   const pathname = usePathname();
@@ -178,7 +179,7 @@ export default function Header() {
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center" style={{ gap: "5px" }}>
-            {navItems.map((item) => {
+            {navItems.filter((item) => !("mobileOnly" in item && item.mobileOnly)).map((item) => {
               const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
               return (
                 <Link

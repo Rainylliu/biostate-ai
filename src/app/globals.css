@@ -1394,6 +1394,17 @@ button:hover .side-panel-close-x {
   .rna-perd-card2 {
     display: none !important;
   }
+  /* Get Quote page mobile */
+  .get-quote-hero {
+    height: 220px !important;
+    width: calc(100% - 24px) !important;
+  }
+  .get-quote-hero-title {
+    font-size: 30px !important;
+  }
+  .get-quote-subtitle {
+    font-size: 30px !important;
+  }
 }
 
 /* RNA section 6 grid + PERD cards - desktop defaults */
