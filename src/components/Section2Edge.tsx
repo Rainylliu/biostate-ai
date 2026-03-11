@@ -5,12 +5,12 @@ export default function Section2Edge() {
   return (
     <section
       style={{
-        padding: "80px 24px 60px",
+        padding: "80px 20px 60px",
         background: "#ffffff",
       }}
     >
       {/* Section header */}
-      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+      <div>
         <p
           style={{
             fontFamily: "'Manrope', Arial, Helvetica, sans-serif",

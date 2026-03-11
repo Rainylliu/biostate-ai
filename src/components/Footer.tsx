@@ -33,7 +33,6 @@ export default function Footer() {
       (window as any).fbq("track", "Lead");
     }
 
-    window.history.pushState({}, "", window.location.pathname.replace(/\/$/, "") + "/thank-you");
     setShowPopup(true);
     setSubscribeEmail("");
   };
@@ -54,12 +53,14 @@ export default function Footer() {
     >
       {/* Part 1: Get in Touch */}
       <section
+        className="footer-get-in-touch"
         style={{
           padding: "135px 0 60px",
         }}
       >
         <div className="container">
           <div
+            className="footer-top-row"
             style={{
               display: "flex",
               gap: "60px",
@@ -82,6 +83,7 @@ export default function Footer() {
               <WaveReveal
                 text="We Are Here to Help You Level Up Your Research"
                 as="h2"
+                className="footer-heading"
                 style={{
                   fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                   fontSize: "64px",
@@ -105,9 +107,10 @@ export default function Footer() {
               </p>
 
               {/* Contact info */}
-              <div style={{ display: "flex", flexDirection: "column", gap: "50px" }}>
+              <div className="footer-contact-info" style={{ display: "flex", flexDirection: "column", gap: "50px" }}>
                 <div style={{ display: "flex", alignItems: "flex-start" }}>
                   <h6
+                    className="footer-contact-label"
                     style={{
                       fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                       fontSize: "18px",
@@ -192,6 +195,7 @@ export default function Footer() {
 
             {/* Right side - Contact Form */}
             <div
+              className="footer-form-card"
               style={{
                 flex: "0 0 480px",
                 backgroundColor: "#ffffff",
@@ -316,6 +320,7 @@ export default function Footer() {
 
           {/* Main content row */}
           <div
+            className="footer-bio-row"
             style={{
               display: "flex",
               justifyContent: "space-between",
@@ -325,6 +330,7 @@ export default function Footer() {
           >
             {/* Left - Big text */}
             <h2
+              className="footer-bio-text"
               style={{
                 fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                 fontSize: "64px",
@@ -344,7 +350,7 @@ export default function Footer() {
             </h2>
 
             {/* Right - Email subscribe */}
-            <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+            <div className="footer-subscribe-row" style={{ display: "flex", alignItems: "center", gap: "20px" }}>
               <div style={{ position: "relative" }}>
                 <input
                   type="email"
@@ -384,6 +390,7 @@ export default function Footer() {
 
           {/* Copyright & Legal Links */}
           <div
+            className="footer-legal"
             style={{
               display: "flex",
               justifyContent: "space-between",
@@ -444,7 +451,7 @@ export default function Footer() {
             justifyContent: "center",
             zIndex: 9999,
           }}
-          onClick={() => { window.history.back(); setShowPopup(false); }}
+          onClick={() => setShowPopup(false)}
         >
           <div
             style={{
@@ -479,7 +486,7 @@ export default function Footer() {
               Thank you for joining our mailing list.
             </p>
             <button
-              onClick={() => { window.history.back(); setShowPopup(false); }}
+              onClick={() => setShowPopup(false)}
               style={{
                 padding: "10px 32px",
                 borderRadius: "12px",

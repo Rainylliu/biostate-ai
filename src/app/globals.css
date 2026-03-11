@@ -172,6 +172,58 @@ img {
   color: #45D0BD !important;
 }
 
+/* ── Footer Mobile ── */
+@media (max-width: 768px) {
+  .footer-get-in-touch {
+    padding: 60px 0 40px !important;
+  }
+  .footer-top-row {
+    flex-direction: column !important;
+    gap: 40px !important;
+  }
+  .footer-heading {
+    font-size: 32px !important;
+  }
+  .footer-contact-info {
+    gap: 30px !important;
+  }
+  .footer-contact-label {
+    min-width: 120px !important;
+    font-size: 14px !important;
+  }
+  .footer-bio-row {
+    flex-direction: column !important;
+    gap: 30px !important;
+    align-items: flex-start !important;
+  }
+  .footer-subscribe-row {
+    width: 100%;
+    justify-content: flex-end !important;
+  }
+  .footer-subscribe-row .footer-email-input {
+    width: 100% !important;
+    flex: 1;
+  }
+  .footer-bio-text {
+    font-size: 36px !important;
+  }
+  .footer-form-card {
+    flex: 1 1 auto !important;
+    width: 100%;
+    padding: 24px !important;
+  }
+  .footer-legal {
+    flex-direction: row !important;
+    gap: 12px;
+    font-size: 11px !important;
+    white-space: nowrap;
+  }
+  .footer-legal p,
+  .footer-legal a {
+    font-size: 11px !important;
+  }
+}
+
 /* ── Button Base Styles (matching WP Aiero theme) ── */
 .btn {
   display: inline-flex;
@@ -610,6 +662,278 @@ button:hover .side-panel-close-x {
   }
 }
 
+/* ── Trapezoid Slider ── */
+/* ── Section 4: Ecosystem ── */
+.s4-section {
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .s4-section {
+    padding: 0 20px;
+  }
+  .trapezoid-slider {
+    border-radius: 20px !important;
+    overflow: hidden;
+  }
+}
+
+.trapezoid-nav-btn {
+  width: 60px;
+  height: 80px;
+  background: rgba(101, 101, 101, 0.4);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  cursor: pointer;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(12px);
+  transition: 0.25s;
+}
+.trapezoid-nav-btn:hover {
+  background: rgba(15, 23, 42, 0.95);
+  transform: translateY(-50%) scale(1.05) !important;
+}
+.trapezoid-explore-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+.trapezoid-explore-link:hover {
+  transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  .trapezoid-nav-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trapezoid-nav-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+}
+
+/* ── Section 5: Pipeline ── */
+.s5-section {
+  padding: 80px 20px 0;
+}
+
+/* ── Pipeline Buttons ── */
+.pipeline-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #8258C8;
+  text-decoration: none;
+  border: 2px solid #8258C8;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: clamp(14px, 1.35vw, 30px);
+  line-height: 1.05;
+  text-align: center;
+  padding: 10px 18px;
+  box-shadow: 0 6px 14px rgba(44, 132, 200, 0.22);
+  white-space: nowrap;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.pipeline-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 26px rgba(44, 132, 200, 0.22);
+}
+.pipeline-btn:active {
+  transform: translateY(0);
+}
+
+/* Pipeline mobile buttons */
+.pipeline-btn-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #ffffff;
+  color: #8258C8;
+  font-size: clamp(8px, 2.5vw, 14px);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 24px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  border: 1.5px solid #8258C8;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  line-height: 1.15;
+  width: clamp(56px, 18vw, 100px);
+  height: clamp(30px, 9vw, 50px);
+  white-space: nowrap;
+}
+.pipeline-btn-mobile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* Desktop/Mobile toggle */
+.pipeline-desktop { display: block; }
+.pipeline-mobile { display: none; }
+
+@media (max-width: 768px) {
+  .pipeline-desktop { display: none; }
+  .pipeline-mobile { display: block; }
+}
+
+/* ── Section 6: Project Gallery ── */
+.s6-section {
+  padding: 80px 20px 80px;
+}
+.s6-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+.s6-stat {
+  flex-shrink: 0;
+  text-align: left;
+}
+.s6-stat-number {
+  display: block;
+  font-family: 'Sora', Arial, Helvetica, sans-serif;
+  font-size: 96px;
+  font-weight: 400;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 2px #8258C8;
+}
+.s6-stat-label {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin-top: 8px;
+}
+
+/* Card — full width */
+.s6-card {
+  background: #1F1F1F;
+  border-radius: 25px;
+  padding: 48px 40px 60px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.s6-gallery {
+  overflow: hidden;
+}
+.s6-track {
+  display: flex;
+  width: 400%; /* 4 pages */
+  transition: transform 450ms ease;
+  will-change: transform;
+}
+.s6-page {
+  width: 25%; /* 100% / 4 pages */
+}
+/* Desktop: 4 columns */
+.s6-page-desktop {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+/* Mobile: 2×2 grid */
+.s6-page-mobile {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+.s6-imgbox {
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.s6-imgbox img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Indicator dots */
+.s6-indicator {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 24px;
+}
+.s6-dot {
+  width: 48px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+}
+.s6-dot::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: #717171;
+  border-radius: 5px;
+  transition: height 220ms ease, background 220ms ease;
+}
+.s6-dot-active::before {
+  height: 6px;
+  background: #ffffff;
+}
+
+/* Desktop/Mobile toggle */
+.s6-desktop { display: block; }
+.s6-mobile { display: none; }
+
+@media (max-width: 768px) {
+  .s6-section {
+    padding: 60px 20px 60px;
+  }
+  .s6-desktop { display: none; }
+  .s6-mobile { display: block; }
+
+  .s6-header {
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+  .s6-stat-number {
+    font-size: 64px;
+  }
+  .s6-card {
+    border-radius: 18px;
+    padding: 24px 16px 32px;
+  }
+  .s6-header h2 {
+    font-size: 28px !important;
+  }
+}
+
 /* ── Header Slide Down Animation ── */
 @keyframes headerSlideDown {
   from {
@@ -826,5 +1150,22 @@ button:hover .side-panel-close-x {
   .hero-email-input {
     width: 100%;
     max-width: 420px;
+  }
+}
+
+/* Section 3: Global Map */
+.global-map-entry:hover {
+  color: #45D0BD !important;
+}
+
+@media (max-width: 768px) {
+  .global-map-countries {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .global-map-countries {
+    grid-template-columns: 1fr !important;
   }
 }

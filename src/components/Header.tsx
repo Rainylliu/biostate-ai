@@ -53,18 +53,7 @@ export default function Header() {
 
   return (
     <>
-      {/* Header wrapper - absolute on home, normal flow elsewhere */}
-      <div
-        style={isHome ? {
-          position: scrolled ? "fixed" : "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          zIndex: 50,
-          transition: "background-color 0.3s ease",
-        } : undefined}
-      >
-      {/* Top Info Bar - hidden on home page */}
+      {/* Top Info Bar - hidden on home page, outside wrapper so sticky header works */}
       {!isHome && (
       <div
         className="flex items-center justify-between"
@@ -120,12 +109,22 @@ export default function Header() {
       {/* Main Header */}
       <header
         className={`${isHome ? "" : "sticky top-0 z-50"} ${!isTransparent ? "bg-white" : ""} ${scrolled ? "header-slide-down" : ""}`}
-        style={scrolled ? {
-          width: "calc(100% - 40px)",
-          margin: "0 auto",
-          borderRadius: "0 0 25px 25px",
-          boxShadow: "0px 5px 23px 4px rgba(0, 0, 0, 0.1)",
-        } : undefined}
+        style={{
+          ...(isHome ? {
+            position: scrolled ? "fixed" : "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            zIndex: 50,
+            transition: "background-color 0.3s ease",
+          } : undefined),
+          ...(scrolled ? {
+            width: "calc(100% - 40px)",
+            margin: "0 auto",
+            borderRadius: "0 0 25px 25px",
+            boxShadow: "0px 5px 23px 4px rgba(0, 0, 0, 0.1)",
+          } : undefined),
+        }}
       >
         <div className="flex items-center justify-between" style={{ height: "105px", padding: "0 40px 0 64px" }}>
           {/* Hamburger (mobile) */}
@@ -314,7 +313,7 @@ export default function Header() {
           </div>
         </div>
       )}
-      </div>{/* end header wrapper */}
+      {/* end header area */}
 
       {/* Side Panel Overlay */}
       <div
