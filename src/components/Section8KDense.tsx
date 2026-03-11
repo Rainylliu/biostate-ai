@@ -297,7 +297,7 @@ export default function Section8KDense() {
             {/* Write Like Scientists */}
             <div style={{ flex: 1 }}>
               <img
-                src="/images/icon2.svg"
+                src="/images/icon3.svg"
                 alt=""
                 style={{ width: 80, height: 80, marginBottom: 16 }}
               />
