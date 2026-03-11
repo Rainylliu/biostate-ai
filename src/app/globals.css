@@ -1340,12 +1340,16 @@ button:hover .side-panel-close-x {
     font-size: 13px !important;
     margin-bottom: 4px !important;
   }
-  /* Mobile sticky header: flat, full-width, no rounded corners */
+  /* Mobile sticky header: flat, full-width, thinner, subtle shadow */
   header.header-slide-down {
     width: 100% !important;
     margin: 0 !important;
     border-radius: 0 !important;
-    box-shadow: none !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+  }
+  header .flex.items-center.justify-between {
+    height: 64px !important;
+    padding: 0 20px !important;
   }
   /* BIRT title 140px on mobile, section closer to previous */
   .rna-birt-title {

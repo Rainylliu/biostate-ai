@@ -14,9 +14,9 @@ export default function RNAPage() {
   return (
     <div>
       {/* Section 1 - Hero */}
-      <section className="py-16 lg:py-24" style={{ marginTop: "80px" }}>
+      <section className="py-8 lg:py-24" style={{ marginTop: "80px" }}>
         <div className="container">
-          <div className="relative flex flex-col lg:flex-row items-center gap-12 lg:gap-[8%]">
+          <div className="relative flex flex-col lg:flex-row items-center gap-6 lg:gap-[8%]">
             {/* Background circle */}
             <div
               className="absolute inset-0 flex items-center justify-center pointer-events-none"
@@ -63,14 +63,14 @@ export default function RNAPage() {
                 Innovation
               </h1>
 
-              <p className="leading-relaxed" style={{ fontSize: "18px", color: "#333333", margin: "35px 10px 35px 0px", paddingLeft: "6px", paddingRight: "10%" }}>
+              <p className="leading-relaxed" style={{ fontSize: "18px", color: "#333333", margin: "20px 10px 20px 0px", paddingLeft: "6px", paddingRight: "10%" }}>
                 Biostate AI&apos;s platform connects samples, data, and clinical
                 decisions — making precision health scalable, accessible, and
                 actionable through low-cost sequencing and autonomous AI
                 scientists.
               </p>
 
-              <div style={{ marginTop: "35px", paddingLeft: "6px" }}>
+              <div style={{ marginTop: "20px", paddingLeft: "6px" }}>
                 <a
                   href="https://calendly.com/rachan-raj-biostate/biostate-ai-introduction-services"
                   target="_blank"
