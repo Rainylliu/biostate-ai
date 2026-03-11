@@ -116,18 +116,21 @@ export default function InvestorCarousel({ investors }: { investors: Investor[] 
             style={{
               display: "inline-flex",
               alignItems: "center",
-              borderRadius: 15,
+              borderRadius: 25,
               padding: 1,
-              background: "linear-gradient(118deg, #45d0bd 0%, #6366f1 50%, #8b5cf6 100%)",
+              background: "linear-gradient(118deg, #6366f1 0%, #8b5cf6 100%)",
             }}
           >
             <div
               style={{
                 display: "flex",
                 alignItems: "center",
-                borderRadius: 14,
+                width: 94,
+                height: 48,
+                borderRadius: 24,
                 background: "#fff",
                 overflow: "hidden",
+                justifyContent: "space-around",
               }}
             >
               <NavArrow direction="left" onClick={prev} />
