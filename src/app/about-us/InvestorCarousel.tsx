@@ -43,27 +43,16 @@ function NavArrow({ direction, onClick }: { direction: "left" | "right"; onClick
 }
 
 function CardArrow() {
-  const [hovered, setHovered] = useState(false);
   return (
-    <span
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      style={{
-        width: 40,
-        height: 40,
-        borderRadius: 10,
-        background: hovered ? "#45d0bd" : "#222",
-        color: "#fff",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexShrink: 0,
-        transition: "background 0.3s ease",
-      }}
-    >
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-        <path d="M5 13L13 5M13 5H6M13 5V12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
+    <span className="investor-card-arrow-btn">
+      <span className="investor-card-arrow-inner">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path d="M5 13L13 5M13 5H6M13 5V12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path d="M5 13L13 5M13 5H6M13 5V12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </span>
     </span>
   );
 }
@@ -71,7 +60,9 @@ function CardArrow() {
 export default function InvestorCarousel({ investors }: { investors: Investor[] }) {
   const trackRef = useRef<HTMLDivElement>(null);
   const [offset, setOffset] = useState(0);
-  const [cardWidth, setCardWidth] = useState(390);
+  const cardW = 360;
+  const cardH = 490;
+  const [cardWidth, setCardWidth] = useState(cardW);
   const [visibleCount, setVisibleCount] = useState(4);
   const gap = 24;
   const maxOffset = investors.length - visibleCount;
@@ -86,8 +77,9 @@ export default function InvestorCarousel({ investors }: { investors: Investor[] 
         setVisibleCount(2);
         setCardWidth((vw - 40 - gap) / 2);
       } else {
-        setVisibleCount(4);
-        setCardWidth((vw - 40 - gap * 3) / 4);
+        // Fixed 390px cards on desktop
+        setVisibleCount(Math.floor((vw - 40 + gap) / (cardW + gap)));
+        setCardWidth(cardW);
       }
     }
     measure();
@@ -162,12 +154,14 @@ export default function InvestorCarousel({ investors }: { investors: Investor[] 
               rel="noopener noreferrer"
               style={{
                 flex: `0 0 ${cardWidth}px`,
+                height: cardH,
                 background: "#F0F2F4",
                 borderRadius: 20,
                 padding: 20,
                 textDecoration: "none",
                 display: "flex",
                 flexDirection: "column",
+                justifyContent: "space-between",
               }}
             >
               <div style={{ width: 320, height: 320, margin: "0 auto 16px", overflow: "hidden", borderRadius: 16 }}>

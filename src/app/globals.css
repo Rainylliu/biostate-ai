@@ -570,6 +570,42 @@ img {
   transform: translate(16px, -16px);
 }
 
+/* ── Investor Card Arrow ── */
+.investor-card-arrow-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #222;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+.investor-card-arrow-inner {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.investor-card-arrow-inner svg:last-child {
+  position: absolute;
+  top: 18px;
+  left: -18px;
+}
+
+a:hover .investor-card-arrow-btn {
+  background: #45d0bd;
+}
+
+a:hover .investor-card-arrow-inner {
+  transform: translate(18px, -18px);
+}
+
 /* ── Card1 Teal Variant ── */
 .book-a-call-btn-teal {
   background: #ffffff;
