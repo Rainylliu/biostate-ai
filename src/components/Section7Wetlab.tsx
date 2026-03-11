@@ -16,6 +16,7 @@ export default function Section7Wetlab() {
           text="Next-Gen Wetlab Technology for 85% Lower Cost"
           as="h2"
           style={{
+            fontFamily: "'Sora', Arial, Helvetica, sans-serif",
             fontSize: 48,
             fontWeight: 400,
             color: "#333333",
@@ -63,6 +64,7 @@ export default function Section7Wetlab() {
           <p className="s7-tag">[ how it works ]</p>
           <h3
             style={{
+              fontFamily: "'Sora', Arial, Helvetica, sans-serif",
               fontSize: 48,
               fontWeight: 400,
               color: "#333333",
@@ -206,6 +208,7 @@ export default function Section7Wetlab() {
           <p className="s7-tag">[ how it works ]</p>
           <h3
             style={{
+              fontFamily: "'Sora', Arial, Helvetica, sans-serif",
               fontSize: 48,
               fontWeight: 400,
               color: "#333333",
