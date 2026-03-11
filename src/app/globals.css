@@ -614,6 +614,41 @@ img {
   transform: translate(22px, -22px);
 }
 
+/* ── Advisor Pagination Arrow (theme style) ── */
+.advisor-nav-arrow {
+  width: 22px;
+  height: 22px;
+  overflow: hidden;
+  position: relative;
+  display: inline-flex;
+}
+
+.advisor-nav-arrow-inner {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.advisor-nav-arrow-inner svg:last-child {
+  position: absolute;
+  top: 22px;
+  left: -22px;
+}
+
+/* Previous arrow: mirrored */
+.advisor-nav-prev .advisor-nav-arrow-inner svg:last-child {
+  top: 22px;
+  left: 22px;
+}
+
+.advisor-page-nav:hover .advisor-nav-arrow-inner {
+  transform: translate(22px, -22px);
+}
+
+.advisor-page-nav.advisor-nav-prev:hover .advisor-nav-arrow-inner {
+  transform: translate(-22px, -22px);
+}
+
 .investor-card-name {
   font-family: 'Sora', Arial, Helvetica, sans-serif;
   font-size: 22px;

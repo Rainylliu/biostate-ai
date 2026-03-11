@@ -152,11 +152,11 @@ export default function AdvisorGrid() {
           {page > 1 && (
             <button
               onClick={() => setPage((p) => p - 1)}
-              className="advisor-page-btn advisor-page-nav"
+              className="advisor-page-btn advisor-page-nav advisor-nav-prev"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
-                gap: 6,
+                gap: 8,
                 padding: "10px 20px",
                 borderRadius: 10,
                 border: "1px solid #8258c8",
@@ -166,13 +166,20 @@ export default function AdvisorGrid() {
                 fontSize: 14,
                 fontWeight: 500,
                 cursor: "pointer",
-                transition: "all 0.2s",
+                transition: "background 0.3s ease, color 0.3s ease",
               }}
             >
               Previous
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style={{ transform: "rotate(180deg)" }}>
-                <path d="M1 13L13 1M13 1H3M13 1V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+              <span className="advisor-nav-arrow">
+                <span className="advisor-nav-arrow-inner">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" style={{ transform: "scaleX(-1)" }}>
+                    <path d="M6 16L16 6M16 6H7M16 6V15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" style={{ transform: "scaleX(-1)" }}>
+                    <path d="M6 16L16 6M16 6H7M16 6V15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+              </span>
             </button>
           )}
 
@@ -211,7 +218,7 @@ export default function AdvisorGrid() {
               style={{
                 display: "inline-flex",
                 alignItems: "center",
-                gap: 6,
+                gap: 8,
                 padding: "10px 20px",
                 borderRadius: 10,
                 border: "1px solid #8258c8",
@@ -221,13 +228,20 @@ export default function AdvisorGrid() {
                 fontSize: 14,
                 fontWeight: 500,
                 cursor: "pointer",
-                transition: "all 0.2s",
+                transition: "background 0.3s ease, color 0.3s ease",
               }}
             >
               Next
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                <path d="M1 13L13 1M13 1H3M13 1V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+              <span className="advisor-nav-arrow">
+                <span className="advisor-nav-arrow-inner">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <path d="M6 16L16 6M16 6H7M16 6V15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <path d="M6 16L16 6M16 6H7M16 6V15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+              </span>
             </button>
           )}
         </div>
