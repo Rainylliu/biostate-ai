@@ -74,6 +74,8 @@ export default function Section9NActAI() {
             Empowering clinicians with AI-driven predictions for earlier, smarter care.
           </p>
 
+          <div style={{ flexGrow: 1 }} />
+
           <Link
             href="https://dynamicmultiome.com/"
             target="_blank"
@@ -201,7 +203,7 @@ export default function Section9NActAI() {
           margin: 0 auto;
           display: flex;
           gap: 48px;
-          align-items: flex-start;
+          align-items: stretch;
         }
         .s9-left {
           flex: 1;
@@ -209,6 +211,8 @@ export default function Section9NActAI() {
           background: #f0f2f4;
           border-radius: 24px;
           padding: 48px 40px;
+          display: flex;
+          flex-direction: column;
         }
         .s9-outline-title {
           width: 400px;
