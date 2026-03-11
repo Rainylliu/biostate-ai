@@ -575,8 +575,9 @@ img {
   width: 54px;
   height: 54px;
   border-radius: 16px;
-  background: #45d0bd;
+  background: #333333;
   color: #fff;
+  transition: background 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -603,6 +604,10 @@ img {
   position: absolute;
   top: 22px;
   left: -22px;
+}
+
+.investor-card-arrow-btn:hover {
+  background: #45d0bd;
 }
 
 .investor-card-arrow-btn:hover .investor-card-arrow-inner {
