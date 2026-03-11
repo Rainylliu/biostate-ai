@@ -4,6 +4,7 @@ import { useState } from "react";
 import Section2Edge from "@/components/Section2Edge";
 import Section3GlobalMap from "@/components/Section3GlobalMap";
 import Section4Ecosystem from "@/components/Section4Ecosystem";
+import Section5Pipeline from "@/components/Section5Pipeline";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -132,6 +133,9 @@ export default function Home() {
 
       {/* Section 4: Ecosystem Slider */}
       <Section4Ecosystem />
+
+      {/* Section 5: Pipeline */}
+      <Section5Pipeline />
 
       {/* Subscribe Success Popup */}
       {showPopup && (
