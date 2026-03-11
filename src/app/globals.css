@@ -1195,7 +1195,7 @@ button:hover .side-panel-close-x {
 .s7-row {
   display: flex;
   gap: 60px;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .s7-row-reverse {
