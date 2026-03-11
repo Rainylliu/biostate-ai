@@ -33,6 +33,7 @@ const locations: Location[] = [
 const countries = [
   {
     code: "US",
+    svg: "/images/US.svg",
     name: "United States",
     entries: [
       { label: "Biostate AI (Houston, TX)", href: "https://www.biostate.ai/" },
@@ -41,6 +42,7 @@ const countries = [
   },
   {
     code: "CN",
+    svg: "/images/CN.svg",
     name: "China",
     entries: [
       { label: "Biosheng (Shanghai)", href: "https://www.bioshengai.com/" },
@@ -49,6 +51,7 @@ const countries = [
   },
   {
     code: "IN",
+    svg: "/images/IN.svg",
     name: "India",
     entries: [
       { label: "Bayosthiti AI (Bengaluru)", href: "https://bayosthiti.ai/" },
@@ -56,6 +59,7 @@ const countries = [
   },
   {
     code: "KSA",
+    svg: "/images/KSA.svg",
     name: "Saudi Arabia",
     entries: [
       { label: "Biostate.AI MENA (Riyadh)", href: "https://dynamicmultiome.com/" },
@@ -217,31 +221,26 @@ export default function Section3GlobalMap() {
         >
           {countries.map((country) => (
             <div key={country.code} style={{ position: "relative" }}>
-              {/* Large background code with gradient stroke */}
-              <span
+              {/* Country code SVG */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={country.svg}
+                alt={country.code}
                 style={{
-                  fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-                  fontSize: "clamp(56px, 6vw, 80px)",
-                  fontWeight: 700,
-                  WebkitTextFillColor: "#ffffff",
-                  WebkitTextStrokeWidth: "1.5px",
-                  WebkitTextStrokeColor: "transparent",
-                  background: "linear-gradient(135deg, rgb(6,147,227) 0%, rgb(155,81,224) 100%)",
-                  WebkitBackgroundClip: "text",
-                  lineHeight: 1,
+                  height: "clamp(56px, 6vw, 80px)",
+                  width: "auto",
                   display: "block",
                   marginBottom: -8,
                   userSelect: "none",
                 }}
-              >
-                {country.code}
-              </span>
+                draggable={false}
+              />
               {/* Country name */}
               <h3
                 style={{
                   fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-                  fontSize: "clamp(22px, 2.5vw, 32px)",
-                  fontWeight: 600,
+                  fontSize: "clamp(22px, 2.5vw, 48px)",
+                  fontWeight: 500,
                   color: "#1f1f1f",
                   margin: "0 0 12px",
                   lineHeight: 1.2,
@@ -259,9 +258,9 @@ export default function Section3GlobalMap() {
                   className="global-map-entry"
                   style={{
                     fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                    fontSize: 15,
+                    fontSize: 16,
                     fontWeight: 500,
-                    color: "#555",
+                    color: "#111111",
                     margin: "6px 0",
                     lineHeight: 1.5,
                     transition: "color 0.25s ease",
