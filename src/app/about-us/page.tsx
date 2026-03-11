@@ -381,7 +381,7 @@ export default function AboutUsPage() {
               </div>
 
               {/* Kutapa Muthanna */}
-              <div>
+              <div style={{ marginTop: 40 }}>
                 <img
                   src="/images/Kutapa Muthanna.svg"
                   alt="Kutapa Muthanna"
@@ -430,7 +430,7 @@ export default function AboutUsPage() {
               </div>
 
               {/* Alden Yao */}
-              <div>
+              <div style={{ marginTop: 40 }}>
                 <img
                   src="/images/Alden Yao.svg"
                   alt="Alden Yao"
