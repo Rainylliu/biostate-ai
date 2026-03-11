@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function RNAPage() {
   return (
-    <div>
+    <div style={{ overflowX: "hidden" }}>
       {/* Section 1 - Hero */}
       <section className="py-8 lg:py-24" style={{ marginTop: "80px" }}>
         <div className="container">
