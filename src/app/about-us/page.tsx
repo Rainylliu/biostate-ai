@@ -474,12 +474,12 @@ export default function AboutUsPage() {
         <div>
           <InvestorCarousel
             investors={[
-              { name: "Shekhar Kirani", image: "/images/Shekhar Kirani.svg", link: "https://www.accel.com/team/shekhar-kirani#bay-area" },
-              { name: "Haomiao Huang", image: "/images/Haomiao Huang.svg", link: "https://www.mattervp.com/team" },
-              { name: "Yiran Liu", image: "/images/Yiran Liu.svg", link: "https://www.visionpluscapital.com/en/list.php?pid=1" },
-              { name: "Rouz Jazayeri", image: "/images/Rouz Jazayeri.svg", link: "https://catapult.vc/about/" },
-              { name: "Chinmaya Sharma", image: "/images/Chinmaya Sharma.svg", link: "https://www.infoedgeventures.in/team" },
-              { name: "Fred Farina", image: "/images/Fred Farina.svg", link: "https://innovation.caltech.edu/ottcp-directory/fred-farina" },
+              { name: "Shekhar Kirani", position: "Board Member, Lead Investor.", image: "/images/Shekhar Kirani.svg", link: "https://www.accel.com/team/shekhar-kirani#bay-area" },
+              { name: "Haomiao Huang", position: "Founding Partner", image: "/images/Haomiao Huang.svg", link: "https://www.mattervp.com/team" },
+              { name: "Yiran Liu", position: "Managing Partner", image: "/images/Yiran Liu.svg", link: "https://www.visionpluscapital.com/en/list.php?pid=1" },
+              { name: "Rouz Jazayeri", position: "Co-Founder & Managing Director", image: "/images/Rouz Jazayeri.svg", link: "https://catapult.vc/about/" },
+              { name: "Chinmaya Sharma", position: "Partner", image: "/images/Chinmaya Sharma.svg", link: "https://www.infoedgeventures.in/team" },
+              { name: "Fred Farina", position: "Chief Innovation & Corporate Partnerships Officer", image: "/images/Fred Farina.svg", link: "https://innovation.caltech.edu/ottcp-directory/fred-farina" },
             ]}
           />
         </div>

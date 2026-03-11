@@ -4,6 +4,7 @@ import { useRef, useState, useEffect, useCallback } from "react";
 
 interface Investor {
   name: string;
+  position: string;
   image: string;
   link: string;
 }
@@ -26,7 +27,7 @@ function NavArrow({ direction, onClick }: { direction: "left" | "right"; onClick
         alignItems: "center",
         justifyContent: "center",
         transition: "color 0.3s ease",
-        color: hovered ? "#45d0bd" : "#111111",
+        color: "#fff",
       }}
     >
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -111,31 +112,21 @@ export default function InvestorCarousel({ investors }: { investors: Investor[] 
               Institutional investors
             </h2>
           </div>
-          {/* Pill-shaped nav with gradient border */}
+          {/* Pill-shaped nav with gradient fill */}
           <div
             style={{
-              display: "inline-flex",
+              display: "flex",
               alignItems: "center",
+              width: 96,
+              height: 48,
               borderRadius: 9999,
-              padding: 1,
-              background: "linear-gradient(118deg, #6366f1 0%, #8b5cf6 100%)",
+              background: "linear-gradient(118deg, rgb(130, 88, 200) 0%, rgb(44, 132, 200) 100%)",
+              overflow: "hidden",
+              justifyContent: "space-around",
             }}
           >
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                width: 94,
-                height: 48,
-                borderRadius: 9999,
-                background: "#fff",
-                overflow: "hidden",
-                justifyContent: "space-around",
-              }}
-            >
-              <NavArrow direction="left" onClick={prev} />
-              <NavArrow direction="right" onClick={next} />
-            </div>
+            <NavArrow direction="left" onClick={prev} />
+            <NavArrow direction="right" onClick={next} />
           </div>
         </div>
       </div>
@@ -185,8 +176,9 @@ export default function InvestorCarousel({ investors }: { investors: Investor[] 
                   style={{ textDecoration: "none" }}
                 >
                   <h5 className="investor-card-name">{inv.name}</h5>
+                  <p style={{ fontSize: 13, color: "#666", margin: "4px 0 0", lineHeight: 1.3 }}>{inv.position}</p>
                 </a>
-                <a href={inv.link} target="_blank" rel="noopener noreferrer">
+                <a href={inv.link} target="_blank" rel="noopener noreferrer" style={{ flexShrink: 0 }}>
                   <CardArrow />
                 </a>
               </div>
