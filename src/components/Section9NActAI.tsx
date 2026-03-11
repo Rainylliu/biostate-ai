@@ -81,6 +81,7 @@ export default function Section9NActAI() {
             target="_blank"
             rel="noopener noreferrer"
             className="book-a-call-btn"
+            style={{ alignSelf: "flex-start" }}
           >
             Explore more
             <span className="book-a-call-arrow">
