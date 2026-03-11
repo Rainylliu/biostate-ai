@@ -53,6 +53,7 @@ export default function Footer() {
     >
       {/* Part 1: Get in Touch */}
       <section
+        className="footer-get-in-touch"
         style={{
           padding: "135px 0 60px",
         }}

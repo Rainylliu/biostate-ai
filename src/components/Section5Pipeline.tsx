@@ -27,25 +27,25 @@ const mobileButtons = [
   {
     label: ["RNA", "(BIRT + PERD)"],
     href: "/rna",
-    left: "19.5%",
+    left: "22%",
     top: "18%",
   },
   {
     label: ["AI Scientist", "(K-Dense)"],
     href: "https://k-dense.ai/",
-    left: "38%",
+    left: "39.5%",
     top: "18%",
   },
   {
     label: ["DNA", "(BIRT + MARE)"],
     href: "/dna",
-    left: "56%",
+    left: "58%",
     top: "18%",
   },
   {
     label: ["AML", "(N-Act)"],
     href: "/ai",
-    left: "74%",
+    left: "75.5%",
     top: "18%",
   },
 ];
