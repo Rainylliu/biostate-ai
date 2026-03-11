@@ -610,9 +610,10 @@ a:hover .investor-card-arrow-inner {
 }
 
 .investor-card-name {
-  font-size: 20px;
+  font-family: 'Sora', Arial, Helvetica, sans-serif;
+  font-size: 22px;
   font-weight: 400;
-  color: #111;
+  color: #111111;
   margin: 0;
   transition: color 0.25s ease;
 }
