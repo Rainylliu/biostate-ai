@@ -154,27 +154,30 @@ export default function AdvisorGrid() {
               onClick={() => setPage((p) => p - 1)}
               className="advisor-page-btn advisor-page-nav advisor-nav-prev"
               style={{
-                width: 40,
                 height: 40,
+                padding: "0 14px",
                 borderRadius: 10,
                 border: "1px solid #8258c8",
                 background: "#ffffff",
                 color: "#333",
+                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                fontSize: 14,
+                fontWeight: 500,
                 cursor: "pointer",
                 display: "inline-flex",
                 alignItems: "center",
-                justifyContent: "center",
+                gap: 6,
                 transition: "background 0.3s ease, color 0.3s ease",
-                padding: 0,
               }}
             >
+              Previous
               <span className="advisor-nav-arrow">
                 <span className="advisor-nav-arrow-inner">
-                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" style={{ transform: "scaleX(-1)" }}>
-                    <path d="M6 16L16 6M16 6H7M16 6V15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <svg width="16" height="16" viewBox="0 0 22 22" fill="none" style={{ transform: "scaleX(-1)" }}>
+                    <path d="M6 16L16 6M16 6H7M16 6V15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" style={{ transform: "scaleX(-1)" }}>
-                    <path d="M6 16L16 6M16 6H7M16 6V15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <svg width="16" height="16" viewBox="0 0 22 22" fill="none" style={{ transform: "scaleX(-1)" }}>
+                    <path d="M6 16L16 6M16 6H7M16 6V15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </span>
               </span>
@@ -214,27 +217,30 @@ export default function AdvisorGrid() {
               onClick={() => setPage((p) => p + 1)}
               className="advisor-page-btn advisor-page-nav"
               style={{
-                width: 40,
                 height: 40,
+                padding: "0 14px",
                 borderRadius: 10,
                 border: "1px solid #8258c8",
                 background: "#ffffff",
                 color: "#333",
+                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                fontSize: 14,
+                fontWeight: 500,
                 cursor: "pointer",
                 display: "inline-flex",
                 alignItems: "center",
-                justifyContent: "center",
+                gap: 6,
                 transition: "background 0.3s ease, color 0.3s ease",
-                padding: 0,
               }}
             >
+              Next
               <span className="advisor-nav-arrow">
                 <span className="advisor-nav-arrow-inner">
-                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M6 16L16 6M16 6H7M16 6V15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <svg width="16" height="16" viewBox="0 0 22 22" fill="none">
+                    <path d="M6 16L16 6M16 6H7M16 6V15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M6 16L16 6M16 6H7M16 6V15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <svg width="16" height="16" viewBox="0 0 22 22" fill="none">
+                    <path d="M6 16L16 6M16 6H7M16 6V15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </span>
               </span>
