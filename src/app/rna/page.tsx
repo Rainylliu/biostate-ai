@@ -672,9 +672,9 @@ export default function RNAPage() {
           </div>
 
           {/* Bottom Row - Two Chart Cards */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8" style={{ padding: "40px" }}>
+          <div className="rna-charts-grid grid grid-cols-1 lg:grid-cols-2 gap-8" style={{ padding: "40px" }}>
             {/* Left - High Reproducibility */}
-            <div style={{ paddingRight: "11%" }}>
+            <div className="rna-chart-item" style={{ paddingRight: "11%" }}>
               <div
                 className="chart-card"
                 style={{
@@ -728,7 +728,7 @@ export default function RNAPage() {
             </div>
 
             {/* Right - Superior Quality */}
-            <div style={{ paddingLeft: "11%", marginTop: "11%" }}>
+            <div className="rna-chart-item" style={{ paddingLeft: "11%", marginTop: "11%" }}>
               <div
                 className="chart-card"
                 style={{
@@ -792,15 +792,9 @@ export default function RNAPage() {
         }}
       >
         <div className="container">
-          <div
-            style={{
-              display: "flex",
-              gap: "20px",
-              alignItems: "stretch",
-            }}
-          >
+          <div className="rna-s6-grid">
             {/* Left card */}
-            <div style={{ flex: "0 0 auto", width: "calc((903 / (903 + 956)) * 100%)" }}>
+            <div className="rna-s6-left">
               <img
                 src="/images/section6card1.svg"
                 alt="Our capabilities"
@@ -808,14 +802,7 @@ export default function RNAPage() {
               />
             </div>
             {/* Right column */}
-            <div
-              style={{
-                flex: 1,
-                display: "flex",
-                flexDirection: "column",
-                gap: "20px",
-              }}
-            >
+            <div className="rna-s6-right">
               <img
                 src="/images/section6card2.svg"
                 alt="Validated across key sample types"
@@ -839,14 +826,7 @@ export default function RNAPage() {
       >
         <div className="container">
           {/* Header area */}
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "flex-start",
-              marginBottom: "50px",
-            }}
-          >
+          <div className="rna-perd-header">
             {/* Left side */}
             <div>
               <p
@@ -891,7 +871,7 @@ export default function RNAPage() {
               />
             </div>
             {/* Right side */}
-            <div style={{ maxWidth: "420px", paddingTop: "80px" }}>
+            <div className="rna-perd-right" style={{ maxWidth: "420px", paddingTop: "80px" }}>
               <p
                 style={{
                   fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
@@ -918,21 +898,15 @@ export default function RNAPage() {
           </div>
 
           {/* Cards */}
-          <div
-            style={{
-              display: "flex",
-              gap: "20px",
-              alignItems: "stretch",
-            }}
-          >
-            <div style={{ flex: "0 0 auto", width: "calc((627 / (627 + 1241)) * 100%)" }}>
+          <div className="rna-perd-cards">
+            <div className="rna-perd-card1">
               <img
                 src="/images/PERDcard1.svg"
                 alt="Streamlined Chemistry, Clearer Expression, High-Quality Output"
                 style={{ width: "100%", height: "100%", display: "block", objectFit: "cover", borderRadius: "25px" }}
               />
             </div>
-            <div style={{ flex: 1 }}>
+            <div className="rna-perd-card2">
               <img
                 src="/images/PERDcard2.svg"
                 alt="PERD Method for Removing RNA"

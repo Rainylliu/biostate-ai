@@ -1328,17 +1328,9 @@ button:hover .side-panel-close-x {
   .rna-price-card h3 {
     font-size: 32px !important;
   }
-  /* 20000+ countup: smaller on mobile, tighter gap, move up */
+  /* Hide 20000+ countup on mobile */
   .rna-countup-group {
-    margin-top: -20px !important;
-  }
-  .rna-countup-group svg {
-    width: 80% !important;
-    height: auto !important;
-  }
-  .rna-countup-label {
-    font-size: 13px !important;
-    margin-bottom: 4px !important;
+    display: none !important;
   }
   /* Mobile sticky header: flat, full-width, thinner, subtle shadow */
   header.header-slide-down {
@@ -1358,6 +1350,77 @@ button:hover .side-panel-close-x {
   .rna-birt-section {
     margin-top: 40px !important;
   }
+  /* Section 5: charts full-width, no offsets */
+  .rna-charts-grid {
+    padding: 10px 0 !important;
+  }
+  .rna-chart-item {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-top: 0 !important;
+  }
+  /* Section 6: stack cards vertically */
+  .rna-s6-grid {
+    flex-direction: column !important;
+  }
+  .rna-s6-left {
+    width: 100% !important;
+    flex: none !important;
+  }
+  /* PERD section: stack header vertically, hide card2 */
+  .rna-perd-header {
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+  .rna-perd-right {
+    max-width: 100% !important;
+    padding-top: 0 !important;
+  }
+  .rna-perd-cards {
+    flex-direction: column !important;
+  }
+  .rna-perd-card1 {
+    width: 100% !important;
+    flex: none !important;
+  }
+  .rna-perd-card2 {
+    display: none !important;
+  }
+}
+
+/* RNA section 6 grid + PERD cards - desktop defaults */
+.rna-s6-grid {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+.rna-s6-left {
+  flex: 0 0 auto;
+  width: calc((903 / (903 + 956)) * 100%);
+}
+.rna-s6-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.rna-perd-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+.rna-perd-cards {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+.rna-perd-card1 {
+  flex: 0 0 auto;
+  width: calc((627 / (627 + 1241)) * 100%);
+}
+.rna-perd-card2 {
+  flex: 1;
 }
 
 /* Section 3: Global Map */
