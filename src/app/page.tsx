@@ -7,6 +7,7 @@ import Section4Ecosystem from "@/components/Section4Ecosystem";
 import Section5Pipeline from "@/components/Section5Pipeline";
 import Section6Projects from "@/components/Section6Projects";
 import Section7Wetlab from "@/components/Section7Wetlab";
+import Section8KDense from "@/components/Section8KDense";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -144,6 +145,9 @@ export default function Home() {
 
       {/* Section 7: Wetlab Technology */}
       <Section7Wetlab />
+
+      {/* Section 8: K-Dense AI Scientist */}
+      <Section8KDense />
 
       {/* Subscribe Success Popup */}
       {showPopup && (
