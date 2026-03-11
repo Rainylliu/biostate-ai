@@ -211,23 +211,13 @@ img {
   }
   .footer-subscribe-row {
     width: 100%;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: 16px !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: flex-end !important;
   }
   .footer-subscribe-row .footer-email-input {
-    width: 100% !important;
-  }
-  .footer-bottom-section {
-    flex-direction: column !important;
-    gap: 20px !important;
-  }
-  .footer-copyright-row {
-    order: -1;
-  }
-  .footer-legal-links {
-    display: flex;
-    gap: 20px;
+    width: auto !important;
+    flex: 1;
   }
   .footer-bio-text {
     font-size: 36px !important;
@@ -238,13 +228,14 @@ img {
     padding: 24px !important;
   }
   .footer-legal {
-    flex-direction: column !important;
-    gap: 16px;
-    align-items: flex-start !important;
+    flex-direction: row !important;
+    gap: 12px;
+    font-size: 11px !important;
+    white-space: nowrap;
   }
   .footer-legal p,
   .footer-legal a {
-    font-size: 12px !important;
+    font-size: 11px !important;
   }
   .footer-email-social-row {
     display: flex !important;
