@@ -57,8 +57,8 @@ export default function Header() {
 
   return (
     <>
-      {/* Top Info Bar - hidden on home/DNA page so header overlays hero */}
-      {!isHome && !isDNA && (
+      {/* Top Info Bar - hidden on home page */}
+      {!isHome && (
       <div
         className="info-top-bar flex items-center justify-between"
         style={{
@@ -72,6 +72,7 @@ export default function Header() {
           border: `1px solid ${isTransparent ? "rgba(255,255,255,0.25)" : "#e6e8ea"}`,
           borderRadius: "15px",
           transition: "border-color 0.3s ease, color 0.3s ease",
+          ...(isDNA && !scrolled ? { position: "absolute" as const, top: 0, left: 0, right: 0, zIndex: 51 } : {}),
         }}
       >
         <span className="info-top-email" style={{ padding: "0 20px" }}>
@@ -116,7 +117,7 @@ export default function Header() {
         style={{
           ...(isOverlay ? {
             position: scrolled ? "fixed" : "absolute",
-            top: 0,
+            top: (isDNA && !scrolled) ? 56 : 0,
             left: 0,
             right: 0,
             zIndex: 50,
