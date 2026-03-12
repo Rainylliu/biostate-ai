@@ -80,23 +80,23 @@ export default function DNATechnologyTabs() {
               style={{
                 display: "flex",
                 alignItems: "center",
+                justifyContent: "center",
                 gap: "16px",
-                padding: "40px 32px",
-                borderRadius: "16px",
-                border: isActive ? "1.5px solid transparent" : "1.5px solid #d8d8e0",
+                padding: "40px",
+                borderRadius: "25px",
+                border: isActive ? "1px solid transparent" : "1px solid #3F3F3F",
                 backgroundImage: isActive
-                  ? "linear-gradient(160deg, rgba(255,255,255,0.95) 40%, rgba(200,180,240,0.25) 100%), linear-gradient(135deg, #8258c8, #2c84c8)"
+                  ? "linear-gradient(160deg, rgba(255,255,255,1) 30%, rgba(200,180,240,0.3) 100%)"
                   : "none",
-                backgroundOrigin: isActive ? "border-box" : undefined,
-                backgroundClip: isActive ? "padding-box, border-box" : undefined,
-                backgroundColor: isActive ? "transparent" : "#fff",
-                color: isActive ? "#1a1a1a" : "#999",
-                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                fontSize: "17px",
-                fontWeight: isActive ? 600 : 400,
+                backgroundColor: isActive ? "transparent" : "transparent",
+                color: isActive ? "#111111" : "#111111",
+                fontFamily: "'Sora', Arial, Helvetica, sans-serif",
+                fontSize: "20px",
+                fontWeight: 400,
+                lineHeight: "25px",
+                letterSpacing: "-0.03em",
                 cursor: "pointer",
-                transition: "all 0.3s ease",
-                minHeight: "88px",
+                transition: "background-color 0.3s, border-color 0.3s",
               }}
             >
               <img
