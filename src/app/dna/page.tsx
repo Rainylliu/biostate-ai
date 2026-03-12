@@ -159,7 +159,7 @@ export default function DNAPage() {
                   lineHeight: 1.2,
                   color: "#1a1a1a",
                   margin: 0,
-                  maxWidth: "580px",
+                  maxWidth: "1000px",
                 }}
               >
                 Optimized Chemistry Delivers Superior Performance
