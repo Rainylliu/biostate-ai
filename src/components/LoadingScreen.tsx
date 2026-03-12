@@ -6,13 +6,15 @@ export default function LoadingScreen({ onDone }: { onDone?: () => void }) {
   const [visible, setVisible] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
   const startedRef = useRef(false);
+  const onDoneRef = useRef(onDone);
+  onDoneRef.current = onDone;
 
   useEffect(() => {
     if (startedRef.current) return;
     startedRef.current = true;
 
     const mountTime = Date.now();
-    const MIN_DISPLAY = 800; // minimum ms to show the loading screen
+    const MIN_DISPLAY = 800;
 
     const startFadeOut = () => {
       const elapsed = Date.now() - mountTime;
@@ -22,7 +24,7 @@ export default function LoadingScreen({ onDone }: { onDone?: () => void }) {
         setFadeOut(true);
         setTimeout(() => {
           setVisible(false);
-          onDone?.();
+          onDoneRef.current?.();
         }, 500);
       }, remaining);
     };
@@ -32,14 +34,13 @@ export default function LoadingScreen({ onDone }: { onDone?: () => void }) {
     } else {
       const onLoad = () => startFadeOut();
       window.addEventListener("load", onLoad);
-      // fallback
       const fallback = setTimeout(startFadeOut, 5000);
       return () => {
         window.removeEventListener("load", onLoad);
         clearTimeout(fallback);
       };
     }
-  }, [onDone]);
+  }, []);
 
   if (!visible) return null;
 
@@ -62,6 +63,7 @@ export default function LoadingScreen({ onDone }: { onDone?: () => void }) {
       <img
         src="/images/timer.svg"
         alt="Loading"
+        className="loading-pulse"
         style={{ width: "20%", height: "auto" }}
       />
     </div>

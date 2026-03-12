@@ -172,7 +172,7 @@ export default function SalesTCPage() {
           }}
         >
           <iframe
-            src="/pdf/TC-03062026.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH"
+            src="/pdf/BiostateAI_t&C_03032026.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH"
             style={{
               position: "absolute",
               top: 0,
@@ -187,7 +187,7 @@ export default function SalesTCPage() {
         </div>
         <div style={{ marginTop: "24px", textAlign: "center" }}>
           <a
-            href="/pdf/TC-03062026.pdf"
+            href="/pdf/BiostateAI_t&C_03032026.pdf"
             target="_blank"
             className="book-a-call-btn book-a-call-btn-solid-teal"
           >

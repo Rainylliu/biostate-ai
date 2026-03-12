@@ -16,6 +16,7 @@ export default function Section7Wetlab() {
         <WaveReveal
           text="Next-Gen Wetlab Technology for 85% Lower Cost"
           as="h2"
+          className="home-section-heading"
           style={{
             fontFamily: "'Sora', Arial, Helvetica, sans-serif",
             fontSize: 48,
@@ -99,7 +100,7 @@ export default function Section7Wetlab() {
               <img
                 src="/images/Wetlabicon1.svg"
                 alt=""
-                style={{ width: 48, height: 48, flexShrink: 0, marginTop: 2 }}
+                className="s7-wetlab-icon" style={{ width: 48, height: 48, flexShrink: 0, marginTop: 2 }}
               />
               <div>
                 <p
@@ -134,7 +135,7 @@ export default function Section7Wetlab() {
               <img
                 src="/images/Wetlabicon2.svg"
                 alt=""
-                style={{ width: 48, height: 48, flexShrink: 0, marginTop: 2 }}
+                className="s7-wetlab-icon" style={{ width: 48, height: 48, flexShrink: 0, marginTop: 2 }}
               />
               <div>
                 <p
@@ -170,7 +171,7 @@ export default function Section7Wetlab() {
               <img
                 src="/images/Wetlabicon3.svg"
                 alt=""
-                style={{ width: 48, height: 48, flexShrink: 0, marginTop: 2 }}
+                className="s7-wetlab-icon" style={{ width: 48, height: 48, flexShrink: 0, marginTop: 2 }}
               />
               <div>
                 <p

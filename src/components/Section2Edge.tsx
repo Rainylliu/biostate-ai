@@ -26,6 +26,7 @@ export default function Section2Edge() {
         <WaveReveal
           text="Biostate's Edge"
           as="h2"
+          className="home-section-heading"
           style={{
             fontFamily: "'Sora', Arial, Helvetica, sans-serif",
             fontSize: 48,

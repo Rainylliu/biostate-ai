@@ -81,6 +81,7 @@ export default function Section6Projects() {
           <WaveReveal
             text="Building the Future of Medicine Through Global Collaboration"
             as="h2"
+            className="home-section-heading"
             style={{
               fontFamily: "'Sora', Arial, Helvetica, sans-serif",
               fontSize: 48,

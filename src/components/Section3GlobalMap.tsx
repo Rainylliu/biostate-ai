@@ -89,6 +89,7 @@ export default function Section3GlobalMap() {
         <WaveReveal
           text="Global Collaboration Network"
           as="h2"
+          className="home-section-heading"
           style={{
             fontFamily: "'Sora', Arial, Helvetica, sans-serif",
             fontSize: 48,

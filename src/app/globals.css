@@ -172,6 +172,13 @@ img {
   color: #45D0BD !important;
 }
 
+/* ── Footer Tablet ── */
+@media (max-width: 1100px) {
+  .footer-heading {
+    font-size: 52px !important;
+  }
+}
+
 /* ── Footer Mobile ── */
 @media (max-width: 768px) {
   .footer-get-in-touch {
@@ -185,24 +192,21 @@ img {
     font-size: 32px !important;
   }
   .footer-contact-info {
-    gap: 30px !important;
+    gap: 40px !important;
   }
   .footer-contact-label {
-    min-width: unset !important;
+    min-width: 130px !important;
     font-size: 14px !important;
+    flex-shrink: 0 !important;
   }
   .footer-contact-row {
-    flex-direction: column !important;
-    gap: 8px !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 0 !important;
   }
   .footer-contact-value {
     font-size: 14px !important;
-  }
-  /* Email and Social network side by side on mobile */
-  .footer-contact-row-inline {
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    align-items: flex-start !important;
   }
   .footer-bio-row {
     flex-direction: column !important;
@@ -239,16 +243,13 @@ img {
   }
   .footer-email-social-row {
     display: flex !important;
-    flex-direction: row !important;
-    gap: 0 !important;
+    flex-direction: column !important;
+    gap: 40px !important;
   }
   .footer-email-social-row .footer-contact-row {
-    flex: 1;
-    flex-direction: column !important;
-    gap: 8px !important;
-  }
-  .footer-email-social-row .footer-contact-value {
-    text-align: left !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 0 !important;
   }
 }
 
@@ -799,6 +800,12 @@ button:hover .side-panel-close-x {
   padding: 0 20px;
   overflow: hidden;
 }
+/* On desktop, hide the background-image (SVG trapezoid handles it) */
+@media (min-width: 769px) {
+  .trapezoid-slider {
+    background-image: none !important;
+  }
+}
 
 @media (max-width: 768px) {
   .s4-section {
@@ -806,7 +813,36 @@ button:hover .side-panel-close-x {
   }
   .trapezoid-slider {
     border-radius: 20px !important;
-    overflow: hidden;
+    overflow: hidden !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  .trapezoid-svg {
+    display: none !important;
+  }
+  .trapezoid-nav-btn {
+    display: none !important;
+  }
+  .trapezoid-content {
+    padding: 40px 20px !important;
+    height: auto !important;
+    min-height: auto !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+  }
+  .trapezoid-content > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-bottom: 60px !important;
+  }
+  .trapezoid-card-wrapper {
+    height: auto !important;
+    min-height: auto !important;
+    width: 80% !important;
+    margin: 0 auto !important;
+  }
+  .s4-diagonal-banner {
+    padding: 30px 0px !important;
   }
 }
 
@@ -842,21 +878,6 @@ button:hover .side-panel-close-x {
   transform: translateX(5px);
 }
 
-@media (max-width: 768px) {
-  .trapezoid-nav-btn {
-    width: 35px;
-    height: 35px;
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  .trapezoid-nav-btn {
-    width: 30px;
-    height: 30px;
-    font-size: 14px;
-  }
-}
 
 /* ── Section 5: Pipeline ── */
 .s5-section {
@@ -1087,6 +1108,15 @@ button:hover .side-panel-close-x {
 
 .header-slide-down {
   animation: headerSlideDown 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* ── Loading Screen Breathing Animation ── */
+@keyframes loadingBreath {
+  0%, 100% { transform: scale(0.8); }
+  50% { transform: scale(1); }
+}
+.loading-pulse {
+  animation: loadingBreath 2.4s ease-in-out infinite;
 }
 
 /* ── Wave Character Reveal Animation ── */
@@ -1347,7 +1377,7 @@ button:hover .side-panel-close-x {
     font-size: 36px !important;
   }
   .s7-outline-num {
-    font-size: 48px;
+    font-size: 40px;
   }
 }
 
@@ -1391,7 +1421,7 @@ button:hover .side-panel-close-x {
 /* Team page responsive */
 @media (max-width: 900px) {
   .team-hero-title {
-    font-size: 48px !important;
+    font-size: 60px !important;
     margin: 0 0 20px 0 !important;
   }
   .team-profile {
@@ -1402,6 +1432,7 @@ button:hover .side-panel-close-x {
   .team-profile-photo {
     width: 100% !important;
     max-width: 400px;
+    margin: 0 auto;
   }
   .team-profile-name {
     font-size: 40px !important;
@@ -1414,7 +1445,7 @@ button:hover .side-panel-close-x {
 @media (max-width: 768px) {
   /* Consistent mobile hero title size across all pages */
   .team-hero-title {
-    font-size: 36px !important;
+    font-size: 48px !important;
     margin: 0 0 16px 0 !important;
   }
   .team-hero-section {
@@ -1426,11 +1457,49 @@ button:hover .side-panel-close-x {
   .gc-node img {
     width: 120px !important;
   }
+  /* Hide global constellation on mobile */
+  .gc-section {
+    display: none !important;
+  }
+  /* David photo centered on mobile */
+  .team-profile {
+    text-align: center !important;
+  }
+  .team-profile-photo {
+    margin: 0 auto !important;
+  }
+  /* Team leader names on mobile */
+  .team-leader-name {
+    font-size: 20px !important;
+    margin-bottom: 16px !important;
+  }
+  /* Team page marquee banner 60px on mobile */
+  .team-marquee-text {
+    font-size: 60px !important;
+  }
   /* All section headings consistent on mobile at 36px */
   .s7-col-text h3,
   .section-heading,
-  .rna-heading {
+  .rna-heading,
+  .footer-heading,
+  .pub-featured-title,
+  .home-section-heading,
+  .team-section-heading {
     font-size: 36px !important;
+  }
+  /* All h3 headings 28px on mobile */
+  h3 {
+    font-size: 28px !important;
+  }
+  /* Section 8 K-Dense feature icons: 60px on mobile */
+  .s8-feature-icon {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  /* Section 7 Wetlab icons: 32px on mobile */
+  .s7-wetlab-icon {
+    width: 32px !important;
+    height: 32px !important;
   }
   .rna-price-card {
     padding: 40px 28px 40px 36px !important;
@@ -1453,6 +1522,10 @@ button:hover .side-panel-close-x {
   header .flex.items-center.justify-between {
     height: 64px !important;
     padding: 0 20px !important;
+  }
+  /* Hide tilted top piece on mobile */
+  .rna-tilted-top {
+    display: none !important;
   }
   /* BIRT title 140px on mobile, section closer to previous */
   .rna-birt-title {
@@ -1559,6 +1632,8 @@ button:hover .side-panel-close-x {
 @media (max-width: 768px) {
   .global-map-countries {
     grid-template-columns: repeat(2, 1fr) !important;
+    text-align: center !important;
+    justify-items: center !important;
   }
 }
 
@@ -1770,11 +1845,11 @@ button:hover .side-panel-close-x {
     gap: 16px;
   }
   .pub-featured-title {
-    font-size: 28px;
+    font-size: 36px !important;
+    font-weight: 400 !important;
   }
   .pub-featured-subtitle {
-    font-size: 12px;
-    max-width: 200px;
+    font-size: 14px;
   }
   .pub-filter-group {
     flex-shrink: 0;
@@ -1783,7 +1858,7 @@ button:hover .side-panel-close-x {
     padding: 0 20px 60px;
   }
   .pub-item-title {
-    font-size: 16px;
+    font-size: 22px !important;
   }
   .pub-item-meta {
     font-size: 13px;

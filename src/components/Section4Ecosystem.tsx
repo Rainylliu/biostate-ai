@@ -106,6 +106,7 @@ export default function Section4Ecosystem() {
     <section className="s4-section" style={{ fontFamily: "'Manrope', Arial, Helvetica, sans-serif" }}>
       {/* Scrolling Banner — full-width, breaks out of parent padding */}
       <div
+        className="s4-diagonal-banner"
         style={{
           transform: "rotate(-2.07deg)",
           backgroundImage: "linear-gradient(92deg, #45D0BD 0%, #44B6E9 100%)",
@@ -142,10 +143,15 @@ export default function Section4Ecosystem() {
           margin: "40px auto 0",
           overflow: "hidden",
           borderRadius: 20,
+          backgroundImage: `url(${bgSrc})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          transition: "background-image 0.4s ease-in-out",
         }}
       >
         {/* Trapezoid background with image */}
         <svg
+          className="trapezoid-svg"
           viewBox="0 0 1400 700"
           preserveAspectRatio="none"
           style={{
@@ -186,6 +192,7 @@ export default function Section4Ecosystem() {
 
         {/* Slider content */}
         <div
+          className="trapezoid-content"
           style={{
             position: "relative",
             width: "100%",
@@ -240,6 +247,7 @@ export default function Section4Ecosystem() {
 
             {/* Cards */}
             <div
+              className="trapezoid-card-wrapper"
               style={{
                 width: "100%",
                 height: "min(420px, calc(100vh - 320px))",

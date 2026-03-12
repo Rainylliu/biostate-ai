@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, type CSSProperties } from "react";
+import { useLoaded } from "./ClientBody";
 
 interface WaveRevealProps {
   text: string;
@@ -25,8 +26,17 @@ export default function WaveReveal({
 }: WaveRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
+  const loaded = useLoaded();
+
+  // Reset animation state when loaded changes to false (route change)
+  useEffect(() => {
+    if (!loaded) {
+      setVisible(false);
+    }
+  }, [loaded]);
 
   useEffect(() => {
+    if (!loaded) return;
     const el = ref.current;
     if (!el) return;
     const observer = new IntersectionObserver(
@@ -40,7 +50,7 @@ export default function WaveReveal({
     );
     observer.observe(el);
     return () => observer.disconnect();
-  }, []);
+  }, [loaded]);
 
   // Split text into words, then characters within each word
   const words = text.split(" ");
