@@ -72,7 +72,7 @@ export default function Section6Projects() {
             style={{
               fontSize: 14,
               fontWeight: 500,
-              color: "#333",
+              color: "#111111",
               marginBottom: 12,
             }}
           >

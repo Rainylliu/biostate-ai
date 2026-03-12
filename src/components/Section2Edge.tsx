@@ -17,7 +17,7 @@ export default function Section2Edge() {
             fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
             fontSize: 14,
             fontWeight: 500,
-            color: "#333",
+            color: "#111111",
             marginBottom: 12,
           }}
         >

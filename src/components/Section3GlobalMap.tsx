@@ -80,7 +80,7 @@ export default function Section3GlobalMap() {
             fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
             fontSize: 14,
             fontWeight: 500,
-            color: "#333",
+            color: "#111111",
             marginBottom: 12,
           }}
         >

@@ -108,7 +108,7 @@ export default function RNAPage() {
               lineHeight: "2.142857em",
               fontWeight: 500,
               letterSpacing: "normal",
-              color: "#333333",
+              color: "#111111",
               marginBottom: "16px",
               fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
             }}
@@ -364,7 +364,7 @@ export default function RNAPage() {
                   lineHeight: "2.142857em",
                   fontWeight: 500,
                   letterSpacing: "normal",
-                  color: "#333333",
+                  color: "#111111",
                   marginBottom: "16px",
                   fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                 }}
@@ -642,7 +642,7 @@ export default function RNAPage() {
                 style={{
                   fontSize: "14px",
                   fontWeight: 500,
-                  color: "#333333",
+                  color: "#111111",
                   marginBottom: "16px",
                 }}
               >
@@ -836,7 +836,7 @@ export default function RNAPage() {
                   fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                   fontSize: "16px",
                   fontWeight: 400,
-                  color: "#333",
+                  color: "#111111",
                   marginBottom: "10px",
                 }}
               >
