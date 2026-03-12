@@ -86,7 +86,7 @@ export default function DNATechnologyTabs() {
                 borderRadius: "25px",
                 border: "1px solid transparent",
                 backgroundImage: isActive
-                  ? "linear-gradient(160deg, rgba(255,255,255,1) 30%, rgba(200,180,240,0.3) 100%), linear-gradient(135deg, #8258c8, #2c84c8)"
+                  ? "linear-gradient(#ffffff, #ffffff), linear-gradient(135deg, #8258c8, #2c84c8)"
                   : "none",
                 backgroundOrigin: isActive ? "border-box" : undefined,
                 backgroundClip: isActive ? "padding-box, border-box" : undefined,
