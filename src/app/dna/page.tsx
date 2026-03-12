@@ -118,7 +118,7 @@ export default function DNAPage() {
       <section
         className="dna-section2"
         style={{
-          padding: "48px 0",
+          padding: "20px 0 48px",
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
         }}
       >
