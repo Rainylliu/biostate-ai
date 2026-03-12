@@ -106,6 +106,7 @@ export default function Section4Ecosystem() {
     <section className="s4-section" style={{ fontFamily: "'Manrope', Arial, Helvetica, sans-serif" }}>
       {/* Scrolling Banner — full-width, breaks out of parent padding */}
       <div
+        className="s4-diagonal-banner"
         style={{
           transform: "rotate(-2.07deg)",
           backgroundImage: "linear-gradient(92deg, #45D0BD 0%, #44B6E9 100%)",

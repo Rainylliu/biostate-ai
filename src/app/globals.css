@@ -822,6 +822,9 @@ button:hover .side-panel-close-x {
     height: auto !important;
     min-height: auto !important;
   }
+  .s4-diagonal-banner {
+    padding: 30px 0px !important;
+  }
 }
 
 .trapezoid-nav-btn {
