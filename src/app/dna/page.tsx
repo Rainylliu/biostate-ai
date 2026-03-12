@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 export default function DNAPage() {
   return (
     <div style={{ overflowX: "hidden" }}>
-      {/* Section 1 - Hero: SVG as full-width background */}
+      {/* Section 1 - Hero: SVG as full-width background, pulled up behind header */}
       <section
         className="dna-hero-section"
-        style={{ position: "relative", width: "100%" }}
+        style={{ position: "relative", width: "100%", marginTop: "-161px" }}
       >
         {/* SVG background — fills full screen width, auto height to keep aspect ratio */}
         <img

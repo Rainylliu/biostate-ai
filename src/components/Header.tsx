@@ -23,6 +23,7 @@ export default function Header() {
   if (pathname === "/") isHomeRef.current = true;
   else if (pathname !== "/thank-you") isHomeRef.current = false;
   const isHome = isHomeRef.current;
+  const isDNA = pathname === "/dna";
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [menuHovered, setMenuHovered] = useState(false);
@@ -35,6 +36,9 @@ export default function Header() {
   }, []);
 
   // On home page: transparent header overlaying hero, white text
+  const isOverlay = isHome;
+  // DNA page: transparent bg but dark text
+  const isDNATransparent = isDNA && !scrolled;
   const isTransparent = isHome && !scrolled;
 
   // Lock body scroll when side panel or mobile menu is open
@@ -109,9 +113,9 @@ export default function Header() {
 
       {/* Main Header */}
       <header
-        className={`${isHome ? "" : "sticky top-0 z-50"} ${!isTransparent ? "bg-white" : ""} ${scrolled ? "header-slide-down" : ""}`}
+        className={`${isOverlay ? "" : "sticky top-0 z-50"} ${(isTransparent || isDNATransparent) ? "" : "bg-white"} ${scrolled ? "header-slide-down" : ""}`}
         style={{
-          ...(isHome ? {
+          ...(isOverlay ? {
             position: scrolled ? "fixed" : "absolute",
             top: 0,
             left: 0,
