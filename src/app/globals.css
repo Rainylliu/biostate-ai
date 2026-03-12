@@ -1612,6 +1612,8 @@ button:hover .side-panel-close-x {
 @media (max-width: 768px) {
   .global-map-countries {
     grid-template-columns: repeat(2, 1fr) !important;
+    text-align: center !important;
+    justify-items: center !important;
   }
 }
 
