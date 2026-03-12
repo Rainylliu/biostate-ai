@@ -99,7 +99,8 @@ export default function DNATechnologyTabs() {
                 lineHeight: "25px",
                 letterSpacing: "-0.03em",
                 cursor: "pointer",
-                transition: "background-color 0.3s, border-color 0.3s",
+                transition: "background-color 0.3s, border-color 0.3s, box-shadow 0.3s",
+                boxShadow: isActive ? "0 0 24px 0 #8D58C873" : "none",
               }}
             >
               <img

@@ -193,6 +193,140 @@ export default function DNAPage() {
           <DNATechnologyTabs />
         </div>
       </section>
+
+      {/* Section 3 - Scrolling Banner */}
+      <section
+        className="s4-diagonal-banner"
+        style={{
+          transform: "rotate(-2.07deg)",
+          backgroundImage: "linear-gradient(92deg, #8258C8 0%, #2C84C8 100%)",
+          margin: "40px -5px 0px -5px",
+          padding: "50px 0px",
+          position: "relative",
+          zIndex: 2,
+        }}
+      >
+        <div className="marquee-banner">
+          <div className="marquee-banner-track">
+            {[...Array(12)].map((_, i) => (
+              <span key={i} className="marquee-banner-text">
+                / Consistent chemistry — delivering reliable coverage across every sample type.&nbsp;&nbsp;
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 3 - Grant Card (tilted top + rectangle body) */}
+      <section
+        style={{
+          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+          marginTop: "80px",
+        }}
+      >
+        <div className="container">
+          <div
+            style={{
+              position: "relative",
+              backgroundColor: "#1F1F1F",
+              borderRadius: "25px",
+              padding: "60px",
+              overflow: "hidden",
+            }}
+          >
+            {/* Tilted top piece - same angle as banner */}
+            <div
+              className="dna-tilted-top"
+              style={{
+                position: "absolute",
+                top: "-60px",
+                left: "0",
+                width: "100.1%",
+                height: "140px",
+                backgroundColor: "#1F1F1F",
+                transform: "rotate(-2.0deg)",
+                transformOrigin: "bottom center",
+                zIndex: 0,
+                borderRadius: "25px 25px 0 0",
+              }}
+            />
+
+            {/* Background SVG */}
+            <img
+              src="/images/DNA_grant.svg"
+              alt=""
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center",
+                borderRadius: "25px",
+                pointerEvents: "none",
+              }}
+            />
+
+            <div
+              className="flex flex-col lg:flex-row gap-12 lg:gap-8"
+              style={{ position: "relative", zIndex: 1 }}
+            >
+              {/* Left - Heading */}
+              <div className="w-full lg:w-1/2">
+                <h3
+                  className="dna-grant-title"
+                  style={{
+                    fontSize: "clamp(36px, 4.5vw, 64px)",
+                    fontWeight: 400,
+                    lineHeight: "1.15em",
+                    color: "#ffffff",
+                  }}
+                >
+                  Consistent Performance Across Challenging Sample Types
+                </h3>
+              </div>
+
+              {/* Right - Description + Button */}
+              <div className="w-full lg:w-1/2" style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
+                <p
+                  style={{
+                    fontSize: "18px",
+                    fontWeight: 400,
+                    lineHeight: "1.8em",
+                    color: "rgba(255,255,255,0.75)",
+                    marginBottom: "40px",
+                  }}
+                >
+                  Biostate&apos;s optimized workflow demonstrates exceptional
+                  performance across key metrics, overcoming the coverage
+                  uniformity and duplication challenges that undermine variant
+                  detection in standard WES workflows.
+                </p>
+
+                <div>
+                  <a
+                    href="/grant-apply"
+                    className="book-a-call-btn book-a-call-btn-gradient group"
+                  >
+                    Apply Grants
+                    <span className="book-a-call-arrow">
+                      <span className="book-a-call-arrow-inner">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

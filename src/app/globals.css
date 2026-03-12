@@ -2000,5 +2000,11 @@ button:hover .side-panel-close-x {
     padding: 24px !important;
     min-height: auto !important;
   }
+  .dna-tilted-top {
+    display: none !important;
+  }
+  .dna-grant-title {
+    font-size: 32px !important;
+  }
 }
 
