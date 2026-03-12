@@ -19,25 +19,35 @@ export default function Section9NActAI() {
       <div className="s9-container">
         {/* Left - Content */}
         <div className="s9-left">
-          {/* N-Act AI - outline text with gradient stroke, matching BIRT style */}
-          <h2
+          {/* N-Act AI - SVG outline text with gradient stroke and solid fill */}
+          <svg
+            viewBox="0 0 480 80"
             className="s9-outline-title"
-            style={{
-              fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-              fontSize: 72,
-              fontWeight: 400,
-              lineHeight: 1,
-              letterSpacing: "-0.02em",
-              backgroundImage: "linear-gradient(135deg, #8258C8, #2C84C8)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "#F0F2F4",
-              WebkitTextStrokeWidth: "1.5px",
-              paintOrder: "stroke fill",
-              margin: "0 0 16px 0",
-            }}
+            xmlns="http://www.w3.org/2000/svg"
           >
-            N-Act AI
-          </h2>
+            <defs>
+              <linearGradient id="s9-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#8258C8" />
+                <stop offset="100%" stopColor="#2C84C8" />
+              </linearGradient>
+            </defs>
+            <text
+              x="0"
+              y="62"
+              fontFamily="'Sora', Arial, Helvetica, sans-serif"
+              fontSize="72"
+              fontWeight="400"
+              fill="#f0f2f4"
+              stroke="url(#s9-grad)"
+              strokeWidth="2.5"
+              strokeLinejoin="round"
+              strokeLinecap="round"
+              paintOrder="stroke fill"
+              letterSpacing="-1"
+            >
+              N-Act AI
+            </text>
+          </svg>
 
           <p className="s7-tag">[ about ]</p>
 
