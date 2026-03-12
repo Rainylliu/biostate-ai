@@ -47,7 +47,7 @@ export default function AboutUsPage() {
             position: "relative",
             fontFamily: "'Sora', Arial, Helvetica, sans-serif",
             fontSize: 100,
-            fontWeight: 500,
+            fontWeight: 400,
             color: "#222",
             lineHeight: 1.15,
             margin: "-60px 0 24px 0",
@@ -107,7 +107,7 @@ export default function AboutUsPage() {
               className="team-profile-name"
               style={{
                 fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-                fontSize: 64,
+                fontSize: 48,
                 fontWeight: 500,
                 color: "#222",
                 margin: "0 0 8px 0",
