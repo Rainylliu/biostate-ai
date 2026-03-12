@@ -1838,7 +1838,7 @@ button:hover .side-panel-close-x {
     padding: 0 20px 60px;
   }
   .pub-item-title {
-    font-size: 16px;
+    font-size: 22px !important;
   }
   .pub-item-meta {
     font-size: 13px;
