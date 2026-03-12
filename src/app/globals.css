@@ -1385,7 +1385,7 @@ button:hover .side-panel-close-x {
 /* Team page responsive */
 @media (max-width: 900px) {
   .team-hero-title {
-    font-size: 48px !important;
+    font-size: 60px !important;
     margin: 0 0 20px 0 !important;
   }
   .team-profile {
@@ -1443,7 +1443,8 @@ button:hover .side-panel-close-x {
   .rna-heading,
   .footer-heading,
   .pub-featured-title,
-  .home-section-heading {
+  .home-section-heading,
+  .team-section-heading {
     font-size: 36px !important;
   }
   /* All h3 headings 28px on mobile */

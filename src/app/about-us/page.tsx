@@ -346,6 +346,7 @@ export default function AboutUsPage() {
               [ leader ]
             </p>
             <h2
+              className="team-section-heading"
               style={{
                 fontFamily: "'Sora', Arial, Helvetica, sans-serif",
                 fontSize: 48,
@@ -543,6 +544,7 @@ export default function AboutUsPage() {
             [ advisor ]
           </p>
           <h2
+            className="team-section-heading"
             style={{
               fontFamily: "'Sora', Arial, Helvetica, sans-serif",
               fontSize: 48,

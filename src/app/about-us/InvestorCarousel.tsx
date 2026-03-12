@@ -136,7 +136,7 @@ export default function InvestorCarousel({ investors, heading = "Institutional i
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 40 }}>
           <div>
             <p style={{ fontSize: 14, color: "#333", fontWeight: 500, marginBottom: 8 }}>[ investors ]</p>
-            <h2 style={{ fontFamily: "'Sora', Arial, Helvetica, sans-serif", fontSize: 60, fontWeight: 400, color: "#111", letterSpacing: "-0.05em", lineHeight: 1.15, margin: 0 }}>
+            <h2 className="team-section-heading" style={{ fontFamily: "'Sora', Arial, Helvetica, sans-serif", fontSize: 60, fontWeight: 400, color: "#111", letterSpacing: "-0.05em", lineHeight: 1.15, margin: 0 }}>
               {heading}
             </h2>
           </div>
