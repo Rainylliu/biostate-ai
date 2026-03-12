@@ -216,12 +216,10 @@ export default function Section3GlobalMap() {
           className="global-map-countries"
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: 32,
+            gridTemplateColumns: "repeat(4, auto)",
+            gap: 64,
             marginTop: 56,
-            maxWidth: 1280,
-            margin: "56px auto 0",
-            textAlign: "center",
+            justifyContent: "center",
           }}
         >
           {countries.map((country) => (
