@@ -219,6 +219,9 @@ export default function Section3GlobalMap() {
             gridTemplateColumns: "repeat(4, 1fr)",
             gap: 32,
             marginTop: 56,
+            maxWidth: 1280,
+            margin: "56px auto 0",
+            textAlign: "center",
           }}
         >
           {countries.map((country) => (
@@ -241,7 +244,7 @@ export default function Section3GlobalMap() {
               <h3
                 style={{
                   fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-                  fontSize: "clamp(22px, 3.5vw, 64px)",
+                  fontSize: 40,
                   fontWeight: 400,
                   color: "#1f1f1f",
                   margin: "0 0 12px",
