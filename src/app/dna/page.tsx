@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import DNATechnologyTabs from "@/components/DNATechnologyTabs";
 
 export const metadata: Metadata = {
@@ -172,8 +171,8 @@ export default function DNAPage() {
 
             {/* Right - Button */}
             <div>
-              <Link
-                href="/pdf/20250402-BIRT%2BPERD%20One%20Page.pdf"
+              <a
+                href="/pdf/BIRT-PERD-WhitePaper.pdf"
                 download
                 className="dna-download-btn"
               >
@@ -193,7 +192,7 @@ export default function DNAPage() {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </Link>
+              </a>
             </div>
           </div>
 
