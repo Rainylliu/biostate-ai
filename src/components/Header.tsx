@@ -35,10 +35,9 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // On home page: transparent header overlaying hero, white text
-  const isOverlay = isHome;
-  // DNA page: transparent bg but dark text
-  const isDNATransparent = isDNA && !scrolled;
+  // On home page & DNA page: header overlays hero (position absolute)
+  const isOverlay = isHome || isDNA;
+  // Home: white text on dark bg; DNA: dark text on light bg
   const isTransparent = isHome && !scrolled;
 
   // Lock body scroll when side panel or mobile menu is open
@@ -58,8 +57,8 @@ export default function Header() {
 
   return (
     <>
-      {/* Top Info Bar - hidden on home page, outside wrapper so sticky header works */}
-      {!isHome && (
+      {/* Top Info Bar - hidden on home/DNA page so header overlays hero */}
+      {!isHome && !isDNA && (
       <div
         className="info-top-bar flex items-center justify-between"
         style={{
@@ -113,7 +112,7 @@ export default function Header() {
 
       {/* Main Header */}
       <header
-        className={`${isOverlay ? "" : "sticky top-0 z-50"} ${(isTransparent || isDNATransparent) ? "" : "bg-white"} ${scrolled ? "header-slide-down" : ""}`}
+        className={`${isOverlay ? "" : "sticky top-0 z-50"} ${(isOverlay && !scrolled) ? "" : "bg-white"} ${scrolled ? "header-slide-down" : ""}`}
         style={{
           ...(isOverlay ? {
             position: scrolled ? "fixed" : "absolute",

@@ -12,7 +12,7 @@ export default function DNAPage() {
       {/* Section 1 - Hero: SVG as full-width background, pulled up behind header */}
       <section
         className="dna-hero-section"
-        style={{ position: "relative", width: "100%", marginTop: "-161px" }}
+        style={{ position: "relative", width: "100%" }}
       >
         {/* SVG background — fills full screen width, auto height to keep aspect ratio */}
         <img
