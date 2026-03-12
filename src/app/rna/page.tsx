@@ -75,7 +75,7 @@ export default function RNAPage() {
                   href="https://calendly.com/rachan-raj-biostate/biostate-ai-introduction-services"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="book-a-call-btn book-a-call-btn-teal group"
+                  className="book-a-call-btn group"
                 >
                   Book a call
                   <span className="book-a-call-arrow">
