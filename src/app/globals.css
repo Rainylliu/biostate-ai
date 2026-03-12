@@ -1632,7 +1632,7 @@ button:hover .side-panel-close-x {
   width: 180px;
   height: 48px;
   padding: 0 36px 0 16px;
-  border-radius: 10px;
+  border-radius: 25px;
   border: 1.5px solid #d0d0d0;
   background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E") no-repeat right 14px center;
   color: #444;
