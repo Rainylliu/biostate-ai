@@ -1589,7 +1589,7 @@ button:hover .side-panel-close-x {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 0;
+  margin-bottom: 40px;
 }
 .pub-featured-title {
   font-family: 'Sora', Arial, Helvetica, sans-serif;

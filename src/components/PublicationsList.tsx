@@ -39,7 +39,7 @@ const allItems: Publication[] = [
   { url: "https://courses.cs.washington.edu/courses/cse599x/10sp/circuits.pdf", categories: ["Enzyme-Free Logic", "Molecular Computing"], title: "Enzyme-free nucleic acid logic circuits", journal: "Science", date: "Dec 08, 2006", year: 2006 },
 ];
 
-const PER_PAGE = 8;
+const PER_PAGE = 6;
 
 type SortKey = "newest" | "oldest" | "title_az" | "title_za" | "journal_az" | "journal_za";
 
