@@ -120,7 +120,7 @@ export default function AboutUsPage() {
               style={{
                 fontFamily: "'Sora', Arial, Helvetica, sans-serif",
                 fontSize: 22,
-                fontWeight: 600,
+                fontWeight: 400,
                 color: "#222",
                 margin: "0 0 32px 0",
               }}
@@ -211,6 +211,7 @@ export default function AboutUsPage() {
 
       {/* ── Section 2: Global Constellation ── */}
       <section
+        className="gc-section"
         style={{
           padding: "20px 20px",
           background: "#ffffff",
@@ -374,7 +375,7 @@ export default function AboutUsPage() {
                   alt="Jeremy Sobotta"
                   style={{ width: "100%", aspectRatio: "1 / 1", objectFit: "cover", borderRadius: 20, display: "block", marginBottom: 20 }}
                 />
-                <h3 style={{ fontSize: 24, fontWeight: 700, color: "#111", lineHeight: 1.3, marginBottom: 16 }}>
+                <h3 className="team-leader-name" style={{ fontSize: 24, fontWeight: 700, color: "#111", lineHeight: 1.3, marginBottom: 16 }}>
                   Jeremy Sobotta | CFO, Biostate AI
                 </h3>
                 <ul style={{ fontSize: 16, color: "#333", fontWeight: 400, lineHeight: 1.7, listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: 8 }}>
@@ -390,7 +391,7 @@ export default function AboutUsPage() {
                   alt="Kutapa Muthanna"
                   style={{ width: "100%", aspectRatio: "1 / 1", objectFit: "cover", borderRadius: 20, display: "block", marginBottom: 20 }}
                 />
-                <h3 style={{ fontSize: 24, fontWeight: 700, color: "#111", lineHeight: 1.3, marginBottom: 16 }}>
+                <h3 className="team-leader-name" style={{ fontSize: 24, fontWeight: 700, color: "#111", lineHeight: 1.3, marginBottom: 16 }}>
                   Kutapa Muthanna | CEO, Bayosthiti AI (India Subsidiary)
                 </h3>
                 <ul style={{ fontSize: 16, color: "#333", fontWeight: 400, lineHeight: 1.7, listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: 8 }}>
@@ -406,7 +407,7 @@ export default function AboutUsPage() {
                   alt="Mohammad Alkweihewi"
                   style={{ width: "100%", aspectRatio: "1 / 1", objectFit: "cover", borderRadius: 20, display: "block", marginBottom: 20 }}
                 />
-                <h3 style={{ fontSize: 24, fontWeight: 700, color: "#111", lineHeight: 1.3, marginBottom: 16 }}>
+                <h3 className="team-leader-name" style={{ fontSize: 24, fontWeight: 700, color: "#111", lineHeight: 1.3, marginBottom: 16 }}>
                   Mohammad Alkweihewi | CEO, Biostate AI MENA (KSA Subsidiary)
                 </h3>
                 <ul style={{ fontSize: 16, color: "#333", fontWeight: 400, lineHeight: 1.7, listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: 8 }}>
@@ -423,7 +424,7 @@ export default function AboutUsPage() {
                   alt="Zoe Zheng"
                   style={{ width: "100%", aspectRatio: "1 / 1", objectFit: "cover", borderRadius: 20, display: "block", marginBottom: 20 }}
                 />
-                <h3 style={{ fontSize: 24, fontWeight: 700, color: "#111", lineHeight: 1.3, marginBottom: 16 }}>
+                <h3 className="team-leader-name" style={{ fontSize: 24, fontWeight: 700, color: "#111", lineHeight: 1.3, marginBottom: 16 }}>
                   Zoe Zheng | CEO, Biosheng (China Subsidiary)
                 </h3>
                 <ul style={{ fontSize: 16, color: "#333", fontWeight: 400, lineHeight: 1.7, listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: 8 }}>
@@ -439,7 +440,7 @@ export default function AboutUsPage() {
                   alt="Alden Yao"
                   style={{ width: "100%", aspectRatio: "1 / 1", objectFit: "cover", borderRadius: 20, display: "block", marginBottom: 20 }}
                 />
-                <h3 style={{ fontSize: 24, fontWeight: 700, color: "#111", lineHeight: 1.3, marginBottom: 16 }}>
+                <h3 className="team-leader-name" style={{ fontSize: 24, fontWeight: 700, color: "#111", lineHeight: 1.3, marginBottom: 16 }}>
                   Alden Yao | CEO, Baisheng (Wuhan JV)
                 </h3>
                 <ul style={{ fontSize: 16, color: "#333", fontWeight: 400, lineHeight: 1.7, listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: 8 }}>
@@ -454,7 +455,7 @@ export default function AboutUsPage() {
                   alt="Timothy Kassis, Ph.D."
                   style={{ width: "100%", aspectRatio: "1 / 1", objectFit: "cover", borderRadius: 20, display: "block", marginBottom: 20 }}
                 />
-                <h3 style={{ fontSize: 24, fontWeight: 700, color: "#111", lineHeight: 1.3, marginBottom: 16 }}>
+                <h3 className="team-leader-name" style={{ fontSize: 24, fontWeight: 700, color: "#111", lineHeight: 1.3, marginBottom: 16 }}>
                   Timothy Kassis, Ph.D. | Co-Founder &amp; Head of AI, K-Dense
                 </h3>
                 <ul style={{ fontSize: 16, color: "#333", fontWeight: 400, lineHeight: 1.7, listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: 8 }}>

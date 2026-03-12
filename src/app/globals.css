@@ -1402,6 +1402,7 @@ button:hover .side-panel-close-x {
   .team-profile-photo {
     width: 100% !important;
     max-width: 400px;
+    margin: 0 auto;
   }
   .team-profile-name {
     font-size: 40px !important;
@@ -1425,6 +1426,22 @@ button:hover .side-panel-close-x {
   }
   .gc-node img {
     width: 120px !important;
+  }
+  /* Hide global constellation on mobile */
+  .gc-section {
+    display: none !important;
+  }
+  /* David photo centered on mobile */
+  .team-profile {
+    text-align: center !important;
+  }
+  .team-profile-photo {
+    margin: 0 auto !important;
+  }
+  /* Team leader names on mobile */
+  .team-leader-name {
+    font-size: 22px !important;
+    margin-bottom: 16px !important;
   }
   /* All section headings consistent on mobile at 36px */
   .s7-col-text h3,
