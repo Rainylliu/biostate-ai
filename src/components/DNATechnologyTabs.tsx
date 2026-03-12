@@ -62,7 +62,7 @@ export default function DNATechnologyTabs() {
                 display: "flex",
                 alignItems: "center",
                 gap: "16px",
-                padding: "28px 32px",
+                padding: "40px 32px",
                 borderRadius: "16px",
                 border: isActive ? "1.5px solid transparent" : "1.5px solid #d8d8e0",
                 backgroundImage: isActive
