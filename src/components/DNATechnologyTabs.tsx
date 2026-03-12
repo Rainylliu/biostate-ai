@@ -130,6 +130,8 @@ export default function DNATechnologyTabs() {
           gap: "40px",
           alignItems: "center",
           border: "1px solid #eee",
+          maxHeight: "calc(100vh - 280px)",
+          overflow: "hidden",
         }}
       >
         {/* Left - Chart image */}
@@ -147,7 +149,7 @@ export default function DNATechnologyTabs() {
             alt={tab.title}
             style={{
               width: "100%",
-              height: "auto",
+              maxHeight: "calc(100vh - 320px)",
               objectFit: "contain",
             }}
           />
