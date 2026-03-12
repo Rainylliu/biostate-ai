@@ -84,7 +84,7 @@ export default function Section6Projects() {
             className="home-section-heading"
             style={{
               fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-              fontSize: 48,
+              fontSize: 64,
               fontWeight: 400,
               color: "#111",
               margin: 0,

@@ -92,7 +92,7 @@ export default function Section3GlobalMap() {
           className="home-section-heading"
           style={{
             fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-            fontSize: 48,
+            fontSize: 64,
             fontWeight: 400,
             color: "#111",
             margin: "0 0 48px 0",

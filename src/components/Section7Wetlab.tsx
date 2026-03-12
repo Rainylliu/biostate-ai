@@ -19,7 +19,7 @@ export default function Section7Wetlab() {
           className="home-section-heading"
           style={{
             fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-            fontSize: 48,
+            fontSize: 64,
             fontWeight: 400,
             color: "#333333",
             margin: "0 0 32px 0",
@@ -68,7 +68,7 @@ export default function Section7Wetlab() {
           <h3
             style={{
               fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-              fontSize: 48,
+              fontSize: 64,
               fontWeight: 400,
               color: "#333333",
               lineHeight: 1.15,
@@ -212,7 +212,7 @@ export default function Section7Wetlab() {
           <h3
             style={{
               fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-              fontSize: 48,
+              fontSize: 64,
               fontWeight: 400,
               color: "#333333",
               lineHeight: 1.15,

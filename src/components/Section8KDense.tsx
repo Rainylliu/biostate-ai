@@ -210,7 +210,7 @@ export default function Section8KDense() {
             className="home-section-heading"
             style={{
               fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-              fontSize: 48,
+              fontSize: 64,
               fontWeight: 400,
               color: "#333333",
               margin: "0 0 32px 0",
