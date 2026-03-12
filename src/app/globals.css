@@ -1398,7 +1398,7 @@ button:hover .side-panel-close-x {
   font-size: 64px;
   font-weight: 400;
   line-height: 1;
-  -webkit-text-fill-color: white;
+  -webkit-text-fill-color: #F0F2F4;
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: #6766c8;
   paint-order: stroke fill;

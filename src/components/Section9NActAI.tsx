@@ -30,7 +30,7 @@ export default function Section9NActAI() {
               letterSpacing: "-0.02em",
               backgroundImage: "linear-gradient(135deg, #8258C8, #2C84C8)",
               WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "white",
+              WebkitTextFillColor: "#F0F2F4",
               WebkitTextStrokeWidth: "1.5px",
               paintOrder: "stroke fill",
               margin: "0 0 16px 0",
