@@ -228,9 +228,8 @@ export default function DNAPage() {
           <div
             style={{
               position: "relative",
-              backgroundColor: "#1F1F1F",
               borderRadius: "25px",
-              padding: "20px",
+              overflow: "hidden",
             }}
           >
             {/* Tilted top piece - same angle as banner */}
@@ -250,35 +249,33 @@ export default function DNAPage() {
               }}
             />
 
-            {/* Inner content card with background SVG */}
+            {/* Background SVG - fills entire card */}
+            <img
+              src="/images/DNA_grant.svg"
+              alt=""
+              style={{
+                display: "block",
+                width: "100%",
+                height: "auto",
+              }}
+            />
+
+            {/* Content overlay */}
             <div
               style={{
-                position: "relative",
-                zIndex: 1,
-                borderRadius: "20px",
-                overflow: "hidden",
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
                 padding: "60px",
+                display: "flex",
+                alignItems: "center",
               }}
             >
-              {/* Background SVG */}
-              <img
-                src="/images/DNA_grant.svg"
-                alt=""
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  objectPosition: "center",
-                  pointerEvents: "none",
-                }}
-              />
-
               <div
                 className="flex flex-col lg:flex-row gap-12 lg:gap-8"
-                style={{ position: "relative", zIndex: 1 }}
+                style={{ width: "100%" }}
               >
                 {/* Left - Heading */}
                 <div className="w-full lg:w-1/2">
