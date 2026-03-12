@@ -229,7 +229,6 @@ export default function DNAPage() {
             style={{
               position: "relative",
               borderRadius: "25px",
-              overflow: "hidden",
             }}
           >
             {/* Tilted top piece - same angle as banner */}
@@ -257,6 +256,7 @@ export default function DNAPage() {
                 display: "block",
                 width: "100%",
                 height: "auto",
+                borderRadius: "25px",
               }}
             />
 
@@ -270,7 +270,7 @@ export default function DNAPage() {
                 height: "100%",
                 padding: "60px",
                 display: "flex",
-                alignItems: "center",
+                alignItems: "flex-start",
               }}
             >
               <div
