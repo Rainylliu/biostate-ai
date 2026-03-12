@@ -124,9 +124,9 @@ export default function DNAPage() {
       >
         <div
           style={{
-            maxWidth: "1600px",
+            maxWidth: "1400px",
             margin: "0 auto",
-            padding: "0 40px",
+            padding: "0 60px",
           }}
         >
           {/* Header row */}
@@ -159,13 +159,10 @@ export default function DNAPage() {
                   lineHeight: 1.2,
                   color: "#1a1a1a",
                   margin: 0,
+                  maxWidth: "700px",
                 }}
               >
-                Optimized Chemistry
-                <br />
-                Delivers Superior
-                <br />
-                Performance
+                Optimized Chemistry Delivers Superior Performance
               </h2>
             </div>
 
