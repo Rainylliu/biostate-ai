@@ -335,6 +335,148 @@ export default function DNAPage() {
           </div>
         </div>
       </section>
+
+      {/* Section 3 - Sample Type Cards */}
+      <section
+        style={{
+          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+          marginTop: "50px",
+        }}
+      >
+        <div className="container">
+          <div
+            className="dna-sample-cards"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              gap: "20px",
+            }}
+          >
+            {/* Card 1 - FFPE Tissue */}
+            <div
+              style={{
+                borderRadius: "25px",
+                padding: "40px",
+                background: "linear-gradient(180deg, #E88BA7 0%, #D4A057 100%)",
+                minHeight: "360px",
+              }}
+            >
+              <h4
+                style={{
+                  fontSize: "28px",
+                  fontWeight: 600,
+                  lineHeight: 1.2,
+                  color: "#ffffff",
+                  marginBottom: "24px",
+                }}
+              >
+                FFPE Tissue (Single 4-micron Slide)
+              </h4>
+              <p
+                style={{
+                  fontSize: "16px",
+                  fontWeight: 400,
+                  lineHeight: "1.875em",
+                  color: "#ffffff",
+                  marginBottom: "16px",
+                }}
+              >
+                Biostate achieves <strong>~140X mean target coverage at 40M reads</strong> from FFPE samples, despite severe degradation.
+              </p>
+              <p
+                style={{
+                  fontSize: "16px",
+                  fontWeight: 400,
+                  lineHeight: "1.875em",
+                  color: "#ffffff",
+                }}
+              >
+                This performance supports reliable somatic variant detection even from challenging clinical materials.
+              </p>
+            </div>
+
+            {/* Card 2 - Dried Blood Spot */}
+            <div
+              style={{
+                borderRadius: "25px",
+                padding: "40px",
+                background: "linear-gradient(180deg, #8258C8 0%, #45D0BD 100%)",
+                minHeight: "360px",
+                position: "relative",
+                overflow: "hidden",
+              }}
+            >
+              {/* Background overlay image effect */}
+              <div
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  background: "url('/images/DNA_grant.svg') center/cover no-repeat",
+                  opacity: 0.3,
+                  pointerEvents: "none",
+                }}
+              />
+              <div style={{ position: "relative", zIndex: 1 }}>
+                <h4
+                  style={{
+                    fontSize: "28px",
+                    fontWeight: 600,
+                    lineHeight: 1.2,
+                    color: "#ffffff",
+                    marginBottom: "24px",
+                  }}
+                >
+                  Dried Blood Spot (Half-Circle)
+                </h4>
+                <p
+                  style={{
+                    fontSize: "16px",
+                    fontWeight: 400,
+                    lineHeight: "1.875em",
+                    color: "#ffffff",
+                  }}
+                >
+                  A single half-circle dried blood spot yields <strong>~140X mean target coverage</strong>, demonstrating consistent performance even with limited DNA input.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 3 - Benchmark Genomic DNA */}
+            <div
+              style={{
+                borderRadius: "25px",
+                padding: "40px",
+                background: "#C8A8E8",
+                backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.5) 2px, transparent 2px)",
+                backgroundSize: "20px 20px",
+                minHeight: "360px",
+              }}
+            >
+              <h4
+                style={{
+                  fontSize: "28px",
+                  fontWeight: 600,
+                  lineHeight: 1.2,
+                  color: "#ffffff",
+                  marginBottom: "24px",
+                }}
+              >
+                Benchmark Genomic DNA
+              </h4>
+              <p
+                style={{
+                  fontSize: "16px",
+                  fontWeight: 400,
+                  lineHeight: "1.875em",
+                  color: "#ffffff",
+                }}
+              >
+                Benchmark genomic DNA processed through the same workflow also reaches <strong>~140X coverage</strong>, confirming strong chemistry performance across both high-quality and compromised input types.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

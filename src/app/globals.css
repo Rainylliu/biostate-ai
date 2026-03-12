@@ -2006,5 +2006,8 @@ button:hover .side-panel-close-x {
   .dna-grant-title {
     font-size: 32px !important;
   }
+  .dna-sample-cards {
+    grid-template-columns: 1fr !important;
+  }
 }
 
