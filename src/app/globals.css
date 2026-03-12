@@ -1341,7 +1341,7 @@ button:hover .side-panel-close-x {
     font-size: 36px !important;
   }
   .s7-outline-num {
-    font-size: 48px;
+    font-size: 40px;
   }
 }
 
@@ -1440,8 +1440,20 @@ button:hover .side-panel-close-x {
   /* All section headings consistent on mobile at 36px */
   .s7-col-text h3,
   .section-heading,
-  .rna-heading {
+  .rna-heading,
+  .footer-heading,
+  .pub-featured-title {
     font-size: 36px !important;
+  }
+  /* Section 8 K-Dense feature icons: 60px on mobile */
+  .s8-feature-icon {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  /* Section 7 Wetlab icons: 32px on mobile */
+  .s7-wetlab-icon {
+    width: 32px !important;
+    height: 32px !important;
   }
   .rna-price-card {
     padding: 40px 28px 40px 36px !important;

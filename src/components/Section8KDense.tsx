@@ -258,7 +258,7 @@ export default function Section8KDense() {
               <img
                 src="/images/icon1.svg"
                 alt=""
-                style={{ width: 80, height: 80, marginBottom: 16 }}
+                className="s8-feature-icon" style={{ width: 80, height: 80, marginBottom: 16 }}
               />
               <p
                 style={{
@@ -291,7 +291,7 @@ export default function Section8KDense() {
               <img
                 src="/images/icon4.svg"
                 alt=""
-                style={{ width: 80, height: 80, marginBottom: 16 }}
+                className="s8-feature-icon" style={{ width: 80, height: 80, marginBottom: 16 }}
               />
               <p
                 style={{

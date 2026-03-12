@@ -99,7 +99,7 @@ export default function Section7Wetlab() {
               <img
                 src="/images/Wetlabicon1.svg"
                 alt=""
-                style={{ width: 48, height: 48, flexShrink: 0, marginTop: 2 }}
+                className="s7-wetlab-icon" style={{ width: 48, height: 48, flexShrink: 0, marginTop: 2 }}
               />
               <div>
                 <p
@@ -134,7 +134,7 @@ export default function Section7Wetlab() {
               <img
                 src="/images/Wetlabicon2.svg"
                 alt=""
-                style={{ width: 48, height: 48, flexShrink: 0, marginTop: 2 }}
+                className="s7-wetlab-icon" style={{ width: 48, height: 48, flexShrink: 0, marginTop: 2 }}
               />
               <div>
                 <p
@@ -170,7 +170,7 @@ export default function Section7Wetlab() {
               <img
                 src="/images/Wetlabicon3.svg"
                 alt=""
-                style={{ width: 48, height: 48, flexShrink: 0, marginTop: 2 }}
+                className="s7-wetlab-icon" style={{ width: 48, height: 48, flexShrink: 0, marginTop: 2 }}
               />
               <div>
                 <p
