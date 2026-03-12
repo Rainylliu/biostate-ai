@@ -124,9 +124,9 @@ export default function DNAPage() {
       >
         <div
           style={{
-            maxWidth: "1400px",
+            maxWidth: "1600px",
             margin: "0 auto",
-            padding: "0 60px",
+            padding: "0 40px",
           }}
         >
           {/* Header row */}
@@ -155,7 +155,7 @@ export default function DNAPage() {
               <h2
                 style={{
                   fontSize: "clamp(32px, 4.5vw, 64px)",
-                  fontWeight: 500,
+                  fontWeight: 400,
                   lineHeight: 1.2,
                   color: "#1a1a1a",
                   margin: 0,
