@@ -1,30 +1,44 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function LoadingScreen({ onDone }: { onDone?: () => void }) {
   const [visible, setVisible] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
+  const startedRef = useRef(false);
 
   useEffect(() => {
+    if (startedRef.current) return;
+    startedRef.current = true;
+
+    const mountTime = Date.now();
+    const MIN_DISPLAY = 800; // minimum ms to show the loading screen
+
     const startFadeOut = () => {
-      setFadeOut(true);
+      const elapsed = Date.now() - mountTime;
+      const remaining = Math.max(0, MIN_DISPLAY - elapsed);
+
       setTimeout(() => {
-        setVisible(false);
-        onDone?.();
-      }, 500);
+        setFadeOut(true);
+        setTimeout(() => {
+          setVisible(false);
+          onDone?.();
+        }, 500);
+      }, remaining);
     };
 
     if (document.readyState === "complete") {
-      setTimeout(startFadeOut, 500);
+      startFadeOut();
     } else {
-      window.addEventListener("load", () => {
-        setTimeout(startFadeOut, 300);
-      });
+      const onLoad = () => startFadeOut();
+      window.addEventListener("load", onLoad);
+      // fallback
+      const fallback = setTimeout(startFadeOut, 5000);
+      return () => {
+        window.removeEventListener("load", onLoad);
+        clearTimeout(fallback);
+      };
     }
-
-    const fallback = setTimeout(startFadeOut, 5000);
-    return () => clearTimeout(fallback);
   }, [onDone]);
 
   if (!visible) return null;

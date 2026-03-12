@@ -18,7 +18,7 @@ export default function PublicationPage() {
           background: "#ffffff",
         }}
       >
-        {/* Background SVG */}
+        {/* Background SVG – full width, natural height, top-aligned */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/images/publication_bg.svg"
@@ -26,7 +26,7 @@ export default function PublicationPage() {
           className="pub-bg-img"
         />
 
-        {/* ── Hero Section ── */}
+        {/* ── Section 1: Hero ── */}
         <section
           style={{
             position: "relative",
@@ -78,7 +78,7 @@ export default function PublicationPage() {
           </p>
         </section>
 
-        {/* ── Section 1: Featured Publications ── */}
+        {/* ── Section 2: Featured Publications ── */}
         <section className="pub-featured-content" style={{ position: "relative" }}>
           <PublicationsList
             items={featuredPublications}
@@ -88,7 +88,7 @@ export default function PublicationPage() {
           />
         </section>
 
-        {/* ── Section 2: Full Publication Library ── */}
+        {/* ── Section 3: Full Publication Library ── */}
         <section className="pub-featured-content" style={{ position: "relative" }}>
           <PublicationsList
             items={fullPublications}

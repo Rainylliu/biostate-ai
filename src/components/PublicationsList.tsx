@@ -74,25 +74,26 @@ export default function PublicationsList({ items, title, subtitle, id, desktopPe
           <WaveReveal
             text={title}
             as="h2"
+            className="pub-featured-title"
             style={{
               fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-              fontSize: 48,
-              fontWeight: 400,
+              fontSize: 40,
+              fontWeight: 600,
               color: "#111",
               margin: "0 0 12px 0",
               lineHeight: 1.15,
             }}
-            className="pub-section-title"
           />
           <WaveReveal
             text={subtitle}
             as="p"
+            className="pub-featured-subtitle"
             delay={300}
             style={{
               fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-              fontSize: 18,
+              fontSize: 16,
               fontWeight: 400,
-              color: "#515962",
+              color: "#555",
               margin: 0,
               lineHeight: 1.6,
             }}
@@ -130,7 +131,7 @@ export default function PublicationsList({ items, title, subtitle, id, desktopPe
               </a>
             </h3>
             <p className="pub-item-meta">
-              {item.journal}{item.date ? ` \u2502 ${item.date}` : ""}
+              {item.journal}{item.date ? `\uFF5C${item.date}` : ""}
             </p>
             <span className="pub-read-more">
               <a href={item.url} target="_blank" rel="noopener noreferrer">
@@ -151,7 +152,7 @@ export default function PublicationsList({ items, title, subtitle, id, desktopPe
         ))}
       </div>
 
-      {/* Pagination */}
+      {/* Pagination — same style as advisor grid */}
       {totalPages > 1 && (
         <div
           style={{
