@@ -172,6 +172,13 @@ img {
   color: #45D0BD !important;
 }
 
+/* ── Footer Tablet ── */
+@media (max-width: 1100px) {
+  .footer-heading {
+    font-size: 52px !important;
+  }
+}
+
 /* ── Footer Mobile ── */
 @media (max-width: 768px) {
   .footer-get-in-touch {
