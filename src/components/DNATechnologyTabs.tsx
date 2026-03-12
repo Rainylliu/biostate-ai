@@ -168,7 +168,7 @@ export default function DNATechnologyTabs() {
         >
           <h3
             style={{
-              fontSize: "clamp(28px, 3vw, 40px)",
+              fontSize: "clamp(28px, 3vw, 36px)",
               fontWeight: 500,
               margin: "0 0 20px 0",
               lineHeight: 1.25,
