@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface Publication {
   url: string;
@@ -56,13 +56,26 @@ function getSortedItems(sort: SortKey): Publication[] {
   }
 }
 
+function usePerPage() {
+  const [perPage, setPerPage] = useState(PER_PAGE);
+  useEffect(() => {
+    const update = () => setPerPage(window.innerWidth <= 768 ? 4 : PER_PAGE);
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+  return perPage;
+}
+
 export default function PublicationsList() {
   const [currentSort, setCurrentSort] = useState<SortKey>("newest");
   const [currentPage, setCurrentPage] = useState(1);
+  const perPage = usePerPage();
 
   const sorted = getSortedItems(currentSort);
-  const totalPages = Math.ceil(sorted.length / PER_PAGE);
-  const pageItems = sorted.slice((currentPage - 1) * PER_PAGE, currentPage * PER_PAGE);
+  const totalPages = Math.ceil(sorted.length / perPage);
+  const safePage = Math.min(currentPage, totalPages);
+  const pageItems = sorted.slice((safePage - 1) * perPage, safePage * perPage);
 
   const handleSortChange = (value: string) => {
     setCurrentSort(value as SortKey);
@@ -148,9 +161,9 @@ export default function PublicationsList() {
             marginTop: 48,
           }}
         >
-          {currentPage > 1 && (
+          {safePage > 1 && (
             <button
-              onClick={() => handlePageChange(currentPage - 1)}
+              onClick={() => handlePageChange(safePage - 1)}
               className="advisor-page-btn advisor-page-nav advisor-nav-prev"
               style={{
                 height: 40,
@@ -192,9 +205,9 @@ export default function PublicationsList() {
                 width: 40,
                 height: 40,
                 borderRadius: 10,
-                border: p === currentPage ? "none" : "1px solid #8258c8",
-                background: p === currentPage ? "linear-gradient(135deg, #8258c8, #2c84c8)" : "#ffffff",
-                color: p === currentPage ? "#ffffff" : "#333",
+                border: p === safePage ? "none" : "1px solid #8258c8",
+                background: p === safePage ? "linear-gradient(135deg, #8258c8, #2c84c8)" : "#ffffff",
+                color: p === safePage ? "#ffffff" : "#333",
                 fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                 fontSize: 14,
                 fontWeight: 500,
@@ -209,9 +222,9 @@ export default function PublicationsList() {
             </button>
           ))}
 
-          {currentPage < totalPages && (
+          {safePage < totalPages && (
             <button
-              onClick={() => handlePageChange(currentPage + 1)}
+              onClick={() => handlePageChange(safePage + 1)}
               className="advisor-page-btn advisor-page-nav"
               style={{
                 height: 40,
