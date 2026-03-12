@@ -1943,7 +1943,7 @@ button:hover .side-panel-close-x {
   }
 }
 
-/* DNA Section 2 - Download button (gradient border, transparent fill) */
+/* DNA Section 2 - Download button (solid gradient fill) */
 .dna-download-btn {
   display: inline-flex;
   align-items: center;
@@ -1955,15 +1955,12 @@ button:hover .side-panel-close-x {
   text-decoration: none;
   font-family: 'Manrope', Arial, Helvetica, sans-serif;
   transition: opacity 0.3s ease;
-  color: #6b5ce7;
-  background: #fff;
-  border: 1.5px solid transparent;
-  background-image: linear-gradient(#fff, #fff), linear-gradient(135deg, #8258c8, #2c84c8);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
+  color: #fff;
+  border: none;
+  background-image: linear-gradient(135deg, #8258c8, #2c84c8);
 }
 .dna-download-btn:hover {
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 /* DNA Section 2 - Technology Tabs responsive */
