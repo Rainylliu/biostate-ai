@@ -247,6 +247,8 @@ export default function Section3GlobalMap() {
                   color: "#1f1f1f",
                   margin: "0 0 12px",
                   lineHeight: 1.2,
+                  whiteSpace: "nowrap",
+                  letterSpacing: "-0.5px",
                 }}
               >
                 {country.name}
