@@ -452,6 +452,7 @@ export default function RNAPage() {
 
       {/* Section 4 - Scrolling Banner */}
       <section
+        className="s4-diagonal-banner"
         style={{
           transform: "rotate(-2.07deg)",
           backgroundImage: "linear-gradient(92deg, #45D0BD 0%, #44B6E9 100%)",
