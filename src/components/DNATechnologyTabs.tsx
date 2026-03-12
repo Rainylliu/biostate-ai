@@ -67,7 +67,7 @@ export default function DNATechnologyTabs() {
           display: "grid",
           gridTemplateColumns: "1fr 1fr 1fr",
           gap: "16px",
-          marginBottom: "24px",
+          marginBottom: "16px",
         }}
       >
         {tabs.map((t) => {
@@ -82,7 +82,7 @@ export default function DNATechnologyTabs() {
                 alignItems: "center",
                 justifyContent: "center",
                 gap: "16px",
-                padding: "40px",
+                padding: "28px 40px",
                 borderRadius: "25px",
                 border: isActive ? "1px solid transparent" : "1px solid #3F3F3F",
                 backgroundImage: isActive
@@ -122,11 +122,10 @@ export default function DNATechnologyTabs() {
           backgroundColor: "#fff",
           borderRadius: "20px",
           boxShadow: "0 4px 32px rgba(0,0,0,0.06)",
-          padding: "48px",
+          padding: "32px 40px",
           display: "flex",
           gap: "48px",
           alignItems: "center",
-          minHeight: "480px",
           border: "1px solid #eee",
         }}
       >
