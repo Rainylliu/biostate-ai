@@ -241,8 +241,8 @@ export default function Section3GlobalMap() {
               <h3
                 style={{
                   fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-                  fontSize: "clamp(22px, 2.5vw, 48px)",
-                  fontWeight: 500,
+                  fontSize: "clamp(22px, 3.5vw, 64px)",
+                  fontWeight: 400,
                   color: "#1f1f1f",
                   margin: "0 0 12px",
                   lineHeight: 1.2,

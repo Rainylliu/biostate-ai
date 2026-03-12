@@ -1744,8 +1744,8 @@ button:hover .side-panel-close-x {
 }
 .pub-featured-title {
   font-family: 'Sora', Arial, Helvetica, sans-serif;
-  font-size: 40px;
-  font-weight: 600;
+  font-size: 64px;
+  font-weight: 400;
   color: #111;
   margin: 0 0 12px 0;
 }
@@ -1943,24 +1943,17 @@ button:hover .side-panel-close-x {
   }
 }
 
-/* DNA Section 2 - Download button (solid gradient fill) */
-.dna-download-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 28px;
-  border-radius: 50px;
-  font-size: 15px;
-  font-weight: 500;
-  text-decoration: none;
-  font-family: 'Manrope', Arial, Helvetica, sans-serif;
-  transition: opacity 0.3s ease;
-  color: #fff;
-  border: none;
-  background-image: linear-gradient(135deg, #8258c8, #2c84c8);
+/* Gradient-filled variant of book-a-call-btn */
+.book-a-call-btn-gradient {
+  background: linear-gradient(135deg, #8258c8, #2c84c8);
+  color: #ffffff;
 }
-.dna-download-btn:hover {
-  opacity: 0.85;
+.book-a-call-btn-gradient::before {
+  display: none;
+}
+.book-a-call-btn-gradient:hover {
+  background: linear-gradient(135deg, #9568d8, #3c94d8);
+  color: #ffffff;
 }
 
 /* DNA Section 2 - Technology Tabs responsive */
@@ -2004,10 +1997,6 @@ button:hover .side-panel-close-x {
   .dna-tab-content-card {
     padding: 24px !important;
     min-height: auto !important;
-  }
-  .dna-download-btn {
-    font-size: 13px !important;
-    padding: 12px 20px !important;
   }
 }
 

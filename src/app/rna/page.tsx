@@ -121,7 +121,7 @@ export default function RNAPage() {
             delay={300}
             className="rna-heading"
             style={{
-              fontSize: "48px",
+              fontSize: "64px",
               fontWeight: 400,
               lineHeight: "1.15em",
               textAlign: "left",
@@ -377,7 +377,7 @@ export default function RNAPage() {
                 className="rna-heading"
                 delay={300}
                 style={{
-                  fontSize: "48px",
+                  fontSize: "64px",
                   fontWeight: 400,
                   lineHeight: "1.15em",
                   textAlign: "left",
@@ -408,7 +408,7 @@ export default function RNAPage() {
                   className="rna-heading"
                   style={{
                     textAlign: "left",
-                    fontSize: "48px",
+                    fontSize: "64px",
                     fontWeight: 700,
                     lineHeight: "1.3em",
                     letterSpacing: "-0.05em",
@@ -559,7 +559,7 @@ export default function RNAPage() {
                   as="h3"
                   className="rna-heading"
                   style={{
-                    fontSize: "48px",
+                    fontSize: "64px",
                     fontWeight: 400,
                     lineHeight: "1.15em",
                     color: "#ffffff",
@@ -653,7 +653,7 @@ export default function RNAPage() {
                 as="h2"
                 className="rna-heading"
                 style={{
-                  fontSize: "48px",
+                  fontSize: "64px",
                   fontWeight: 400,
                   lineHeight: "1.15em",
                   color: "#333333",
