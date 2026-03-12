@@ -80,6 +80,9 @@ export default function DNAPage() {
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   color: "transparent",
+                  display: "inline-block",
+                  padding: "0.1em 0",
+                  margin: "-0.1em 0",
                 }}
               >
                 DNA
