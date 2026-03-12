@@ -195,6 +195,7 @@ img {
   .footer-contact-row {
     flex-direction: row !important;
     align-items: center !important;
+    justify-content: space-between !important;
     gap: 0 !important;
   }
   .footer-contact-value {
