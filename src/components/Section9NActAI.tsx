@@ -54,7 +54,7 @@ export default function Section9NActAI() {
             className="home-section-heading"
             style={{
               fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-              fontSize: 64,
+              fontSize: 48,
               fontWeight: 400,
               color: "#333333",
               margin: "0 0 24px 0",

@@ -68,7 +68,7 @@ export default function Section7Wetlab() {
           <h3
             style={{
               fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-              fontSize: 64,
+              fontSize: 48,
               fontWeight: 400,
               color: "#333333",
               lineHeight: 1.15,
@@ -212,7 +212,7 @@ export default function Section7Wetlab() {
           <h3
             style={{
               fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-              fontSize: 64,
+              fontSize: 48,
               fontWeight: 400,
               color: "#333333",
               lineHeight: 1.15,
