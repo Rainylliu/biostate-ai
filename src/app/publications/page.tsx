@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import PublicationsList from "@/components/PublicationsList";
+import { featuredPublications, fullPublications } from "@/data/publications";
 
 export const metadata: Metadata = {
   title: "Publications - biostate.AI",
@@ -8,78 +10,94 @@ export const metadata: Metadata = {
 export default function PublicationPage() {
   return (
     <div>
-      {/* ── Hero Section ── */}
-      <section
+      {/* ── Wrapper with shared background image spanning hero + sections ── */}
+      <div
         style={{
           position: "relative",
           overflow: "hidden",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          textAlign: "center",
-          padding: "120px 20px 80px",
           background: "#ffffff",
         }}
       >
         {/* Background SVG */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/images/publication_bg.svg"
           alt=""
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            userSelect: "none",
-            pointerEvents: "none",
-          }}
+          className="pub-bg-img"
         />
 
-        {/* Content */}
-        <h1
+        {/* ── Hero Section ── */}
+        <section
           style={{
             position: "relative",
-            fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-            fontSize: 100,
-            fontWeight: 500,
-            color: "#111",
-            lineHeight: 1.15,
-            margin: "0 0 24px 0",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
+            padding: "120px 20px 80px",
           }}
         >
-          Our{" "}
-          <span
+          <h1
+            className="pub-hero-title"
             style={{
-              background: "linear-gradient(135deg, #8258c8, #2c84c8)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
+              fontFamily: "'Sora', Arial, Helvetica, sans-serif",
+              fontWeight: 500,
+              color: "#111",
+              lineHeight: 1.15,
+              margin: "0 0 24px 0",
             }}
           >
-            Publications
-          </span>
-        </h1>
+            Our{" "}
+            <span
+              style={{
+                background: "linear-gradient(135deg, #8258c8, #2c84c8)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              Publications
+            </span>
+          </h1>
 
-        <p
-          style={{
-            position: "relative",
-            fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-            fontSize: 18,
-            fontWeight: 400,
-            color: "#555",
-            lineHeight: 1.6,
-            maxWidth: 600,
-            margin: 0,
-          }}
-        >
-          Advancing scientific understanding through evidence-based research
-          <br />
-          and collaborative innovation.
-        </p>
-      </section>
+          <p
+            className="pub-hero-subtitle"
+            style={{
+              fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+              fontWeight: 400,
+              color: "#555",
+              lineHeight: 1.6,
+              maxWidth: 600,
+              margin: 0,
+            }}
+          >
+            Advancing scientific understanding through evidence-based research
+            <br />
+            and collaborative innovation.
+          </p>
+        </section>
+
+        {/* ── Section 1: Featured Publications ── */}
+        <section className="pub-featured-content" style={{ position: "relative" }}>
+          <PublicationsList
+            items={featuredPublications}
+            title="Featured Publications"
+            subtitle="A curated selection of our most impactful and widely recognized research."
+            id="pub-featured"
+          />
+        </section>
+
+        {/* ── Section 2: Full Publication Library ── */}
+        <section className="pub-featured-content" style={{ position: "relative" }}>
+          <PublicationsList
+            items={fullPublications}
+            title="Full Publication Library"
+            subtitle="Browse our full collection of published research and papers."
+            id="pub-full"
+          />
+        </section>
+      </div>
     </div>
   );
 }
