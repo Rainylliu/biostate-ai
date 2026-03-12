@@ -1579,6 +1579,15 @@ button:hover .side-panel-close-x {
 }
 
 /* ── Publications Page ── */
+.pub-bg-img {
+  position: absolute;
+  top: -200px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  user-select: none;
+  pointer-events: none;
+}
 .pub-hero-title {
   font-size: 100px;
 }
@@ -1746,6 +1755,9 @@ button:hover .side-panel-close-x {
 
 /* Publications responsive */
 @media (max-width: 768px) {
+  .pub-bg-img {
+    top: -80px;
+  }
   .pub-hero-title {
     font-size: 48px !important;
   }

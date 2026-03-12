@@ -22,15 +22,7 @@ export default function PublicationPage() {
         <img
           src="/images/publication_bg.svg"
           alt=""
-          style={{
-            position: "absolute",
-            top: -200,
-            left: 0,
-            width: "100%",
-            height: "auto",
-            userSelect: "none",
-            pointerEvents: "none",
-          }}
+          className="pub-bg-img"
         />
 
         {/* ── Section 1: Hero ── */}
