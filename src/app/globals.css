@@ -1110,6 +1110,15 @@ button:hover .side-panel-close-x {
   animation: headerSlideDown 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
+/* ── Loading Screen Breathing Animation ── */
+@keyframes loadingBreath {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+.loading-pulse {
+  animation: loadingBreath 3s ease-in-out infinite;
+}
+
 /* ── Wave Character Reveal Animation ── */
 @keyframes headingFadeIn {
   from { opacity: 0; }

@@ -63,6 +63,7 @@ export default function LoadingScreen({ onDone }: { onDone?: () => void }) {
       <img
         src="/images/timer.svg"
         alt="Loading"
+        className="loading-pulse"
         style={{ width: "20%", height: "auto" }}
       />
     </div>
