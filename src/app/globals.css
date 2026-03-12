@@ -1655,9 +1655,6 @@ button:hover .side-panel-close-x {
   padding: 40px 0;
   border-bottom: 1px solid #e5e5e5;
 }
-.pub-item:first-child {
-  border-top: 1px solid #e5e5e5;
-}
 .pub-item-categories {
   display: flex;
   flex-wrap: wrap;
