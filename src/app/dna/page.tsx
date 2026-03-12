@@ -57,7 +57,7 @@ export default function DNAPage() {
                 letterSpacing: "0.02em",
               }}
             >
-              [ Grants for 30 free sample available ! ]
+              [ intro ]
             </p>
 
             {/* Heading */}
@@ -66,8 +66,9 @@ export default function DNAPage() {
               style={{
                 fontSize: "clamp(36px, 5vw, 80px)",
                 fontWeight: 400,
-                lineHeight: "1.1em",
+                lineHeight: "1.15em",
                 letterSpacing: "-0.01em",
+                paddingTop: "4px",
                 color: "#1a1a1a",
                 textAlign: "left",
               }}
