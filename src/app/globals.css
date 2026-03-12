@@ -1442,6 +1442,18 @@ button:hover .side-panel-close-x {
   }
 }
 
+/* DNA Hero responsive */
+@media (max-width: 768px) {
+  .dna-hero-section {
+    padding-top: 100px !important;
+    padding-bottom: 40px !important;
+    min-height: auto !important;
+  }
+  .dna-hero-section h1 {
+    font-size: 48px !important;
+  }
+}
+
 /* Standard Samples price spacing on PC/tablet */
 @media (min-width: 769px) {
   .standard-price-cta {
