@@ -53,7 +53,7 @@ export default function DNAPage() {
               style={{
                 fontSize: "14px",
                 fontWeight: 500,
-                color: "#555555",
+                color: "#111111",
                 marginBottom: "16px",
                 letterSpacing: "0.02em",
               }}
@@ -145,7 +145,7 @@ export default function DNAPage() {
                 style={{
                   fontSize: "14px",
                   fontWeight: 400,
-                  color: "#888",
+                  color: "#111111",
                   margin: "0 0 12px 0",
                   letterSpacing: "0.02em",
                 }}
