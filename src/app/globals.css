@@ -1446,6 +1446,10 @@ button:hover .side-panel-close-x {
   .home-section-heading {
     font-size: 36px !important;
   }
+  /* All h3 headings 28px on mobile */
+  h3 {
+    font-size: 28px !important;
+  }
   /* Section 8 K-Dense feature icons: 60px on mobile */
   .s8-feature-icon {
     width: 60px !important;
