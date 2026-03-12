@@ -19,32 +19,25 @@ export default function Section9NActAI() {
       <div className="s9-container">
         {/* Left - Content */}
         <div className="s9-left">
-          {/* N-Act AI - stroke/outline text with gradient, no fill */}
-          <svg
-            viewBox="0 0 480 80"
+          {/* N-Act AI - outline text with gradient stroke, matching BIRT style */}
+          <h2
             className="s9-outline-title"
-            xmlns="http://www.w3.org/2000/svg"
+            style={{
+              fontFamily: "'Sora', Arial, Helvetica, sans-serif",
+              fontSize: 72,
+              fontWeight: 400,
+              lineHeight: 1,
+              letterSpacing: "-0.02em",
+              backgroundImage: "linear-gradient(135deg, #8258C8, #2C84C8)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "white",
+              WebkitTextStrokeWidth: "1.5px",
+              paintOrder: "stroke fill",
+              margin: "0 0 16px 0",
+            }}
           >
-            <defs>
-              <linearGradient id="s9-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#8258C8" />
-                <stop offset="100%" stopColor="#2C84C8" />
-              </linearGradient>
-            </defs>
-            <text
-              x="0"
-              y="62"
-              fontFamily="'Sora', Arial, Helvetica, sans-serif"
-              fontSize="72"
-              fontWeight="400"
-              fill="none"
-              stroke="url(#s9-grad)"
-              strokeWidth="1.5"
-              letterSpacing="-1"
-            >
-              N-Act AI
-            </text>
-          </svg>
+            N-Act AI
+          </h2>
 
           <p className="s7-tag">[ about ]</p>
 
@@ -221,10 +214,6 @@ export default function Section9NActAI() {
           flex-direction: column;
         }
         .s9-outline-title {
-          width: 400px;
-          max-width: 100%;
-          height: auto;
-          margin: 0 0 16px 0;
           display: block;
         }
         .s9-right {
@@ -252,7 +241,7 @@ export default function Section9NActAI() {
             width: 100%;
           }
           .s9-outline-title {
-            width: 260px;
+            font-size: 48px !important;
           }
         }
       `}</style>

@@ -1398,8 +1398,10 @@ button:hover .side-panel-close-x {
   font-size: 64px;
   font-weight: 400;
   line-height: 1;
-  color: transparent;
-  -webkit-text-stroke: 1.5px #6766c8;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #6766c8;
+  paint-order: stroke fill;
   flex-shrink: 0;
   user-select: none;
 }
