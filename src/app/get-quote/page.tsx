@@ -8,9 +8,10 @@ export const metadata: Metadata = {
 
 export default function GetQuotePage() {
   return (
-    <div id="quote-top">
+    <div id="quote-top" style={{ overflowX: "hidden" }}>
       {/* Page Header Banner */}
       <section
+        className="get-quote-hero"
         style={{
           position: "relative",
           width: "calc(100% - 48px)",
@@ -144,6 +145,7 @@ export default function GetQuotePage() {
         >
           {/* Title - centered */}
           <h1
+            className="get-quote-hero-title"
             style={{
               fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
               fontSize: "clamp(36px, 5vw, 56px)",
@@ -182,6 +184,7 @@ export default function GetQuotePage() {
 
       {/* Title - full width centered */}
       <h2
+        className="get-quote-subtitle"
         style={{
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
           fontSize: "clamp(40px, 5vw, 64px)",

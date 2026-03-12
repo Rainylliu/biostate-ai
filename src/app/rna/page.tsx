@@ -12,11 +12,11 @@ export const metadata: Metadata = {
 
 export default function RNAPage() {
   return (
-    <div>
+    <div style={{ overflowX: "hidden" }}>
       {/* Section 1 - Hero */}
-      <section className="py-16 lg:py-24" style={{ marginTop: "80px" }}>
+      <section className="py-8 lg:py-24" style={{ marginTop: "80px" }}>
         <div className="container">
-          <div className="relative flex flex-col lg:flex-row items-center gap-12 lg:gap-[8%]">
+          <div className="relative flex flex-col lg:flex-row items-center gap-6 lg:gap-[8%]">
             {/* Background circle */}
             <div
               className="absolute inset-0 flex items-center justify-center pointer-events-none"
@@ -63,14 +63,14 @@ export default function RNAPage() {
                 Innovation
               </h1>
 
-              <p className="leading-relaxed" style={{ fontSize: "18px", color: "#333333", margin: "35px 10px 35px 0px", paddingLeft: "6px", paddingRight: "10%" }}>
+              <p className="leading-relaxed" style={{ fontSize: "18px", color: "#333333", margin: "20px 10px 20px 0px", paddingLeft: "6px", paddingRight: "10%" }}>
                 Biostate AI&apos;s platform connects samples, data, and clinical
                 decisions — making precision health scalable, accessible, and
                 actionable through low-cost sequencing and autonomous AI
                 scientists.
               </p>
 
-              <div style={{ marginTop: "35px", paddingLeft: "6px" }}>
+              <div style={{ marginTop: "20px", paddingLeft: "6px" }}>
                 <a
                   href="https://calendly.com/rachan-raj-biostate/biostate-ai-introduction-services"
                   target="_blank"
@@ -119,6 +119,7 @@ export default function RNAPage() {
             text="What types of RNA sequencing samples do we handle?"
             as="h2"
             delay={300}
+            className="rna-heading"
             style={{
               fontSize: "48px",
               fontWeight: 400,
@@ -133,11 +134,11 @@ export default function RNAPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Standard Samples Card */}
             <div
-              className="rounded-[25px] flex flex-col relative"
+              className="rna-price-card rounded-[25px] flex flex-col relative"
               style={{
                 background: "linear-gradient(114deg, #C6F8F1 0%, #A3F5FF 100%)",
                 minHeight: "580px",
-                padding: "68px 68px 240px 82px",
+                padding: "60px 40px",
                 margin: "10px",
               }}
             >
@@ -145,9 +146,9 @@ export default function RNAPage() {
               <img
                 src="/images/pricecard1.svg"
                 alt="Standard Samples"
-                width={62}
-                height={70}
-                style={{ position: "absolute", top: "68px", right: "40px" }}
+                width={50}
+                height={56}
+                style={{ position: "absolute", top: "30px", right: "40px" }}
               />
               {/* Card Header */}
               <div>
@@ -167,7 +168,7 @@ export default function RNAPage() {
                 </div>
 
                 {/* Bullet Points */}
-                <ul style={{ paddingTop: "32px", fontSize: "16px", color: "#333333", fontWeight: 500, lineHeight: "1.875em", display: "flex", flexDirection: "column", gap: "12px", listStyle: "none" }}>
+                <ul style={{ paddingTop: "32px", fontSize: "14px", color: "#333333", fontWeight: 500, lineHeight: "1.875em", display: "flex", flexDirection: "column", gap: "12px", listStyle: "none" }}>
                   <li className="flex items-baseline gap-2"><img src="/images/arrow1.svg" alt="" className="w-[5px] h-[5px] shrink-0" /> Cultured animal cells with &gt;30,000 cells</li>
                   <li className="flex items-baseline gap-2"><img src="/images/arrow1.svg" alt="" className="w-[5px] h-[5px] shrink-0" /> Extracted RNA from Mammalian samples</li>
                   <li className="flex items-baseline gap-2"><img src="/images/arrow1.svg" alt="" className="w-[5px] h-[5px] shrink-0" /> {"The Conc. ≥ 16 ng/μL (min 10 μl)"}</li>
@@ -175,9 +176,9 @@ export default function RNAPage() {
               </div>
 
               {/* Price + CTA */}
-              <div style={{ position: "absolute", top: "360px", left: "82px", right: "68px" }}>
+              <div style={{ marginTop: "auto", paddingTop: "40px" }}>
                 <div className="flex items-baseline" style={{ marginBottom: "20px" }}>
-                  <span style={{ fontSize: "60px", fontWeight: 700, lineHeight: "1em", letterSpacing: "-0.03em", color: "#333333", fontFamily: "'Sora', Arial, Helvetica, sans-serif" }}>
+                  <span style={{ fontSize: "56px", fontWeight: 700, lineHeight: "1em", letterSpacing: "-0.03em", color: "#333333", fontFamily: "'Sora', Arial, Helvetica, sans-serif" }}>
                     $60
                   </span>
                   <span style={{ fontSize: "20px", fontWeight: 400, color: "#333333", fontFamily: "'Sora', Arial, Helvetica, sans-serif" }}>
@@ -205,11 +206,11 @@ export default function RNAPage() {
 
             {/* Specialty Samples Card */}
             <div
-              className="rounded-[25px] flex flex-col relative"
+              className="rna-price-card rounded-[25px] flex flex-col relative"
               style={{
                 backgroundColor: "#f0f2f4",
                 minHeight: "580px",
-                padding: "68px 68px 240px 82px",
+                padding: "60px 40px",
                 margin: "10px",
               }}
             >
@@ -217,9 +218,9 @@ export default function RNAPage() {
               <img
                 src="/images/pricecard2.svg"
                 alt="Specialty Samples"
-                width={68}
-                height={73}
-                style={{ position: "absolute", top: "68px", right: "40px" }}
+                width={55}
+                height={59}
+                style={{ position: "absolute", top: "30px", right: "40px" }}
               />
               {/* Card Header */}
               <div>
@@ -239,7 +240,7 @@ export default function RNAPage() {
                 </div>
 
                 {/* Bullet Points */}
-                <ul style={{ paddingTop: "32px", fontSize: "16px", color: "#333333", fontWeight: 500, lineHeight: "1.875em", display: "flex", flexDirection: "column", gap: "12px", listStyle: "none" }}>
+                <ul style={{ paddingTop: "32px", fontSize: "14px", color: "#333333", fontWeight: 500, lineHeight: "1.875em", display: "flex", flexDirection: "column", gap: "12px", listStyle: "none" }}>
                   <li className="flex items-baseline gap-2"><img src="/images/arrow1.svg" alt="" className="w-[5px] h-[5px] shrink-0" /> Specialty and low-concentration RNA (evRNA, cfRNA)</li>
                   <li className="flex items-baseline gap-2"><img src="/images/arrow1.svg" alt="" className="w-[5px] h-[5px] shrink-0" /> Biospecimens and clinical samples (whole blood, plasma, serum, PBMC, tissues, FFPE)</li>
                   <li className="flex items-baseline gap-2"><img src="/images/arrow1.svg" alt="" className="w-[5px] h-[5px] shrink-0" /> {"Unusual organisms (plants, octopus, axolotl, ...)"}</li>
@@ -248,9 +249,9 @@ export default function RNAPage() {
               </div>
 
               {/* Price + CTA + Note */}
-              <div style={{ position: "absolute", top: "360px", left: "82px", right: "68px" }}>
+              <div style={{ marginTop: "auto", paddingTop: "40px" }}>
                 <div className="flex items-baseline" style={{ marginBottom: "20px" }}>
-                  <span style={{ fontSize: "60px", fontWeight: 700, lineHeight: "1em", letterSpacing: "-0.03em", color: "#333333", fontFamily: "'Sora', Arial, Helvetica, sans-serif" }}>
+                  <span style={{ fontSize: "56px", fontWeight: 700, lineHeight: "1em", letterSpacing: "-0.03em", color: "#333333", fontFamily: "'Sora', Arial, Helvetica, sans-serif" }}>
                     $110
                   </span>
                   <span style={{ fontSize: "20px", fontWeight: 400, color: "#333333", fontFamily: "'Sora', Arial, Helvetica, sans-serif" }}>
@@ -284,6 +285,7 @@ export default function RNAPage() {
 
       {/* Section 3 - BIRT Technology */}
       <section
+        className="rna-birt-section"
         style={{
           marginTop: "80px",
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
@@ -332,6 +334,7 @@ export default function RNAPage() {
             <div className="w-full lg:w-[55%] py-16 lg:py-24">
               {/* BIRT Large Title */}
               <h2
+                className="rna-birt-title"
                 style={{
                   padding: "0px 5px 0px 0px",
                   fontSize: "200px",
@@ -371,6 +374,7 @@ export default function RNAPage() {
               <WaveReveal
                 text="Affordable and Scalable RNA Sequencing Platform"
                 as="h3"
+                className="rna-heading"
                 delay={300}
                 style={{
                   fontSize: "48px",
@@ -401,6 +405,7 @@ export default function RNAPage() {
               {/* Highlights */}
               <div style={{ marginBottom: "30px" }}>
                 <h1
+                  className="rna-heading"
                   style={{
                     textAlign: "left",
                     fontSize: "48px",
@@ -550,6 +555,7 @@ export default function RNAPage() {
                 <WaveReveal
                   text="Efficient, Scalable, and Reproducible RNA Sequencing"
                   as="h3"
+                  className="rna-heading"
                   style={{
                     fontSize: "48px",
                     fontWeight: 400,
@@ -611,9 +617,10 @@ export default function RNAPage() {
           {/* Top Row - 20,000+ and Heading */}
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16" style={{ marginBottom: "60px" }}>
             {/* Left - 20,000+ outline text */}
-            <div className="flex items-end gap-2">
+            <div className="rna-countup-group flex items-end gap-1">
               <CountUp end={20000} suffix="+" style={{ marginLeft: "40px" }} />
               <span
+                className="rna-countup-label"
                 style={{
                   writingMode: "vertical-rl",
                   fontSize: "16px",
@@ -642,6 +649,7 @@ export default function RNAPage() {
               <WaveReveal
                 text="High Reproducibility and Superior Data Quality"
                 as="h2"
+                className="rna-heading"
                 style={{
                   fontSize: "48px",
                   fontWeight: 400,
@@ -664,9 +672,9 @@ export default function RNAPage() {
           </div>
 
           {/* Bottom Row - Two Chart Cards */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8" style={{ padding: "40px" }}>
+          <div className="rna-charts-grid grid grid-cols-1 lg:grid-cols-2 gap-8" style={{ padding: "40px" }}>
             {/* Left - High Reproducibility */}
-            <div style={{ paddingRight: "11%" }}>
+            <div className="rna-chart-item" style={{ paddingRight: "11%" }}>
               <div
                 className="chart-card"
                 style={{
@@ -720,7 +728,7 @@ export default function RNAPage() {
             </div>
 
             {/* Right - Superior Quality */}
-            <div style={{ paddingLeft: "11%", marginTop: "11%" }}>
+            <div className="rna-chart-item" style={{ paddingLeft: "11%", marginTop: "11%" }}>
               <div
                 className="chart-card"
                 style={{
@@ -784,15 +792,9 @@ export default function RNAPage() {
         }}
       >
         <div className="container">
-          <div
-            style={{
-              display: "flex",
-              gap: "20px",
-              alignItems: "stretch",
-            }}
-          >
+          <div className="rna-s6-grid">
             {/* Left card */}
-            <div style={{ flex: "0 0 auto", width: "calc((903 / (903 + 956)) * 100%)" }}>
+            <div className="rna-s6-left">
               <img
                 src="/images/section6card1.svg"
                 alt="Our capabilities"
@@ -800,14 +802,7 @@ export default function RNAPage() {
               />
             </div>
             {/* Right column */}
-            <div
-              style={{
-                flex: 1,
-                display: "flex",
-                flexDirection: "column",
-                gap: "20px",
-              }}
-            >
+            <div className="rna-s6-right">
               <img
                 src="/images/section6card2.svg"
                 alt="Validated across key sample types"
@@ -831,14 +826,7 @@ export default function RNAPage() {
       >
         <div className="container">
           {/* Header area */}
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "flex-start",
-              marginBottom: "50px",
-            }}
-          >
+          <div className="rna-perd-header">
             {/* Left side */}
             <div>
               <p
@@ -883,7 +871,7 @@ export default function RNAPage() {
               />
             </div>
             {/* Right side */}
-            <div style={{ maxWidth: "420px", paddingTop: "80px" }}>
+            <div className="rna-perd-right" style={{ maxWidth: "420px", paddingTop: "80px" }}>
               <p
                 style={{
                   fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
@@ -910,21 +898,15 @@ export default function RNAPage() {
           </div>
 
           {/* Cards */}
-          <div
-            style={{
-              display: "flex",
-              gap: "20px",
-              alignItems: "stretch",
-            }}
-          >
-            <div style={{ flex: "0 0 auto", width: "calc((627 / (627 + 1241)) * 100%)" }}>
+          <div className="rna-perd-cards">
+            <div className="rna-perd-card1">
               <img
                 src="/images/PERDcard1.svg"
                 alt="Streamlined Chemistry, Clearer Expression, High-Quality Output"
                 style={{ width: "100%", height: "100%", display: "block", objectFit: "cover", borderRadius: "25px" }}
               />
             </div>
-            <div style={{ flex: 1 }}>
+            <div className="rna-perd-card2">
               <img
                 src="/images/PERDcard2.svg"
                 alt="PERD Method for Removing RNA"

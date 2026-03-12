@@ -10,6 +10,7 @@ export default function SalesTCPage() {
     <div>
       {/* Page Header Banner */}
       <section
+        className="get-quote-hero"
         style={{
           position: "relative",
           width: "calc(100% - 48px)",
@@ -138,6 +139,7 @@ export default function SalesTCPage() {
           }}
         >
           <h1
+            className="get-quote-hero-title"
             style={{
               fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
               fontSize: "clamp(36px, 5vw, 56px)",
