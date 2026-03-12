@@ -340,7 +340,7 @@ export default function DNAPage() {
       <section
         style={{
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-          marginTop: "50px",
+          marginTop: "20px",
         }}
       >
         <div className="container">
@@ -381,7 +381,7 @@ export default function DNAPage() {
                     fontWeight: 600,
                     lineHeight: 1.2,
                     color: "#ffffff",
-                    marginBottom: "24px",
+                    marginBottom: "40px",
                   }}
                 >
                   FFPE Tissue (Single 4-micron Slide)
@@ -439,7 +439,7 @@ export default function DNAPage() {
                     fontWeight: 600,
                     lineHeight: 1.2,
                     color: "#ffffff",
-                    marginBottom: "24px",
+                    marginBottom: "40px",
                   }}
                 >
                   Dried Blood Spot (Half-Circle)
@@ -486,7 +486,7 @@ export default function DNAPage() {
                   fontWeight: 600,
                   lineHeight: 1.2,
                   color: "#ffffff",
-                  marginBottom: "24px",
+                  marginBottom: "40px",
                 }}
               >
                 Benchmark Genomic DNA
