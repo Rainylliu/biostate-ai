@@ -72,7 +72,7 @@ export default function Header() {
           border: `1px solid ${isTransparent ? "rgba(255,255,255,0.25)" : "#e6e8ea"}`,
           borderRadius: "15px",
           transition: "border-color 0.3s ease, color 0.3s ease",
-          ...(isDNA && !scrolled ? { position: "absolute" as const, top: 0, left: 0, right: 0, zIndex: 51 } : {}),
+          ...(isDNA && !scrolled ? { position: "absolute" as const, top: 0, left: 0, right: 0, zIndex: 51, backgroundColor: "#ffffff", borderRadius: "15px" } : {}),
         }}
       >
         <span className="info-top-email" style={{ padding: "0 20px" }}>
@@ -222,7 +222,7 @@ export default function Header() {
           {/* CTA Button */}
           <Link
             href="/get-quote"
-            className={`get-quote-btn hidden lg:inline-flex rounded-full${pathname === "/rna" ? " get-quote-btn-rna" : ""}${isTransparent ? " get-quote-btn-transparent" : ""}`}
+            className={`get-quote-btn hidden lg:inline-flex rounded-full${pathname === "/rna" ? " get-quote-btn-rna" : ""}${isTransparent ? " get-quote-btn-transparent" : ""}${isDNA && !scrolled ? " get-quote-btn-dna" : ""}`}
             style={{
               color: isTransparent ? "#ffffff" : "#1f1f1f",
               fontFamily: "'Manrope', Arial, Helvetica, sans-serif",

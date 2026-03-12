@@ -480,6 +480,46 @@ img {
   color: #333333 !important;
 }
 
+/* DNA page variant - transparent fill, gradient border, dark text */
+.get-quote-btn.get-quote-btn-dna {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  position: relative;
+}
+
+.get-quote-btn.get-quote-btn-dna::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  padding: 2px;
+  background: linear-gradient(90deg, #45d0bd, #44b6e9);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.get-quote-btn.get-quote-btn-dna .get-quote-inner {
+  background: transparent;
+  color: #1f1f1f;
+  position: relative;
+  z-index: 1;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.get-quote-btn.get-quote-btn-dna:hover::before {
+  opacity: 0;
+}
+
+.get-quote-btn.get-quote-btn-dna:hover .get-quote-inner {
+  background: linear-gradient(90deg, #45d0bd, #44b6e9);
+  color: #333333 !important;
+}
+
 /* ── Contact Expert Button (Landing Header) ── */
 .contact-expert-btn {
   border: none !important;
