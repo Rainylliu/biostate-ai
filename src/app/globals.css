@@ -1432,9 +1432,9 @@ button:hover .side-panel-close-x {
   .team-profile-photo {
     margin: 0 auto !important;
   }
-  /* Team leader names on mobile — small enough to fit one line */
+  /* Team leader names on mobile */
   .team-leader-name {
-    font-size: 16px !important;
+    font-size: 20px !important;
     margin-bottom: 16px !important;
   }
   /* All section headings consistent on mobile at 36px */
