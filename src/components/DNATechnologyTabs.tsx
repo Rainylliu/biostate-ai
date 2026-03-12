@@ -91,7 +91,7 @@ export default function DNATechnologyTabs() {
                 backgroundOrigin: isActive ? "border-box" : undefined,
                 backgroundClip: isActive ? "padding-box, border-box" : undefined,
                 backgroundColor: isActive ? "transparent" : "transparent",
-                ...(isActive ? {} : { border: "1px solid #3F3F3F" }),
+                ...(isActive ? {} : { border: "1px solid #eeeeee" }),
                 color: isActive ? "#111111" : "#111111",
                 fontFamily: "'Sora', Arial, Helvetica, sans-serif",
                 fontSize: "20px",
