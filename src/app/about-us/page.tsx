@@ -513,6 +513,7 @@ export default function AboutUsPage() {
           {[0, 1].map((i) => (
             <span
               key={i}
+              className="team-marquee-text"
               style={{
                 display: "inline-block",
                 fontFamily: "'Sora', Arial, Helvetica, sans-serif",

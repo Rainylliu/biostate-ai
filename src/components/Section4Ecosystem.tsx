@@ -186,6 +186,7 @@ export default function Section4Ecosystem() {
 
         {/* Slider content */}
         <div
+          className="trapezoid-content"
           style={{
             position: "relative",
             width: "100%",
@@ -240,6 +241,7 @@ export default function Section4Ecosystem() {
 
             {/* Cards */}
             <div
+              className="trapezoid-card-wrapper"
               style={{
                 width: "100%",
                 height: "min(420px, calc(100vh - 320px))",
