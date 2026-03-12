@@ -491,6 +491,7 @@ export default function RNAPage() {
           >
             {/* Tilted top piece - same angle as banner */}
             <div
+              className="rna-tilted-top"
               style={{
                 position: "absolute",
                 top: "-60px",
