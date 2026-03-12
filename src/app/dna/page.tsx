@@ -136,7 +136,7 @@ export default function DNAPage() {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "flex-end",
-              marginBottom: "32px",
+              marginBottom: "56px",
             }}
           >
             {/* Left - Title */}

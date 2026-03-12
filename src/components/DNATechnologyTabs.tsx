@@ -82,13 +82,16 @@ export default function DNATechnologyTabs() {
                 alignItems: "center",
                 justifyContent: "center",
                 gap: "16px",
-                padding: "28px 40px",
+                padding: "40px 32px",
                 borderRadius: "25px",
-                border: isActive ? "1px solid transparent" : "1px solid #3F3F3F",
+                border: "1px solid transparent",
                 backgroundImage: isActive
-                  ? "linear-gradient(160deg, rgba(255,255,255,1) 30%, rgba(200,180,240,0.3) 100%)"
+                  ? "linear-gradient(160deg, rgba(255,255,255,1) 30%, rgba(200,180,240,0.3) 100%), linear-gradient(135deg, #8258c8, #2c84c8)"
                   : "none",
+                backgroundOrigin: isActive ? "border-box" : undefined,
+                backgroundClip: isActive ? "padding-box, border-box" : undefined,
                 backgroundColor: isActive ? "transparent" : "transparent",
+                ...(isActive ? {} : { border: "1px solid #3F3F3F" }),
                 color: isActive ? "#111111" : "#111111",
                 fontFamily: "'Sora', Arial, Helvetica, sans-serif",
                 fontSize: "20px",
@@ -102,8 +105,8 @@ export default function DNATechnologyTabs() {
               <img
                 src={isActive ? t.iconActive : t.iconInactive}
                 alt=""
-                width={40}
-                height={40}
+                width={55}
+                height={55}
                 style={{
                   flexShrink: 0,
                   transition: "opacity 0.3s ease",
@@ -122,9 +125,9 @@ export default function DNATechnologyTabs() {
           backgroundColor: "#fff",
           borderRadius: "20px",
           boxShadow: "0 4px 32px rgba(0,0,0,0.06)",
-          padding: "32px 40px",
+          padding: "24px 32px",
           display: "flex",
-          gap: "48px",
+          gap: "40px",
           alignItems: "center",
           border: "1px solid #eee",
         }}
@@ -165,7 +168,7 @@ export default function DNATechnologyTabs() {
             style={{
               fontSize: "clamp(28px, 3vw, 40px)",
               fontWeight: 500,
-              margin: "0 0 32px 0",
+              margin: "0 0 20px 0",
               lineHeight: 1.25,
               color: "#111111",
             }}
@@ -181,7 +184,7 @@ export default function DNATechnologyTabs() {
               lineHeight: "1.875em",
               display: "flex",
               flexDirection: "column",
-              gap: "20px",
+              gap: "16px",
             }}
           >
             <TabDescription id={tab.id} />
