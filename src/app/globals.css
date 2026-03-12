@@ -185,24 +185,20 @@ img {
     font-size: 32px !important;
   }
   .footer-contact-info {
-    gap: 30px !important;
+    gap: 40px !important;
   }
   .footer-contact-label {
-    min-width: unset !important;
+    min-width: 130px !important;
     font-size: 14px !important;
+    flex-shrink: 0 !important;
   }
   .footer-contact-row {
-    flex-direction: column !important;
-    gap: 8px !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 0 !important;
   }
   .footer-contact-value {
     font-size: 14px !important;
-  }
-  /* Email and Social network side by side on mobile */
-  .footer-contact-row-inline {
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    align-items: flex-start !important;
   }
   .footer-bio-row {
     flex-direction: column !important;
@@ -239,16 +235,13 @@ img {
   }
   .footer-email-social-row {
     display: flex !important;
-    flex-direction: row !important;
-    gap: 0 !important;
+    flex-direction: column !important;
+    gap: 40px !important;
   }
   .footer-email-social-row .footer-contact-row {
-    flex: 1;
-    flex-direction: column !important;
-    gap: 8px !important;
-  }
-  .footer-email-social-row .footer-contact-value {
-    text-align: left !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 0 !important;
   }
 }
 
