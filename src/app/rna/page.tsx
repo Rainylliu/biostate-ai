@@ -75,7 +75,7 @@ export default function RNAPage() {
                   href="https://calendly.com/rachan-raj-biostate/biostate-ai-introduction-services"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="book-a-call-btn book-a-call-btn-teal group"
+                  className="book-a-call-btn group"
                 >
                   Book a call
                   <span className="book-a-call-arrow">
@@ -108,7 +108,7 @@ export default function RNAPage() {
               lineHeight: "2.142857em",
               fontWeight: 500,
               letterSpacing: "normal",
-              color: "#333333",
+              color: "#111111",
               marginBottom: "16px",
               fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
             }}
@@ -121,7 +121,7 @@ export default function RNAPage() {
             delay={300}
             className="rna-heading"
             style={{
-              fontSize: "48px",
+              fontSize: "64px",
               fontWeight: 400,
               lineHeight: "1.15em",
               textAlign: "left",
@@ -364,7 +364,7 @@ export default function RNAPage() {
                   lineHeight: "2.142857em",
                   fontWeight: 500,
                   letterSpacing: "normal",
-                  color: "#333333",
+                  color: "#111111",
                   marginBottom: "16px",
                   fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                 }}
@@ -377,7 +377,7 @@ export default function RNAPage() {
                 className="rna-heading"
                 delay={300}
                 style={{
-                  fontSize: "48px",
+                  fontSize: "64px",
                   fontWeight: 400,
                   lineHeight: "1.15em",
                   textAlign: "left",
@@ -408,7 +408,7 @@ export default function RNAPage() {
                   className="rna-heading"
                   style={{
                     textAlign: "left",
-                    fontSize: "48px",
+                    fontSize: "64px",
                     fontWeight: 700,
                     lineHeight: "1.3em",
                     letterSpacing: "-0.05em",
@@ -559,7 +559,7 @@ export default function RNAPage() {
                   as="h3"
                   className="rna-heading"
                   style={{
-                    fontSize: "48px",
+                    fontSize: "64px",
                     fontWeight: 400,
                     lineHeight: "1.15em",
                     color: "#ffffff",
@@ -642,7 +642,7 @@ export default function RNAPage() {
                 style={{
                   fontSize: "14px",
                   fontWeight: 500,
-                  color: "#333333",
+                  color: "#111111",
                   marginBottom: "16px",
                 }}
               >
@@ -836,7 +836,7 @@ export default function RNAPage() {
                   fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                   fontSize: "16px",
                   fontWeight: 400,
-                  color: "#333",
+                  color: "#111111",
                   marginBottom: "10px",
                 }}
               >

@@ -32,7 +32,7 @@ export default function AboutUsPage() {
           style={{
             position: "absolute",
             left: "50%",
-            top: "14.5%",
+            top: "28%",
             transform: "translate(-50%, -50%)",
             width: "60%",
             minWidth: 800,
@@ -47,10 +47,10 @@ export default function AboutUsPage() {
             position: "relative",
             fontFamily: "'Sora', Arial, Helvetica, sans-serif",
             fontSize: 100,
-            fontWeight: 500,
+            fontWeight: 400,
             color: "#222",
             lineHeight: 1.15,
-            margin: "-60px 0 24px 0",
+            margin: "0px 0 24px 0",
           }}
         >
           The <span style={{ color: "#6766c8" }}>Team</span> Behind
@@ -107,7 +107,7 @@ export default function AboutUsPage() {
               className="team-profile-name"
               style={{
                 fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-                fontSize: 64,
+                fontSize: 48,
                 fontWeight: 500,
                 color: "#222",
                 margin: "0 0 8px 0",
@@ -349,7 +349,7 @@ export default function AboutUsPage() {
               className="team-section-heading"
               style={{
                 fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-                fontSize: 48,
+                fontSize: 64,
                 fontWeight: 400,
                 color: "#111",
                 margin: "0 0 60px 0",
@@ -548,7 +548,7 @@ export default function AboutUsPage() {
             className="team-section-heading"
             style={{
               fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-              fontSize: 48,
+              fontSize: 64,
               fontWeight: 400,
               color: "#111",
               margin: "0 0 48px 0",

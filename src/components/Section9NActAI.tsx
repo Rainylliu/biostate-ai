@@ -19,7 +19,7 @@ export default function Section9NActAI() {
       <div className="s9-container">
         {/* Left - Content */}
         <div className="s9-left">
-          {/* N-Act AI - stroke/outline text with gradient, no fill */}
+          {/* N-Act AI - SVG outline text with gradient stroke and solid fill */}
           <svg
             viewBox="0 0 480 80"
             className="s9-outline-title"
@@ -37,9 +37,12 @@ export default function Section9NActAI() {
               fontFamily="'Sora', Arial, Helvetica, sans-serif"
               fontSize="72"
               fontWeight="400"
-              fill="none"
+              fill="#f0f2f4"
               stroke="url(#s9-grad)"
-              strokeWidth="1.5"
+              strokeWidth="2.5"
+              strokeLinejoin="round"
+              strokeLinecap="round"
+              paintOrder="stroke fill"
               letterSpacing="-1"
             >
               N-Act AI
@@ -221,10 +224,6 @@ export default function Section9NActAI() {
           flex-direction: column;
         }
         .s9-outline-title {
-          width: 400px;
-          max-width: 100%;
-          height: auto;
-          margin: 0 0 16px 0;
           display: block;
         }
         .s9-right {
@@ -252,7 +251,7 @@ export default function Section9NActAI() {
             width: 100%;
           }
           .s9-outline-title {
-            width: 260px;
+            font-size: 48px !important;
           }
         }
       `}</style>

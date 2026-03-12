@@ -11,7 +11,7 @@ export default function Section7Wetlab() {
     >
       {/* ── Part 1: Intro Header ── */}
       <div style={{ maxWidth: 1200, margin: "0 auto 80px" }}>
-      <div style={{ maxWidth: 800 }}>
+      <div>
         <p className="s7-tag">[ about ]</p>
         <WaveReveal
           text="Next-Gen Wetlab Technology for 85% Lower Cost"
@@ -19,7 +19,7 @@ export default function Section7Wetlab() {
           className="home-section-heading"
           style={{
             fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-            fontSize: 48,
+            fontSize: 64,
             fontWeight: 400,
             color: "#333333",
             margin: "0 0 32px 0",

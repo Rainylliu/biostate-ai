@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import DNATechnologyTabs from "@/components/DNATechnologyTabs";
 
 export const metadata: Metadata = {
   title: "DNA Sequencing - biostate.AI",
@@ -52,7 +53,7 @@ export default function DNAPage() {
               style={{
                 fontSize: "14px",
                 fontWeight: 500,
-                color: "#555555",
+                color: "#111111",
                 marginBottom: "16px",
                 letterSpacing: "0.02em",
               }}
@@ -110,6 +111,86 @@ export default function DNAPage() {
               detection of disease-related genetic variants across all sample types.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Section 2 - Optimized Chemistry / Technology Overview */}
+      <section
+        className="dna-section2"
+        style={{
+          marginTop: "-40px",
+          padding: "0 0 48px",
+          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "1400px",
+            margin: "0 auto",
+            padding: "0 60px",
+          }}
+        >
+          {/* Header row */}
+          <div
+            className="dna-tech-header"
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "flex-end",
+              marginBottom: "80px",
+            }}
+          >
+            {/* Left - Title */}
+            <div>
+              <p
+                style={{
+                  fontSize: "14px",
+                  fontWeight: 400,
+                  color: "#111111",
+                  margin: "0 0 12px 0",
+                  letterSpacing: "0.02em",
+                }}
+              >
+                [ overview ]
+              </p>
+              <h2
+                style={{
+                  fontSize: "clamp(32px, 4.5vw, 64px)",
+                  fontWeight: 400,
+                  lineHeight: 1.2,
+                  color: "#1a1a1a",
+                  margin: 0,
+                  maxWidth: "1000px",
+                }}
+              >
+                Optimized Chemistry Delivers Superior Performance
+              </h2>
+            </div>
+
+            {/* Right - Button */}
+            <div>
+              <a
+                href="/pdf/BIRT-PERD-WhitePaper.pdf"
+                download
+                className="book-a-call-btn book-a-call-btn-gradient group"
+              >
+                Download the white paper
+                <span className="book-a-call-arrow">
+                  <span className="book-a-call-arrow-inner">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          {/* Tabs Component */}
+          <DNATechnologyTabs />
         </div>
       </section>
     </div>

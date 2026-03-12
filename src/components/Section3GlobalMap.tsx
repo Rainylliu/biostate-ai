@@ -80,7 +80,7 @@ export default function Section3GlobalMap() {
             fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
             fontSize: 14,
             fontWeight: 500,
-            color: "#333",
+            color: "#111111",
             marginBottom: 12,
           }}
         >
@@ -92,7 +92,7 @@ export default function Section3GlobalMap() {
           className="home-section-heading"
           style={{
             fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-            fontSize: 48,
+            fontSize: 64,
             fontWeight: 400,
             color: "#111",
             margin: "0 0 48px 0",
@@ -217,8 +217,9 @@ export default function Section3GlobalMap() {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(4, 1fr)",
-            gap: 32,
+            gap: 64,
             marginTop: 56,
+            justifyContent: "space-between",
           }}
         >
           {countries.map((country) => (
@@ -241,11 +242,13 @@ export default function Section3GlobalMap() {
               <h3
                 style={{
                   fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-                  fontSize: "clamp(22px, 2.5vw, 48px)",
-                  fontWeight: 500,
+                  fontSize: 40,
+                  fontWeight: 400,
                   color: "#1f1f1f",
                   margin: "0 0 12px",
                   lineHeight: 1.2,
+                  whiteSpace: "nowrap",
+                  letterSpacing: "-0.5px",
                 }}
               >
                 {country.name}
