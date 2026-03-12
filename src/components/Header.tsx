@@ -23,6 +23,7 @@ export default function Header() {
   if (pathname === "/") isHomeRef.current = true;
   else if (pathname !== "/thank-you") isHomeRef.current = false;
   const isHome = isHomeRef.current;
+  const isDNA = pathname === "/dna";
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [menuHovered, setMenuHovered] = useState(false);
@@ -34,7 +35,9 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // On home page: transparent header overlaying hero, white text
+  // On home page & DNA page: header overlays hero (position absolute)
+  const isOverlay = isHome || isDNA;
+  // Home: white text on dark bg; DNA: dark text on light bg
   const isTransparent = isHome && !scrolled;
 
   // Lock body scroll when side panel or mobile menu is open
@@ -54,7 +57,7 @@ export default function Header() {
 
   return (
     <>
-      {/* Top Info Bar - hidden on home page, outside wrapper so sticky header works */}
+      {/* Top Info Bar - hidden on home page */}
       {!isHome && (
       <div
         className="info-top-bar flex items-center justify-between"
@@ -69,6 +72,7 @@ export default function Header() {
           border: `1px solid ${isTransparent ? "rgba(255,255,255,0.25)" : "#e6e8ea"}`,
           borderRadius: "15px",
           transition: "border-color 0.3s ease, color 0.3s ease",
+          ...(isDNA && !scrolled ? { position: "absolute" as const, top: 0, left: 0, right: 0, zIndex: 51, backgroundColor: "#ffffff", borderRadius: "15px" } : {}),
         }}
       >
         <span className="info-top-email" style={{ padding: "0 20px" }}>
@@ -109,11 +113,11 @@ export default function Header() {
 
       {/* Main Header */}
       <header
-        className={`${isHome ? "" : "sticky top-0 z-50"} ${!isTransparent ? "bg-white" : ""} ${scrolled ? "header-slide-down" : ""}`}
+        className={`${isOverlay ? "" : "sticky top-0 z-50"} ${(isOverlay && !scrolled) ? "" : "bg-white"} ${scrolled ? "header-slide-down" : ""}`}
         style={{
-          ...(isHome ? {
+          ...(isOverlay ? {
             position: scrolled ? "fixed" : "absolute",
-            top: 0,
+            top: (isDNA && !scrolled) ? 56 : 0,
             left: 0,
             right: 0,
             zIndex: 50,
@@ -218,7 +222,7 @@ export default function Header() {
           {/* CTA Button */}
           <Link
             href="/get-quote"
-            className={`get-quote-btn hidden lg:inline-flex rounded-full${pathname === "/rna" ? " get-quote-btn-rna" : ""}${isTransparent ? " get-quote-btn-transparent" : ""}`}
+            className={`get-quote-btn hidden lg:inline-flex rounded-full${pathname === "/rna" ? " get-quote-btn-rna" : ""}${isTransparent ? " get-quote-btn-transparent" : ""}${isDNA && !scrolled ? " get-quote-btn-dna" : ""}`}
             style={{
               color: isTransparent ? "#ffffff" : "#1f1f1f",
               fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
