@@ -16,6 +16,7 @@ export default function Section7Wetlab() {
         <WaveReveal
           text="Next-Gen Wetlab Technology for 85% Lower Cost"
           as="h2"
+          className="home-section-heading"
           style={{
             fontFamily: "'Sora', Arial, Helvetica, sans-serif",
             fontSize: 48,

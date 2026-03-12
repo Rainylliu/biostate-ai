@@ -1442,7 +1442,8 @@ button:hover .side-panel-close-x {
   .section-heading,
   .rna-heading,
   .footer-heading,
-  .pub-featured-title {
+  .pub-featured-title,
+  .home-section-heading {
     font-size: 36px !important;
   }
   /* Section 8 K-Dense feature icons: 60px on mobile */

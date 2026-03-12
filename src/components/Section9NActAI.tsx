@@ -51,6 +51,7 @@ export default function Section9NActAI() {
           <WaveReveal
             text="Turning biological signals into actionable clinical insights"
             as="h2"
+            className="home-section-heading"
             style={{
               fontFamily: "'Sora', Arial, Helvetica, sans-serif",
               fontSize: 48,

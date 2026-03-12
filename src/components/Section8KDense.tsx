@@ -207,6 +207,7 @@ export default function Section8KDense() {
           <WaveReveal
             text="K-Dense: Autonomous AI Scientist"
             as="h2"
+            className="home-section-heading"
             style={{
               fontFamily: "'Sora', Arial, Helvetica, sans-serif",
               fontSize: 48,
