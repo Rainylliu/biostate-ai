@@ -1826,6 +1826,7 @@ button:hover .side-panel-close-x {
   }
   .pub-featured-title {
     font-size: 36px !important;
+    font-weight: 400 !important;
   }
   .pub-featured-subtitle {
     font-size: 14px;
