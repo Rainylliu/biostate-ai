@@ -28,6 +28,13 @@ export default function WaveReveal({
   const [visible, setVisible] = useState(false);
   const loaded = useLoaded();
 
+  // Reset animation state when loaded changes to false (route change)
+  useEffect(() => {
+    if (!loaded) {
+      setVisible(false);
+    }
+  }, [loaded]);
+
   useEffect(() => {
     if (!loaded) return;
     const el = ref.current;
