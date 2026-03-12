@@ -230,8 +230,7 @@ export default function DNAPage() {
               position: "relative",
               backgroundColor: "#1F1F1F",
               borderRadius: "25px",
-              padding: "60px",
-              overflow: "hidden",
+              padding: "20px",
             }}
           >
             {/* Tilted top piece - same angle as banner */}
@@ -251,76 +250,86 @@ export default function DNAPage() {
               }}
             />
 
-            {/* Background SVG */}
-            <img
-              src="/images/DNA_grant.svg"
-              alt=""
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                objectPosition: "center",
-                borderRadius: "25px",
-                pointerEvents: "none",
-              }}
-            />
-
+            {/* Inner content card with background SVG */}
             <div
-              className="flex flex-col lg:flex-row gap-12 lg:gap-8"
-              style={{ position: "relative", zIndex: 1 }}
+              style={{
+                position: "relative",
+                zIndex: 1,
+                borderRadius: "20px",
+                overflow: "hidden",
+                padding: "60px",
+              }}
             >
-              {/* Left - Heading */}
-              <div className="w-full lg:w-1/2">
-                <h3
-                  className="dna-grant-title"
-                  style={{
-                    fontSize: "clamp(36px, 4.5vw, 64px)",
-                    fontWeight: 400,
-                    lineHeight: "1.15em",
-                    color: "#ffffff",
-                  }}
-                >
-                  Consistent Performance Across Challenging Sample Types
-                </h3>
-              </div>
+              {/* Background SVG */}
+              <img
+                src="/images/DNA_grant.svg"
+                alt=""
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  objectPosition: "center",
+                  pointerEvents: "none",
+                }}
+              />
 
-              {/* Right - Description + Button */}
-              <div className="w-full lg:w-1/2" style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                <p
-                  style={{
-                    fontSize: "18px",
-                    fontWeight: 400,
-                    lineHeight: "1.8em",
-                    color: "rgba(255,255,255,0.75)",
-                    marginBottom: "40px",
-                  }}
-                >
-                  Biostate&apos;s optimized workflow demonstrates exceptional
-                  performance across key metrics, overcoming the coverage
-                  uniformity and duplication challenges that undermine variant
-                  detection in standard WES workflows.
-                </p>
-
-                <div>
-                  <a
-                    href="/grant-apply"
-                    className="book-a-call-btn book-a-call-btn-gradient group"
+              <div
+                className="flex flex-col lg:flex-row gap-12 lg:gap-8"
+                style={{ position: "relative", zIndex: 1 }}
+              >
+                {/* Left - Heading */}
+                <div className="w-full lg:w-1/2">
+                  <h3
+                    className="dna-grant-title"
+                    style={{
+                      fontSize: "48px",
+                      fontWeight: 400,
+                      lineHeight: "1.15em",
+                      color: "#ffffff",
+                    }}
                   >
-                    Apply Grants
-                    <span className="book-a-call-arrow">
-                      <span className="book-a-call-arrow-inner">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                          <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                          <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
+                    Consistent Performance Across Challenging Sample Types
+                  </h3>
+                </div>
+
+                {/* Right - Description + Button */}
+                <div className="w-full lg:w-1/2" style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
+                  <p
+                    style={{
+                      fontSize: "18px",
+                      fontWeight: 400,
+                      lineHeight: "1.8em",
+                      color: "rgba(255,255,255,0.75)",
+                      marginBottom: "40px",
+                    }}
+                  >
+                    Biostate&apos;s optimized workflow demonstrates exceptional
+                    performance across key metrics, overcoming the coverage
+                    uniformity and duplication challenges that undermine variant
+                    detection in standard WES workflows.
+                  </p>
+
+                  <div>
+                    <a
+                      href="/grant-apply"
+                      className="book-a-call-btn book-a-call-btn-gradient group"
+                    >
+                      Apply Grants
+                      <span className="book-a-call-arrow">
+                        <span className="book-a-call-arrow-inner">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                          </svg>
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                          </svg>
+                        </span>
                       </span>
-                    </span>
-                  </a>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
