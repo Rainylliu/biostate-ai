@@ -131,36 +131,113 @@ export default function PublicationsList() {
         ))}
       </div>
 
-      {/* Pagination */}
+      {/* Pagination — same style as advisor grid */}
       {totalPages > 1 && (
-        <nav className="pub-pagination" role="navigation" aria-label="Pagination">
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: 8,
+            marginTop: 48,
+          }}
+        >
           {currentPage > 1 && (
             <button
-              className="pub-page-btn pub-page-prev"
               onClick={() => handlePageChange(currentPage - 1)}
+              className="advisor-page-btn advisor-page-nav advisor-nav-prev"
+              style={{
+                height: 40,
+                padding: "0 14px",
+                borderRadius: 10,
+                border: "1px solid #8258c8",
+                background: "#ffffff",
+                color: "#333",
+                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                fontSize: 14,
+                fontWeight: 500,
+                cursor: "pointer",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 6,
+                transition: "background 0.3s ease, color 0.3s ease",
+              }}
             >
               Previous
+              <span className="advisor-nav-arrow">
+                <span className="advisor-nav-arrow-inner">
+                  <svg width="16" height="16" viewBox="0 0 22 22" fill="none" style={{ transform: "scaleX(-1)" }}>
+                    <path d="M6 16L16 6M16 6H7M16 6V15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 22 22" fill="none" style={{ transform: "scaleX(-1)" }}>
+                    <path d="M6 16L16 6M16 6H7M16 6V15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+              </span>
             </button>
           )}
-          {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
             <button
-              key={page}
-              className={`pub-page-btn pub-page-num ${page === currentPage ? "pub-page-current" : ""}`}
-              onClick={() => handlePageChange(page)}
-              aria-current={page === currentPage ? "page" : undefined}
+              key={p}
+              onClick={() => handlePageChange(p)}
+              className="advisor-page-btn"
+              style={{
+                width: 40,
+                height: 40,
+                borderRadius: 10,
+                border: p === currentPage ? "none" : "1px solid #8258c8",
+                background: p === currentPage ? "linear-gradient(135deg, #8258c8, #2c84c8)" : "#ffffff",
+                color: p === currentPage ? "#ffffff" : "#333",
+                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                fontSize: 14,
+                fontWeight: 500,
+                cursor: "pointer",
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                transition: "all 0.2s",
+              }}
             >
-              {page}
+              {p}
             </button>
           ))}
+
           {currentPage < totalPages && (
             <button
-              className="pub-page-btn pub-page-next"
               onClick={() => handlePageChange(currentPage + 1)}
+              className="advisor-page-btn advisor-page-nav"
+              style={{
+                height: 40,
+                padding: "0 14px",
+                borderRadius: 10,
+                border: "1px solid #8258c8",
+                background: "#ffffff",
+                color: "#333",
+                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                fontSize: 14,
+                fontWeight: 500,
+                cursor: "pointer",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 6,
+                transition: "background 0.3s ease, color 0.3s ease",
+              }}
             >
               Next
+              <span className="advisor-nav-arrow">
+                <span className="advisor-nav-arrow-inner">
+                  <svg width="16" height="16" viewBox="0 0 22 22" fill="none">
+                    <path d="M6 16L16 6M16 6H7M16 6V15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 22 22" fill="none">
+                    <path d="M6 16L16 6M16 6H7M16 6V15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+              </span>
             </button>
           )}
-        </nav>
+        </div>
       )}
     </div>
   );

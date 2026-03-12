@@ -1615,7 +1615,9 @@ button:hover .side-panel-close-x {
 .pub-filter-bar {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 28px;
+  padding-bottom: 28px;
+  margin-bottom: 0;
+  border-bottom: 1px solid #e5e5e5;
 }
 .pub-filter-group {
   display: flex;
@@ -1633,16 +1635,17 @@ button:hover .side-panel-close-x {
 .pub-sort-select {
   appearance: none;
   -webkit-appearance: none;
-  padding: 7px 36px 7px 14px;
-  border-radius: 20px;
+  width: 180px;
+  height: 48px;
+  padding: 0 36px 0 16px;
+  border-radius: 10px;
   border: 1.5px solid #d0d0d0;
-  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E") no-repeat right 13px center;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E") no-repeat right 14px center;
   color: #444;
-  font-size: 13px;
+  font-size: 14px;
   cursor: pointer;
   font-family: inherit;
-  line-height: 1.4;
-  min-width: 180px;
+  line-height: 1;
   outline: none;
   transition: border-color 0.18s;
 }
@@ -1750,46 +1753,6 @@ button:hover .side-panel-close-x {
   margin-left: 0;
 }
 
-/* Pagination */
-.pub-pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 48px;
-}
-.pub-page-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 44px;
-  height: 44px;
-  padding: 0 12px;
-  border: 1.5px solid #d0d0d0;
-  border-radius: 22px;
-  background: #fff;
-  color: #444;
-  font-size: 14px;
-  font-family: 'Manrope', Arial, Helvetica, sans-serif;
-  cursor: pointer;
-  transition: all 0.18s;
-}
-.pub-page-btn:hover {
-  background: linear-gradient(135deg, #8258c8, #2c84c8);
-  color: #fff;
-  border-color: transparent;
-}
-.pub-page-current {
-  background: linear-gradient(135deg, #8258c8, #2c84c8);
-  color: #fff;
-  border-color: transparent;
-}
-.pub-page-prev,
-.pub-page-next {
-  padding: 0 20px;
-  font-weight: 500;
-}
-
 /* Publications responsive */
 @media (max-width: 768px) {
   .pub-hero-title {
@@ -1824,17 +1787,8 @@ button:hover .side-panel-close-x {
   }
   .pub-sort-select {
     font-size: 12px;
-    min-width: 140px;
-  }
-  .pub-page-btn {
-    min-width: 40px;
+    width: 140px;
     height: 40px;
-    font-size: 13px;
-  }
-  .pub-page-prev,
-  .pub-page-next {
-    padding: 0 16px;
-    font-size: 13px;
   }
 }
 
