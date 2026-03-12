@@ -76,8 +76,14 @@ export default function PublicationsList() {
 
   return (
     <div>
-      {/* Sort Bar */}
-      <div id="pub-sort-bar" className="pub-filter-bar">
+      {/* Featured header + Sort Bar on same row */}
+      <div id="pub-sort-bar" className="pub-section-header">
+        <div>
+          <h2 className="pub-featured-title">Featured Publications</h2>
+          <p className="pub-featured-subtitle">
+            A curated selection of our most impactful and widely recognized research.
+          </p>
+        </div>
         <div className="pub-filter-group">
           <div className="pub-filter-label">Sort by</div>
           <select

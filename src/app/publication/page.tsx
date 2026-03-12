@@ -85,18 +85,7 @@ export default function PublicationPage() {
           </p>
         </section>
 
-        {/* ── Section 2: Featured Publications header (inside bg wrapper) ── */}
-        <section
-          className="pub-featured-header"
-          style={{ position: "relative" }}
-        >
-          <h2 className="pub-featured-title">Featured Publications</h2>
-          <p className="pub-featured-subtitle">
-            A curated selection of our most impactful and widely recognized research.
-          </p>
-        </section>
-
-        {/* ── Publications list (still inside bg wrapper) ── */}
+        {/* ── Section 2: Featured Publications ── */}
         <section className="pub-featured-content" style={{ position: "relative" }}>
           <PublicationsList />
         </section>
