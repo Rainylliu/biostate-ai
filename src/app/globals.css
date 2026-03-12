@@ -1442,6 +1442,14 @@ button:hover .side-panel-close-x {
   }
 }
 
+/* Standard Samples price spacing on PC/tablet */
+@media (min-width: 769px) {
+  .standard-price-cta {
+    margin-top: 60px !important;
+    padding-top: 40px !important;
+  }
+}
+
 @media (max-width: 768px) {
   /* Consistent mobile hero title size across all pages */
   .team-hero-title {
