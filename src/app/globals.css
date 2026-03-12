@@ -1756,7 +1756,7 @@ button:hover .side-panel-close-x {
 /* Publications responsive */
 @media (max-width: 768px) {
   .pub-bg-img {
-    top: -80px;
+    top: 0;
   }
   .pub-hero-title {
     font-size: 48px !important;
