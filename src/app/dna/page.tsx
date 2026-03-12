@@ -258,6 +258,7 @@ export default function DNAPage() {
                 width: "100%",
                 height: "auto",
                 borderRadius: "25px",
+                paddingTop: "100px",
               }}
             />
 
@@ -283,7 +284,7 @@ export default function DNAPage() {
                   <h3
                     className="dna-grant-title"
                     style={{
-                      fontSize: "48px",
+                      fontSize: "40px",
                       fontWeight: 400,
                       lineHeight: "1.15em",
                       color: "#ffffff",
@@ -297,7 +298,7 @@ export default function DNAPage() {
                 <div className="w-full lg:w-1/2" style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
                   <p
                     style={{
-                      fontSize: "18px",
+                      fontSize: "16px",
                       fontWeight: 400,
                       lineHeight: "1.8em",
                       color: "rgba(255,255,255,0.75)",
