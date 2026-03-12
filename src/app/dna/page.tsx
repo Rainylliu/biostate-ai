@@ -118,7 +118,8 @@ export default function DNAPage() {
       <section
         className="dna-section2"
         style={{
-          padding: "20px 0 48px",
+          marginTop: "-40px",
+          padding: "0 0 48px",
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
         }}
       >
@@ -136,7 +137,7 @@ export default function DNAPage() {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "flex-end",
-              marginBottom: "56px",
+              marginBottom: "80px",
             }}
           >
             {/* Left - Title */}
