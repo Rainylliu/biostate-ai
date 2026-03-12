@@ -47,8 +47,8 @@ export default function DNATechnologyTabs() {
         style={{
           display: "grid",
           gridTemplateColumns: "1fr 1fr 1fr",
-          gap: "0",
-          marginBottom: "0",
+          gap: "16px",
+          marginBottom: "24px",
         }}
       >
         {tabs.map((t) => {
@@ -61,29 +61,30 @@ export default function DNATechnologyTabs() {
               style={{
                 display: "flex",
                 alignItems: "center",
-                gap: "14px",
-                padding: "24px 28px",
-                borderRadius: "12px 12px 0 0",
-                border: "none",
-                borderBottom: isActive
-                  ? "3px solid #7C5CE7"
-                  : "3px solid transparent",
-                backgroundColor: isActive
-                  ? "rgba(130, 88, 200, 0.06)"
-                  : "transparent",
-                color: isActive ? "#1a1a1a" : "#888",
+                gap: "16px",
+                padding: "28px 32px",
+                borderRadius: "16px",
+                border: isActive ? "1.5px solid transparent" : "1.5px solid #d8d8e0",
+                backgroundImage: isActive
+                  ? "linear-gradient(160deg, rgba(255,255,255,0.95) 40%, rgba(200,180,240,0.25) 100%), linear-gradient(135deg, #8258c8, #2c84c8)"
+                  : "none",
+                backgroundOrigin: isActive ? "border-box" : undefined,
+                backgroundClip: isActive ? "padding-box, border-box" : undefined,
+                backgroundColor: isActive ? "transparent" : "#fff",
+                color: isActive ? "#1a1a1a" : "#999",
                 fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                fontSize: "16px",
+                fontSize: "17px",
                 fontWeight: isActive ? 600 : 400,
                 cursor: "pointer",
                 transition: "all 0.3s ease",
+                minHeight: "88px",
               }}
             >
               <img
                 src={isActive ? t.iconActive : t.iconInactive}
                 alt=""
-                width={32}
-                height={32}
+                width={40}
+                height={40}
                 style={{
                   flexShrink: 0,
                   transition: "opacity 0.3s ease",
@@ -100,13 +101,14 @@ export default function DNATechnologyTabs() {
         className="dna-tab-content-card"
         style={{
           backgroundColor: "#fff",
-          borderRadius: "0 0 20px 20px",
-          boxShadow: "0 4px 24px rgba(0,0,0,0.06)",
+          borderRadius: "20px",
+          boxShadow: "0 4px 32px rgba(0,0,0,0.06)",
           padding: "48px",
           display: "flex",
           gap: "48px",
           alignItems: "center",
           minHeight: "480px",
+          border: "1px solid #eee",
         }}
       >
         {/* Left - Chart image */}

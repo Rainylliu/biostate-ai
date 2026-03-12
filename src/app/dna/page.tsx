@@ -176,21 +176,6 @@ export default function DNAPage() {
                 href="/pdf/20250402-BIRT%2BPERD%20One%20Page.pdf"
                 download
                 className="dna-download-btn"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "10px",
-                  padding: "14px 28px",
-                  borderRadius: "50px",
-                  backgroundImage:
-                    "linear-gradient(135deg, rgb(130, 88, 200), rgb(44, 132, 200))",
-                  color: "#fff",
-                  fontSize: "15px",
-                  fontWeight: 500,
-                  textDecoration: "none",
-                  fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                  transition: "opacity 0.3s ease",
-                }}
               >
                 Download the white paper
                 <svg
