@@ -142,10 +142,15 @@ export default function Section4Ecosystem() {
           margin: "40px auto 0",
           overflow: "hidden",
           borderRadius: 20,
+          backgroundImage: `url(${bgSrc})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          transition: "background-image 0.4s ease-in-out",
         }}
       >
         {/* Trapezoid background with image */}
         <svg
+          className="trapezoid-svg"
           viewBox="0 0 1400 700"
           preserveAspectRatio="none"
           style={{

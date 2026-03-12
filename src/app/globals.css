@@ -793,6 +793,12 @@ button:hover .side-panel-close-x {
   padding: 0 20px;
   overflow: hidden;
 }
+/* On desktop, hide the background-image (SVG trapezoid handles it) */
+@media (min-width: 769px) {
+  .trapezoid-slider {
+    background-image: none !important;
+  }
+}
 
 @media (max-width: 768px) {
   .s4-section {
@@ -800,18 +806,21 @@ button:hover .side-panel-close-x {
   }
   .trapezoid-slider {
     border-radius: 20px !important;
-    overflow: visible !important;
+    overflow: hidden !important;
     height: auto !important;
     max-height: none !important;
   }
+  .trapezoid-svg {
+    display: none !important;
+  }
   .trapezoid-content {
-    padding: 0 20px !important;
+    padding: 40px 20px !important;
     height: auto !important;
-    min-height: 500px;
+    min-height: auto !important;
   }
   .trapezoid-card-wrapper {
     height: auto !important;
-    min-height: 420px;
+    min-height: auto !important;
   }
 }
 
