@@ -1112,8 +1112,8 @@ button:hover .side-panel-close-x {
 
 /* ── Loading Screen Breathing Animation ── */
 @keyframes loadingBreath {
-  0%, 100% { transform: scale(0.92); }
-  50% { transform: scale(1.08); }
+  0%, 100% { transform: scale(0.8); }
+  50% { transform: scale(1); }
 }
 .loading-pulse {
   animation: loadingBreath 2.4s ease-in-out infinite;
