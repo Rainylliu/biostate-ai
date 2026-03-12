@@ -154,7 +154,7 @@ export default function DNAPage() {
               </p>
               <h2
                 style={{
-                  fontSize: "clamp(32px, 3.5vw, 48px)",
+                  fontSize: "clamp(32px, 4.5vw, 64px)",
                   fontWeight: 500,
                   lineHeight: 1.2,
                   color: "#1a1a1a",
