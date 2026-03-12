@@ -1,45 +1,41 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 
 export default function LoadingScreen({ onDone }: { onDone?: () => void }) {
   const [visible, setVisible] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
-  const startedRef = useRef(false);
+  const onDoneRef = useRef(onDone);
+  onDoneRef.current = onDone;
+
+  const startFadeOut = useCallback((mountTime: number) => {
+    const elapsed = Date.now() - mountTime;
+    const remaining = Math.max(0, 800 - elapsed);
+
+    setTimeout(() => {
+      setFadeOut(true);
+      setTimeout(() => {
+        setVisible(false);
+        onDoneRef.current?.();
+      }, 500);
+    }, remaining);
+  }, []);
 
   useEffect(() => {
-    if (startedRef.current) return;
-    startedRef.current = true;
-
     const mountTime = Date.now();
-    const MIN_DISPLAY = 800; // minimum ms to show the loading screen
-
-    const startFadeOut = () => {
-      const elapsed = Date.now() - mountTime;
-      const remaining = Math.max(0, MIN_DISPLAY - elapsed);
-
-      setTimeout(() => {
-        setFadeOut(true);
-        setTimeout(() => {
-          setVisible(false);
-          onDone?.();
-        }, 500);
-      }, remaining);
-    };
 
     if (document.readyState === "complete") {
-      startFadeOut();
+      startFadeOut(mountTime);
     } else {
-      const onLoad = () => startFadeOut();
+      const onLoad = () => startFadeOut(mountTime);
       window.addEventListener("load", onLoad);
-      // fallback
-      const fallback = setTimeout(startFadeOut, 5000);
+      const fallback = setTimeout(() => startFadeOut(mountTime), 5000);
       return () => {
         window.removeEventListener("load", onLoad);
         clearTimeout(fallback);
       };
     }
-  }, [onDone]);
+  }, [startFadeOut]);
 
   if (!visible) return null;
 
