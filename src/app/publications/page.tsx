@@ -24,7 +24,7 @@ export default function PublicationPage() {
           alt=""
           style={{
             position: "absolute",
-            top: 0,
+            top: -200,
             left: 0,
             width: "100%",
             height: "auto",

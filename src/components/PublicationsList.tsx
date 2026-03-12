@@ -114,10 +114,17 @@ export default function PublicationsList() {
             </p>
             <span className="pub-read-more">
               <a href={item.url} target="_blank" rel="noopener noreferrer">
-                Read Full Article
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style={{ marginLeft: 6, verticalAlign: "middle" }}>
-                  <path d="M4 1h9v9M13 1L1 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+                <span className="pub-cta-arrow pub-cta-arrow-left">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M4 1h9v9M13 1L1 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </span>
+                <span className="pub-cta-text">Read Full Article</span>
+                <span className="pub-cta-arrow pub-cta-arrow-right">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M4 1h9v9M13 1L1 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </span>
               </a>
             </span>
           </div>

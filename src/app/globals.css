@@ -1699,18 +1699,52 @@ button:hover .side-panel-close-x {
   margin: 0 0 16px 0;
 }
 .pub-read-more a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
   font-family: 'Manrope', Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: #111;
   text-decoration: none;
   border-bottom: 1.5px solid #111;
-  padding-bottom: 2px;
-  transition: color 0.18s;
+  padding-bottom: 4px;
+  overflow: hidden;
+  transition: color 0.3s, border-color 0.3s;
+}
+.pub-cta-text {
+  white-space: nowrap;
+}
+.pub-cta-arrow {
+  display: inline-flex;
+  align-items: center;
+  transition: width 0.3s ease, opacity 0.3s ease, margin 0.3s ease;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.pub-cta-arrow-left {
+  width: 0;
+  opacity: 0;
+  margin-right: 0;
+}
+.pub-cta-arrow-right {
+  width: 14px;
+  opacity: 1;
+  margin-left: 8px;
 }
 .pub-read-more a:hover {
-  color: #555;
-  border-color: #555;
+  color: #45d0bd;
+  border-color: #45d0bd;
+}
+.pub-read-more a:hover .pub-cta-arrow-left {
+  width: 14px;
+  opacity: 1;
+  margin-right: 8px;
+}
+.pub-read-more a:hover .pub-cta-arrow-right {
+  width: 0;
+  opacity: 0;
+  margin-left: 0;
 }
 
 /* Pagination */
