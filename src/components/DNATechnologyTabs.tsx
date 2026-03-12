@@ -10,8 +10,6 @@ const tabs = [
     iconActive: "/images/DNA_charticon1_active.svg",
     chart: "/images/DNA_chart1.svg",
     title: "Exceptional On-Target Performance and Coverage Uniformity",
-    description:
-      "Our WES technology demonstrates rapid coverage convergence to target depth across the exome. As shown above, >95% of targeted bases achieve >30X coverage at a mean depth of 100X, ensuring reliable variant calling even in challenging genomic regions.",
   },
   {
     id: 1,
@@ -20,8 +18,6 @@ const tabs = [
     iconActive: "/images/DNA_charticon2_active.svg",
     chart: "/images/DNA_chart2.svg",
     title: "Exceptional On-Target Performance and Coverage Uniformity",
-    description:
-      "The data reveals an on-target rate of approximately 96%, with a Fold 80 Base Penalty of 1.52, indicating highly uniform sequencing depth distribution. These metrics demonstrate that our WES platform maximizes the utilization of sequencing reads, driving superior cost efficiency.",
   },
   {
     id: 2,
@@ -30,10 +26,33 @@ const tabs = [
     iconActive: "/images/DNA_charticon3_active.svg",
     chart: "/images/DNA_chart3.svg",
     title: "Minimal Zero-Coverage Regions and High Concordance at Low Input",
-    description:
-      "Our platform achieves only 1.2% zero-coverage regions across the exome, significantly reducing data gaps. Furthermore, concordance rates remain above 99% even at input levels as low as 10 ng, validating the platform's suitability for precious or limited clinical samples.",
   },
 ];
+
+function TabDescription({ id }: { id: number }) {
+  if (id === 0) {
+    return (
+      <>
+        <p>While most WES providers guarantee raw sequencing output, true value depends on data quality.</p>
+        <p>Biostate&apos;s optimized workflow achieves <strong>rapid coverage convergence</strong>, with <strong>&gt;95% of bases covered with &gt;30X</strong> (mean = 100X), significantly outperforming leading competitors.</p>
+      </>
+    );
+  }
+  if (id === 1) {
+    return (
+      <>
+        <p>The data reveals an <strong>on-target rate of approximately 96%</strong>, with a <strong>Fold 80 Base Penalty of 1.52</strong>, indicating highly uniform sequencing depth distribution.</p>
+        <p>These metrics demonstrate that our WES platform maximizes the utilization of sequencing reads, driving <strong>superior cost efficiency</strong>.</p>
+      </>
+    );
+  }
+  return (
+    <>
+      <p>Our platform achieves only <strong>1.2% zero-coverage regions</strong> across the exome, significantly reducing data gaps.</p>
+      <p>Furthermore, <strong>concordance rates remain above 99%</strong> even at input levels as low as 10 ng, validating the platform&apos;s suitability for precious or limited clinical samples.</p>
+    </>
+  );
+}
 
 export default function DNATechnologyTabs() {
   const [active, setActive] = useState(0);
@@ -140,38 +159,34 @@ export default function DNATechnologyTabs() {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
+            fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
           }}
         >
           <h3
             style={{
-              fontSize: "clamp(24px, 2.5vw, 36px)",
-              fontWeight: 600,
-              margin: "0 0 24px 0",
+              fontSize: "clamp(28px, 3vw, 40px)",
+              fontWeight: 500,
+              margin: "0 0 32px 0",
               lineHeight: 1.25,
-              backgroundImage:
-                "linear-gradient(135deg, rgb(130, 88, 200), rgb(44, 132, 200))",
-              backgroundClip: "text",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              color: "transparent",
-              display: "inline-block",
-              padding: "0.1em 0",
+              color: "#111111",
             }}
           >
             {tab.title}
           </h3>
 
-          <p
+          <div
             style={{
-              fontSize: "15px",
-              fontWeight: 400,
-              color: "#555",
-              lineHeight: 1.8,
-              margin: 0,
+              fontSize: "16px",
+              fontWeight: 500,
+              color: "#333333",
+              lineHeight: "1.875em",
+              display: "flex",
+              flexDirection: "column",
+              gap: "20px",
             }}
           >
-            {tab.description}
-          </p>
+            <TabDescription id={tab.id} />
+          </div>
         </div>
       </div>
     </div>
