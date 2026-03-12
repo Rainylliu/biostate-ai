@@ -653,7 +653,7 @@ export default function RNAPage() {
                 as="h2"
                 className="rna-heading"
                 style={{
-                  fontSize: "64px",
+                  fontSize: "48px",
                   fontWeight: 400,
                   lineHeight: "1.15em",
                   color: "#333333",
