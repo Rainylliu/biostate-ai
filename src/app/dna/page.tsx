@@ -75,7 +75,7 @@ export default function DNAPage() {
             >
               <span
                 style={{
-                  background: "linear-gradient(135deg, #5B8DEF 0%, #7C5CE7 100%)",
+                  background: "linear-gradient(135deg, rgb(130, 88, 200), rgb(44, 132, 200))",
                   backgroundClip: "text",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
