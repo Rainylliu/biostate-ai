@@ -84,11 +84,8 @@ export default function PublicationsList({ items, title, subtitle, id, desktopPe
               lineHeight: 1.15,
             }}
           />
-          <WaveReveal
-            text={subtitle}
-            as="p"
+          <p
             className="pub-featured-subtitle"
-            delay={300}
             style={{
               fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
               fontSize: 16,
@@ -97,7 +94,9 @@ export default function PublicationsList({ items, title, subtitle, id, desktopPe
               margin: 0,
               lineHeight: 1.6,
             }}
-          />
+          >
+            {subtitle}
+          </p>
         </div>
         <div className="pub-filter-group">
           <div className="pub-filter-label">SORT BY</div>

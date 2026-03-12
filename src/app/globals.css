@@ -1814,11 +1814,10 @@ button:hover .side-panel-close-x {
     gap: 16px;
   }
   .pub-featured-title {
-    font-size: 28px;
+    font-size: 36px !important;
   }
   .pub-featured-subtitle {
-    font-size: 12px;
-    max-width: 200px;
+    font-size: 14px;
   }
   .pub-filter-group {
     flex-shrink: 0;
