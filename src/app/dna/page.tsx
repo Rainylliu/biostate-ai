@@ -229,6 +229,7 @@ export default function DNAPage() {
             style={{
               position: "relative",
               borderRadius: "25px",
+              backgroundColor: "#1F1F1F",
             }}
           >
             {/* Tilted top piece - same angle as banner */}
