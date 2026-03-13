@@ -665,7 +665,7 @@ export default function DNAPage() {
           </div>
         </div>
         {/* MARE Data Row 1: Chart left, Content right */}
-        <div className="s7-row" style={{ maxWidth: 1200, margin: "80px auto 100px" }}>
+        <div className="s7-row" style={{ maxWidth: 1200, margin: "-80px auto 100px" }}>
           <div className="s7-col-img">
             <img
               src="/images/MARE_chart1.svg"
@@ -684,7 +684,7 @@ export default function DNAPage() {
             <h3
               style={{
                 fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-                fontSize: 48,
+                fontSize: 40,
                 fontWeight: 400,
                 color: "#333333",
                 lineHeight: 1.15,
@@ -692,6 +692,7 @@ export default function DNAPage() {
               }}
             >
               Coverage Rescue in Difficult Genomic Regions
+
             </h3>
 
             <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
@@ -807,7 +808,7 @@ export default function DNAPage() {
             <h3
               style={{
                 fontFamily: "'Sora', Arial, Helvetica, sans-serif",
-                fontSize: 48,
+                fontSize: 40,
                 fontWeight: 400,
                 color: "#333333",
                 lineHeight: 1.15,
