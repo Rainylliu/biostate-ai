@@ -40,7 +40,8 @@ export default function AISection5() {
               position: "relative",
               backgroundColor: "#1F1F1F",
               borderRadius: "25px",
-              padding: "60px 20px 20px",
+              padding: "20px",
+              overflow: "hidden",
             }}
           >
             {/* Tilted top piece */}
@@ -60,9 +61,31 @@ export default function AISection5() {
               }}
             />
 
-            <div style={{ position: "relative", zIndex: 1 }}>
-              {/* Top section - Tag, Heading, Description */}
-              <div style={{ maxWidth: "800px", marginBottom: "56px" }}>
+            {/* N-Act.svg as full background */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/N-act.svg"
+              alt=""
+              aria-hidden="true"
+              style={{
+                position: "absolute",
+                inset: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                zIndex: 0,
+              }}
+            />
+
+            <div
+              className="flex flex-col lg:flex-row gap-12 lg:gap-8 items-center"
+              style={{ position: "relative", zIndex: 1 }}
+            >
+              {/* Left - Empty (background shows through) */}
+              <div className="w-full lg:w-1/2" />
+
+              {/* Right - Text Content */}
+              <div className="w-full lg:w-1/2" style={{ padding: "20px 0" }}>
                 {/* Tag */}
                 <p
                   style={{
@@ -97,142 +120,127 @@ export default function AISection5() {
                     fontWeight: 400,
                     lineHeight: 1.8,
                     color: "rgba(255,255,255,0.75)",
-                    margin: 0,
-                    maxWidth: "680px",
+                    margin: "0 0 48px 0",
+                    maxWidth: "520px",
                   }}
                 >
                   K-Dense conducts complete scientific research from hypothesis
                   to publication with minimal human intervention
                 </p>
-              </div>
 
-              {/* Feature Items */}
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "48px",
-                  maxWidth: "800px",
-                }}
-              >
-                {/* Feature 1 - icon1 */}
-                <div style={{ display: "flex", gap: "20px", alignItems: "flex-start" }}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/images/icon1.svg"
-                    alt="AI-driven Discovery"
-                    style={{ width: "64px", height: "64px", flexShrink: 0 }}
-                  />
-                  <div>
-                    <h4
-                      style={{
-                        fontSize: "18px",
-                        fontWeight: 700,
-                        color: "#ffffff",
-                        margin: "0 0 8px 0",
-                      }}
-                    >
-                      AI-driven Discovery
-                    </h4>
-                    <p
-                      style={{
-                        fontSize: "15px",
-                        fontWeight: 400,
-                        lineHeight: 1.7,
-                        color: "rgba(255,255,255,0.7)",
-                        margin: 0,
-                        maxWidth: "600px",
-                      }}
-                    >
-                      Detects molecular signatures across DNA, RNA, and proteins to
-                      reveal hidden disease mechanisms.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Feature 2 - icon2 */}
-                <div style={{ display: "flex", gap: "20px", alignItems: "flex-start" }}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/images/icon2.svg"
-                    alt="Predictive Modeling"
-                    style={{ width: "64px", height: "64px", flexShrink: 0 }}
-                  />
-                  <div>
-                    <h4
-                      style={{
-                        fontSize: "18px",
-                        fontWeight: 700,
-                        color: "#ffffff",
-                        margin: "0 0 8px 0",
-                      }}
-                    >
-                      Predictive Modeling
-                    </h4>
-                    <p
-                      style={{
-                        fontSize: "15px",
-                        fontWeight: 400,
-                        lineHeight: 1.7,
-                        color: "rgba(255,255,255,0.7)",
-                        margin: 0,
-                        maxWidth: "600px",
-                      }}
-                    >
-                      Learns patient-specific patterns to forecast disease risks and
-                      treatment responses.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Feature 3 - icon4 */}
-                <div style={{ display: "flex", gap: "20px", alignItems: "flex-start" }}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/images/icon4.svg"
-                    alt="Explainable Insights"
-                    style={{ width: "64px", height: "64px", flexShrink: 0 }}
-                  />
-                  <div>
-                    <h4
-                      style={{
-                        fontSize: "18px",
-                        fontWeight: 700,
-                        color: "#ffffff",
-                        margin: "0 0 8px 0",
-                      }}
-                    >
-                      Explainable Insights
-                    </h4>
-                    <p
-                      style={{
-                        fontSize: "15px",
-                        fontWeight: 400,
-                        lineHeight: 1.7,
-                        color: "rgba(255,255,255,0.7)",
-                        margin: 0,
-                        maxWidth: "600px",
-                      }}
-                    >
-                      Generates interpretable models — making biological decisions
-                      transparent and reproducible.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* N-Act SVG */}
-              <div style={{ marginTop: "60px", display: "flex", justifyContent: "center" }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/images/N-act.svg"
-                  alt="N-Act AI"
+                {/* Feature Items */}
+                <div
                   style={{
-                    width: "100%",
-                    height: "auto",
-                    maxWidth: "900px",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "40px",
                   }}
-                />
+                >
+                  {/* Feature 1 - icon1 teal */}
+                  <div style={{ display: "flex", gap: "20px", alignItems: "flex-start" }}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/images/icon1-teal.svg"
+                      alt="AI-driven Discovery"
+                      style={{ width: "64px", height: "64px", flexShrink: 0 }}
+                    />
+                    <div>
+                      <h4
+                        style={{
+                          fontSize: "18px",
+                          fontWeight: 700,
+                          color: "#ffffff",
+                          margin: "0 0 8px 0",
+                        }}
+                      >
+                        AI-driven Discovery
+                      </h4>
+                      <p
+                        style={{
+                          fontSize: "15px",
+                          fontWeight: 400,
+                          lineHeight: 1.7,
+                          color: "rgba(255,255,255,0.7)",
+                          margin: 0,
+                          maxWidth: "460px",
+                        }}
+                      >
+                        Detects molecular signatures across DNA, RNA, and proteins to
+                        reveal hidden disease mechanisms.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Feature 2 - icon3 teal */}
+                  <div style={{ display: "flex", gap: "20px", alignItems: "flex-start" }}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/images/icon3-teal.svg"
+                      alt="Predictive Modeling"
+                      style={{ width: "64px", height: "64px", flexShrink: 0 }}
+                    />
+                    <div>
+                      <h4
+                        style={{
+                          fontSize: "18px",
+                          fontWeight: 700,
+                          color: "#ffffff",
+                          margin: "0 0 8px 0",
+                        }}
+                      >
+                        Predictive Modeling
+                      </h4>
+                      <p
+                        style={{
+                          fontSize: "15px",
+                          fontWeight: 400,
+                          lineHeight: 1.7,
+                          color: "rgba(255,255,255,0.7)",
+                          margin: 0,
+                          maxWidth: "460px",
+                        }}
+                      >
+                        Learns patient-specific patterns to forecast disease risks and
+                        treatment responses.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Feature 3 - icon5 teal */}
+                  <div style={{ display: "flex", gap: "20px", alignItems: "flex-start" }}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/images/icon5-teal.svg"
+                      alt="Explainable Insights"
+                      style={{ width: "64px", height: "64px", flexShrink: 0 }}
+                    />
+                    <div>
+                      <h4
+                        style={{
+                          fontSize: "18px",
+                          fontWeight: 700,
+                          color: "#ffffff",
+                          margin: "0 0 8px 0",
+                        }}
+                      >
+                        Explainable Insights
+                      </h4>
+                      <p
+                        style={{
+                          fontSize: "15px",
+                          fontWeight: 400,
+                          lineHeight: 1.7,
+                          color: "rgba(255,255,255,0.7)",
+                          margin: 0,
+                          maxWidth: "460px",
+                        }}
+                      >
+                        Generates interpretable models — making biological decisions
+                        transparent and reproducible.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
