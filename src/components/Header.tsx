@@ -221,7 +221,7 @@ export default function Header() {
 
           {/* CTA Button */}
           <Link
-            href="/get-quote"
+            href={pathname === "/rna" ? "/get-quote" : "/contacts"}
             className={`get-quote-btn hidden lg:inline-flex rounded-full${pathname === "/rna" ? " get-quote-btn-rna" : ""}${isTransparent ? " get-quote-btn-transparent" : ""}${isDNA && !scrolled ? " get-quote-btn-dna" : ""}`}
             style={{
               color: isTransparent ? "#ffffff" : "#1f1f1f",
@@ -371,7 +371,7 @@ export default function Header() {
           {/* Get in Touch button */}
           <div style={{ marginTop: 40 }}>
             <Link
-              href="/get-quote"
+              href="/contacts"
               onClick={() => setMobileOpen(false)}
               className="get-quote-btn inline-flex rounded-full"
               style={{
@@ -511,7 +511,7 @@ export default function Header() {
             {/* Get in Touch button - matches header style */}
             <div style={{ marginTop: "48px" }}>
               <Link
-                href="/get-quote"
+                href="/contacts"
                 onClick={() => setSidePanelOpen(false)}
                 className="get-quote-btn get-quote-btn-dark inline-flex rounded-full"
                 style={{
