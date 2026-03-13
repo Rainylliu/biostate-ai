@@ -80,19 +80,22 @@ export default function AISection4() {
         <div className="ai-s4-images-row flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
           {/* David Sinclair Photo */}
           <div className="w-full lg:w-1/3" style={{ position: "relative", overflow: "hidden", borderRadius: "20px", minHeight: "300px" }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/David Sinclair.png"
-              alt="David Sinclair"
-              style={{
-                position: "absolute",
-                inset: 0,
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                display: "block",
-              }}
-            />
+            <picture>
+              <source media="(max-width: 900px)" srcSet="/images/David Sinclair_mobile.png" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/David Sinclair.png"
+                alt="David Sinclair"
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  display: "block",
+                }}
+              />
+            </picture>
           </div>
 
           {/* Aging Chart */}
@@ -173,19 +176,22 @@ export default function AISection4() {
 
           {/* Swamy Vijayan Photo */}
           <div className="w-full lg:w-1/3" style={{ position: "relative", overflow: "hidden", borderRadius: "20px", minHeight: "300px" }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/Swamy Vijayan.png"
-              alt="Swamy Vijayan"
-              style={{
-                position: "absolute",
-                inset: 0,
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                display: "block",
-              }}
-            />
+            <picture>
+              <source media="(max-width: 900px)" srcSet="/images/Swamy Vijayan_mobile.png" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/Swamy Vijayan.png"
+                alt="Swamy Vijayan"
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  display: "block",
+                }}
+              />
+            </picture>
           </div>
         </div>
       </div>
