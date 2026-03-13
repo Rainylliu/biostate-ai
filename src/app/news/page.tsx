@@ -148,6 +148,62 @@ const newsItems = [
     excerpt: "Biostate AI, an innovator at the intersection of artificial intelligence and RNA sequencing raises $12M in \u2026\u2026",
     link: "https://ramaonhealthcare.com/biostate-ai-secures-12m-to-optimize-rna-sequencing-precision-medicine/",
   },
+  {
+    image: "https://www.biostate.ai/wp-content/uploads/2025/11/Mask-group-15.svg",
+    date: "May 17, 2025",
+    title: "Revolutionizing Healthcare with Generative AI and RNA Intelligence",
+    excerpt: "Biostate AI is decoding the future of diagnostics through advanced RNA sequencing and AI-powered insights.",
+    link: "https://www.cbinsights.com/company/biostate-ai",
+  },
+  {
+    image: "https://www.biostate.ai/wp-content/uploads/2025/11/Mask-group-7-1.svg",
+    date: "May 12, 2025",
+    title: "Biostate AI advances personalized medicine with RNA sequencing and AI",
+    excerpt: "Biostate AI, a leading innovator in artificial intelligence for RNA sequencing, today announced a strategic partnership \u2026\u2026",
+    link: "https://www.rna-seqblog.com/biostate-ai-advances-personalized-medicine-in-multiple-sclerosis-with-rna-sequencing-and-ai-partnership/",
+  },
+  {
+    image: "https://www.biostate.ai/wp-content/uploads/2025/12/888.svg",
+    date: "April 15, 2025",
+    title: "Biostate AI to Develop Predictive Models Using Transcriptomic Data",
+    excerpt: "Biostate AI, a startup building AI models from RNA sequencing data, has partnered with the Accelerated Cure Project\u2026\u2026",
+    link: "https://www.biopharmatrend.com/post/1204-biostate-ai-partners-with-accelerated-cure-project-to-develop-ai-models-for-multiple-sclerosis/",
+  },
+  {
+    image: "https://www.biostate.ai/wp-content/uploads/2025/11/32.svg",
+    date: "July 17, 2024",
+    title: "Biostate AI Unveils Breakthrough RNA Sequencing Tools",
+    excerpt: "Biostate AI, a scalable biodata foundry startup, has emerged from stealth mode with the launch of two products\u2026\u2026",
+    link: "https://medcloudinsider.com/articles/2024/07/17/biostate-ai-unveils-rna-sequencing-tools.aspx",
+  },
+  {
+    image: "https://www.biostate.ai/wp-content/uploads/2025/11/Mask-group-10.svg",
+    date: "July 10, 2024",
+    title: "New health-focused generative AI company emerges from stealth with funding",
+    excerpt: "A new scalable biodata foundry startup has emerged from stealth with $4 million in \u2026\u2026",
+    link: "https://houston.innovationmap.com/biostate-ai-david-zhang-biotech-2668723816.html",
+  },
+  {
+    image: "https://www.biostate.ai/wp-content/uploads/2025/11/Mask-group-11.svg",
+    date: "July 9, 2024",
+    title: "Biostate AI Aims to Lower Cost, Increase Utility of RNA-Seq for Research, Drug Discovery",
+    excerpt: "NEW YORK \u2013 Biostate AI this week exited stealth mode by unveiling a total RNA-seq service \u2026\u2026",
+    link: "https://www.genomeweb.com/sequencing/biostate-ai-aims-lower-cost-increase-utility-rna-seq-research-drug-discovery",
+  },
+  {
+    image: "https://www.biostate.ai/wp-content/uploads/2025/11/Mask-group-12.svg",
+    date: "July 8, 2024",
+    title: "Biostate AI Launches Total RNA Sequencing and Free Data Analysis AI",
+    excerpt: "Biostate AI, the scalable biodata foundry startup, emerges from stealth today with the launch of \u2026\u2026",
+    link: "https://www.businesswire.com/news/home/20240708652997/en/Biostate-AI-Launches-Total-RNA-Sequencing-and-Free-Data-Analysis-AI",
+  },
+  {
+    image: "https://www.biostate.ai/wp-content/uploads/2025/11/Mask-group-13.svg",
+    date: "March 1, 2024",
+    title: "Biostate AI\u2019s Scientific Impact in the Global Research Landscape",
+    excerpt: "Tracking high-quality research outputs from Biostate AI across leading journals, as recognized by the Nature Index.",
+    link: "https://www.nature.com/nature-index/institution-outputs/united-states-of-america-usa/biostate-ai/66c2bda321640fe3de0cf64a",
+  },
 ];
 
 export default function NewsPage() {
