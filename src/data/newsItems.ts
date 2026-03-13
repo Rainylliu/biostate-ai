@@ -18,7 +18,7 @@ export const newsItems = [
     link: "https://www.unite.ai/biostate-ai-launches-k-dense-beta-harvard-validates-ai-that-compresses-research-cycles-from-years-to-days/",
   },
   {
-    image: "/newsItems_img/Biostate AI Launches K-Dense Beta-1.svg",
+    image: "/newsItems_img/Biostate AI launches AI agent.svg",
     date: "September 18, 2025",
     title:
       "Biostate AI launches AI agent that compresses research cycles from years to days",
@@ -27,7 +27,7 @@ export const newsItems = [
     link: "https://www.htworld.co.uk/news/biostate-ai-ai-agent-that-compresses-research-cycles-from-years-to-days-stock25/",
   },
   {
-    image: "/newsItems_img/Biostate AI launches AI agent.svg",
+    image: "/newsItems_img/Biostate AI launches AI agent-1.svg",
     date: "September 18, 2025",
     title:
       "Biostate AI\u2019s K-Dense accelerates scientific research cycles with AI",
@@ -53,7 +53,7 @@ export const newsItems = [
     link: "https://finance.yahoo.com/news/biostate-ai-launches-k-dense-123000921.html",
   },
   {
-    image: "/newsItems_img/Biostate AI launches AI agent-1.svg",
+    image: "/newsItems_img/Biostate AI Launches K-Dense Beta-1.svg",
     date: "September 18, 2025",
     title: "Biostate AI Launches K-Dense Beta",
     excerpt:
