@@ -364,6 +364,154 @@ export default function AISection5() {
           `}</style>
         </div>
       </section>
+      {/* ── AML Prognosis Section ── */}
+      <section
+        style={{
+          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+          padding: "100px 0 0",
+          position: "relative",
+        }}
+      >
+        <div className="container">
+          <div className="aml-grid">
+            {/* Left Column */}
+            <div className="aml-left">
+              <p
+                style={{
+                  fontSize: "14px",
+                  fontWeight: 500,
+                  color: "#888",
+                  marginBottom: "16px",
+                }}
+              >
+                [ about ]
+              </p>
+              <h2
+                style={{
+                  fontSize: "clamp(36px, 4.5vw, 60px)",
+                  fontWeight: 400,
+                  lineHeight: 1.1,
+                  letterSpacing: "-0.02em",
+                  color: "#1a1a1a",
+                  margin: "0 0 32px 0",
+                  maxWidth: "560px",
+                }}
+              >
+                Guiding Bone Marrow Transplant for AML Patients
+              </h2>
+
+              {/* AML Prognosis pill */}
+              <div
+                style={{
+                  display: "inline-block",
+                  background: "linear-gradient(135deg, #45d0bd 0%, #6dcfcf 100%)",
+                  borderRadius: "30px",
+                  padding: "12px 40px",
+                  marginBottom: "32px",
+                }}
+              >
+                <span
+                  style={{
+                    color: "#fff",
+                    fontSize: "20px",
+                    fontWeight: 600,
+                  }}
+                >
+                  AML Prognosis
+                </span>
+              </div>
+
+              {/* Chart image */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/AML_card1.svg"
+                alt="AML Prognosis Statistics - Progression-Free Survival"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  display: "block",
+                }}
+              />
+            </div>
+
+            {/* Right Column */}
+            <div className="aml-right">
+              {/* Background decoration */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/AML_bg.svg"
+                alt=""
+                className="aml-bg-decor"
+              />
+
+              {/* Card 2 - Identifies AML patients */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/AML_card2.svg"
+                alt="Identifies AML patients with higher relapse risk based on initial bone marrow biopsy RNA"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  borderRadius: "25px",
+                }}
+              />
+
+              {/* Card 3 - Better than pathology */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/AML_card3.svg"
+                alt="Better than pathology-based prognosis"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  borderRadius: "25px",
+                }}
+              />
+            </div>
+          </div>
+
+          <style jsx>{`
+            .aml-grid {
+              display: grid;
+              grid-template-columns: 7fr 5fr;
+              gap: 40px;
+              align-items: start;
+            }
+            .aml-left {
+              display: flex;
+              flex-direction: column;
+            }
+            .aml-right {
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+              position: relative;
+            }
+            .aml-bg-decor {
+              position: absolute;
+              top: -60px;
+              right: -40px;
+              width: 110%;
+              height: auto;
+              opacity: 0.6;
+              pointer-events: none;
+              z-index: 0;
+            }
+            .aml-right > img:not(.aml-bg-decor) {
+              position: relative;
+              z-index: 1;
+            }
+            @media (max-width: 768px) {
+              .aml-grid {
+                grid-template-columns: 1fr !important;
+              }
+              .aml-bg-decor {
+                display: none;
+              }
+            }
+          `}</style>
+        </div>
+      </section>
     </>
   );
 }
