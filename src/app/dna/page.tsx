@@ -580,7 +580,7 @@ export default function DNAPage() {
         </div>
 
         {/* MARE About section */}
-        <div className="container" style={{ marginTop: "60px" }}>
+        <div className="container dna-mare-about-wrap" style={{ marginTop: "60px" }}>
           <div
             className="dna-mare-about"
             style={{
