@@ -258,6 +258,7 @@ export default function AISection1() {
                 borderRadius: "50%",
                 border: "1.5px solid #666",
                 flexShrink: 0,
+                marginTop: "10px",
               }}
             >
               <svg width="10" height="12" viewBox="0 0 10 12" fill="none">
@@ -270,6 +271,7 @@ export default function AISection1() {
                 fontSize: "16px",
                 fontWeight: 500,
                 color: "#333",
+                marginTop: "10px",
               }}
             >
               Watch video
