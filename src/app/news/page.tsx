@@ -1,19 +1,29 @@
 import type { Metadata } from "next";
+import NewsGrid from "@/components/NewsGrid";
 
 export const metadata: Metadata = {
-  title: "News - biostate.AI",
-  description: "Latest news from biostate.AI.",
+  title: "In the News - biostate.AI",
+  description: "Latest news and press coverage about biostate.AI.",
 };
 
 export default function NewsPage() {
   return (
-    <div className="pt-24">
-      <section className="section">
-        <div className="container text-center">
-          <h1 className="section-heading">News</h1>
-          <p className="section-subheading mx-auto">Coming soon.</p>
-        </div>
-      </section>
+    <div style={{ fontFamily: "'Manrope', Arial, Helvetica, sans-serif" }}>
+      {/* Header Banner */}
+      <div style={{ maxWidth: "1340px", margin: "0 auto", padding: "0 20px", overflow: "hidden" }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/News_header.svg"
+          alt="In The News"
+          style={{
+            width: "100%",
+            height: "auto",
+            display: "block",
+          }}
+        />
+      </div>
+
+      <NewsGrid />
     </div>
   );
 }
