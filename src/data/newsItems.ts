@@ -44,7 +44,7 @@ export const newsItems = [
     link: "https://arxiv.org/abs/2508.07043",
   },
   {
-    image: "/newsItems_img/Biostate AI Launches K-Dense Beta-1.svg",
+    image: "/newsItems_img/Biostate AI Launches.svg",
     date: "September 18, 2025",
     title:
       "Biostate AI Launches K-Dense Beta, validated with Harvard",
@@ -53,7 +53,7 @@ export const newsItems = [
     link: "https://finance.yahoo.com/news/biostate-ai-launches-k-dense-123000921.html",
   },
   {
-    image: "/newsItems_img/Biostate AI Launches.svg",
+    image: "/newsItems_img/Biostate AI Launches K-Dense Beta-1.svg",
     date: "September 18, 2025",
     title: "Biostate AI Launches K-Dense Beta",
     excerpt:
