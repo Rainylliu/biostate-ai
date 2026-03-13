@@ -526,8 +526,9 @@ export default function DNAPage() {
             alt=""
             style={{
               display: "block",
-              width: "100%",
+              width: "40%",
               height: "auto",
+              marginLeft: "auto",
             }}
           />
           {/* Title overlay */}
