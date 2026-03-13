@@ -94,7 +94,7 @@ export default function AISection4() {
           </div>
 
           {/* Aging Chart */}
-          <div className="w-full lg:w-7/12 flex items-center justify-center">
+          <div className="w-full lg:w-7/12 flex items-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/Aging.png"
@@ -102,8 +102,6 @@ export default function AISection4() {
               style={{
                 width: "100%",
                 height: "auto",
-                maxWidth: "640px",
-                borderRadius: "12px",
               }}
             />
           </div>
@@ -159,7 +157,7 @@ export default function AISection4() {
           style={{ marginTop: "48px" }}
         >
           {/* Drug Lead Chart */}
-          <div className="w-full lg:w-7/12 flex items-center justify-center">
+          <div className="w-full lg:w-7/12 flex items-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/Drug Lead.png"
@@ -167,8 +165,6 @@ export default function AISection4() {
               style={{
                 width: "100%",
                 height: "auto",
-                maxWidth: "640px",
-                borderRadius: "12px",
               }}
             />
           </div>
