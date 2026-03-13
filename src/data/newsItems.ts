@@ -100,7 +100,7 @@ export const newsItems = [
     link: "https://orangered-okapi-860138.hostingersite.com/blogs/biostate-ai-secures-12m-in-series-a-funding-led-by-accel/",
   },
   {
-    image: "/newsItems_img/Biostate AI Secures $12M to Optimize RNA Sequencing.svg",
+    image: "/newsItems_img/Biostate AI Secures $12M to Optimize.svg",
     date: "May 20, 2025",
     title: "Biostate AI Secures $12M to Optimize RNA Sequencing, Precision Medicine",
     excerpt: "Biostate AI, an innovator at the intersection of artificial intelligence and RNA sequencing raises $12M in \u2026\u2026",
@@ -135,7 +135,7 @@ export const newsItems = [
     link: "https://ramaonhealthcare.com/biostate-ai-secures-12m-to-optimize-rna-sequencing-precision-medicine/",
   },
   {
-    image: "/newsItems_img/Biostate AI Secures $12M to Optimize.svg",
+    image: "/newsItems_img/Biostate AI Secures $12M to Optimize RNA Sequencing.svg",
     date: "May 20, 2025",
     title: "Biostate AI Secures $12M to Optimize RNA Sequencing, Precision Medicine",
     excerpt: "Biostate AI, an innovator at the intersection of artificial intelligence and RNA sequencing raises $12M in \u2026\u2026",
