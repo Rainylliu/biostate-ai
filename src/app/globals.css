@@ -2025,10 +2025,16 @@ button:hover .side-panel-close-x {
   }
   .dna-tab-content-card {
     padding: 24px !important;
-    min-height: auto !important;
+    min-height: 600px !important;
   }
   .dna-tab-chart img {
     max-height: 320px !important;
+  }
+  .dna-tab-text h3 {
+    font-size: 24px !important;
+  }
+  .dna-tab-text > div {
+    font-size: 14px !important;
   }
   .dna-tilted-top {
     display: none !important;
