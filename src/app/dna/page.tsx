@@ -359,7 +359,7 @@ export default function DNAPage() {
                 padding: "40px",
                 position: "relative",
                 overflow: "hidden",
-                minHeight: "480px",
+                minHeight: "400px",
               }}
             >
               <img
@@ -415,7 +415,7 @@ export default function DNAPage() {
               style={{
                 borderRadius: "25px",
                 padding: "40px",
-                minHeight: "480px",
+                minHeight: "400px",
                 position: "relative",
                 overflow: "hidden",
               }}
@@ -464,7 +464,7 @@ export default function DNAPage() {
                 padding: "40px",
                 position: "relative",
                 overflow: "hidden",
-                minHeight: "480px",
+                minHeight: "400px",
               }}
             >
               <img
