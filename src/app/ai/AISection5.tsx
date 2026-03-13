@@ -274,6 +274,8 @@ export default function AISection5() {
                   height: "100%",
                   objectFit: "cover",
                   display: "block",
+                  transform: archHover ? "scale(1.02)" : "scale(1)",
+                  transition: "transform 0.3s ease",
                 }}
               />
               {/* CTA pill button */}
