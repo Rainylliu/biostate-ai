@@ -10,6 +10,7 @@ export default function AISection4() {
 
   return (
     <section
+      className="ai-section4"
       style={{
         fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
         padding: "120px 0",
