@@ -96,7 +96,7 @@ export default function RNAPage() {
       </section>
 
       {/* Section 2 - Pricing / Sample Types */}
-      <section style={{ marginTop: "80px", fontFamily: "'Manrope', Arial, Helvetica, sans-serif" }}>
+      <section className="no-section-padding" style={{ marginTop: "80px", fontFamily: "'Manrope', Arial, Helvetica, sans-serif" }}>
         <div className="container">
           {/* Section Tag */}
           <WaveReveal

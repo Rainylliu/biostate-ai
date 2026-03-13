@@ -1356,7 +1356,7 @@ button:hover .side-panel-close-x {
 
 /* ── Global mobile section padding ── */
 @media (max-width: 900px) {
-  section {
+  section:not(.no-section-padding) {
     padding-left: 20px !important;
     padding-right: 20px !important;
   }
