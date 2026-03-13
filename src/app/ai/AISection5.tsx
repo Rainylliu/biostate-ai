@@ -325,7 +325,7 @@ export default function AISection5() {
                 src="/images/n-act1.svg"
                 alt="N-Act AI Analysis"
                 style={{
-                  width: "100%",
+                  width: "90%",
                   height: "100%",
                   objectFit: "cover",
                   display: "block",
