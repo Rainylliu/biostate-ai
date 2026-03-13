@@ -61,15 +61,15 @@ export default function AISection1() {
           className="ai-s1-card-left"
           style={{
             flex: 1,
-            backgroundColor: "#1a1a1a",
+            backgroundColor: "#1F1F1F",
             borderRadius: "24px",
-            padding: "48px 40px",
+            padding: "54px 63px 40px 40px",
             position: "relative",
             overflow: "hidden",
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
-            minHeight: "480px",
+            minHeight: "505px",
           }}
         >
           <div>
@@ -142,11 +142,11 @@ export default function AISection1() {
         <div
           className="ai-s1-card-right"
           style={{
-            flex: 1,
+            flex: 2,
             borderRadius: "24px",
             position: "relative",
             overflow: "hidden",
-            minHeight: "480px",
+            minHeight: "505px",
             cursor: "pointer",
           }}
           onClick={() =>
