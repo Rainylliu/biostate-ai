@@ -228,7 +228,7 @@ export default function ContactsPage() {
             style={{
               fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
               fontSize: "clamp(36px, 4.5vw, 56px)",
-              fontWeight: 700,
+              fontWeight: 500,
               color: "#111111",
               margin: "0 0 24px 0",
               lineHeight: 1.15,
