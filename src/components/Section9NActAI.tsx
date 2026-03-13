@@ -146,21 +146,15 @@ export default function Section9NActAI() {
             style={{ cursor: "pointer", position: "relative" }}
           >
             <img
-              src="https://biostate.jamesflare.com/wp-content/uploads/2025/11/Architecture.svg"
+              src="/images/AI Architecture.svg"
               alt="Architecture Diagram"
               style={{
                 width: "100%",
                 height: "auto",
                 display: "block",
                 borderRadius: 16,
-                border: archHover
-                  ? "2px solid #007bff"
-                  : "2px solid transparent",
-                boxShadow: archHover
-                  ? "0 4px 8px rgba(0, 123, 255, 0.3)"
-                  : "none",
                 transform: archHover ? "scale(1.02)" : "scale(1)",
-                transition: "all 0.3s ease",
+                transition: "transform 0.3s ease",
               }}
             />
             {/* CTA pill button - always visible */}
