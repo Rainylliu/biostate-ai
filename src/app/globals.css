@@ -2054,8 +2054,26 @@ button:hover .side-panel-close-x {
   .dna-tilted-top {
     display: none !important;
   }
+  .dna-grant-card {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .dna-grant-bg {
+    order: 2 !important;
+    padding-top: 0 !important;
+    border-radius: 0 0 25px 25px !important;
+  }
+  .dna-grant-content {
+    position: relative !important;
+    height: auto !important;
+    padding: 32px 24px !important;
+    order: 1 !important;
+  }
+  .dna-grant-content .flex {
+    flex-direction: column !important;
+  }
   .dna-grant-title {
-    font-size: 32px !important;
+    font-size: 28px !important;
   }
   .dna-sample-cards {
     grid-template-columns: 1fr !important;

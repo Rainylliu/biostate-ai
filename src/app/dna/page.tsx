@@ -226,6 +226,7 @@ export default function DNAPage() {
       >
         <div className="container">
           <div
+            className="dna-grant-card"
             style={{
               position: "relative",
               borderRadius: "25px",
@@ -251,6 +252,7 @@ export default function DNAPage() {
 
             {/* Background SVG - fills entire card */}
             <img
+              className="dna-grant-bg"
               src="/images/DNA_grant.svg"
               alt=""
               style={{
@@ -264,6 +266,7 @@ export default function DNAPage() {
 
             {/* Content overlay */}
             <div
+              className="dna-grant-content"
               style={{
                 position: "absolute",
                 top: 0,
