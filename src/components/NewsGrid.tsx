@@ -30,12 +30,12 @@ export default function NewsGrid() {
         }}
       >
         {pageItems.map((item, index) => (
-          <article key={index} style={{ display: "flex", flexDirection: "column", height: "100%", border: "1px solid #333333", borderRadius: "20px", overflow: "hidden" }}>
+          <article key={index} style={{ display: "flex", flexDirection: "column", height: "100%" }}>
             <a
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ display: "block", overflow: "hidden", position: "relative" }}
+              style={{ display: "block", borderRadius: "16px", overflow: "hidden", position: "relative" }}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -71,7 +71,10 @@ export default function NewsGrid() {
               flexDirection: "column",
               flex: 1,
               padding: "0 20px 24px",
-              borderTop: "1px solid #333333",
+              borderLeft: "1px solid #333333",
+              borderRight: "1px solid #333333",
+              borderBottom: "1px solid #333333",
+              borderRadius: "0 0 20px 20px",
             }}>
               <h4 style={{ margin: "20px 0 12px", fontSize: "18px", fontWeight: 600, lineHeight: 1.4, color: "#1a1a1a" }}>
                 <a
