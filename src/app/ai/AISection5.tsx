@@ -370,8 +370,16 @@ export default function AISection5() {
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
           padding: "100px 0 0",
           position: "relative",
+          overflow: "hidden",
         }}
       >
+        {/* Background decoration - section level */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/AML_bg.svg"
+          alt=""
+          className="aml-bg-decor"
+        />
         <div className="container">
           {/* Heading row */}
           <div style={{ marginBottom: "40px" }}>
@@ -419,14 +427,6 @@ export default function AISection5() {
 
             {/* Right Column - two cards */}
             <div className="aml-right">
-              {/* Background decoration */}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/AML_bg.svg"
-                alt=""
-                className="aml-bg-decor"
-              />
-
               {/* Card 2 - Identifies AML patients */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -472,17 +472,13 @@ export default function AISection5() {
             }
             .aml-bg-decor {
               position: absolute;
-              top: -60px;
-              right: -40px;
-              width: 110%;
+              top: 0;
+              right: 0;
+              width: 60%;
               height: auto;
               opacity: 0.6;
               pointer-events: none;
               z-index: 0;
-            }
-            .aml-right > img:not(.aml-bg-decor) {
-              position: relative;
-              z-index: 1;
             }
             @media (max-width: 768px) {
               .aml-grid {
