@@ -34,7 +34,7 @@ export default function AISection4() {
               World&apos;s Best
               <br />
               Measure of{" "}
-              <span style={{ color: "#45d0bd" }}>Aging</span>
+              <span style={{ background: "linear-gradient(90deg, #45d0bd, #44b6e9)", backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Aging</span>
             </h2>
           </div>
           {/* Right - Description + Button */}
@@ -127,7 +127,7 @@ export default function AISection4() {
               }}
             >
               Fast and Novel{" "}
-              <span style={{ color: "#45d0bd" }}>Drug
+              <span style={{ background: "linear-gradient(90deg, #45d0bd, #44b6e9)", backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Drug
               <br />
               Lead</span>{" "}
               Discovery
