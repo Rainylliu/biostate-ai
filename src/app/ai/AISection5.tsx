@@ -60,31 +60,23 @@ export default function AISection5() {
               }}
             />
 
-            {/* N-Act.svg as full background */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/N-act.svg"
-              alt=""
-              aria-hidden="true"
-              style={{
-                position: "absolute",
-                top: "50%",
-                left: "50%",
-                transform: "translate(-50%, -50%)",
-                width: "90%",
-                height: "90%",
-                objectFit: "cover",
-                zIndex: 0,
-                borderRadius: "16px",
-              }}
-            />
-
             <div
               className="flex flex-col lg:flex-row gap-12 lg:gap-8 items-center"
               style={{ position: "relative", zIndex: 1 }}
             >
-              {/* Left - Empty (background shows through) */}
-              <div className="w-full lg:w-1/2" />
+              {/* Left - N-Act Image */}
+              <div className="w-full lg:w-1/2 flex justify-center">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/N-act.png"
+                  alt="N-Act AI Platform"
+                  style={{
+                    width: "80%",
+                    height: "auto",
+                    borderRadius: "16px",
+                  }}
+                />
+              </div>
 
               {/* Right - Text Content */}
               <div className="w-full lg:w-1/2" style={{ padding: "20px 0" }}>
