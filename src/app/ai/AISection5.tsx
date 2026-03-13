@@ -338,7 +338,7 @@ export default function AISection5() {
           <style jsx>{`
             .s5-two-cards {
               display: grid;
-              grid-template-columns: 6fr 6fr;
+              grid-template-columns: 5fr 7fr;
               gap: 24px;
               align-items: stretch;
             }
