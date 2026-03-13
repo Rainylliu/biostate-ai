@@ -2111,16 +2111,9 @@ button:hover .side-panel-close-x {
   .dna-mare-row1 {
     margin-top: 0px !important;
   }
-  .dna-mare-section {
-    margin-top: 60px !important;
-  }
-  .dna-mare-bg {
-    width: 150% !important;
-    margin-left: -25% !important;
-  }
   .dna-mare-overlay {
     padding: 0 20px !important;
-    bottom: 0px !important;
+    bottom: 30px !important;
   }
   .contacts-content {
     flex-direction: column !important;

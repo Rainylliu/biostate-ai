@@ -515,7 +515,7 @@ export default function DNAPage() {
       </section>
       {/* Section 4 - MARE */}
       <section
-        className="dna-mare-section"
+        className="no-section-padding"
         style={{
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
           marginTop: "20px",
