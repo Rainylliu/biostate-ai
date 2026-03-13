@@ -107,14 +107,14 @@ export const newsItems = [
     link: "https://hitconsultant.net/2025/05/20/biostate-ai-secures-12m-to-optimize-rna-sequencing/",
   },
   {
-    image: "/newsItems_img/Biostate AI closes $12M to bring.svg",
+    image: "/newsItems_img/Biostate AI closes $12M.svg",
     date: "May 20, 2025",
     title: "Biostate AI closes $12M to bring the Netflix model to molecular diagnostics",
     excerpt: "The company is reimagining the fragmented reality of molecular research by building the world\u2019s largest RNA\u2026\u2026",
     link: "https://www.globenewswire.com/news-release/2025/05/20/3085007/0/en/Biostate-AI-closes-12M-to-bring-the-Netflix-model-to-molecular-diagnostics.html",
   },
   {
-    image: "/newsItems_img/Biostate AI closes $12M.svg",
+    image: "/newsItems_img/Biostate AI closes $12M to bring.svg",
     date: "May 20, 2025",
     title: "Biostate AI closes $12M to bring the Netflix model to molecular diagnostics",
     excerpt: "Biostate AI, a leading innovator in artificial intelligence and RNA sequencing, announced the successful completion\u2026\u2026",
