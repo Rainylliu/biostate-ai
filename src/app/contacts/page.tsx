@@ -184,7 +184,7 @@ export default function ContactsPage() {
         className="contacts-content"
         style={{
           position: "relative",
-          maxWidth: "1200px",
+          maxWidth: "1340px",
           marginLeft: "auto",
           marginRight: "auto",
           padding: "80px 24px 120px",
@@ -482,7 +482,7 @@ export default function ContactsPage() {
 
         <div
           style={{
-            maxWidth: "1200px",
+            maxWidth: "1340px",
             marginLeft: "auto",
             marginRight: "auto",
             padding: "0 24px",

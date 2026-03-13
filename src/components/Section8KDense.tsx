@@ -330,7 +330,7 @@ export default function Section8KDense() {
 
       <style jsx>{`
         .s8-container {
-          max-width: 1200px;
+          max-width: 1340px;
           margin: 0 auto;
           display: flex;
           gap: 60px;

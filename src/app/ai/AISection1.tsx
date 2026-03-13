@@ -7,7 +7,7 @@ export default function AISection1() {
         maxWidth: "1340px",
         marginLeft: "auto",
         marginRight: "auto",
-        padding: "120px 24px 0",
+        padding: "20px 24px 0",
       }}
     >
       {/* Hero Heading */}
