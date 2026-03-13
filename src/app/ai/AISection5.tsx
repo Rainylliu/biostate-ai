@@ -345,12 +345,6 @@ export default function AISection5() {
               overflow: hidden;
               position: relative;
               height: 100%;
-              border: 2px solid transparent;
-              transition: border-color 0.3s ease, box-shadow 0.3s ease;
-            }
-            .s5-arch-card:hover {
-              border-color: #007bff;
-              box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
             }
             .s5-nact-card {
               border-radius: 20px;
