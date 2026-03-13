@@ -861,6 +861,9 @@ button:hover .side-panel-close-x {
 }
 
 @media (max-width: 768px) {
+  .marquee-banner-text {
+    font-size: 40px !important;
+  }
   .s4-section {
     padding: 0 20px;
   }
@@ -1351,6 +1354,14 @@ button:hover .side-panel-close-x {
   }
 }
 
+/* ── Global mobile section padding ── */
+@media (max-width: 900px) {
+  section:not(.no-section-padding) {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
 @media (max-width: 900px) {
   .hero-title {
     font-size: 48px;
@@ -1424,6 +1435,7 @@ button:hover .side-panel-close-x {
   .s7-row.s7-row-reverse {
     flex-direction: column;
     gap: 40px;
+    padding: 0 20px;
   }
   .s7-col-img {
     width: 100%;
@@ -1503,16 +1515,30 @@ button:hover .side-panel-close-x {
     display: flex;
     flex-direction: column;
   }
+  .dna-hero-section > img {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: -14% center;
+    transform: scale(1.3);
+    margin-top: 60px;
+  }
   .dna-hero-overlay {
     position: relative !important;
-    padding: 32px 20px 48px !important;
+    padding: 0px 20px 48px !important;
     justify-content: flex-start !important;
+    height: auto !important;
+    margin-top: -40px !important;
   }
   .dna-hero-content {
     width: 100% !important;
   }
   .dna-hero-title {
-    font-size: 42px !important;
+    font-size: 36px !important;
+  }
+  .dna-hero-title br {
+    display: none;
   }
 }
 
@@ -1956,6 +1982,9 @@ button:hover .side-panel-close-x {
     width: 140px;
     height: 40px;
   }
+  .pub-pagination {
+    flex-wrap: wrap;
+  }
 }
 
 /* Gradient-filled variant of book-a-call-btn */
@@ -2003,28 +2032,99 @@ button:hover .side-panel-close-x {
   .dna-tabs-row {
     grid-template-columns: 1fr !important;
     gap: 8px !important;
+    margin-top: -40px !important;
   }
   .dna-tab-btn {
-    font-size: 14px !important;
-    padding: 16px 20px !important;
-    min-height: auto !important;
+    font-size: 16px !important;
+    padding: 14px 20px !important;
+    min-height: 80px !important;
+    justify-content: center !important;
+  }
+  .dna-tab-btn img {
+    width: 32px !important;
+    height: 32px !important;
   }
   .dna-tab-content-card {
     padding: 24px !important;
-    min-height: auto !important;
+    min-height: 600px !important;
+  }
+  .dna-tab-chart {
+    margin-bottom: -16px !important;
+  }
+  .dna-tab-chart img {
+    max-height: 320px !important;
+  }
+  .dna-tab-text {
+    margin-top: 0 !important;
+  }
+  .dna-tab-text h3 {
+    font-size: 22px !important;
+    margin-top: 0 !important;
+  }
+  .dna-tab-text > div {
+    font-size: 14px !important;
   }
   .dna-tilted-top {
     display: none !important;
   }
+  .dna-grant-card {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .dna-grant-bg {
+    order: 2 !important;
+    padding-top: 0 !important;
+    border-radius: 0 0 25px 25px !important;
+  }
+  .dna-grant-content {
+    position: relative !important;
+    height: auto !important;
+    padding: 32px 24px !important;
+    order: 1 !important;
+  }
+  .dna-grant-content .flex {
+    flex-direction: column !important;
+  }
   .dna-grant-title {
-    font-size: 32px !important;
+    font-size: 28px !important;
   }
   .dna-sample-cards {
     grid-template-columns: 1fr !important;
   }
+  .dna-sample-card {
+    min-height: 320px !important;
+  }
+  .dna-sample-card h4 {
+    font-size: 20px !important;
+  }
+  .dna-sample-card p {
+    font-size: 14px !important;
+  }
+  .dna-mare-about-wrap {
+    margin-top: 20px !important;
+  }
   .dna-mare-about {
     flex-direction: column !important;
     gap: 24px !important;
+  }
+  .dna-mare-about p,
+  .dna-mare-about li p {
+    font-size: 14px !important;
+  }
+  .dna-mare-row1 {
+    margin: -80px auto 40px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .dna-mare-row2 {
+    margin-top: 0px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .dna-mare-row1 .s7-col-text,
+  .dna-mare-row2 .s7-col-text {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
   .dna-mare-overlay {
     padding: 0 20px !important;
@@ -2036,11 +2136,44 @@ button:hover .side-panel-close-x {
     padding: 48px 20px 80px !important;
   }
   .contacts-info-row {
-    flex-direction: column !important;
-    gap: 8px !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    gap: 20px !important;
   }
   .contacts-form-card {
     padding: 32px 20px !important;
+    width: 100% !important;
+  }
+  .contacts-bio-row {
+    flex-direction: column !important;
+    gap: 30px !important;
+    align-items: flex-start !important;
+  }
+  .contacts-bio-text {
+    font-size: 36px !important;
+  }
+  .contacts-subscribe-row {
+    width: 100%;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: flex-end !important;
+  }
+  .contacts-subscribe-row .footer-email-input {
+    width: auto !important;
+    flex: 1;
+  }
+  .contacts-legal {
+    flex-direction: row !important;
+    gap: 12px;
+    font-size: 11px !important;
+    white-space: nowrap;
+  }
+  .contacts-legal p,
+  .contacts-legal a {
+    font-size: 11px !important;
+  }
+  .contacts-bottom-section {
+    margin: 0 12px 12px !important;
   }
 }
 

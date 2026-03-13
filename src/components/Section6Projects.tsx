@@ -58,7 +58,7 @@ export default function Section6Projects() {
 
   return (
     <section
-      className="s6-section"
+      className="s6-section no-section-padding"
       style={{
         background: "#ffffff",
         fontFamily: "'Manrope', Arial, Helvetica, sans-serif",

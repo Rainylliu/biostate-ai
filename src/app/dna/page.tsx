@@ -226,6 +226,7 @@ export default function DNAPage() {
       >
         <div className="container">
           <div
+            className="dna-grant-card"
             style={{
               position: "relative",
               borderRadius: "25px",
@@ -251,6 +252,7 @@ export default function DNAPage() {
 
             {/* Background SVG - fills entire card */}
             <img
+              className="dna-grant-bg"
               src="/images/DNA_grant.svg"
               alt=""
               style={{
@@ -264,6 +266,7 @@ export default function DNAPage() {
 
             {/* Content overlay */}
             <div
+              className="dna-grant-content"
               style={{
                 position: "absolute",
                 top: 0,
@@ -338,6 +341,7 @@ export default function DNAPage() {
 
       {/* Section 3 - Sample Type Cards */}
       <section
+        className="no-section-padding"
         style={{
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
           marginTop: "20px",
@@ -354,6 +358,7 @@ export default function DNAPage() {
           >
             {/* Card 1 - FFPE Tissue */}
             <div
+              className="dna-sample-card"
               style={{
                 borderRadius: "25px",
                 padding: "40px",
@@ -412,6 +417,7 @@ export default function DNAPage() {
 
             {/* Card 2 - Dried Blood Spot */}
             <div
+              className="dna-sample-card"
               style={{
                 borderRadius: "25px",
                 padding: "40px",
@@ -459,6 +465,7 @@ export default function DNAPage() {
 
             {/* Card 3 - Benchmark Genomic DNA */}
             <div
+              className="dna-sample-card"
               style={{
                 borderRadius: "25px",
                 padding: "40px",
@@ -508,6 +515,7 @@ export default function DNAPage() {
       </section>
       {/* Section 4 - MARE */}
       <section
+        className="no-section-padding"
         style={{
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
           marginTop: "20px",
@@ -522,6 +530,7 @@ export default function DNAPage() {
           }}
         >
           <img
+            className="dna-mare-bg"
             src="/images/MARE_bg.svg"
             alt=""
             style={{
@@ -571,7 +580,7 @@ export default function DNAPage() {
         </div>
 
         {/* MARE About section */}
-        <div className="container" style={{ marginTop: "60px" }}>
+        <div className="container dna-mare-about-wrap" style={{ marginTop: "60px" }}>
           <div
             className="dna-mare-about"
             style={{
@@ -665,7 +674,7 @@ export default function DNAPage() {
           </div>
         </div>
         {/* MARE Data Row 1: Chart left, Content right */}
-        <div className="s7-row" style={{ maxWidth: 1200, margin: "-80px auto 100px" }}>
+        <div className="s7-row dna-mare-row1" style={{ maxWidth: 1200, margin: "-80px auto 100px" }}>
           <div className="s7-col-img">
             <img
               src="/images/MARE_chart1.svg"
@@ -802,7 +811,7 @@ export default function DNAPage() {
         </div>
 
         {/* MARE Data Row 2: Content left, Chart right */}
-        <div className="s7-row" style={{ maxWidth: 1200, margin: "0 auto", marginBottom: 40 }}>
+        <div className="s7-row dna-mare-row2" style={{ maxWidth: 1200, margin: "0 auto", marginBottom: 40 }}>
           <div className="s7-col-text">
             <p className="s7-tag">/ data /</p>
             <h3

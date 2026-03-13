@@ -32,7 +32,7 @@ export default function AboutUsPage() {
           style={{
             position: "absolute",
             left: "50%",
-            top: "28%",
+            top: "14%",
             transform: "translate(-50%, -50%)",
             width: "60%",
             minWidth: 800,
@@ -470,6 +470,7 @@ export default function AboutUsPage() {
       </section>
       {/* ── Section 4: Investors (Institutional + Individual) ── */}
       <section
+        className="no-section-padding"
         style={{
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
           padding: "20px 0 35px",

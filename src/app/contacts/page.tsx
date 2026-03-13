@@ -267,7 +267,7 @@ export default function ContactsPage() {
               style={{
                 display: "flex",
                 alignItems: "flex-start",
-                gap: "40px",
+                justifyContent: "space-between",
               }}
             >
               <h6
@@ -277,7 +277,6 @@ export default function ContactsPage() {
                   fontWeight: 700,
                   color: "#111",
                   margin: 0,
-                  minWidth: "150px",
                   flexShrink: 0,
                 }}
               >
@@ -291,6 +290,7 @@ export default function ContactsPage() {
                   color: "#333",
                   lineHeight: 1.7,
                   margin: 0,
+                  textAlign: "right",
                 }}
               >
                 7505 Fannin St. Suite 610
@@ -305,7 +305,7 @@ export default function ContactsPage() {
               style={{
                 display: "flex",
                 alignItems: "center",
-                gap: "40px",
+                justifyContent: "space-between",
               }}
             >
               <h6
@@ -315,30 +315,23 @@ export default function ContactsPage() {
                   fontWeight: 700,
                   color: "#111",
                   margin: 0,
-                  minWidth: "150px",
                   flexShrink: 0,
                 }}
               >
                 Email
               </h6>
-              <p
+              <a
+                href="mailto:contact@biostate.ai"
                 style={{
                   fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                   fontSize: "16px",
                   fontWeight: 400,
-                  margin: 0,
+                  color: "#45d0bd",
+                  textDecoration: "underline",
                 }}
               >
-                <a
-                  href="mailto:contact@biostate.ai"
-                  style={{
-                    color: "#45d0bd",
-                    textDecoration: "underline",
-                  }}
-                >
-                  contact@biostate.ai
-                </a>
-              </p>
+                contact@biostate.ai
+              </a>
             </div>
 
             {/* Social network */}
@@ -347,7 +340,7 @@ export default function ContactsPage() {
               style={{
                 display: "flex",
                 alignItems: "center",
-                gap: "40px",
+                justifyContent: "space-between",
               }}
             >
               <h6
@@ -357,7 +350,6 @@ export default function ContactsPage() {
                   fontWeight: 700,
                   color: "#111",
                   margin: 0,
-                  minWidth: "150px",
                   flexShrink: 0,
                 }}
               >
@@ -462,9 +454,13 @@ export default function ContactsPage() {
         </div>
       </section>
 
-      {/* ── Bottom Section (light mode footer) ── */}
+      {/* ── Bottom Section (dark footer) ── */}
       <section
+        className="contacts-bottom-section"
         style={{
+          backgroundColor: "#1a1a1a",
+          borderRadius: "25px",
+          margin: "0 20px 20px",
           padding: "60px 0 40px",
           position: "relative",
           overflow: "hidden",
@@ -479,7 +475,7 @@ export default function ContactsPage() {
             right: "0",
             height: "300px",
             background:
-              "radial-gradient(ellipse at 30% 100%, rgba(69, 208, 189, 0.12) 0%, transparent 50%), radial-gradient(ellipse at 70% 100%, rgba(130, 88, 200, 0.12) 0%, transparent 50%)",
+              "radial-gradient(ellipse at 30% 100%, rgba(69, 208, 189, 0.15) 0%, transparent 50%), radial-gradient(ellipse at 70% 100%, rgba(130, 88, 200, 0.15) 0%, transparent 50%)",
             pointerEvents: "none",
           }}
         />
@@ -499,12 +495,12 @@ export default function ContactsPage() {
             style={{
               height: "1px",
               background:
-                "linear-gradient(to right, rgba(0,0,0,0.03), rgba(0,0,0,0.1), rgba(0,0,0,0.03))",
+                "linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.3), rgba(255,255,255,0.1))",
               marginBottom: "40px",
             }}
           />
 
-          {/* Logo - dark version */}
+          {/* Logo - white version */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/logo.svg"
@@ -513,6 +509,7 @@ export default function ContactsPage() {
               height: "48px",
               width: "auto",
               marginBottom: "40px",
+              filter: "brightness(0) invert(1)",
             }}
           />
 
@@ -528,6 +525,7 @@ export default function ContactsPage() {
           >
             {/* Left - Big text */}
             <h2
+              className="contacts-bio-text"
               style={{
                 fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                 fontSize: "64px",
@@ -566,7 +564,7 @@ export default function ContactsPage() {
                 fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                 fontSize: "14px",
                 fontWeight: 400,
-                color: "rgba(0,0,0,0.35)",
+                color: "rgba(255,255,255,0.4)",
                 margin: 0,
               }}
             >
@@ -575,12 +573,12 @@ export default function ContactsPage() {
             <div style={{ display: "flex", gap: "32px" }}>
               <Link
                 href="/privacy"
-                className="contacts-legal-link"
+                className="footer-link-hover"
                 style={{
                   fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                   fontSize: "14px",
                   fontWeight: 400,
-                  color: "rgba(0,0,0,0.35)",
+                  color: "rgba(255,255,255,0.4)",
                   textDecoration: "underline",
                 }}
               >
@@ -588,12 +586,12 @@ export default function ContactsPage() {
               </Link>
               <Link
                 href="/sales-tc"
-                className="contacts-legal-link"
+                className="footer-link-hover"
                 style={{
                   fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                   fontSize: "14px",
                   fontWeight: 400,
-                  color: "rgba(0,0,0,0.35)",
+                  color: "rgba(255,255,255,0.4)",
                   textDecoration: "underline",
                 }}
               >

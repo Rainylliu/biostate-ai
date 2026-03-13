@@ -195,6 +195,7 @@ function BixBenchChart() {
 export default function Section8KDense() {
   return (
     <section
+      className="no-section-padding"
       style={{
         padding: "40px 20px 40px",
         background: "#ffffff",
