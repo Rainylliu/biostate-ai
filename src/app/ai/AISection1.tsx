@@ -81,12 +81,7 @@ export default function AISection1() {
                 lineHeight: 1.2,
                 letterSpacing: "-0.02em",
                 margin: "0 0 32px 0",
-                background:
-                  "linear-gradient(135deg, #8258c8 0%, #2c84c8 100%)",
-                backgroundClip: "text",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                color: "transparent",
+                color: "#ffffff",
                 maxWidth: "420px",
               }}
             >
@@ -119,7 +114,7 @@ export default function AISection1() {
             style={{
               alignSelf: "flex-end",
               marginTop: "32px",
-              opacity: 0.5,
+              opacity: 0.35,
             }}
           >
             <path
@@ -172,13 +167,13 @@ export default function AISection1() {
             }}
           />
 
-          {/* Gradient overlay for text readability */}
+          {/* Light blue/purple tint overlay */}
           <div
             style={{
               position: "absolute",
               inset: 0,
               background:
-                "linear-gradient(135deg, rgba(130, 88, 200, 0.25), rgba(44, 132, 200, 0.25))",
+                "linear-gradient(135deg, rgba(130, 88, 200, 0.2), rgba(44, 132, 200, 0.2))",
             }}
           />
 
@@ -199,15 +194,10 @@ export default function AISection1() {
                 style={{
                   fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                   fontSize: "clamp(36px, 4vw, 56px)",
-                  fontWeight: 700,
+                  fontWeight: 800,
                   lineHeight: 1.1,
-                  margin: "0 0 auto 0",
-                  background:
-                    "linear-gradient(135deg, #8258c8 0%, #2c84c8 100%)",
-                  backgroundClip: "text",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  color: "transparent",
+                  margin: 0,
+                  color: "#ffffff",
                 }}
               >
                 Our Vision
@@ -242,50 +232,50 @@ export default function AISection1() {
 
               {/* Watch video button */}
               <button
-                className="book-a-call-btn"
                 onClick={(e) => {
                   e.stopPropagation();
                   window.open("https://youtu.be/jP1K_8e7BjI", "_blank");
                 }}
                 style={{
                   flexShrink: 0,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "12px",
                   backgroundColor: "#ffffff",
                   color: "#333",
+                  border: "none",
+                  borderRadius: "50px",
+                  padding: "14px 28px",
+                  fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                  fontSize: "15px",
+                  fontWeight: 500,
+                  cursor: "pointer",
+                  boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
                 }}
               >
-                Watch video
-                <span className="book-a-call-arrow">
-                  <span className="book-a-call-arrow-inner">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                    >
-                      <path
-                        d="M5.5 3L11 8L5.5 13"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                    >
-                      <path
-                        d="M5.5 3L11 8L5.5 13"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </span>
+                {/* Play icon circle */}
+                <span
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "28px",
+                    height: "28px",
+                    borderRadius: "50%",
+                    backgroundColor: "#1a1a1a",
+                    flexShrink: 0,
+                  }}
+                >
+                  <svg
+                    width="10"
+                    height="12"
+                    viewBox="0 0 10 12"
+                    fill="none"
+                  >
+                    <path d="M0 0L10 6L0 12V0Z" fill="#ffffff" />
+                  </svg>
                 </span>
+                Watch video
               </button>
             </div>
           </div>
