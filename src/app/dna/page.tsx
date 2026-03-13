@@ -664,6 +664,275 @@ export default function DNAPage() {
             </div>
           </div>
         </div>
+        {/* MARE Data Row 1: Chart left, Content right */}
+        <div className="s7-row" style={{ maxWidth: 1200, margin: "80px auto 100px" }}>
+          <div className="s7-col-img">
+            <img
+              src="/images/MARE_chart1.svg"
+              alt="Coverage Rescue chart - 48 loci"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                borderRadius: 20,
+                display: "block",
+              }}
+            />
+          </div>
+          <div className="s7-col-text">
+            <p className="s7-tag">/data /</p>
+            <h3
+              style={{
+                fontFamily: "'Sora', Arial, Helvetica, sans-serif",
+                fontSize: 48,
+                fontWeight: 400,
+                color: "#333333",
+                lineHeight: 1.15,
+                margin: "0 0 40px 0",
+              }}
+            >
+              Coverage Rescue in Difficult Genomic Regions
+            </h3>
+
+            <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
+              <div style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
+                <img
+                  src="/images/MARE_charticon1.svg"
+                  alt=""
+                  className="s7-wetlab-icon"
+                  style={{ width: 48, height: 48, flexShrink: 0, marginTop: 2 }}
+                />
+                <div>
+                  <p
+                    style={{
+                      fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                      fontSize: 18,
+                      fontWeight: 700,
+                      color: "#111",
+                      margin: "0 0 6px 0",
+                    }}
+                  >
+                    01. MARE boosts coverage nearly 10×
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                      fontSize: 15,
+                      fontWeight: 400,
+                      color: "#555",
+                      lineHeight: 1.7,
+                      margin: 0,
+                    }}
+                  >
+                    With MARE, difficult loci reach ~270% normalized coverage—dramatically higher than standard workflows.
+                  </p>
+                </div>
+              </div>
+
+              <div style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
+                <img
+                  src="/images/MARE_charticon2.svg"
+                  alt=""
+                  className="s7-wetlab-icon"
+                  style={{ width: 48, height: 48, flexShrink: 0, marginTop: 2 }}
+                />
+                <div>
+                  <p
+                    style={{
+                      fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                      fontSize: 18,
+                      fontWeight: 700,
+                      color: "#111",
+                      margin: "0 0 6px 0",
+                    }}
+                  >
+                    02. Standard WES fails in these regions
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                      fontSize: 15,
+                      fontWeight: 400,
+                      color: "#555",
+                      lineHeight: 1.7,
+                      margin: 0,
+                    }}
+                  >
+                    Without MARE, coverage drops to ~30%, leaving critical diagnostic regions insufficiently captured.
+                  </p>
+                </div>
+              </div>
+
+              <div style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
+                <img
+                  src="/images/MARE_charticon3.svg"
+                  alt=""
+                  className="s7-wetlab-icon"
+                  style={{ width: 48, height: 48, flexShrink: 0, marginTop: 2 }}
+                />
+                <div>
+                  <p
+                    style={{
+                      fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                      fontSize: 18,
+                      fontWeight: 700,
+                      color: "#111",
+                      margin: "0 0 6px 0",
+                    }}
+                  >
+                    03. MARE significantly outperforms competitors
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                      fontSize: 15,
+                      fontWeight: 400,
+                      color: "#555",
+                      lineHeight: 1.7,
+                      margin: 0,
+                    }}
+                  >
+                    Competitor A achieves &lt;10% coverage, while MARE consistently delivers full and reliable target enrichment.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* MARE Data Row 2: Content left, Chart right */}
+        <div className="s7-row" style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <div className="s7-col-text">
+            <p className="s7-tag">/ data /</p>
+            <h3
+              style={{
+                fontFamily: "'Sora', Arial, Helvetica, sans-serif",
+                fontSize: 48,
+                fontWeight: 400,
+                color: "#333333",
+                lineHeight: 1.15,
+                margin: "0 0 28px 0",
+              }}
+            >
+              MARE Maintains Coverage in GC-Rich Exons
+            </h3>
+
+            <p
+              style={{
+                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                fontSize: 16,
+                fontWeight: 400,
+                color: "#555",
+                lineHeight: 1.7,
+                margin: "0 0 36px 0",
+              }}
+            >
+              In challenging high-GC exons like RALGAPA1 exon 25, MARE preserves over 10× higher coverage than competing methods, securing data others can&apos;t capture.
+            </p>
+
+            <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
+              <div style={{ display: "flex", gap: 20, alignItems: "flex-start" }}>
+                <span className="s7-outline-num">01</span>
+                <div>
+                  <p
+                    style={{
+                      fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                      fontSize: 18,
+                      fontWeight: 700,
+                      color: "#111",
+                      margin: "0 0 6px 0",
+                    }}
+                  >
+                    MARE Sustains High Coverage
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                      fontSize: 15,
+                      fontWeight: 400,
+                      color: "#555",
+                      lineHeight: 1.7,
+                      margin: 0,
+                    }}
+                  >
+                    MARE maintains &gt;150% normalized coverage across the difficult RALGAPA1 exon 25, demonstrating stable enrichment in GC-rich regions.
+                  </p>
+                </div>
+              </div>
+
+              <div style={{ display: "flex", gap: 20, alignItems: "flex-start" }}>
+                <span className="s7-outline-num">02</span>
+                <div>
+                  <p
+                    style={{
+                      fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                      fontSize: 18,
+                      fontWeight: 700,
+                      color: "#111",
+                      margin: "0 0 6px 0",
+                    }}
+                  >
+                    Competitors Fail in Critical Exons
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                      fontSize: 15,
+                      fontWeight: 400,
+                      color: "#555",
+                      lineHeight: 1.7,
+                      margin: 0,
+                    }}
+                  >
+                    Both standard WES and other commercial kits drop below 15% coverage, leaving essential diagnostic loci undetected.
+                  </p>
+                </div>
+              </div>
+
+              <div style={{ display: "flex", gap: 20, alignItems: "flex-start" }}>
+                <span className="s7-outline-num">03</span>
+                <div>
+                  <p
+                    style={{
+                      fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                      fontSize: 18,
+                      fontWeight: 700,
+                      color: "#111",
+                      margin: "0 0 6px 0",
+                    }}
+                  >
+                    Reliable Detection Where It Matters Most
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                      fontSize: 15,
+                      fontWeight: 400,
+                      color: "#555",
+                      lineHeight: 1.7,
+                      margin: 0,
+                    }}
+                  >
+                    MARE ensures uniform signal in even the hardest-to-capture regions—providing complete visibility for precision diagnostics.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="s7-col-img">
+            <img
+              src="/images/MARE_chart2.svg"
+              alt="RALGAPA1 exon coverage comparison"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                borderRadius: 20,
+                display: "block",
+              }}
+            />
+          </div>
+        </div>
       </section>
     </div>
   );
