@@ -71,9 +71,9 @@ export default function NewsGrid() {
               flexDirection: "column",
               flex: 1,
               padding: "0 20px 24px",
-              borderLeft: "1px solid #333333",
-              borderRight: "1px solid #333333",
-              borderBottom: "1px solid #333333",
+              borderLeft: "1px solid #656565",
+              borderRight: "1px solid #656565",
+              borderBottom: "1px solid #656565",
               borderRadius: "0 0 20px 20px",
             }}>
               <h4 style={{ margin: "20px 0 12px", fontSize: "18px", fontWeight: 600, lineHeight: 1.4, color: "#1a1a1a" }}>
