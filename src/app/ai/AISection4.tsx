@@ -78,7 +78,7 @@ export default function AISection4() {
         {/* Aging Images Row */}
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
           {/* David Sinclair Photo */}
-          <div className="w-full lg:w-5/12" style={{ position: "relative", overflow: "hidden", borderRadius: "20px", minHeight: "300px" }}>
+          <div className="w-full lg:w-1/3" style={{ position: "relative", overflow: "hidden", borderRadius: "20px", minHeight: "300px" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/David Sinclair.png"
@@ -95,7 +95,7 @@ export default function AISection4() {
           </div>
 
           {/* Aging Chart */}
-          <div className="w-full lg:w-7/12 flex items-center">
+          <div className="w-full lg:w-2/3 flex items-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/Aging.png"
@@ -158,7 +158,7 @@ export default function AISection4() {
           style={{ marginTop: "48px" }}
         >
           {/* Drug Lead Chart */}
-          <div className="w-full lg:w-7/12 flex items-center">
+          <div className="w-full lg:w-2/3 flex items-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/Drug Lead.png"
@@ -171,7 +171,7 @@ export default function AISection4() {
           </div>
 
           {/* Swamy Vijayan Photo */}
-          <div className="w-full lg:w-5/12" style={{ position: "relative", overflow: "hidden", borderRadius: "20px", minHeight: "300px" }}>
+          <div className="w-full lg:w-1/3" style={{ position: "relative", overflow: "hidden", borderRadius: "20px", minHeight: "300px" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/Swamy Vijayan.png"
