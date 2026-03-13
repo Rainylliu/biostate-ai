@@ -77,7 +77,7 @@ export default function AISection4() {
         </div>
 
         {/* Aging Images Row */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
+        <div className="ai-s4-images-row flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
           {/* David Sinclair Photo */}
           <div className="w-full lg:w-1/3" style={{ position: "relative", overflow: "hidden", borderRadius: "20px", minHeight: "300px" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}

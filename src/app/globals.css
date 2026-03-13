@@ -1392,7 +1392,10 @@ button:hover .side-panel-close-x {
     padding-right: 20px !important;
   }
   .ai-section4 {
-    padding-top: 40px !important;
+    padding-top: 20px !important;
+  }
+  .ai-section4 .ai-s4-images-row {
+    margin-top: 32px;
   }
 }
 
