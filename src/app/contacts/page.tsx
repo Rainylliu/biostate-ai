@@ -158,7 +158,7 @@ export default function ContactsPage() {
               top: "50%",
               transform: "translateY(-50%)",
               fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-              fontSize: "clamp(60px, 7vw, 90px)",
+              fontSize: "clamp(48px, 5vw, 70px)",
               fontWeight: 700,
               color: "transparent",
               WebkitTextStroke: "1.2px rgba(255, 255, 255, 0.35)",
