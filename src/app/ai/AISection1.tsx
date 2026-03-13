@@ -69,7 +69,7 @@ export default function AISection1() {
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
-            minHeight: "505px",
+            minHeight: "440px",
           }}
         >
           <div>
@@ -146,7 +146,7 @@ export default function AISection1() {
             borderRadius: "24px",
             position: "relative",
             overflow: "hidden",
-            minHeight: "505px",
+            minHeight: "440px",
             cursor: "pointer",
           }}
           onClick={() =>
@@ -284,7 +284,7 @@ export default function AISection1() {
               width: "24px",
               height: "24px",
               background:
-                "radial-gradient(circle at 100% 0%, transparent 24px, #ffffff 24px)",
+                "radial-gradient(circle at 100% 100%, transparent 24px, #ffffff 24px)",
               zIndex: 2,
             }}
           />
@@ -297,7 +297,7 @@ export default function AISection1() {
               width: "24px",
               height: "24px",
               background:
-                "radial-gradient(circle at 100% 0%, transparent 24px, #ffffff 24px)",
+                "radial-gradient(circle at 100% 100%, transparent 24px, #ffffff 24px)",
               zIndex: 2,
             }}
           />
