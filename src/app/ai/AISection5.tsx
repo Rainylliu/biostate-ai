@@ -275,13 +275,6 @@ export default function AISection5() {
                   objectFit: "cover",
                   display: "block",
                   borderRadius: 20,
-                  transition: "all 0.3s ease",
-                  border: archHover
-                    ? "2px solid #007bff"
-                    : "2px solid transparent",
-                  boxShadow: archHover
-                    ? "0 4px 8px rgba(0, 123, 255, 0.3)"
-                    : "none",
                 }}
               />
               {/* CTA pill button */}
@@ -347,14 +340,20 @@ export default function AISection5() {
               grid-template-columns: 5fr 7fr;
               gap: 24px;
               align-items: stretch;
+              padding: 4px;
             }
             .s5-arch-card {
               cursor: pointer;
-              position: "relative";
-              border-radius: 20px;
-              overflow: visible;
+              border-radius: 22px;
+              overflow: hidden;
               position: relative;
               height: 100%;
+              border: 2px solid transparent;
+              transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            }
+            .s5-arch-card:hover {
+              border-color: #007bff;
+              box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
             }
             .s5-nact-card {
               border-radius: 20px;
