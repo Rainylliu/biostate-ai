@@ -41,9 +41,11 @@ export default function Header() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
+    // Sync scroll state immediately on mount and on route change
+    onScroll();
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [pathname]);
 
   // On home page & DNA page: header overlays hero (position absolute)
   const isOverlay = isHome || isDNA;
