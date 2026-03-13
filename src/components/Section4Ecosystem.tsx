@@ -103,7 +103,7 @@ export default function Section4Ecosystem() {
   const touchStartX = useRef<number | null>(null);
 
   return (
-    <section className="s4-section" style={{ fontFamily: "'Manrope', Arial, Helvetica, sans-serif" }}>
+    <section className="s4-section no-section-padding" style={{ fontFamily: "'Manrope', Arial, Helvetica, sans-serif" }}>
       {/* Scrolling Banner — full-width, breaks out of parent padding */}
       <div
         className="s4-diagonal-banner"

@@ -470,6 +470,7 @@ export default function AboutUsPage() {
       </section>
       {/* ── Section 4: Investors (Institutional + Individual) ── */}
       <section
+        className="no-section-padding"
         style={{
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
           padding: "20px 0 35px",

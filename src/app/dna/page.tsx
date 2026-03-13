@@ -341,6 +341,7 @@ export default function DNAPage() {
 
       {/* Section 3 - Sample Type Cards */}
       <section
+        className="no-section-padding"
         style={{
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
           marginTop: "20px",

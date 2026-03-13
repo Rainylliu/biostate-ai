@@ -9,6 +9,7 @@ export default function Section9NActAI() {
 
   return (
     <section
+      className="no-section-padding"
       style={{
         padding: "40px 20px 80px",
         background: "#ffffff",
