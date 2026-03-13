@@ -204,81 +204,103 @@ export default function AISection1() {
               </h2>
             </div>
 
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "flex-end",
-              }}
-            >
-              <div>
-                <p
-                  style={{
-                    fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                    fontSize: "16px",
-                    fontWeight: 400,
-                    lineHeight: 1.8,
-                    color: "#ffffff",
-                    margin: 0,
-                  }}
-                >
-                  Track disease progression.
-                  <br />
-                  Predict the future.
-                  <br />
-                  Act earlier.
-                </p>
-              </div>
-
-              {/* Watch video button */}
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  window.open("https://youtu.be/jP1K_8e7BjI", "_blank");
-                }}
+            <div>
+              <p
                 style={{
-                  flexShrink: 0,
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "12px",
-                  backgroundColor: "#ffffff",
-                  color: "#333",
-                  border: "none",
-                  borderRadius: "50px",
-                  padding: "14px 28px",
                   fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-                  fontSize: "15px",
-                  fontWeight: 500,
-                  cursor: "pointer",
-                  boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+                  fontSize: "16px",
+                  fontWeight: 400,
+                  lineHeight: 1.8,
+                  color: "#ffffff",
+                  margin: 0,
                 }}
               >
-                {/* Play icon circle */}
-                <span
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: "28px",
-                    height: "28px",
-                    borderRadius: "50%",
-                    backgroundColor: "#1a1a1a",
-                    flexShrink: 0,
-                  }}
-                >
-                  <svg
-                    width="10"
-                    height="12"
-                    viewBox="0 0 10 12"
-                    fill="none"
-                  >
-                    <path d="M0 0L10 6L0 12V0Z" fill="#ffffff" />
-                  </svg>
-                </span>
-                Watch video
-              </button>
+                Track disease progression.
+                <br />
+                Predict the future.
+                <br />
+                Act earlier.
+              </p>
             </div>
           </div>
+
+          {/* ── Bottom-right notch with Watch video button ── */}
+          {/* White notch area */}
+          <div
+            style={{
+              position: "absolute",
+              bottom: 0,
+              right: 0,
+              width: "280px",
+              height: "80px",
+              backgroundColor: "#ffffff",
+              borderTopLeftRadius: "24px",
+              zIndex: 2,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "12px",
+              cursor: "pointer",
+            }}
+            onClick={(e) => {
+              e.stopPropagation();
+              window.open("https://youtu.be/jP1K_8e7BjI", "_blank");
+            }}
+          >
+            {/* Play icon circle */}
+            <span
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: "36px",
+                height: "36px",
+                borderRadius: "50%",
+                border: "1.5px solid #666",
+                flexShrink: 0,
+              }}
+            >
+              <svg width="10" height="12" viewBox="0 0 10 12" fill="none">
+                <path d="M0 0L10 6L0 12V0Z" fill="#333" />
+              </svg>
+            </span>
+            <span
+              style={{
+                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                fontSize: "16px",
+                fontWeight: 500,
+                color: "#333",
+              }}
+            >
+              Watch video
+            </span>
+          </div>
+          {/* Concave corner - top of notch */}
+          <div
+            style={{
+              position: "absolute",
+              bottom: "80px",
+              right: 0,
+              width: "24px",
+              height: "24px",
+              background:
+                "radial-gradient(circle at 100% 0%, transparent 24px, #ffffff 24px)",
+              zIndex: 2,
+            }}
+          />
+          {/* Concave corner - left of notch */}
+          <div
+            style={{
+              position: "absolute",
+              bottom: 0,
+              right: "280px",
+              width: "24px",
+              height: "24px",
+              background:
+                "radial-gradient(circle at 100% 0%, transparent 24px, #ffffff 24px)",
+              zIndex: 2,
+            }}
+          />
         </div>
       </div>
     </section>
