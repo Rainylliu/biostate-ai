@@ -31,7 +31,7 @@ export default function AISection3() {
             {/* Heading */}
             <h2
               style={{
-                fontSize: "clamp(36px, 4vw, 56px)",
+                fontSize: "clamp(36px, 4vw, 48px)",
                 fontWeight: 400,
                 lineHeight: 1.15,
                 letterSpacing: "-0.02em",
