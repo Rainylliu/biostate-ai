@@ -60,7 +60,7 @@ export default function AISection1() {
         <div
           className="ai-s1-card-left"
           style={{
-            flex: 1,
+            flex: "0 0 30%",
             backgroundColor: "#1F1F1F",
             borderRadius: "24px",
             padding: "54px 63px 40px 40px",
@@ -142,7 +142,7 @@ export default function AISection1() {
         <div
           className="ai-s1-card-right"
           style={{
-            flex: 2,
+            flex: "0 0 calc(70% - 24px)",
             borderRadius: "24px",
             position: "relative",
             overflow: "hidden",
