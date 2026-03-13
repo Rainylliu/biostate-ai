@@ -60,41 +60,37 @@ export default function AISection3() {
 
             {/* Feature List */}
             <ul
+              role="list"
               style={{
                 listStyle: "none",
                 padding: 0,
                 margin: "0 0 48px 0",
-                display: "flex",
-                flexDirection: "column",
-                gap: "12px",
+                fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                fontSize: "16px",
+                lineHeight: "1.875em",
+                fontWeight: 500,
+                color: "#333333",
               }}
             >
               <li
                 style={{
-                  fontSize: "16px",
-                  fontWeight: 400,
-                  lineHeight: 1.6,
-                  color: "#444",
                   display: "flex",
                   alignItems: "flex-start",
                   gap: "10px",
+                  marginBottom: "8px",
                 }}
               >
-                <span style={{ color: "#5BC4BE", fontSize: "18px" }}>↘</span>
+                <span style={{ color: "#45d0bd", fontSize: "18px", flexShrink: 0 }}>↘</span>
                 Discovered novel RNA biomarkers of aging
               </li>
               <li
                 style={{
-                  fontSize: "16px",
-                  fontWeight: 400,
-                  lineHeight: 1.6,
-                  color: "#444",
                   display: "flex",
                   alignItems: "flex-start",
                   gap: "10px",
                 }}
               >
-                <span style={{ color: "#5BC4BE", fontSize: "18px" }}>↘</span>
+                <span style={{ color: "#45d0bd", fontSize: "18px", flexShrink: 0 }}>↘</span>
                 Performs literature review, feature selection, and manuscript
                 drafting autonomously
               </li>
