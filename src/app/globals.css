@@ -1503,10 +1503,18 @@ button:hover .side-panel-close-x {
     display: flex;
     flex-direction: column;
   }
+  .dna-hero-section > img {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center center;
+  }
   .dna-hero-overlay {
     position: relative !important;
     padding: 32px 20px 48px !important;
     justify-content: flex-start !important;
+    height: auto !important;
   }
   .dna-hero-content {
     width: 100% !important;
