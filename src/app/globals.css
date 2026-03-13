@@ -2141,6 +2141,7 @@ button:hover .side-panel-close-x {
   }
   .contacts-form-card {
     padding: 32px 20px !important;
+    width: 100% !important;
   }
 }
 
