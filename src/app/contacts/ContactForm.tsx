@@ -111,34 +111,23 @@ export default function ContactForm() {
 
       <button
         type="submit"
+        className="book-a-call-btn"
         style={{
           alignSelf: "flex-start",
           marginTop: "12px",
-          display: "inline-flex",
-          alignItems: "center",
-          gap: "10px",
-          padding: "14px 28px",
-          fontFamily: font,
-          fontSize: "16px",
-          fontWeight: 500,
-          color: "#333",
-          borderRadius: "16px",
-          border: "2px solid transparent",
-          background: "linear-gradient(#f2f2f2, #f2f2f2) padding-box, linear-gradient(135deg, #8258c8, #2c84c8) border-box",
-          cursor: "pointer",
-          transition: "opacity 0.2s",
         }}
       >
         Send message
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <path
-            d="M4 12L12 4M12 4H5M12 4V11"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+        <span className="book-a-call-arrow">
+          <span className="book-a-call-arrow-inner">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </span>
+        </span>
       </button>
     </form>
   );
