@@ -510,7 +510,7 @@ export default function DNAPage() {
       <section
         style={{
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-          marginTop: "80px",
+          marginTop: "20px",
         }}
       >
         {/* MARE Hero with background */}
