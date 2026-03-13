@@ -861,6 +861,9 @@ button:hover .side-panel-close-x {
 }
 
 @media (max-width: 768px) {
+  .marquee-banner-text {
+    font-size: 40px !important;
+  }
   .s4-section {
     padding: 0 20px;
   }
