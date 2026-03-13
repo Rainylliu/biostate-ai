@@ -811,7 +811,7 @@ export default function DNAPage() {
         </div>
 
         {/* MARE Data Row 2: Content left, Chart right */}
-        <div className="s7-row" style={{ maxWidth: 1200, margin: "0 auto", marginBottom: 40 }}>
+        <div className="s7-row dna-mare-row2" style={{ maxWidth: 1200, margin: "0 auto", marginBottom: 40 }}>
           <div className="s7-col-text">
             <p className="s7-tag">/ data /</p>
             <h3

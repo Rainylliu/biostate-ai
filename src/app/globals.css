@@ -2111,12 +2111,14 @@ button:hover .side-panel-close-x {
   .dna-mare-about li p {
     font-size: 14px !important;
   }
-  .dna-mare-row1 {
+  .dna-mare-row1,
+  .dna-mare-row2 {
     margin-top: 0px !important;
     padding-left: 20px !important;
     padding-right: 20px !important;
   }
-  .dna-mare-row1 .s7-col-text {
+  .dna-mare-row1 .s7-col-text,
+  .dna-mare-row2 .s7-col-text {
     padding-left: 20px !important;
     padding-right: 20px !important;
   }
