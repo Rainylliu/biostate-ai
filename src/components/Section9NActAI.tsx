@@ -146,7 +146,7 @@ export default function Section9NActAI() {
             style={{ cursor: "pointer", position: "relative" }}
           >
             <img
-              src="https://biostate.jamesflare.com/wp-content/uploads/2025/11/Architecture.svg"
+              src="/images/AI Architecture.svg"
               alt="Architecture Diagram"
               style={{
                 width: "100%",
