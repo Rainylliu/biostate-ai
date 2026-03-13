@@ -1,6 +1,15 @@
 "use client";
 
+import { useState, useCallback } from "react";
+
+const YOUTUBE_VIDEO_ID = "jP1K_8e7BjI";
+
 export default function AISection1() {
+  const [showVideo, setShowVideo] = useState(false);
+
+  const openVideo = useCallback(() => setShowVideo(true), []);
+  const closeVideo = useCallback(() => setShowVideo(false), []);
+
   return (
     <section
       style={{
@@ -149,9 +158,7 @@ export default function AISection1() {
             maxHeight: "480px",
             cursor: "pointer",
           }}
-          onClick={() =>
-            window.open("https://youtu.be/jP1K_8e7BjI", "_blank")
-          }
+          onClick={openVideo}
         >
           {/* GIF Background */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -244,7 +251,7 @@ export default function AISection1() {
             }}
             onClick={(e) => {
               e.stopPropagation();
-              window.open("https://youtu.be/jP1K_8e7BjI", "_blank");
+              openVideo();
             }}
           >
             {/* Play icon circle */}
@@ -305,6 +312,63 @@ export default function AISection1() {
           />
         </div>
       </div>
+      {/* ── Video Modal ── */}
+      {showVideo && (
+        <div
+          onClick={closeVideo}
+          style={{
+            position: "fixed",
+            inset: 0,
+            zIndex: 9999,
+            backgroundColor: "rgba(0, 0, 0, 0.85)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          {/* Close button */}
+          <button
+            onClick={closeVideo}
+            style={{
+              position: "absolute",
+              top: "20px",
+              right: "20px",
+              background: "none",
+              border: "none",
+              color: "#fff",
+              fontSize: "32px",
+              cursor: "pointer",
+              lineHeight: 1,
+              padding: "8px",
+            }}
+          >
+            ×
+          </button>
+          {/* YouTube embed */}
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              width: "90vw",
+              maxWidth: "1100px",
+              aspectRatio: "16 / 9",
+              borderRadius: "16px",
+              overflow: "hidden",
+            }}
+          >
+            <iframe
+              src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&rel=0`}
+              title="Dynamic Multiome Intro Video"
+              allow="autoplay; encrypted-media; picture-in-picture"
+              allowFullScreen
+              style={{
+                width: "100%",
+                height: "100%",
+                border: "none",
+              }}
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }
