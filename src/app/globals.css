@@ -2017,7 +2017,7 @@ button:hover .side-panel-close-x {
   .dna-tabs-row {
     grid-template-columns: 1fr !important;
     gap: 8px !important;
-    margin-top: -20px !important;
+    margin-top: -40px !important;
   }
   .dna-tab-btn {
     font-size: 16px !important;
@@ -2032,11 +2032,18 @@ button:hover .side-panel-close-x {
     padding: 24px !important;
     min-height: 600px !important;
   }
+  .dna-tab-chart {
+    margin-bottom: -16px !important;
+  }
   .dna-tab-chart img {
     max-height: 320px !important;
   }
+  .dna-tab-text {
+    margin-top: 0 !important;
+  }
   .dna-tab-text h3 {
-    font-size: 24px !important;
+    font-size: 22px !important;
+    margin-top: 0 !important;
   }
   .dna-tab-text > div {
     font-size: 14px !important;
