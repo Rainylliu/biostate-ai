@@ -2111,6 +2111,13 @@ button:hover .side-panel-close-x {
   .dna-mare-row1 {
     margin-top: 0px !important;
   }
+  .dna-mare-section {
+    margin-top: 60px !important;
+  }
+  .dna-mare-section > div:first-child {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
   .dna-mare-overlay {
     padding: 0 20px !important;
     bottom: 30px !important;
