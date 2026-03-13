@@ -154,6 +154,14 @@ img {
   color: #333;
 }
 
+/* ── Contacts legal link hover ── */
+.contacts-legal-link {
+  transition: color 0.2s ease;
+}
+.contacts-legal-link:hover {
+  color: #45d0bd !important;
+}
+
 /* ── Contacts form floating label (gray card background) ── */
 .contacts-floating label {
   background: #f2f2f2 !important;

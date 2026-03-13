@@ -575,6 +575,7 @@ export default function ContactsPage() {
             <div style={{ display: "flex", gap: "32px" }}>
               <Link
                 href="/privacy"
+                className="contacts-legal-link"
                 style={{
                   fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                   fontSize: "14px",
@@ -587,6 +588,7 @@ export default function ContactsPage() {
               </Link>
               <Link
                 href="/sales-tc"
+                className="contacts-legal-link"
                 style={{
                   fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
                   fontSize: "14px",
