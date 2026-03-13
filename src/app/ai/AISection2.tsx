@@ -96,7 +96,7 @@ export default function AISection2() {
                 <h2
                   style={{
                     fontSize: "clamp(48px, 5vw, 72px)",
-                    fontWeight: 600,
+                    fontWeight: 400,
                     lineHeight: 1.1,
                     letterSpacing: "-0.02em",
                     color: "#ffffff",
