@@ -2022,5 +2022,12 @@ button:hover .side-panel-close-x {
     gap: 48px !important;
     padding: 48px 20px 80px !important;
   }
+  .contacts-info-row {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  .contacts-form-card {
+    padding: 32px 20px !important;
+  }
 }
 
