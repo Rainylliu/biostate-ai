@@ -2175,5 +2175,14 @@ button:hover .side-panel-close-x {
   .contacts-bottom-section {
     margin: 0 12px 12px !important;
   }
+  /* ── AI Page Section 1 ── */
+  .ai-s1-cards {
+    flex-direction: column !important;
+  }
+  .ai-s1-card-left,
+  .ai-s1-card-right {
+    min-height: 400px !important;
+    padding: 32px 24px !important;
+  }
 }
 
