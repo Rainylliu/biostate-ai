@@ -357,6 +357,7 @@ export default function DNAPage() {
           >
             {/* Card 1 - FFPE Tissue */}
             <div
+              className="dna-sample-card"
               style={{
                 borderRadius: "25px",
                 padding: "40px",
@@ -415,6 +416,7 @@ export default function DNAPage() {
 
             {/* Card 2 - Dried Blood Spot */}
             <div
+              className="dna-sample-card"
               style={{
                 borderRadius: "25px",
                 padding: "40px",
@@ -462,6 +464,7 @@ export default function DNAPage() {
 
             {/* Card 3 - Benchmark Genomic DNA */}
             <div
+              className="dna-sample-card"
               style={{
                 borderRadius: "25px",
                 padding: "40px",

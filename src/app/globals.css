@@ -2078,6 +2078,15 @@ button:hover .side-panel-close-x {
   .dna-sample-cards {
     grid-template-columns: 1fr !important;
   }
+  .dna-sample-card {
+    min-height: 320px !important;
+  }
+  .dna-sample-card h4 {
+    font-size: 20px !important;
+  }
+  .dna-sample-card p {
+    font-size: 14px !important;
+  }
   .dna-mare-about {
     flex-direction: column !important;
     gap: 24px !important;
