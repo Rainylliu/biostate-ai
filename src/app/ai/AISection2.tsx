@@ -67,7 +67,7 @@ export default function AISection2() {
               <div className="w-full lg:w-1/2 flex justify-center">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/images/K-Dense.png"
+                  src="/images/K-dense_ai.png"
                   alt="K-Dense AI Platform"
                   style={{
                     width: "100%",
