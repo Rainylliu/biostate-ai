@@ -4,20 +4,6 @@ import { useState } from "react";
 
 const font = "'Manrope', Arial, Helvetica, sans-serif";
 
-const inputStyle: React.CSSProperties = {
-  fontFamily: font,
-  fontSize: "14px",
-  fontWeight: 400,
-  color: "#111",
-  padding: "16px 20px",
-  borderRadius: "20px",
-  border: "1px solid #adadad",
-  background: "transparent",
-  width: "100%",
-  boxSizing: "border-box",
-  outline: "none",
-};
-
 export default function ContactForm() {
   const [form, setForm] = useState({
     fullName: "",
@@ -69,45 +55,50 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-      <input
-        type="text"
-        name="fullName"
-        placeholder="Full Name"
-        value={form.fullName}
-        onChange={handleChange}
-        style={inputStyle}
-      />
+      <div className="floating-field contacts-floating">
+        <input
+          type="text"
+          name="fullName"
+          placeholder=" "
+          value={form.fullName}
+          onChange={handleChange}
+        />
+        <label>Full Name</label>
+      </div>
 
-      <input
-        type="email"
-        name="email"
-        placeholder="Email"
-        value={form.email}
-        onChange={handleChange}
-        required
-        style={inputStyle}
-      />
+      <div className="floating-field contacts-floating">
+        <input
+          type="email"
+          name="email"
+          placeholder=" "
+          value={form.email}
+          onChange={handleChange}
+          required
+        />
+        <label>Email</label>
+      </div>
 
-      <input
-        type="text"
-        name="subject"
-        placeholder="Subject"
-        value={form.subject}
-        onChange={handleChange}
-        style={inputStyle}
-      />
+      <div className="floating-field contacts-floating">
+        <input
+          type="text"
+          name="subject"
+          placeholder=" "
+          value={form.subject}
+          onChange={handleChange}
+        />
+        <label>Subject</label>
+      </div>
 
-      <textarea
-        name="message"
-        placeholder="Message"
-        rows={6}
-        value={form.message}
-        onChange={handleChange}
-        style={{
-          ...inputStyle,
-          resize: "none",
-        }}
-      />
+      <div className="floating-field floating-textarea contacts-floating">
+        <textarea
+          name="message"
+          placeholder=" "
+          rows={6}
+          value={form.message}
+          onChange={handleChange}
+        />
+        <label>Message</label>
+      </div>
 
       <button
         type="submit"

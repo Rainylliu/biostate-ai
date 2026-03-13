@@ -154,6 +154,11 @@ img {
   color: #333;
 }
 
+/* ── Contacts form floating label (gray card background) ── */
+.contacts-floating label {
+  background: #f2f2f2 !important;
+}
+
 /* ── Footer Email Autofill Override ── */
 .footer-email-input:-webkit-autofill,
 .footer-email-input:-webkit-autofill:hover,
