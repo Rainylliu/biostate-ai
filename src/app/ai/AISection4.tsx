@@ -1,6 +1,13 @@
 "use client";
 
+import { useState, useCallback } from "react";
+
 export default function AISection4() {
+  const [showPaper, setShowPaper] = useState(false);
+
+  const openPaper = useCallback(() => setShowPaper(true), []);
+  const closePaper = useCallback(() => setShowPaper(false), []);
+
   return (
     <section
       style={{
@@ -47,10 +54,11 @@ export default function AISection4() {
               novel science, including the discovery of 4 new RNA biomarkers of
               aging.
             </p>
-            <a
-              href="#"
+            <button
+              type="button"
+              onClick={openPaper}
               className="book-a-call-btn book-a-call-btn-solid-teal"
-              style={{ alignSelf: "flex-start" }}
+              style={{ alignSelf: "flex-start", cursor: "pointer" }}
             >
               Read the paper
               <span className="book-a-call-arrow">
@@ -63,7 +71,7 @@ export default function AISection4() {
                   </svg>
                 </span>
               </span>
-            </a>
+            </button>
           </div>
         </div>
 
@@ -255,6 +263,64 @@ export default function AISection4() {
           </div>
         </div>
       </div>
+
+      {/* ── PDF Modal ── */}
+      {showPaper && (
+        <div
+          onClick={closePaper}
+          style={{
+            position: "fixed",
+            inset: 0,
+            zIndex: 9999,
+            backgroundColor: "rgba(0, 0, 0, 0.85)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          {/* Close button */}
+          <button
+            onClick={closePaper}
+            style={{
+              position: "absolute",
+              top: "20px",
+              right: "20px",
+              background: "none",
+              border: "none",
+              color: "#fff",
+              fontSize: "32px",
+              cursor: "pointer",
+              lineHeight: 1,
+              padding: "8px",
+              zIndex: 10000,
+            }}
+          >
+            ×
+          </button>
+          {/* PDF embed */}
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              width: "90vw",
+              maxWidth: "1100px",
+              height: "85vh",
+              borderRadius: "16px",
+              overflow: "hidden",
+              backgroundColor: "#ffffff",
+            }}
+          >
+            <iframe
+              src="/pdf/BIRT-PERD-WhitePaper.pdf"
+              title="White Paper - BIRT PERD"
+              style={{
+                width: "100%",
+                height: "100%",
+                border: "none",
+              }}
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }
