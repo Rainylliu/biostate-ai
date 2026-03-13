@@ -2017,12 +2017,12 @@ button:hover .side-panel-close-x {
   .dna-tabs-row {
     grid-template-columns: 1fr !important;
     gap: 8px !important;
+    margin-top: -20px !important;
   }
   .dna-tab-btn {
     font-size: 16px !important;
     padding: 14px 20px !important;
     min-height: auto !important;
-    margin-top: -20px !important;
   }
   .dna-tab-btn img {
     width: 32px !important;
