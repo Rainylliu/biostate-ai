@@ -382,7 +382,7 @@ export default function AISection5() {
             position: "absolute",
             top: 0,
             right: 0,
-            width: "60%",
+            width: "80%",
             height: "auto",
             opacity: 0.6,
             pointerEvents: "none",
