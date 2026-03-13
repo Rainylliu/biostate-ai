@@ -78,54 +78,19 @@ export default function AISection4() {
         {/* Aging Images Row */}
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
           {/* David Sinclair Photo */}
-          <div className="w-full lg:w-5/12 relative" style={{ minHeight: "400px" }}>
-            <div
+          <div className="w-full lg:w-5/12">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/David Sinclair.png"
+              alt="David Sinclair"
               style={{
-                position: "relative",
                 width: "100%",
                 height: "100%",
+                objectFit: "cover",
+                display: "block",
                 borderRadius: "20px",
-                overflow: "hidden",
               }}
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/David Sinclair.png"
-                alt="David Sinclair"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  display: "block",
-                  minHeight: "400px",
-                }}
-              />
-              {/* Quote overlay */}
-              <div
-                style={{
-                  position: "absolute",
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
-                  padding: "24px",
-                  background: "linear-gradient(transparent, rgba(0,0,0,0.7))",
-                }}
-              >
-                <p
-                  style={{
-                    color: "#ffffff",
-                    fontSize: "14px",
-                    fontWeight: 500,
-                    lineHeight: 1.6,
-                    margin: 0,
-                    maxWidth: "260px",
-                  }}
-                >
-                  &ldquo; K-Dense has discovered novel science, including 4 new RNA
-                  biomarkers of aging. &rdquo;
-                </p>
-              </div>
-            </div>
+            />
           </div>
 
           {/* Aging Chart */}
@@ -209,57 +174,19 @@ export default function AISection4() {
           </div>
 
           {/* Swamy Vijayan Photo */}
-          <div className="w-full lg:w-5/12 relative" style={{ minHeight: "400px" }}>
-            <div
+          <div className="w-full lg:w-5/12">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/Swamy Vijayan.png"
+              alt="Swamy Vijayan"
               style={{
-                position: "relative",
                 width: "100%",
                 height: "100%",
+                objectFit: "cover",
+                display: "block",
                 borderRadius: "20px",
-                overflow: "hidden",
               }}
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/Swamy Vijayan.png"
-                alt="Swamy Vijayan"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  display: "block",
-                  minHeight: "400px",
-                }}
-              />
-              {/* Quote overlay */}
-              <div
-                style={{
-                  position: "absolute",
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
-                  padding: "24px",
-                  background: "linear-gradient(transparent, rgba(0,0,0,0.7))",
-                }}
-              >
-                <p
-                  style={{
-                    color: "#ffffff",
-                    fontSize: "14px",
-                    fontWeight: 500,
-                    lineHeight: 1.6,
-                    margin: 0,
-                    maxWidth: "280px",
-                    marginLeft: "auto",
-                    textAlign: "right",
-                  }}
-                >
-                  &ldquo; From our data, K-Dense found 2 out of our 3 lead drug
-                  candidates, and we are very excited to experimentally test the
-                  novel hit. &rdquo;
-                </p>
-              </div>
-            </div>
+            />
           </div>
         </div>
       </div>
