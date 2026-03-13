@@ -32,7 +32,7 @@ export default function AboutUsPage() {
           style={{
             position: "absolute",
             left: "50%",
-            top: "28%",
+            top: "14%",
             transform: "translate(-50%, -50%)",
             width: "60%",
             minWidth: 800,
