@@ -456,7 +456,7 @@ export default function AISection5() {
           <style jsx>{`
             .aml-grid {
               display: grid;
-              grid-template-columns: 1fr 1fr;
+              grid-template-columns: 70% 30%;
               gap: 40px;
               align-items: stretch;
             }
