@@ -207,7 +207,7 @@ export default function Section9NActAI() {
 
       <style jsx>{`
         .s9-container {
-          max-width: 1200px;
+          max-width: 1340px;
           margin: 0 auto;
           display: flex;
           gap: 48px;

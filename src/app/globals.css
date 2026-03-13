@@ -1222,7 +1222,7 @@ button:hover .side-panel-close-x {
 .bs-flow {
   position: relative;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1340px;
   margin: auto;
 }
 .bs-flow__bg {
@@ -1799,7 +1799,7 @@ button:hover .side-panel-close-x {
   line-height: 1.6;
 }
 .pub-featured-content {
-  max-width: 1280px;
+  max-width: 1340px;
   margin: 0 auto;
   padding: 0 40px 80px;
 }
@@ -2174,6 +2174,15 @@ button:hover .side-panel-close-x {
   }
   .contacts-bottom-section {
     margin: 0 12px 12px !important;
+  }
+  /* ── AI Page Section 1 ── */
+  .ai-s1-cards {
+    flex-direction: column !important;
+  }
+  .ai-s1-card-left,
+  .ai-s1-card-right {
+    min-height: 400px !important;
+    padding: 32px 24px !important;
   }
 }
 
