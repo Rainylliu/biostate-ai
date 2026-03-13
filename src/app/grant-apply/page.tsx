@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import GrantForm from "./GrantForm";
 
 export const metadata: Metadata = {
   title: "Apply Grants - biostate.AI",
@@ -139,6 +140,7 @@ export default function GrantApplyPage() {
           }}
         >
           <h1
+            className="get-quote-hero-title"
             style={{
               fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
               fontSize: "clamp(36px, 5vw, 56px)",
@@ -162,11 +164,11 @@ export default function GrantApplyPage() {
               fontWeight: 700,
               color: "transparent",
               WebkitTextStroke: "1.2px rgba(255, 255, 255, 0.35)",
-              writingMode: "vertical-rl" as const,
+              writingMode: "vertical-rl",
               letterSpacing: "0.05em",
               lineHeight: 1,
-              userSelect: "none" as const,
-              pointerEvents: "none" as const,
+              userSelect: "none",
+              pointerEvents: "none",
             }}
           >
             Grant
@@ -176,6 +178,7 @@ export default function GrantApplyPage() {
 
       {/* Title */}
       <h2
+        className="get-quote-subtitle"
         style={{
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
           fontSize: "clamp(40px, 5vw, 64px)",
@@ -187,13 +190,13 @@ export default function GrantApplyPage() {
           padding: "80px 24px 48px",
         }}
       >
-        Grant Application
+        Grant Application Form
       </h2>
 
-      {/* Placeholder content */}
+      {/* Section - Form Introduction */}
       <section
         style={{
-          padding: "0 24px 120px",
+          padding: "0 24px",
           maxWidth: "900px",
           margin: "0 auto",
         }}
@@ -201,21 +204,20 @@ export default function GrantApplyPage() {
         <p
           style={{
             fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-            fontSize: "18px",
+            fontSize: "16px",
             color: "#555555",
-            lineHeight: 1.8,
-            textAlign: "center",
+            lineHeight: 1.7,
+            margin: "0 0 60px",
           }}
         >
-          Grant application form coming soon. Please contact{" "}
-          <a
-            href="mailto:contact@biostate.ai"
-            style={{ color: "#8258C8", textDecoration: "none" }}
-          >
-            contact@biostate.ai
-          </a>{" "}
-          for more information.
+          Please provide your information and insights to help us understand
+          your needs regarding Whole Exome Sequencing (WES).
         </p>
+
+        {/* Form */}
+        <div>
+          <GrantForm />
+        </div>
       </section>
     </div>
   );
