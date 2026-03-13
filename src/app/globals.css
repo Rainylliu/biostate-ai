@@ -1508,7 +1508,8 @@ button:hover .side-panel-close-x {
     height: auto !important;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    object-position: 65% center;
+    object-position: 1% center;
+    transform: scale(1.2);
   }
   .dna-hero-overlay {
     position: relative !important;
