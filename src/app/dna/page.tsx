@@ -506,6 +506,164 @@ export default function DNAPage() {
           </div>
         </div>
       </section>
+      {/* Section 4 - MARE */}
+      <section
+        style={{
+          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+          marginTop: "80px",
+        }}
+      >
+        {/* MARE Hero with background */}
+        <div
+          style={{
+            position: "relative",
+            width: "100%",
+            overflow: "hidden",
+          }}
+        >
+          <img
+            src="/images/MARE_bg.svg"
+            alt=""
+            style={{
+              display: "block",
+              width: "100%",
+              height: "auto",
+            }}
+          />
+          {/* Title overlay */}
+          <div
+            className="dna-mare-overlay"
+            style={{
+              position: "absolute",
+              bottom: "60px",
+              left: 0,
+              width: "100%",
+              padding: "0 60px",
+            }}
+          >
+            <div className="container">
+              <h2
+                className="dna-mare-title"
+                style={{
+                  fontSize: "clamp(36px, 5vw, 72px)",
+                  fontWeight: 400,
+                  lineHeight: 1.15,
+                  color: "#1a1a1a",
+                  maxWidth: "800px",
+                }}
+              >
+                <span
+                  style={{
+                    backgroundImage: "linear-gradient(135deg, #45D0BD, #44B6E9)",
+                    backgroundClip: "text",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    color: "transparent",
+                  }}
+                >
+                  MARE
+                </span>
+                {" "}— Multiplexed Amplification to Rescue Enrichment
+              </h2>
+            </div>
+          </div>
+        </div>
+
+        {/* MARE About section */}
+        <div className="container" style={{ marginTop: "60px" }}>
+          <div
+            className="dna-mare-about"
+            style={{
+              display: "flex",
+              gap: "60px",
+              alignItems: "flex-start",
+            }}
+          >
+            {/* Left - Label */}
+            <div style={{ flexShrink: 0 }}>
+              <p
+                style={{
+                  fontSize: "14px",
+                  fontWeight: 400,
+                  color: "#111111",
+                  letterSpacing: "0.02em",
+                }}
+              >
+                / about /
+              </p>
+            </div>
+
+            {/* Right - Description + Bullet Points */}
+            <div style={{ flex: 1 }}>
+              <p
+                style={{
+                  fontSize: "16px",
+                  fontWeight: 500,
+                  lineHeight: "1.875em",
+                  color: "#333333",
+                  marginBottom: "32px",
+                }}
+              >
+                MARE is a targeted enrichment technology engineered to rescue difficult genomic regions
+                that standard WES consistently misses—especially exons with extreme GC content.
+              </p>
+
+              <ul
+                style={{
+                  listStyle: "none",
+                  padding: 0,
+                  margin: 0,
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "12px",
+                }}
+              >
+                {[
+                  "≈260% median target coverage, vs. ~30% (Competitor A) and <10% (Competitor B)",
+                  "Maintains >150% normalized coverage on challenging exons such as RALGAPA1 exon 25",
+                  "Fully customizable panels for clinically relevant or high-value gene sets",
+                ].map((item, i) => (
+                  <li
+                    key={i}
+                    style={{
+                      display: "flex",
+                      gap: "16px",
+                      alignItems: "flex-start",
+                    }}
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      style={{ flexShrink: 0, marginTop: "6px" }}
+                    >
+                      <path
+                        d="M4 4L12 12M12 12H5M12 12V5"
+                        stroke="#999999"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                    <p
+                      style={{
+                        fontSize: "16px",
+                        fontWeight: 400,
+                        lineHeight: "1.875em",
+                        color: "#333333",
+                        margin: 0,
+                      }}
+                    >
+                      {item}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
