@@ -436,6 +436,7 @@ export default function AISection5() {
                   width: "100%",
                   height: "auto",
                   borderRadius: "25px",
+                  marginTop: "30px",
                 }}
               />
 
