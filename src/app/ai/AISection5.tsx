@@ -378,7 +378,16 @@ export default function AISection5() {
         <img
           src="/images/AML_bg.svg"
           alt=""
-          className="aml-bg-decor"
+          style={{
+            position: "absolute",
+            top: 0,
+            right: 0,
+            width: "60%",
+            height: "auto",
+            opacity: 0.6,
+            pointerEvents: "none",
+            zIndex: 0,
+          }}
         />
         <div className="container">
           {/* Heading row */}
@@ -470,16 +479,6 @@ export default function AISection5() {
               flex-direction: column;
               gap: 20px;
               position: relative;
-            }
-            .aml-bg-decor {
-              position: absolute;
-              top: 0;
-              right: 0;
-              width: 60%;
-              height: auto;
-              opacity: 0.6;
-              pointer-events: none;
-              z-index: 0;
             }
             @media (max-width: 768px) {
               .aml-grid {
