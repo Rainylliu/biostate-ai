@@ -1,6 +1,15 @@
 "use client";
 
+import { useState, useCallback } from "react";
+
+const YOUTUBE_VIDEO_ID = "jP1K_8e7BjI";
+
 export default function AISection1() {
+  const [showVideo, setShowVideo] = useState(false);
+
+  const openVideo = useCallback(() => setShowVideo(true), []);
+  const closeVideo = useCallback(() => setShowVideo(false), []);
+
   return (
     <section
       style={{
@@ -69,7 +78,7 @@ export default function AISection1() {
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
-            minHeight: "440px",
+            height: "480px",
           }}
         >
           <div>
@@ -146,12 +155,10 @@ export default function AISection1() {
             borderRadius: "24px",
             position: "relative",
             overflow: "hidden",
-            minHeight: "440px",
+            height: "480px",
             cursor: "pointer",
           }}
-          onClick={() =>
-            window.open("https://youtu.be/jP1K_8e7BjI", "_blank")
-          }
+          onClick={openVideo}
         >
           {/* GIF Background */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -244,7 +251,7 @@ export default function AISection1() {
             }}
             onClick={(e) => {
               e.stopPropagation();
-              window.open("https://youtu.be/jP1K_8e7BjI", "_blank");
+              openVideo();
             }}
           >
             {/* Play icon circle */}
@@ -258,6 +265,7 @@ export default function AISection1() {
                 borderRadius: "50%",
                 border: "1.5px solid #666",
                 flexShrink: 0,
+                marginTop: "10px",
               }}
             >
               <svg width="10" height="12" viewBox="0 0 10 12" fill="none">
@@ -270,21 +278,22 @@ export default function AISection1() {
                 fontSize: "16px",
                 fontWeight: 500,
                 color: "#333",
+                marginTop: "10px",
               }}
             >
               Watch video
             </span>
           </div>
-          {/* Concave corner - top of notch */}
+          {/* Concave corner - above notch */}
           <div
             style={{
               position: "absolute",
               bottom: "80px",
               right: 0,
-              width: "24px",
-              height: "24px",
+              width: "25px",
+              height: "25px",
               background:
-                "radial-gradient(circle at 100% 100%, transparent 24px, #ffffff 24px)",
+                "radial-gradient(circle at 0% 0%, transparent 25px, #ffffff 25px)",
               zIndex: 2,
             }}
           />
@@ -294,15 +303,72 @@ export default function AISection1() {
               position: "absolute",
               bottom: 0,
               right: "280px",
-              width: "24px",
-              height: "24px",
+              width: "25px",
+              height: "25px",
               background:
-                "radial-gradient(circle at 100% 100%, transparent 24px, #ffffff 24px)",
+                "radial-gradient(circle at 0% 0%, transparent 25px, #ffffff 25px)",
               zIndex: 2,
             }}
           />
         </div>
       </div>
+      {/* ── Video Modal ── */}
+      {showVideo && (
+        <div
+          onClick={closeVideo}
+          style={{
+            position: "fixed",
+            inset: 0,
+            zIndex: 9999,
+            backgroundColor: "rgba(0, 0, 0, 0.85)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          {/* Close button */}
+          <button
+            onClick={closeVideo}
+            style={{
+              position: "absolute",
+              top: "20px",
+              right: "20px",
+              background: "none",
+              border: "none",
+              color: "#fff",
+              fontSize: "32px",
+              cursor: "pointer",
+              lineHeight: 1,
+              padding: "8px",
+            }}
+          >
+            ×
+          </button>
+          {/* YouTube embed */}
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              width: "90vw",
+              maxWidth: "1100px",
+              aspectRatio: "16 / 9",
+              borderRadius: "16px",
+              overflow: "hidden",
+            }}
+          >
+            <iframe
+              src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&rel=0`}
+              title="Dynamic Multiome Intro Video"
+              allow="autoplay; encrypted-media; picture-in-picture"
+              allowFullScreen
+              style={{
+                width: "100%",
+                height: "100%",
+                border: "none",
+              }}
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }
