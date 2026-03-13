@@ -2111,6 +2111,11 @@ button:hover .side-panel-close-x {
   .dna-mare-row1 {
     margin-top: 0px !important;
   }
+  .dna-mare-hero {
+    margin-left: -20px !important;
+    margin-right: -20px !important;
+    width: calc(100% + 40px) !important;
+  }
   .dna-mare-overlay {
     padding: 0 20px !important;
     bottom: 30px !important;
