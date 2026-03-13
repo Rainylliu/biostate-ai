@@ -30,7 +30,7 @@ export default function NewsGrid() {
         }}
       >
         {pageItems.map((item, index) => (
-          <article key={index} style={{ display: "flex", flexDirection: "column" }}>
+          <article key={index} style={{ display: "flex", flexDirection: "column", border: "1px solid #e0e0e0", borderRadius: "20px", padding: "16px 16px 24px", height: "100%" }}>
             <a
               href={item.link}
               target="_blank"
