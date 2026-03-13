@@ -9,7 +9,7 @@ export const newsItems = [
     link: "https://www.businesswire.com/news/home/20251029898069/en/Biostate-AIs-Indian-Subsidiary-Bayosthiti-Partners-with-Narayana-Health-to-Build-Worlds-Largest-India-Specific-Cardiac-AI-Dataset",
   },
   {
-    image: "/newsItems_img/Biostate AI Launches K-Dense Beta-1.svg",
+    image: "/newsItems_img/Biostate AI Launches K-Dense Beta.svg",
     date: "September 18, 2025",
     title:
       "Biostate AI Launches K-Dense Beta, Harvard Validates AI That Compresses Research Cycles from Years to Days",
@@ -53,7 +53,7 @@ export const newsItems = [
     link: "https://finance.yahoo.com/news/biostate-ai-launches-k-dense-123000921.html",
   },
   {
-    image: "/newsItems_img/Biostate AI Launches K-Dense Beta.svg",
+    image: "/newsItems_img/Biostate AI Launches K-Dense Beta-1.svg",
     date: "September 18, 2025",
     title: "Biostate AI Launches K-Dense Beta",
     excerpt:
