@@ -252,15 +252,10 @@ export default function AISection5() {
         }}
       >
         <div className="container">
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "24px",
-            }}
-          >
+          <div className="s5-two-cards">
             {/* AI Architecture card - interactive */}
             <div
+              className="s5-arch-card"
               onMouseEnter={() => setArchHover(true)}
               onMouseLeave={() => setArchHover(false)}
               onClick={() =>
@@ -269,12 +264,6 @@ export default function AISection5() {
                   "_blank"
                 )
               }
-              style={{
-                cursor: "pointer",
-                position: "relative",
-                borderRadius: "20px",
-                overflow: "hidden",
-              }}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -282,17 +271,17 @@ export default function AISection5() {
                 alt="Architecture Diagram"
                 style={{
                   width: "100%",
-                  height: "auto",
+                  height: "100%",
+                  objectFit: "cover",
                   display: "block",
-                  borderRadius: 16,
+                  borderRadius: 20,
+                  transition: "all 0.3s ease",
                   border: archHover
                     ? "2px solid #007bff"
                     : "2px solid transparent",
                   boxShadow: archHover
                     ? "0 4px 8px rgba(0, 123, 255, 0.3)"
                     : "none",
-                  transform: archHover ? "scale(1.02)" : "scale(1)",
-                  transition: "all 0.3s ease",
                 }}
               />
               {/* CTA pill button */}
@@ -336,25 +325,44 @@ export default function AISection5() {
             </div>
 
             {/* N-Act AI Analysis card */}
-            <div style={{ borderRadius: "20px", overflow: "hidden" }}>
+            <div className="s5-nact-card">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/n-act1.svg"
                 alt="N-Act AI Analysis"
                 style={{
                   width: "100%",
-                  height: "auto",
+                  height: "100%",
+                  objectFit: "cover",
                   display: "block",
-                  borderRadius: 16,
+                  borderRadius: 20,
                 }}
               />
             </div>
           </div>
 
-          {/* Responsive grid for mobile */}
           <style jsx>{`
+            .s5-two-cards {
+              display: grid;
+              grid-template-columns: 5fr 7fr;
+              gap: 24px;
+              align-items: stretch;
+            }
+            .s5-arch-card {
+              cursor: pointer;
+              position: "relative";
+              border-radius: 20px;
+              overflow: visible;
+              position: relative;
+              height: 100%;
+            }
+            .s5-nact-card {
+              border-radius: 20px;
+              overflow: hidden;
+              height: 100%;
+            }
             @media (max-width: 768px) {
-              div[style*="grid-template-columns: 1fr 1fr"] {
+              .s5-two-cards {
                 grid-template-columns: 1fr !important;
               }
             }
