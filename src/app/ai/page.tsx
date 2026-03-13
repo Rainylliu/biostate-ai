@@ -3,6 +3,7 @@ import AISection1 from "./AISection1";
 import AISection2 from "./AISection2";
 import AISection3 from "./AISection3";
 import AISection4 from "./AISection4";
+import AISection5 from "./AISection5";
 
 export const metadata: Metadata = {
   title: "AI Platform - biostate.AI",
@@ -16,6 +17,7 @@ export default function AIPage() {
       <AISection2 />
       <AISection3 />
       <AISection4 />
+      <AISection5 />
     </div>
   );
 }
