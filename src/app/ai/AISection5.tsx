@@ -1,6 +1,9 @@
 "use client";
 
+import { useState } from "react";
+
 export default function AISection5() {
+  const [archHover, setArchHover] = useState(false);
   return (
     <>
       {/* ── Scrolling Banner ── */}
@@ -238,6 +241,124 @@ export default function AISection5() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── Two Image Cards ── */}
+      <section
+        style={{
+          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+          padding: "60px 0 0",
+        }}
+      >
+        <div className="container">
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "24px",
+            }}
+          >
+            {/* AI Architecture card - interactive */}
+            <div
+              onMouseEnter={() => setArchHover(true)}
+              onMouseLeave={() => setArchHover(false)}
+              onClick={() =>
+                window.open(
+                  "https://dynamicmultiome.com/ai-visualization/",
+                  "_blank"
+                )
+              }
+              style={{
+                cursor: "pointer",
+                position: "relative",
+                borderRadius: "20px",
+                overflow: "hidden",
+              }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://biostate.jamesflare.com/wp-content/uploads/2025/11/Architecture.svg"
+                alt="Architecture Diagram"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  display: "block",
+                  borderRadius: 16,
+                  border: archHover
+                    ? "2px solid #007bff"
+                    : "2px solid transparent",
+                  boxShadow: archHover
+                    ? "0 4px 8px rgba(0, 123, 255, 0.3)"
+                    : "none",
+                  transform: archHover ? "scale(1.02)" : "scale(1)",
+                  transition: "all 0.3s ease",
+                }}
+              />
+              {/* CTA pill button */}
+              <div
+                style={{
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  pointerEvents: "none",
+                }}
+              >
+                <span
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 8,
+                    background: "linear-gradient(135deg, #FF9A6C, #FF6B6B)",
+                    color: "#fff",
+                    fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                    fontSize: 16,
+                    fontWeight: 600,
+                    padding: "14px 28px",
+                    borderRadius: 12,
+                    boxShadow: "0 6px 20px rgba(255, 107, 107, 0.45)",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  Explore AI Visualization
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M4 12L12 4M12 4H5M12 4V11"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            {/* N-Act AI Analysis card */}
+            <div style={{ borderRadius: "20px", overflow: "hidden" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/n-act1.svg"
+                alt="N-Act AI Analysis"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  display: "block",
+                  borderRadius: 16,
+                }}
+              />
+            </div>
+          </div>
+
+          {/* Responsive grid for mobile */}
+          <style jsx>{`
+            @media (max-width: 768px) {
+              div[style*="grid-template-columns: 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+              }
+            }
+          `}</style>
         </div>
       </section>
     </>
