@@ -153,6 +153,8 @@ export default function Section9NActAI() {
                 height: "auto",
                 display: "block",
                 borderRadius: 16,
+                transform: archHover ? "scale(1.02)" : "scale(1)",
+                transition: "transform 0.3s ease",
               }}
             />
             {/* CTA pill button - always visible */}
