@@ -41,7 +41,6 @@ export default function AISection5() {
               backgroundColor: "#1F1F1F",
               borderRadius: "25px",
               padding: "20px",
-              overflow: "hidden",
             }}
           >
             {/* Tilted top piece */}
@@ -206,11 +205,11 @@ export default function AISection5() {
                     </div>
                   </div>
 
-                  {/* Feature 3 - icon5 teal */}
+                  {/* Feature 3 - icon4 teal */}
                   <div style={{ display: "flex", gap: "20px", alignItems: "flex-start" }}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src="/images/icon5-teal.svg"
+                      src="/images/icon4-teal.svg"
                       alt="Explainable Insights"
                       style={{ width: "64px", height: "64px", flexShrink: 0 }}
                     />
