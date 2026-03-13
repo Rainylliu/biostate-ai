@@ -530,6 +530,7 @@ export default function DNAPage() {
           }}
         >
           <img
+            className="dna-mare-bg"
             src="/images/MARE_bg.svg"
             alt=""
             style={{
