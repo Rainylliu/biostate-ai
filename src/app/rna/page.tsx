@@ -377,7 +377,7 @@ export default function RNAPage() {
                 className="rna-heading"
                 delay={300}
                 style={{
-                  fontSize: "64px",
+                  fontSize: "48px",
                   fontWeight: 400,
                   lineHeight: "1.15em",
                   textAlign: "left",

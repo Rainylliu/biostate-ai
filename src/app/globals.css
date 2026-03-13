@@ -154,6 +154,19 @@ img {
   color: #333;
 }
 
+/* ── Contacts legal link hover ── */
+.contacts-legal-link {
+  transition: color 0.2s ease;
+}
+.contacts-legal-link:hover {
+  color: #45d0bd !important;
+}
+
+/* ── Contacts form floating label (gray card background) ── */
+.contacts-floating label {
+  background: #f2f2f2 !important;
+}
+
 /* ── Footer Email Autofill Override ── */
 .footer-email-input:-webkit-autofill,
 .footer-email-input:-webkit-autofill:hover,
@@ -1999,6 +2012,35 @@ button:hover .side-panel-close-x {
   .dna-tab-content-card {
     padding: 24px !important;
     min-height: auto !important;
+  }
+  .dna-tilted-top {
+    display: none !important;
+  }
+  .dna-grant-title {
+    font-size: 32px !important;
+  }
+  .dna-sample-cards {
+    grid-template-columns: 1fr !important;
+  }
+  .dna-mare-about {
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+  .dna-mare-overlay {
+    padding: 0 20px !important;
+    bottom: 30px !important;
+  }
+  .contacts-content {
+    flex-direction: column !important;
+    gap: 48px !important;
+    padding: 48px 20px 80px !important;
+  }
+  .contacts-info-row {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  .contacts-form-card {
+    padding: 32px 20px !important;
   }
 }
 

@@ -78,7 +78,7 @@ export default function PublicationsList({ items, title, subtitle, id, desktopPe
             style={{
               fontFamily: "'Sora', Arial, Helvetica, sans-serif",
               fontSize: 40,
-              fontWeight: 600,
+              fontWeight: 500,
               color: "#111",
               margin: "0 0 12px 0",
               lineHeight: 1.15,

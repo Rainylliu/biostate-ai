@@ -86,7 +86,7 @@ export default function DNATechnologyTabs() {
                 borderRadius: "25px",
                 border: "1px solid transparent",
                 backgroundImage: isActive
-                  ? "linear-gradient(160deg, rgba(255,255,255,1) 30%, rgba(200,180,240,0.3) 100%), linear-gradient(135deg, #8258c8, #2c84c8)"
+                  ? "linear-gradient(#ffffff, #ffffff), linear-gradient(135deg, #8258c8, #2c84c8)"
                   : "none",
                 backgroundOrigin: isActive ? "border-box" : undefined,
                 backgroundClip: isActive ? "padding-box, border-box" : undefined,
@@ -100,6 +100,8 @@ export default function DNATechnologyTabs() {
                 letterSpacing: "-0.03em",
                 cursor: "pointer",
                 transition: "background-color 0.3s, border-color 0.3s",
+                position: "relative",
+                overflow: "hidden",
               }}
             >
               <img
@@ -113,6 +115,24 @@ export default function DNATechnologyTabs() {
                 }}
               />
               {t.label}
+              {/* Bottom elliptical glow */}
+              {isActive && (
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: "-10px",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    width: "60%",
+                    height: "30px",
+                    borderRadius: "50%",
+                    background: "#8D58C8",
+                    filter: "blur(20px)",
+                    opacity: 0.45,
+                    pointerEvents: "none",
+                  }}
+                />
+              )}
             </button>
           );
         })}
