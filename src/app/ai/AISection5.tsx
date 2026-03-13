@@ -373,47 +373,51 @@ export default function AISection5() {
         }}
       >
         <div className="container">
-          <div className="aml-grid">
-            {/* Left Column */}
-            <div className="aml-left">
-              <p
-                style={{
-                  fontSize: "14px",
-                  fontWeight: 500,
-                  color: "#888",
-                  marginBottom: "16px",
-                }}
-              >
-                [ about ]
-              </p>
-              <h2
-                style={{
-                  fontSize: "clamp(36px, 4.5vw, 60px)",
-                  fontWeight: 400,
-                  lineHeight: 1.1,
-                  letterSpacing: "-0.02em",
-                  color: "#1a1a1a",
-                  margin: "0 0 32px 0",
-                  maxWidth: "560px",
-                }}
-              >
-                Guiding Bone Marrow Transplant for AML Patients
-              </h2>
+          {/* Heading row */}
+          <div style={{ marginBottom: "40px" }}>
+            <p
+              style={{
+                fontSize: "14px",
+                fontWeight: 500,
+                color: "#888",
+                marginBottom: "16px",
+              }}
+            >
+              [ about ]
+            </p>
+            <h2
+              style={{
+                fontSize: "clamp(36px, 4.5vw, 60px)",
+                fontWeight: 400,
+                lineHeight: 1.1,
+                letterSpacing: "-0.02em",
+                color: "#1a1a1a",
+                margin: 0,
+                maxWidth: "560px",
+              }}
+            >
+              Guiding Bone Marrow Transplant for AML Patients
+            </h2>
+          </div>
 
-              {/* Chart image */}
+          {/* Cards grid - 1:1 ratio */}
+          <div className="aml-grid">
+            {/* Left Column - one card */}
+            <div className="aml-left">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/AML_card1.svg"
                 alt="AML Prognosis Statistics - Progression-Free Survival"
                 style={{
                   width: "100%",
-                  height: "auto",
+                  height: "100%",
                   display: "block",
+                  objectFit: "cover",
                 }}
               />
             </div>
 
-            {/* Right Column */}
+            {/* Right Column - two cards */}
             <div className="aml-right">
               {/* Background decoration */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -452,9 +456,9 @@ export default function AISection5() {
           <style jsx>{`
             .aml-grid {
               display: grid;
-              grid-template-columns: 7fr 5fr;
+              grid-template-columns: 1fr 1fr;
               gap: 40px;
-              align-items: start;
+              align-items: stretch;
             }
             .aml-left {
               display: flex;
