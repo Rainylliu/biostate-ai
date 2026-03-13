@@ -2027,6 +2027,9 @@ button:hover .side-panel-close-x {
     padding: 24px !important;
     min-height: auto !important;
   }
+  .dna-tab-chart img {
+    max-height: 320px !important;
+  }
   .dna-tilted-top {
     display: none !important;
   }
