@@ -272,7 +272,7 @@ export default function AISection5() {
                 style={{
                   width: "100%",
                   height: "100%",
-                  objectFit: "cover",
+                  objectFit: "contain",
                   display: "block",
                   transform: archHover ? "scale(1.02)" : "scale(1)",
                   transition: "transform 0.3s ease",
