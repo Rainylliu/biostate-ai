@@ -2115,8 +2115,8 @@ button:hover .side-panel-close-x {
     margin-top: 60px !important;
   }
   .dna-mare-bg {
-    width: 100% !important;
-    margin-left: 0 !important;
+    width: 150% !important;
+    margin-left: -25% !important;
   }
   .dna-mare-overlay {
     padding: 0 20px !important;
