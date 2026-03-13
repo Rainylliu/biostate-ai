@@ -360,6 +360,9 @@ export default function AISection5() {
               .s5-two-cards {
                 grid-template-columns: 1fr !important;
               }
+              .s5-nact-card img {
+                width: 100% !important;
+              }
             }
           `}</style>
         </div>
