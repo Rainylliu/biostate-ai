@@ -2037,7 +2037,7 @@ button:hover .side-panel-close-x {
   .dna-tab-btn {
     font-size: 16px !important;
     padding: 14px 20px !important;
-    min-height: 60px !important;
+    min-height: 80px !important;
     justify-content: center !important;
   }
   .dna-tab-btn img {
