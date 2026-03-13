@@ -368,7 +368,7 @@ export default function AISection5() {
       <section
         style={{
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-          padding: "100px 0 0",
+          padding: "100px 0 120px",
           position: "relative",
           overflow: "hidden",
         }}
