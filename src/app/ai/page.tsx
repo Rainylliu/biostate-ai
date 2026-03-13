@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import AISection1 from "./AISection1";
+import AISection2 from "./AISection2";
 
 export const metadata: Metadata = {
   title: "AI Platform - biostate.AI",
@@ -10,6 +11,7 @@ export default function AIPage() {
   return (
     <div style={{ overflowX: "hidden" }}>
       <AISection1 />
+      <AISection2 />
     </div>
   );
 }

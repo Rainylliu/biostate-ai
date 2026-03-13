@@ -78,7 +78,7 @@ export default function AISection1() {
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
-            maxHeight: "480px",
+            height: "480px",
           }}
         >
           <div>
@@ -155,7 +155,7 @@ export default function AISection1() {
             borderRadius: "24px",
             position: "relative",
             overflow: "hidden",
-            maxHeight: "480px",
+            height: "480px",
             cursor: "pointer",
           }}
           onClick={openVideo}
