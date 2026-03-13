@@ -68,11 +68,14 @@ export default function AISection5() {
               aria-hidden="true"
               style={{
                 position: "absolute",
-                inset: 0,
-                width: "100%",
-                height: "100%",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                width: "90%",
+                height: "90%",
                 objectFit: "cover",
                 zIndex: 0,
+                borderRadius: "16px",
               }}
             />
 
