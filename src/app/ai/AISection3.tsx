@@ -101,22 +101,19 @@ export default function AISection3() {
               href="https://k-dense.ai/"
               target="_blank"
               rel="noopener noreferrer"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "10px",
-                backgroundColor: "#5BC4BE",
-                color: "#000000",
-                fontSize: "16px",
-                fontWeight: 600,
-                padding: "16px 32px",
-                borderRadius: "50px",
-                textDecoration: "none",
-                transition: "opacity 0.2s",
-              }}
+              className="book-a-call-btn book-a-call-btn-solid-teal"
             >
               Check out K-Dense
-              <span style={{ fontSize: "18px" }}>↗</span>
+              <span className="book-a-call-arrow">
+                <span className="book-a-call-arrow-inner">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+              </span>
             </a>
           </div>
 
