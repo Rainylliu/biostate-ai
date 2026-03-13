@@ -381,7 +381,7 @@ export default function DNAPage() {
                     fontWeight: 600,
                     lineHeight: 1.2,
                     color: "#ffffff",
-                    marginBottom: "40px",
+                    marginBottom: "80px",
                   }}
                 >
                   FFPE Tissue (Single 4-micron Slide)
@@ -439,7 +439,7 @@ export default function DNAPage() {
                     fontWeight: 600,
                     lineHeight: 1.2,
                     color: "#ffffff",
-                    marginBottom: "40px",
+                    marginBottom: "80px",
                   }}
                 >
                   Dried Blood Spot (Half-Circle)
@@ -486,7 +486,7 @@ export default function DNAPage() {
                   fontWeight: 600,
                   lineHeight: 1.2,
                   color: "#ffffff",
-                  marginBottom: "40px",
+                  marginBottom: "80px",
                 }}
               >
                 Benchmark Genomic DNA
