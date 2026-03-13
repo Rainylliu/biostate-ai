@@ -410,7 +410,7 @@ export default function AISection5() {
                 letterSpacing: "-0.02em",
                 color: "#1a1a1a",
                 margin: 0,
-                maxWidth: "560px",
+                maxWidth: "90%",
               }}
             >
               Guiding Bone Marrow Transplant for AML Patients
