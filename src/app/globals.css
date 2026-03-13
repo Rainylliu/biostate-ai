@@ -1354,6 +1354,14 @@ button:hover .side-panel-close-x {
   }
 }
 
+/* ── Global mobile section padding ── */
+@media (max-width: 900px) {
+  section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
 @media (max-width: 900px) {
   .hero-title {
     font-size: 48px;
