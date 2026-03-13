@@ -36,6 +36,7 @@ export default function SubscribeRow() {
           <input
             type="email"
             placeholder="Email"
+            className="footer-email-input"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleSubscribe()}
@@ -45,15 +46,15 @@ export default function SubscribeRow() {
               padding: "12px 0",
               backgroundColor: "transparent",
               border: "none",
-              borderBottom: "1px solid rgba(0,0,0,0.15)",
+              borderBottom: "1px solid rgba(255,255,255,0.3)",
               outline: "none",
-              color: "#333",
+              color: "#ffffff",
               width: "300px",
             }}
           />
         </div>
         <button
-          className="book-a-call-btn"
+          className="book-a-call-btn book-a-call-btn-dark"
           onClick={handleSubscribe}
           type="button"
         >
