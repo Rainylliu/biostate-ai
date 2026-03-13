@@ -338,14 +338,14 @@ export default function AISection5() {
           <style jsx>{`
             .s5-two-cards {
               display: grid;
-              grid-template-columns: 5fr 7fr;
+              grid-template-columns: 7fr 5fr;
               gap: 24px;
               align-items: stretch;
             }
             .s5-arch-card {
               cursor: pointer;
               border-radius: 20px;
-              overflow: hidden;
+              overflow: visible;
               position: relative;
               height: 100%;
             }
@@ -353,6 +353,8 @@ export default function AISection5() {
               border-radius: 20px;
               overflow: hidden;
               height: 100%;
+              display: flex;
+              justify-content: flex-end;
             }
             @media (max-width: 768px) {
               .s5-two-cards {
