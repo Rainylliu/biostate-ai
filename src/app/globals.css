@@ -1982,6 +1982,9 @@ button:hover .side-panel-close-x {
     width: 140px;
     height: 40px;
   }
+  .pub-pagination {
+    flex-wrap: wrap;
+  }
 }
 
 /* Gradient-filled variant of book-a-call-btn */

@@ -154,6 +154,7 @@ export default function PublicationsList({ items, title, subtitle, id, desktopPe
       {/* Pagination — same style as advisor grid */}
       {totalPages > 1 && (
         <div
+          className="pub-pagination"
           style={{
             display: "flex",
             justifyContent: "center",
