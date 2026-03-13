@@ -1427,6 +1427,7 @@ button:hover .side-panel-close-x {
   .s7-row.s7-row-reverse {
     flex-direction: column;
     gap: 40px;
+    padding: 0 20px;
   }
   .s7-col-img {
     width: 100%;
