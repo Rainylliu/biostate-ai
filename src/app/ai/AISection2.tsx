@@ -70,7 +70,7 @@ export default function AISection2() {
                   src="/images/K-dense_ai.png"
                   alt="K-Dense AI Platform"
                   style={{
-                    width: "100%",
+                    width: "80%",
                     height: "auto",
                     borderRadius: "16px",
                   }}
