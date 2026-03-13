@@ -210,7 +210,7 @@ export default function NewsPage() {
   return (
     <div style={{ fontFamily: "'Manrope', Arial, Helvetica, sans-serif" }}>
       {/* Header Banner */}
-      <div style={{ width: "100%", overflow: "hidden" }}>
+      <div style={{ maxWidth: "1340px", margin: "0 auto", padding: "0 20px", overflow: "hidden" }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/images/News_header.svg"
