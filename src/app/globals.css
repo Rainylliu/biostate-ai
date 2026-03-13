@@ -2038,6 +2038,7 @@ button:hover .side-panel-close-x {
     font-size: 16px !important;
     padding: 14px 20px !important;
     min-height: auto !important;
+    justify-content: flex-start !important;
   }
   .dna-tab-btn img {
     width: 32px !important;
@@ -2110,11 +2111,8 @@ button:hover .side-panel-close-x {
   }
   .dna-mare-row1 {
     margin-top: 0px !important;
-  }
-  .dna-mare-hero {
-    margin-left: -20px !important;
-    margin-right: -20px !important;
-    width: calc(100% + 40px) !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
   .dna-mare-overlay {
     padding: 0 20px !important;

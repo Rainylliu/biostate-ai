@@ -515,6 +515,7 @@ export default function DNAPage() {
       </section>
       {/* Section 4 - MARE */}
       <section
+        className="no-section-padding"
         style={{
           fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
           marginTop: "20px",
@@ -522,7 +523,6 @@ export default function DNAPage() {
       >
         {/* MARE Hero with background */}
         <div
-          className="dna-mare-hero"
           style={{
             position: "relative",
             width: "100%",
