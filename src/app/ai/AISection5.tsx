@@ -400,27 +400,6 @@ export default function AISection5() {
                 Guiding Bone Marrow Transplant for AML Patients
               </h2>
 
-              {/* AML Prognosis pill */}
-              <div
-                style={{
-                  display: "inline-block",
-                  background: "linear-gradient(135deg, #45d0bd 0%, #6dcfcf 100%)",
-                  borderRadius: "30px",
-                  padding: "12px 40px",
-                  marginBottom: "32px",
-                }}
-              >
-                <span
-                  style={{
-                    color: "#fff",
-                    fontSize: "20px",
-                    fontWeight: 600,
-                  }}
-                >
-                  AML Prognosis
-                </span>
-              </div>
-
               {/* Chart image */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
