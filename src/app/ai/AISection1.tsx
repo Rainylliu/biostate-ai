@@ -69,7 +69,7 @@ export default function AISection1() {
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
-            minHeight: "440px",
+            maxHeight: "480px",
           }}
         >
           <div>
@@ -146,7 +146,7 @@ export default function AISection1() {
             borderRadius: "24px",
             position: "relative",
             overflow: "hidden",
-            minHeight: "440px",
+            maxHeight: "480px",
             cursor: "pointer",
           }}
           onClick={() =>
@@ -275,16 +275,16 @@ export default function AISection1() {
               Watch video
             </span>
           </div>
-          {/* Concave corner - top of notch */}
+          {/* Concave corner - above notch */}
           <div
             style={{
               position: "absolute",
               bottom: "80px",
               right: 0,
-              width: "24px",
-              height: "24px",
+              width: "25px",
+              height: "25px",
               background:
-                "radial-gradient(circle at 100% 100%, transparent 24px, #ffffff 24px)",
+                "radial-gradient(circle at 0% 0%, transparent 25px, #ffffff 25px)",
               zIndex: 2,
             }}
           />
@@ -294,10 +294,10 @@ export default function AISection1() {
               position: "absolute",
               bottom: 0,
               right: "280px",
-              width: "24px",
-              height: "24px",
+              width: "25px",
+              height: "25px",
               background:
-                "radial-gradient(circle at 100% 100%, transparent 24px, #ffffff 24px)",
+                "radial-gradient(circle at 0% 0%, transparent 25px, #ffffff 25px)",
               zIndex: 2,
             }}
           />
