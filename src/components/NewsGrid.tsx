@@ -30,12 +30,12 @@ export default function NewsGrid() {
         }}
       >
         {pageItems.map((item, index) => (
-          <article key={index} style={{ display: "flex", flexDirection: "column", border: "1px solid #e0e0e0", borderRadius: "20px", padding: "16px 16px 24px", height: "100%" }}>
+          <article key={index} style={{ display: "flex", flexDirection: "column", height: "100%" }}>
             <a
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ display: "block", borderRadius: "16px", overflow: "hidden", position: "relative" }}
+              style={{ display: "block", borderRadius: "16px 16px 0 0", overflow: "hidden", position: "relative" }}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -66,42 +66,52 @@ export default function NewsGrid() {
               </span>
             </a>
 
-            <h4 style={{ margin: "20px 0 12px", fontSize: "18px", fontWeight: 600, lineHeight: 1.4, color: "#1a1a1a" }}>
+            <div style={{
+              display: "flex",
+              flexDirection: "column",
+              flex: 1,
+              padding: "0 20px 24px",
+              border: "1px solid #e0e0e0",
+              borderTop: "none",
+              borderRadius: "0 0 20px 20px",
+            }}>
+              <h4 style={{ margin: "20px 0 12px", fontSize: "18px", fontWeight: 600, lineHeight: 1.4, color: "#1a1a1a" }}>
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="news-title-link"
+                  style={{ color: "inherit", textDecoration: "none" }}
+                >
+                  {item.title}
+                </a>
+              </h4>
+
+              <p style={{ fontSize: "14px", lineHeight: 1.6, color: "#666", margin: "0 0 16px", flex: 1 }}>
+                {item.excerpt}
+              </p>
+
               <a
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="news-title-link"
-                style={{ color: "inherit", textDecoration: "none" }}
+                className="news-read-more"
+                style={{
+                  fontSize: "14px",
+                  fontWeight: 600,
+                  color: "#1a1a1a",
+                  textDecoration: "none",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "8px",
+                }}
               >
-                {item.title}
-              </a>
-            </h4>
-
-            <p style={{ fontSize: "14px", lineHeight: 1.6, color: "#666", margin: "0 0 16px", flex: 1 }}>
-              {item.excerpt}
-            </p>
-
-            <a
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="news-read-more"
-              style={{
-                fontSize: "14px",
-                fontWeight: 600,
-                color: "#1a1a1a",
-                textDecoration: "none",
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "8px",
-              }}
-            >
               <span>Read More</span>
               <svg width="8" height="14" viewBox="0 0 8 14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M1 1l6 6-6 6" />
               </svg>
             </a>
+            </div>
           </article>
         ))}
       </div>
