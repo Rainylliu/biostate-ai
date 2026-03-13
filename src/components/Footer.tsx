@@ -2,9 +2,13 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import WaveReveal from "@/components/WaveReveal";
 
 export default function Footer() {
+  const pathname = usePathname();
+  if (pathname === "/contacts") return null;
+
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
