@@ -453,6 +453,37 @@ img {
   color: #ffffff !important;
 }
 
+/* News dropdown item hover */
+.news-dropdown-item:hover {
+  color: #45D0BD !important;
+}
+
+/* ── News Page Grid ── */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.news-card-img:hover {
+  transform: scale(1.03);
+}
+.news-title-link:hover {
+  color: #45D0BD !important;
+}
+.news-read-more:hover {
+  color: #45D0BD !important;
+}
+@media (max-width: 991px) {
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 575px) {
+  .news-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 /* Transparent variant for home page hero - gradient border, no fill */
 .get-quote-btn.get-quote-btn-transparent {
   background: transparent !important;

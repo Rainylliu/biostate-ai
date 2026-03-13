@@ -12,9 +12,16 @@ const navItems = [
   { label: "RNA", href: "/rna" },
   { label: "DNA", href: "/dna" },
   { label: "AI", href: "/ai" },
-  { label: "NEWS", href: "/news" },
+  {
+    label: "NEWS",
+    href: "/news",
+    submenu: [
+      { label: "In the News", href: "/news" },
+      { label: "Newsletter", href: "/news/newsletter" },
+    ],
+  },
   { label: "GET QUOTE", href: "/get-quote", mobileOnly: true },
-] as const;
+];
 
 export default function Header() {
   const pathname = usePathname();
@@ -28,6 +35,9 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [menuHovered, setMenuHovered] = useState(false);
   const [sidePanelOpen, setSidePanelOpen] = useState(false);
+  const [newsDropdownOpen, setNewsDropdownOpen] = useState(false);
+  const [mobileNewsOpen, setMobileNewsOpen] = useState(false);
+  const newsDropdownTimeout = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -185,6 +195,103 @@ export default function Header() {
           <nav className="hidden lg:flex items-center" style={{ gap: "5px" }}>
             {navItems.filter((item) => !("mobileOnly" in item && item.mobileOnly)).map((item) => {
               const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+              const hasSubmenu = "submenu" in item && item.submenu;
+
+              if (hasSubmenu) {
+                return (
+                  <div
+                    key={item.href}
+                    style={{ position: "relative" }}
+                    onMouseEnter={() => {
+                      if (newsDropdownTimeout.current) clearTimeout(newsDropdownTimeout.current);
+                      setNewsDropdownOpen(true);
+                    }}
+                    onMouseLeave={() => {
+                      newsDropdownTimeout.current = setTimeout(() => setNewsDropdownOpen(false), 150);
+                    }}
+                  >
+                    <button
+                      className={`nav-tab transition-all ${
+                        isActive
+                          ? ""
+                          : isTransparent ? "home-nav-hover" : "hover:bg-[#F0F2F4]"
+                      }`}
+                      style={{
+                        fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                        fontSize: "14px",
+                        fontWeight: 700,
+                        lineHeight: "1.5em",
+                        letterSpacing: "0em",
+                        textTransform: "uppercase" as const,
+                        borderRadius: "10px",
+                        padding: "10px 20px",
+                        backgroundColor: isActive ? "#1f1f1f" : undefined,
+                        color: isActive
+                          ? "#ffffff"
+                          : (isTransparent ? "#ffffff" : "#1f1f1f"),
+                        transition: "color 0.3s ease, background-color 0.3s ease",
+                        border: "none",
+                        cursor: "pointer",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "6px",
+                      }}
+                    >
+                      <span className="nav-tab-text">
+                        <span>{item.label}</span>
+                        <span>{item.label}</span>
+                      </span>
+                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ transition: "transform 0.2s", transform: newsDropdownOpen ? "rotate(180deg)" : "rotate(0)" }}>
+                        <path d="M2 4l3 3 3-3" />
+                      </svg>
+                    </button>
+                    {/* Dropdown */}
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "100%",
+                        left: 0,
+                        minWidth: "200px",
+                        background: "#1f1f1f",
+                        borderRadius: "12px",
+                        padding: "12px 0",
+                        marginTop: "8px",
+                        opacity: newsDropdownOpen ? 1 : 0,
+                        pointerEvents: newsDropdownOpen ? "auto" : "none",
+                        transform: newsDropdownOpen ? "translateY(0)" : "translateY(-8px)",
+                        transition: "opacity 0.2s ease, transform 0.2s ease",
+                        zIndex: 100,
+                      }}
+                    >
+                      {item.submenu.map((sub) => {
+                        const subActive = pathname === sub.href;
+                        return (
+                          <Link
+                            key={sub.href}
+                            href={sub.href}
+                            onClick={() => setNewsDropdownOpen(false)}
+                            className="news-dropdown-item"
+                            style={{
+                              display: "block",
+                              padding: "10px 24px",
+                              fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                              fontSize: "15px",
+                              fontWeight: 500,
+                              color: subActive ? "#45D0BD" : "#ffffff",
+                              textDecoration: "none",
+                              transition: "color 0.2s ease",
+                            }}
+                          >
+                            {subActive && <span style={{ marginRight: "8px", color: "#45D0BD" }}>↘</span>}
+                            {sub.label}
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  </div>
+                );
+              }
+
               return (
                 <Link
                   key={item.href}
@@ -293,6 +400,63 @@ export default function Header() {
         <nav style={{ padding: "32px 40px", display: "flex", flexDirection: "column", gap: 8 }}>
           {navItems.map((item) => {
             const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+            const hasSubmenu = "submenu" in item && item.submenu;
+
+            if (hasSubmenu) {
+              return (
+                <div key={item.href}>
+                  <button
+                    onClick={() => setMobileNewsOpen(!mobileNewsOpen)}
+                    style={{
+                      fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                      fontSize: 16,
+                      fontWeight: 700,
+                      textTransform: "uppercase" as const,
+                      color: isActive ? "#45D0BD" : "#1f1f1f",
+                      padding: "8px 0",
+                      background: "none",
+                      border: "none",
+                      cursor: "pointer",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "8px",
+                      width: "100%",
+                    }}
+                  >
+                    {item.label}
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ transition: "transform 0.2s", transform: mobileNewsOpen ? "rotate(180deg)" : "rotate(0)" }}>
+                      <path d="M2 4l3 3 3-3" />
+                    </svg>
+                  </button>
+                  <div style={{
+                    overflow: "hidden",
+                    maxHeight: mobileNewsOpen ? "200px" : "0",
+                    transition: "max-height 0.3s ease",
+                    paddingLeft: "16px",
+                  }}>
+                    {item.submenu.map((sub) => (
+                      <Link
+                        key={sub.href}
+                        href={sub.href}
+                        onClick={() => setMobileOpen(false)}
+                        style={{
+                          fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
+                          fontSize: 15,
+                          fontWeight: 500,
+                          color: pathname === sub.href ? "#45D0BD" : "#1f1f1f",
+                          textDecoration: "none",
+                          padding: "8px 0",
+                          display: "block",
+                        }}
+                      >
+                        {sub.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              );
+            }
+
             return (
               <Link
                 key={item.href}
