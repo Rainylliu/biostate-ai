@@ -78,17 +78,18 @@ export default function AISection4() {
         {/* Aging Images Row */}
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
           {/* David Sinclair Photo */}
-          <div className="w-full lg:w-5/12">
+          <div className="w-full lg:w-5/12" style={{ position: "relative", overflow: "hidden", borderRadius: "20px", minHeight: "300px" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/David Sinclair.png"
               alt="David Sinclair"
               style={{
+                position: "absolute",
+                inset: 0,
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
                 display: "block",
-                borderRadius: "20px",
               }}
             />
           </div>
@@ -170,17 +171,18 @@ export default function AISection4() {
           </div>
 
           {/* Swamy Vijayan Photo */}
-          <div className="w-full lg:w-5/12">
+          <div className="w-full lg:w-5/12" style={{ position: "relative", overflow: "hidden", borderRadius: "20px", minHeight: "300px" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/Swamy Vijayan.png"
               alt="Swamy Vijayan"
               style={{
+                position: "absolute",
+                inset: 0,
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
                 display: "block",
-                borderRadius: "20px",
               }}
             />
           </div>
