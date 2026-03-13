@@ -1517,6 +1517,7 @@ button:hover .side-panel-close-x {
     padding: 0px 20px 48px !important;
     justify-content: flex-start !important;
     height: auto !important;
+    margin-top: -40px !important;
   }
   .dna-hero-content {
     width: 100% !important;
