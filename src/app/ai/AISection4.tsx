@@ -78,11 +78,10 @@ export default function AISection4() {
 
         {/* Aging Images Row */}
         <div className="ai-s4-images-row flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
-          {/* David Sinclair Photo */}
-          <div className="w-full lg:w-1/3" style={{ position: "relative", overflow: "hidden", borderRadius: "20px", minHeight: "300px" }}>
+          {/* David Sinclair Photo – desktop */}
+          <div className="hidden lg:block w-full lg:w-1/3" style={{ position: "relative", overflow: "hidden", borderRadius: "20px", minHeight: "300px" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              className="hidden lg:block"
               src="/images/David Sinclair.png"
               alt="David Sinclair"
               style={{
@@ -91,19 +90,20 @@ export default function AISection4() {
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
+                display: "block",
               }}
             />
+          </div>
+          {/* David Sinclair Photo – mobile */}
+          <div className="block lg:hidden w-full" style={{ overflow: "hidden", borderRadius: "20px" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              className="block lg:hidden"
               src="/images/David Sinclair_mobile.svg"
               alt="David Sinclair"
               style={{
-                position: "absolute",
-                inset: 0,
                 width: "100%",
-                height: "100%",
-                objectFit: "cover",
+                height: "auto",
+                display: "block",
               }}
             />
           </div>
@@ -184,11 +184,10 @@ export default function AISection4() {
             />
           </div>
 
-          {/* Swamy Vijayan Photo */}
-          <div className="w-full lg:w-1/3" style={{ position: "relative", overflow: "hidden", borderRadius: "20px", minHeight: "300px" }}>
+          {/* Swamy Vijayan Photo – desktop */}
+          <div className="hidden lg:block w-full lg:w-1/3" style={{ position: "relative", overflow: "hidden", borderRadius: "20px", minHeight: "300px" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              className="hidden lg:block"
               src="/images/Swamy Vijayan.png"
               alt="Swamy Vijayan"
               style={{
@@ -197,19 +196,20 @@ export default function AISection4() {
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
+                display: "block",
               }}
             />
+          </div>
+          {/* Swamy Vijayan Photo – mobile */}
+          <div className="block lg:hidden w-full" style={{ overflow: "hidden", borderRadius: "20px" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              className="block lg:hidden"
               src="/images/Swamy Vijayan_mobile.svg"
               alt="Swamy Vijayan"
               style={{
-                position: "absolute",
-                inset: 0,
                 width: "100%",
-                height: "100%",
-                objectFit: "cover",
+                height: "auto",
+                display: "block",
               }}
             />
           </div>
