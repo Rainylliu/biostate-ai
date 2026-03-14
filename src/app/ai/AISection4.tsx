@@ -10,10 +10,9 @@ export default function AISection4() {
 
   return (
     <section
-      className="ai-section4"
+      className="ai-section4 py-12 lg:py-[120px]"
       style={{
         fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-        padding: "120px 0",
         backgroundColor: "#ffffff",
       }}
     >
