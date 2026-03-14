@@ -80,22 +80,32 @@ export default function AISection4() {
         <div className="ai-s4-images-row flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
           {/* David Sinclair Photo */}
           <div className="w-full lg:w-1/3" style={{ position: "relative", overflow: "hidden", borderRadius: "20px", minHeight: "300px" }}>
-            <picture>
-              <source media="(max-width: 900px)" srcSet="/images/David Sinclair_mobile.svg" />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/David Sinclair.png"
-                alt="David Sinclair"
-                style={{
-                  position: "absolute",
-                  inset: 0,
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  display: "block",
-                }}
-              />
-            </picture>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              className="hidden lg:block"
+              src="/images/David Sinclair.png"
+              alt="David Sinclair"
+              style={{
+                position: "absolute",
+                inset: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              className="block lg:hidden"
+              src="/images/David Sinclair_mobile.svg"
+              alt="David Sinclair"
+              style={{
+                position: "absolute",
+                inset: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
           </div>
 
           {/* Aging Chart */}
@@ -176,22 +186,32 @@ export default function AISection4() {
 
           {/* Swamy Vijayan Photo */}
           <div className="w-full lg:w-1/3" style={{ position: "relative", overflow: "hidden", borderRadius: "20px", minHeight: "300px" }}>
-            <picture>
-              <source media="(max-width: 900px)" srcSet="/images/Swamy Vijayan_mobile.svg" />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/Swamy Vijayan.png"
-                alt="Swamy Vijayan"
-                style={{
-                  position: "absolute",
-                  inset: 0,
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  display: "block",
-                }}
-              />
-            </picture>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              className="hidden lg:block"
+              src="/images/Swamy Vijayan.png"
+              alt="Swamy Vijayan"
+              style={{
+                position: "absolute",
+                inset: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              className="block lg:hidden"
+              src="/images/Swamy Vijayan_mobile.svg"
+              alt="Swamy Vijayan"
+              style={{
+                position: "absolute",
+                inset: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
           </div>
         </div>
       </div>
