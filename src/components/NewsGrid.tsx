@@ -1,15 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { newsItems } from "@/data/newsItems";
 
-const PER_PAGE = 9;
+function usePerPage(desktopCount: number, mobileCount: number) {
+  const [perPage, setPerPage] = useState(desktopCount);
+  useEffect(() => {
+    const update = () => setPerPage(window.innerWidth <= 768 ? mobileCount : desktopCount);
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, [desktopCount, mobileCount]);
+  return perPage;
+}
 
 export default function NewsGrid() {
+  const perPage = usePerPage(9, 6);
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = Math.ceil(newsItems.length / PER_PAGE);
+  const totalPages = Math.ceil(newsItems.length / perPage);
   const safePage = Math.min(currentPage, totalPages);
-  const pageItems = newsItems.slice((safePage - 1) * PER_PAGE, safePage * PER_PAGE);
+  const pageItems = newsItems.slice((safePage - 1) * perPage, safePage * perPage);
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
