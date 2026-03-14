@@ -10,9 +10,9 @@ export default function AISection4() {
 
   return (
     <section
+      className="ai-section4 py-12 lg:py-[120px]"
       style={{
         fontFamily: "'Manrope', Arial, Helvetica, sans-serif",
-        padding: "120px 0",
         backgroundColor: "#ffffff",
       }}
     >
@@ -76,9 +76,9 @@ export default function AISection4() {
         </div>
 
         {/* Aging Images Row */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
-          {/* David Sinclair Photo */}
-          <div className="w-full lg:w-1/3" style={{ position: "relative", overflow: "hidden", borderRadius: "20px", minHeight: "300px" }}>
+        <div className="ai-s4-images-row flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
+          {/* David Sinclair Photo – desktop */}
+          <div className="hidden lg:block w-full lg:w-1/3" style={{ position: "relative", overflow: "hidden", borderRadius: "20px", minHeight: "300px" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/David Sinclair.png"
@@ -89,6 +89,19 @@ export default function AISection4() {
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
+                display: "block",
+              }}
+            />
+          </div>
+          {/* David Sinclair Photo – mobile */}
+          <div className="block lg:hidden w-full" style={{ overflow: "hidden", borderRadius: "20px" }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/David Sinclair_mobile.svg"
+              alt="David Sinclair"
+              style={{
+                width: "100%",
+                height: "auto",
                 display: "block",
               }}
             />
@@ -109,9 +122,12 @@ export default function AISection4() {
         </div>
 
         {/* === Drug Lead Sub-section === */}
+        <style>{`
+          .drug-lead-section { margin-top: 60px; }
+          @media (min-width: 1024px) { .drug-lead-section { margin-top: 120px; } }
+        `}</style>
         <div
-          className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-start"
-          style={{ marginTop: "120px" }}
+          className="drug-lead-section flex flex-col lg:flex-row gap-8 lg:gap-16 items-start"
         >
           {/* Left - Title */}
           <div className="w-full lg:w-1/2">
@@ -170,8 +186,8 @@ export default function AISection4() {
             />
           </div>
 
-          {/* Swamy Vijayan Photo */}
-          <div className="w-full lg:w-1/3" style={{ position: "relative", overflow: "hidden", borderRadius: "20px", minHeight: "300px" }}>
+          {/* Swamy Vijayan Photo – desktop */}
+          <div className="hidden lg:block w-full lg:w-1/3" style={{ position: "relative", overflow: "hidden", borderRadius: "20px", minHeight: "300px" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/Swamy Vijayan.png"
@@ -182,6 +198,19 @@ export default function AISection4() {
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
+                display: "block",
+              }}
+            />
+          </div>
+          {/* Swamy Vijayan Photo – mobile */}
+          <div className="block lg:hidden w-full" style={{ overflow: "hidden", borderRadius: "20px" }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/Swamy Vijayan_mobile.svg"
+              alt="Swamy Vijayan"
+              style={{
+                width: "100%",
+                height: "auto",
                 display: "block",
               }}
             />

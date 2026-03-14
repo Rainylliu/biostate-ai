@@ -1391,6 +1391,12 @@ button:hover .side-panel-close-x {
     padding-left: 20px !important;
     padding-right: 20px !important;
   }
+  .ai-section4 {
+    padding-top: 20px !important;
+  }
+  .ai-section4 .ai-s4-images-row {
+    margin-top: 32px;
+  }
 }
 
 @media (max-width: 900px) {
