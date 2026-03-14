@@ -81,7 +81,7 @@ export default function AISection4() {
           {/* David Sinclair Photo */}
           <div className="w-full lg:w-1/3" style={{ position: "relative", overflow: "hidden", borderRadius: "20px", minHeight: "300px" }}>
             <picture>
-              <source media="(max-width: 900px)" srcSet="/images/David Sinclair_mobile.png" />
+              <source media="(max-width: 900px)" srcSet="/images/David Sinclair_mobile.svg" />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/David Sinclair.png"
@@ -177,7 +177,7 @@ export default function AISection4() {
           {/* Swamy Vijayan Photo */}
           <div className="w-full lg:w-1/3" style={{ position: "relative", overflow: "hidden", borderRadius: "20px", minHeight: "300px" }}>
             <picture>
-              <source media="(max-width: 900px)" srcSet="/images/Swamy Vijayan_mobile.png" />
+              <source media="(max-width: 900px)" srcSet="/images/Swamy Vijayan_mobile.svg" />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/Swamy Vijayan.png"
