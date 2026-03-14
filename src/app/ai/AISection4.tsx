@@ -122,9 +122,12 @@ export default function AISection4() {
         </div>
 
         {/* === Drug Lead Sub-section === */}
+        <style>{`
+          .drug-lead-section { margin-top: 60px; }
+          @media (min-width: 1024px) { .drug-lead-section { margin-top: 120px; } }
+        `}</style>
         <div
-          className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-start"
-          style={{ marginTop: 120 }}
+          className="drug-lead-section flex flex-col lg:flex-row gap-8 lg:gap-16 items-start"
         >
           {/* Left - Title */}
           <div className="w-full lg:w-1/2">
